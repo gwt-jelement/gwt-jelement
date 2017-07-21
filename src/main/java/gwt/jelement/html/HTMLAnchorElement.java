@@ -69,6 +69,9 @@ public class HTMLAnchorElement extends HTMLElement{
     @JsProperty(name="shape")
     public String shape;
     
+    @JsProperty(name="href")
+    public String href;
+    
     @JsProperty(name="protocol")
     public String protocol;
     
@@ -95,9 +98,6 @@ public class HTMLAnchorElement extends HTMLElement{
     
     @JsProperty(name="hash")
     public String hash;
-    
-    @JsProperty(name="href")
-    public native String getHref();
     
     @JsProperty(name="origin")
     public native String getOrigin();

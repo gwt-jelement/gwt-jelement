@@ -1,2 +1,9 @@
+log/
 target/
 .*/
+*.iml
+.classpath
+.project
+*.iml
+*.iws
+.DS_Store

@@ -37,6 +37,9 @@ public class URL{
     public URL(String url, String base){
     }
     
+    @JsProperty(name="href")
+    public String href;
+    
     @JsProperty(name="protocol")
     public String protocol;
     
@@ -63,9 +66,6 @@ public class URL{
     
     @JsProperty(name="hash")
     public String hash;
-    
-    @JsProperty(name="href")
-    public native String getHref();
     
     @JsProperty(name="origin")
     public native String getOrigin();

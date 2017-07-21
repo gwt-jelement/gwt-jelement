@@ -23,6 +23,9 @@ import jsinterop.annotations.JsType;
 @JsType(namespace = JsPackage.GLOBAL, isNative = true)
 public class HTMLHyperlinkElementUtils{
     
+    @JsProperty(name="href")
+    public String href;
+    
     @JsProperty(name="protocol")
     public String protocol;
     
@@ -49,9 +52,6 @@ public class HTMLHyperlinkElementUtils{
     
     @JsProperty(name="hash")
     public String hash;
-    
-    @JsProperty(name="href")
-    public native String getHref();
     
     @JsProperty(name="origin")
     public native String getOrigin();

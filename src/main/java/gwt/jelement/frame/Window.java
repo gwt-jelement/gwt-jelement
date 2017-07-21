@@ -54,6 +54,7 @@ import gwt.jelement.frame.VisualViewport;
 import gwt.jelement.frame.Window;
 import gwt.jelement.geometry.DOMMatrix;
 import gwt.jelement.html.HTMLCanvasElement;
+import gwt.jelement.html.HTMLDocument;
 import gwt.jelement.html.HTMLImageElement;
 import gwt.jelement.html.HTMLVideoElement;
 import gwt.jelement.html.ImageData;
@@ -178,6 +179,27 @@ public class Window extends EventTarget{
     
     @JsProperty(name="ondeviceorientationabsolute")
     public EventHandlerNonNull ondeviceorientationabsolute;
+    
+    @JsProperty(name="document")
+    public static HTMLDocument document;
+    
+    @JsProperty(name="location")
+    public static Location location;
+    
+    @JsProperty(name="navigator")
+    public static Navigator navigator;
+    
+    @JsProperty(name="screen")
+    public static Screen screen;
+    
+    @JsProperty(name="self")
+    public static Window self;
+    
+    @JsProperty(name="top")
+    public static Window top;
+    
+    @JsProperty(name="window")
+    public static Window window;
     
     @JsProperty(name="webkitMediaStream")
     public MediaStream webkitMediaStream;
