@@ -1,0 +1,65 @@
+/*
+ * Copyright 2017 Abed Tony BenBrahim <tony.benrahim@10xdev.com>
+ *     and Gwt-JElement project contributors.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License"); you may not
+ * use this file except in compliance with the License. You may obtain a copy of
+ * the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+ * WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+ * License for the specific language governing permissions and limitations under
+ * the License.
+ */
+package gwt.jelement.svg;
+
+import gwt.jelement.svg.SVGAnimatedEnumeration;
+import gwt.jelement.svg.SVGAnimatedNumber;
+import gwt.jelement.svg.SVGAnimatedNumberList;
+import gwt.jelement.svg.SVGElement;
+import jsinterop.annotations.JsConstructor;
+import jsinterop.annotations.JsPackage;
+import jsinterop.annotations.JsProperty;
+import jsinterop.annotations.JsType;
+
+@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+public class SVGComponentTransferFunctionElement extends SVGElement{
+    public static final int SVG_FECOMPONENTTRANSFER_TYPE_UNKNOWN = 0;
+    public static final int SVG_FECOMPONENTTRANSFER_TYPE_IDENTITY = 1;
+    public static final int SVG_FECOMPONENTTRANSFER_TYPE_TABLE = 2;
+    public static final int SVG_FECOMPONENTTRANSFER_TYPE_DISCRETE = 3;
+    public static final int SVG_FECOMPONENTTRANSFER_TYPE_LINEAR = 4;
+    public static final int SVG_FECOMPONENTTRANSFER_TYPE_GAMMA = 5;
+    
+    
+    @JsConstructor
+    public SVGComponentTransferFunctionElement(){
+        super();
+    }
+    
+    @JsProperty(name="type")
+    public native SVGAnimatedEnumeration getType();
+    
+    @JsProperty(name="tableValues")
+    public native SVGAnimatedNumberList getTableValues();
+    
+    @JsProperty(name="slope")
+    public native SVGAnimatedNumber getSlope();
+    
+    @JsProperty(name="intercept")
+    public native SVGAnimatedNumber getIntercept();
+    
+    @JsProperty(name="amplitude")
+    public native SVGAnimatedNumber getAmplitude();
+    
+    @JsProperty(name="exponent")
+    public native SVGAnimatedNumber getExponent();
+    
+    @JsProperty(name="offset")
+    public native SVGAnimatedNumber getOffset();
+    
+    
+}
