@@ -25,14 +25,13 @@ import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
-import jsinterop.base.Any;
 import jsinterop.base.Js;
 
 @JsType(namespace = JsPackage.GLOBAL, isNative = true)
 public class ExtendableMessageEventInit extends ExtendableEventInit{
 
     @JsProperty(name="data")
-    public Any data;
+    public Object data;
 
     @JsProperty(name="origin")
     public String origin;

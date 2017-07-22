@@ -25,7 +25,6 @@ import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
-import jsinterop.base.Any;
 
 @JsType(namespace = JsPackage.GLOBAL, isNative = true)
 public class CompositorWorkerGlobalScope extends WorkerGlobalScope{
@@ -42,10 +41,10 @@ public class CompositorWorkerGlobalScope extends WorkerGlobalScope{
     public native void cancelAnimationFrame(double handle);
     
     @JsMethod(name = "postMessage")
-    public native void postMessage(Any message);
+    public native void postMessage(Object message);
     
     @JsMethod(name = "postMessage")
-    public native void postMessage(Any message, MessagePort[] transfer);
+    public native void postMessage(Object message, MessagePort[] transfer);
     
     @JsMethod(name = "requestAnimationFrame")
     public native double requestAnimationFrame(FrameRequestCallback callback);

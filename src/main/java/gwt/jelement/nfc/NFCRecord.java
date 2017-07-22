@@ -21,7 +21,6 @@ import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
-import jsinterop.base.Any;
 
 @JsType(namespace = JsPackage.GLOBAL, isNative = true)
 public class NFCRecord{
@@ -33,7 +32,7 @@ public class NFCRecord{
     public String mediaType;
 
     @JsProperty(name="data")
-    public Any data;
+    public Object data;
 
 
 }

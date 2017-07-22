@@ -19,7 +19,6 @@ package gwt.jelement.frame;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
-import jsinterop.base.Any;
 
 @JsType(namespace = JsPackage.GLOBAL, isNative = true)
 public class Console{
@@ -31,7 +30,7 @@ public class Console{
     public native void assert_(boolean condition);
     
     @JsMethod(name = "assert")
-    public native void assert_(boolean condition, Any... data);
+    public native void assert_(boolean condition, Object... data);
     
     @JsMethod(name = "clear")
     public native void clear();
@@ -46,37 +45,37 @@ public class Console{
     public native void debug();
     
     @JsMethod(name = "debug")
-    public native void debug(Any... data);
+    public native void debug(Object... data);
     
     @JsMethod(name = "dir")
-    public native void dir(Any item);
+    public native void dir(Object item);
     
     @JsMethod(name = "dir")
-    public native void dir(Any item, Object options);
+    public native void dir(Object item, Object options);
     
     @JsMethod(name = "dirxml")
     public native void dirxml();
     
     @JsMethod(name = "dirxml")
-    public native void dirxml(Any... data);
+    public native void dirxml(Object... data);
     
     @JsMethod(name = "error")
     public native void error();
     
     @JsMethod(name = "error")
-    public native void error(Any... data);
+    public native void error(Object... data);
     
     @JsMethod(name = "group")
     public native void group();
     
     @JsMethod(name = "group")
-    public native void group(Any... data);
+    public native void group(Object... data);
     
     @JsMethod(name = "groupCollapsed")
     public native void groupCollapsed();
     
     @JsMethod(name = "groupCollapsed")
-    public native void groupCollapsed(Any... data);
+    public native void groupCollapsed(Object... data);
     
     @JsMethod(name = "groupEnd")
     public native void groupEnd();
@@ -85,19 +84,19 @@ public class Console{
     public native void info();
     
     @JsMethod(name = "info")
-    public native void info(Any... data);
+    public native void info(Object... data);
     
     @JsMethod(name = "log")
     public native void log();
     
     @JsMethod(name = "log")
-    public native void log(Any... data);
+    public native void log(Object... data);
     
     @JsMethod(name = "table")
-    public native void table(Any tabularData);
+    public native void table(Object tabularData);
     
     @JsMethod(name = "table")
-    public native void table(Any tabularData, String[] properties);
+    public native void table(Object tabularData, String[] properties);
     
     @JsMethod(name = "time")
     public native void time();
@@ -115,12 +114,12 @@ public class Console{
     public native void trace();
     
     @JsMethod(name = "trace")
-    public native void trace(Any... data);
+    public native void trace(Object... data);
     
     @JsMethod(name = "warn")
     public native void warn();
     
     @JsMethod(name = "warn")
-    public native void warn(Any... data);
+    public native void warn(Object... data);
     
 }

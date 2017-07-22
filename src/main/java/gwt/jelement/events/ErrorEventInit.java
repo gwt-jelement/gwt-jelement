@@ -20,7 +20,6 @@ import gwt.jelement.events.EventInit;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
-import jsinterop.base.Any;
 
 @JsType(namespace = JsPackage.GLOBAL, isNative = true)
 public class ErrorEventInit extends EventInit{
@@ -38,7 +37,7 @@ public class ErrorEventInit extends EventInit{
     public double colno;
 
     @JsProperty(name="error")
-    public Any error;
+    public Object error;
 
 
 }

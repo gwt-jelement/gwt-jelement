@@ -28,7 +28,6 @@ import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
-import jsinterop.base.Any;
 
 @JsType(namespace = JsPackage.GLOBAL, isNative = true)
 public class DOMMatrixReadOnly{
@@ -235,7 +234,7 @@ public class DOMMatrixReadOnly{
     public native Float64Array toFloat64Array();
     
     @JsMethod(name = "toJSON")
-    public native Any toJSON();
+    public native Object toJSON();
     
     @JsMethod(name = "toString")
     public native String toString();

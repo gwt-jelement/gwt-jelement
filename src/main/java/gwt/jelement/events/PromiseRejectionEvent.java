@@ -23,7 +23,6 @@ import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
-import jsinterop.base.Any;
 
 @JsType(namespace = JsPackage.GLOBAL, isNative = true)
 public class PromiseRejectionEvent extends Event{
@@ -34,10 +33,10 @@ public class PromiseRejectionEvent extends Event{
     }
     
     @JsProperty(name="promise")
-    public native Promise<Any> getPromise();
+    public native Promise<Object> getPromise();
     
     @JsProperty(name="reason")
-    public native Any getReason();
+    public native Object getReason();
     
     
 }

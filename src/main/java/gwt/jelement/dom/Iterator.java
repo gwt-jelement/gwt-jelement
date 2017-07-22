@@ -19,15 +19,14 @@ package gwt.jelement.dom;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
-import jsinterop.base.Any;
 
 @JsType(namespace = JsPackage.GLOBAL, isNative = true)
 public class Iterator{
     
     @JsMethod(name = "next")
-    public native Any next();
+    public native Object next();
     
     @JsMethod(name = "next")
-    public native Any next(Any value);
+    public native Object next(Object value);
     
 }

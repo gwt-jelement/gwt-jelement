@@ -23,7 +23,6 @@ import elemental2.promise.Promise;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
-import jsinterop.base.Any;
 
 @JsType(namespace = JsPackage.GLOBAL, isNative = true)
 public class CacheStorage{
@@ -38,16 +37,16 @@ public class CacheStorage{
     public native Promise<String[]> keys();
     
     @JsMethod(name = "match")
-    public native Promise<Any> match(Request request);
+    public native Promise<Object> match(Request request);
     
     @JsMethod(name = "match")
-    public native Promise<Any> match(String request);
+    public native Promise<Object> match(String request);
     
     @JsMethod(name = "match")
-    public native Promise<Any> match(Request request, CacheQueryOptions options);
+    public native Promise<Object> match(Request request, CacheQueryOptions options);
     
     @JsMethod(name = "match")
-    public native Promise<Any> match(String request, CacheQueryOptions options);
+    public native Promise<Object> match(String request, CacheQueryOptions options);
     
     @JsMethod(name = "open")
     public native Promise<Cache> open(String cacheName);

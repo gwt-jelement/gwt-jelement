@@ -20,7 +20,6 @@ import elemental2.promise.Promise;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
-import jsinterop.base.Any;
 
 @JsType(namespace = JsPackage.GLOBAL, isNative = true)
 public class UnderlyingSourceBase{
@@ -29,7 +28,7 @@ public class UnderlyingSourceBase{
     public native Promise<Void> cancel();
     
     @JsMethod(name = "cancel")
-    public native Promise<Void> cancel(Any reason);
+    public native Promise<Void> cancel(Object reason);
     
     @JsMethod(name = "notifyLockAcquired")
     public native void notifyLockAcquired();
@@ -41,6 +40,6 @@ public class UnderlyingSourceBase{
     public native Promise<Void> pull();
     
     @JsMethod(name = "start")
-    public native Promise<Void> start(Any stream);
+    public native Promise<Void> start(Object stream);
     
 }

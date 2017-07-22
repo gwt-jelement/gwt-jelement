@@ -86,7 +86,6 @@ import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
-import jsinterop.base.Any;
 
 @JsType(namespace = JsPackage.GLOBAL, isNative = true)
 public class Window extends EventTarget{
@@ -850,10 +849,10 @@ public class Window extends EventTarget{
     public native Database openDatabase(String name, String version, String displayName, double estimatedSize, DatabaseCallback creationCallback);
     
     @JsMethod(name = "postMessage")
-    public native void postMessage(Any message, String targetOrigin);
+    public native void postMessage(Object message, String targetOrigin);
     
     @JsMethod(name = "postMessage")
-    public native void postMessage(Any message, String targetOrigin, MessagePort[] transfer);
+    public native void postMessage(Object message, String targetOrigin, MessagePort[] transfer);
     
     @JsMethod(name = "print")
     public native void print();
@@ -925,10 +924,10 @@ public class Window extends EventTarget{
     public native double setInterval(String handler, double timeout);
     
     @JsMethod(name = "setInterval")
-    public native double setInterval(Function handler, double timeout, Any... arguments);
+    public native double setInterval(Function handler, double timeout, Object... arguments);
     
     @JsMethod(name = "setInterval")
-    public native double setInterval(String handler, double timeout, Any... arguments);
+    public native double setInterval(String handler, double timeout, Object... arguments);
     
     @JsMethod(name = "setTimeout")
     public native double setTimeout(Function handler);
@@ -943,10 +942,10 @@ public class Window extends EventTarget{
     public native double setTimeout(String handler, double timeout);
     
     @JsMethod(name = "setTimeout")
-    public native double setTimeout(Function handler, double timeout, Any... arguments);
+    public native double setTimeout(Function handler, double timeout, Object... arguments);
     
     @JsMethod(name = "setTimeout")
-    public native double setTimeout(String handler, double timeout, Any... arguments);
+    public native double setTimeout(String handler, double timeout, Object... arguments);
     
     @JsMethod(name = "stop")
     public native void stop();

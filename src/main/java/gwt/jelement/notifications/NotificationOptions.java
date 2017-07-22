@@ -22,7 +22,6 @@ import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
-import jsinterop.base.Any;
 import jsinterop.base.Js;
 
 @JsType(namespace = JsPackage.GLOBAL, isNative = true)
@@ -89,7 +88,7 @@ public class NotificationOptions{
     public boolean requireInteraction;
 
     @JsProperty(name="data")
-    public Any data;
+    public Object data;
 
     @JsProperty(name="actions")
     public NotificationAction[] actions;

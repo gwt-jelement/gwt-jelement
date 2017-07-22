@@ -21,16 +21,15 @@ import elemental2.promise.Promise;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
-import jsinterop.base.Any;
 
 @JsType(namespace = JsPackage.GLOBAL, isNative = true)
 public class PromiseRejectionEventInit extends EventInit{
 
     @JsProperty(name="promise")
-    public Promise<Any> promise;
+    public Promise<Object> promise;
 
     @JsProperty(name="reason")
-    public Any reason;
+    public Object reason;
 
 
 }

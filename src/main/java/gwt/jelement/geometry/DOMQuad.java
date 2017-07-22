@@ -27,7 +27,6 @@ import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
-import jsinterop.base.Any;
 
 @JsType(namespace = JsPackage.GLOBAL, isNative = true)
 public class DOMQuad{
@@ -80,6 +79,6 @@ public class DOMQuad{
     public native DOMRect getBounds();
     
     @JsMethod(name = "toJSON")
-    public native Any toJSON();
+    public native Object toJSON();
     
 }

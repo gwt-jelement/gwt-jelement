@@ -28,7 +28,6 @@ import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
-import jsinterop.base.Any;
 
 @JsType(namespace = JsPackage.GLOBAL, isNative = true)
 public class Response{
@@ -60,7 +59,7 @@ public class Response{
     public native Headers getHeaders();
     
     @JsProperty(name="body")
-    public native Any getBody();
+    public native Object getBody();
     
     @JsProperty(name="bodyUsed")
     public native boolean getBodyUsed();

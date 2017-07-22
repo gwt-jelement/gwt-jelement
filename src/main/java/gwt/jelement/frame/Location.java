@@ -21,7 +21,6 @@ import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
-import jsinterop.base.Any;
 
 @JsType(namespace = JsPackage.GLOBAL, isNative = true)
 public class Location{
@@ -69,6 +68,6 @@ public class Location{
     public native String toString();
     
     @JsMethod(name = "valueOf")
-    public native Any valueOf();
+    public native Object valueOf();
     
 }

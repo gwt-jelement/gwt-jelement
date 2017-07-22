@@ -18,9 +18,8 @@ package gwt.jelement.events;
 
 import jsinterop.annotations.JsFunction;
 import gwt.jelement.events.Event;
-import jsinterop.base.Any;
 
 @JsFunction
 public interface EventHandlerNonNull{
-    Any callback(Event event);
+    Object callback(Event event);
 }

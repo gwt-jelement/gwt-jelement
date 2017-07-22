@@ -21,7 +21,6 @@ import gwt.jelement.filesystem.DOMFileSystem;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
-import jsinterop.base.Any;
 
 @JsType(namespace = JsPackage.GLOBAL, isNative = true)
 public class DevToolsHost{
@@ -51,10 +50,10 @@ public class DevToolsHost{
     public native void sendMessageToEmbedder(String message);
     
     @JsMethod(name = "showContextMenuAtPoint")
-    public native void showContextMenuAtPoint(float x, float y, Any items);
+    public native void showContextMenuAtPoint(float x, float y, Object items);
     
     @JsMethod(name = "showContextMenuAtPoint")
-    public native void showContextMenuAtPoint(float x, float y, Any items, Document document);
+    public native void showContextMenuAtPoint(float x, float y, Object items, Document document);
     
     @JsMethod(name = "upgradeDraggedFileSystemPermissions")
     public native void upgradeDraggedFileSystemPermissions(DOMFileSystem domFileSystem);

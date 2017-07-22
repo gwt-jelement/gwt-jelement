@@ -20,13 +20,12 @@ import gwt.jelement.events.EventInit;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
-import jsinterop.base.Any;
 
 @JsType(namespace = JsPackage.GLOBAL, isNative = true)
 public class CustomEventInit extends EventInit{
 
     @JsProperty(name="detail")
-    public Any detail;
+    public Object detail;
 
 
 }

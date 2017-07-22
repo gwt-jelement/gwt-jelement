@@ -21,7 +21,6 @@ import gwt.jelement.webdatabase.SQLStatementErrorCallback;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
-import jsinterop.base.Any;
 
 @JsType(namespace = JsPackage.GLOBAL, isNative = true)
 public class SQLTransaction{
@@ -30,12 +29,12 @@ public class SQLTransaction{
     public native void executeSql(String sqlStatement);
     
     @JsMethod(name = "executeSql")
-    public native void executeSql(String sqlStatement, Any[] arguments);
+    public native void executeSql(String sqlStatement, Object[] arguments);
     
     @JsMethod(name = "executeSql")
-    public native void executeSql(String sqlStatement, Any[] arguments, SQLStatementCallback callback);
+    public native void executeSql(String sqlStatement, Object[] arguments, SQLStatementCallback callback);
     
     @JsMethod(name = "executeSql")
-    public native void executeSql(String sqlStatement, Any[] arguments, SQLStatementCallback callback, SQLStatementErrorCallback errorCallback);
+    public native void executeSql(String sqlStatement, Object[] arguments, SQLStatementCallback callback, SQLStatementErrorCallback errorCallback);
     
 }

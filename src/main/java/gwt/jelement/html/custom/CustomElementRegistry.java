@@ -22,7 +22,6 @@ import elemental2.promise.Promise;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
-import jsinterop.base.Any;
 
 @JsType(namespace = JsPackage.GLOBAL, isNative = true)
 public class CustomElementRegistry{
@@ -34,7 +33,7 @@ public class CustomElementRegistry{
     public native void define(String name, Function constructor, ElementDefinitionOptions options);
     
     @JsMethod(name = "get")
-    public native Any get(String name);
+    public native Object get(String name);
     
     @JsMethod(name = "whenDefined")
     public native Promise<Void> whenDefined(String name);

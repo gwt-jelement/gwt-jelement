@@ -23,13 +23,12 @@ import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
-import jsinterop.base.Any;
 
 @JsType(namespace = JsPackage.GLOBAL, isNative = true)
 public class IDBCursor{
     
     @JsProperty(name="source")
-    public native Any getSource();
+    public native Object getSource();
     
     @JsOverlay
     public final IDBCursorDirection getDirectionAsIDBCursorDirection(){
@@ -40,10 +39,10 @@ public class IDBCursor{
     public native String getDirection();
     
     @JsProperty(name="key")
-    public native Any getKey();
+    public native Object getKey();
     
     @JsProperty(name="primaryKey")
-    public native Any getPrimaryKey();
+    public native Object getPrimaryKey();
     
     @JsMethod(name = "advance")
     public native void advance(double count);
@@ -52,15 +51,15 @@ public class IDBCursor{
     public native void continue_();
     
     @JsMethod(name = "continue")
-    public native void continue_(Any key);
+    public native void continue_(Object key);
     
     @JsMethod(name = "continuePrimaryKey")
-    public native void continuePrimaryKey(Any key, Any primaryKey);
+    public native void continuePrimaryKey(Object key, Object primaryKey);
     
     @JsMethod(name = "delete")
     public native IDBRequest delete();
     
     @JsMethod(name = "update")
-    public native IDBRequest update(Any value);
+    public native IDBRequest update(Object value);
     
 }

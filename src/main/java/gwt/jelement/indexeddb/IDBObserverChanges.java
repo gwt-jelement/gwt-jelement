@@ -21,7 +21,6 @@ import gwt.jelement.indexeddb.IDBTransaction;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
-import jsinterop.base.Any;
 
 @JsType(namespace = JsPackage.GLOBAL, isNative = true)
 public class IDBObserverChanges{
@@ -33,7 +32,7 @@ public class IDBObserverChanges{
     public native IDBTransaction getTransaction();
     
     @JsProperty(name="records")
-    public native Any getRecords();
+    public native Object getRecords();
     
     
 }

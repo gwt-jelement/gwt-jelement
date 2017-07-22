@@ -20,13 +20,12 @@ import gwt.jelement.indexeddb.IDBOpenDBRequest;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
-import jsinterop.base.Any;
 
 @JsType(namespace = JsPackage.GLOBAL, isNative = true)
 public class IDBFactory{
     
     @JsMethod(name = "cmp")
-    public native short cmp(Any first, Any second);
+    public native short cmp(Object first, Object second);
     
     @JsMethod(name = "deleteDatabase")
     public native IDBOpenDBRequest deleteDatabase(String name);

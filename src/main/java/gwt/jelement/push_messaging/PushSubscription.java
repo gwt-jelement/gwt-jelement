@@ -48,7 +48,7 @@ public class PushSubscription{
     public native ArrayBuffer getKey(String name);
     
     @JsMethod(name = "toJSON")
-    public native Any toJSON();
+    public native Object toJSON();
     
     @JsMethod(name = "unsubscribe")
     public native Promise<Boolean> unsubscribe();

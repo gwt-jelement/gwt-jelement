@@ -27,7 +27,6 @@ import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
-import jsinterop.base.Any;
 
 @JsType(namespace = JsPackage.GLOBAL, isNative = true)
 public class Performance extends EventTarget{
@@ -95,6 +94,6 @@ public class Performance extends EventTarget{
     public native void setResourceTimingBufferSize(double maxSize);
     
     @JsMethod(name = "toJSON")
-    public native Any toJSON();
+    public native Object toJSON();
     
 }
