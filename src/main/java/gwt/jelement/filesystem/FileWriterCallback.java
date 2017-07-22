@@ -16,15 +16,10 @@
  */
 package gwt.jelement.filesystem;
 
+import jsinterop.annotations.JsFunction;
 import gwt.jelement.filesystem.FileWriter;
-import jsinterop.annotations.JsMethod;
-import jsinterop.annotations.JsPackage;
-import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
-public class FileWriterCallback{
-    
-    @JsMethod(name = "handleEvent")
-    public native void handleEvent(FileWriter fileWriter);
-    
+@JsFunction
+public interface FileWriterCallback{
+    void handleEvent(FileWriter fileWriter);
 }

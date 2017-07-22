@@ -16,15 +16,10 @@
  */
 package gwt.jelement.mediastream;
 
+import jsinterop.annotations.JsFunction;
 import gwt.jelement.mediastream.NavigatorUserMediaError;
-import jsinterop.annotations.JsMethod;
-import jsinterop.annotations.JsPackage;
-import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
-public class NavigatorUserMediaErrorCallback{
-    
-    @JsMethod(name = "handleEvent")
-    public native void handleEvent(NavigatorUserMediaError error);
-    
+@JsFunction
+public interface NavigatorUserMediaErrorCallback{
+    void handleEvent(NavigatorUserMediaError error);
 }

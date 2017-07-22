@@ -31,13 +31,19 @@ public class DOMTokenList{
     public native double getLength();
     
     @JsMethod(name = "add")
-    public native void add(String tokens);
+    public native void add();
+    
+    @JsMethod(name = "add")
+    public native void add(String... tokens);
     
     @JsMethod(name = "contains")
     public native boolean contains(String token);
     
     @JsMethod(name = "remove")
-    public native void remove(String tokens);
+    public native void remove();
+    
+    @JsMethod(name = "remove")
+    public native void remove(String... tokens);
     
     @JsMethod(name = "replace")
     public native void replace(String token, String newToken);

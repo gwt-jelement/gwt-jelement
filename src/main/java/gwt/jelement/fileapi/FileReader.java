@@ -16,11 +16,11 @@
  */
 package gwt.jelement.fileapi;
 
-import gwt.jelement.dom.ArrayBuffer;
 import gwt.jelement.dom.DOMException;
 import gwt.jelement.events.EventHandlerNonNull;
 import gwt.jelement.events.EventTarget;
 import gwt.jelement.fileapi.Blob;
+import elemental2.core.ArrayBuffer;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;

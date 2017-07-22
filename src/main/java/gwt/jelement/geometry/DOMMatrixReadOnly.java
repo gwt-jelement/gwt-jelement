@@ -16,13 +16,13 @@
  */
 package gwt.jelement.geometry;
 
-import gwt.jelement.dom.Float32Array;
-import gwt.jelement.dom.Float64Array;
 import gwt.jelement.geometry.DOMMatrix;
 import gwt.jelement.geometry.DOMMatrixInit;
 import gwt.jelement.geometry.DOMMatrixReadOnly;
 import gwt.jelement.geometry.DOMPoint;
 import gwt.jelement.geometry.DOMPointInit;
+import elemental2.core.Float32Array;
+import elemental2.core.Float64Array;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsPackage;

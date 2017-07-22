@@ -16,15 +16,10 @@
  */
 package gwt.jelement.quota;
 
+import jsinterop.annotations.JsFunction;
 import gwt.jelement.quota.DOMError;
-import jsinterop.annotations.JsMethod;
-import jsinterop.annotations.JsPackage;
-import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
-public class StorageErrorCallback{
-    
-    @JsMethod(name = "handleEvent")
-    public native void handleEvent(DOMError error);
-    
+@JsFunction
+public interface StorageErrorCallback{
+    void handleEvent(DOMError error);
 }

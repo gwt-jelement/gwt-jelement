@@ -16,8 +16,6 @@
  */
 package gwt.jelement.xmlhttprequest;
 
-import gwt.jelement.dom.ArrayBuffer;
-import gwt.jelement.dom.ArrayBufferView;
 import gwt.jelement.dom.Document;
 import gwt.jelement.dom.URLSearchParams;
 import gwt.jelement.events.EventHandlerNonNull;
@@ -26,6 +24,8 @@ import gwt.jelement.html.FormData;
 import gwt.jelement.xmlhttprequest.XMLHttpRequestEventTarget;
 import gwt.jelement.xmlhttprequest.XMLHttpRequestResponseType;
 import gwt.jelement.xmlhttprequest.XMLHttpRequestUpload;
+import elemental2.core.ArrayBuffer;
+import elemental2.core.ArrayBufferView;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;

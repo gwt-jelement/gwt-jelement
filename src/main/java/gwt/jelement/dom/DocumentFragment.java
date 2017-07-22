@@ -47,19 +47,25 @@ public class DocumentFragment extends Node{
     public native double getChildElementCount();
     
     @JsMethod(name = "append")
-    public native void append(Node nodes);
+    public native void append();
     
     @JsMethod(name = "append")
-    public native void append(String nodes);
+    public native void append(Node... nodes);
+    
+    @JsMethod(name = "append")
+    public native void append(String... nodes);
     
     @JsMethod(name = "getElementById")
     public native Element getElementById(String elementId);
     
     @JsMethod(name = "prepend")
-    public native void prepend(Node nodes);
+    public native void prepend();
     
     @JsMethod(name = "prepend")
-    public native void prepend(String nodes);
+    public native void prepend(Node... nodes);
+    
+    @JsMethod(name = "prepend")
+    public native void prepend(String... nodes);
     
     @JsMethod(name = "querySelector")
     public native Element querySelector(String selectors);

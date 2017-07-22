@@ -16,15 +16,10 @@
  */
 package gwt.jelement.filesystem;
 
+import jsinterop.annotations.JsFunction;
 import gwt.jelement.filesystem.Metadata;
-import jsinterop.annotations.JsMethod;
-import jsinterop.annotations.JsPackage;
-import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
-public class MetadataCallback{
-    
-    @JsMethod(name = "handleEvent")
-    public native void handleEvent(Metadata metadata);
-    
+@JsFunction
+public interface MetadataCallback{
+    void handleEvent(Metadata metadata);
 }

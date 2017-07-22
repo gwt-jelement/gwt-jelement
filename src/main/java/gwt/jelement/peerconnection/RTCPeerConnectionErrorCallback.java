@@ -16,15 +16,10 @@
  */
 package gwt.jelement.peerconnection;
 
+import jsinterop.annotations.JsFunction;
 import gwt.jelement.dom.DOMException;
-import jsinterop.annotations.JsMethod;
-import jsinterop.annotations.JsPackage;
-import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
-public class RTCPeerConnectionErrorCallback{
-    
-    @JsMethod(name = "handleEvent")
-    public native void handleEvent(DOMException exception);
-    
+@JsFunction
+public interface RTCPeerConnectionErrorCallback{
+    void handleEvent(DOMException exception);
 }

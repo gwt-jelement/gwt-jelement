@@ -17,7 +17,7 @@
 package gwt.jelement.html.custom;
 
 import gwt.jelement.dom.ElementDefinitionOptions;
-import elemental2.core.Function;
+import gwt.jelement.jelement.Function;
 import elemental2.promise.Promise;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsPackage;

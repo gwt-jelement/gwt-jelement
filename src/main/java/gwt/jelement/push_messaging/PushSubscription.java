@@ -16,9 +16,9 @@
  */
 package gwt.jelement.push_messaging;
 
-import gwt.jelement.dom.ArrayBuffer;
 import gwt.jelement.push_messaging.PushEncryptionKeyName;
 import gwt.jelement.push_messaging.PushSubscriptionOptions;
+import elemental2.core.ArrayBuffer;
 import elemental2.promise.Promise;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;

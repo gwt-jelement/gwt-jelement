@@ -16,10 +16,10 @@
  */
 package gwt.jelement.html;
 
-import gwt.jelement.dom.Float32Array;
-import gwt.jelement.dom.Uint16Array;
-import gwt.jelement.dom.Uint8ClampedArray;
 import gwt.jelement.html.ImageDataColorSettings;
+import elemental2.core.Float32Array;
+import elemental2.core.Uint16Array;
+import elemental2.core.Uint8ClampedArray;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;

@@ -16,15 +16,10 @@
  */
 package gwt.jelement.filesystem;
 
+import jsinterop.annotations.JsFunction;
 import gwt.jelement.filesystem.Entry;
-import jsinterop.annotations.JsMethod;
-import jsinterop.annotations.JsPackage;
-import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
-public class EntryCallback{
-    
-    @JsMethod(name = "handleEvent")
-    public native void handleEvent(Entry entry);
-    
+@JsFunction
+public interface EntryCallback{
+    void handleEvent(Entry entry);
 }

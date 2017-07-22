@@ -16,7 +16,7 @@
  */
 package gwt.jelement.frame;
 
-import elemental2.core.Function;
+import gwt.jelement.jelement.Function;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
@@ -44,10 +44,16 @@ public class WindowTimers{
     public native double setInterval(String handler);
     
     @JsMethod(name = "setInterval")
-    public native double setInterval(Function handler, double timeout, Any arguments);
+    public native double setInterval(Function handler, double timeout);
     
     @JsMethod(name = "setInterval")
-    public native double setInterval(String handler, double timeout, Any arguments);
+    public native double setInterval(String handler, double timeout);
+    
+    @JsMethod(name = "setInterval")
+    public native double setInterval(Function handler, double timeout, Any... arguments);
+    
+    @JsMethod(name = "setInterval")
+    public native double setInterval(String handler, double timeout, Any... arguments);
     
     @JsMethod(name = "setTimeout")
     public native double setTimeout(Function handler);
@@ -56,9 +62,15 @@ public class WindowTimers{
     public native double setTimeout(String handler);
     
     @JsMethod(name = "setTimeout")
-    public native double setTimeout(Function handler, double timeout, Any arguments);
+    public native double setTimeout(Function handler, double timeout);
     
     @JsMethod(name = "setTimeout")
-    public native double setTimeout(String handler, double timeout, Any arguments);
+    public native double setTimeout(String handler, double timeout);
+    
+    @JsMethod(name = "setTimeout")
+    public native double setTimeout(Function handler, double timeout, Any... arguments);
+    
+    @JsMethod(name = "setTimeout")
+    public native double setTimeout(String handler, double timeout, Any... arguments);
     
 }

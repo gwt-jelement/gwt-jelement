@@ -16,8 +16,8 @@
  */
 package gwt.jelement.push_messaging;
 
-import gwt.jelement.dom.ArrayBuffer;
 import gwt.jelement.fileapi.Blob;
+import elemental2.core.ArrayBuffer;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;

@@ -16,12 +16,12 @@
  */
 package gwt.jelement.fetch;
 
-import gwt.jelement.dom.ArrayBuffer;
 import gwt.jelement.fetch.Headers;
 import gwt.jelement.fetch.Response;
 import gwt.jelement.fetch.ResponseType;
 import gwt.jelement.fileapi.Blob;
 import gwt.jelement.html.FormData;
+import elemental2.core.ArrayBuffer;
 import elemental2.promise.Promise;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;

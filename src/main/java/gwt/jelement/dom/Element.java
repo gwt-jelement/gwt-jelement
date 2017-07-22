@@ -186,10 +186,13 @@ public class Element extends Node{
     public native Element getNextElementSibling();
     
     @JsMethod(name = "after")
-    public native void after(Node nodes);
+    public native void after();
     
     @JsMethod(name = "after")
-    public native void after(String nodes);
+    public native void after(Node... nodes);
+    
+    @JsMethod(name = "after")
+    public native void after(String... nodes);
     
     @JsMethod(name = "animate")
     public native Animation animate(Object[] effect);
@@ -210,19 +213,25 @@ public class Element extends Node{
     public native Animation animate(Object effect, KeyframeAnimationOptions options);
     
     @JsMethod(name = "append")
-    public native void append(Node nodes);
+    public native void append();
     
     @JsMethod(name = "append")
-    public native void append(String nodes);
+    public native void append(Node... nodes);
+    
+    @JsMethod(name = "append")
+    public native void append(String... nodes);
     
     @JsMethod(name = "attachShadow")
     public native ShadowRoot attachShadow(ShadowRootInit shadowRootInitDict);
     
     @JsMethod(name = "before")
-    public native void before(Node nodes);
+    public native void before();
     
     @JsMethod(name = "before")
-    public native void before(String nodes);
+    public native void before(Node... nodes);
+    
+    @JsMethod(name = "before")
+    public native void before(String... nodes);
     
     @JsMethod(name = "closest")
     public native Element closest(String selectors);
@@ -291,10 +300,13 @@ public class Element extends Node{
     public native boolean matches(String selectors);
     
     @JsMethod(name = "prepend")
-    public native void prepend(Node nodes);
+    public native void prepend();
     
     @JsMethod(name = "prepend")
-    public native void prepend(String nodes);
+    public native void prepend(Node... nodes);
+    
+    @JsMethod(name = "prepend")
+    public native void prepend(String... nodes);
     
     @JsMethod(name = "querySelector")
     public native Element querySelector(String selectors);
@@ -318,10 +330,13 @@ public class Element extends Node{
     public native Attr removeAttributeNode(Attr attr);
     
     @JsMethod(name = "replaceWith")
-    public native void replaceWith(Node nodes);
+    public native void replaceWith();
     
     @JsMethod(name = "replaceWith")
-    public native void replaceWith(String nodes);
+    public native void replaceWith(Node... nodes);
+    
+    @JsMethod(name = "replaceWith")
+    public native void replaceWith(String... nodes);
     
     @JsMethod(name = "requestFullscreen")
     public native void requestFullscreen();

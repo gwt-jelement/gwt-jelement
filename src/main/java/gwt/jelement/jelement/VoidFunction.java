@@ -14,20 +14,11 @@
  * License for the specific language governing permissions and limitations under
  * the License.
  */
-package gwt.jelement.dom;
+package gwt.jelement.jelement;
 
-import elemental2.core.ArrayBufferView;
-import jsinterop.annotations.JsConstructor;
-import jsinterop.annotations.JsPackage;
-import jsinterop.annotations.JsType;
+import jsinterop.annotations.JsFunction;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
-public class DataView extends ArrayBufferView{
-    
-    @JsConstructor
-    public DataView(){
-        super();
-    }
-    
-    
+@JsFunction
+public interface VoidFunction{
+    void callback();
 }

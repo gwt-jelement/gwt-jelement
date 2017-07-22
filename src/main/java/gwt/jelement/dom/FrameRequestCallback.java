@@ -16,14 +16,9 @@
  */
 package gwt.jelement.dom;
 
-import jsinterop.annotations.JsMethod;
-import jsinterop.annotations.JsPackage;
-import jsinterop.annotations.JsType;
+import jsinterop.annotations.JsFunction;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
-public class FrameRequestCallback{
-    
-    @JsMethod(name = "handleEvent")
-    public native void handleEvent(double highResTime);
-    
+@JsFunction
+public interface FrameRequestCallback{
+    void handleEvent(double highResTime);
 }

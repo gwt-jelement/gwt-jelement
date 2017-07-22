@@ -16,7 +16,6 @@
  */
 package gwt.jelement.webaudio;
 
-import gwt.jelement.dom.ArrayBuffer;
 import gwt.jelement.events.EventHandlerNonNull;
 import gwt.jelement.events.EventTarget;
 import gwt.jelement.html.HTMLMediaElement;
@@ -48,6 +47,7 @@ import gwt.jelement.webaudio.PeriodicWaveConstraints;
 import gwt.jelement.webaudio.ScriptProcessorNode;
 import gwt.jelement.webaudio.StereoPannerNode;
 import gwt.jelement.webaudio.WaveShaperNode;
+import elemental2.core.ArrayBuffer;
 import elemental2.promise.Promise;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;

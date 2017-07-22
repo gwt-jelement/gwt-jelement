@@ -54,7 +54,6 @@ import gwt.jelement.frame.VisualViewport;
 import gwt.jelement.frame.Window;
 import gwt.jelement.geometry.DOMMatrix;
 import gwt.jelement.html.HTMLCanvasElement;
-import gwt.jelement.html.HTMLDocument;
 import gwt.jelement.html.HTMLImageElement;
 import gwt.jelement.html.HTMLVideoElement;
 import gwt.jelement.html.ImageData;
@@ -62,6 +61,7 @@ import gwt.jelement.html.custom.CustomElementRegistry;
 import gwt.jelement.imagebitmap.ImageBitmap;
 import gwt.jelement.imagebitmap.ImageBitmapOptions;
 import gwt.jelement.indexeddb.IDBFactory;
+import gwt.jelement.jelement.Function;
 import gwt.jelement.loader.appcache.ApplicationCache;
 import gwt.jelement.mediastream.MediaStream;
 import gwt.jelement.offscreencanvas.OffscreenCanvas;
@@ -79,7 +79,6 @@ import gwt.jelement.timing.Performance;
 import gwt.jelement.webdatabase.Database;
 import gwt.jelement.webdatabase.DatabaseCallback;
 import gwt.jelement.workers.Worklet;
-import elemental2.core.Function;
 import elemental2.promise.Promise;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
@@ -179,27 +178,6 @@ public class Window extends EventTarget{
     
     @JsProperty(name="ondeviceorientationabsolute")
     public EventHandlerNonNull ondeviceorientationabsolute;
-    
-    @JsProperty(name="document")
-    public static HTMLDocument document;
-    
-    @JsProperty(name="location")
-    public static Location location;
-    
-    @JsProperty(name="navigator")
-    public static Navigator navigator;
-    
-    @JsProperty(name="screen")
-    public static Screen screen;
-    
-    @JsProperty(name="self")
-    public static Window self;
-    
-    @JsProperty(name="top")
-    public static Window top;
-    
-    @JsProperty(name="window")
-    public static Window window;
     
     @JsProperty(name="webkitMediaStream")
     public MediaStream webkitMediaStream;
@@ -937,10 +915,16 @@ public class Window extends EventTarget{
     public native double setInterval(String handler);
     
     @JsMethod(name = "setInterval")
-    public native double setInterval(Function handler, double timeout, Any arguments);
+    public native double setInterval(Function handler, double timeout);
     
     @JsMethod(name = "setInterval")
-    public native double setInterval(String handler, double timeout, Any arguments);
+    public native double setInterval(String handler, double timeout);
+    
+    @JsMethod(name = "setInterval")
+    public native double setInterval(Function handler, double timeout, Any... arguments);
+    
+    @JsMethod(name = "setInterval")
+    public native double setInterval(String handler, double timeout, Any... arguments);
     
     @JsMethod(name = "setTimeout")
     public native double setTimeout(Function handler);
@@ -949,10 +933,16 @@ public class Window extends EventTarget{
     public native double setTimeout(String handler);
     
     @JsMethod(name = "setTimeout")
-    public native double setTimeout(Function handler, double timeout, Any arguments);
+    public native double setTimeout(Function handler, double timeout);
     
     @JsMethod(name = "setTimeout")
-    public native double setTimeout(String handler, double timeout, Any arguments);
+    public native double setTimeout(String handler, double timeout);
+    
+    @JsMethod(name = "setTimeout")
+    public native double setTimeout(Function handler, double timeout, Any... arguments);
+    
+    @JsMethod(name = "setTimeout")
+    public native double setTimeout(String handler, double timeout, Any... arguments);
     
     @JsMethod(name = "stop")
     public native void stop();

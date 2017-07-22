@@ -16,15 +16,10 @@
  */
 package gwt.jelement.peerconnection;
 
+import jsinterop.annotations.JsFunction;
 import gwt.jelement.peerconnection.RTCStatsResponse;
-import jsinterop.annotations.JsMethod;
-import jsinterop.annotations.JsPackage;
-import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
-public class RTCStatsCallback{
-    
-    @JsMethod(name = "handleEvent")
-    public native void handleEvent(RTCStatsResponse response);
-    
+@JsFunction
+public interface RTCStatsCallback{
+    void handleEvent(RTCStatsResponse response);
 }

@@ -16,15 +16,10 @@
  */
 package gwt.jelement.filesystem;
 
+import jsinterop.annotations.JsFunction;
 import gwt.jelement.filesystem.DOMFileSystem;
-import jsinterop.annotations.JsMethod;
-import jsinterop.annotations.JsPackage;
-import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
-public class FileSystemCallback{
-    
-    @JsMethod(name = "handleEvent")
-    public native void handleEvent(DOMFileSystem fileSystem);
-    
+@JsFunction
+public interface FileSystemCallback{
+    void handleEvent(DOMFileSystem fileSystem);
 }

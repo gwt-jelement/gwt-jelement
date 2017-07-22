@@ -16,14 +16,9 @@
  */
 package gwt.jelement.html;
 
-import jsinterop.annotations.JsMethod;
-import jsinterop.annotations.JsPackage;
-import jsinterop.annotations.JsType;
+import jsinterop.annotations.JsFunction;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
-public class VoidCallback{
-    
-    @JsMethod(name = "handleEvent")
-    public native void handleEvent();
-    
+@JsFunction
+public interface VoidCallback{
+    void handleEvent();
 }

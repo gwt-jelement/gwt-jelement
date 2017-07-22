@@ -31,13 +31,13 @@ import gwt.jelement.html.ImageData;
 import gwt.jelement.imagebitmap.ImageBitmap;
 import gwt.jelement.imagebitmap.ImageBitmapOptions;
 import gwt.jelement.indexeddb.IDBFactory;
+import gwt.jelement.jelement.Function;
 import gwt.jelement.offscreencanvas.OffscreenCanvas;
 import gwt.jelement.svg.SVGImageElement;
 import gwt.jelement.timing.WorkerPerformance;
 import gwt.jelement.workers.WorkerGlobalScope;
 import gwt.jelement.workers.WorkerLocation;
 import gwt.jelement.workers.WorkerNavigator;
-import elemental2.core.Function;
 import elemental2.promise.Promise;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
@@ -226,7 +226,10 @@ public class WorkerGlobalScope extends EventTarget{
     public native Promise<Response> fetch(String input, Object init);
     
     @JsMethod(name = "importScripts")
-    public native void importScripts(String urls);
+    public native void importScripts();
+    
+    @JsMethod(name = "importScripts")
+    public native void importScripts(String... urls);
     
     @JsMethod(name = "setInterval")
     public native double setInterval(Function handler);
@@ -235,10 +238,16 @@ public class WorkerGlobalScope extends EventTarget{
     public native double setInterval(String handler);
     
     @JsMethod(name = "setInterval")
-    public native double setInterval(Function handler, double timeout, Any arguments);
+    public native double setInterval(Function handler, double timeout);
     
     @JsMethod(name = "setInterval")
-    public native double setInterval(String handler, double timeout, Any arguments);
+    public native double setInterval(String handler, double timeout);
+    
+    @JsMethod(name = "setInterval")
+    public native double setInterval(Function handler, double timeout, Any... arguments);
+    
+    @JsMethod(name = "setInterval")
+    public native double setInterval(String handler, double timeout, Any... arguments);
     
     @JsMethod(name = "setTimeout")
     public native double setTimeout(Function handler);
@@ -247,9 +256,15 @@ public class WorkerGlobalScope extends EventTarget{
     public native double setTimeout(String handler);
     
     @JsMethod(name = "setTimeout")
-    public native double setTimeout(Function handler, double timeout, Any arguments);
+    public native double setTimeout(Function handler, double timeout);
     
     @JsMethod(name = "setTimeout")
-    public native double setTimeout(String handler, double timeout, Any arguments);
+    public native double setTimeout(String handler, double timeout);
+    
+    @JsMethod(name = "setTimeout")
+    public native double setTimeout(Function handler, double timeout, Any... arguments);
+    
+    @JsMethod(name = "setTimeout")
+    public native double setTimeout(String handler, double timeout, Any... arguments);
     
 }

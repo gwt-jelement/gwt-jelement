@@ -16,7 +16,7 @@
  */
 package gwt.jelement.encoding;
 
-import gwt.jelement.dom.Uint8Array;
+import elemental2.core.Uint8Array;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsPackage;

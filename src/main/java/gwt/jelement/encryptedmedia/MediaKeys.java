@@ -16,11 +16,11 @@
  */
 package gwt.jelement.encryptedmedia;
 
-import gwt.jelement.dom.ArrayBuffer;
-import gwt.jelement.dom.ArrayBufferView;
 import gwt.jelement.encryptedmedia.MediaKeySession;
 import gwt.jelement.encryptedmedia.MediaKeySessionType;
 import gwt.jelement.encryptedmedia.MediaKeysPolicy;
+import elemental2.core.ArrayBuffer;
+import elemental2.core.ArrayBufferView;
 import elemental2.promise.Promise;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;

@@ -16,15 +16,10 @@
  */
 package gwt.jelement.fileapi;
 
+import jsinterop.annotations.JsFunction;
 import gwt.jelement.fileapi.Blob;
-import jsinterop.annotations.JsMethod;
-import jsinterop.annotations.JsPackage;
-import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
-public class BlobCallback{
-    
-    @JsMethod(name = "handleEvent")
-    public native void handleEvent(Blob blob);
-    
+@JsFunction
+public interface BlobCallback{
+    void handleEvent(Blob blob);
 }

@@ -16,14 +16,9 @@
  */
 package gwt.jelement.quota;
 
-import jsinterop.annotations.JsMethod;
-import jsinterop.annotations.JsPackage;
-import jsinterop.annotations.JsType;
+import jsinterop.annotations.JsFunction;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
-public class StorageQuotaCallback{
-    
-    @JsMethod(name = "handleEvent")
-    public native void handleEvent(double grantedQuotaInBytes);
-    
+@JsFunction
+public interface StorageQuotaCallback{
+    void handleEvent(double grantedQuotaInBytes);
 }

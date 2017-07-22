@@ -16,10 +16,10 @@
  */
 package gwt.jelement.fileapi;
 
-import gwt.jelement.dom.ArrayBuffer;
-import gwt.jelement.dom.ArrayBufferView;
 import gwt.jelement.fileapi.Blob;
 import gwt.jelement.fileapi.FilePropertyBag;
+import elemental2.core.ArrayBuffer;
+import elemental2.core.ArrayBufferView;
 import elemental2.core.Date;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsPackage;

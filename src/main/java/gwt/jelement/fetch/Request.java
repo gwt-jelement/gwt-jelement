@@ -16,7 +16,6 @@
  */
 package gwt.jelement.fetch;
 
-import gwt.jelement.dom.ArrayBuffer;
 import gwt.jelement.fetch.Headers;
 import gwt.jelement.fetch.ReferrerPolicy;
 import gwt.jelement.fetch.Request;
@@ -26,6 +25,7 @@ import gwt.jelement.fetch.RequestRedirect;
 import gwt.jelement.fileapi.Blob;
 import gwt.jelement.html.FormData;
 import gwt.jelement.workers.RequestCredentials;
+import elemental2.core.ArrayBuffer;
 import elemental2.promise.Promise;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;

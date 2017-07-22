@@ -16,16 +16,11 @@
  */
 package gwt.jelement.webdatabase;
 
+import jsinterop.annotations.JsFunction;
 import gwt.jelement.webdatabase.SQLResultSet;
 import gwt.jelement.webdatabase.SQLTransaction;
-import jsinterop.annotations.JsMethod;
-import jsinterop.annotations.JsPackage;
-import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
-public class SQLStatementCallback{
-    
-    @JsMethod(name = "handleEvent")
-    public native boolean handleEvent(SQLTransaction transaction, SQLResultSet resultSet);
-    
+@JsFunction
+public interface SQLStatementCallback{
+    boolean handleEvent(SQLTransaction transaction, SQLResultSet resultSet);
 }

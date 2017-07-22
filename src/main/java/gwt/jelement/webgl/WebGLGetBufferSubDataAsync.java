@@ -16,7 +16,7 @@
  */
 package gwt.jelement.webgl;
 
-import gwt.jelement.dom.ArrayBufferView;
+import elemental2.core.ArrayBufferView;
 import elemental2.promise.Promise;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsPackage;

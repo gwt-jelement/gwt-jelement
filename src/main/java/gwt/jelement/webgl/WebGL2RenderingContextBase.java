@@ -16,11 +16,6 @@
  */
 package gwt.jelement.webgl;
 
-import gwt.jelement.dom.ArrayBuffer;
-import gwt.jelement.dom.ArrayBufferView;
-import gwt.jelement.dom.Float32Array;
-import gwt.jelement.dom.Int32Array;
-import gwt.jelement.dom.Uint32Array;
 import gwt.jelement.html.HTMLCanvasElement;
 import gwt.jelement.html.HTMLImageElement;
 import gwt.jelement.html.HTMLVideoElement;
@@ -43,6 +38,11 @@ import gwt.jelement.webgl.WebGLTexture;
 import gwt.jelement.webgl.WebGLTransformFeedback;
 import gwt.jelement.webgl.WebGLUniformLocation;
 import gwt.jelement.webgl.WebGLVertexArrayObject;
+import elemental2.core.ArrayBuffer;
+import elemental2.core.ArrayBufferView;
+import elemental2.core.Float32Array;
+import elemental2.core.Int32Array;
+import elemental2.core.Uint32Array;
 import elemental2.promise.Promise;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;

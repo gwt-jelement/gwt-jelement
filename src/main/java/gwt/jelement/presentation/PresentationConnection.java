@@ -16,13 +16,13 @@
  */
 package gwt.jelement.presentation;
 
-import gwt.jelement.dom.ArrayBuffer;
-import gwt.jelement.dom.ArrayBufferView;
 import gwt.jelement.events.EventHandlerNonNull;
 import gwt.jelement.events.EventTarget;
 import gwt.jelement.fileapi.Blob;
 import gwt.jelement.presentation.PresentationConnectionState;
 import gwt.jelement.websockets.BinaryType;
+import elemental2.core.ArrayBuffer;
+import elemental2.core.ArrayBufferView;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;

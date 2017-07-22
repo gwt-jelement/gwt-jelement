@@ -16,10 +16,10 @@
  */
 package gwt.jelement.encoding;
 
-import gwt.jelement.dom.ArrayBuffer;
-import gwt.jelement.dom.ArrayBufferView;
 import gwt.jelement.encoding.TextDecodeOptions;
 import gwt.jelement.encoding.TextDecoderOptions;
+import elemental2.core.ArrayBuffer;
+import elemental2.core.ArrayBufferView;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsPackage;

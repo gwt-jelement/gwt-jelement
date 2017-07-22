@@ -14,36 +14,40 @@
  * License for the specific language governing permissions and limitations under
  * the License.
  */
-package gwt.jelement.fetch;
+package gwt.jelement.jelement;
 
-import gwt.jelement.fileapi.Blob;
-import gwt.jelement.html.FormData;
-import elemental2.core.ArrayBuffer;
-import elemental2.promise.Promise;
-import jsinterop.annotations.JsMethod;
+import gwt.jelement.frame.Location;
+import gwt.jelement.frame.Navigator;
+import gwt.jelement.frame.Screen;
+import gwt.jelement.frame.Window;
+import gwt.jelement.html.HTMLDocument;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, isNative = true)
-public class Body{
+public class Browser{
     
-    @JsProperty(name="bodyUsed")
-    public native boolean getBodyUsed();
+    @JsProperty(name="document")
+    public static HTMLDocument document;
     
-    @JsMethod(name = "arrayBuffer")
-    public native Promise<ArrayBuffer> arrayBuffer();
+    @JsProperty(name="location")
+    public static Location location;
     
-    @JsMethod(name = "blob")
-    public native Promise<Blob> blob();
+    @JsProperty(name="navigator")
+    public static Navigator navigator;
     
-    @JsMethod(name = "formData")
-    public native Promise<FormData> formData();
+    @JsProperty(name="screen")
+    public static Screen screen;
     
-    @JsMethod(name = "json")
-    public native Promise<Object> json();
+    @JsProperty(name="self")
+    public static Window self;
     
-    @JsMethod(name = "text")
-    public native Promise<String> text();
+    @JsProperty(name="top")
+    public static Window top;
+    
+    @JsProperty(name="window")
+    public static Window window;
+    
     
 }

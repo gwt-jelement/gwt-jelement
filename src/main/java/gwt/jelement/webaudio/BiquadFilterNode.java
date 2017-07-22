@@ -16,10 +16,10 @@
  */
 package gwt.jelement.webaudio;
 
-import gwt.jelement.dom.Float32Array;
 import gwt.jelement.webaudio.AudioNode;
 import gwt.jelement.webaudio.AudioParam;
 import gwt.jelement.webaudio.BiquadFilterType;
+import elemental2.core.Float32Array;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;

@@ -582,10 +582,13 @@ public class Document extends Node{
     public native Node adoptNode(Node node);
     
     @JsMethod(name = "append")
-    public native void append(Node nodes);
+    public native void append();
     
     @JsMethod(name = "append")
-    public native void append(String nodes);
+    public native void append(Node... nodes);
+    
+    @JsMethod(name = "append")
+    public native void append(String... nodes);
     
     @JsMethod(name = "caretRangeFromPoint")
     public native Range caretRangeFromPoint();
@@ -678,7 +681,10 @@ public class Document extends Node{
     public native Touch createTouch(Window view, EventTarget target, double identifier, double pageX, double pageY, double screenX, double screenY, double radiusX, double radiusY, float rotationAngle, float force);
     
     @JsMethod(name = "createTouchList")
-    public native TouchList createTouchList(Touch touches);
+    public native TouchList createTouchList();
+    
+    @JsMethod(name = "createTouchList")
+    public native TouchList createTouchList(Touch... touches);
     
     @JsMethod(name = "createTreeWalker")
     public native TreeWalker createTreeWalker(Node root);
@@ -756,10 +762,13 @@ public class Document extends Node{
     public native void open();
     
     @JsMethod(name = "prepend")
-    public native void prepend(Node nodes);
+    public native void prepend();
     
     @JsMethod(name = "prepend")
-    public native void prepend(String nodes);
+    public native void prepend(Node... nodes);
+    
+    @JsMethod(name = "prepend")
+    public native void prepend(String... nodes);
     
     @JsMethod(name = "queryCommandEnabled")
     public native boolean queryCommandEnabled(String commandId);
@@ -795,9 +804,15 @@ public class Document extends Node{
     public native void webkitExitFullscreen();
     
     @JsMethod(name = "write")
-    public native void write(String text);
+    public native void write();
+    
+    @JsMethod(name = "write")
+    public native void write(String... text);
     
     @JsMethod(name = "writeln")
-    public native void writeln(String text);
+    public native void writeln();
+    
+    @JsMethod(name = "writeln")
+    public native void writeln(String... text);
     
 }

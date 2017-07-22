@@ -16,15 +16,10 @@
  */
 package gwt.jelement.page.scrolling;
 
+import jsinterop.annotations.JsFunction;
 import gwt.jelement.page.scrolling.ScrollState;
-import jsinterop.annotations.JsMethod;
-import jsinterop.annotations.JsPackage;
-import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
-public class ScrollStateCallback{
-    
-    @JsMethod(name = "handleEvent")
-    public native void handleEvent(ScrollState scrollState);
-    
+@JsFunction
+public interface ScrollStateCallback{
+    void handleEvent(ScrollState scrollState);
 }

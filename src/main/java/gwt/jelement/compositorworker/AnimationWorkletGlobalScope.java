@@ -16,8 +16,8 @@
  */
 package gwt.jelement.compositorworker;
 
+import gwt.jelement.jelement.Function;
 import gwt.jelement.workers.WorkletGlobalScope;
-import elemental2.core.Function;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsPackage;

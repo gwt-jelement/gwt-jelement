@@ -16,7 +16,7 @@
  */
 package gwt.jelement.gamepad;
 
-import gwt.jelement.dom.Float32Array;
+import elemental2.core.Float32Array;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;

@@ -16,14 +16,9 @@
  */
 package gwt.jelement.notifications;
 
-import jsinterop.annotations.JsMethod;
-import jsinterop.annotations.JsPackage;
-import jsinterop.annotations.JsType;
+import jsinterop.annotations.JsFunction;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
-public class NotificationPermissionCallback{
-    
-    @JsMethod(name = "handleEvent")
-    public native void handleEvent(String permission);
-    
+@JsFunction
+public interface NotificationPermissionCallback{
+    void handleEvent(String permission);
 }

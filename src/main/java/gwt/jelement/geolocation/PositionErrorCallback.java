@@ -16,15 +16,10 @@
  */
 package gwt.jelement.geolocation;
 
+import jsinterop.annotations.JsFunction;
 import gwt.jelement.geolocation.PositionError;
-import jsinterop.annotations.JsMethod;
-import jsinterop.annotations.JsPackage;
-import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
-public class PositionErrorCallback{
-    
-    @JsMethod(name = "handleEvent")
-    public native void handleEvent(PositionError error);
-    
+@JsFunction
+public interface PositionErrorCallback{
+    void handleEvent(PositionError error);
 }

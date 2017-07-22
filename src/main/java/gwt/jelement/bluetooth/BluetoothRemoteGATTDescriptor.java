@@ -17,9 +17,9 @@
 package gwt.jelement.bluetooth;
 
 import gwt.jelement.bluetooth.BluetoothRemoteGATTCharacteristic;
-import gwt.jelement.dom.ArrayBuffer;
-import gwt.jelement.dom.ArrayBufferView;
 import gwt.jelement.dom.DataView;
+import elemental2.core.ArrayBuffer;
+import elemental2.core.ArrayBufferView;
 import elemental2.promise.Promise;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsPackage;

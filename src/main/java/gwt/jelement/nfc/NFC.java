@@ -16,12 +16,12 @@
  */
 package gwt.jelement.nfc;
 
-import gwt.jelement.dom.ArrayBuffer;
 import gwt.jelement.nfc.MessageCallback;
 import gwt.jelement.nfc.NFCMessage;
 import gwt.jelement.nfc.NFCPushOptions;
 import gwt.jelement.nfc.NFCPushTarget;
 import gwt.jelement.nfc.NFCWatchOptions;
+import elemental2.core.ArrayBuffer;
 import elemental2.promise.Promise;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;

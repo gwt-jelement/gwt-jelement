@@ -16,8 +16,8 @@
  */
 package gwt.jelement.vr;
 
-import gwt.jelement.dom.Float32Array;
 import gwt.jelement.vr.VRPose;
+import elemental2.core.Float32Array;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;

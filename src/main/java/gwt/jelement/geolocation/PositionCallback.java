@@ -16,15 +16,10 @@
  */
 package gwt.jelement.geolocation;
 
+import jsinterop.annotations.JsFunction;
 import gwt.jelement.geolocation.Position;
-import jsinterop.annotations.JsMethod;
-import jsinterop.annotations.JsPackage;
-import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
-public class PositionCallback{
-    
-    @JsMethod(name = "handleEvent")
-    public native void handleEvent(Position position);
-    
+@JsFunction
+public interface PositionCallback{
+    void handleEvent(Position position);
 }

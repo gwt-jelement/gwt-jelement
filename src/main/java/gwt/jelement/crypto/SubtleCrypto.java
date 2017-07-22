@@ -17,8 +17,8 @@
 package gwt.jelement.crypto;
 
 import gwt.jelement.crypto.CryptoKey;
-import gwt.jelement.dom.ArrayBuffer;
-import gwt.jelement.dom.ArrayBufferView;
+import elemental2.core.ArrayBuffer;
+import elemental2.core.ArrayBufferView;
 import elemental2.promise.Promise;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsPackage;

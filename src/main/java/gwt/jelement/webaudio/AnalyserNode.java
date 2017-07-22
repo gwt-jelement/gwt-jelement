@@ -16,11 +16,11 @@
  */
 package gwt.jelement.webaudio;
 
-import gwt.jelement.dom.Float32Array;
-import gwt.jelement.dom.Uint8Array;
 import gwt.jelement.webaudio.AnalyserOptions;
 import gwt.jelement.webaudio.AudioNode;
 import gwt.jelement.webaudio.BaseAudioContext;
+import elemental2.core.Float32Array;
+import elemental2.core.Uint8Array;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsPackage;

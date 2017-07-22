@@ -16,15 +16,10 @@
  */
 package gwt.jelement.dom;
 
+import jsinterop.annotations.JsFunction;
 import gwt.jelement.dom.IdleDeadline;
-import jsinterop.annotations.JsMethod;
-import jsinterop.annotations.JsPackage;
-import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
-public class IdleRequestCallback{
-    
-    @JsMethod(name = "handleEvent")
-    public native void handleEvent(IdleDeadline deadline);
-    
+@JsFunction
+public interface IdleRequestCallback{
+    void handleEvent(IdleDeadline deadline);
 }

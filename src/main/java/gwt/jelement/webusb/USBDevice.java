@@ -16,8 +16,6 @@
  */
 package gwt.jelement.webusb;
 
-import gwt.jelement.dom.ArrayBuffer;
-import gwt.jelement.dom.ArrayBufferView;
 import gwt.jelement.webusb.USBConfiguration;
 import gwt.jelement.webusb.USBControlTransferParameters;
 import gwt.jelement.webusb.USBDirection;
@@ -25,6 +23,8 @@ import gwt.jelement.webusb.USBInTransferResult;
 import gwt.jelement.webusb.USBIsochronousInTransferResult;
 import gwt.jelement.webusb.USBIsochronousOutTransferResult;
 import gwt.jelement.webusb.USBOutTransferResult;
+import elemental2.core.ArrayBuffer;
+import elemental2.core.ArrayBufferView;
 import elemental2.promise.Promise;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;

@@ -16,9 +16,9 @@
  */
 package gwt.jelement.push_messaging;
 
-import gwt.jelement.dom.ArrayBuffer;
-import gwt.jelement.dom.ArrayBufferView;
 import gwt.jelement.serviceworkers.ExtendableEventInit;
+import elemental2.core.ArrayBuffer;
+import elemental2.core.ArrayBufferView;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
