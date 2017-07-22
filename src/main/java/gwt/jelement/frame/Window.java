@@ -44,6 +44,7 @@ import gwt.jelement.filesystem.EntryCallback;
 import gwt.jelement.filesystem.ErrorCallback;
 import gwt.jelement.filesystem.FileSystemCallback;
 import gwt.jelement.frame.BarProp;
+import gwt.jelement.frame.Console;
 import gwt.jelement.frame.External;
 import gwt.jelement.frame.History;
 import gwt.jelement.frame.Location;
@@ -565,6 +566,9 @@ public class Window extends EventTarget{
     
     @JsProperty(name="devicePixelRatio")
     public native double getDevicePixelRatio();
+    
+    @JsProperty(name="console")
+    public native Console getConsole();
     
     @JsProperty(name="orientation")
     public native double getOrientation();

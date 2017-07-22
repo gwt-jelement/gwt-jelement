@@ -24,6 +24,7 @@ import gwt.jelement.events.EventTarget;
 import gwt.jelement.fetch.Request;
 import gwt.jelement.fetch.Response;
 import gwt.jelement.fileapi.Blob;
+import gwt.jelement.frame.Console;
 import gwt.jelement.html.HTMLCanvasElement;
 import gwt.jelement.html.HTMLImageElement;
 import gwt.jelement.html.HTMLVideoElement;
@@ -72,6 +73,9 @@ public class WorkerGlobalScope extends EventTarget{
     
     @JsProperty(name="navigator")
     public native WorkerNavigator getNavigator();
+    
+    @JsProperty(name="console")
+    public native Console getConsole();
     
     @JsOverlay
     public final AddressSpace getAddressSpaceAsAddressSpace(){
