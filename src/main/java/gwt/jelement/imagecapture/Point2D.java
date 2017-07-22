@@ -24,10 +24,10 @@ import jsinterop.annotations.JsType;
 public class Point2D{
 
     @JsProperty(name="x")
-    public float x = 0.0f;
+    public float x;
 
     @JsProperty(name="y")
-    public float y = 0.0f;
+    public float y;
 
 
 }

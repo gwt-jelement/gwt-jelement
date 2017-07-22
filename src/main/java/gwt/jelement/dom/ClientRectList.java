@@ -26,9 +26,9 @@ import jsinterop.annotations.JsType;
 public class ClientRectList{
     
     @JsProperty(name="length")
-    public native long getLength();
+    public native double getLength();
     
     @JsMethod(name = "item")
-    public native ClientRect item(long index);
+    public native ClientRect item(double index);
     
 }

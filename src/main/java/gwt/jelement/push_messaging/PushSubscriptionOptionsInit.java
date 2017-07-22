@@ -52,10 +52,10 @@ public class PushSubscriptionOptionsInit{
     }
     
     @JsProperty(name="userVisibleOnly")
-    public boolean userVisibleOnly = false;
+    public boolean userVisibleOnly;
 
     @JsProperty(name="applicationServerKey")
-    public PushSubscriptionOptionsInit.BufferSource applicationServerKey = null;
+    public PushSubscriptionOptionsInit.BufferSource applicationServerKey;
 
 
 }

@@ -33,7 +33,7 @@ public class CSSResourceValue extends CSSStyleValue{
     }
     
     @JsOverlay
-    public  CSSResourceState getStateAsCSSResourceState(){
+    public final CSSResourceState getStateAsCSSResourceState(){
         return CSSResourceState.of(getState());
     }
     

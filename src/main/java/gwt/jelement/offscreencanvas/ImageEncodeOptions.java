@@ -24,10 +24,10 @@ import jsinterop.annotations.JsType;
 public class ImageEncodeOptions{
 
     @JsProperty(name="type")
-    public String type = "image/png";
+    public String type;
 
     @JsProperty(name="quality")
-    public double quality = 1.0;
+    public double quality;
 
 
 }

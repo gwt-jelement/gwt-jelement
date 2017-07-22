@@ -31,10 +31,7 @@ public class BeforeUnloadEvent extends Event{
     }
     
     @JsProperty(name="returnValue")
-    public native String getStringReturnValue();
-    
-    @JsProperty(name="returnValue")
-    public native void setReturnValue(String returnValue);
+    public String returnValue;
     
     
 }

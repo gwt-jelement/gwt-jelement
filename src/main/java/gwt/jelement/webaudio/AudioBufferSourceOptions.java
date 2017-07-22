@@ -28,19 +28,19 @@ public class AudioBufferSourceOptions{
     public AudioBuffer buffer;
 
     @JsProperty(name="detune")
-    public float detune = 0;
+    public float detune;
 
     @JsProperty(name="loop")
-    public boolean loop = false;
+    public boolean loop;
 
     @JsProperty(name="loopEnd")
-    public double loopEnd = 0;
+    public double loopEnd;
 
     @JsProperty(name="loopStart")
-    public double loopStart = 0;
+    public double loopStart;
 
     @JsProperty(name="playbackRate")
-    public float playbackRate = 1;
+    public float playbackRate;
 
 
 }

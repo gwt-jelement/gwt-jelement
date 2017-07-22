@@ -27,12 +27,12 @@ import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, isNative = true)
 public class SVGTextPathElement extends SVGTextContentElement{
-    public static final int TEXTPATH_METHODTYPE_UNKNOWN = 0;
-    public static final int TEXTPATH_METHODTYPE_ALIGN = 1;
-    public static final int TEXTPATH_METHODTYPE_STRETCH = 2;
-    public static final int TEXTPATH_SPACINGTYPE_UNKNOWN = 0;
-    public static final int TEXTPATH_SPACINGTYPE_AUTO = 1;
-    public static final int TEXTPATH_SPACINGTYPE_EXACT = 2;
+    public static int TEXTPATH_METHODTYPE_UNKNOWN;
+    public static int TEXTPATH_METHODTYPE_ALIGN;
+    public static int TEXTPATH_METHODTYPE_STRETCH;
+    public static int TEXTPATH_SPACINGTYPE_UNKNOWN;
+    public static int TEXTPATH_SPACINGTYPE_AUTO;
+    public static int TEXTPATH_SPACINGTYPE_EXACT;
     
     
     @JsConstructor

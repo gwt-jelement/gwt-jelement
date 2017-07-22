@@ -28,11 +28,11 @@ import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, isNative = true)
 public class SVGFEDisplacementMapElement extends SVGElement{
-    public static final int SVG_CHANNEL_UNKNOWN = 0;
-    public static final int SVG_CHANNEL_R = 1;
-    public static final int SVG_CHANNEL_G = 2;
-    public static final int SVG_CHANNEL_B = 3;
-    public static final int SVG_CHANNEL_A = 4;
+    public static int SVG_CHANNEL_UNKNOWN;
+    public static int SVG_CHANNEL_R;
+    public static int SVG_CHANNEL_G;
+    public static int SVG_CHANNEL_B;
+    public static int SVG_CHANNEL_A;
     
     
     @JsConstructor

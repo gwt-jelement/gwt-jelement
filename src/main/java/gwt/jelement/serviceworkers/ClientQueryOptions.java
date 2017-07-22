@@ -26,10 +26,10 @@ import jsinterop.annotations.JsType;
 public class ClientQueryOptions{
 
     @JsProperty(name="includeUncontrolled")
-    public boolean includeUncontrolled = false;
+    public boolean includeUncontrolled;
 
     @JsProperty(name="type")
-    public ClientType type = ClientType.of("window");
+    public ClientType type;
 
 
 }

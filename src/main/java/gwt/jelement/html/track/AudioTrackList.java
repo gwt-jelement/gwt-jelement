@@ -43,7 +43,7 @@ public class AudioTrackList extends EventTarget{
     public EventHandlerNonNull onremovetrack;
     
     @JsProperty(name="length")
-    public native long getLength();
+    public native double getLength();
     
     @JsMethod(name = "getTrackById")
     public native AudioTrack getTrackById(String id);

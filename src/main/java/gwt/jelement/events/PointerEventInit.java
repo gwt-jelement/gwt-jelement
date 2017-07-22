@@ -26,37 +26,37 @@ import jsinterop.annotations.JsType;
 public class PointerEventInit extends MouseEventInit{
 
     @JsProperty(name="pointerId")
-    public long pointerId = 0;
+    public double pointerId;
 
     @JsProperty(name="width")
-    public double width = 1;
+    public double width;
 
     @JsProperty(name="height")
-    public double height = 1;
+    public double height;
 
     @JsProperty(name="pressure")
-    public float pressure = 0;
+    public float pressure;
 
     @JsProperty(name="tiltX")
-    public long tiltX = 0;
+    public double tiltX;
 
     @JsProperty(name="tiltY")
-    public long tiltY = 0;
+    public double tiltY;
 
     @JsProperty(name="tangentialPressure")
-    public float tangentialPressure = 0;
+    public float tangentialPressure;
 
     @JsProperty(name="twist")
-    public long twist = 0;
+    public double twist;
 
     @JsProperty(name="pointerType")
-    public String pointerType = "";
+    public String pointerType;
 
     @JsProperty(name="isPrimary")
-    public boolean isPrimary = false;
+    public boolean isPrimary;
 
     @JsProperty(name="coalescedEvents")
-    public PointerEvent[] coalescedEvents = new PointerEvent[0];
+    public PointerEvent[] coalescedEvents;
 
 
 }

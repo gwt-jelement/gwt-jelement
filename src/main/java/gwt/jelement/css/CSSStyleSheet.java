@@ -43,30 +43,30 @@ public class CSSStyleSheet extends StyleSheet{
     public native CSSRuleList getRules();
     
     @JsMethod(name = "addRule")
-    public native long addRule();
+    public native double addRule();
     
     @JsMethod(name = "addRule")
-    public native long addRule(String selector);
+    public native double addRule(String selector);
     
     @JsMethod(name = "addRule")
-    public native long addRule(String selector, String style);
+    public native double addRule(String selector, String style);
     
     @JsMethod(name = "addRule")
-    public native long addRule(String selector, String style, long index);
+    public native double addRule(String selector, String style, double index);
     
     @JsMethod(name = "deleteRule")
-    public native void deleteRule(long index);
+    public native void deleteRule(double index);
     
     @JsMethod(name = "insertRule")
-    public native long insertRule(String rule);
+    public native double insertRule(String rule);
     
     @JsMethod(name = "insertRule")
-    public native long insertRule(String rule, long index);
+    public native double insertRule(String rule, double index);
     
     @JsMethod(name = "removeRule")
     public native void removeRule();
     
     @JsMethod(name = "removeRule")
-    public native void removeRule(long index);
+    public native void removeRule(double index);
     
 }

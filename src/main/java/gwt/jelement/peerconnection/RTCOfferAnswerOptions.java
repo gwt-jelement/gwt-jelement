@@ -24,7 +24,7 @@ import jsinterop.annotations.JsType;
 public class RTCOfferAnswerOptions{
 
     @JsProperty(name="voiceActivityDetection")
-    public boolean voiceActivityDetection = true;
+    public boolean voiceActivityDetection;
 
 
 }

@@ -24,13 +24,13 @@ import jsinterop.annotations.JsType;
 public class CacheQueryOptions{
 
     @JsProperty(name="ignoreSearch")
-    public boolean ignoreSearch = false;
+    public boolean ignoreSearch;
 
     @JsProperty(name="ignoreMethod")
-    public boolean ignoreMethod = false;
+    public boolean ignoreMethod;
 
     @JsProperty(name="ignoreVary")
-    public boolean ignoreVary = false;
+    public boolean ignoreVary;
 
     @JsProperty(name="cacheName")
     public String cacheName;

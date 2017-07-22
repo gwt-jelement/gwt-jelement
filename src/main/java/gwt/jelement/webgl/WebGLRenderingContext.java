@@ -26,6 +26,7 @@ import gwt.jelement.html.HTMLVideoElement;
 import gwt.jelement.html.ImageData;
 import gwt.jelement.imagebitmap.ImageBitmap;
 import gwt.jelement.offscreencanvas.OffscreenCanvas;
+import gwt.jelement.webgl.WebGL2RenderingContext;
 import gwt.jelement.webgl.WebGLActiveInfo;
 import gwt.jelement.webgl.WebGLBuffer;
 import gwt.jelement.webgl.WebGLContextAttributes;
@@ -47,369 +48,369 @@ import jsinterop.base.Js;
 
 @JsType(namespace = JsPackage.GLOBAL, isNative = true)
 public class WebGLRenderingContext{
-    public static final int DEPTH_BUFFER_BIT = 0x00000100;
-    public static final int STENCIL_BUFFER_BIT = 0x00000400;
-    public static final int COLOR_BUFFER_BIT = 0x00004000;
-    public static final int POINTS = 0x0000;
-    public static final int LINES = 0x0001;
-    public static final int LINE_LOOP = 0x0002;
-    public static final int LINE_STRIP = 0x0003;
-    public static final int TRIANGLES = 0x0004;
-    public static final int TRIANGLE_STRIP = 0x0005;
-    public static final int TRIANGLE_FAN = 0x0006;
-    public static final int ZERO = 0;
-    public static final int ONE = 1;
-    public static final int SRC_COLOR = 0x0300;
-    public static final int ONE_MINUS_SRC_COLOR = 0x0301;
-    public static final int SRC_ALPHA = 0x0302;
-    public static final int ONE_MINUS_SRC_ALPHA = 0x0303;
-    public static final int DST_ALPHA = 0x0304;
-    public static final int ONE_MINUS_DST_ALPHA = 0x0305;
-    public static final int DST_COLOR = 0x0306;
-    public static final int ONE_MINUS_DST_COLOR = 0x0307;
-    public static final int SRC_ALPHA_SATURATE = 0x0308;
-    public static final int FUNC_ADD = 0x8006;
-    public static final int BLEND_EQUATION = 0x8009;
-    public static final int BLEND_EQUATION_RGB = 0x8009;
-    public static final int BLEND_EQUATION_ALPHA = 0x883D;
-    public static final int FUNC_SUBTRACT = 0x800A;
-    public static final int FUNC_REVERSE_SUBTRACT = 0x800B;
-    public static final int BLEND_DST_RGB = 0x80C8;
-    public static final int BLEND_SRC_RGB = 0x80C9;
-    public static final int BLEND_DST_ALPHA = 0x80CA;
-    public static final int BLEND_SRC_ALPHA = 0x80CB;
-    public static final int CONSTANT_COLOR = 0x8001;
-    public static final int ONE_MINUS_CONSTANT_COLOR = 0x8002;
-    public static final int CONSTANT_ALPHA = 0x8003;
-    public static final int ONE_MINUS_CONSTANT_ALPHA = 0x8004;
-    public static final int BLEND_COLOR = 0x8005;
-    public static final int ARRAY_BUFFER = 0x8892;
-    public static final int ELEMENT_ARRAY_BUFFER = 0x8893;
-    public static final int ARRAY_BUFFER_BINDING = 0x8894;
-    public static final int ELEMENT_ARRAY_BUFFER_BINDING = 0x8895;
-    public static final int STREAM_DRAW = 0x88E0;
-    public static final int STATIC_DRAW = 0x88E4;
-    public static final int DYNAMIC_DRAW = 0x88E8;
-    public static final int BUFFER_SIZE = 0x8764;
-    public static final int BUFFER_USAGE = 0x8765;
-    public static final int CURRENT_VERTEX_ATTRIB = 0x8626;
-    public static final int FRONT = 0x0404;
-    public static final int BACK = 0x0405;
-    public static final int FRONT_AND_BACK = 0x0408;
-    public static final int TEXTURE_2D = 0x0DE1;
-    public static final int CULL_FACE = 0x0B44;
-    public static final int BLEND = 0x0BE2;
-    public static final int DITHER = 0x0BD0;
-    public static final int STENCIL_TEST = 0x0B90;
-    public static final int DEPTH_TEST = 0x0B71;
-    public static final int SCISSOR_TEST = 0x0C11;
-    public static final int POLYGON_OFFSET_FILL = 0x8037;
-    public static final int SAMPLE_ALPHA_TO_COVERAGE = 0x809E;
-    public static final int SAMPLE_COVERAGE = 0x80A0;
-    public static final int NO_ERROR = 0;
-    public static final int INVALID_ENUM = 0x0500;
-    public static final int INVALID_VALUE = 0x0501;
-    public static final int INVALID_OPERATION = 0x0502;
-    public static final int OUT_OF_MEMORY = 0x0505;
-    public static final int CW = 0x0900;
-    public static final int CCW = 0x0901;
-    public static final int LINE_WIDTH = 0x0B21;
-    public static final int ALIASED_POINT_SIZE_RANGE = 0x846D;
-    public static final int ALIASED_LINE_WIDTH_RANGE = 0x846E;
-    public static final int CULL_FACE_MODE = 0x0B45;
-    public static final int FRONT_FACE = 0x0B46;
-    public static final int DEPTH_RANGE = 0x0B70;
-    public static final int DEPTH_WRITEMASK = 0x0B72;
-    public static final int DEPTH_CLEAR_VALUE = 0x0B73;
-    public static final int DEPTH_FUNC = 0x0B74;
-    public static final int STENCIL_CLEAR_VALUE = 0x0B91;
-    public static final int STENCIL_FUNC = 0x0B92;
-    public static final int STENCIL_FAIL = 0x0B94;
-    public static final int STENCIL_PASS_DEPTH_FAIL = 0x0B95;
-    public static final int STENCIL_PASS_DEPTH_PASS = 0x0B96;
-    public static final int STENCIL_REF = 0x0B97;
-    public static final int STENCIL_VALUE_MASK = 0x0B93;
-    public static final int STENCIL_WRITEMASK = 0x0B98;
-    public static final int STENCIL_BACK_FUNC = 0x8800;
-    public static final int STENCIL_BACK_FAIL = 0x8801;
-    public static final int STENCIL_BACK_PASS_DEPTH_FAIL = 0x8802;
-    public static final int STENCIL_BACK_PASS_DEPTH_PASS = 0x8803;
-    public static final int STENCIL_BACK_REF = 0x8CA3;
-    public static final int STENCIL_BACK_VALUE_MASK = 0x8CA4;
-    public static final int STENCIL_BACK_WRITEMASK = 0x8CA5;
-    public static final int VIEWPORT = 0x0BA2;
-    public static final int SCISSOR_BOX = 0x0C10;
-    public static final int COLOR_CLEAR_VALUE = 0x0C22;
-    public static final int COLOR_WRITEMASK = 0x0C23;
-    public static final int UNPACK_ALIGNMENT = 0x0CF5;
-    public static final int PACK_ALIGNMENT = 0x0D05;
-    public static final int MAX_TEXTURE_SIZE = 0x0D33;
-    public static final int MAX_VIEWPORT_DIMS = 0x0D3A;
-    public static final int SUBPIXEL_BITS = 0x0D50;
-    public static final int RED_BITS = 0x0D52;
-    public static final int GREEN_BITS = 0x0D53;
-    public static final int BLUE_BITS = 0x0D54;
-    public static final int ALPHA_BITS = 0x0D55;
-    public static final int DEPTH_BITS = 0x0D56;
-    public static final int STENCIL_BITS = 0x0D57;
-    public static final int POLYGON_OFFSET_UNITS = 0x2A00;
-    public static final int POLYGON_OFFSET_FACTOR = 0x8038;
-    public static final int TEXTURE_BINDING_2D = 0x8069;
-    public static final int SAMPLE_BUFFERS = 0x80A8;
-    public static final int SAMPLES = 0x80A9;
-    public static final int SAMPLE_COVERAGE_VALUE = 0x80AA;
-    public static final int SAMPLE_COVERAGE_INVERT = 0x80AB;
-    public static final int COMPRESSED_TEXTURE_FORMATS = 0x86A3;
-    public static final int DONT_CARE = 0x1100;
-    public static final int FASTEST = 0x1101;
-    public static final int NICEST = 0x1102;
-    public static final int GENERATE_MIPMAP_HINT = 0x8192;
-    public static final int BYTE = 0x1400;
-    public static final int UNSIGNED_BYTE = 0x1401;
-    public static final int SHORT = 0x1402;
-    public static final int UNSIGNED_SHORT = 0x1403;
-    public static final int INT = 0x1404;
-    public static final int UNSIGNED_INT = 0x1405;
-    public static final int FLOAT = 0x1406;
-    public static final int DEPTH_COMPONENT = 0x1902;
-    public static final int ALPHA = 0x1906;
-    public static final int RGB = 0x1907;
-    public static final int RGBA = 0x1908;
-    public static final int LUMINANCE = 0x1909;
-    public static final int LUMINANCE_ALPHA = 0x190A;
-    public static final int UNSIGNED_SHORT_4_4_4_4 = 0x8033;
-    public static final int UNSIGNED_SHORT_5_5_5_1 = 0x8034;
-    public static final int UNSIGNED_SHORT_5_6_5 = 0x8363;
-    public static final int FRAGMENT_SHADER = 0x8B30;
-    public static final int VERTEX_SHADER = 0x8B31;
-    public static final int MAX_VERTEX_ATTRIBS = 0x8869;
-    public static final int MAX_VERTEX_UNIFORM_VECTORS = 0x8DFB;
-    public static final int MAX_VARYING_VECTORS = 0x8DFC;
-    public static final int MAX_COMBINED_TEXTURE_IMAGE_UNITS = 0x8B4D;
-    public static final int MAX_VERTEX_TEXTURE_IMAGE_UNITS = 0x8B4C;
-    public static final int MAX_TEXTURE_IMAGE_UNITS = 0x8872;
-    public static final int MAX_FRAGMENT_UNIFORM_VECTORS = 0x8DFD;
-    public static final int SHADER_TYPE = 0x8B4F;
-    public static final int DELETE_STATUS = 0x8B80;
-    public static final int LINK_STATUS = 0x8B82;
-    public static final int VALIDATE_STATUS = 0x8B83;
-    public static final int ATTACHED_SHADERS = 0x8B85;
-    public static final int ACTIVE_UNIFORMS = 0x8B86;
-    public static final int ACTIVE_ATTRIBUTES = 0x8B89;
-    public static final int SHADING_LANGUAGE_VERSION = 0x8B8C;
-    public static final int CURRENT_PROGRAM = 0x8B8D;
-    public static final int NEVER = 0x0200;
-    public static final int LESS = 0x0201;
-    public static final int EQUAL = 0x0202;
-    public static final int LEQUAL = 0x0203;
-    public static final int GREATER = 0x0204;
-    public static final int NOTEQUAL = 0x0205;
-    public static final int GEQUAL = 0x0206;
-    public static final int ALWAYS = 0x0207;
-    public static final int KEEP = 0x1E00;
-    public static final int REPLACE = 0x1E01;
-    public static final int INCR = 0x1E02;
-    public static final int DECR = 0x1E03;
-    public static final int INVERT = 0x150A;
-    public static final int INCR_WRAP = 0x8507;
-    public static final int DECR_WRAP = 0x8508;
-    public static final int VENDOR = 0x1F00;
-    public static final int RENDERER = 0x1F01;
-    public static final int VERSION = 0x1F02;
-    public static final int NEAREST = 0x2600;
-    public static final int LINEAR = 0x2601;
-    public static final int NEAREST_MIPMAP_NEAREST = 0x2700;
-    public static final int LINEAR_MIPMAP_NEAREST = 0x2701;
-    public static final int NEAREST_MIPMAP_LINEAR = 0x2702;
-    public static final int LINEAR_MIPMAP_LINEAR = 0x2703;
-    public static final int TEXTURE_MAG_FILTER = 0x2800;
-    public static final int TEXTURE_MIN_FILTER = 0x2801;
-    public static final int TEXTURE_WRAP_S = 0x2802;
-    public static final int TEXTURE_WRAP_T = 0x2803;
-    public static final int TEXTURE = 0x1702;
-    public static final int TEXTURE_CUBE_MAP = 0x8513;
-    public static final int TEXTURE_BINDING_CUBE_MAP = 0x8514;
-    public static final int TEXTURE_CUBE_MAP_POSITIVE_X = 0x8515;
-    public static final int TEXTURE_CUBE_MAP_NEGATIVE_X = 0x8516;
-    public static final int TEXTURE_CUBE_MAP_POSITIVE_Y = 0x8517;
-    public static final int TEXTURE_CUBE_MAP_NEGATIVE_Y = 0x8518;
-    public static final int TEXTURE_CUBE_MAP_POSITIVE_Z = 0x8519;
-    public static final int TEXTURE_CUBE_MAP_NEGATIVE_Z = 0x851A;
-    public static final int MAX_CUBE_MAP_TEXTURE_SIZE = 0x851C;
-    public static final int TEXTURE0 = 0x84C0;
-    public static final int TEXTURE1 = 0x84C1;
-    public static final int TEXTURE2 = 0x84C2;
-    public static final int TEXTURE3 = 0x84C3;
-    public static final int TEXTURE4 = 0x84C4;
-    public static final int TEXTURE5 = 0x84C5;
-    public static final int TEXTURE6 = 0x84C6;
-    public static final int TEXTURE7 = 0x84C7;
-    public static final int TEXTURE8 = 0x84C8;
-    public static final int TEXTURE9 = 0x84C9;
-    public static final int TEXTURE10 = 0x84CA;
-    public static final int TEXTURE11 = 0x84CB;
-    public static final int TEXTURE12 = 0x84CC;
-    public static final int TEXTURE13 = 0x84CD;
-    public static final int TEXTURE14 = 0x84CE;
-    public static final int TEXTURE15 = 0x84CF;
-    public static final int TEXTURE16 = 0x84D0;
-    public static final int TEXTURE17 = 0x84D1;
-    public static final int TEXTURE18 = 0x84D2;
-    public static final int TEXTURE19 = 0x84D3;
-    public static final int TEXTURE20 = 0x84D4;
-    public static final int TEXTURE21 = 0x84D5;
-    public static final int TEXTURE22 = 0x84D6;
-    public static final int TEXTURE23 = 0x84D7;
-    public static final int TEXTURE24 = 0x84D8;
-    public static final int TEXTURE25 = 0x84D9;
-    public static final int TEXTURE26 = 0x84DA;
-    public static final int TEXTURE27 = 0x84DB;
-    public static final int TEXTURE28 = 0x84DC;
-    public static final int TEXTURE29 = 0x84DD;
-    public static final int TEXTURE30 = 0x84DE;
-    public static final int TEXTURE31 = 0x84DF;
-    public static final int ACTIVE_TEXTURE = 0x84E0;
-    public static final int REPEAT = 0x2901;
-    public static final int CLAMP_TO_EDGE = 0x812F;
-    public static final int MIRRORED_REPEAT = 0x8370;
-    public static final int FLOAT_VEC2 = 0x8B50;
-    public static final int FLOAT_VEC3 = 0x8B51;
-    public static final int FLOAT_VEC4 = 0x8B52;
-    public static final int INT_VEC2 = 0x8B53;
-    public static final int INT_VEC3 = 0x8B54;
-    public static final int INT_VEC4 = 0x8B55;
-    public static final int BOOL = 0x8B56;
-    public static final int BOOL_VEC2 = 0x8B57;
-    public static final int BOOL_VEC3 = 0x8B58;
-    public static final int BOOL_VEC4 = 0x8B59;
-    public static final int FLOAT_MAT2 = 0x8B5A;
-    public static final int FLOAT_MAT3 = 0x8B5B;
-    public static final int FLOAT_MAT4 = 0x8B5C;
-    public static final int SAMPLER_2D = 0x8B5E;
-    public static final int SAMPLER_CUBE = 0x8B60;
-    public static final int VERTEX_ATTRIB_ARRAY_ENABLED = 0x8622;
-    public static final int VERTEX_ATTRIB_ARRAY_SIZE = 0x8623;
-    public static final int VERTEX_ATTRIB_ARRAY_STRIDE = 0x8624;
-    public static final int VERTEX_ATTRIB_ARRAY_TYPE = 0x8625;
-    public static final int VERTEX_ATTRIB_ARRAY_NORMALIZED = 0x886A;
-    public static final int VERTEX_ATTRIB_ARRAY_POINTER = 0x8645;
-    public static final int VERTEX_ATTRIB_ARRAY_BUFFER_BINDING = 0x889F;
-    public static final int IMPLEMENTATION_COLOR_READ_TYPE = 0x8B9A;
-    public static final int IMPLEMENTATION_COLOR_READ_FORMAT = 0x8B9B;
-    public static final int COMPILE_STATUS = 0x8B81;
-    public static final int LOW_FLOAT = 0x8DF0;
-    public static final int MEDIUM_FLOAT = 0x8DF1;
-    public static final int HIGH_FLOAT = 0x8DF2;
-    public static final int LOW_INT = 0x8DF3;
-    public static final int MEDIUM_INT = 0x8DF4;
-    public static final int HIGH_INT = 0x8DF5;
-    public static final int FRAMEBUFFER = 0x8D40;
-    public static final int RENDERBUFFER = 0x8D41;
-    public static final int RGBA4 = 0x8056;
-    public static final int RGB5_A1 = 0x8057;
-    public static final int RGB565 = 0x8D62;
-    public static final int DEPTH_COMPONENT16 = 0x81A5;
-    public static final int STENCIL_INDEX8 = 0x8D48;
-    public static final int DEPTH_STENCIL = 0x84F9;
-    public static final int RENDERBUFFER_WIDTH = 0x8D42;
-    public static final int RENDERBUFFER_HEIGHT = 0x8D43;
-    public static final int RENDERBUFFER_INTERNAL_FORMAT = 0x8D44;
-    public static final int RENDERBUFFER_RED_SIZE = 0x8D50;
-    public static final int RENDERBUFFER_GREEN_SIZE = 0x8D51;
-    public static final int RENDERBUFFER_BLUE_SIZE = 0x8D52;
-    public static final int RENDERBUFFER_ALPHA_SIZE = 0x8D53;
-    public static final int RENDERBUFFER_DEPTH_SIZE = 0x8D54;
-    public static final int RENDERBUFFER_STENCIL_SIZE = 0x8D55;
-    public static final int FRAMEBUFFER_ATTACHMENT_OBJECT_TYPE = 0x8CD0;
-    public static final int FRAMEBUFFER_ATTACHMENT_OBJECT_NAME = 0x8CD1;
-    public static final int FRAMEBUFFER_ATTACHMENT_TEXTURE_LEVEL = 0x8CD2;
-    public static final int FRAMEBUFFER_ATTACHMENT_TEXTURE_CUBE_MAP_FACE = 0x8CD3;
-    public static final int COLOR_ATTACHMENT0 = 0x8CE0;
-    public static final int DEPTH_ATTACHMENT = 0x8D00;
-    public static final int STENCIL_ATTACHMENT = 0x8D20;
-    public static final int DEPTH_STENCIL_ATTACHMENT = 0x821A;
-    public static final int NONE = 0;
-    public static final int FRAMEBUFFER_COMPLETE = 0x8CD5;
-    public static final int FRAMEBUFFER_INCOMPLETE_ATTACHMENT = 0x8CD6;
-    public static final int FRAMEBUFFER_INCOMPLETE_MISSING_ATTACHMENT = 0x8CD7;
-    public static final int FRAMEBUFFER_INCOMPLETE_DIMENSIONS = 0x8CD9;
-    public static final int FRAMEBUFFER_UNSUPPORTED = 0x8CDD;
-    public static final int FRAMEBUFFER_BINDING = 0x8CA6;
-    public static final int RENDERBUFFER_BINDING = 0x8CA7;
-    public static final int MAX_RENDERBUFFER_SIZE = 0x84E8;
-    public static final int INVALID_FRAMEBUFFER_OPERATION = 0x0506;
-    public static final int UNPACK_FLIP_Y_WEBGL = 0x9240;
-    public static final int UNPACK_PREMULTIPLY_ALPHA_WEBGL = 0x9241;
-    public static final int CONTEXT_LOST_WEBGL = 0x9242;
-    public static final int UNPACK_COLORSPACE_CONVERSION_WEBGL = 0x9243;
-    public static final int BROWSER_DEFAULT_WEBGL = 0x9244;
+    public static int DEPTH_BUFFER_BIT;
+    public static int STENCIL_BUFFER_BIT;
+    public static int COLOR_BUFFER_BIT;
+    public static int POINTS;
+    public static int LINES;
+    public static int LINE_LOOP;
+    public static int LINE_STRIP;
+    public static int TRIANGLES;
+    public static int TRIANGLE_STRIP;
+    public static int TRIANGLE_FAN;
+    public static int ZERO;
+    public static int ONE;
+    public static int SRC_COLOR;
+    public static int ONE_MINUS_SRC_COLOR;
+    public static int SRC_ALPHA;
+    public static int ONE_MINUS_SRC_ALPHA;
+    public static int DST_ALPHA;
+    public static int ONE_MINUS_DST_ALPHA;
+    public static int DST_COLOR;
+    public static int ONE_MINUS_DST_COLOR;
+    public static int SRC_ALPHA_SATURATE;
+    public static int FUNC_ADD;
+    public static int BLEND_EQUATION;
+    public static int BLEND_EQUATION_RGB;
+    public static int BLEND_EQUATION_ALPHA;
+    public static int FUNC_SUBTRACT;
+    public static int FUNC_REVERSE_SUBTRACT;
+    public static int BLEND_DST_RGB;
+    public static int BLEND_SRC_RGB;
+    public static int BLEND_DST_ALPHA;
+    public static int BLEND_SRC_ALPHA;
+    public static int CONSTANT_COLOR;
+    public static int ONE_MINUS_CONSTANT_COLOR;
+    public static int CONSTANT_ALPHA;
+    public static int ONE_MINUS_CONSTANT_ALPHA;
+    public static int BLEND_COLOR;
+    public static int ARRAY_BUFFER;
+    public static int ELEMENT_ARRAY_BUFFER;
+    public static int ARRAY_BUFFER_BINDING;
+    public static int ELEMENT_ARRAY_BUFFER_BINDING;
+    public static int STREAM_DRAW;
+    public static int STATIC_DRAW;
+    public static int DYNAMIC_DRAW;
+    public static int BUFFER_SIZE;
+    public static int BUFFER_USAGE;
+    public static int CURRENT_VERTEX_ATTRIB;
+    public static int FRONT;
+    public static int BACK;
+    public static int FRONT_AND_BACK;
+    public static int TEXTURE_2D;
+    public static int CULL_FACE;
+    public static int BLEND;
+    public static int DITHER;
+    public static int STENCIL_TEST;
+    public static int DEPTH_TEST;
+    public static int SCISSOR_TEST;
+    public static int POLYGON_OFFSET_FILL;
+    public static int SAMPLE_ALPHA_TO_COVERAGE;
+    public static int SAMPLE_COVERAGE;
+    public static int NO_ERROR;
+    public static int INVALID_ENUM;
+    public static int INVALID_VALUE;
+    public static int INVALID_OPERATION;
+    public static int OUT_OF_MEMORY;
+    public static int CW;
+    public static int CCW;
+    public static int LINE_WIDTH;
+    public static int ALIASED_POINT_SIZE_RANGE;
+    public static int ALIASED_LINE_WIDTH_RANGE;
+    public static int CULL_FACE_MODE;
+    public static int FRONT_FACE;
+    public static int DEPTH_RANGE;
+    public static int DEPTH_WRITEMASK;
+    public static int DEPTH_CLEAR_VALUE;
+    public static int DEPTH_FUNC;
+    public static int STENCIL_CLEAR_VALUE;
+    public static int STENCIL_FUNC;
+    public static int STENCIL_FAIL;
+    public static int STENCIL_PASS_DEPTH_FAIL;
+    public static int STENCIL_PASS_DEPTH_PASS;
+    public static int STENCIL_REF;
+    public static int STENCIL_VALUE_MASK;
+    public static int STENCIL_WRITEMASK;
+    public static int STENCIL_BACK_FUNC;
+    public static int STENCIL_BACK_FAIL;
+    public static int STENCIL_BACK_PASS_DEPTH_FAIL;
+    public static int STENCIL_BACK_PASS_DEPTH_PASS;
+    public static int STENCIL_BACK_REF;
+    public static int STENCIL_BACK_VALUE_MASK;
+    public static int STENCIL_BACK_WRITEMASK;
+    public static int VIEWPORT;
+    public static int SCISSOR_BOX;
+    public static int COLOR_CLEAR_VALUE;
+    public static int COLOR_WRITEMASK;
+    public static int UNPACK_ALIGNMENT;
+    public static int PACK_ALIGNMENT;
+    public static int MAX_TEXTURE_SIZE;
+    public static int MAX_VIEWPORT_DIMS;
+    public static int SUBPIXEL_BITS;
+    public static int RED_BITS;
+    public static int GREEN_BITS;
+    public static int BLUE_BITS;
+    public static int ALPHA_BITS;
+    public static int DEPTH_BITS;
+    public static int STENCIL_BITS;
+    public static int POLYGON_OFFSET_UNITS;
+    public static int POLYGON_OFFSET_FACTOR;
+    public static int TEXTURE_BINDING_2D;
+    public static int SAMPLE_BUFFERS;
+    public static int SAMPLES;
+    public static int SAMPLE_COVERAGE_VALUE;
+    public static int SAMPLE_COVERAGE_INVERT;
+    public static int COMPRESSED_TEXTURE_FORMATS;
+    public static int DONT_CARE;
+    public static int FASTEST;
+    public static int NICEST;
+    public static int GENERATE_MIPMAP_HINT;
+    public static int BYTE;
+    public static int UNSIGNED_BYTE;
+    public static int SHORT;
+    public static int UNSIGNED_SHORT;
+    public static int INT;
+    public static int UNSIGNED_INT;
+    public static int FLOAT;
+    public static int DEPTH_COMPONENT;
+    public static int ALPHA;
+    public static int RGB;
+    public static int RGBA;
+    public static int LUMINANCE;
+    public static int LUMINANCE_ALPHA;
+    public static int UNSIGNED_SHORT_4_4_4_4;
+    public static int UNSIGNED_SHORT_5_5_5_1;
+    public static int UNSIGNED_SHORT_5_6_5;
+    public static int FRAGMENT_SHADER;
+    public static int VERTEX_SHADER;
+    public static int MAX_VERTEX_ATTRIBS;
+    public static int MAX_VERTEX_UNIFORM_VECTORS;
+    public static int MAX_VARYING_VECTORS;
+    public static int MAX_COMBINED_TEXTURE_IMAGE_UNITS;
+    public static int MAX_VERTEX_TEXTURE_IMAGE_UNITS;
+    public static int MAX_TEXTURE_IMAGE_UNITS;
+    public static int MAX_FRAGMENT_UNIFORM_VECTORS;
+    public static int SHADER_TYPE;
+    public static int DELETE_STATUS;
+    public static int LINK_STATUS;
+    public static int VALIDATE_STATUS;
+    public static int ATTACHED_SHADERS;
+    public static int ACTIVE_UNIFORMS;
+    public static int ACTIVE_ATTRIBUTES;
+    public static int SHADING_LANGUAGE_VERSION;
+    public static int CURRENT_PROGRAM;
+    public static int NEVER;
+    public static int LESS;
+    public static int EQUAL;
+    public static int LEQUAL;
+    public static int GREATER;
+    public static int NOTEQUAL;
+    public static int GEQUAL;
+    public static int ALWAYS;
+    public static int KEEP;
+    public static int REPLACE;
+    public static int INCR;
+    public static int DECR;
+    public static int INVERT;
+    public static int INCR_WRAP;
+    public static int DECR_WRAP;
+    public static int VENDOR;
+    public static int RENDERER;
+    public static int VERSION;
+    public static int NEAREST;
+    public static int LINEAR;
+    public static int NEAREST_MIPMAP_NEAREST;
+    public static int LINEAR_MIPMAP_NEAREST;
+    public static int NEAREST_MIPMAP_LINEAR;
+    public static int LINEAR_MIPMAP_LINEAR;
+    public static int TEXTURE_MAG_FILTER;
+    public static int TEXTURE_MIN_FILTER;
+    public static int TEXTURE_WRAP_S;
+    public static int TEXTURE_WRAP_T;
+    public static int TEXTURE;
+    public static int TEXTURE_CUBE_MAP;
+    public static int TEXTURE_BINDING_CUBE_MAP;
+    public static int TEXTURE_CUBE_MAP_POSITIVE_X;
+    public static int TEXTURE_CUBE_MAP_NEGATIVE_X;
+    public static int TEXTURE_CUBE_MAP_POSITIVE_Y;
+    public static int TEXTURE_CUBE_MAP_NEGATIVE_Y;
+    public static int TEXTURE_CUBE_MAP_POSITIVE_Z;
+    public static int TEXTURE_CUBE_MAP_NEGATIVE_Z;
+    public static int MAX_CUBE_MAP_TEXTURE_SIZE;
+    public static int TEXTURE0;
+    public static int TEXTURE1;
+    public static int TEXTURE2;
+    public static int TEXTURE3;
+    public static int TEXTURE4;
+    public static int TEXTURE5;
+    public static int TEXTURE6;
+    public static int TEXTURE7;
+    public static int TEXTURE8;
+    public static int TEXTURE9;
+    public static int TEXTURE10;
+    public static int TEXTURE11;
+    public static int TEXTURE12;
+    public static int TEXTURE13;
+    public static int TEXTURE14;
+    public static int TEXTURE15;
+    public static int TEXTURE16;
+    public static int TEXTURE17;
+    public static int TEXTURE18;
+    public static int TEXTURE19;
+    public static int TEXTURE20;
+    public static int TEXTURE21;
+    public static int TEXTURE22;
+    public static int TEXTURE23;
+    public static int TEXTURE24;
+    public static int TEXTURE25;
+    public static int TEXTURE26;
+    public static int TEXTURE27;
+    public static int TEXTURE28;
+    public static int TEXTURE29;
+    public static int TEXTURE30;
+    public static int TEXTURE31;
+    public static int ACTIVE_TEXTURE;
+    public static int REPEAT;
+    public static int CLAMP_TO_EDGE;
+    public static int MIRRORED_REPEAT;
+    public static int FLOAT_VEC2;
+    public static int FLOAT_VEC3;
+    public static int FLOAT_VEC4;
+    public static int INT_VEC2;
+    public static int INT_VEC3;
+    public static int INT_VEC4;
+    public static int BOOL;
+    public static int BOOL_VEC2;
+    public static int BOOL_VEC3;
+    public static int BOOL_VEC4;
+    public static int FLOAT_MAT2;
+    public static int FLOAT_MAT3;
+    public static int FLOAT_MAT4;
+    public static int SAMPLER_2D;
+    public static int SAMPLER_CUBE;
+    public static int VERTEX_ATTRIB_ARRAY_ENABLED;
+    public static int VERTEX_ATTRIB_ARRAY_SIZE;
+    public static int VERTEX_ATTRIB_ARRAY_STRIDE;
+    public static int VERTEX_ATTRIB_ARRAY_TYPE;
+    public static int VERTEX_ATTRIB_ARRAY_NORMALIZED;
+    public static int VERTEX_ATTRIB_ARRAY_POINTER;
+    public static int VERTEX_ATTRIB_ARRAY_BUFFER_BINDING;
+    public static int IMPLEMENTATION_COLOR_READ_TYPE;
+    public static int IMPLEMENTATION_COLOR_READ_FORMAT;
+    public static int COMPILE_STATUS;
+    public static int LOW_FLOAT;
+    public static int MEDIUM_FLOAT;
+    public static int HIGH_FLOAT;
+    public static int LOW_INT;
+    public static int MEDIUM_INT;
+    public static int HIGH_INT;
+    public static int FRAMEBUFFER;
+    public static int RENDERBUFFER;
+    public static int RGBA4;
+    public static int RGB5_A1;
+    public static int RGB565;
+    public static int DEPTH_COMPONENT16;
+    public static int STENCIL_INDEX8;
+    public static int DEPTH_STENCIL;
+    public static int RENDERBUFFER_WIDTH;
+    public static int RENDERBUFFER_HEIGHT;
+    public static int RENDERBUFFER_INTERNAL_FORMAT;
+    public static int RENDERBUFFER_RED_SIZE;
+    public static int RENDERBUFFER_GREEN_SIZE;
+    public static int RENDERBUFFER_BLUE_SIZE;
+    public static int RENDERBUFFER_ALPHA_SIZE;
+    public static int RENDERBUFFER_DEPTH_SIZE;
+    public static int RENDERBUFFER_STENCIL_SIZE;
+    public static int FRAMEBUFFER_ATTACHMENT_OBJECT_TYPE;
+    public static int FRAMEBUFFER_ATTACHMENT_OBJECT_NAME;
+    public static int FRAMEBUFFER_ATTACHMENT_TEXTURE_LEVEL;
+    public static int FRAMEBUFFER_ATTACHMENT_TEXTURE_CUBE_MAP_FACE;
+    public static int COLOR_ATTACHMENT0;
+    public static int DEPTH_ATTACHMENT;
+    public static int STENCIL_ATTACHMENT;
+    public static int DEPTH_STENCIL_ATTACHMENT;
+    public static int NONE;
+    public static int FRAMEBUFFER_COMPLETE;
+    public static int FRAMEBUFFER_INCOMPLETE_ATTACHMENT;
+    public static int FRAMEBUFFER_INCOMPLETE_MISSING_ATTACHMENT;
+    public static int FRAMEBUFFER_INCOMPLETE_DIMENSIONS;
+    public static int FRAMEBUFFER_UNSUPPORTED;
+    public static int FRAMEBUFFER_BINDING;
+    public static int RENDERBUFFER_BINDING;
+    public static int MAX_RENDERBUFFER_SIZE;
+    public static int INVALID_FRAMEBUFFER_OPERATION;
+    public static int UNPACK_FLIP_Y_WEBGL;
+    public static int UNPACK_PREMULTIPLY_ALPHA_WEBGL;
+    public static int CONTEXT_LOST_WEBGL;
+    public static int UNPACK_COLORSPACE_CONVERSION_WEBGL;
+    public static int BROWSER_DEFAULT_WEBGL;
     
     
     @JsProperty(name="canvas")
-    public native WebGL2RenderingContext.HTMLCanvasElementOrOffscreenCanvasUnionType getCanvas();
+    public native WebGL2RenderingContext.VRSource getCanvas();
     
     @JsProperty(name="drawingBufferWidth")
-    public native long getDrawingBufferWidth();
+    public native double getDrawingBufferWidth();
     
     @JsProperty(name="drawingBufferHeight")
-    public native long getDrawingBufferHeight();
+    public native double getDrawingBufferHeight();
     
     @JsMethod(name = "activeTexture")
-    public native void activeTexture(long texture);
+    public native void activeTexture(double texture);
     
     @JsMethod(name = "attachShader")
     public native void attachShader(WebGLProgram program, WebGLShader shader);
     
     @JsMethod(name = "bindAttribLocation")
-    public native void bindAttribLocation(WebGLProgram program, long index, String name);
+    public native void bindAttribLocation(WebGLProgram program, double index, String name);
     
     @JsMethod(name = "bindBuffer")
-    public native void bindBuffer(long target, WebGLBuffer buffer);
+    public native void bindBuffer(double target, WebGLBuffer buffer);
     
     @JsMethod(name = "bindFramebuffer")
-    public native void bindFramebuffer(long target, WebGLFramebuffer framebuffer);
+    public native void bindFramebuffer(double target, WebGLFramebuffer framebuffer);
     
     @JsMethod(name = "bindRenderbuffer")
-    public native void bindRenderbuffer(long target, WebGLRenderbuffer renderbuffer);
+    public native void bindRenderbuffer(double target, WebGLRenderbuffer renderbuffer);
     
     @JsMethod(name = "bindTexture")
-    public native void bindTexture(long target, WebGLTexture texture);
+    public native void bindTexture(double target, WebGLTexture texture);
     
     @JsMethod(name = "blendColor")
     public native void blendColor(float red, float green, float blue, float alpha);
     
     @JsMethod(name = "blendEquation")
-    public native void blendEquation(long mode);
+    public native void blendEquation(double mode);
     
     @JsMethod(name = "blendEquationSeparate")
-    public native void blendEquationSeparate(long modeRGB, long modeAlpha);
+    public native void blendEquationSeparate(double modeRGB, double modeAlpha);
     
     @JsMethod(name = "blendFunc")
-    public native void blendFunc(long sfactor, long dfactor);
+    public native void blendFunc(double sfactor, double dfactor);
     
     @JsMethod(name = "blendFuncSeparate")
-    public native void blendFuncSeparate(long srcRGB, long dstRGB, long srcAlpha, long dstAlpha);
+    public native void blendFuncSeparate(double srcRGB, double dstRGB, double srcAlpha, double dstAlpha);
     
     @JsMethod(name = "bufferData")
-    public native void bufferData(long target, long size, long usage);
+    public native void bufferData(double target, double size, double usage);
     
     @JsMethod(name = "bufferData")
-    public native void bufferData(long target, ArrayBufferView data, long usage);
+    public native void bufferData(double target, ArrayBufferView data, double usage);
     
     @JsMethod(name = "bufferData")
-    public native void bufferData(long target, ArrayBuffer data, long usage);
+    public native void bufferData(double target, ArrayBuffer data, double usage);
     
     @JsMethod(name = "bufferSubData")
-    public native void bufferSubData(long target, long offset, ArrayBufferView data);
+    public native void bufferSubData(double target, double offset, ArrayBufferView data);
     
     @JsMethod(name = "bufferSubData")
-    public native void bufferSubData(long target, long offset, ArrayBuffer data);
+    public native void bufferSubData(double target, double offset, ArrayBuffer data);
     
     @JsMethod(name = "checkFramebufferStatus")
-    public native long checkFramebufferStatus(long target);
+    public native double checkFramebufferStatus(double target);
     
     @JsMethod(name = "clear")
-    public native void clear(long mask);
+    public native void clear(double mask);
     
     @JsMethod(name = "clearColor")
     public native void clearColor(float red, float green, float blue, float alpha);
@@ -418,7 +419,7 @@ public class WebGLRenderingContext{
     public native void clearDepth(float depth);
     
     @JsMethod(name = "clearStencil")
-    public native void clearStencil(long s);
+    public native void clearStencil(double s);
     
     @JsMethod(name = "colorMask")
     public native void colorMask(boolean red, boolean green, boolean blue, boolean alpha);
@@ -430,16 +431,16 @@ public class WebGLRenderingContext{
     public native void compileShader(WebGLShader shader);
     
     @JsMethod(name = "compressedTexImage2D")
-    public native void compressedTexImage2D(long target, long level, long internalformat, long width, long height, long border, ArrayBufferView data);
+    public native void compressedTexImage2D(double target, double level, double internalformat, double width, double height, double border, ArrayBufferView data);
     
     @JsMethod(name = "compressedTexSubImage2D")
-    public native void compressedTexSubImage2D(long target, long level, long xoffset, long yoffset, long width, long height, long format, ArrayBufferView data);
+    public native void compressedTexSubImage2D(double target, double level, double xoffset, double yoffset, double width, double height, double format, ArrayBufferView data);
     
     @JsMethod(name = "copyTexImage2D")
-    public native void copyTexImage2D(long target, long level, long internalformat, long x, long y, long width, long height, long border);
+    public native void copyTexImage2D(double target, double level, double internalformat, double x, double y, double width, double height, double border);
     
     @JsMethod(name = "copyTexSubImage2D")
-    public native void copyTexSubImage2D(long target, long level, long xoffset, long yoffset, long x, long y, long width, long height);
+    public native void copyTexSubImage2D(double target, double level, double xoffset, double yoffset, double x, double y, double width, double height);
     
     @JsMethod(name = "createBuffer")
     public native WebGLBuffer createBuffer();
@@ -454,13 +455,13 @@ public class WebGLRenderingContext{
     public native WebGLRenderbuffer createRenderbuffer();
     
     @JsMethod(name = "createShader")
-    public native WebGLShader createShader(long type);
+    public native WebGLShader createShader(double type);
     
     @JsMethod(name = "createTexture")
     public native WebGLTexture createTexture();
     
     @JsMethod(name = "cullFace")
-    public native void cullFace(long mode);
+    public native void cullFace(double mode);
     
     @JsMethod(name = "deleteBuffer")
     public native void deleteBuffer(WebGLBuffer buffer);
@@ -481,7 +482,7 @@ public class WebGLRenderingContext{
     public native void deleteTexture(WebGLTexture texture);
     
     @JsMethod(name = "depthFunc")
-    public native void depthFunc(long func);
+    public native void depthFunc(double func);
     
     @JsMethod(name = "depthMask")
     public native void depthMask(boolean flag);
@@ -493,22 +494,22 @@ public class WebGLRenderingContext{
     public native void detachShader(WebGLProgram program, WebGLShader shader);
     
     @JsMethod(name = "disable")
-    public native void disable(long cap);
+    public native void disable(double cap);
     
     @JsMethod(name = "disableVertexAttribArray")
-    public native void disableVertexAttribArray(long index);
+    public native void disableVertexAttribArray(double index);
     
     @JsMethod(name = "drawArrays")
-    public native void drawArrays(long mode, long first, long count);
+    public native void drawArrays(double mode, double first, double count);
     
     @JsMethod(name = "drawElements")
-    public native void drawElements(long mode, long count, long type, long offset);
+    public native void drawElements(double mode, double count, double type, double offset);
     
     @JsMethod(name = "enable")
-    public native void enable(long cap);
+    public native void enable(double cap);
     
     @JsMethod(name = "enableVertexAttribArray")
-    public native void enableVertexAttribArray(long index);
+    public native void enableVertexAttribArray(double index);
     
     @JsMethod(name = "finish")
     public native void finish();
@@ -517,64 +518,64 @@ public class WebGLRenderingContext{
     public native void flush();
     
     @JsMethod(name = "framebufferRenderbuffer")
-    public native void framebufferRenderbuffer(long target, long attachment, long renderbuffertarget, WebGLRenderbuffer renderbuffer);
+    public native void framebufferRenderbuffer(double target, double attachment, double renderbuffertarget, WebGLRenderbuffer renderbuffer);
     
     @JsMethod(name = "framebufferTexture2D")
-    public native void framebufferTexture2D(long target, long attachment, long textarget, WebGLTexture texture, long level);
+    public native void framebufferTexture2D(double target, double attachment, double textarget, WebGLTexture texture, double level);
     
     @JsMethod(name = "frontFace")
-    public native void frontFace(long mode);
+    public native void frontFace(double mode);
     
     @JsMethod(name = "generateMipmap")
-    public native void generateMipmap(long target);
+    public native void generateMipmap(double target);
     
     @JsMethod(name = "getActiveAttrib")
-    public native WebGLActiveInfo getActiveAttrib(WebGLProgram program, long index);
+    public native WebGLActiveInfo getActiveAttrib(WebGLProgram program, double index);
     
     @JsMethod(name = "getActiveUniform")
-    public native WebGLActiveInfo getActiveUniform(WebGLProgram program, long index);
+    public native WebGLActiveInfo getActiveUniform(WebGLProgram program, double index);
     
     @JsMethod(name = "getAttachedShaders")
     public native WebGLShader[] getAttachedShaders(WebGLProgram program);
     
     @JsMethod(name = "getAttribLocation")
-    public native long getAttribLocation(WebGLProgram program, String name);
+    public native double getAttribLocation(WebGLProgram program, String name);
     
     @JsMethod(name = "getBufferParameter")
-    public native Any getBufferParameter(long target, long pname);
+    public native Any getBufferParameter(double target, double pname);
     
     @JsMethod(name = "getContextAttributes")
     public native WebGLContextAttributes getContextAttributes();
     
     @JsMethod(name = "getError")
-    public native long getError();
+    public native double getError();
     
     @JsMethod(name = "getExtension")
     public native Object getExtension(String name);
     
     @JsMethod(name = "getFramebufferAttachmentParameter")
-    public native Any getFramebufferAttachmentParameter(long target, long attachment, long pname);
+    public native Any getFramebufferAttachmentParameter(double target, double attachment, double pname);
     
     @JsMethod(name = "getParameter")
-    public native Any getParameter(long pname);
+    public native Any getParameter(double pname);
     
     @JsMethod(name = "getProgramInfoLog")
     public native String getProgramInfoLog(WebGLProgram program);
     
     @JsMethod(name = "getProgramParameter")
-    public native Any getProgramParameter(WebGLProgram program, long pname);
+    public native Any getProgramParameter(WebGLProgram program, double pname);
     
     @JsMethod(name = "getRenderbufferParameter")
-    public native Any getRenderbufferParameter(long target, long pname);
+    public native Any getRenderbufferParameter(double target, double pname);
     
     @JsMethod(name = "getShaderInfoLog")
     public native String getShaderInfoLog(WebGLShader shader);
     
     @JsMethod(name = "getShaderParameter")
-    public native Any getShaderParameter(WebGLShader shader, long pname);
+    public native Any getShaderParameter(WebGLShader shader, double pname);
     
     @JsMethod(name = "getShaderPrecisionFormat")
-    public native WebGLShaderPrecisionFormat getShaderPrecisionFormat(long shadertype, long precisiontype);
+    public native WebGLShaderPrecisionFormat getShaderPrecisionFormat(double shadertype, double precisiontype);
     
     @JsMethod(name = "getShaderSource")
     public native String getShaderSource(WebGLShader shader);
@@ -583,7 +584,7 @@ public class WebGLRenderingContext{
     public native String[] getSupportedExtensions();
     
     @JsMethod(name = "getTexParameter")
-    public native Any getTexParameter(long target, long pname);
+    public native Any getTexParameter(double target, double pname);
     
     @JsMethod(name = "getUniform")
     public native Any getUniform(WebGLProgram program, WebGLUniformLocation location);
@@ -592,13 +593,13 @@ public class WebGLRenderingContext{
     public native WebGLUniformLocation getUniformLocation(WebGLProgram program, String name);
     
     @JsMethod(name = "getVertexAttrib")
-    public native Any getVertexAttrib(long index, long pname);
+    public native Any getVertexAttrib(double index, double pname);
     
     @JsMethod(name = "getVertexAttribOffset")
-    public native long getVertexAttribOffset(long index, long pname);
+    public native double getVertexAttribOffset(double index, double pname);
     
     @JsMethod(name = "hint")
-    public native void hint(long target, long mode);
+    public native void hint(double target, double mode);
     
     @JsMethod(name = "isBuffer")
     public native boolean isBuffer(WebGLBuffer buffer);
@@ -607,7 +608,7 @@ public class WebGLRenderingContext{
     public native boolean isContextLost();
     
     @JsMethod(name = "isEnabled")
-    public native boolean isEnabled(long cap);
+    public native boolean isEnabled(double cap);
     
     @JsMethod(name = "isFramebuffer")
     public native boolean isFramebuffer(WebGLFramebuffer framebuffer);
@@ -631,85 +632,85 @@ public class WebGLRenderingContext{
     public native void linkProgram(WebGLProgram program);
     
     @JsMethod(name = "pixelStorei")
-    public native void pixelStorei(long pname, long param);
+    public native void pixelStorei(double pname, double param);
     
     @JsMethod(name = "polygonOffset")
     public native void polygonOffset(float factor, float units);
     
     @JsMethod(name = "readPixels")
-    public native void readPixels(long x, long y, long width, long height, long format, long type, ArrayBufferView pixels);
+    public native void readPixels(double x, double y, double width, double height, double format, double type, ArrayBufferView pixels);
     
     @JsMethod(name = "renderbufferStorage")
-    public native void renderbufferStorage(long target, long internalformat, long width, long height);
+    public native void renderbufferStorage(double target, double internalformat, double width, double height);
     
     @JsMethod(name = "sampleCoverage")
     public native void sampleCoverage(float value, boolean invert);
     
     @JsMethod(name = "scissor")
-    public native void scissor(long x, long y, long width, long height);
+    public native void scissor(double x, double y, double width, double height);
     
     @JsMethod(name = "shaderSource")
     public native void shaderSource(WebGLShader shader, String string);
     
     @JsMethod(name = "stencilFunc")
-    public native void stencilFunc(long func, long ref, long mask);
+    public native void stencilFunc(double func, double ref, double mask);
     
     @JsMethod(name = "stencilFuncSeparate")
-    public native void stencilFuncSeparate(long face, long func, long ref, long mask);
+    public native void stencilFuncSeparate(double face, double func, double ref, double mask);
     
     @JsMethod(name = "stencilMask")
-    public native void stencilMask(long mask);
+    public native void stencilMask(double mask);
     
     @JsMethod(name = "stencilMaskSeparate")
-    public native void stencilMaskSeparate(long face, long mask);
+    public native void stencilMaskSeparate(double face, double mask);
     
     @JsMethod(name = "stencilOp")
-    public native void stencilOp(long fail, long zfail, long zpass);
+    public native void stencilOp(double fail, double zfail, double zpass);
     
     @JsMethod(name = "stencilOpSeparate")
-    public native void stencilOpSeparate(long face, long fail, long zfail, long zpass);
+    public native void stencilOpSeparate(double face, double fail, double zfail, double zpass);
     
     @JsMethod(name = "texImage2D")
-    public native void texImage2D(long target, long level, long internalformat, long format, long type, ImageData pixels);
+    public native void texImage2D(double target, double level, double internalformat, double format, double type, ImageData pixels);
     
     @JsMethod(name = "texImage2D")
-    public native void texImage2D(long target, long level, long internalformat, long format, long type, HTMLImageElement image);
+    public native void texImage2D(double target, double level, double internalformat, double format, double type, HTMLImageElement image);
     
     @JsMethod(name = "texImage2D")
-    public native void texImage2D(long target, long level, long internalformat, long format, long type, HTMLCanvasElement canvas);
+    public native void texImage2D(double target, double level, double internalformat, double format, double type, HTMLCanvasElement canvas);
     
     @JsMethod(name = "texImage2D")
-    public native void texImage2D(long target, long level, long internalformat, long format, long type, HTMLVideoElement video);
+    public native void texImage2D(double target, double level, double internalformat, double format, double type, HTMLVideoElement video);
     
     @JsMethod(name = "texImage2D")
-    public native void texImage2D(long target, long level, long internalformat, long format, long type, ImageBitmap bitmap);
+    public native void texImage2D(double target, double level, double internalformat, double format, double type, ImageBitmap bitmap);
     
     @JsMethod(name = "texImage2D")
-    public native void texImage2D(long target, long level, long internalformat, long width, long height, long border, long format, long type, ArrayBufferView pixels);
+    public native void texImage2D(double target, double level, double internalformat, double width, double height, double border, double format, double type, ArrayBufferView pixels);
     
     @JsMethod(name = "texParameterf")
-    public native void texParameterf(long target, long pname, float param);
+    public native void texParameterf(double target, double pname, float param);
     
     @JsMethod(name = "texParameteri")
-    public native void texParameteri(long target, long pname, long param);
+    public native void texParameteri(double target, double pname, double param);
     
     @JsMethod(name = "texSubImage2D")
-    public native void texSubImage2D(long target, long level, long xoffset, long yoffset, long format, long type, ImageData pixels);
+    public native void texSubImage2D(double target, double level, double xoffset, double yoffset, double format, double type, ImageData pixels);
     
     @JsMethod(name = "texSubImage2D")
-    public native void texSubImage2D(long target, long level, long xoffset, long yoffset, long format, long type, HTMLImageElement image);
+    public native void texSubImage2D(double target, double level, double xoffset, double yoffset, double format, double type, HTMLImageElement image);
     
     @JsMethod(name = "texSubImage2D")
-    public native void texSubImage2D(long target, long level, long xoffset, long yoffset, long format, long type, HTMLCanvasElement canvas);
+    public native void texSubImage2D(double target, double level, double xoffset, double yoffset, double format, double type, HTMLCanvasElement canvas);
     
     @JsMethod(name = "texSubImage2D")
-    public native void texSubImage2D(long target, long level, long xoffset, long yoffset, long format, long type, HTMLVideoElement video);
+    public native void texSubImage2D(double target, double level, double xoffset, double yoffset, double format, double type, HTMLVideoElement video);
     
     @JsMethod(name = "texSubImage2D")
-    public native void texSubImage2D(long target, long level, long xoffset, long yoffset, long format, long type, ImageBitmap bitmap);
+    public native void texSubImage2D(double target, double level, double xoffset, double yoffset, double format, double type, ImageBitmap bitmap);
     
     @JsMethod(name = "texSubImage2D")
-    public native void texSubImage2D(long target, long level, long xoffset, long yoffset, long width, long height, long format, long type, ArrayBufferView pixels);
+    public native void texSubImage2D(double target, double level, double xoffset, double yoffset, double width, double height, double format, double type, ArrayBufferView pixels);
     
     @JsMethod(name = "uniform1f")
     public native void uniform1f(WebGLUniformLocation location, float x);
@@ -721,13 +722,13 @@ public class WebGLRenderingContext{
     public native void uniform1fv(WebGLUniformLocation location, float[] v);
     
     @JsMethod(name = "uniform1i")
-    public native void uniform1i(WebGLUniformLocation location, long x);
+    public native void uniform1i(WebGLUniformLocation location, double x);
     
     @JsMethod(name = "uniform1iv")
     public native void uniform1iv(WebGLUniformLocation location, Int32Array v);
     
     @JsMethod(name = "uniform1iv")
-    public native void uniform1iv(WebGLUniformLocation location, long[] v);
+    public native void uniform1iv(WebGLUniformLocation location, double[] v);
     
     @JsMethod(name = "uniform2f")
     public native void uniform2f(WebGLUniformLocation location, float x, float y);
@@ -739,13 +740,13 @@ public class WebGLRenderingContext{
     public native void uniform2fv(WebGLUniformLocation location, float[] v);
     
     @JsMethod(name = "uniform2i")
-    public native void uniform2i(WebGLUniformLocation location, long x, long y);
+    public native void uniform2i(WebGLUniformLocation location, double x, double y);
     
     @JsMethod(name = "uniform2iv")
     public native void uniform2iv(WebGLUniformLocation location, Int32Array v);
     
     @JsMethod(name = "uniform2iv")
-    public native void uniform2iv(WebGLUniformLocation location, long[] v);
+    public native void uniform2iv(WebGLUniformLocation location, double[] v);
     
     @JsMethod(name = "uniform3f")
     public native void uniform3f(WebGLUniformLocation location, float x, float y, float z);
@@ -757,13 +758,13 @@ public class WebGLRenderingContext{
     public native void uniform3fv(WebGLUniformLocation location, float[] v);
     
     @JsMethod(name = "uniform3i")
-    public native void uniform3i(WebGLUniformLocation location, long x, long y, long z);
+    public native void uniform3i(WebGLUniformLocation location, double x, double y, double z);
     
     @JsMethod(name = "uniform3iv")
     public native void uniform3iv(WebGLUniformLocation location, Int32Array v);
     
     @JsMethod(name = "uniform3iv")
-    public native void uniform3iv(WebGLUniformLocation location, long[] v);
+    public native void uniform3iv(WebGLUniformLocation location, double[] v);
     
     @JsMethod(name = "uniform4f")
     public native void uniform4f(WebGLUniformLocation location, float x, float y, float z, float w);
@@ -775,13 +776,13 @@ public class WebGLRenderingContext{
     public native void uniform4fv(WebGLUniformLocation location, float[] v);
     
     @JsMethod(name = "uniform4i")
-    public native void uniform4i(WebGLUniformLocation location, long x, long y, long z, long w);
+    public native void uniform4i(WebGLUniformLocation location, double x, double y, double z, double w);
     
     @JsMethod(name = "uniform4iv")
     public native void uniform4iv(WebGLUniformLocation location, Int32Array v);
     
     @JsMethod(name = "uniform4iv")
-    public native void uniform4iv(WebGLUniformLocation location, long[] v);
+    public native void uniform4iv(WebGLUniformLocation location, double[] v);
     
     @JsMethod(name = "uniformMatrix2fv")
     public native void uniformMatrix2fv(WebGLUniformLocation location, boolean transpose, Float32Array array);
@@ -808,45 +809,45 @@ public class WebGLRenderingContext{
     public native void validateProgram(WebGLProgram program);
     
     @JsMethod(name = "vertexAttrib1f")
-    public native void vertexAttrib1f(long indx, float x);
+    public native void vertexAttrib1f(double indx, float x);
     
     @JsMethod(name = "vertexAttrib1fv")
-    public native void vertexAttrib1fv(long indx, Float32Array values);
+    public native void vertexAttrib1fv(double indx, Float32Array values);
     
     @JsMethod(name = "vertexAttrib1fv")
-    public native void vertexAttrib1fv(long indx, float[] values);
+    public native void vertexAttrib1fv(double indx, float[] values);
     
     @JsMethod(name = "vertexAttrib2f")
-    public native void vertexAttrib2f(long indx, float x, float y);
+    public native void vertexAttrib2f(double indx, float x, float y);
     
     @JsMethod(name = "vertexAttrib2fv")
-    public native void vertexAttrib2fv(long indx, Float32Array values);
+    public native void vertexAttrib2fv(double indx, Float32Array values);
     
     @JsMethod(name = "vertexAttrib2fv")
-    public native void vertexAttrib2fv(long indx, float[] values);
+    public native void vertexAttrib2fv(double indx, float[] values);
     
     @JsMethod(name = "vertexAttrib3f")
-    public native void vertexAttrib3f(long indx, float x, float y, float z);
+    public native void vertexAttrib3f(double indx, float x, float y, float z);
     
     @JsMethod(name = "vertexAttrib3fv")
-    public native void vertexAttrib3fv(long indx, Float32Array values);
+    public native void vertexAttrib3fv(double indx, Float32Array values);
     
     @JsMethod(name = "vertexAttrib3fv")
-    public native void vertexAttrib3fv(long indx, float[] values);
+    public native void vertexAttrib3fv(double indx, float[] values);
     
     @JsMethod(name = "vertexAttrib4f")
-    public native void vertexAttrib4f(long indx, float x, float y, float z, float w);
+    public native void vertexAttrib4f(double indx, float x, float y, float z, float w);
     
     @JsMethod(name = "vertexAttrib4fv")
-    public native void vertexAttrib4fv(long indx, Float32Array values);
+    public native void vertexAttrib4fv(double indx, Float32Array values);
     
     @JsMethod(name = "vertexAttrib4fv")
-    public native void vertexAttrib4fv(long indx, float[] values);
+    public native void vertexAttrib4fv(double indx, float[] values);
     
     @JsMethod(name = "vertexAttribPointer")
-    public native void vertexAttribPointer(long indx, long size, long type, boolean normalized, long stride, long offset);
+    public native void vertexAttribPointer(double indx, double size, double type, boolean normalized, double stride, double offset);
     
     @JsMethod(name = "viewport")
-    public native void viewport(long x, long y, long width, long height);
+    public native void viewport(double x, double y, double width, double height);
     
 }

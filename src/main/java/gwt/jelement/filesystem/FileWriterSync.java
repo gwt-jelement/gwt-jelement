@@ -26,16 +26,16 @@ import jsinterop.annotations.JsType;
 public class FileWriterSync{
     
     @JsProperty(name="position")
-    public native long getPosition();
+    public native double getPosition();
     
     @JsProperty(name="length")
-    public native long getLength();
+    public native double getLength();
     
     @JsMethod(name = "seek")
-    public native void seek(long position);
+    public native void seek(double position);
     
     @JsMethod(name = "truncate")
-    public native void truncate(long size);
+    public native void truncate(double size);
     
     @JsMethod(name = "write")
     public native void write(Blob data);

@@ -28,16 +28,16 @@ import jsinterop.annotations.JsType;
 public class HitRegionOptions{
 
     @JsProperty(name="path")
-    public Path2D path = null;
+    public Path2D path;
 
     @JsProperty(name="fillRule")
-    public CanvasFillRule fillRule = CanvasFillRule.of("nonzero");
+    public CanvasFillRule fillRule;
 
     @JsProperty(name="id")
-    public String id = "";
+    public String id;
 
     @JsProperty(name="control")
-    public Element control = null;
+    public Element control;
 
 
 }

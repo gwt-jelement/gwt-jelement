@@ -39,7 +39,7 @@ public class CSSTransformValue extends CSSStyleValue{
     }
     
     @JsProperty(name="length")
-    public native long getLength();
+    public native double getLength();
     
     @JsProperty(name="is2D")
     public native boolean getIs2D();

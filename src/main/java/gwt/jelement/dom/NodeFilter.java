@@ -23,22 +23,22 @@ import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, isNative = true)
 public class NodeFilter{
-    public static final int FILTER_ACCEPT = 1;
-    public static final int FILTER_REJECT = 2;
-    public static final int FILTER_SKIP = 3;
-    public static final int SHOW_ALL = 0xFFFFFFFF;
-    public static final int SHOW_ELEMENT = 0x1;
-    public static final int SHOW_ATTRIBUTE = 0x2;
-    public static final int SHOW_TEXT = 0x4;
-    public static final int SHOW_CDATA_SECTION = 0x8;
-    public static final int SHOW_ENTITY_REFERENCE = 0x10;
-    public static final int SHOW_ENTITY = 0x20;
-    public static final int SHOW_PROCESSING_INSTRUCTION = 0x40;
-    public static final int SHOW_COMMENT = 0x80;
-    public static final int SHOW_DOCUMENT = 0x100;
-    public static final int SHOW_DOCUMENT_TYPE = 0x200;
-    public static final int SHOW_DOCUMENT_FRAGMENT = 0x400;
-    public static final int SHOW_NOTATION = 0x800;
+    public static int FILTER_ACCEPT;
+    public static int FILTER_REJECT;
+    public static int FILTER_SKIP;
+    public static int SHOW_ALL;
+    public static int SHOW_ELEMENT;
+    public static int SHOW_ATTRIBUTE;
+    public static int SHOW_TEXT;
+    public static int SHOW_CDATA_SECTION;
+    public static int SHOW_ENTITY_REFERENCE;
+    public static int SHOW_ENTITY;
+    public static int SHOW_PROCESSING_INSTRUCTION;
+    public static int SHOW_COMMENT;
+    public static int SHOW_DOCUMENT;
+    public static int SHOW_DOCUMENT_TYPE;
+    public static int SHOW_DOCUMENT_FRAGMENT;
+    public static int SHOW_NOTATION;
     
     
     @JsMethod(name = "acceptNode")

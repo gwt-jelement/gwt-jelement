@@ -34,6 +34,21 @@ public class TrackEvent extends Event{
     @JsType(isNative = true, name = "?", namespace = JsPackage.GLOBAL)
     public interface VideoTrackOrAudioTrackOrTextTrackUnionType {
         @JsOverlay
+        static VideoTrackOrAudioTrackOrTextTrackUnionType of(VideoTrack value){
+            return Js.cast(value);
+        }
+    
+        @JsOverlay
+        static VideoTrackOrAudioTrackOrTextTrackUnionType of(AudioTrack value){
+            return Js.cast(value);
+        }
+    
+        @JsOverlay
+        static VideoTrackOrAudioTrackOrTextTrackUnionType of(TextTrack value){
+            return Js.cast(value);
+        }
+    
+        @JsOverlay
         default VideoTrack asVideoTrack(){
             return Js.cast(this);
         }

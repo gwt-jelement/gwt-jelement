@@ -24,7 +24,7 @@ import jsinterop.annotations.JsType;
 public class PeriodicWaveConstraints{
 
     @JsProperty(name="disableNormalization")
-    public boolean disableNormalization = false;
+    public boolean disableNormalization;
 
 
 }

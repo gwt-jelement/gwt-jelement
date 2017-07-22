@@ -26,7 +26,7 @@ import jsinterop.annotations.JsType;
 public class TextTrackCueList{
     
     @JsProperty(name="length")
-    public native long getLength();
+    public native double getLength();
     
     @JsMethod(name = "getCueById")
     public native TextTrackCue getCueById(String id);

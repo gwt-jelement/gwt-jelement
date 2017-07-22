@@ -19,6 +19,7 @@ package gwt.jelement.serviceworkers;
 import gwt.jelement.dom.MessagePort;
 import gwt.jelement.serviceworkers.Client;
 import gwt.jelement.serviceworkers.ExtendableEventInit;
+import gwt.jelement.serviceworkers.ExtendableMessageEvent;
 import gwt.jelement.serviceworkers.ServiceWorker;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
@@ -30,40 +31,6 @@ import jsinterop.base.Js;
 @JsType(namespace = JsPackage.GLOBAL, isNative = true)
 public class ExtendableMessageEventInit extends ExtendableEventInit{
 
-    @JsType(isNative = true, name = "?", namespace = JsPackage.GLOBAL)
-    public interface ClientOrServiceWorkerOrMessagePortUnionType {
-        @JsOverlay
-        default Client asClient(){
-            return Js.cast(this);
-        }
-    
-        @JsOverlay
-        default ServiceWorker asServiceWorker(){
-            return Js.cast(this);
-        }
-    
-        @JsOverlay
-        default MessagePort asMessagePort(){
-            return Js.cast(this);
-        }
-    
-        @JsOverlay
-        default boolean isClient(){
-            return (Object) this instanceof Client;
-        }
-    
-        @JsOverlay
-        default boolean isServiceWorker(){
-            return (Object) this instanceof ServiceWorker;
-        }
-    
-        @JsOverlay
-        default boolean isMessagePort(){
-            return (Object) this instanceof MessagePort;
-        }
-    
-    }
-    
     @JsProperty(name="data")
     public Any data;
 
@@ -74,7 +41,7 @@ public class ExtendableMessageEventInit extends ExtendableEventInit{
     public String lastEventId;
 
     @JsProperty(name="source")
-    public ExtendableMessageEventInit.ClientOrServiceWorkerOrMessagePortUnionType source;
+    public ExtendableMessageEvent.ClientOrServiceWorkerOrMessagePortUnionType source;
 
     @JsProperty(name="ports")
     public MessagePort[] ports;

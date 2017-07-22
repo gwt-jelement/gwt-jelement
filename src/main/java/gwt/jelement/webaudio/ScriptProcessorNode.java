@@ -35,7 +35,7 @@ public class ScriptProcessorNode extends AudioNode{
     public EventHandlerNonNull onaudioprocess;
     
     @JsProperty(name="bufferSize")
-    public native long getBufferSize();
+    public native double getBufferSize();
     
     
 }

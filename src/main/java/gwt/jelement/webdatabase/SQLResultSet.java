@@ -28,10 +28,10 @@ public class SQLResultSet{
     public native SQLResultSetRowList getRows();
     
     @JsProperty(name="insertId")
-    public native long getInsertId();
+    public native double getInsertId();
     
     @JsProperty(name="rowsAffected")
-    public native long getRowsAffected();
+    public native double getRowsAffected();
     
     
 }

@@ -25,7 +25,7 @@ import jsinterop.annotations.JsType;
 public class ChannelSplitterOptions extends AudioNodeOptions{
 
     @JsProperty(name="numberOfOutputs")
-    public long numberOfOutputs = 6;
+    public double numberOfOutputs;
 
 
 }

@@ -16,7 +16,7 @@
  */
 package gwt.jelement.peerconnection;
 
-import java.util.Date;
+import elemental2.core.Date;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;

@@ -32,7 +32,7 @@ public class IDBCursor{
     public native Any getSource();
     
     @JsOverlay
-    public  IDBCursorDirection getDirectionAsIDBCursorDirection(){
+    public final IDBCursorDirection getDirectionAsIDBCursorDirection(){
         return IDBCursorDirection.of(getDirection());
     }
     
@@ -46,7 +46,7 @@ public class IDBCursor{
     public native Any getPrimaryKey();
     
     @JsMethod(name = "advance")
-    public native void advance(long count);
+    public native void advance(double count);
     
     @JsMethod(name = "continue")
     public native void continue_();

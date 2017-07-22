@@ -25,10 +25,10 @@ import jsinterop.annotations.JsType;
 public class AnimationPlaybackEventInit extends EventInit{
 
     @JsProperty(name="currentTime")
-    public double currentTime = 0;
+    public double currentTime;
 
     @JsProperty(name="timelineTime")
-    public double timelineTime = 0;
+    public double timelineTime;
 
 
 }

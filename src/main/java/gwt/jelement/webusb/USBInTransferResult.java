@@ -39,7 +39,7 @@ public class USBInTransferResult{
     public native DataView getData();
     
     @JsOverlay
-    public  USBTransferStatus getStatusAsUSBTransferStatus(){
+    public final USBTransferStatus getStatusAsUSBTransferStatus(){
         return USBTransferStatus.of(getStatus());
     }
     

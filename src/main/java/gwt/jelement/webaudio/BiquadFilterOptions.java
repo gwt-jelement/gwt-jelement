@@ -27,19 +27,19 @@ import jsinterop.annotations.JsType;
 public class BiquadFilterOptions extends AudioNodeOptions{
 
     @JsProperty(name="type")
-    public BiquadFilterType type = BiquadFilterType.of("lowpass");
+    public BiquadFilterType type;
 
     @JsProperty(name="Q")
-    public float Q = 1;
+    public float Q;
 
     @JsProperty(name="detune")
-    public float detune = 0;
+    public float detune;
 
     @JsProperty(name="frequency")
-    public float frequency = 350;
+    public float frequency;
 
     @JsProperty(name="gain")
-    public float gain = 0;
+    public float gain;
 
 
 }

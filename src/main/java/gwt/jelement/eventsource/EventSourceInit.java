@@ -24,7 +24,7 @@ import jsinterop.annotations.JsType;
 public class EventSourceInit{
 
     @JsProperty(name="withCredentials")
-    public boolean withCredentials = false;
+    public boolean withCredentials;
 
 
 }

@@ -24,10 +24,10 @@ import jsinterop.annotations.JsType;
 public class FormDataOptions{
 
     @JsProperty(name="idName")
-    public String idName = "username";
+    public String idName;
 
     @JsProperty(name="passwordName")
-    public String passwordName = "password";
+    public String passwordName;
 
 
 }

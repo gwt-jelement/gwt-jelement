@@ -41,10 +41,10 @@ public class ScrollState{
     public native double getDeltaY();
     
     @JsProperty(name="positionX")
-    public native long getPositionX();
+    public native double getPositionX();
     
     @JsProperty(name="positionY")
-    public native long getPositionY();
+    public native double getPositionY();
     
     @JsProperty(name="velocityX")
     public native double getVelocityX();

@@ -29,7 +29,7 @@ public class ConvolverOptions extends AudioNodeOptions{
     public AudioBuffer buffer;
 
     @JsProperty(name="disableNormalization")
-    public boolean disableNormalization = false;
+    public boolean disableNormalization;
 
 
 }

@@ -26,13 +26,13 @@ import jsinterop.annotations.JsType;
 public class NFCPushOptions{
 
     @JsProperty(name="target")
-    public NFCPushTarget target = NFCPushTarget.of("any");
+    public NFCPushTarget target;
 
     @JsProperty(name="timeout")
     public double timeout;
 
     @JsProperty(name="ignoreRead")
-    public boolean ignoreRead = true;
+    public boolean ignoreRead;
 
 
 }

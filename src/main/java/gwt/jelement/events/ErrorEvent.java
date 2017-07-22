@@ -44,10 +44,10 @@ public class ErrorEvent extends Event{
     public native String getFilename();
     
     @JsProperty(name="lineno")
-    public native long getLineno();
+    public native double getLineno();
     
     @JsProperty(name="colno")
-    public native long getColno();
+    public native double getColno();
     
     @JsProperty(name="error")
     public native Any getError();

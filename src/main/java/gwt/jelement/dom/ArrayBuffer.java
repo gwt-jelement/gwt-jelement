@@ -24,7 +24,7 @@ import jsinterop.annotations.JsType;
 public class ArrayBuffer{
     
     @JsProperty(name="byteLength")
-    public native long getByteLength();
+    public native double getByteLength();
     
     
 }

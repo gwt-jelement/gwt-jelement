@@ -53,7 +53,7 @@ public class FontFace{
     public String display;
     
     @JsOverlay
-    public  FontFaceLoadStatus getStatusAsFontFaceLoadStatus(){
+    public final FontFaceLoadStatus getStatusAsFontFaceLoadStatus(){
         return FontFaceLoadStatus.of(getStatus());
     }
     

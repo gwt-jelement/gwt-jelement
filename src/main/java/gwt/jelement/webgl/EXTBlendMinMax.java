@@ -21,8 +21,8 @@ import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, isNative = true)
 public class EXTBlendMinMax{
-    public static final int MIN_EXT = 0x8007;
-    public static final int MAX_EXT = 0x8008;
+    public static int MIN_EXT;
+    public static int MAX_EXT;
     
     
     

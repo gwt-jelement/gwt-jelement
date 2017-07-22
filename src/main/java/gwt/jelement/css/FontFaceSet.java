@@ -50,7 +50,7 @@ public class FontFaceSet extends EventTarget{
     public native Promise<FontFaceSet> getReady();
     
     @JsOverlay
-    public  FontFaceSetLoadStatus getStatusAsFontFaceSetLoadStatus(){
+    public final FontFaceSetLoadStatus getStatusAsFontFaceSetLoadStatus(){
         return FontFaceSetLoadStatus.of(getStatus());
     }
     

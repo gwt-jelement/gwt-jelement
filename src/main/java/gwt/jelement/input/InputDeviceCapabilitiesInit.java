@@ -24,7 +24,7 @@ import jsinterop.annotations.JsType;
 public class InputDeviceCapabilitiesInit{
 
     @JsProperty(name="firesTouchEvents")
-    public boolean firesTouchEvents = false;
+    public boolean firesTouchEvents;
 
 
 }

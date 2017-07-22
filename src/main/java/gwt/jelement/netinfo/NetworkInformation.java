@@ -41,7 +41,7 @@ public class NetworkInformation extends EventTarget{
     public EventHandlerNonNull ontypechange;
     
     @JsOverlay
-    public  ConnectionType getTypeAsConnectionType(){
+    public final ConnectionType getTypeAsConnectionType(){
         return ConnectionType.of(getType());
     }
     
@@ -52,7 +52,7 @@ public class NetworkInformation extends EventTarget{
     public native double getDownlinkMax();
     
     @JsOverlay
-    public  EffectiveConnectionType getEffectiveTypeAsEffectiveConnectionType(){
+    public final EffectiveConnectionType getEffectiveTypeAsEffectiveConnectionType(){
         return EffectiveConnectionType.of(getEffectiveType());
     }
     
@@ -60,7 +60,7 @@ public class NetworkInformation extends EventTarget{
     public native String getEffectiveType();
     
     @JsProperty(name="rtt")
-    public native long getRtt();
+    public native double getRtt();
     
     @JsProperty(name="downlink")
     public native double getDownlink();

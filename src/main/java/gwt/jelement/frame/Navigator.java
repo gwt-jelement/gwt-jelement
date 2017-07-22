@@ -77,7 +77,7 @@ public class Navigator{
     public native String getDoNotTrack();
     
     @JsProperty(name="maxTouchPoints")
-    public native long getMaxTouchPoints();
+    public native double getMaxTouchPoints();
     
     @JsProperty(name="clipboard")
     public native Clipboard getClipboard();
@@ -128,7 +128,7 @@ public class Navigator{
     public native USB getUsb();
     
     @JsProperty(name="hardwareConcurrency")
-    public native long getHardwareConcurrency();
+    public native double getHardwareConcurrency();
     
     @JsProperty(name="cookieEnabled")
     public native boolean getCookieEnabled();
@@ -224,10 +224,10 @@ public class Navigator{
     public native void unregisterProtocolHandler(String scheme, String url);
     
     @JsMethod(name = "vibrate")
-    public native boolean vibrate(long pattern);
+    public native boolean vibrate(double pattern);
     
     @JsMethod(name = "vibrate")
-    public native boolean vibrate(long[] pattern);
+    public native boolean vibrate(double[] pattern);
     
     @JsMethod(name = "webkitGetUserMedia")
     public native void webkitGetUserMedia(MediaStreamConstraints constraints, NavigatorUserMediaSuccessCallback successCallback, NavigatorUserMediaErrorCallback errorCallback);

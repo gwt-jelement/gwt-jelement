@@ -24,10 +24,10 @@ import jsinterop.annotations.JsType;
 public class FileSystemFlags{
 
     @JsProperty(name="create")
-    public boolean create = false;
+    public boolean create;
 
     @JsProperty(name="exclusive")
-    public boolean exclusive = false;
+    public boolean exclusive;
 
 
 }

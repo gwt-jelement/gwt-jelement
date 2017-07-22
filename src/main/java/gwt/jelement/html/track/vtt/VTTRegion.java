@@ -29,7 +29,7 @@ public class VTTRegion{
     public double width;
     
     @JsProperty(name="lines")
-    public long lines;
+    public double lines;
     
     @JsProperty(name="regionAnchorX")
     public double regionAnchorX;

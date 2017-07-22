@@ -24,16 +24,16 @@ import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, isNative = true)
 public class XPathResult{
-    public static final int ANY_TYPE = 0;
-    public static final int NUMBER_TYPE = 1;
-    public static final int STRING_TYPE = 2;
-    public static final int BOOLEAN_TYPE = 3;
-    public static final int UNORDERED_NODE_ITERATOR_TYPE = 4;
-    public static final int ORDERED_NODE_ITERATOR_TYPE = 5;
-    public static final int UNORDERED_NODE_SNAPSHOT_TYPE = 6;
-    public static final int ORDERED_NODE_SNAPSHOT_TYPE = 7;
-    public static final int ANY_UNORDERED_NODE_TYPE = 8;
-    public static final int FIRST_ORDERED_NODE_TYPE = 9;
+    public static int ANY_TYPE;
+    public static int NUMBER_TYPE;
+    public static int STRING_TYPE;
+    public static int BOOLEAN_TYPE;
+    public static int UNORDERED_NODE_ITERATOR_TYPE;
+    public static int ORDERED_NODE_ITERATOR_TYPE;
+    public static int UNORDERED_NODE_SNAPSHOT_TYPE;
+    public static int ORDERED_NODE_SNAPSHOT_TYPE;
+    public static int ANY_UNORDERED_NODE_TYPE;
+    public static int FIRST_ORDERED_NODE_TYPE;
     
     
     @JsProperty(name="resultType")
@@ -55,12 +55,12 @@ public class XPathResult{
     public native boolean getInvalidIteratorState();
     
     @JsProperty(name="snapshotLength")
-    public native long getSnapshotLength();
+    public native double getSnapshotLength();
     
     @JsMethod(name = "iterateNext")
     public native Node iterateNext();
     
     @JsMethod(name = "snapshotItem")
-    public native Node snapshotItem(long index);
+    public native Node snapshotItem(double index);
     
 }

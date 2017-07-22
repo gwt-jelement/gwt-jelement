@@ -63,7 +63,7 @@ public class Animation extends EventTarget{
     public native AnimationTimeline getTimeline();
     
     @JsOverlay
-    public  AnimationPlayState getPlayStateAsAnimationPlayState(){
+    public final AnimationPlayState getPlayStateAsAnimationPlayState(){
         return AnimationPlayState.of(getPlayState());
     }
     

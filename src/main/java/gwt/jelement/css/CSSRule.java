@@ -24,17 +24,17 @@ import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, isNative = true)
 public class CSSRule{
-    public static final int STYLE_RULE = 1;
-    public static final int CHARSET_RULE = 2;
-    public static final int IMPORT_RULE = 3;
-    public static final int MEDIA_RULE = 4;
-    public static final int FONT_FACE_RULE = 5;
-    public static final int PAGE_RULE = 6;
-    public static final int NAMESPACE_RULE = 10;
-    public static final int KEYFRAMES_RULE = 7;
-    public static final int KEYFRAME_RULE = 8;
-    public static final int SUPPORTS_RULE = 12;
-    public static final int VIEWPORT_RULE = 15;
+    public static int STYLE_RULE;
+    public static int CHARSET_RULE;
+    public static int IMPORT_RULE;
+    public static int MEDIA_RULE;
+    public static int FONT_FACE_RULE;
+    public static int PAGE_RULE;
+    public static int NAMESPACE_RULE;
+    public static int KEYFRAMES_RULE;
+    public static int KEYFRAME_RULE;
+    public static int SUPPORTS_RULE;
+    public static int VIEWPORT_RULE;
     
     
     @JsProperty(name="cssText")

@@ -82,51 +82,51 @@ public class ImageBitmapFactories{
     public native Promise createImageBitmap(OffscreenCanvas imageBitmap, ImageBitmapOptions options);
     
     @JsMethod(name = "createImageBitmap")
-    public native Promise createImageBitmap(HTMLImageElement imageBitmap, long sx, long sy, long sw, long sh);
+    public native Promise createImageBitmap(HTMLImageElement imageBitmap, double sx, double sy, double sw, double sh);
     
     @JsMethod(name = "createImageBitmap")
-    public native Promise createImageBitmap(SVGImageElement imageBitmap, long sx, long sy, long sw, long sh);
+    public native Promise createImageBitmap(SVGImageElement imageBitmap, double sx, double sy, double sw, double sh);
     
     @JsMethod(name = "createImageBitmap")
-    public native Promise createImageBitmap(HTMLVideoElement imageBitmap, long sx, long sy, long sw, long sh);
+    public native Promise createImageBitmap(HTMLVideoElement imageBitmap, double sx, double sy, double sw, double sh);
     
     @JsMethod(name = "createImageBitmap")
-    public native Promise createImageBitmap(HTMLCanvasElement imageBitmap, long sx, long sy, long sw, long sh);
+    public native Promise createImageBitmap(HTMLCanvasElement imageBitmap, double sx, double sy, double sw, double sh);
     
     @JsMethod(name = "createImageBitmap")
-    public native Promise createImageBitmap(Blob imageBitmap, long sx, long sy, long sw, long sh);
+    public native Promise createImageBitmap(Blob imageBitmap, double sx, double sy, double sw, double sh);
     
     @JsMethod(name = "createImageBitmap")
-    public native Promise createImageBitmap(ImageData imageBitmap, long sx, long sy, long sw, long sh);
+    public native Promise createImageBitmap(ImageData imageBitmap, double sx, double sy, double sw, double sh);
     
     @JsMethod(name = "createImageBitmap")
-    public native Promise createImageBitmap(ImageBitmap imageBitmap, long sx, long sy, long sw, long sh);
+    public native Promise createImageBitmap(ImageBitmap imageBitmap, double sx, double sy, double sw, double sh);
     
     @JsMethod(name = "createImageBitmap")
-    public native Promise createImageBitmap(OffscreenCanvas imageBitmap, long sx, long sy, long sw, long sh);
+    public native Promise createImageBitmap(OffscreenCanvas imageBitmap, double sx, double sy, double sw, double sh);
     
     @JsMethod(name = "createImageBitmap")
-    public native Promise createImageBitmap(HTMLImageElement imageBitmap, long sx, long sy, long sw, long sh, ImageBitmapOptions options);
+    public native Promise createImageBitmap(HTMLImageElement imageBitmap, double sx, double sy, double sw, double sh, ImageBitmapOptions options);
     
     @JsMethod(name = "createImageBitmap")
-    public native Promise createImageBitmap(SVGImageElement imageBitmap, long sx, long sy, long sw, long sh, ImageBitmapOptions options);
+    public native Promise createImageBitmap(SVGImageElement imageBitmap, double sx, double sy, double sw, double sh, ImageBitmapOptions options);
     
     @JsMethod(name = "createImageBitmap")
-    public native Promise createImageBitmap(HTMLVideoElement imageBitmap, long sx, long sy, long sw, long sh, ImageBitmapOptions options);
+    public native Promise createImageBitmap(HTMLVideoElement imageBitmap, double sx, double sy, double sw, double sh, ImageBitmapOptions options);
     
     @JsMethod(name = "createImageBitmap")
-    public native Promise createImageBitmap(HTMLCanvasElement imageBitmap, long sx, long sy, long sw, long sh, ImageBitmapOptions options);
+    public native Promise createImageBitmap(HTMLCanvasElement imageBitmap, double sx, double sy, double sw, double sh, ImageBitmapOptions options);
     
     @JsMethod(name = "createImageBitmap")
-    public native Promise createImageBitmap(Blob imageBitmap, long sx, long sy, long sw, long sh, ImageBitmapOptions options);
+    public native Promise createImageBitmap(Blob imageBitmap, double sx, double sy, double sw, double sh, ImageBitmapOptions options);
     
     @JsMethod(name = "createImageBitmap")
-    public native Promise createImageBitmap(ImageData imageBitmap, long sx, long sy, long sw, long sh, ImageBitmapOptions options);
+    public native Promise createImageBitmap(ImageData imageBitmap, double sx, double sy, double sw, double sh, ImageBitmapOptions options);
     
     @JsMethod(name = "createImageBitmap")
-    public native Promise createImageBitmap(ImageBitmap imageBitmap, long sx, long sy, long sw, long sh, ImageBitmapOptions options);
+    public native Promise createImageBitmap(ImageBitmap imageBitmap, double sx, double sy, double sw, double sh, ImageBitmapOptions options);
     
     @JsMethod(name = "createImageBitmap")
-    public native Promise createImageBitmap(OffscreenCanvas imageBitmap, long sx, long sy, long sw, long sh, ImageBitmapOptions options);
+    public native Promise createImageBitmap(OffscreenCanvas imageBitmap, double sx, double sy, double sw, double sh, ImageBitmapOptions options);
     
 }

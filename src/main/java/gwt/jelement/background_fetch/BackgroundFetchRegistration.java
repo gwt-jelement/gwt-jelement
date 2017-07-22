@@ -33,7 +33,7 @@ public class BackgroundFetchRegistration{
     public native IconDefinition[] getIcons();
     
     @JsProperty(name="totalDownloadSize")
-    public native long getTotalDownloadSize();
+    public native double getTotalDownloadSize();
     
     @JsProperty(name="title")
     public native String getTitle();

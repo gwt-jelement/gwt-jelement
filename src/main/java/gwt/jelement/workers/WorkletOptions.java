@@ -26,7 +26,7 @@ import jsinterop.annotations.JsType;
 public class WorkletOptions{
 
     @JsProperty(name="credentials")
-    public RequestCredentials credentials = RequestCredentials.of("omit");
+    public RequestCredentials credentials;
 
 
 }

@@ -34,7 +34,7 @@ import jsinterop.base.Any;
 public class Response{
     
     @JsOverlay
-    public  ResponseType getTypeAsResponseType(){
+    public final ResponseType getTypeAsResponseType(){
         return ResponseType.of(getType());
     }
     

@@ -29,10 +29,10 @@ public class FetchEventInit extends ExtendableEventInit{
     public Request request;
 
     @JsProperty(name="clientId")
-    public String clientId = null;
+    public String clientId;
 
     @JsProperty(name="isReload")
-    public boolean isReload = false;
+    public boolean isReload;
 
 
 }

@@ -25,7 +25,7 @@ import jsinterop.annotations.JsType;
 public class Storage{
     
     @JsProperty(name="length")
-    public native long getLength();
+    public native double getLength();
     
     @JsMethod(name = "clear")
     public native void clear();
@@ -34,7 +34,7 @@ public class Storage{
     public native String getItem(String key);
     
     @JsMethod(name = "key")
-    public native String key(long index);
+    public native String key(double index);
     
     @JsMethod(name = "removeItem")
     public native void removeItem(String key);

@@ -29,10 +29,10 @@ public class NotificationEventInit extends ExtendableEventInit{
     public Notification notification;
 
     @JsProperty(name="action")
-    public String action = "";
+    public String action;
 
     @JsProperty(name="reply")
-    public String reply = "";
+    public String reply;
 
 
 }

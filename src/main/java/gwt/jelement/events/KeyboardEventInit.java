@@ -25,19 +25,19 @@ import jsinterop.annotations.JsType;
 public class KeyboardEventInit extends EventModifierInit{
 
     @JsProperty(name="key")
-    public String key = "";
+    public String key;
 
     @JsProperty(name="code")
-    public String code = "";
+    public String code;
 
     @JsProperty(name="location")
-    public long location = 0;
+    public double location;
 
     @JsProperty(name="repeat")
-    public boolean repeat = false;
+    public boolean repeat;
 
     @JsProperty(name="isComposing")
-    public boolean isComposing = false;
+    public boolean isComposing;
 
 
 }

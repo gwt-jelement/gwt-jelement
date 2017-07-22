@@ -26,10 +26,10 @@ import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, isNative = true)
 public class Event{
-    public static final int NONE = 0;
-    public static final int CAPTURING_PHASE = 1;
-    public static final int AT_TARGET = 2;
-    public static final int BUBBLING_PHASE = 3;
+    public static int NONE;
+    public static int CAPTURING_PHASE;
+    public static int AT_TARGET;
+    public static int BUBBLING_PHASE;
     
     
     @JsConstructor

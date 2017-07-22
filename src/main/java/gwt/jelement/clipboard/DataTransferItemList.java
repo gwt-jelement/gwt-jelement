@@ -27,7 +27,7 @@ import jsinterop.annotations.JsType;
 public class DataTransferItemList{
     
     @JsProperty(name="length")
-    public native long getLength();
+    public native double getLength();
     
     @JsMethod(name = "add")
     public native DataTransferItem add(File file);
@@ -39,6 +39,6 @@ public class DataTransferItemList{
     public native void clear();
     
     @JsMethod(name = "remove")
-    public native void remove(long index);
+    public native void remove(double index);
     
 }

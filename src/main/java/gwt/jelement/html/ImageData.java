@@ -33,6 +33,21 @@ public class ImageData{
     @JsType(isNative = true, name = "?", namespace = JsPackage.GLOBAL)
     public interface ImageDataArray {
         @JsOverlay
+        static ImageDataArray of(Uint8ClampedArray value){
+            return Js.cast(value);
+        }
+    
+        @JsOverlay
+        static ImageDataArray of(Uint16Array value){
+            return Js.cast(value);
+        }
+    
+        @JsOverlay
+        static ImageDataArray of(Float32Array value){
+            return Js.cast(value);
+        }
+    
+        @JsOverlay
         default Uint8ClampedArray asUint8ClampedArray(){
             return Js.cast(this);
         }
@@ -65,10 +80,10 @@ public class ImageData{
     }
     
     @JsProperty(name="width")
-    public native long getWidth();
+    public native double getWidth();
     
     @JsProperty(name="height")
-    public native long getHeight();
+    public native double getHeight();
     
     @JsProperty(name="data")
     public native Uint8ClampedArray getData();

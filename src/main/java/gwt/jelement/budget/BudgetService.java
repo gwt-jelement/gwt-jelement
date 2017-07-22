@@ -32,7 +32,7 @@ public class BudgetService{
     public native Promise<BudgetState[]> getBudget();
     
     @JsOverlay
-    public Promise<Double> getCost(OperationType operation){
+    public final Promise<Double> getCost(OperationType operation){
         return getCost(operation.getInternalValue());
     }
     
@@ -40,7 +40,7 @@ public class BudgetService{
     public native Promise<Double> getCost(String operation);
     
     @JsOverlay
-    public Promise<Boolean> reserve(OperationType operation){
+    public final Promise<Boolean> reserve(OperationType operation){
         return reserve(operation.getInternalValue());
     }
     

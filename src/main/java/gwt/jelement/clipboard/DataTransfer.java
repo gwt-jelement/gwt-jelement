@@ -60,6 +60,6 @@ public class DataTransfer{
     public native void setData(String format, String data);
     
     @JsMethod(name = "setDragImage")
-    public native void setDragImage(Element image, long x, long y);
+    public native void setDragImage(Element image, double x, double y);
     
 }

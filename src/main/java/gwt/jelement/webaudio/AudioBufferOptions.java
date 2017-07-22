@@ -24,10 +24,10 @@ import jsinterop.annotations.JsType;
 public class AudioBufferOptions{
 
     @JsProperty(name="numberOfChannels")
-    public long numberOfChannels = 1;
+    public double numberOfChannels;
 
     @JsProperty(name="length")
-    public long length;
+    public double length;
 
     @JsProperty(name="sampleRate")
     public float sampleRate;

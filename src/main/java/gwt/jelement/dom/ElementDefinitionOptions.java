@@ -24,7 +24,7 @@ import jsinterop.annotations.JsType;
 public class ElementDefinitionOptions{
 
     @JsProperty(name="extends")
-    public String extends_ = null;
+    public String extends_;
 
 
 }

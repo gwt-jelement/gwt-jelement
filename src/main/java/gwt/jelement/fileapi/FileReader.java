@@ -31,13 +31,23 @@ import jsinterop.base.Js;
 
 @JsType(namespace = JsPackage.GLOBAL, isNative = true)
 public class FileReader extends EventTarget{
-    public static final int EMPTY = 0;
-    public static final int LOADING = 1;
-    public static final int DONE = 2;
+    public static int EMPTY;
+    public static int LOADING;
+    public static int DONE;
     
     
     @JsType(isNative = true, name = "?", namespace = JsPackage.GLOBAL)
     public interface StringOrArrayBufferUnionType {
+        @JsOverlay
+        static StringOrArrayBufferUnionType of(String value){
+            return Js.cast(value);
+        }
+    
+        @JsOverlay
+        static StringOrArrayBufferUnionType of(ArrayBuffer value){
+            return Js.cast(value);
+        }
+    
         @JsOverlay
         default String asString(){
             return Js.cast(this);

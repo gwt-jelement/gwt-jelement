@@ -30,7 +30,7 @@ public class USBEndpoint{
     public native byte getEndpointNumber();
     
     @JsOverlay
-    public  USBDirection getDirectionAsUSBDirection(){
+    public final USBDirection getDirectionAsUSBDirection(){
         return USBDirection.of(getDirection());
     }
     
@@ -38,7 +38,7 @@ public class USBEndpoint{
     public native String getDirection();
     
     @JsOverlay
-    public  USBEndpointType getTypeAsUSBEndpointType(){
+    public final USBEndpointType getTypeAsUSBEndpointType(){
         return USBEndpointType.of(getType());
     }
     
@@ -46,7 +46,7 @@ public class USBEndpoint{
     public native String getType();
     
     @JsProperty(name="packetSize")
-    public native long getPacketSize();
+    public native double getPacketSize();
     
     
 }

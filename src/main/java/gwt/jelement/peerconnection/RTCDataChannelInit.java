@@ -24,7 +24,7 @@ import jsinterop.annotations.JsType;
 public class RTCDataChannelInit{
 
     @JsProperty(name="ordered")
-    public boolean ordered = true;
+    public boolean ordered;
 
     @JsProperty(name="maxRetransmitTime")
     public short maxRetransmitTime;
@@ -33,10 +33,10 @@ public class RTCDataChannelInit{
     public short maxRetransmits;
 
     @JsProperty(name="protocol")
-    public String protocol = "";
+    public String protocol;
 
     @JsProperty(name="negotiated")
-    public boolean negotiated = false;
+    public boolean negotiated;
 
     @JsProperty(name="id")
     public short id;

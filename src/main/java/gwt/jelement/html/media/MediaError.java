@@ -22,10 +22,10 @@ import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, isNative = true)
 public class MediaError{
-    public static final int MEDIA_ERR_ABORTED = 1;
-    public static final int MEDIA_ERR_NETWORK = 2;
-    public static final int MEDIA_ERR_DECODE = 3;
-    public static final int MEDIA_ERR_SRC_NOT_SUPPORTED = 4;
+    public static int MEDIA_ERR_ABORTED;
+    public static int MEDIA_ERR_NETWORK;
+    public static int MEDIA_ERR_DECODE;
+    public static int MEDIA_ERR_SRC_NOT_SUPPORTED;
     
     
     @JsProperty(name="code")

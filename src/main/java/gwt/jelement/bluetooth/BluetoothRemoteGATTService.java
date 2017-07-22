@@ -40,7 +40,7 @@ public class BluetoothRemoteGATTService{
     public native Promise<BluetoothRemoteGATTCharacteristic> getCharacteristic(String characteristic);
     
     @JsMethod(name = "getCharacteristic")
-    public native Promise<BluetoothRemoteGATTCharacteristic> getCharacteristic(long characteristic);
+    public native Promise<BluetoothRemoteGATTCharacteristic> getCharacteristic(double characteristic);
     
     @JsMethod(name = "getCharacteristics")
     public native Promise<BluetoothRemoteGATTCharacteristic[]> getCharacteristics();
@@ -49,6 +49,6 @@ public class BluetoothRemoteGATTService{
     public native Promise<BluetoothRemoteGATTCharacteristic[]> getCharacteristics(String characteristic);
     
     @JsMethod(name = "getCharacteristics")
-    public native Promise<BluetoothRemoteGATTCharacteristic[]> getCharacteristics(long characteristic);
+    public native Promise<BluetoothRemoteGATTCharacteristic[]> getCharacteristics(double characteristic);
     
 }

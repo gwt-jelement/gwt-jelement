@@ -80,7 +80,7 @@ public class BaseAudioContext extends EventTarget{
     public native AudioListener getListener();
     
     @JsOverlay
-    public  AudioContextState getStateAsAudioContextState(){
+    public final AudioContextState getStateAsAudioContextState(){
         return AudioContextState.of(getState());
     }
     
@@ -94,7 +94,7 @@ public class BaseAudioContext extends EventTarget{
     public native BiquadFilterNode createBiquadFilter();
     
     @JsMethod(name = "createBuffer")
-    public native AudioBuffer createBuffer(long numberOfChannels, long numberOfFrames, float sampleRate);
+    public native AudioBuffer createBuffer(double numberOfChannels, double numberOfFrames, float sampleRate);
     
     @JsMethod(name = "createBufferSource")
     public native AudioBufferSourceNode createBufferSource();
@@ -103,13 +103,13 @@ public class BaseAudioContext extends EventTarget{
     public native ChannelMergerNode createChannelMerger();
     
     @JsMethod(name = "createChannelMerger")
-    public native ChannelMergerNode createChannelMerger(long numberOfInputs);
+    public native ChannelMergerNode createChannelMerger(double numberOfInputs);
     
     @JsMethod(name = "createChannelSplitter")
     public native ChannelSplitterNode createChannelSplitter();
     
     @JsMethod(name = "createChannelSplitter")
-    public native ChannelSplitterNode createChannelSplitter(long numberOfOutputs);
+    public native ChannelSplitterNode createChannelSplitter(double numberOfOutputs);
     
     @JsMethod(name = "createConstantSource")
     public native ConstantSourceNode createConstantSource();
@@ -157,13 +157,13 @@ public class BaseAudioContext extends EventTarget{
     public native ScriptProcessorNode createScriptProcessor();
     
     @JsMethod(name = "createScriptProcessor")
-    public native ScriptProcessorNode createScriptProcessor(long bufferSize);
+    public native ScriptProcessorNode createScriptProcessor(double bufferSize);
     
     @JsMethod(name = "createScriptProcessor")
-    public native ScriptProcessorNode createScriptProcessor(long bufferSize, long numberOfInputChannels);
+    public native ScriptProcessorNode createScriptProcessor(double bufferSize, double numberOfInputChannels);
     
     @JsMethod(name = "createScriptProcessor")
-    public native ScriptProcessorNode createScriptProcessor(long bufferSize, long numberOfInputChannels, long numberOfOutputChannels);
+    public native ScriptProcessorNode createScriptProcessor(double bufferSize, double numberOfInputChannels, double numberOfOutputChannels);
     
     @JsMethod(name = "createStereoPanner")
     public native StereoPannerNode createStereoPanner();

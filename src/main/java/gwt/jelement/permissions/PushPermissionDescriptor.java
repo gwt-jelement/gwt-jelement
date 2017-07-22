@@ -25,7 +25,7 @@ import jsinterop.annotations.JsType;
 public class PushPermissionDescriptor extends PermissionDescriptor{
 
     @JsProperty(name="userVisibleOnly")
-    public boolean userVisibleOnly = false;
+    public boolean userVisibleOnly;
 
 
 }

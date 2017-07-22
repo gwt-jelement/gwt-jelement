@@ -30,24 +30,24 @@ import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, isNative = true)
 public class Node extends EventTarget{
-    public static final int ELEMENT_NODE = 1;
-    public static final int ATTRIBUTE_NODE = 2;
-    public static final int TEXT_NODE = 3;
-    public static final int CDATA_SECTION_NODE = 4;
-    public static final int ENTITY_REFERENCE_NODE = 5;
-    public static final int ENTITY_NODE = 6;
-    public static final int PROCESSING_INSTRUCTION_NODE = 7;
-    public static final int COMMENT_NODE = 8;
-    public static final int DOCUMENT_NODE = 9;
-    public static final int DOCUMENT_TYPE_NODE = 10;
-    public static final int DOCUMENT_FRAGMENT_NODE = 11;
-    public static final int NOTATION_NODE = 12;
-    public static final int DOCUMENT_POSITION_DISCONNECTED = 0x01;
-    public static final int DOCUMENT_POSITION_PRECEDING = 0x02;
-    public static final int DOCUMENT_POSITION_FOLLOWING = 0x04;
-    public static final int DOCUMENT_POSITION_CONTAINS = 0x08;
-    public static final int DOCUMENT_POSITION_CONTAINED_BY = 0x10;
-    public static final int DOCUMENT_POSITION_IMPLEMENTATION_SPECIFIC = 0x20;
+    public static int ELEMENT_NODE;
+    public static int ATTRIBUTE_NODE;
+    public static int TEXT_NODE;
+    public static int CDATA_SECTION_NODE;
+    public static int ENTITY_REFERENCE_NODE;
+    public static int ENTITY_NODE;
+    public static int PROCESSING_INSTRUCTION_NODE;
+    public static int COMMENT_NODE;
+    public static int DOCUMENT_NODE;
+    public static int DOCUMENT_TYPE_NODE;
+    public static int DOCUMENT_FRAGMENT_NODE;
+    public static int NOTATION_NODE;
+    public static int DOCUMENT_POSITION_DISCONNECTED;
+    public static int DOCUMENT_POSITION_PRECEDING;
+    public static int DOCUMENT_POSITION_FOLLOWING;
+    public static int DOCUMENT_POSITION_CONTAINS;
+    public static int DOCUMENT_POSITION_CONTAINED_BY;
+    public static int DOCUMENT_POSITION_IMPLEMENTATION_SPECIFIC;
     
     
     @JsConstructor

@@ -40,10 +40,10 @@ public class SubtleCrypto{
     public native Promise decrypt(String algorithm, CryptoKey key, ArrayBufferView data);
     
     @JsMethod(name = "deriveBits")
-    public native Promise deriveBits(Object algorithm, CryptoKey baseKey, long length);
+    public native Promise deriveBits(Object algorithm, CryptoKey baseKey, double length);
     
     @JsMethod(name = "deriveBits")
-    public native Promise deriveBits(String algorithm, CryptoKey baseKey, long length);
+    public native Promise deriveBits(String algorithm, CryptoKey baseKey, double length);
     
     @JsMethod(name = "deriveKey")
     public native Promise deriveKey(Object algorithm, CryptoKey baseKey, Object derivedKeyType, boolean extractable, String[] keyUsages);

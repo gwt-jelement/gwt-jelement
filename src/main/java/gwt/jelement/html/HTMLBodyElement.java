@@ -49,6 +49,24 @@ public class HTMLBodyElement extends HTMLElement{
     @JsProperty(name="background")
     public String background;
     
+    @JsProperty(name="onblur")
+    public EventHandlerNonNull onblur;
+    
+    @JsProperty(name="onerror")
+    public EventHandlerNonNull onerror;
+    
+    @JsProperty(name="onfocus")
+    public EventHandlerNonNull onfocus;
+    
+    @JsProperty(name="onload")
+    public EventHandlerNonNull onload;
+    
+    @JsProperty(name="onresize")
+    public EventHandlerNonNull onresize;
+    
+    @JsProperty(name="onscroll")
+    public EventHandlerNonNull onscroll;
+    
     @JsProperty(name="onorientationchange")
     public EventHandlerNonNull onorientationchange;
     

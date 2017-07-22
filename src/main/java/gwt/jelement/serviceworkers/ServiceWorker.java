@@ -45,7 +45,7 @@ public class ServiceWorker extends EventTarget{
     public native String getScriptURL();
     
     @JsOverlay
-    public  ServiceWorkerState getStateAsServiceWorkerState(){
+    public final ServiceWorkerState getStateAsServiceWorkerState(){
         return ServiceWorkerState.of(getState());
     }
     

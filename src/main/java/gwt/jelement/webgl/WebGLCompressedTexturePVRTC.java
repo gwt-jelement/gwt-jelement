@@ -21,10 +21,10 @@ import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, isNative = true)
 public class WebGLCompressedTexturePVRTC{
-    public static final int COMPRESSED_RGB_PVRTC_4BPPV1_IMG = 0x8C00;
-    public static final int COMPRESSED_RGB_PVRTC_2BPPV1_IMG = 0x8C01;
-    public static final int COMPRESSED_RGBA_PVRTC_4BPPV1_IMG = 0x8C02;
-    public static final int COMPRESSED_RGBA_PVRTC_2BPPV1_IMG = 0x8C03;
+    public static int COMPRESSED_RGB_PVRTC_4BPPV1_IMG;
+    public static int COMPRESSED_RGB_PVRTC_2BPPV1_IMG;
+    public static int COMPRESSED_RGBA_PVRTC_4BPPV1_IMG;
+    public static int COMPRESSED_RGBA_PVRTC_2BPPV1_IMG;
     
     
     

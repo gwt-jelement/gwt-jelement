@@ -24,10 +24,10 @@ import jsinterop.annotations.JsType;
 public class StorageEstimate{
 
     @JsProperty(name="usage")
-    public long usage;
+    public double usage;
 
     @JsProperty(name="quota")
-    public long quota;
+    public double quota;
 
 
 }

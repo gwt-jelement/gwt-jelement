@@ -41,7 +41,7 @@ public class ShadowRoot extends DocumentFragment{
     public String innerHTML;
     
     @JsOverlay
-    public  ShadowRootMode getModeAsShadowRootMode(){
+    public final ShadowRootMode getModeAsShadowRootMode(){
         return ShadowRootMode.of(getMode());
     }
     
@@ -70,10 +70,10 @@ public class ShadowRoot extends DocumentFragment{
     public native Element getFullscreenElement();
     
     @JsMethod(name = "elementFromPoint")
-    public native Element elementFromPoint(long x, long y);
+    public native Element elementFromPoint(double x, double y);
     
     @JsMethod(name = "elementsFromPoint")
-    public native Element[] elementsFromPoint(long x, long y);
+    public native Element[] elementsFromPoint(double x, double y);
     
     @JsMethod(name = "getSelection")
     public native Selection getSelection();

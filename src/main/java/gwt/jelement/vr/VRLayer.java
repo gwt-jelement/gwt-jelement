@@ -18,6 +18,7 @@ package gwt.jelement.vr;
 
 import gwt.jelement.html.HTMLCanvasElement;
 import gwt.jelement.offscreencanvas.OffscreenCanvas;
+import gwt.jelement.webgl.WebGL2RenderingContext;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -27,38 +28,14 @@ import jsinterop.base.Js;
 @JsType(namespace = JsPackage.GLOBAL, isNative = true)
 public class VRLayer{
 
-    @JsType(isNative = true, name = "?", namespace = JsPackage.GLOBAL)
-    public interface VRSource {
-        @JsOverlay
-        default HTMLCanvasElement asHTMLCanvasElement(){
-            return Js.cast(this);
-        }
-    
-        @JsOverlay
-        default OffscreenCanvas asOffscreenCanvas(){
-            return Js.cast(this);
-        }
-    
-        @JsOverlay
-        default boolean isHTMLCanvasElement(){
-            return (Object) this instanceof HTMLCanvasElement;
-        }
-    
-        @JsOverlay
-        default boolean isOffscreenCanvas(){
-            return (Object) this instanceof OffscreenCanvas;
-        }
-    
-    }
-    
     @JsProperty(name="source")
-    public VRLayer.VRSource source = null;
+    public WebGL2RenderingContext.VRSource source;
 
     @JsProperty(name="leftBounds")
-    public float[] leftBounds = new float[0];
+    public float[] leftBounds;
 
     @JsProperty(name="rightBounds")
-    public float[] rightBounds = new float[0];
+    public float[] rightBounds;
 
 
 }

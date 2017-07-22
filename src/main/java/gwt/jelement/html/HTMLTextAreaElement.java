@@ -41,7 +41,7 @@ public class HTMLTextAreaElement extends HTMLElement{
     public boolean autofocus;
     
     @JsProperty(name="cols")
-    public long cols;
+    public double cols;
     
     @JsProperty(name="dirName")
     public String dirName;
@@ -50,10 +50,10 @@ public class HTMLTextAreaElement extends HTMLElement{
     public boolean disabled;
     
     @JsProperty(name="maxLength")
-    public long maxLength;
+    public double maxLength;
     
     @JsProperty(name="minLength")
-    public long minLength;
+    public double minLength;
     
     @JsProperty(name="name")
     public String name;
@@ -68,7 +68,7 @@ public class HTMLTextAreaElement extends HTMLElement{
     public boolean required;
     
     @JsProperty(name="rows")
-    public long rows;
+    public double rows;
     
     @JsProperty(name="wrap")
     public String wrap;
@@ -80,10 +80,10 @@ public class HTMLTextAreaElement extends HTMLElement{
     public String value;
     
     @JsProperty(name="selectionStart")
-    public long selectionStart;
+    public double selectionStart;
     
     @JsProperty(name="selectionEnd")
-    public long selectionEnd;
+    public double selectionEnd;
     
     @JsProperty(name="selectionDirection")
     public String selectionDirection;
@@ -98,7 +98,7 @@ public class HTMLTextAreaElement extends HTMLElement{
     public native String getType();
     
     @JsProperty(name="textLength")
-    public native long getTextLength();
+    public native double getTextLength();
     
     @JsProperty(name="willValidate")
     public native boolean getWillValidate();
@@ -128,20 +128,20 @@ public class HTMLTextAreaElement extends HTMLElement{
     public native void setRangeText(String replacement);
     
     @JsMethod(name = "setRangeText")
-    public native void setRangeText(String replacement, long start, long end);
+    public native void setRangeText(String replacement, double start, double end);
     
     @JsOverlay
-    public void setRangeText(String replacement, long start, long end, SelectionMode selectionMode){
+    public final void setRangeText(String replacement, double start, double end, SelectionMode selectionMode){
         setRangeText(replacement, start, end, selectionMode.getInternalValue());
     }
     
     @JsMethod(name = "setRangeText")
-    public native void setRangeText(String replacement, long start, long end, String selectionMode);
+    public native void setRangeText(String replacement, double start, double end, String selectionMode);
     
     @JsMethod(name = "setSelectionRange")
-    public native void setSelectionRange(long start, long end);
+    public native void setSelectionRange(double start, double end);
     
     @JsMethod(name = "setSelectionRange")
-    public native void setSelectionRange(long start, long end, String direction);
+    public native void setSelectionRange(double start, double end, String direction);
     
 }

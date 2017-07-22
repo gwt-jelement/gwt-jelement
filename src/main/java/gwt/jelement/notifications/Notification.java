@@ -51,7 +51,7 @@ public class Notification extends EventTarget{
     public EventHandlerNonNull onclose;
     
     @JsOverlay
-    public static  NotificationPermission getPermissionAsNotificationPermission(){
+    public static final NotificationPermission getPermissionAsNotificationPermission(){
         return NotificationPermission.of(getPermission());
     }
     
@@ -59,7 +59,7 @@ public class Notification extends EventTarget{
     public static native String getPermission();
     
     @JsProperty(name="maxActions")
-    public static native long getMaxActions();
+    public static native double getMaxActions();
     
     @JsProperty(name="title")
     public native String getTitle();
@@ -86,10 +86,10 @@ public class Notification extends EventTarget{
     public native String getBadge();
     
     @JsProperty(name="vibrate")
-    public native long[] getVibrate();
+    public native double[] getVibrate();
     
     @JsProperty(name="timestamp")
-    public native long getTimestamp();
+    public native double getTimestamp();
     
     @JsProperty(name="renotify")
     public native boolean getRenotify();

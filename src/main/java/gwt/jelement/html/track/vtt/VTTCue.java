@@ -35,6 +35,16 @@ public class VTTCue extends TextTrackCue{
     @JsType(isNative = true, name = "?", namespace = JsPackage.GLOBAL)
     public interface DoubleOrAutoKeywordUnionType {
         @JsOverlay
+        static DoubleOrAutoKeywordUnionType of(double value){
+            return Js.cast(value);
+        }
+    
+        @JsOverlay
+        static DoubleOrAutoKeywordUnionType of(String value){
+            return Js.cast(value);
+        }
+    
+        @JsOverlay
         default double asDouble(){
             return Js.cast(this);
         }
@@ -70,6 +80,12 @@ public class VTTCue extends TextTrackCue{
     @JsProperty(name="snapToLines")
     public boolean snapToLines;
     
+    @JsProperty(name="line")
+    public VTTCue.DoubleOrAutoKeywordUnionType line;
+    
+    @JsProperty(name="position")
+    public VTTCue.DoubleOrAutoKeywordUnionType position;
+    
     @JsProperty(name="size")
     public double size;
     
@@ -78,24 +94,6 @@ public class VTTCue extends TextTrackCue{
     
     @JsProperty(name="text")
     public String text;
-    
-    @JsProperty(name="line")
-    public native VTTCue.DoubleOrAutoKeywordUnionType getLine();
-    
-    @JsProperty(name="position")
-    public native VTTCue.DoubleOrAutoKeywordUnionType getPosition();
-    
-    @JsProperty(name="line")
-    public native void setLine(double line);
-    
-    @JsProperty(name="line")
-    public native void setLine(String line);
-    
-    @JsProperty(name="position")
-    public native void setPosition(double position);
-    
-    @JsProperty(name="position")
-    public native void setPosition(String position);
     
     @JsMethod(name = "getCueAsHTML")
     public native DocumentFragment getCueAsHTML();

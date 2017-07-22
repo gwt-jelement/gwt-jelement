@@ -27,7 +27,7 @@ import jsinterop.annotations.JsType;
 public class Geolocation{
     
     @JsMethod(name = "clearWatch")
-    public native void clearWatch(long watchID);
+    public native void clearWatch(double watchID);
     
     @JsMethod(name = "getCurrentPosition")
     public native void getCurrentPosition(PositionCallback successCallback);
@@ -39,12 +39,12 @@ public class Geolocation{
     public native void getCurrentPosition(PositionCallback successCallback, PositionErrorCallback errorCallback, PositionOptions options);
     
     @JsMethod(name = "watchPosition")
-    public native long watchPosition(PositionCallback successCallback);
+    public native double watchPosition(PositionCallback successCallback);
     
     @JsMethod(name = "watchPosition")
-    public native long watchPosition(PositionCallback successCallback, PositionErrorCallback errorCallback);
+    public native double watchPosition(PositionCallback successCallback, PositionErrorCallback errorCallback);
     
     @JsMethod(name = "watchPosition")
-    public native long watchPosition(PositionCallback successCallback, PositionErrorCallback errorCallback, PositionOptions options);
+    public native double watchPosition(PositionCallback successCallback, PositionErrorCallback errorCallback, PositionOptions options);
     
 }

@@ -34,7 +34,7 @@ public class HTMLOListElement extends HTMLElement{
     public boolean reversed;
     
     @JsProperty(name="start")
-    public long start;
+    public double start;
     
     @JsProperty(name="type")
     public String type;

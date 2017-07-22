@@ -25,10 +25,10 @@ import jsinterop.annotations.JsType;
 public class MediaQueryListEventInit extends EventInit{
 
     @JsProperty(name="media")
-    public String media = "";
+    public String media;
 
     @JsProperty(name="matches")
-    public boolean matches = false;
+    public boolean matches;
 
 
 }

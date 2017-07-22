@@ -26,7 +26,7 @@ import jsinterop.annotations.JsType;
 public class NamedNodeMap{
     
     @JsProperty(name="length")
-    public native long getLength();
+    public native double getLength();
     
     @JsMethod(name = "getNamedItem")
     public native Attr getNamedItem(String name);

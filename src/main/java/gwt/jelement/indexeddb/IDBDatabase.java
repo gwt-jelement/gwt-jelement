@@ -55,7 +55,7 @@ public class IDBDatabase extends EventTarget{
     public native String getName();
     
     @JsProperty(name="version")
-    public native long getVersion();
+    public native double getVersion();
     
     @JsProperty(name="objectStoreNames")
     public native DOMStringList getObjectStoreNames();
@@ -79,12 +79,12 @@ public class IDBDatabase extends EventTarget{
     public native IDBTransaction transaction(String[] storeNames);
     
     @JsOverlay
-    public IDBTransaction transaction(String storeNames, IDBTransactionMode mode){
+    public final IDBTransaction transaction(String storeNames, IDBTransactionMode mode){
         return transaction(storeNames, mode.getInternalValue());
     }
     
     @JsOverlay
-    public IDBTransaction transaction(String[] storeNames, IDBTransactionMode mode){
+    public final IDBTransaction transaction(String[] storeNames, IDBTransactionMode mode){
         return transaction(storeNames, mode.getInternalValue());
     }
     

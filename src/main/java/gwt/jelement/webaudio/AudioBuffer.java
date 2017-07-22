@@ -32,7 +32,7 @@ public class AudioBuffer{
     }
     
     @JsProperty(name="length")
-    public native long getLength();
+    public native double getLength();
     
     @JsProperty(name="duration")
     public native double getDuration();
@@ -41,21 +41,21 @@ public class AudioBuffer{
     public native float getSampleRate();
     
     @JsProperty(name="numberOfChannels")
-    public native long getNumberOfChannels();
+    public native double getNumberOfChannels();
     
     @JsMethod(name = "copyFromChannel")
-    public native void copyFromChannel(Float32Array destination, long channelNumber);
+    public native void copyFromChannel(Float32Array destination, double channelNumber);
     
     @JsMethod(name = "copyFromChannel")
-    public native void copyFromChannel(Float32Array destination, long channelNumber, long startInChannel);
+    public native void copyFromChannel(Float32Array destination, double channelNumber, double startInChannel);
     
     @JsMethod(name = "copyToChannel")
-    public native void copyToChannel(Float32Array source, long channelNumber);
+    public native void copyToChannel(Float32Array source, double channelNumber);
     
     @JsMethod(name = "copyToChannel")
-    public native void copyToChannel(Float32Array source, long channelNumber, long startInChannel);
+    public native void copyToChannel(Float32Array source, double channelNumber, double startInChannel);
     
     @JsMethod(name = "getChannelData")
-    public native Float32Array getChannelData(long channelIndex);
+    public native Float32Array getChannelData(double channelIndex);
     
 }

@@ -33,7 +33,7 @@ public class VRDisplayCapabilities{
     public native boolean getCanPresent();
     
     @JsProperty(name="maxLayers")
-    public native long getMaxLayers();
+    public native double getMaxLayers();
     
     
 }

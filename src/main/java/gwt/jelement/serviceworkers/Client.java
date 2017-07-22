@@ -35,7 +35,7 @@ public class Client{
     public native String getId();
     
     @JsOverlay
-    public  ClientType getTypeAsClientType(){
+    public final ClientType getTypeAsClientType(){
         return ClientType.of(getType());
     }
     
@@ -43,7 +43,7 @@ public class Client{
     public native String getType();
     
     @JsOverlay
-    public  ContextFrameType getFrameTypeAsContextFrameType(){
+    public final ContextFrameType getFrameTypeAsContextFrameType(){
         return ContextFrameType.of(getFrameType());
     }
     

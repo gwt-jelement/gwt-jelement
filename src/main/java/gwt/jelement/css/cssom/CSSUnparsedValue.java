@@ -31,7 +31,7 @@ public class CSSUnparsedValue extends CSSStyleValue{
     }
     
     @JsProperty(name="length")
-    public native long getLength();
+    public native double getLength();
     
     
 }

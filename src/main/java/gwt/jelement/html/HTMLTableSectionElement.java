@@ -48,12 +48,12 @@ public class HTMLTableSectionElement extends HTMLElement{
     public native HTMLCollection getRows();
     
     @JsMethod(name = "deleteRow")
-    public native void deleteRow(long index);
+    public native void deleteRow(double index);
     
     @JsMethod(name = "insertRow")
     public native HTMLElement insertRow();
     
     @JsMethod(name = "insertRow")
-    public native HTMLElement insertRow(long index);
+    public native HTMLElement insertRow(double index);
     
 }

@@ -36,7 +36,7 @@ public class CharacterData extends Node{
     public String data;
     
     @JsProperty(name="length")
-    public native long getLength();
+    public native double getLength();
     
     @JsProperty(name="previousElementSibling")
     public native Element getPreviousElementSibling();
@@ -60,16 +60,16 @@ public class CharacterData extends Node{
     public native void before(String nodes);
     
     @JsMethod(name = "deleteData")
-    public native void deleteData(long offset, long count);
+    public native void deleteData(double offset, double count);
     
     @JsMethod(name = "insertData")
-    public native void insertData(long offset, String data);
+    public native void insertData(double offset, String data);
     
     @JsMethod(name = "remove")
     public native void remove();
     
     @JsMethod(name = "replaceData")
-    public native void replaceData(long offset, long count, String data);
+    public native void replaceData(double offset, double count, String data);
     
     @JsMethod(name = "replaceWith")
     public native void replaceWith(Node nodes);
@@ -78,6 +78,6 @@ public class CharacterData extends Node{
     public native void replaceWith(String nodes);
     
     @JsMethod(name = "substringData")
-    public native String substringData(long offset, long count);
+    public native String substringData(double offset, double count);
     
 }

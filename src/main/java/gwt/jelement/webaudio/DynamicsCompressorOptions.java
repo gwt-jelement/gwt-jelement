@@ -25,19 +25,19 @@ import jsinterop.annotations.JsType;
 public class DynamicsCompressorOptions extends AudioNodeOptions{
 
     @JsProperty(name="attack")
-    public float attack = 0.003f;
+    public float attack;
 
     @JsProperty(name="knee")
-    public float knee = 30;
+    public float knee;
 
     @JsProperty(name="ratio")
-    public float ratio = 12;
+    public float ratio;
 
     @JsProperty(name="release")
-    public float release = 0.25f;
+    public float release;
 
     @JsProperty(name="threshold")
-    public float threshold = -24;
+    public float threshold;
 
 
 }

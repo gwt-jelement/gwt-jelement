@@ -25,16 +25,16 @@ import jsinterop.annotations.JsType;
 public class MediaMetadataInit{
 
     @JsProperty(name="title")
-    public String title = "";
+    public String title;
 
     @JsProperty(name="artist")
-    public String artist = "";
+    public String artist;
 
     @JsProperty(name="album")
-    public String album = "";
+    public String album;
 
     @JsProperty(name="artwork")
-    public MediaImage[] artwork = new MediaImage[0];
+    public MediaImage[] artwork;
 
 
 }

@@ -22,9 +22,9 @@ import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, isNative = true)
 public class PositionError{
-    public static final int PERMISSION_DENIED = 1;
-    public static final int POSITION_UNAVAILABLE = 2;
-    public static final int TIMEOUT = 3;
+    public static int PERMISSION_DENIED;
+    public static int POSITION_UNAVAILABLE;
+    public static int TIMEOUT;
     
     
     @JsProperty(name="code")

@@ -34,6 +34,21 @@ public class ExtendableMessageEvent extends ExtendableEvent{
     @JsType(isNative = true, name = "?", namespace = JsPackage.GLOBAL)
     public interface ClientOrServiceWorkerOrMessagePortUnionType {
         @JsOverlay
+        static ClientOrServiceWorkerOrMessagePortUnionType of(Client value){
+            return Js.cast(value);
+        }
+    
+        @JsOverlay
+        static ClientOrServiceWorkerOrMessagePortUnionType of(ServiceWorker value){
+            return Js.cast(value);
+        }
+    
+        @JsOverlay
+        static ClientOrServiceWorkerOrMessagePortUnionType of(MessagePort value){
+            return Js.cast(value);
+        }
+    
+        @JsOverlay
         default Client asClient(){
             return Js.cast(this);
         }

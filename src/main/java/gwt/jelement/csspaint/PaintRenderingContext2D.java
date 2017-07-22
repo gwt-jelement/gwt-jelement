@@ -19,6 +19,7 @@ package gwt.jelement.csspaint;
 import gwt.jelement.canvas2d.CanvasFillRule;
 import gwt.jelement.canvas2d.CanvasGradient;
 import gwt.jelement.canvas2d.CanvasPattern;
+import gwt.jelement.canvas2d.CanvasRenderingContext2D;
 import gwt.jelement.canvas2d.ImageSmoothingQuality;
 import gwt.jelement.canvas2d.Path2D;
 import gwt.jelement.css.cssom.CSSImageValue;
@@ -40,40 +41,6 @@ import jsinterop.base.Js;
 @JsType(namespace = JsPackage.GLOBAL, isNative = true)
 public class PaintRenderingContext2D{
     
-    @JsType(isNative = true, name = "?", namespace = JsPackage.GLOBAL)
-    public interface StringOrCanvasGradientOrCanvasPatternUnionType {
-        @JsOverlay
-        default String asString(){
-            return Js.cast(this);
-        }
-    
-        @JsOverlay
-        default CanvasGradient asCanvasGradient(){
-            return Js.cast(this);
-        }
-    
-        @JsOverlay
-        default CanvasPattern asCanvasPattern(){
-            return Js.cast(this);
-        }
-    
-        @JsOverlay
-        default boolean isString(){
-            return (Object) this instanceof String;
-        }
-    
-        @JsOverlay
-        default boolean isCanvasGradient(){
-            return (Object) this instanceof CanvasGradient;
-        }
-    
-        @JsOverlay
-        default boolean isCanvasPattern(){
-            return (Object) this instanceof CanvasPattern;
-        }
-    
-    }
-    
     @JsProperty(name="currentTransform")
     public SVGMatrix currentTransform;
     
@@ -91,6 +58,12 @@ public class PaintRenderingContext2D{
     
     @JsProperty(name="imageSmoothingQuality")
     public ImageSmoothingQuality imageSmoothingQuality;
+    
+    @JsProperty(name="strokeStyle")
+    public CanvasRenderingContext2D.StringOrCanvasGradientOrCanvasPatternUnionType strokeStyle;
+    
+    @JsProperty(name="fillStyle")
+    public CanvasRenderingContext2D.StringOrCanvasGradientOrCanvasPatternUnionType fillStyle;
     
     @JsProperty(name="shadowOffsetX")
     public double shadowOffsetX;
@@ -119,30 +92,6 @@ public class PaintRenderingContext2D{
     @JsProperty(name="lineDashOffset")
     public double lineDashOffset;
     
-    @JsProperty(name="strokeStyle")
-    public native PaintRenderingContext2D.StringOrCanvasGradientOrCanvasPatternUnionType getStrokeStyle();
-    
-    @JsProperty(name="fillStyle")
-    public native PaintRenderingContext2D.StringOrCanvasGradientOrCanvasPatternUnionType getFillStyle();
-    
-    @JsProperty(name="strokeStyle")
-    public native void setStrokeStyle(String strokeStyle);
-    
-    @JsProperty(name="strokeStyle")
-    public native void setStrokeStyle(CanvasGradient strokeStyle);
-    
-    @JsProperty(name="strokeStyle")
-    public native void setStrokeStyle(CanvasPattern strokeStyle);
-    
-    @JsProperty(name="fillStyle")
-    public native void setFillStyle(String fillStyle);
-    
-    @JsProperty(name="fillStyle")
-    public native void setFillStyle(CanvasGradient fillStyle);
-    
-    @JsProperty(name="fillStyle")
-    public native void setFillStyle(CanvasPattern fillStyle);
-    
     @JsMethod(name = "arc")
     public native void arc(float x, float y, float radius, float startAngle, float endAngle);
     
@@ -165,7 +114,7 @@ public class PaintRenderingContext2D{
     public native void clip();
     
     @JsOverlay
-    public void clip(CanvasFillRule winding){
+    public final void clip(CanvasFillRule winding){
         clip(winding.getInternalValue());
     }
     
@@ -176,7 +125,7 @@ public class PaintRenderingContext2D{
     public native void clip(String winding);
     
     @JsOverlay
-    public void clip(Path2D path, CanvasFillRule winding){
+    public final void clip(Path2D path, CanvasFillRule winding){
         clip(path, winding.getInternalValue());
     }
     
@@ -286,7 +235,7 @@ public class PaintRenderingContext2D{
     public native void fill();
     
     @JsOverlay
-    public void fill(CanvasFillRule winding){
+    public final void fill(CanvasFillRule winding){
         fill(winding.getInternalValue());
     }
     
@@ -297,7 +246,7 @@ public class PaintRenderingContext2D{
     public native void fill(String winding);
     
     @JsOverlay
-    public void fill(Path2D path, CanvasFillRule winding){
+    public final void fill(Path2D path, CanvasFillRule winding){
         fill(path, winding.getInternalValue());
     }
     
@@ -314,7 +263,7 @@ public class PaintRenderingContext2D{
     public native boolean isPointInPath(double x, double y);
     
     @JsOverlay
-    public boolean isPointInPath(double x, double y, CanvasFillRule winding){
+    public final boolean isPointInPath(double x, double y, CanvasFillRule winding){
         return isPointInPath(x, y, winding.getInternalValue());
     }
     
@@ -325,7 +274,7 @@ public class PaintRenderingContext2D{
     public native boolean isPointInPath(double x, double y, String winding);
     
     @JsOverlay
-    public boolean isPointInPath(Path2D path, double x, double y, CanvasFillRule winding){
+    public final boolean isPointInPath(Path2D path, double x, double y, CanvasFillRule winding){
         return isPointInPath(path, x, y, winding.getInternalValue());
     }
     

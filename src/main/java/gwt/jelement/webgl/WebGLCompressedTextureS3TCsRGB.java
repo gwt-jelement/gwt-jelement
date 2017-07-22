@@ -21,10 +21,10 @@ import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, isNative = true)
 public class WebGLCompressedTextureS3TCsRGB{
-    public static final int COMPRESSED_SRGB_S3TC_DXT1_EXT = 0x8C4C;
-    public static final int COMPRESSED_SRGB_ALPHA_S3TC_DXT1_EXT = 0x8C4D;
-    public static final int COMPRESSED_SRGB_ALPHA_S3TC_DXT3_EXT = 0x8C4E;
-    public static final int COMPRESSED_SRGB_ALPHA_S3TC_DXT5_EXT = 0x8C4F;
+    public static int COMPRESSED_SRGB_S3TC_DXT1_EXT;
+    public static int COMPRESSED_SRGB_ALPHA_S3TC_DXT1_EXT;
+    public static int COMPRESSED_SRGB_ALPHA_S3TC_DXT3_EXT;
+    public static int COMPRESSED_SRGB_ALPHA_S3TC_DXT5_EXT;
     
     
     

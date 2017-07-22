@@ -31,12 +31,12 @@ import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, isNative = true)
 public class SVGMarkerElement extends SVGElement{
-    public static final int SVG_MARKERUNITS_UNKNOWN = 0;
-    public static final int SVG_MARKERUNITS_USERSPACEONUSE = 1;
-    public static final int SVG_MARKERUNITS_STROKEWIDTH = 2;
-    public static final int SVG_MARKER_ORIENT_UNKNOWN = 0;
-    public static final int SVG_MARKER_ORIENT_AUTO = 1;
-    public static final int SVG_MARKER_ORIENT_ANGLE = 2;
+    public static int SVG_MARKERUNITS_UNKNOWN;
+    public static int SVG_MARKERUNITS_USERSPACEONUSE;
+    public static int SVG_MARKERUNITS_STROKEWIDTH;
+    public static int SVG_MARKER_ORIENT_UNKNOWN;
+    public static int SVG_MARKER_ORIENT_AUTO;
+    public static int SVG_MARKER_ORIENT_ANGLE;
     
     
     @JsConstructor

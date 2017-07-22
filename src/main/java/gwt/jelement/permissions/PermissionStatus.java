@@ -37,7 +37,7 @@ public class PermissionStatus extends EventTarget{
     public EventHandlerNonNull onchange;
     
     @JsOverlay
-    public  PermissionState getStateAsPermissionState(){
+    public final PermissionState getStateAsPermissionState(){
         return PermissionState.of(getState());
     }
     

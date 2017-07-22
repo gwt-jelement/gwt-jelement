@@ -60,7 +60,7 @@ public class PresentationConnection extends EventTarget{
     public native String getUrl();
     
     @JsOverlay
-    public  PresentationConnectionState getStateAsPresentationConnectionState(){
+    public final PresentationConnectionState getStateAsPresentationConnectionState(){
         return PresentationConnectionState.of(getState());
     }
     

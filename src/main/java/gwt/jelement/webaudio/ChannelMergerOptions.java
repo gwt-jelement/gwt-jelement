@@ -25,7 +25,7 @@ import jsinterop.annotations.JsType;
 public class ChannelMergerOptions extends AudioNodeOptions{
 
     @JsProperty(name="numberOfInputs")
-    public long numberOfInputs = 6;
+    public double numberOfInputs;
 
 
 }

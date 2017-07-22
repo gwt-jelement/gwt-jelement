@@ -39,16 +39,16 @@ public class RTCConfiguration{
     public RTCIceTransportPolicy iceTransports;
 
     @JsProperty(name="bundlePolicy")
-    public RTCBundlePolicy bundlePolicy = RTCBundlePolicy.of("balanced");
+    public RTCBundlePolicy bundlePolicy;
 
     @JsProperty(name="rtcpMuxPolicy")
-    public RTCRtcpMuxPolicy rtcpMuxPolicy = RTCRtcpMuxPolicy.of("require");
+    public RTCRtcpMuxPolicy rtcpMuxPolicy;
 
     @JsProperty(name="certificates")
     public RTCCertificate[] certificates;
 
     @JsProperty(name="iceCandidatePoolSize")
-    public byte iceCandidatePoolSize = 0;
+    public byte iceCandidatePoolSize;
 
 
 }

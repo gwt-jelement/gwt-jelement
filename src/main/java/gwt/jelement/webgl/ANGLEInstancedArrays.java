@@ -22,16 +22,16 @@ import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, isNative = true)
 public class ANGLEInstancedArrays{
-    public static final int VERTEX_ATTRIB_ARRAY_DIVISOR_ANGLE = 0x88FE;
+    public static int VERTEX_ATTRIB_ARRAY_DIVISOR_ANGLE;
     
     
     @JsMethod(name = "drawArraysInstancedANGLE")
-    public native void drawArraysInstancedANGLE(long mode, long first, long count, long primcount);
+    public native void drawArraysInstancedANGLE(double mode, double first, double count, double primcount);
     
     @JsMethod(name = "drawElementsInstancedANGLE")
-    public native void drawElementsInstancedANGLE(long mode, long count, long type, long offset, long primcount);
+    public native void drawElementsInstancedANGLE(double mode, double count, double type, double offset, double primcount);
     
     @JsMethod(name = "vertexAttribDivisorANGLE")
-    public native void vertexAttribDivisorANGLE(long index, long divisor);
+    public native void vertexAttribDivisorANGLE(double index, double divisor);
     
 }

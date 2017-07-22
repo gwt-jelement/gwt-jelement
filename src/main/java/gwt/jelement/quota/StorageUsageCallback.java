@@ -24,6 +24,6 @@ import jsinterop.annotations.JsType;
 public class StorageUsageCallback{
     
     @JsMethod(name = "handleEvent")
-    public native void handleEvent(long currentUsageInBytes, long currentQuotaInBytes);
+    public native void handleEvent(double currentUsageInBytes, double currentQuotaInBytes);
     
 }

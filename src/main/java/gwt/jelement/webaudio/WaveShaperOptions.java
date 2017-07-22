@@ -30,7 +30,7 @@ public class WaveShaperOptions extends AudioNodeOptions{
     public float[] curve;
 
     @JsProperty(name="oversample")
-    public OverSampleType oversample = OverSampleType.of("none");
+    public OverSampleType oversample;
 
 
 }

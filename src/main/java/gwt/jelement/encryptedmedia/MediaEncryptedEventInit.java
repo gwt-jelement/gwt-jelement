@@ -26,10 +26,10 @@ import jsinterop.annotations.JsType;
 public class MediaEncryptedEventInit extends EventInit{
 
     @JsProperty(name="initDataType")
-    public String initDataType = "";
+    public String initDataType;
 
     @JsProperty(name="initData")
-    public ArrayBuffer initData = null;
+    public ArrayBuffer initData;
 
 
 }

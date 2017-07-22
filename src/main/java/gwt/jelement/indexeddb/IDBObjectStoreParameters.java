@@ -50,10 +50,10 @@ public class IDBObjectStoreParameters{
     }
     
     @JsProperty(name="keyPath")
-    public IDBObjectStoreParameters.StringOrStringArrayUnionType keyPath = null;
+    public IDBObjectStoreParameters.StringOrStringArrayUnionType keyPath;
 
     @JsProperty(name="autoIncrement")
-    public boolean autoIncrement = false;
+    public boolean autoIncrement;
 
 
 }

@@ -41,7 +41,7 @@ public class MIDIPort extends EventTarget{
     public EventHandlerNonNull onstatechange;
     
     @JsOverlay
-    public  MIDIPortConnectionState getConnectionAsMIDIPortConnectionState(){
+    public final MIDIPortConnectionState getConnectionAsMIDIPortConnectionState(){
         return MIDIPortConnectionState.of(getConnection());
     }
     
@@ -58,7 +58,7 @@ public class MIDIPort extends EventTarget{
     public native String getName();
     
     @JsOverlay
-    public  MIDIPortDeviceState getStateAsMIDIPortDeviceState(){
+    public final MIDIPortDeviceState getStateAsMIDIPortDeviceState(){
         return MIDIPortDeviceState.of(getState());
     }
     
@@ -66,7 +66,7 @@ public class MIDIPort extends EventTarget{
     public native String getState();
     
     @JsOverlay
-    public  MIDIPortType getTypeAsMIDIPortType(){
+    public final MIDIPortType getTypeAsMIDIPortType(){
         return MIDIPortType.of(getType());
     }
     

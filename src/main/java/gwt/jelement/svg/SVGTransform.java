@@ -24,13 +24,13 @@ import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, isNative = true)
 public class SVGTransform{
-    public static final int SVG_TRANSFORM_UNKNOWN = 0;
-    public static final int SVG_TRANSFORM_MATRIX = 1;
-    public static final int SVG_TRANSFORM_TRANSLATE = 2;
-    public static final int SVG_TRANSFORM_SCALE = 3;
-    public static final int SVG_TRANSFORM_ROTATE = 4;
-    public static final int SVG_TRANSFORM_SKEWX = 5;
-    public static final int SVG_TRANSFORM_SKEWY = 6;
+    public static int SVG_TRANSFORM_UNKNOWN;
+    public static int SVG_TRANSFORM_MATRIX;
+    public static int SVG_TRANSFORM_TRANSLATE;
+    public static int SVG_TRANSFORM_SCALE;
+    public static int SVG_TRANSFORM_ROTATE;
+    public static int SVG_TRANSFORM_SKEWX;
+    public static int SVG_TRANSFORM_SKEWY;
     
     
     @JsProperty(name="type")

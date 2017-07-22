@@ -43,10 +43,10 @@ public class VideoTrackList extends EventTarget{
     public EventHandlerNonNull onremovetrack;
     
     @JsProperty(name="length")
-    public native long getLength();
+    public native double getLength();
     
     @JsProperty(name="selectedIndex")
-    public native long getSelectedIndex();
+    public native double getSelectedIndex();
     
     @JsMethod(name = "getTrackById")
     public native VideoTrack getTrackById(String id);

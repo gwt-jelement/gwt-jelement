@@ -31,7 +31,7 @@ public class HTMLPreElement extends HTMLElement{
     }
     
     @JsProperty(name="width")
-    public long width;
+    public double width;
     
     
 }

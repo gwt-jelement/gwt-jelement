@@ -33,7 +33,7 @@ public class TreeWalker{
     public native Node getRoot();
     
     @JsProperty(name="whatToShow")
-    public native long getWhatToShow();
+    public native double getWhatToShow();
     
     @JsProperty(name="filter")
     public native NodeFilter getFilter();

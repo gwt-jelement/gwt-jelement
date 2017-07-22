@@ -26,12 +26,12 @@ import jsinterop.annotations.JsType;
 public class HTMLAllCollection{
     
     @JsProperty(name="length")
-    public native long getLength();
+    public native double getLength();
     
     @JsMethod(name = "item")
     public native Element item();
     
     @JsMethod(name = "item")
-    public native Element item(long index);
+    public native Element item(double index);
     
 }

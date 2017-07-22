@@ -24,13 +24,13 @@ import jsinterop.annotations.JsType;
 public class EventInit{
 
     @JsProperty(name="bubbles")
-    public boolean bubbles = false;
+    public boolean bubbles;
 
     @JsProperty(name="cancelable")
-    public boolean cancelable = false;
+    public boolean cancelable;
 
     @JsProperty(name="composed")
-    public boolean composed = false;
+    public boolean composed;
 
 
 }

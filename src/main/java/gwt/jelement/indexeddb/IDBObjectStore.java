@@ -90,7 +90,7 @@ public class IDBObjectStore{
     public native IDBRequest getAll(Any query);
     
     @JsMethod(name = "getAll")
-    public native IDBRequest getAll(Any query, long count);
+    public native IDBRequest getAll(Any query, double count);
     
     @JsMethod(name = "getAllKeys")
     public native IDBRequest getAllKeys();
@@ -99,7 +99,7 @@ public class IDBObjectStore{
     public native IDBRequest getAllKeys(Any query);
     
     @JsMethod(name = "getAllKeys")
-    public native IDBRequest getAllKeys(Any query, long count);
+    public native IDBRequest getAllKeys(Any query, double count);
     
     @JsMethod(name = "getKey")
     public native IDBRequest getKey(Any key);
@@ -114,7 +114,7 @@ public class IDBObjectStore{
     public native IDBRequest openCursor(Any range);
     
     @JsOverlay
-    public IDBRequest openCursor(Any range, IDBCursorDirection direction){
+    public final IDBRequest openCursor(Any range, IDBCursorDirection direction){
         return openCursor(range, direction.getInternalValue());
     }
     
@@ -128,7 +128,7 @@ public class IDBObjectStore{
     public native IDBRequest openKeyCursor(Any range);
     
     @JsOverlay
-    public IDBRequest openKeyCursor(Any range, IDBCursorDirection direction){
+    public final IDBRequest openKeyCursor(Any range, IDBCursorDirection direction){
         return openKeyCursor(range, direction.getInternalValue());
     }
     

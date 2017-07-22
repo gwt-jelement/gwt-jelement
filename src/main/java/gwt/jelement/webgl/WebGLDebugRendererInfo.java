@@ -21,8 +21,8 @@ import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, isNative = true)
 public class WebGLDebugRendererInfo{
-    public static final int UNMASKED_VENDOR_WEBGL = 0x9245;
-    public static final int UNMASKED_RENDERER_WEBGL = 0x9246;
+    public static int UNMASKED_VENDOR_WEBGL;
+    public static int UNMASKED_RENDERER_WEBGL;
     
     
     

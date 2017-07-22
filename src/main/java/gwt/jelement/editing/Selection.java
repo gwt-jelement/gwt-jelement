@@ -30,19 +30,19 @@ public class Selection{
     public native Node getAnchorNode();
     
     @JsProperty(name="anchorOffset")
-    public native long getAnchorOffset();
+    public native double getAnchorOffset();
     
     @JsProperty(name="focusNode")
     public native Node getFocusNode();
     
     @JsProperty(name="focusOffset")
-    public native long getFocusOffset();
+    public native double getFocusOffset();
     
     @JsProperty(name="isCollapsed")
     public native boolean getIsCollapsed();
     
     @JsProperty(name="rangeCount")
-    public native long getRangeCount();
+    public native double getRangeCount();
     
     @JsProperty(name="type")
     public native String getType();
@@ -51,13 +51,13 @@ public class Selection{
     public native Node getBaseNode();
     
     @JsProperty(name="baseOffset")
-    public native long getBaseOffset();
+    public native double getBaseOffset();
     
     @JsProperty(name="extentNode")
     public native Node getExtentNode();
     
     @JsProperty(name="extentOffset")
-    public native long getExtentOffset();
+    public native double getExtentOffset();
     
     @JsMethod(name = "addRange")
     public native void addRange(Range range);
@@ -66,7 +66,7 @@ public class Selection{
     public native void collapse(Node node);
     
     @JsMethod(name = "collapse")
-    public native void collapse(Node node, long offset);
+    public native void collapse(Node node, double offset);
     
     @JsMethod(name = "collapseToEnd")
     public native void collapseToEnd();
@@ -90,10 +90,10 @@ public class Selection{
     public native void extend(Node node);
     
     @JsMethod(name = "extend")
-    public native void extend(Node node, long offset);
+    public native void extend(Node node, double offset);
     
     @JsMethod(name = "getRangeAt")
-    public native Range getRangeAt(long index);
+    public native Range getRangeAt(double index);
     
     @JsMethod(name = "modify")
     public native void modify();
@@ -117,13 +117,13 @@ public class Selection{
     public native void selectAllChildren(Node node);
     
     @JsMethod(name = "setBaseAndExtent")
-    public native void setBaseAndExtent(Node baseNode, long baseOffset, Node extentNode, long extentOffset);
+    public native void setBaseAndExtent(Node baseNode, double baseOffset, Node extentNode, double extentOffset);
     
     @JsMethod(name = "setPosition")
     public native void setPosition(Node node);
     
     @JsMethod(name = "setPosition")
-    public native void setPosition(Node node, long offset);
+    public native void setPosition(Node node, double offset);
     
     @JsMethod(name = "toString")
     public native String toString();

@@ -25,34 +25,34 @@ import jsinterop.annotations.JsType;
 public class EventModifierInit extends UIEventInit{
 
     @JsProperty(name="ctrlKey")
-    public boolean ctrlKey = false;
+    public boolean ctrlKey;
 
     @JsProperty(name="shiftKey")
-    public boolean shiftKey = false;
+    public boolean shiftKey;
 
     @JsProperty(name="altKey")
-    public boolean altKey = false;
+    public boolean altKey;
 
     @JsProperty(name="metaKey")
-    public boolean metaKey = false;
+    public boolean metaKey;
 
     @JsProperty(name="modifierAltGraph")
-    public boolean modifierAltGraph = false;
+    public boolean modifierAltGraph;
 
     @JsProperty(name="modifierCapsLock")
-    public boolean modifierCapsLock = false;
+    public boolean modifierCapsLock;
 
     @JsProperty(name="modifierFn")
-    public boolean modifierFn = false;
+    public boolean modifierFn;
 
     @JsProperty(name="modifierNumLock")
-    public boolean modifierNumLock = false;
+    public boolean modifierNumLock;
 
     @JsProperty(name="modifierScrollLock")
-    public boolean modifierScrollLock = false;
+    public boolean modifierScrollLock;
 
     @JsProperty(name="modifierSymbol")
-    public boolean modifierSymbol = false;
+    public boolean modifierSymbol;
 
 
 }

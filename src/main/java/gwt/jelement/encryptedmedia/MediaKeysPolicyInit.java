@@ -24,7 +24,7 @@ import jsinterop.annotations.JsType;
 public class MediaKeysPolicyInit{
 
     @JsProperty(name="minHdcpVersion")
-    public String minHdcpVersion = "";
+    public String minHdcpVersion;
 
 
 }

@@ -35,6 +35,6 @@ public class IDBFactory{
     public native IDBOpenDBRequest open(String name);
     
     @JsMethod(name = "open")
-    public native IDBOpenDBRequest open(String name, long version);
+    public native IDBOpenDBRequest open(String name, double version);
     
 }

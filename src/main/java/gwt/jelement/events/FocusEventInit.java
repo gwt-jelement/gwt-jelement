@@ -26,7 +26,7 @@ import jsinterop.annotations.JsType;
 public class FocusEventInit extends UIEventInit{
 
     @JsProperty(name="relatedTarget")
-    public EventTarget relatedTarget = null;
+    public EventTarget relatedTarget;
 
 
 }

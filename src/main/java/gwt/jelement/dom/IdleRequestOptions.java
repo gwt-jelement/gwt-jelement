@@ -24,7 +24,7 @@ import jsinterop.annotations.JsType;
 public class IdleRequestOptions{
 
     @JsProperty(name="timeout")
-    public long timeout = 0;
+    public double timeout;
 
 
 }

@@ -43,7 +43,7 @@ public class TextTrackList extends EventTarget{
     public EventHandlerNonNull onremovetrack;
     
     @JsProperty(name="length")
-    public native long getLength();
+    public native double getLength();
     
     @JsMethod(name = "getTrackById")
     public native TextTrack getTrackById(String id);

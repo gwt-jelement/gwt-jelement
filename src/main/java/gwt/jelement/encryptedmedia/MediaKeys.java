@@ -35,7 +35,7 @@ public class MediaKeys{
     public native MediaKeySession createSession();
     
     @JsOverlay
-    public MediaKeySession createSession(MediaKeySessionType sessionType){
+    public final MediaKeySession createSession(MediaKeySessionType sessionType){
         return createSession(sessionType.getInternalValue());
     }
     

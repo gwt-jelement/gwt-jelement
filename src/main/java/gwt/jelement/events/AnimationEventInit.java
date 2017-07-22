@@ -25,10 +25,10 @@ import jsinterop.annotations.JsType;
 public class AnimationEventInit extends EventInit{
 
     @JsProperty(name="animationName")
-    public String animationName = "";
+    public String animationName;
 
     @JsProperty(name="elapsedTime")
-    public double elapsedTime = 0.0;
+    public double elapsedTime;
 
 
 }

@@ -28,13 +28,13 @@ import jsinterop.annotations.JsType;
 public class OscillatorOptions extends AudioNodeOptions{
 
     @JsProperty(name="type")
-    public OscillatorType type = OscillatorType.of("sine");
+    public OscillatorType type;
 
     @JsProperty(name="detune")
-    public float detune = 0;
+    public float detune;
 
     @JsProperty(name="frequency")
-    public float frequency = 440;
+    public float frequency;
 
     @JsProperty(name="periodicWave")
     public PeriodicWave periodicWave;

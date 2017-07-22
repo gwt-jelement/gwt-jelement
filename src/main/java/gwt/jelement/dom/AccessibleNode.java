@@ -41,13 +41,13 @@ public class AccessibleNode{
     public String checked;
     
     @JsProperty(name="colCount")
-    public long colCount;
+    public double colCount;
     
     @JsProperty(name="colIndex")
-    public long colIndex;
+    public double colIndex;
     
     @JsProperty(name="colSpan")
-    public long colSpan;
+    public double colSpan;
     
     @JsProperty(name="controls")
     public AccessibleNodeList controls;
@@ -89,7 +89,7 @@ public class AccessibleNode{
     public AccessibleNodeList labeledBy;
     
     @JsProperty(name="level")
-    public long level;
+    public double level;
     
     @JsProperty(name="live")
     public String live;
@@ -113,7 +113,7 @@ public class AccessibleNode{
     public String placeholder;
     
     @JsProperty(name="posInSet")
-    public long posInSet;
+    public double posInSet;
     
     @JsProperty(name="pressed")
     public String pressed;
@@ -134,19 +134,19 @@ public class AccessibleNode{
     public String roleDescription;
     
     @JsProperty(name="rowCount")
-    public long rowCount;
+    public double rowCount;
     
     @JsProperty(name="rowIndex")
-    public long rowIndex;
+    public double rowIndex;
     
     @JsProperty(name="rowSpan")
-    public long rowSpan;
+    public double rowSpan;
     
     @JsProperty(name="selected")
     public boolean selected;
     
     @JsProperty(name="setSize")
-    public long setSize;
+    public double setSize;
     
     @JsProperty(name="sort")
     public String sort;

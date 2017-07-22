@@ -32,10 +32,10 @@ public class ErrorEventInit extends EventInit{
     public String filename;
 
     @JsProperty(name="lineno")
-    public long lineno;
+    public double lineno;
 
     @JsProperty(name="colno")
-    public long colno;
+    public double colno;
 
     @JsProperty(name="error")
     public Any error;

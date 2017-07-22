@@ -30,7 +30,7 @@ public class History{
     public ScrollRestoration scrollRestoration;
     
     @JsProperty(name="length")
-    public native long getLength();
+    public native double getLength();
     
     @JsProperty(name="state")
     public native Object getState();
@@ -45,7 +45,7 @@ public class History{
     public native void go();
     
     @JsMethod(name = "go")
-    public native void go(long delta);
+    public native void go(double delta);
     
     @JsMethod(name = "pushState")
     public native void pushState(Object data, String title);

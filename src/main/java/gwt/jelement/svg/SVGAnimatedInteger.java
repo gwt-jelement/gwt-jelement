@@ -24,10 +24,10 @@ import jsinterop.annotations.JsType;
 public class SVGAnimatedInteger{
     
     @JsProperty(name="baseVal")
-    public long baseVal;
+    public double baseVal;
     
     @JsProperty(name="animVal")
-    public native long getAnimVal();
+    public native double getAnimVal();
     
     
 }

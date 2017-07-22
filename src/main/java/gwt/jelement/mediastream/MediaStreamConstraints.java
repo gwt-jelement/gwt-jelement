@@ -51,10 +51,10 @@ public class MediaStreamConstraints{
     }
     
     @JsProperty(name="video")
-    public MediaStreamConstraints.BooleanOrMediaTrackConstraintsUnionType video = Js.cast(false);
+    public MediaStreamConstraints.BooleanOrMediaTrackConstraintsUnionType video;
 
     @JsProperty(name="audio")
-    public MediaStreamConstraints.BooleanOrMediaTrackConstraintsUnionType audio = Js.cast(false);
+    public MediaStreamConstraints.BooleanOrMediaTrackConstraintsUnionType audio;
 
 
 }

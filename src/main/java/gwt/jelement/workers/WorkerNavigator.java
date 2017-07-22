@@ -40,7 +40,7 @@ public class WorkerNavigator{
     public native StorageManager getStorage();
     
     @JsProperty(name="hardwareConcurrency")
-    public native long getHardwareConcurrency();
+    public native double getHardwareConcurrency();
     
     @JsProperty(name="appCodeName")
     public native String getAppCodeName();

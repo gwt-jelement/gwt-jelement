@@ -24,7 +24,7 @@ import jsinterop.annotations.JsType;
 public class GetNotificationOptions{
 
     @JsProperty(name="tag")
-    public String tag = "";
+    public String tag;
 
 
 }

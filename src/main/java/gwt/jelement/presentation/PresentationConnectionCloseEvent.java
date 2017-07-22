@@ -33,7 +33,7 @@ public class PresentationConnectionCloseEvent extends Event{
     }
     
     @JsOverlay
-    public  PresentationConnectionCloseReason getReasonAsPresentationConnectionCloseReason(){
+    public final PresentationConnectionCloseReason getReasonAsPresentationConnectionCloseReason(){
         return PresentationConnectionCloseReason.of(getReason());
     }
     

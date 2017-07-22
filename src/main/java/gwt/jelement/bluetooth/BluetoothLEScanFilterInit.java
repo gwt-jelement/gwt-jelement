@@ -26,14 +26,14 @@ import jsinterop.base.Js;
 public class BluetoothLEScanFilterInit{
 
     @JsType(isNative = true, name = "?", namespace = JsPackage.GLOBAL)
-    public interface BluetoothServiceUUID {
+    public interface BluetoothDescriptorUUID {
         @JsOverlay
         default String asString(){
             return Js.cast(this);
         }
     
         @JsOverlay
-        default long asLong(){
+        default double asDouble(){
             return Js.cast(this);
         }
     
@@ -43,14 +43,14 @@ public class BluetoothLEScanFilterInit{
         }
     
         @JsOverlay
-        default boolean isLong(){
-            return (Object) this instanceof Long;
+        default boolean isDouble(){
+            return (Object) this instanceof Double;
         }
     
     }
     
     @JsProperty(name="services")
-    public BluetoothLEScanFilterInit.BluetoothServiceUUID[] services;
+    public BluetoothLEScanFilterInit.BluetoothDescriptorUUID[] services;
 
     @JsProperty(name="name")
     public String name;

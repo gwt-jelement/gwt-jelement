@@ -25,7 +25,7 @@ import jsinterop.annotations.JsType;
 public class FilePropertyBag extends BlobPropertyBag{
 
     @JsProperty(name="lastModified")
-    public long lastModified;
+    public double lastModified;
 
 
 }

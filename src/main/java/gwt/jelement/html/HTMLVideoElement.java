@@ -33,19 +33,19 @@ public class HTMLVideoElement extends HTMLMediaElement{
     }
     
     @JsProperty(name="width")
-    public long width;
+    public double width;
     
     @JsProperty(name="height")
-    public long height;
+    public double height;
     
     @JsProperty(name="poster")
     public String poster;
     
     @JsProperty(name="videoWidth")
-    public native long getVideoWidth();
+    public native double getVideoWidth();
     
     @JsProperty(name="videoHeight")
-    public native long getVideoHeight();
+    public native double getVideoHeight();
     
     @JsProperty(name="webkitSupportsFullscreen")
     public native boolean getWebkitSupportsFullscreen();
@@ -54,10 +54,10 @@ public class HTMLVideoElement extends HTMLMediaElement{
     public native boolean getWebkitDisplayingFullscreen();
     
     @JsProperty(name="webkitDecodedFrameCount")
-    public native long getWebkitDecodedFrameCount();
+    public native double getWebkitDecodedFrameCount();
     
     @JsProperty(name="webkitDroppedFrameCount")
-    public native long getWebkitDroppedFrameCount();
+    public native double getWebkitDroppedFrameCount();
     
     @JsMethod(name = "getVideoPlaybackQuality")
     public native VideoPlaybackQuality getVideoPlaybackQuality();

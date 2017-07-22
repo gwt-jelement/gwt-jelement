@@ -50,7 +50,7 @@ public class AudioContextOptions{
     }
     
     @JsProperty(name="latencyHint")
-    public AudioContextOptions.AudioContextLatencyCategoryOrDoubleUnionType latencyHint = Js.cast("interactive");
+    public AudioContextOptions.AudioContextLatencyCategoryOrDoubleUnionType latencyHint;
 
 
 }

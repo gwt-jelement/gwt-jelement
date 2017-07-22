@@ -24,10 +24,10 @@ import jsinterop.annotations.JsType;
 public class IDBIndexParameters{
 
     @JsProperty(name="unique")
-    public boolean unique = false;
+    public boolean unique;
 
     @JsProperty(name="multiEntry")
-    public boolean multiEntry = false;
+    public boolean multiEntry;
 
 
 }

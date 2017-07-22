@@ -29,7 +29,7 @@ public class AppBannerPromptResult{
     public native String getPlatform();
     
     @JsOverlay
-    public  AppBannerPromptOutcome getOutcomeAsAppBannerPromptOutcome(){
+    public final AppBannerPromptOutcome getOutcomeAsAppBannerPromptOutcome(){
         return AppBannerPromptOutcome.of(getOutcome());
     }
     

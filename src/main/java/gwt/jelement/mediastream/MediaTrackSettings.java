@@ -25,10 +25,10 @@ import jsinterop.annotations.JsType;
 public class MediaTrackSettings{
 
     @JsProperty(name="width")
-    public long width;
+    public double width;
 
     @JsProperty(name="height")
-    public long height;
+    public double height;
 
     @JsProperty(name="aspectRatio")
     public double aspectRatio;

@@ -21,7 +21,7 @@ import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, isNative = true)
 public class WebGLDepthTexture{
-    public static final int UNSIGNED_INT_24_8_WEBGL = 0x84FA;
+    public static int UNSIGNED_INT_24_8_WEBGL;
     
     
     

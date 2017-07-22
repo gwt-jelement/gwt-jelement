@@ -26,7 +26,7 @@ import jsinterop.annotations.JsType;
 public class ClipboardEventInit extends EventInit{
 
     @JsProperty(name="clipboardData")
-    public DataTransfer clipboardData = null;
+    public DataTransfer clipboardData;
 
 
 }

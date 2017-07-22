@@ -24,97 +24,97 @@ import jsinterop.annotations.JsType;
 public class MediaTrackSupportedConstraints{
 
     @JsProperty(name="width")
-    public boolean width = true;
+    public boolean width;
 
     @JsProperty(name="height")
-    public boolean height = true;
+    public boolean height;
 
     @JsProperty(name="aspectRatio")
-    public boolean aspectRatio = true;
+    public boolean aspectRatio;
 
     @JsProperty(name="frameRate")
-    public boolean frameRate = true;
+    public boolean frameRate;
 
     @JsProperty(name="facingMode")
-    public boolean facingMode = true;
+    public boolean facingMode;
 
     @JsProperty(name="volume")
-    public boolean volume = true;
+    public boolean volume;
 
     @JsProperty(name="sampleRate")
-    public boolean sampleRate = true;
+    public boolean sampleRate;
 
     @JsProperty(name="sampleSize")
-    public boolean sampleSize = true;
+    public boolean sampleSize;
 
     @JsProperty(name="echoCancellation")
-    public boolean echoCancellation = true;
+    public boolean echoCancellation;
 
     @JsProperty(name="latency")
-    public boolean latency = true;
+    public boolean latency;
 
     @JsProperty(name="channelCount")
-    public boolean channelCount = true;
+    public boolean channelCount;
 
     @JsProperty(name="deviceId")
-    public boolean deviceId = true;
+    public boolean deviceId;
 
     @JsProperty(name="groupId")
-    public boolean groupId = true;
+    public boolean groupId;
 
     @JsProperty(name="videoKind")
-    public boolean videoKind = true;
+    public boolean videoKind;
 
     @JsProperty(name="depthNear")
-    public boolean depthNear = true;
+    public boolean depthNear;
 
     @JsProperty(name="depthFar")
-    public boolean depthFar = true;
+    public boolean depthFar;
 
     @JsProperty(name="focalLengthX")
-    public boolean focalLengthX = true;
+    public boolean focalLengthX;
 
     @JsProperty(name="focalLengthY")
-    public boolean focalLengthY = true;
+    public boolean focalLengthY;
 
     @JsProperty(name="whiteBalanceMode")
-    public boolean whiteBalanceMode = true;
+    public boolean whiteBalanceMode;
 
     @JsProperty(name="exposureMode")
-    public boolean exposureMode = true;
+    public boolean exposureMode;
 
     @JsProperty(name="focusMode")
-    public boolean focusMode = true;
+    public boolean focusMode;
 
     @JsProperty(name="pointsOfInterest")
-    public boolean pointsOfInterest = true;
+    public boolean pointsOfInterest;
 
     @JsProperty(name="exposureCompensation")
-    public boolean exposureCompensation = true;
+    public boolean exposureCompensation;
 
     @JsProperty(name="colorTemperature")
-    public boolean colorTemperature = true;
+    public boolean colorTemperature;
 
     @JsProperty(name="iso")
-    public boolean iso = true;
+    public boolean iso;
 
     @JsProperty(name="brightness")
-    public boolean brightness = true;
+    public boolean brightness;
 
     @JsProperty(name="contrast")
-    public boolean contrast = true;
+    public boolean contrast;
 
     @JsProperty(name="saturation")
-    public boolean saturation = true;
+    public boolean saturation;
 
     @JsProperty(name="sharpness")
-    public boolean sharpness = true;
+    public boolean sharpness;
 
     @JsProperty(name="zoom")
-    public boolean zoom = true;
+    public boolean zoom;
 
     @JsProperty(name="torch")
-    public boolean torch = true;
+    public boolean torch;
 
 
 }

@@ -24,49 +24,49 @@ import jsinterop.annotations.JsType;
 public class ScrollStateInit{
 
     @JsProperty(name="deltaX")
-    public double deltaX = 0;
+    public double deltaX;
 
     @JsProperty(name="deltaY")
-    public double deltaY = 0;
+    public double deltaY;
 
     @JsProperty(name="deltaXHint")
-    public double deltaXHint = 0;
+    public double deltaXHint;
 
     @JsProperty(name="deltaYHint")
-    public double deltaYHint = 0;
+    public double deltaYHint;
 
     @JsProperty(name="positionX")
-    public long positionX = 0;
+    public double positionX;
 
     @JsProperty(name="positionY")
-    public long positionY = 0;
+    public double positionY;
 
     @JsProperty(name="velocityX")
-    public double velocityX = 0;
+    public double velocityX;
 
     @JsProperty(name="velocityY")
-    public double velocityY = 0;
+    public double velocityY;
 
     @JsProperty(name="isBeginning")
-    public boolean isBeginning = false;
+    public boolean isBeginning;
 
     @JsProperty(name="isInInertialPhase")
-    public boolean isInInertialPhase = false;
+    public boolean isInInertialPhase;
 
     @JsProperty(name="isEnding")
-    public boolean isEnding = false;
+    public boolean isEnding;
 
     @JsProperty(name="shouldPropagate")
-    public boolean shouldPropagate = true;
+    public boolean shouldPropagate;
 
     @JsProperty(name="fromUserInput")
-    public boolean fromUserInput = false;
+    public boolean fromUserInput;
 
     @JsProperty(name="isDirectManipulation")
-    public boolean isDirectManipulation = false;
+    public boolean isDirectManipulation;
 
     @JsProperty(name="deltaGranularity")
-    public double deltaGranularity = 0;
+    public double deltaGranularity;
 
 
 }

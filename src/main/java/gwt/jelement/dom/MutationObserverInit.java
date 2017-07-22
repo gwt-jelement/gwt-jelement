@@ -24,7 +24,7 @@ import jsinterop.annotations.JsType;
 public class MutationObserverInit{
 
     @JsProperty(name="childList")
-    public boolean childList = false;
+    public boolean childList;
 
     @JsProperty(name="attributes")
     public boolean attributes;
@@ -33,7 +33,7 @@ public class MutationObserverInit{
     public boolean characterData;
 
     @JsProperty(name="subtree")
-    public boolean subtree = false;
+    public boolean subtree;
 
     @JsProperty(name="attributeOldValue")
     public boolean attributeOldValue;

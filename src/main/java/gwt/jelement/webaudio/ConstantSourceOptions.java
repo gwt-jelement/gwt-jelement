@@ -24,7 +24,7 @@ import jsinterop.annotations.JsType;
 public class ConstantSourceOptions{
 
     @JsProperty(name="offset")
-    public float offset = 1;
+    public float offset;
 
 
 }

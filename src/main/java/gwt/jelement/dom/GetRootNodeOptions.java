@@ -24,7 +24,7 @@ import jsinterop.annotations.JsType;
 public class GetRootNodeOptions{
 
     @JsProperty(name="composed")
-    public boolean composed = false;
+    public boolean composed;
 
 
 }

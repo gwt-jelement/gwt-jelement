@@ -26,7 +26,7 @@ import jsinterop.annotations.JsType;
 public class SpeechRecognitionEventInit extends EventInit{
 
     @JsProperty(name="resultIndex")
-    public long resultIndex;
+    public double resultIndex;
 
     @JsProperty(name="results")
     public SpeechRecognitionResultList results;

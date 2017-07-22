@@ -24,31 +24,31 @@ import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, isNative = true)
 public class DOMException{
-    public static final int INDEX_SIZE_ERR = 1;
-    public static final int DOMSTRING_SIZE_ERR = 2;
-    public static final int HIERARCHY_REQUEST_ERR = 3;
-    public static final int WRONG_DOCUMENT_ERR = 4;
-    public static final int INVALID_CHARACTER_ERR = 5;
-    public static final int NO_DATA_ALLOWED_ERR = 6;
-    public static final int NO_MODIFICATION_ALLOWED_ERR = 7;
-    public static final int NOT_FOUND_ERR = 8;
-    public static final int NOT_SUPPORTED_ERR = 9;
-    public static final int INUSE_ATTRIBUTE_ERR = 10;
-    public static final int INVALID_STATE_ERR = 11;
-    public static final int SYNTAX_ERR = 12;
-    public static final int INVALID_MODIFICATION_ERR = 13;
-    public static final int NAMESPACE_ERR = 14;
-    public static final int INVALID_ACCESS_ERR = 15;
-    public static final int VALIDATION_ERR = 16;
-    public static final int TYPE_MISMATCH_ERR = 17;
-    public static final int SECURITY_ERR = 18;
-    public static final int NETWORK_ERR = 19;
-    public static final int ABORT_ERR = 20;
-    public static final int URL_MISMATCH_ERR = 21;
-    public static final int QUOTA_EXCEEDED_ERR = 22;
-    public static final int TIMEOUT_ERR = 23;
-    public static final int INVALID_NODE_TYPE_ERR = 24;
-    public static final int DATA_CLONE_ERR = 25;
+    public static int INDEX_SIZE_ERR;
+    public static int DOMSTRING_SIZE_ERR;
+    public static int HIERARCHY_REQUEST_ERR;
+    public static int WRONG_DOCUMENT_ERR;
+    public static int INVALID_CHARACTER_ERR;
+    public static int NO_DATA_ALLOWED_ERR;
+    public static int NO_MODIFICATION_ALLOWED_ERR;
+    public static int NOT_FOUND_ERR;
+    public static int NOT_SUPPORTED_ERR;
+    public static int INUSE_ATTRIBUTE_ERR;
+    public static int INVALID_STATE_ERR;
+    public static int SYNTAX_ERR;
+    public static int INVALID_MODIFICATION_ERR;
+    public static int NAMESPACE_ERR;
+    public static int INVALID_ACCESS_ERR;
+    public static int VALIDATION_ERR;
+    public static int TYPE_MISMATCH_ERR;
+    public static int SECURITY_ERR;
+    public static int NETWORK_ERR;
+    public static int ABORT_ERR;
+    public static int URL_MISMATCH_ERR;
+    public static int QUOTA_EXCEEDED_ERR;
+    public static int TIMEOUT_ERR;
+    public static int INVALID_NODE_TYPE_ERR;
+    public static int DATA_CLONE_ERR;
     
     
     @JsConstructor

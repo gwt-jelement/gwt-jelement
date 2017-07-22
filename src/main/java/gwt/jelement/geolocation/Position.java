@@ -28,7 +28,7 @@ public class Position{
     public native Coordinates getCoords();
     
     @JsProperty(name="timestamp")
-    public native long getTimestamp();
+    public native double getTimestamp();
     
     
 }

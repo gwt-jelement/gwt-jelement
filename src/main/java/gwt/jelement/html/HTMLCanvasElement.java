@@ -40,6 +40,26 @@ public class HTMLCanvasElement extends HTMLElement{
     @JsType(isNative = true, name = "?", namespace = JsPackage.GLOBAL)
     public interface RenderingContext {
         @JsOverlay
+        static RenderingContext of(CanvasRenderingContext2D value){
+            return Js.cast(value);
+        }
+    
+        @JsOverlay
+        static RenderingContext of(WebGLRenderingContext value){
+            return Js.cast(value);
+        }
+    
+        @JsOverlay
+        static RenderingContext of(WebGL2RenderingContext value){
+            return Js.cast(value);
+        }
+    
+        @JsOverlay
+        static RenderingContext of(ImageBitmapRenderingContext value){
+            return Js.cast(value);
+        }
+    
+        @JsOverlay
         default CanvasRenderingContext2D asCanvasRenderingContext2D(){
             return Js.cast(this);
         }
@@ -87,10 +107,10 @@ public class HTMLCanvasElement extends HTMLElement{
     }
     
     @JsProperty(name="width")
-    public long width;
+    public double width;
     
     @JsProperty(name="height")
-    public long height;
+    public double height;
     
     @JsMethod(name = "captureStream")
     public native MediaStream captureStream();

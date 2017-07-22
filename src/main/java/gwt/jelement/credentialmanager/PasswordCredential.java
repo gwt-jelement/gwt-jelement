@@ -32,6 +32,16 @@ public class PasswordCredential extends Credential{
     @JsType(isNative = true, name = "?", namespace = JsPackage.GLOBAL)
     public interface CredentialBodyType {
         @JsOverlay
+        static CredentialBodyType of(FormData value){
+            return Js.cast(value);
+        }
+    
+        @JsOverlay
+        static CredentialBodyType of(URLSearchParams value){
+            return Js.cast(value);
+        }
+    
+        @JsOverlay
         default FormData asFormData(){
             return Js.cast(this);
         }
@@ -65,7 +75,7 @@ public class PasswordCredential extends Credential{
     public String passwordName;
     
     @JsProperty(name="additionalData")
-    public native PasswordCredential.CredentialBodyType getAdditionalData();
+    public PasswordCredential.CredentialBodyType additionalData;
     
     @JsProperty(name="password")
     public native String getPassword();
@@ -75,12 +85,6 @@ public class PasswordCredential extends Credential{
     
     @JsProperty(name="iconURL")
     public native String getIconURL();
-    
-    @JsProperty(name="additionalData")
-    public native void setAdditionalData(FormData additionalData);
-    
-    @JsProperty(name="additionalData")
-    public native void setAdditionalData(URLSearchParams additionalData);
     
     
 }

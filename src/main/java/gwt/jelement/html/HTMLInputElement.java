@@ -23,7 +23,7 @@ import gwt.jelement.html.HTMLElement;
 import gwt.jelement.html.HTMLFormElement;
 import gwt.jelement.html.SelectionMode;
 import gwt.jelement.html.ValidityState;
-import java.util.Date;
+import elemental2.core.Date;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
@@ -83,7 +83,7 @@ public class HTMLInputElement extends HTMLElement{
     public String formTarget;
     
     @JsProperty(name="height")
-    public long height;
+    public double height;
     
     @JsProperty(name="indeterminate")
     public boolean indeterminate;
@@ -92,13 +92,13 @@ public class HTMLInputElement extends HTMLElement{
     public String max;
     
     @JsProperty(name="maxLength")
-    public long maxLength;
+    public double maxLength;
     
     @JsProperty(name="min")
     public String min;
     
     @JsProperty(name="minLength")
-    public long minLength;
+    public double minLength;
     
     @JsProperty(name="multiple")
     public boolean multiple;
@@ -119,7 +119,7 @@ public class HTMLInputElement extends HTMLElement{
     public boolean required;
     
     @JsProperty(name="size")
-    public long size;
+    public double size;
     
     @JsProperty(name="src")
     public String src;
@@ -143,13 +143,13 @@ public class HTMLInputElement extends HTMLElement{
     public double valueAsNumber;
     
     @JsProperty(name="width")
-    public long width;
+    public double width;
     
     @JsProperty(name="selectionStart")
-    public long selectionStart;
+    public double selectionStart;
     
     @JsProperty(name="selectionEnd")
-    public long selectionEnd;
+    public double selectionEnd;
     
     @JsProperty(name="selectionDirection")
     public String selectionDirection;
@@ -209,32 +209,32 @@ public class HTMLInputElement extends HTMLElement{
     public native void setRangeText(String replacement);
     
     @JsMethod(name = "setRangeText")
-    public native void setRangeText(String replacement, long start, long end);
+    public native void setRangeText(String replacement, double start, double end);
     
     @JsOverlay
-    public void setRangeText(String replacement, long start, long end, SelectionMode selectionMode){
+    public final void setRangeText(String replacement, double start, double end, SelectionMode selectionMode){
         setRangeText(replacement, start, end, selectionMode.getInternalValue());
     }
     
     @JsMethod(name = "setRangeText")
-    public native void setRangeText(String replacement, long start, long end, String selectionMode);
+    public native void setRangeText(String replacement, double start, double end, String selectionMode);
     
     @JsMethod(name = "setSelectionRange")
-    public native void setSelectionRange(long start, long end);
+    public native void setSelectionRange(double start, double end);
     
     @JsMethod(name = "setSelectionRange")
-    public native void setSelectionRange(long start, long end, String direction);
+    public native void setSelectionRange(double start, double end, String direction);
     
     @JsMethod(name = "stepDown")
     public native void stepDown();
     
     @JsMethod(name = "stepDown")
-    public native void stepDown(long n);
+    public native void stepDown(double n);
     
     @JsMethod(name = "stepUp")
     public native void stepUp();
     
     @JsMethod(name = "stepUp")
-    public native void stepUp(long n);
+    public native void stepUp(double n);
     
 }

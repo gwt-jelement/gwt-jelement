@@ -68,7 +68,7 @@ public class MediaSource extends EventTarget{
     public native void endOfStream();
     
     @JsOverlay
-    public void endOfStream(EndOfStreamError error){
+    public final void endOfStream(EndOfStreamError error){
         endOfStream(error.getInternalValue());
     }
     

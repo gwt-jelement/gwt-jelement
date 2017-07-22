@@ -27,13 +27,13 @@ import jsinterop.annotations.JsType;
 public class IDBVersionChangeEventInit extends EventInit{
 
     @JsProperty(name="oldVersion")
-    public long oldVersion = 0;
+    public double oldVersion;
 
     @JsProperty(name="newVersion")
-    public long newVersion = 0;
+    public double newVersion;
 
     @JsProperty(name="dataLoss")
-    public IDBDataLossAmount dataLoss = IDBDataLossAmount.of("none");
+    public IDBDataLossAmount dataLoss;
 
 
 }

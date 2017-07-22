@@ -25,7 +25,7 @@ import jsinterop.annotations.JsType;
 public class StereoPannerOptions extends AudioNodeOptions{
 
     @JsProperty(name="pan")
-    public float pan = 0;
+    public float pan;
 
 
 }

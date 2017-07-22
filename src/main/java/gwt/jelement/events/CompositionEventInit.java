@@ -25,7 +25,7 @@ import jsinterop.annotations.JsType;
 public class CompositionEventInit extends UIEventInit{
 
     @JsProperty(name="data")
-    public String data = "";
+    public String data;
 
 
 }

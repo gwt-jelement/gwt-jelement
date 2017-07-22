@@ -27,10 +27,10 @@ import jsinterop.annotations.JsType;
 public class ScrollIntoViewOptions extends ScrollOptions{
 
     @JsProperty(name="block")
-    public ScrollLogicalPosition block = ScrollLogicalPosition.of("center");
+    public ScrollLogicalPosition block;
 
     @JsProperty(name="inline")
-    public ScrollLogicalPosition inline = ScrollLogicalPosition.of("center");
+    public ScrollLogicalPosition inline;
 
 
 }

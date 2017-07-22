@@ -28,10 +28,10 @@ public class ArrayBufferView{
     public native ArrayBuffer getBuffer();
     
     @JsProperty(name="byteOffset")
-    public native long getByteOffset();
+    public native double getByteOffset();
     
     @JsProperty(name="byteLength")
-    public native long getByteLength();
+    public native double getByteLength();
     
     
 }

@@ -30,16 +30,16 @@ public class InputEventInit extends UIEventInit{
     public String data;
 
     @JsProperty(name="isComposing")
-    public boolean isComposing = false;
+    public boolean isComposing;
 
     @JsProperty(name="inputType")
-    public String inputType = "";
+    public String inputType;
 
     @JsProperty(name="dataTransfer")
     public DataTransfer dataTransfer;
 
     @JsProperty(name="targetRanges")
-    public StaticRange[] targetRanges = new StaticRange[0];
+    public StaticRange[] targetRanges;
 
 
 }

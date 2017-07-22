@@ -17,6 +17,7 @@
 package gwt.jelement.animation;
 
 import gwt.jelement.animation.AnimationEffectTimingReadOnly;
+import gwt.jelement.animation.PlaybackDirection;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
@@ -27,52 +28,34 @@ import jsinterop.base.Js;
 @JsType(namespace = JsPackage.GLOBAL, isNative = true)
 public class AnimationEffectTiming extends AnimationEffectTimingReadOnly{
     
-    @JsType(isNative = true, name = "?", namespace = JsPackage.GLOBAL)
-    public interface DoubleOrStringUnionType {
-        @JsOverlay
-        default double asDouble(){
-            return Js.cast(this);
-        }
-    
-        @JsOverlay
-        default String asString(){
-            return Js.cast(this);
-        }
-    
-        @JsOverlay
-        default boolean isDouble(){
-            return (Object) this instanceof Double;
-        }
-    
-        @JsOverlay
-        default boolean isString(){
-            return (Object) this instanceof String;
-        }
-    
-    }
-    
     @JsConstructor
     public AnimationEffectTiming(){
         super();
     }
     
-    @JsProperty(name="duration")
-    public native double getDoubleDuration();
+    @JsProperty(name="delay")
+    public double delay;
+    
+    @JsProperty(name="endDelay")
+    public double endDelay;
+    
+    @JsProperty(name="fill")
+    public String fill;
+    
+    @JsProperty(name="iterationStart")
+    public double iterationStart;
+    
+    @JsProperty(name="iterations")
+    public double iterations;
     
     @JsProperty(name="duration")
-    public native String getStringDuration();
+    public AnimationEffectTimingReadOnly.DoubleOrStringUnionType duration;
     
-    @JsProperty(name="duration")
-    public native void setDuration(double duration);
+    @JsProperty(name="direction")
+    public PlaybackDirection direction;
     
-    @JsProperty(name="duration")
-    public native void setDoubleDuration(double doubleDuration);
-    
-    @JsProperty(name="duration")
-    public native void setDuration(String duration);
-    
-    @JsProperty(name="duration")
-    public native void setStringDuration(String StringDuration);
+    @JsProperty(name="easing")
+    public String easing;
     
     
 }

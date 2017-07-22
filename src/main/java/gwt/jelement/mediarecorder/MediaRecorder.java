@@ -60,7 +60,7 @@ public class MediaRecorder extends EventTarget{
     public native String getMimeType();
     
     @JsOverlay
-    public  RecordingState getStateAsRecordingState(){
+    public final RecordingState getStateAsRecordingState(){
         return RecordingState.of(getState());
     }
     
@@ -68,10 +68,10 @@ public class MediaRecorder extends EventTarget{
     public native String getState();
     
     @JsProperty(name="videoBitsPerSecond")
-    public native long getVideoBitsPerSecond();
+    public native double getVideoBitsPerSecond();
     
     @JsProperty(name="audioBitsPerSecond")
-    public native long getAudioBitsPerSecond();
+    public native double getAudioBitsPerSecond();
     
     @JsMethod(name = "isTypeSupported")
     public native boolean isTypeSupported(String type);
@@ -89,7 +89,7 @@ public class MediaRecorder extends EventTarget{
     public native void start();
     
     @JsMethod(name = "start")
-    public native void start(long timeslice);
+    public native void start(double timeslice);
     
     @JsMethod(name = "stop")
     public native void stop();

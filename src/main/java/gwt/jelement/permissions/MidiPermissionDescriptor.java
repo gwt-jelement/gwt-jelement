@@ -25,7 +25,7 @@ import jsinterop.annotations.JsType;
 public class MidiPermissionDescriptor extends PermissionDescriptor{
 
     @JsProperty(name="sysex")
-    public boolean sysex = false;
+    public boolean sysex;
 
 
 }

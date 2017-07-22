@@ -24,17 +24,17 @@ import jsinterop.base.Any;
 
 @JsType(namespace = JsPackage.GLOBAL, isNative = true)
 public class EXTDisjointTimerQuery{
-    public static final int QUERY_COUNTER_BITS_EXT = 0x8864;
-    public static final int CURRENT_QUERY_EXT = 0x8865;
-    public static final int QUERY_RESULT_EXT = 0x8866;
-    public static final int QUERY_RESULT_AVAILABLE_EXT = 0x8867;
-    public static final int TIME_ELAPSED_EXT = 0x88BF;
-    public static final int TIMESTAMP_EXT = 0x8E28;
-    public static final int GPU_DISJOINT_EXT = 0x8FBB;
+    public static int QUERY_COUNTER_BITS_EXT;
+    public static int CURRENT_QUERY_EXT;
+    public static int QUERY_RESULT_EXT;
+    public static int QUERY_RESULT_AVAILABLE_EXT;
+    public static int TIME_ELAPSED_EXT;
+    public static int TIMESTAMP_EXT;
+    public static int GPU_DISJOINT_EXT;
     
     
     @JsMethod(name = "beginQueryEXT")
-    public native void beginQueryEXT(long target, WebGLTimerQueryEXT query);
+    public native void beginQueryEXT(double target, WebGLTimerQueryEXT query);
     
     @JsMethod(name = "createQueryEXT")
     public native WebGLTimerQueryEXT createQueryEXT();
@@ -43,18 +43,18 @@ public class EXTDisjointTimerQuery{
     public native void deleteQueryEXT(WebGLTimerQueryEXT query);
     
     @JsMethod(name = "endQueryEXT")
-    public native void endQueryEXT(long target);
+    public native void endQueryEXT(double target);
     
     @JsMethod(name = "getQueryEXT")
-    public native Any getQueryEXT(long target, long pname);
+    public native Any getQueryEXT(double target, double pname);
     
     @JsMethod(name = "getQueryObjectEXT")
-    public native Any getQueryObjectEXT(WebGLTimerQueryEXT query, long pname);
+    public native Any getQueryObjectEXT(WebGLTimerQueryEXT query, double pname);
     
     @JsMethod(name = "isQueryEXT")
     public native boolean isQueryEXT(WebGLTimerQueryEXT query);
     
     @JsMethod(name = "queryCounterEXT")
-    public native void queryCounterEXT(WebGLTimerQueryEXT query, long target);
+    public native void queryCounterEXT(WebGLTimerQueryEXT query, double target);
     
 }

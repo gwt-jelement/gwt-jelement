@@ -27,13 +27,13 @@ public class MediaRecorderOptions{
     public String mimeType;
 
     @JsProperty(name="audioBitsPerSecond")
-    public long audioBitsPerSecond;
+    public double audioBitsPerSecond;
 
     @JsProperty(name="videoBitsPerSecond")
-    public long videoBitsPerSecond;
+    public double videoBitsPerSecond;
 
     @JsProperty(name="bitsPerSecond")
-    public long bitsPerSecond;
+    public double bitsPerSecond;
 
 
 }

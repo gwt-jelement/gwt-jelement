@@ -50,7 +50,7 @@ public class HTMLElement extends Element{
     public boolean hidden;
     
     @JsProperty(name="tabIndex")
-    public long tabIndex;
+    public double tabIndex;
     
     @JsProperty(name="inert")
     public boolean inert;
@@ -308,16 +308,16 @@ public class HTMLElement extends Element{
     public native Element getOffsetParent();
     
     @JsProperty(name="offsetTop")
-    public native long getOffsetTop();
+    public native double getOffsetTop();
     
     @JsProperty(name="offsetLeft")
-    public native long getOffsetLeft();
+    public native double getOffsetLeft();
     
     @JsProperty(name="offsetWidth")
-    public native long getOffsetWidth();
+    public native double getOffsetWidth();
     
     @JsProperty(name="offsetHeight")
-    public native long getOffsetHeight();
+    public native double getOffsetHeight();
     
     @JsProperty(name="style")
     public native CSSStyleDeclaration getStyle();

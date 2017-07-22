@@ -43,13 +43,13 @@ public class UIEvent extends Event{
     public native Window getView();
     
     @JsProperty(name="detail")
-    public native long getDetail();
+    public native double getDetail();
     
     @JsProperty(name="sourceCapabilities")
     public native InputDeviceCapabilities getSourceCapabilities();
     
     @JsProperty(name="which")
-    public native long getWhich();
+    public native double getWhich();
     
     @JsMethod(name = "initUIEvent")
     public native void initUIEvent();
@@ -67,6 +67,6 @@ public class UIEvent extends Event{
     public native void initUIEvent(String type, boolean bubbles, boolean cancelable, Window view);
     
     @JsMethod(name = "initUIEvent")
-    public native void initUIEvent(String type, boolean bubbles, boolean cancelable, Window view, long detail);
+    public native void initUIEvent(String type, boolean bubbles, boolean cancelable, Window view, double detail);
     
 }

@@ -28,7 +28,7 @@ import jsinterop.annotations.JsType;
 public class PhotoCapabilities{
     
     @JsOverlay
-    public  RedEyeReduction getRedEyeReductionAsRedEyeReduction(){
+    public final RedEyeReduction getRedEyeReductionAsRedEyeReduction(){
         return RedEyeReduction.of(getRedEyeReduction());
     }
     
@@ -42,7 +42,7 @@ public class PhotoCapabilities{
     public native MediaSettingsRange getImageWidth();
     
     @JsOverlay
-    public  FillLightMode[] getFillLightModeAsFillLightModeArray    (){
+    public final FillLightMode[] getFillLightModeAsFillLightModeArray    (){
         return FillLightMode.ofArray(getFillLightMode());
     }
     

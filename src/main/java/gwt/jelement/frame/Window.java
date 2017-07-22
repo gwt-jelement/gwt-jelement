@@ -90,8 +90,8 @@ import jsinterop.base.Any;
 
 @JsType(namespace = JsPackage.GLOBAL, isNative = true)
 public class Window extends EventTarget{
-    public static final int TEMPORARY = 0;
-    public static final int PERSISTENT = 1;
+    public static int TEMPORARY;
+    public static int PERSISTENT;
     
     
     @JsConstructor
@@ -526,7 +526,7 @@ public class Window extends EventTarget{
     public native Window getFrames();
     
     @JsProperty(name="length")
-    public native long getLength();
+    public native double getLength();
     
     @JsProperty(name="top")
     public native Window getTop();
@@ -553,10 +553,10 @@ public class Window extends EventTarget{
     public native Screen getScreen();
     
     @JsProperty(name="innerWidth")
-    public native long getInnerWidth();
+    public native double getInnerWidth();
     
     @JsProperty(name="innerHeight")
-    public native long getInnerHeight();
+    public native double getInnerHeight();
     
     @JsProperty(name="scrollX")
     public native double getScrollX();
@@ -574,22 +574,22 @@ public class Window extends EventTarget{
     public native VisualViewport getVisualViewport();
     
     @JsProperty(name="screenX")
-    public native long getScreenX();
+    public native double getScreenX();
     
     @JsProperty(name="screenY")
-    public native long getScreenY();
+    public native double getScreenY();
     
     @JsProperty(name="outerWidth")
-    public native long getOuterWidth();
+    public native double getOuterWidth();
     
     @JsProperty(name="outerHeight")
-    public native long getOuterHeight();
+    public native double getOuterHeight();
     
     @JsProperty(name="devicePixelRatio")
     public native double getDevicePixelRatio();
     
     @JsProperty(name="orientation")
-    public native long getOrientation();
+    public native double getOrientation();
     
     @JsProperty(name="clientInformation")
     public native Navigator getClientInformation();
@@ -598,10 +598,10 @@ public class Window extends EventTarget{
     public native boolean getOffscreenBuffering();
     
     @JsProperty(name="screenLeft")
-    public native long getScreenLeft();
+    public native double getScreenLeft();
     
     @JsProperty(name="screenTop")
-    public native long getScreenTop();
+    public native double getScreenTop();
     
     @JsProperty(name="styleMedia")
     public native StyleMedia getStyleMedia();
@@ -658,10 +658,10 @@ public class Window extends EventTarget{
     public native String btoa(String btoa);
     
     @JsMethod(name = "cancelAnimationFrame")
-    public native void cancelAnimationFrame(long handle);
+    public native void cancelAnimationFrame(double handle);
     
     @JsMethod(name = "cancelIdleCallback")
-    public native void cancelIdleCallback(long handle);
+    public native void cancelIdleCallback(double handle);
     
     @JsMethod(name = "captureEvents")
     public native void captureEvents();
@@ -670,13 +670,13 @@ public class Window extends EventTarget{
     public native void clearInterval();
     
     @JsMethod(name = "clearInterval")
-    public native void clearInterval(long handle);
+    public native void clearInterval(double handle);
     
     @JsMethod(name = "clearTimeout")
     public native void clearTimeout();
     
     @JsMethod(name = "clearTimeout")
-    public native void clearTimeout(long handle);
+    public native void clearTimeout(double handle);
     
     @JsMethod(name = "close")
     public native void close();
@@ -736,52 +736,52 @@ public class Window extends EventTarget{
     public native Promise createImageBitmap(OffscreenCanvas imageBitmap, ImageBitmapOptions options);
     
     @JsMethod(name = "createImageBitmap")
-    public native Promise createImageBitmap(HTMLImageElement imageBitmap, long sx, long sy, long sw, long sh);
+    public native Promise createImageBitmap(HTMLImageElement imageBitmap, double sx, double sy, double sw, double sh);
     
     @JsMethod(name = "createImageBitmap")
-    public native Promise createImageBitmap(SVGImageElement imageBitmap, long sx, long sy, long sw, long sh);
+    public native Promise createImageBitmap(SVGImageElement imageBitmap, double sx, double sy, double sw, double sh);
     
     @JsMethod(name = "createImageBitmap")
-    public native Promise createImageBitmap(HTMLVideoElement imageBitmap, long sx, long sy, long sw, long sh);
+    public native Promise createImageBitmap(HTMLVideoElement imageBitmap, double sx, double sy, double sw, double sh);
     
     @JsMethod(name = "createImageBitmap")
-    public native Promise createImageBitmap(HTMLCanvasElement imageBitmap, long sx, long sy, long sw, long sh);
+    public native Promise createImageBitmap(HTMLCanvasElement imageBitmap, double sx, double sy, double sw, double sh);
     
     @JsMethod(name = "createImageBitmap")
-    public native Promise createImageBitmap(Blob imageBitmap, long sx, long sy, long sw, long sh);
+    public native Promise createImageBitmap(Blob imageBitmap, double sx, double sy, double sw, double sh);
     
     @JsMethod(name = "createImageBitmap")
-    public native Promise createImageBitmap(ImageData imageBitmap, long sx, long sy, long sw, long sh);
+    public native Promise createImageBitmap(ImageData imageBitmap, double sx, double sy, double sw, double sh);
     
     @JsMethod(name = "createImageBitmap")
-    public native Promise createImageBitmap(ImageBitmap imageBitmap, long sx, long sy, long sw, long sh);
+    public native Promise createImageBitmap(ImageBitmap imageBitmap, double sx, double sy, double sw, double sh);
     
     @JsMethod(name = "createImageBitmap")
-    public native Promise createImageBitmap(OffscreenCanvas imageBitmap, long sx, long sy, long sw, long sh);
+    public native Promise createImageBitmap(OffscreenCanvas imageBitmap, double sx, double sy, double sw, double sh);
     
     @JsMethod(name = "createImageBitmap")
-    public native Promise createImageBitmap(HTMLImageElement imageBitmap, long sx, long sy, long sw, long sh, ImageBitmapOptions options);
+    public native Promise createImageBitmap(HTMLImageElement imageBitmap, double sx, double sy, double sw, double sh, ImageBitmapOptions options);
     
     @JsMethod(name = "createImageBitmap")
-    public native Promise createImageBitmap(SVGImageElement imageBitmap, long sx, long sy, long sw, long sh, ImageBitmapOptions options);
+    public native Promise createImageBitmap(SVGImageElement imageBitmap, double sx, double sy, double sw, double sh, ImageBitmapOptions options);
     
     @JsMethod(name = "createImageBitmap")
-    public native Promise createImageBitmap(HTMLVideoElement imageBitmap, long sx, long sy, long sw, long sh, ImageBitmapOptions options);
+    public native Promise createImageBitmap(HTMLVideoElement imageBitmap, double sx, double sy, double sw, double sh, ImageBitmapOptions options);
     
     @JsMethod(name = "createImageBitmap")
-    public native Promise createImageBitmap(HTMLCanvasElement imageBitmap, long sx, long sy, long sw, long sh, ImageBitmapOptions options);
+    public native Promise createImageBitmap(HTMLCanvasElement imageBitmap, double sx, double sy, double sw, double sh, ImageBitmapOptions options);
     
     @JsMethod(name = "createImageBitmap")
-    public native Promise createImageBitmap(Blob imageBitmap, long sx, long sy, long sw, long sh, ImageBitmapOptions options);
+    public native Promise createImageBitmap(Blob imageBitmap, double sx, double sy, double sw, double sh, ImageBitmapOptions options);
     
     @JsMethod(name = "createImageBitmap")
-    public native Promise createImageBitmap(ImageData imageBitmap, long sx, long sy, long sw, long sh, ImageBitmapOptions options);
+    public native Promise createImageBitmap(ImageData imageBitmap, double sx, double sy, double sw, double sh, ImageBitmapOptions options);
     
     @JsMethod(name = "createImageBitmap")
-    public native Promise createImageBitmap(ImageBitmap imageBitmap, long sx, long sy, long sw, long sh, ImageBitmapOptions options);
+    public native Promise createImageBitmap(ImageBitmap imageBitmap, double sx, double sy, double sw, double sh, ImageBitmapOptions options);
     
     @JsMethod(name = "createImageBitmap")
-    public native Promise createImageBitmap(OffscreenCanvas imageBitmap, long sx, long sy, long sw, long sh, ImageBitmapOptions options);
+    public native Promise createImageBitmap(OffscreenCanvas imageBitmap, double sx, double sy, double sw, double sh, ImageBitmapOptions options);
     
     @JsMethod(name = "fetch")
     public native Promise<Response> fetch(Request input);
@@ -850,10 +850,10 @@ public class Window extends EventTarget{
     public native MediaQueryList matchMedia(String query);
     
     @JsMethod(name = "moveBy")
-    public native void moveBy(long x, long y);
+    public native void moveBy(double x, double y);
     
     @JsMethod(name = "moveTo")
-    public native void moveTo(long x, long y);
+    public native void moveTo(double x, double y);
     
     @JsMethod(name = "open")
     public native Window open(String url, String target);
@@ -862,10 +862,10 @@ public class Window extends EventTarget{
     public native Window open(String url, String target, String features);
     
     @JsMethod(name = "openDatabase")
-    public native Database openDatabase(String name, String version, String displayName, long estimatedSize);
+    public native Database openDatabase(String name, String version, String displayName, double estimatedSize);
     
     @JsMethod(name = "openDatabase")
-    public native Database openDatabase(String name, String version, String displayName, long estimatedSize, DatabaseCallback creationCallback);
+    public native Database openDatabase(String name, String version, String displayName, double estimatedSize, DatabaseCallback creationCallback);
     
     @JsMethod(name = "postMessage")
     public native void postMessage(Any message, String targetOrigin);
@@ -889,19 +889,19 @@ public class Window extends EventTarget{
     public native void releaseEvents();
     
     @JsMethod(name = "requestAnimationFrame")
-    public native long requestAnimationFrame(FrameRequestCallback callback);
+    public native double requestAnimationFrame(FrameRequestCallback callback);
     
     @JsMethod(name = "requestIdleCallback")
-    public native long requestIdleCallback(IdleRequestCallback callback);
+    public native double requestIdleCallback(IdleRequestCallback callback);
     
     @JsMethod(name = "requestIdleCallback")
-    public native long requestIdleCallback(IdleRequestCallback callback, IdleRequestOptions options);
+    public native double requestIdleCallback(IdleRequestCallback callback, IdleRequestOptions options);
     
     @JsMethod(name = "resizeBy")
-    public native void resizeBy(long x, long y);
+    public native void resizeBy(double x, double y);
     
     @JsMethod(name = "resizeTo")
-    public native void resizeTo(long x, long y);
+    public native void resizeTo(double x, double y);
     
     @JsMethod(name = "scroll")
     public native void scroll();
@@ -931,43 +931,43 @@ public class Window extends EventTarget{
     public native void scrollTo(double x, double y);
     
     @JsMethod(name = "setInterval")
-    public native long setInterval(Function handler);
+    public native double setInterval(Function handler);
     
     @JsMethod(name = "setInterval")
-    public native long setInterval(String handler);
+    public native double setInterval(String handler);
     
     @JsMethod(name = "setInterval")
-    public native long setInterval(Function handler, long timeout, Any arguments);
+    public native double setInterval(Function handler, double timeout, Any arguments);
     
     @JsMethod(name = "setInterval")
-    public native long setInterval(String handler, long timeout, Any arguments);
+    public native double setInterval(String handler, double timeout, Any arguments);
     
     @JsMethod(name = "setTimeout")
-    public native long setTimeout(Function handler);
+    public native double setTimeout(Function handler);
     
     @JsMethod(name = "setTimeout")
-    public native long setTimeout(String handler);
+    public native double setTimeout(String handler);
     
     @JsMethod(name = "setTimeout")
-    public native long setTimeout(Function handler, long timeout, Any arguments);
+    public native double setTimeout(Function handler, double timeout, Any arguments);
     
     @JsMethod(name = "setTimeout")
-    public native long setTimeout(String handler, long timeout, Any arguments);
+    public native double setTimeout(String handler, double timeout, Any arguments);
     
     @JsMethod(name = "stop")
     public native void stop();
     
     @JsMethod(name = "webkitCancelAnimationFrame")
-    public native void webkitCancelAnimationFrame(long id);
+    public native void webkitCancelAnimationFrame(double id);
     
     @JsMethod(name = "webkitRequestAnimationFrame")
-    public native long webkitRequestAnimationFrame(FrameRequestCallback callback);
+    public native double webkitRequestAnimationFrame(FrameRequestCallback callback);
     
     @JsMethod(name = "webkitRequestFileSystem")
-    public native void webkitRequestFileSystem(short type, long size, FileSystemCallback successCallback);
+    public native void webkitRequestFileSystem(short type, double size, FileSystemCallback successCallback);
     
     @JsMethod(name = "webkitRequestFileSystem")
-    public native void webkitRequestFileSystem(short type, long size, FileSystemCallback successCallback, ErrorCallback errorCallback);
+    public native void webkitRequestFileSystem(short type, double size, FileSystemCallback successCallback, ErrorCallback errorCallback);
     
     @JsMethod(name = "webkitResolveLocalFileSystemURL")
     public native void webkitResolveLocalFileSystemURL(String url, EntryCallback successCallback);

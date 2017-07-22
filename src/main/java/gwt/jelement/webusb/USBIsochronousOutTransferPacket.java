@@ -31,14 +31,14 @@ public class USBIsochronousOutTransferPacket{
     }
     
     @JsConstructor
-    public USBIsochronousOutTransferPacket(USBTransferStatus status, long bytesWritten){
+    public USBIsochronousOutTransferPacket(USBTransferStatus status, double bytesWritten){
     }
     
     @JsProperty(name="bytesWritten")
-    public native long getBytesWritten();
+    public native double getBytesWritten();
     
     @JsOverlay
-    public  USBTransferStatus getStatusAsUSBTransferStatus(){
+    public final USBTransferStatus getStatusAsUSBTransferStatus(){
         return USBTransferStatus.of(getStatus());
     }
     

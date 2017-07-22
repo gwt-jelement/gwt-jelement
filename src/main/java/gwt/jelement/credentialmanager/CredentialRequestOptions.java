@@ -30,7 +30,7 @@ public class CredentialRequestOptions{
     public FederatedCredentialRequestOptions federated;
 
     @JsProperty(name="password")
-    public boolean password = false;
+    public boolean password;
 
     @JsProperty(name="unmediated")
     public boolean unmediated;

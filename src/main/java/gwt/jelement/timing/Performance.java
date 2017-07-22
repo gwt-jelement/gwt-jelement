@@ -92,7 +92,7 @@ public class Performance extends EventTarget{
     public native double now();
     
     @JsMethod(name = "setResourceTimingBufferSize")
-    public native void setResourceTimingBufferSize(long maxSize);
+    public native void setResourceTimingBufferSize(double maxSize);
     
     @JsMethod(name = "toJSON")
     public native Any toJSON();

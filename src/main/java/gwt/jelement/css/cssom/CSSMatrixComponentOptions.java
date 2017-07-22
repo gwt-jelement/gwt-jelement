@@ -24,7 +24,7 @@ import jsinterop.annotations.JsType;
 public class CSSMatrixComponentOptions{
 
     @JsProperty(name="is2D")
-    public boolean is2D = false;
+    public boolean is2D;
 
 
 }

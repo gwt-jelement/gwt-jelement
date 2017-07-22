@@ -27,13 +27,13 @@ public class VideoPlaybackQuality{
     public native double getCreationTime();
     
     @JsProperty(name="totalVideoFrames")
-    public native long getTotalVideoFrames();
+    public native double getTotalVideoFrames();
     
     @JsProperty(name="droppedVideoFrames")
-    public native long getDroppedVideoFrames();
+    public native double getDroppedVideoFrames();
     
     @JsProperty(name="corruptedVideoFrames")
-    public native long getCorruptedVideoFrames();
+    public native double getCorruptedVideoFrames();
     
     
 }

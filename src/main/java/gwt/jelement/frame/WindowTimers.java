@@ -29,36 +29,36 @@ public class WindowTimers{
     public native void clearInterval();
     
     @JsMethod(name = "clearInterval")
-    public native void clearInterval(long handle);
+    public native void clearInterval(double handle);
     
     @JsMethod(name = "clearTimeout")
     public native void clearTimeout();
     
     @JsMethod(name = "clearTimeout")
-    public native void clearTimeout(long handle);
+    public native void clearTimeout(double handle);
     
     @JsMethod(name = "setInterval")
-    public native long setInterval(Function handler);
+    public native double setInterval(Function handler);
     
     @JsMethod(name = "setInterval")
-    public native long setInterval(String handler);
+    public native double setInterval(String handler);
     
     @JsMethod(name = "setInterval")
-    public native long setInterval(Function handler, long timeout, Any arguments);
+    public native double setInterval(Function handler, double timeout, Any arguments);
     
     @JsMethod(name = "setInterval")
-    public native long setInterval(String handler, long timeout, Any arguments);
+    public native double setInterval(String handler, double timeout, Any arguments);
     
     @JsMethod(name = "setTimeout")
-    public native long setTimeout(Function handler);
+    public native double setTimeout(Function handler);
     
     @JsMethod(name = "setTimeout")
-    public native long setTimeout(String handler);
+    public native double setTimeout(String handler);
     
     @JsMethod(name = "setTimeout")
-    public native long setTimeout(Function handler, long timeout, Any arguments);
+    public native double setTimeout(Function handler, double timeout, Any arguments);
     
     @JsMethod(name = "setTimeout")
-    public native long setTimeout(String handler, long timeout, Any arguments);
+    public native double setTimeout(String handler, double timeout, Any arguments);
     
 }

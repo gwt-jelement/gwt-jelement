@@ -49,7 +49,7 @@ public class Request{
     public native String getReferrer();
     
     @JsOverlay
-    public  ReferrerPolicy getReferrerPolicyAsReferrerPolicy(){
+    public final ReferrerPolicy getReferrerPolicyAsReferrerPolicy(){
         return ReferrerPolicy.of(getReferrerPolicy());
     }
     
@@ -57,7 +57,7 @@ public class Request{
     public native String getReferrerPolicy();
     
     @JsOverlay
-    public  RequestMode getModeAsRequestMode(){
+    public final RequestMode getModeAsRequestMode(){
         return RequestMode.of(getMode());
     }
     
@@ -65,7 +65,7 @@ public class Request{
     public native String getMode();
     
     @JsOverlay
-    public  RequestCredentials getCredentialsAsRequestCredentials(){
+    public final RequestCredentials getCredentialsAsRequestCredentials(){
         return RequestCredentials.of(getCredentials());
     }
     
@@ -73,7 +73,7 @@ public class Request{
     public native String getCredentials();
     
     @JsOverlay
-    public  RequestCache getCacheAsRequestCache(){
+    public final RequestCache getCacheAsRequestCache(){
         return RequestCache.of(getCache());
     }
     
@@ -81,7 +81,7 @@ public class Request{
     public native String getCache();
     
     @JsOverlay
-    public  RequestRedirect getRedirectAsRequestRedirect(){
+    public final RequestRedirect getRedirectAsRequestRedirect(){
         return RequestRedirect.of(getRedirect());
     }
     

@@ -25,10 +25,10 @@ import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, isNative = true)
 public class HTMLTrackElement extends HTMLElement{
-    public static final int NONE = 0;
-    public static final int LOADING = 1;
-    public static final int LOADED = 2;
-    public static final int ERROR = 3;
+    public static int NONE;
+    public static int LOADING;
+    public static int LOADED;
+    public static int ERROR;
     
     
     @JsConstructor

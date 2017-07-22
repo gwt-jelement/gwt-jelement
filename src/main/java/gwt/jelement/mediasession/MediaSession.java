@@ -37,7 +37,7 @@ public class MediaSession{
     public MediaSessionPlaybackState playbackState;
     
     @JsOverlay
-    public void setActionHandler(MediaSessionAction action, MediaSessionActionHandler handler){
+    public final void setActionHandler(MediaSessionAction action, MediaSessionActionHandler handler){
         setActionHandler(action.getInternalValue(), handler);
     }
     

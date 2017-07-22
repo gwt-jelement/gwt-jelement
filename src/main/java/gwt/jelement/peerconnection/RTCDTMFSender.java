@@ -46,18 +46,18 @@ public class RTCDTMFSender extends EventTarget{
     public native String getToneBuffer();
     
     @JsProperty(name="duration")
-    public native long getDuration();
+    public native double getDuration();
     
     @JsProperty(name="interToneGap")
-    public native long getInterToneGap();
+    public native double getInterToneGap();
     
     @JsMethod(name = "insertDTMF")
     public native void insertDTMF(String tones);
     
     @JsMethod(name = "insertDTMF")
-    public native void insertDTMF(String tones, long duration);
+    public native void insertDTMF(String tones, double duration);
     
     @JsMethod(name = "insertDTMF")
-    public native void insertDTMF(String tones, long duration, long interToneGap);
+    public native void insertDTMF(String tones, double duration, double interToneGap);
     
 }

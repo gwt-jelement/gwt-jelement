@@ -33,6 +33,16 @@ public class ScrollTimeline extends AnimationTimeline{
     @JsType(isNative = true, name = "?", namespace = JsPackage.GLOBAL)
     public interface DoubleOrScrollTimelineAutoKeywordUnionType {
         @JsOverlay
+        static DoubleOrScrollTimelineAutoKeywordUnionType of(double value){
+            return Js.cast(value);
+        }
+    
+        @JsOverlay
+        static DoubleOrScrollTimelineAutoKeywordUnionType of(String value){
+            return Js.cast(value);
+        }
+    
+        @JsOverlay
         default double asDouble(){
             return Js.cast(this);
         }
@@ -68,7 +78,7 @@ public class ScrollTimeline extends AnimationTimeline{
     public native Element getScrollSource();
     
     @JsOverlay
-    public  ScrollDirection getOrientationAsScrollDirection(){
+    public final ScrollDirection getOrientationAsScrollDirection(){
         return ScrollDirection.of(getOrientation());
     }
     

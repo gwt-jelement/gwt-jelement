@@ -29,6 +29,16 @@ public class AnimationEffectTimingReadOnly{
     @JsType(isNative = true, name = "?", namespace = JsPackage.GLOBAL)
     public interface DoubleOrStringUnionType {
         @JsOverlay
+        static DoubleOrStringUnionType of(double value){
+            return Js.cast(value);
+        }
+    
+        @JsOverlay
+        static DoubleOrStringUnionType of(String value){
+            return Js.cast(value);
+        }
+    
+        @JsOverlay
         default double asDouble(){
             return Js.cast(this);
         }
@@ -69,7 +79,7 @@ public class AnimationEffectTimingReadOnly{
     public native AnimationEffectTimingReadOnly.DoubleOrStringUnionType getDuration();
     
     @JsOverlay
-    public  PlaybackDirection getDirectionAsPlaybackDirection(){
+    public final PlaybackDirection getDirectionAsPlaybackDirection(){
         return PlaybackDirection.of(getDirection());
     }
     

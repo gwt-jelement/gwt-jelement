@@ -51,10 +51,10 @@ public class ResponseInit{
     }
     
     @JsProperty(name="status")
-    public short status = 200;
+    public short status;
 
     @JsProperty(name="statusText")
-    public String statusText = "OK";
+    public String statusText;
 
     @JsProperty(name="headers")
     public ResponseInit.HeadersInit headers;

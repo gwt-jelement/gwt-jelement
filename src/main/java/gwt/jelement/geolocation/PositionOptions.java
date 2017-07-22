@@ -24,13 +24,13 @@ import jsinterop.annotations.JsType;
 public class PositionOptions{
 
     @JsProperty(name="enableHighAccuracy")
-    public boolean enableHighAccuracy = false;
+    public boolean enableHighAccuracy;
 
     @JsProperty(name="timeout")
-    public long timeout = 0xFFFFFFFF;
+    public double timeout;
 
     @JsProperty(name="maximumAge")
-    public long maximumAge = 0;
+    public double maximumAge;
 
 
 }

@@ -33,7 +33,7 @@ public class BackgroundFetchClickEvent extends BackgroundFetchEvent{
     }
     
     @JsOverlay
-    public  BackgroundFetchState getStateAsBackgroundFetchState(){
+    public final BackgroundFetchState getStateAsBackgroundFetchState(){
         return BackgroundFetchState.of(getState());
     }
     

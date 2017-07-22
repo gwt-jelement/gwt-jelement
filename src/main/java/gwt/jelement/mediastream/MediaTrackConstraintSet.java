@@ -34,7 +34,7 @@ public class MediaTrackConstraintSet{
     @JsType(isNative = true, name = "?", namespace = JsPackage.GLOBAL)
     public interface ConstrainLong {
         @JsOverlay
-        default long asLong(){
+        default double asDouble(){
             return Js.cast(this);
         }
     
@@ -44,8 +44,8 @@ public class MediaTrackConstraintSet{
         }
     
         @JsOverlay
-        default boolean isLong(){
-            return (Object) this instanceof Long;
+        default boolean isDouble(){
+            return (Object) this instanceof Double;
         }
     
         @JsOverlay

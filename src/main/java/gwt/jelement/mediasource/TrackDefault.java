@@ -26,7 +26,7 @@ import jsinterop.annotations.JsType;
 public class TrackDefault{
     
     @JsOverlay
-    public  TrackDefaultType getTypeAsTrackDefaultType(){
+    public final TrackDefaultType getTypeAsTrackDefaultType(){
         return TrackDefaultType.of(getType());
     }
     

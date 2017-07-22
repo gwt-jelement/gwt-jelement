@@ -25,22 +25,22 @@ import jsinterop.annotations.JsType;
 public class WheelEventInit extends MouseEventInit{
 
     @JsProperty(name="deltaX")
-    public double deltaX = 0.0;
+    public double deltaX;
 
     @JsProperty(name="deltaY")
-    public double deltaY = 0.0;
+    public double deltaY;
 
     @JsProperty(name="deltaZ")
-    public double deltaZ = 0.0;
+    public double deltaZ;
 
     @JsProperty(name="deltaMode")
-    public long deltaMode = 0;
+    public double deltaMode;
 
     @JsProperty(name="wheelDeltaX")
-    public long wheelDeltaX = 0;
+    public double wheelDeltaX;
 
     @JsProperty(name="wheelDeltaY")
-    public long wheelDeltaY = 0;
+    public double wheelDeltaY;
 
 
 }

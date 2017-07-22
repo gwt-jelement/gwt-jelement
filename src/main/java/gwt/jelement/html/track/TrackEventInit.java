@@ -19,6 +19,7 @@ package gwt.jelement.html.track;
 import gwt.jelement.events.EventInit;
 import gwt.jelement.html.track.AudioTrack;
 import gwt.jelement.html.track.TextTrack;
+import gwt.jelement.html.track.TrackEvent;
 import gwt.jelement.html.track.VideoTrack;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
@@ -29,42 +30,8 @@ import jsinterop.base.Js;
 @JsType(namespace = JsPackage.GLOBAL, isNative = true)
 public class TrackEventInit extends EventInit{
 
-    @JsType(isNative = true, name = "?", namespace = JsPackage.GLOBAL)
-    public interface VideoTrackOrAudioTrackOrTextTrackUnionType {
-        @JsOverlay
-        default VideoTrack asVideoTrack(){
-            return Js.cast(this);
-        }
-    
-        @JsOverlay
-        default AudioTrack asAudioTrack(){
-            return Js.cast(this);
-        }
-    
-        @JsOverlay
-        default TextTrack asTextTrack(){
-            return Js.cast(this);
-        }
-    
-        @JsOverlay
-        default boolean isVideoTrack(){
-            return (Object) this instanceof VideoTrack;
-        }
-    
-        @JsOverlay
-        default boolean isAudioTrack(){
-            return (Object) this instanceof AudioTrack;
-        }
-    
-        @JsOverlay
-        default boolean isTextTrack(){
-            return (Object) this instanceof TextTrack;
-        }
-    
-    }
-    
     @JsProperty(name="track")
-    public TrackEventInit.VideoTrackOrAudioTrackOrTextTrackUnionType track;
+    public TrackEvent.VideoTrackOrAudioTrackOrTextTrackUnionType track;
 
 
 }

@@ -38,7 +38,7 @@ public class SourceBufferList extends EventTarget{
     public EventHandlerNonNull onremovesourcebuffer;
     
     @JsProperty(name="length")
-    public native long getLength();
+    public native double getLength();
     
     
 }

@@ -16,6 +16,7 @@
  */
 package gwt.jelement.animation;
 
+import gwt.jelement.animation.AnimationEffectTimingReadOnly;
 import gwt.jelement.animation.FillMode;
 import gwt.jelement.animation.PlaybackDirection;
 import jsinterop.annotations.JsOverlay;
@@ -27,53 +28,29 @@ import jsinterop.base.Js;
 @JsType(namespace = JsPackage.GLOBAL, isNative = true)
 public class AnimationEffectTimingProperties{
 
-    @JsType(isNative = true, name = "?", namespace = JsPackage.GLOBAL)
-    public interface DoubleOrStringUnionType {
-        @JsOverlay
-        default double asDouble(){
-            return Js.cast(this);
-        }
-    
-        @JsOverlay
-        default String asString(){
-            return Js.cast(this);
-        }
-    
-        @JsOverlay
-        default boolean isDouble(){
-            return (Object) this instanceof Double;
-        }
-    
-        @JsOverlay
-        default boolean isString(){
-            return (Object) this instanceof String;
-        }
-    
-    }
-    
     @JsProperty(name="delay")
-    public double delay = 0;
+    public double delay;
 
     @JsProperty(name="endDelay")
-    public double endDelay = 0;
+    public double endDelay;
 
     @JsProperty(name="fill")
-    public FillMode fill = FillMode.of("auto");
+    public FillMode fill;
 
     @JsProperty(name="iterationStart")
-    public double iterationStart = 0.0;
+    public double iterationStart;
 
     @JsProperty(name="iterations")
-    public double iterations = 1.0;
+    public double iterations;
 
     @JsProperty(name="duration")
-    public AnimationEffectTimingProperties.DoubleOrStringUnionType duration = Js.cast("auto");
+    public AnimationEffectTimingReadOnly.DoubleOrStringUnionType duration;
 
     @JsProperty(name="direction")
-    public PlaybackDirection direction = PlaybackDirection.of("normal");
+    public PlaybackDirection direction;
 
     @JsProperty(name="easing")
-    public String easing = "linear";
+    public String easing;
 
 
 }

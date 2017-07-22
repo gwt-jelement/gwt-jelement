@@ -44,22 +44,22 @@ public class HTMLMarqueeElement extends HTMLElement{
     public String height;
     
     @JsProperty(name="hspace")
-    public long hspace;
+    public double hspace;
     
     @JsProperty(name="loop")
-    public long loop;
+    public double loop;
     
     @JsProperty(name="scrollAmount")
-    public long scrollAmount;
+    public double scrollAmount;
     
     @JsProperty(name="scrollDelay")
-    public long scrollDelay;
+    public double scrollDelay;
     
     @JsProperty(name="trueSpeed")
     public boolean trueSpeed;
     
     @JsProperty(name="vspace")
-    public long vspace;
+    public double vspace;
     
     @JsProperty(name="width")
     public String width;

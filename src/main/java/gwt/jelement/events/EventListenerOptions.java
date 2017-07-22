@@ -24,7 +24,7 @@ import jsinterop.annotations.JsType;
 public class EventListenerOptions{
 
     @JsProperty(name="capture")
-    public boolean capture = false;
+    public boolean capture;
 
 
 }

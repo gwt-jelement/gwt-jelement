@@ -25,13 +25,13 @@ import jsinterop.annotations.JsType;
 public class ProgressEventInit extends EventInit{
 
     @JsProperty(name="lengthComputable")
-    public boolean lengthComputable = false;
+    public boolean lengthComputable;
 
     @JsProperty(name="loaded")
-    public long loaded = 0;
+    public double loaded;
 
     @JsProperty(name="total")
-    public long total = 0;
+    public double total;
 
 
 }

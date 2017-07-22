@@ -27,10 +27,10 @@ import jsinterop.annotations.JsType;
 public class SVGTransformList{
     
     @JsProperty(name="length")
-    public native long getLength();
+    public native double getLength();
     
     @JsProperty(name="numberOfItems")
-    public native long getNumberOfItems();
+    public native double getNumberOfItems();
     
     @JsMethod(name = "appendItem")
     public native SVGTransform appendItem(SVGTransform newItem);
@@ -48,12 +48,12 @@ public class SVGTransformList{
     public native SVGTransform initialize(SVGTransform newItem);
     
     @JsMethod(name = "insertItemBefore")
-    public native SVGTransform insertItemBefore(SVGTransform newItem, long index);
+    public native SVGTransform insertItemBefore(SVGTransform newItem, double index);
     
     @JsMethod(name = "removeItem")
-    public native SVGTransform removeItem(long index);
+    public native SVGTransform removeItem(double index);
     
     @JsMethod(name = "replaceItem")
-    public native SVGTransform replaceItem(SVGTransform newItem, long index);
+    public native SVGTransform replaceItem(SVGTransform newItem, double index);
     
 }

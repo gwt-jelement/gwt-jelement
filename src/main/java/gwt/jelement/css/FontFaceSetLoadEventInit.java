@@ -26,7 +26,7 @@ import jsinterop.annotations.JsType;
 public class FontFaceSetLoadEventInit extends EventInit{
 
     @JsProperty(name="fontfaces")
-    public FontFace[] fontfaces = new FontFace[0];
+    public FontFace[] fontfaces;
 
 
 }

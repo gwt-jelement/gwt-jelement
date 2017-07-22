@@ -37,7 +37,7 @@ public class VRDisplayEvent extends Event{
     public native VRDisplay getDisplay();
     
     @JsOverlay
-    public  VRDisplayEventReason getReasonAsVRDisplayEventReason(){
+    public final VRDisplayEventReason getReasonAsVRDisplayEventReason(){
         return VRDisplayEventReason.of(getReason());
     }
     

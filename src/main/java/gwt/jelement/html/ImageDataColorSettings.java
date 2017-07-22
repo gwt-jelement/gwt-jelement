@@ -27,10 +27,10 @@ import jsinterop.annotations.JsType;
 public class ImageDataColorSettings{
 
     @JsProperty(name="colorSpace")
-    public CanvasColorSpace colorSpace = CanvasColorSpace.of("srgb");
+    public CanvasColorSpace colorSpace;
 
     @JsProperty(name="storageFormat")
-    public ImageDataStorageFormat storageFormat = ImageDataStorageFormat.of("uint8");
+    public ImageDataStorageFormat storageFormat;
 
 
 }

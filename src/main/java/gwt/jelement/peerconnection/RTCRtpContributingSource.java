@@ -27,7 +27,7 @@ public class RTCRtpContributingSource{
     public native double getTimestamp();
     
     @JsProperty(name="source")
-    public native long getSource();
+    public native double getSource();
     
     
 }

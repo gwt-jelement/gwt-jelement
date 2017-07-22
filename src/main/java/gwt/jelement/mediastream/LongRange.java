@@ -24,10 +24,10 @@ import jsinterop.annotations.JsType;
 public class LongRange{
 
     @JsProperty(name="max")
-    public long max;
+    public double max;
 
     @JsProperty(name="min")
-    public long min;
+    public double min;
 
 
 }

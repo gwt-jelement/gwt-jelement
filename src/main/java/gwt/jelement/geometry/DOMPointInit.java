@@ -24,16 +24,16 @@ import jsinterop.annotations.JsType;
 public class DOMPointInit{
 
     @JsProperty(name="x")
-    public double x = 0;
+    public double x;
 
     @JsProperty(name="y")
-    public double y = 0;
+    public double y;
 
     @JsProperty(name="z")
-    public double z = 0;
+    public double z;
 
     @JsProperty(name="w")
-    public double w = 1;
+    public double w;
 
 
 }

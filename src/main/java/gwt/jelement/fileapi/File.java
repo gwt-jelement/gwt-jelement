@@ -20,7 +20,7 @@ import gwt.jelement.dom.ArrayBuffer;
 import gwt.jelement.dom.ArrayBufferView;
 import gwt.jelement.fileapi.Blob;
 import gwt.jelement.fileapi.FilePropertyBag;
-import java.util.Date;
+import elemental2.core.Date;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -73,7 +73,7 @@ public class File extends Blob{
     public native String getName();
     
     @JsProperty(name="lastModified")
-    public native long getLastModified();
+    public native double getLastModified();
     
     @JsProperty(name="lastModifiedDate")
     public native Date getLastModifiedDate();

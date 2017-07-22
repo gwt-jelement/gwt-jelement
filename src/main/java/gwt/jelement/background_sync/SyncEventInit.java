@@ -28,7 +28,7 @@ public class SyncEventInit extends ExtendableEventInit{
     public String tag;
 
     @JsProperty(name="lastChance")
-    public boolean lastChance = false;
+    public boolean lastChance;
 
 
 }

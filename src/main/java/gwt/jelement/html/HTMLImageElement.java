@@ -54,10 +54,10 @@ public class HTMLImageElement extends HTMLElement{
     public boolean isMap;
     
     @JsProperty(name="width")
-    public long width;
+    public double width;
     
     @JsProperty(name="height")
-    public long height;
+    public double height;
     
     @JsProperty(name="referrerPolicy")
     public String referrerPolicy;
@@ -72,10 +72,10 @@ public class HTMLImageElement extends HTMLElement{
     public String align;
     
     @JsProperty(name="hspace")
-    public long hspace;
+    public double hspace;
     
     @JsProperty(name="vspace")
-    public long vspace;
+    public double vspace;
     
     @JsProperty(name="longDesc")
     public String longDesc;
@@ -84,10 +84,10 @@ public class HTMLImageElement extends HTMLElement{
     public String border;
     
     @JsProperty(name="naturalWidth")
-    public native long getNaturalWidth();
+    public native double getNaturalWidth();
     
     @JsProperty(name="naturalHeight")
-    public native long getNaturalHeight();
+    public native double getNaturalHeight();
     
     @JsProperty(name="complete")
     public native boolean getComplete();
@@ -96,10 +96,10 @@ public class HTMLImageElement extends HTMLElement{
     public native String getCurrentSrc();
     
     @JsProperty(name="x")
-    public native long getX();
+    public native double getX();
     
     @JsProperty(name="y")
-    public native long getY();
+    public native double getY();
     
     @JsMethod(name = "decode")
     public native Promise decode();

@@ -21,7 +21,7 @@ import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, isNative = true)
 public class OESStandardDerivatives{
-    public static final int FRAGMENT_SHADER_DERIVATIVE_HINT_OES = 0x8B8B;
+    public static int FRAGMENT_SHADER_DERIVATIVE_HINT_OES;
     
     
     

@@ -48,7 +48,7 @@ public class VRDisplay extends EventTarget{
     public double depthFar;
     
     @JsProperty(name="displayId")
-    public native long getDisplayId();
+    public native double getDisplayId();
     
     @JsProperty(name="displayName")
     public native String getDisplayName();
@@ -63,13 +63,13 @@ public class VRDisplay extends EventTarget{
     public native VRStageParameters getStageParameters();
     
     @JsMethod(name = "cancelAnimationFrame")
-    public native void cancelAnimationFrame(long handle);
+    public native void cancelAnimationFrame(double handle);
     
     @JsMethod(name = "exitPresent")
     public native Promise exitPresent();
     
     @JsOverlay
-    public VREyeParameters getEyeParameters(VREye whichEye){
+    public final VREyeParameters getEyeParameters(VREye whichEye){
         return getEyeParameters(whichEye.getInternalValue());
     }
     
@@ -83,7 +83,7 @@ public class VRDisplay extends EventTarget{
     public native VRLayer[] getLayers();
     
     @JsMethod(name = "requestAnimationFrame")
-    public native long requestAnimationFrame(FrameRequestCallback callback);
+    public native double requestAnimationFrame(FrameRequestCallback callback);
     
     @JsMethod(name = "requestPresent")
     public native Promise requestPresent(VRLayer[] layers);

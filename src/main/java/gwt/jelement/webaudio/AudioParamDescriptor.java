@@ -27,13 +27,13 @@ public class AudioParamDescriptor{
     public String name;
 
     @JsProperty(name="defaultValue")
-    public float defaultValue = 0;
+    public float defaultValue;
 
     @JsProperty(name="minValue")
-    public float minValue = -3.4028235e38f;
+    public float minValue;
 
     @JsProperty(name="maxValue")
-    public float maxValue = 3.4028235e38f;
+    public float maxValue;
 
 
 }

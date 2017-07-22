@@ -63,7 +63,7 @@ public class HTMLFormElement extends HTMLElement{
     public native HTMLFormControlsCollection getElements();
     
     @JsProperty(name="length")
-    public native long getLength();
+    public native double getLength();
     
     @JsMethod(name = "checkValidity")
     public native boolean checkValidity();

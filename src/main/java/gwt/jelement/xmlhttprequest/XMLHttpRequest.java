@@ -36,11 +36,11 @@ import jsinterop.base.Any;
 
 @JsType(namespace = JsPackage.GLOBAL, isNative = true)
 public class XMLHttpRequest extends XMLHttpRequestEventTarget{
-    public static final int UNSENT = 0;
-    public static final int OPENED = 1;
-    public static final int HEADERS_RECEIVED = 2;
-    public static final int LOADING = 3;
-    public static final int DONE = 4;
+    public static int UNSENT;
+    public static int OPENED;
+    public static int HEADERS_RECEIVED;
+    public static int LOADING;
+    public static int DONE;
     
     
     @JsConstructor
@@ -52,7 +52,7 @@ public class XMLHttpRequest extends XMLHttpRequestEventTarget{
     public EventHandlerNonNull onreadystatechange;
     
     @JsProperty(name="timeout")
-    public long timeout;
+    public double timeout;
     
     @JsProperty(name="withCredentials")
     public boolean withCredentials;

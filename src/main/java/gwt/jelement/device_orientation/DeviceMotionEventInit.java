@@ -36,7 +36,7 @@ public class DeviceMotionEventInit extends EventInit{
     public DeviceRotationRateInit rotationRate;
 
     @JsProperty(name="interval")
-    public double interval = 0;
+    public double interval;
 
 
 }

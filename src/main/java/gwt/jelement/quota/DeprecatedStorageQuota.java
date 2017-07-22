@@ -33,12 +33,12 @@ public class DeprecatedStorageQuota{
     public native void queryUsageAndQuota(StorageUsageCallback usageCallback, StorageErrorCallback errorCallback);
     
     @JsMethod(name = "requestQuota")
-    public native void requestQuota(long newQuotaInBytes);
+    public native void requestQuota(double newQuotaInBytes);
     
     @JsMethod(name = "requestQuota")
-    public native void requestQuota(long newQuotaInBytes, StorageQuotaCallback quotaCallback);
+    public native void requestQuota(double newQuotaInBytes, StorageQuotaCallback quotaCallback);
     
     @JsMethod(name = "requestQuota")
-    public native void requestQuota(long newQuotaInBytes, StorageQuotaCallback quotaCallback, StorageErrorCallback errorCallback);
+    public native void requestQuota(double newQuotaInBytes, StorageQuotaCallback quotaCallback, StorageErrorCallback errorCallback);
     
 }

@@ -36,7 +36,7 @@ public class NFC{
     public native Promise<Void> cancelPush();
     
     @JsOverlay
-    public Promise<Void> cancelPush(NFCPushTarget target){
+    public final Promise<Void> cancelPush(NFCPushTarget target){
         return cancelPush(target.getInternalValue());
     }
     
@@ -47,7 +47,7 @@ public class NFC{
     public native Promise<Void> cancelWatch();
     
     @JsMethod(name = "cancelWatch")
-    public native Promise<Void> cancelWatch(long id);
+    public native Promise<Void> cancelWatch(double id);
     
     @JsMethod(name = "push")
     public native Promise<Void> push(String message);
@@ -68,9 +68,9 @@ public class NFC{
     public native Promise<Void> push(NFCMessage message, NFCPushOptions options);
     
     @JsMethod(name = "watch")
-    public native Promise<Long> watch(MessageCallback callback);
+    public native Promise<Double> watch(MessageCallback callback);
     
     @JsMethod(name = "watch")
-    public native Promise<Long> watch(MessageCallback callback, NFCWatchOptions options);
+    public native Promise<Double> watch(MessageCallback callback, NFCWatchOptions options);
     
 }

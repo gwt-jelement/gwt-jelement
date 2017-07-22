@@ -25,13 +25,13 @@ import jsinterop.annotations.JsType;
 public class TransitionEventInit extends EventInit{
 
     @JsProperty(name="propertyName")
-    public String propertyName = "";
+    public String propertyName;
 
     @JsProperty(name="elapsedTime")
-    public double elapsedTime = 0.0;
+    public double elapsedTime;
 
     @JsProperty(name="pseudoElement")
-    public String pseudoElement = "";
+    public String pseudoElement;
 
 
 }

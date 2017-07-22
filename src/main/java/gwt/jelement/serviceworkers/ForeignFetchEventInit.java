@@ -29,7 +29,7 @@ public class ForeignFetchEventInit extends ExtendableEventInit{
     public Request request;
 
     @JsProperty(name="origin")
-    public String origin = "null";
+    public String origin;
 
 
 }

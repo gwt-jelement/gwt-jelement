@@ -22,6 +22,7 @@ import gwt.jelement.geometry.DOMPointReadOnly;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsPackage;
+import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, isNative = true)
@@ -51,6 +52,18 @@ public class DOMPoint extends DOMPointReadOnly{
     public DOMPoint(double x, double y, double z, double w){
         super();
     }
+    
+    @JsProperty(name="x")
+    public double x;
+    
+    @JsProperty(name="y")
+    public double y;
+    
+    @JsProperty(name="z")
+    public double z;
+    
+    @JsProperty(name="w")
+    public double w;
     
     @JsMethod(name = "fromPoint")
     public native DOMPoint fromPoint();

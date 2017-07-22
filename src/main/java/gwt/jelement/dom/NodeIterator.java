@@ -36,7 +36,7 @@ public class NodeIterator{
     public native boolean getPointerBeforeReferenceNode();
     
     @JsProperty(name="whatToShow")
-    public native long getWhatToShow();
+    public native double getWhatToShow();
     
     @JsProperty(name="filter")
     public native NodeFilter getFilter();

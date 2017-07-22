@@ -28,7 +28,7 @@ public class DOMTokenList{
     public String value;
     
     @JsProperty(name="length")
-    public native long getLength();
+    public native double getLength();
     
     @JsMethod(name = "add")
     public native void add(String tokens);

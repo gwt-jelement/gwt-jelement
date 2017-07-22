@@ -24,10 +24,10 @@ import jsinterop.annotations.JsType;
 public class TextDecoderOptions{
 
     @JsProperty(name="fatal")
-    public boolean fatal = false;
+    public boolean fatal;
 
     @JsProperty(name="ignoreBOM")
-    public boolean ignoreBOM = false;
+    public boolean ignoreBOM;
 
 
 }

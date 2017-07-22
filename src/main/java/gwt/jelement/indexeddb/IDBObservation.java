@@ -27,7 +27,7 @@ import jsinterop.base.Any;
 public class IDBObservation{
     
     @JsOverlay
-    public  IDBObservationType getTypeAsIDBObservationType(){
+    public final IDBObservationType getTypeAsIDBObservationType(){
         return IDBObservationType.of(getType());
     }
     

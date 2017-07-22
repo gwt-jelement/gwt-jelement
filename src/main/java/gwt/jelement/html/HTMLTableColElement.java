@@ -31,7 +31,7 @@ public class HTMLTableColElement extends HTMLElement{
     }
     
     @JsProperty(name="span")
-    public long span;
+    public double span;
     
     @JsProperty(name="align")
     public String align;

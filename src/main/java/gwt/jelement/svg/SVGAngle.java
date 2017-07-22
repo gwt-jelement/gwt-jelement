@@ -23,11 +23,11 @@ import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, isNative = true)
 public class SVGAngle{
-    public static final int SVG_ANGLETYPE_UNKNOWN = 0;
-    public static final int SVG_ANGLETYPE_UNSPECIFIED = 1;
-    public static final int SVG_ANGLETYPE_DEG = 2;
-    public static final int SVG_ANGLETYPE_RAD = 3;
-    public static final int SVG_ANGLETYPE_GRAD = 4;
+    public static int SVG_ANGLETYPE_UNKNOWN;
+    public static int SVG_ANGLETYPE_UNSPECIFIED;
+    public static int SVG_ANGLETYPE_DEG;
+    public static int SVG_ANGLETYPE_RAD;
+    public static int SVG_ANGLETYPE_GRAD;
     
     
     @JsProperty(name="value")

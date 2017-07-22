@@ -27,13 +27,13 @@ public class VideoConfiguration{
     public String contentType;
 
     @JsProperty(name="width")
-    public long width;
+    public double width;
 
     @JsProperty(name="height")
-    public long height;
+    public double height;
 
     @JsProperty(name="bitrate")
-    public long bitrate;
+    public double bitrate;
 
     @JsProperty(name="framerate")
     public double framerate;

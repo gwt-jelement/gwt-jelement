@@ -26,7 +26,7 @@ import jsinterop.annotations.JsType;
 public class ScrollOptions{
 
     @JsProperty(name="behavior")
-    public ScrollBehavior behavior = ScrollBehavior.of("auto");
+    public ScrollBehavior behavior;
 
 
 }

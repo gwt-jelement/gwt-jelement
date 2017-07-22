@@ -54,10 +54,10 @@ public class SecurityPolicyViolationEventInit extends EventInit{
     public short statusCode;
 
     @JsProperty(name="lineNumber")
-    public long lineNumber;
+    public double lineNumber;
 
     @JsProperty(name="columnNumber")
-    public long columnNumber;
+    public double columnNumber;
 
     @JsProperty(name="sample")
     public String sample;

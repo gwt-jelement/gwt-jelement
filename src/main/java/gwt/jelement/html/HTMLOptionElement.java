@@ -53,7 +53,7 @@ public class HTMLOptionElement extends HTMLElement{
     public native HTMLFormElement getForm();
     
     @JsProperty(name="index")
-    public native long getIndex();
+    public native double getIndex();
     
     
 }

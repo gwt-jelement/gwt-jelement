@@ -25,13 +25,13 @@ import jsinterop.annotations.JsType;
 public class RTCOfferOptions extends RTCOfferAnswerOptions{
 
     @JsProperty(name="iceRestart")
-    public boolean iceRestart = false;
+    public boolean iceRestart;
 
     @JsProperty(name="offerToReceiveVideo")
-    public long offerToReceiveVideo;
+    public double offerToReceiveVideo;
 
     @JsProperty(name="offerToReceiveAudio")
-    public long offerToReceiveAudio;
+    public double offerToReceiveAudio;
 
 
 }

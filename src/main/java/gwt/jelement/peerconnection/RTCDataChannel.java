@@ -38,7 +38,7 @@ public class RTCDataChannel extends EventTarget{
     }
     
     @JsProperty(name="bufferedAmountLowThreshold")
-    public long bufferedAmountLowThreshold;
+    public double bufferedAmountLowThreshold;
     
     @JsProperty(name="onopen")
     public EventHandlerNonNull onopen;
@@ -80,7 +80,7 @@ public class RTCDataChannel extends EventTarget{
     public native short getId();
     
     @JsOverlay
-    public  RTCDataChannelState getReadyStateAsRTCDataChannelState(){
+    public final RTCDataChannelState getReadyStateAsRTCDataChannelState(){
         return RTCDataChannelState.of(getReadyState());
     }
     
@@ -88,7 +88,7 @@ public class RTCDataChannel extends EventTarget{
     public native String getReadyState();
     
     @JsProperty(name="bufferedAmount")
-    public native long getBufferedAmount();
+    public native double getBufferedAmount();
     
     @JsProperty(name="reliable")
     public native boolean getReliable();

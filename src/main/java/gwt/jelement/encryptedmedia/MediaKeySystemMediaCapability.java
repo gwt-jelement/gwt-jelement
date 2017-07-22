@@ -24,10 +24,10 @@ import jsinterop.annotations.JsType;
 public class MediaKeySystemMediaCapability{
 
     @JsProperty(name="contentType")
-    public String contentType = "";
+    public String contentType;
 
     @JsProperty(name="robustness")
-    public String robustness = "";
+    public String robustness;
 
 
 }

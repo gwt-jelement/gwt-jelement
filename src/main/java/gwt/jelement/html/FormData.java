@@ -30,6 +30,16 @@ public class FormData{
     @JsType(isNative = true, name = "?", namespace = JsPackage.GLOBAL)
     public interface FormDataEntryValue {
         @JsOverlay
+        static FormDataEntryValue of(File value){
+            return Js.cast(value);
+        }
+    
+        @JsOverlay
+        static FormDataEntryValue of(String value){
+            return Js.cast(value);
+        }
+    
+        @JsOverlay
         default File asFile(){
             return Js.cast(this);
         }

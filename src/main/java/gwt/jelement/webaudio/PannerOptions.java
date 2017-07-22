@@ -28,46 +28,46 @@ import jsinterop.annotations.JsType;
 public class PannerOptions extends AudioNodeOptions{
 
     @JsProperty(name="panningModel")
-    public PanningModelType panningModel = PanningModelType.of("equalpower");
+    public PanningModelType panningModel;
 
     @JsProperty(name="distanceModel")
-    public DistanceModelType distanceModel = DistanceModelType.of("inverse");
+    public DistanceModelType distanceModel;
 
     @JsProperty(name="positionX")
-    public float positionX = 0;
+    public float positionX;
 
     @JsProperty(name="positionY")
-    public float positionY = 0;
+    public float positionY;
 
     @JsProperty(name="positionZ")
-    public float positionZ = 0;
+    public float positionZ;
 
     @JsProperty(name="orientationX")
-    public float orientationX = 1;
+    public float orientationX;
 
     @JsProperty(name="orientationY")
-    public float orientationY = 0;
+    public float orientationY;
 
     @JsProperty(name="orientationZ")
-    public float orientationZ = 0;
+    public float orientationZ;
 
     @JsProperty(name="refDistance")
-    public double refDistance = 1;
+    public double refDistance;
 
     @JsProperty(name="maxDistance")
-    public double maxDistance = 10000;
+    public double maxDistance;
 
     @JsProperty(name="rolloffFactor")
-    public double rolloffFactor = 1;
+    public double rolloffFactor;
 
     @JsProperty(name="coneInnerAngle")
-    public double coneInnerAngle = 360;
+    public double coneInnerAngle;
 
     @JsProperty(name="coneOuterAngle")
-    public double coneOuterAngle = 360;
+    public double coneOuterAngle;
 
     @JsProperty(name="coneOuterGain")
-    public double coneOuterGain = 0;
+    public double coneOuterGain;
 
 
 }

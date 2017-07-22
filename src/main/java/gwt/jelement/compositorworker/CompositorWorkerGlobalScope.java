@@ -39,7 +39,7 @@ public class CompositorWorkerGlobalScope extends WorkerGlobalScope{
     public EventHandlerNonNull onmessage;
     
     @JsMethod(name = "cancelAnimationFrame")
-    public native void cancelAnimationFrame(long handle);
+    public native void cancelAnimationFrame(double handle);
     
     @JsMethod(name = "postMessage")
     public native void postMessage(Any message);
@@ -48,6 +48,6 @@ public class CompositorWorkerGlobalScope extends WorkerGlobalScope{
     public native void postMessage(Any message, MessagePort[] transfer);
     
     @JsMethod(name = "requestAnimationFrame")
-    public native long requestAnimationFrame(FrameRequestCallback callback);
+    public native double requestAnimationFrame(FrameRequestCallback callback);
     
 }

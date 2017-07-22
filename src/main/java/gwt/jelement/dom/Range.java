@@ -29,10 +29,10 @@ import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, isNative = true)
 public class Range{
-    public static final int START_TO_START = 0;
-    public static final int START_TO_END = 1;
-    public static final int END_TO_END = 2;
-    public static final int END_TO_START = 3;
+    public static int START_TO_START;
+    public static int START_TO_END;
+    public static int END_TO_END;
+    public static int END_TO_START;
     
     
     @JsConstructor
@@ -43,13 +43,13 @@ public class Range{
     public native Node getStartContainer();
     
     @JsProperty(name="startOffset")
-    public native long getStartOffset();
+    public native double getStartOffset();
     
     @JsProperty(name="endContainer")
     public native Node getEndContainer();
     
     @JsProperty(name="endOffset")
-    public native long getEndOffset();
+    public native double getEndOffset();
     
     @JsProperty(name="collapsed")
     public native boolean getCollapsed();
@@ -73,7 +73,7 @@ public class Range{
     public native short compareBoundaryPoints(short how, Range sourceRange);
     
     @JsMethod(name = "comparePoint")
-    public native short comparePoint(Node node, long offset);
+    public native short comparePoint(Node node, double offset);
     
     @JsMethod(name = "createContextualFragment")
     public native DocumentFragment createContextualFragment(String fragment);
@@ -106,7 +106,7 @@ public class Range{
     public native boolean intersectsNode(Node node);
     
     @JsMethod(name = "isPointInRange")
-    public native boolean isPointInRange(Node node, long offset);
+    public native boolean isPointInRange(Node node, double offset);
     
     @JsMethod(name = "selectNode")
     public native void selectNode(Node node);
@@ -115,7 +115,7 @@ public class Range{
     public native void selectNodeContents(Node node);
     
     @JsMethod(name = "setEnd")
-    public native void setEnd(Node node, long offset);
+    public native void setEnd(Node node, double offset);
     
     @JsMethod(name = "setEndAfter")
     public native void setEndAfter(Node node);
@@ -124,7 +124,7 @@ public class Range{
     public native void setEndBefore(Node node);
     
     @JsMethod(name = "setStart")
-    public native void setStart(Node node, long offset);
+    public native void setStart(Node node, double offset);
     
     @JsMethod(name = "setStartAfter")
     public native void setStartAfter(Node node);

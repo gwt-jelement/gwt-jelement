@@ -25,10 +25,10 @@ import jsinterop.annotations.JsType;
 public class SVGStringList{
     
     @JsProperty(name="length")
-    public native long getLength();
+    public native double getLength();
     
     @JsProperty(name="numberOfItems")
-    public native long getNumberOfItems();
+    public native double getNumberOfItems();
     
     @JsMethod(name = "appendItem")
     public native String appendItem(String newItem);
@@ -40,12 +40,12 @@ public class SVGStringList{
     public native String initialize(String newItem);
     
     @JsMethod(name = "insertItemBefore")
-    public native String insertItemBefore(String item, long index);
+    public native String insertItemBefore(String item, double index);
     
     @JsMethod(name = "removeItem")
-    public native String removeItem(long index);
+    public native String removeItem(double index);
     
     @JsMethod(name = "replaceItem")
-    public native String replaceItem(String newItem, long index);
+    public native String replaceItem(String newItem, double index);
     
 }

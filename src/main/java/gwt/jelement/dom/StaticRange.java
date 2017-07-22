@@ -28,13 +28,13 @@ public class StaticRange{
     public native Node getStartContainer();
     
     @JsProperty(name="startOffset")
-    public native long getStartOffset();
+    public native double getStartOffset();
     
     @JsProperty(name="endContainer")
     public native Node getEndContainer();
     
     @JsProperty(name="endOffset")
-    public native long getEndOffset();
+    public native double getEndOffset();
     
     @JsProperty(name="collapsed")
     public native boolean getCollapsed();

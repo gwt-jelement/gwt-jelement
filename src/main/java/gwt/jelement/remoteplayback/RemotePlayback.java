@@ -46,7 +46,7 @@ public class RemotePlayback extends EventTarget{
     public EventHandlerNonNull ondisconnect;
     
     @JsOverlay
-    public  RemotePlaybackState getStateAsRemotePlaybackState(){
+    public final RemotePlaybackState getStateAsRemotePlaybackState(){
         return RemotePlaybackState.of(getState());
     }
     
@@ -57,12 +57,12 @@ public class RemotePlayback extends EventTarget{
     public native Promise<Void> cancelWatchAvailability();
     
     @JsMethod(name = "cancelWatchAvailability")
-    public native Promise<Void> cancelWatchAvailability(long id);
+    public native Promise<Void> cancelWatchAvailability(double id);
     
     @JsMethod(name = "prompt")
     public native Promise<Void> prompt();
     
     @JsMethod(name = "watchAvailability")
-    public native Promise<Long> watchAvailability(RemotePlaybackAvailabilityCallback callback);
+    public native Promise<Double> watchAvailability(RemotePlaybackAvailabilityCallback callback);
     
 }

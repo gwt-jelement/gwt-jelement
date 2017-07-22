@@ -27,16 +27,16 @@ import jsinterop.annotations.JsType;
 public class CanvasRenderingContext2DSettings{
 
     @JsProperty(name="alpha")
-    public boolean alpha = true;
+    public boolean alpha;
 
     @JsProperty(name="colorSpace")
-    public CanvasColorSpace colorSpace = CanvasColorSpace.of("legacy-srgb");
+    public CanvasColorSpace colorSpace;
 
     @JsProperty(name="pixelFormat")
-    public CanvasPixelFormat pixelFormat = CanvasPixelFormat.of("8-8-8-8");
+    public CanvasPixelFormat pixelFormat;
 
     @JsProperty(name="linearPixelMath")
-    public boolean linearPixelMath = false;
+    public boolean linearPixelMath;
 
 
 }

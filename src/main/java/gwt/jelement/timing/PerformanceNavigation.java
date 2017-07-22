@@ -24,10 +24,10 @@ import jsinterop.base.Any;
 
 @JsType(namespace = JsPackage.GLOBAL, isNative = true)
 public class PerformanceNavigation{
-    public static final int TYPE_NAVIGATE = 0;
-    public static final int TYPE_RELOAD = 1;
-    public static final int TYPE_BACK_FORWARD = 2;
-    public static final int TYPE_RESERVED = 255;
+    public static int TYPE_NAVIGATE;
+    public static int TYPE_RELOAD;
+    public static int TYPE_BACK_FORWARD;
+    public static int TYPE_RESERVED;
     
     
     @JsProperty(name="type")

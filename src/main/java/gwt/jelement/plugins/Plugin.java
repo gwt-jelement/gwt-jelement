@@ -35,7 +35,7 @@ public class Plugin{
     public native String getDescription();
     
     @JsProperty(name="length")
-    public native long getLength();
+    public native double getLength();
     
     @JsMethod(name = "namedItem")
     public native MimeType namedItem(String name);

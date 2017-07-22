@@ -27,24 +27,24 @@ import jsinterop.annotations.JsType;
 public class IDBObserverInit{
 
     @JsProperty(name="transaction")
-    public boolean transaction = false;
+    public boolean transaction;
 
     @JsProperty(name="values")
-    public boolean values = false;
+    public boolean values;
 
     @JsProperty(name="noRecords")
-    public boolean noRecords = false;
+    public boolean noRecords;
 
     @JsProperty(name="operationTypes")
-    public String[] operationTypes = new String[0];
+    public String[] operationTypes;
 
     @JsOverlay
-    public IDBObservationType[] getOperationTypes(){
+    public final IDBObservationType[] getOperationTypes(){
         return IDBObservationType.ofArray(this.operationTypes);
     }
 
     @JsOverlay
-    public void setOperationTypes(IDBObservationType[] operationTypes){
+    public final void setOperationTypes(IDBObservationType[] operationTypes){
         this.operationTypes = Arrays.stream(operationTypes)
             .map(IDBObservationType::getInternalValue)
             .toArray(String[]::new);

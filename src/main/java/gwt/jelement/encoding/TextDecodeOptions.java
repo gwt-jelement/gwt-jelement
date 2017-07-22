@@ -24,7 +24,7 @@ import jsinterop.annotations.JsType;
 public class TextDecodeOptions{
 
     @JsProperty(name="stream")
-    public boolean stream = false;
+    public boolean stream;
 
 
 }

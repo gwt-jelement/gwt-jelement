@@ -34,13 +34,13 @@ public class PushSubscription{
     public native String getEndpoint();
     
     @JsProperty(name="expirationTime")
-    public native long getExpirationTime();
+    public native double getExpirationTime();
     
     @JsProperty(name="options")
     public native PushSubscriptionOptions getOptions();
     
     @JsOverlay
-    public ArrayBuffer getKey(PushEncryptionKeyName name){
+    public final ArrayBuffer getKey(PushEncryptionKeyName name){
         return getKey(name.getInternalValue());
     }
     

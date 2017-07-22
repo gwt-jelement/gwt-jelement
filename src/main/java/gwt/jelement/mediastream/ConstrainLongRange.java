@@ -25,10 +25,10 @@ import jsinterop.annotations.JsType;
 public class ConstrainLongRange extends LongRange{
 
     @JsProperty(name="exact")
-    public long exact;
+    public double exact;
 
     @JsProperty(name="ideal")
-    public long ideal;
+    public double ideal;
 
 
 }

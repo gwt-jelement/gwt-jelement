@@ -46,7 +46,7 @@ public class ScreenOrientation extends EventTarget{
     public native String getType();
     
     @JsOverlay
-    public Promise lock(OrientationLockType orientation){
+    public final Promise lock(OrientationLockType orientation){
         return lock(orientation.getInternalValue());
     }
     

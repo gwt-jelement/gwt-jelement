@@ -23,17 +23,17 @@ import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, isNative = true)
 public class SVGLength{
-    public static final int SVG_LENGTHTYPE_UNKNOWN = 0;
-    public static final int SVG_LENGTHTYPE_NUMBER = 1;
-    public static final int SVG_LENGTHTYPE_PERCENTAGE = 2;
-    public static final int SVG_LENGTHTYPE_EMS = 3;
-    public static final int SVG_LENGTHTYPE_EXS = 4;
-    public static final int SVG_LENGTHTYPE_PX = 5;
-    public static final int SVG_LENGTHTYPE_CM = 6;
-    public static final int SVG_LENGTHTYPE_MM = 7;
-    public static final int SVG_LENGTHTYPE_IN = 8;
-    public static final int SVG_LENGTHTYPE_PT = 9;
-    public static final int SVG_LENGTHTYPE_PC = 10;
+    public static int SVG_LENGTHTYPE_UNKNOWN;
+    public static int SVG_LENGTHTYPE_NUMBER;
+    public static int SVG_LENGTHTYPE_PERCENTAGE;
+    public static int SVG_LENGTHTYPE_EMS;
+    public static int SVG_LENGTHTYPE_EXS;
+    public static int SVG_LENGTHTYPE_PX;
+    public static int SVG_LENGTHTYPE_CM;
+    public static int SVG_LENGTHTYPE_MM;
+    public static int SVG_LENGTHTYPE_IN;
+    public static int SVG_LENGTHTYPE_PT;
+    public static int SVG_LENGTHTYPE_PC;
     
     
     @JsProperty(name="value")

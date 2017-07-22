@@ -31,10 +31,10 @@ import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, isNative = true)
 public class SVGFEConvolveMatrixElement extends SVGElement{
-    public static final int SVG_EDGEMODE_UNKNOWN = 0;
-    public static final int SVG_EDGEMODE_DUPLICATE = 1;
-    public static final int SVG_EDGEMODE_WRAP = 2;
-    public static final int SVG_EDGEMODE_NONE = 3;
+    public static int SVG_EDGEMODE_UNKNOWN;
+    public static int SVG_EDGEMODE_DUPLICATE;
+    public static int SVG_EDGEMODE_WRAP;
+    public static int SVG_EDGEMODE_NONE;
     
     
     @JsConstructor

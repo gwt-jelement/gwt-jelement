@@ -26,7 +26,7 @@ import jsinterop.annotations.JsType;
 public class NotificationAction{
 
     @JsProperty(name="type")
-    public NotificationActionType type = NotificationActionType.of("button");
+    public NotificationActionType type;
 
     @JsProperty(name="action")
     public String action;
@@ -38,7 +38,7 @@ public class NotificationAction{
     public String icon;
 
     @JsProperty(name="placeholder")
-    public String placeholder = null;
+    public String placeholder;
 
 
 }

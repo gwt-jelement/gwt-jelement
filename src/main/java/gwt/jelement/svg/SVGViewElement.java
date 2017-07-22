@@ -26,9 +26,9 @@ import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, isNative = true)
 public class SVGViewElement extends SVGElement{
-    public static final int SVG_ZOOMANDPAN_UNKNOWN = 0;
-    public static final int SVG_ZOOMANDPAN_DISABLE = 1;
-    public static final int SVG_ZOOMANDPAN_MAGNIFY = 2;
+    public static int SVG_ZOOMANDPAN_UNKNOWN;
+    public static int SVG_ZOOMANDPAN_DISABLE;
+    public static int SVG_ZOOMANDPAN_MAGNIFY;
     
     
     @JsConstructor

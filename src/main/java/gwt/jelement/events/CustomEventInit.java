@@ -26,7 +26,7 @@ import jsinterop.base.Any;
 public class CustomEventInit extends EventInit{
 
     @JsProperty(name="detail")
-    public Any detail = null;
+    public Any detail;
 
 
 }

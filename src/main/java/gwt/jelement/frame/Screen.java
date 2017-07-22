@@ -28,28 +28,28 @@ public class Screen{
     public boolean keepAwake;
     
     @JsProperty(name="availWidth")
-    public native long getAvailWidth();
+    public native double getAvailWidth();
     
     @JsProperty(name="availHeight")
-    public native long getAvailHeight();
+    public native double getAvailHeight();
     
     @JsProperty(name="width")
-    public native long getWidth();
+    public native double getWidth();
     
     @JsProperty(name="height")
-    public native long getHeight();
+    public native double getHeight();
     
     @JsProperty(name="colorDepth")
-    public native long getColorDepth();
+    public native double getColorDepth();
     
     @JsProperty(name="pixelDepth")
-    public native long getPixelDepth();
+    public native double getPixelDepth();
     
     @JsProperty(name="availLeft")
-    public native long getAvailLeft();
+    public native double getAvailLeft();
     
     @JsProperty(name="availTop")
-    public native long getAvailTop();
+    public native double getAvailTop();
     
     @JsProperty(name="orientation")
     public native ScreenOrientation getOrientation();

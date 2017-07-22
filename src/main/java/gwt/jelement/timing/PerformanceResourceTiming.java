@@ -74,13 +74,13 @@ public class PerformanceResourceTiming extends PerformanceEntry{
     public native double getResponseEnd();
     
     @JsProperty(name="transferSize")
-    public native long getTransferSize();
+    public native double getTransferSize();
     
     @JsProperty(name="encodedBodySize")
-    public native long getEncodedBodySize();
+    public native double getEncodedBodySize();
     
     @JsProperty(name="decodedBodySize")
-    public native long getDecodedBodySize();
+    public native double getDecodedBodySize();
     
     @JsProperty(name="serverTiming")
     public native PerformanceServerTiming[] getServerTiming();

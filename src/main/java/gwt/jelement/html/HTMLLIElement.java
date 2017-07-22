@@ -31,7 +31,7 @@ public class HTMLLIElement extends HTMLElement{
     }
     
     @JsProperty(name="value")
-    public long value;
+    public double value;
     
     @JsProperty(name="type")
     public String type;

@@ -23,13 +23,13 @@ import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, isNative = true)
 public class EXTDisjointTimerQueryWebGL2{
-    public static final int QUERY_COUNTER_BITS_EXT = 0x8864;
-    public static final int TIME_ELAPSED_EXT = 0x88BF;
-    public static final int TIMESTAMP_EXT = 0x8E28;
-    public static final int GPU_DISJOINT_EXT = 0x8FBB;
+    public static int QUERY_COUNTER_BITS_EXT;
+    public static int TIME_ELAPSED_EXT;
+    public static int TIMESTAMP_EXT;
+    public static int GPU_DISJOINT_EXT;
     
     
     @JsMethod(name = "queryCounterEXT")
-    public native void queryCounterEXT(WebGLQuery query, long target);
+    public native void queryCounterEXT(WebGLQuery query, double target);
     
 }

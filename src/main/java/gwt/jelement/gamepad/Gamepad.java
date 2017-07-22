@@ -31,13 +31,13 @@ public class Gamepad{
     public native String getId();
     
     @JsProperty(name="index")
-    public native long getIndex();
+    public native double getIndex();
     
     @JsProperty(name="connected")
     public native boolean getConnected();
     
     @JsProperty(name="timestamp")
-    public native long getTimestamp();
+    public native double getTimestamp();
     
     @JsProperty(name="mapping")
     public native String getMapping();
@@ -52,7 +52,7 @@ public class Gamepad{
     public native GamepadPose getPose();
     
     @JsOverlay
-    public  GamepadHand getHandAsGamepadHand(){
+    public final GamepadHand getHandAsGamepadHand(){
         return GamepadHand.of(getHand());
     }
     
@@ -60,7 +60,7 @@ public class Gamepad{
     public native String getHand();
     
     @JsProperty(name="displayId")
-    public native long getDisplayId();
+    public native double getDisplayId();
     
     
 }

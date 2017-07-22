@@ -17,6 +17,7 @@
 package gwt.jelement.animation;
 
 import gwt.jelement.animation.ScrollDirection;
+import gwt.jelement.animation.ScrollTimeline;
 import gwt.jelement.dom.Element;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
@@ -27,38 +28,14 @@ import jsinterop.base.Js;
 @JsType(namespace = JsPackage.GLOBAL, isNative = true)
 public class ScrollTimelineOptions{
 
-    @JsType(isNative = true, name = "?", namespace = JsPackage.GLOBAL)
-    public interface DoubleOrScrollTimelineAutoKeywordUnionType {
-        @JsOverlay
-        default double asDouble(){
-            return Js.cast(this);
-        }
-    
-        @JsOverlay
-        default String asString(){
-            return Js.cast(this);
-        }
-    
-        @JsOverlay
-        default boolean isDouble(){
-            return (Object) this instanceof Double;
-        }
-    
-        @JsOverlay
-        default boolean isString(){
-            return (Object) this instanceof String;
-        }
-    
-    }
-    
     @JsProperty(name="scrollSource")
     public Element scrollSource;
 
     @JsProperty(name="orientation")
-    public ScrollDirection orientation = ScrollDirection.of("block");
+    public ScrollDirection orientation;
 
     @JsProperty(name="timeRange")
-    public ScrollTimelineOptions.DoubleOrScrollTimelineAutoKeywordUnionType timeRange = Js.cast("auto");
+    public ScrollTimeline.DoubleOrScrollTimelineAutoKeywordUnionType timeRange;
 
 
 }

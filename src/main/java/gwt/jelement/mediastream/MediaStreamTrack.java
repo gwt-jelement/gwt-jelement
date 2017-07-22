@@ -67,7 +67,7 @@ public class MediaStreamTrack extends EventTarget{
     public native boolean getMuted();
     
     @JsOverlay
-    public  MediaStreamTrackState getReadyStateAsMediaStreamTrackState(){
+    public final MediaStreamTrackState getReadyStateAsMediaStreamTrackState(){
         return MediaStreamTrackState.of(getReadyState());
     }
     

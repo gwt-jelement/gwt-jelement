@@ -31,8 +31,8 @@ import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, isNative = true)
 public class SharedWorkerGlobalScope extends WorkerGlobalScope{
-    public static final int TEMPORARY = 0;
-    public static final int PERSISTENT = 1;
+    public static int TEMPORARY;
+    public static int PERSISTENT;
     
     
     @JsConstructor
@@ -50,16 +50,16 @@ public class SharedWorkerGlobalScope extends WorkerGlobalScope{
     public native void close();
     
     @JsMethod(name = "webkitRequestFileSystem")
-    public native void webkitRequestFileSystem(short type, long size);
+    public native void webkitRequestFileSystem(short type, double size);
     
     @JsMethod(name = "webkitRequestFileSystem")
-    public native void webkitRequestFileSystem(short type, long size, FileSystemCallback successCallback);
+    public native void webkitRequestFileSystem(short type, double size, FileSystemCallback successCallback);
     
     @JsMethod(name = "webkitRequestFileSystem")
-    public native void webkitRequestFileSystem(short type, long size, FileSystemCallback successCallback, ErrorCallback errorCallback);
+    public native void webkitRequestFileSystem(short type, double size, FileSystemCallback successCallback, ErrorCallback errorCallback);
     
     @JsMethod(name = "webkitRequestFileSystemSync")
-    public native DOMFileSystemSync webkitRequestFileSystemSync(short type, long size);
+    public native DOMFileSystemSync webkitRequestFileSystemSync(short type, double size);
     
     @JsMethod(name = "webkitResolveLocalFileSystemSyncURL")
     public native EntrySync webkitResolveLocalFileSystemSyncURL(String url);

@@ -26,34 +26,34 @@ import jsinterop.annotations.JsType;
 public class MouseEventInit extends EventModifierInit{
 
     @JsProperty(name="screenX")
-    public double screenX = 0;
+    public double screenX;
 
     @JsProperty(name="screenY")
-    public double screenY = 0;
+    public double screenY;
 
     @JsProperty(name="clientX")
-    public double clientX = 0;
+    public double clientX;
 
     @JsProperty(name="clientY")
-    public double clientY = 0;
+    public double clientY;
 
     @JsProperty(name="button")
-    public short button = 0;
+    public short button;
 
     @JsProperty(name="buttons")
-    public short buttons = 0;
+    public short buttons;
 
     @JsProperty(name="relatedTarget")
-    public EventTarget relatedTarget = null;
+    public EventTarget relatedTarget;
 
     @JsProperty(name="movementX")
-    public long movementX = 0;
+    public double movementX;
 
     @JsProperty(name="movementY")
-    public long movementY = 0;
+    public double movementY;
 
     @JsProperty(name="region")
-    public String region = null;
+    public String region;
 
 
 }

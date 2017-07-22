@@ -29,22 +29,22 @@ import jsinterop.annotations.JsType;
 public class ImageBitmapOptions{
 
     @JsProperty(name="imageOrientation")
-    public ImageOrientation imageOrientation = ImageOrientation.of("none");
+    public ImageOrientation imageOrientation;
 
     @JsProperty(name="premultiplyAlpha")
-    public PremultiplyAlpha premultiplyAlpha = PremultiplyAlpha.of("default");
+    public PremultiplyAlpha premultiplyAlpha;
 
     @JsProperty(name="colorSpaceConversion")
-    public ColorSpaceConversion colorSpaceConversion = ColorSpaceConversion.of("default");
+    public ColorSpaceConversion colorSpaceConversion;
 
     @JsProperty(name="resizeWidth")
-    public long resizeWidth;
+    public double resizeWidth;
 
     @JsProperty(name="resizeHeight")
-    public long resizeHeight;
+    public double resizeHeight;
 
     @JsProperty(name="resizeQuality")
-    public ResizeQuality resizeQuality = ResizeQuality.of("low");
+    public ResizeQuality resizeQuality;
 
 
 }

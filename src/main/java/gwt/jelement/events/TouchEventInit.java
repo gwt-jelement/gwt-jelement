@@ -26,13 +26,13 @@ import jsinterop.annotations.JsType;
 public class TouchEventInit extends EventModifierInit{
 
     @JsProperty(name="touches")
-    public Touch[] touches = new Touch[0];
+    public Touch[] touches;
 
     @JsProperty(name="targetTouches")
-    public Touch[] targetTouches = new Touch[0];
+    public Touch[] targetTouches;
 
     @JsProperty(name="changedTouches")
-    public Touch[] changedTouches = new Touch[0];
+    public Touch[] changedTouches;
 
 
 }

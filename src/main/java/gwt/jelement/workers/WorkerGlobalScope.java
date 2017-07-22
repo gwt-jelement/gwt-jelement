@@ -74,7 +74,7 @@ public class WorkerGlobalScope extends EventTarget{
     public native WorkerNavigator getNavigator();
     
     @JsOverlay
-    public  AddressSpace getAddressSpaceAsAddressSpace(){
+    public final AddressSpace getAddressSpaceAsAddressSpace(){
         return AddressSpace.of(getAddressSpace());
     }
     
@@ -109,13 +109,13 @@ public class WorkerGlobalScope extends EventTarget{
     public native void clearInterval();
     
     @JsMethod(name = "clearInterval")
-    public native void clearInterval(long handle);
+    public native void clearInterval(double handle);
     
     @JsMethod(name = "clearTimeout")
     public native void clearTimeout();
     
     @JsMethod(name = "clearTimeout")
-    public native void clearTimeout(long handle);
+    public native void clearTimeout(double handle);
     
     @JsMethod(name = "createImageBitmap")
     public native Promise createImageBitmap(HTMLImageElement imageBitmap);
@@ -166,52 +166,52 @@ public class WorkerGlobalScope extends EventTarget{
     public native Promise createImageBitmap(OffscreenCanvas imageBitmap, ImageBitmapOptions options);
     
     @JsMethod(name = "createImageBitmap")
-    public native Promise createImageBitmap(HTMLImageElement imageBitmap, long sx, long sy, long sw, long sh);
+    public native Promise createImageBitmap(HTMLImageElement imageBitmap, double sx, double sy, double sw, double sh);
     
     @JsMethod(name = "createImageBitmap")
-    public native Promise createImageBitmap(SVGImageElement imageBitmap, long sx, long sy, long sw, long sh);
+    public native Promise createImageBitmap(SVGImageElement imageBitmap, double sx, double sy, double sw, double sh);
     
     @JsMethod(name = "createImageBitmap")
-    public native Promise createImageBitmap(HTMLVideoElement imageBitmap, long sx, long sy, long sw, long sh);
+    public native Promise createImageBitmap(HTMLVideoElement imageBitmap, double sx, double sy, double sw, double sh);
     
     @JsMethod(name = "createImageBitmap")
-    public native Promise createImageBitmap(HTMLCanvasElement imageBitmap, long sx, long sy, long sw, long sh);
+    public native Promise createImageBitmap(HTMLCanvasElement imageBitmap, double sx, double sy, double sw, double sh);
     
     @JsMethod(name = "createImageBitmap")
-    public native Promise createImageBitmap(Blob imageBitmap, long sx, long sy, long sw, long sh);
+    public native Promise createImageBitmap(Blob imageBitmap, double sx, double sy, double sw, double sh);
     
     @JsMethod(name = "createImageBitmap")
-    public native Promise createImageBitmap(ImageData imageBitmap, long sx, long sy, long sw, long sh);
+    public native Promise createImageBitmap(ImageData imageBitmap, double sx, double sy, double sw, double sh);
     
     @JsMethod(name = "createImageBitmap")
-    public native Promise createImageBitmap(ImageBitmap imageBitmap, long sx, long sy, long sw, long sh);
+    public native Promise createImageBitmap(ImageBitmap imageBitmap, double sx, double sy, double sw, double sh);
     
     @JsMethod(name = "createImageBitmap")
-    public native Promise createImageBitmap(OffscreenCanvas imageBitmap, long sx, long sy, long sw, long sh);
+    public native Promise createImageBitmap(OffscreenCanvas imageBitmap, double sx, double sy, double sw, double sh);
     
     @JsMethod(name = "createImageBitmap")
-    public native Promise createImageBitmap(HTMLImageElement imageBitmap, long sx, long sy, long sw, long sh, ImageBitmapOptions options);
+    public native Promise createImageBitmap(HTMLImageElement imageBitmap, double sx, double sy, double sw, double sh, ImageBitmapOptions options);
     
     @JsMethod(name = "createImageBitmap")
-    public native Promise createImageBitmap(SVGImageElement imageBitmap, long sx, long sy, long sw, long sh, ImageBitmapOptions options);
+    public native Promise createImageBitmap(SVGImageElement imageBitmap, double sx, double sy, double sw, double sh, ImageBitmapOptions options);
     
     @JsMethod(name = "createImageBitmap")
-    public native Promise createImageBitmap(HTMLVideoElement imageBitmap, long sx, long sy, long sw, long sh, ImageBitmapOptions options);
+    public native Promise createImageBitmap(HTMLVideoElement imageBitmap, double sx, double sy, double sw, double sh, ImageBitmapOptions options);
     
     @JsMethod(name = "createImageBitmap")
-    public native Promise createImageBitmap(HTMLCanvasElement imageBitmap, long sx, long sy, long sw, long sh, ImageBitmapOptions options);
+    public native Promise createImageBitmap(HTMLCanvasElement imageBitmap, double sx, double sy, double sw, double sh, ImageBitmapOptions options);
     
     @JsMethod(name = "createImageBitmap")
-    public native Promise createImageBitmap(Blob imageBitmap, long sx, long sy, long sw, long sh, ImageBitmapOptions options);
+    public native Promise createImageBitmap(Blob imageBitmap, double sx, double sy, double sw, double sh, ImageBitmapOptions options);
     
     @JsMethod(name = "createImageBitmap")
-    public native Promise createImageBitmap(ImageData imageBitmap, long sx, long sy, long sw, long sh, ImageBitmapOptions options);
+    public native Promise createImageBitmap(ImageData imageBitmap, double sx, double sy, double sw, double sh, ImageBitmapOptions options);
     
     @JsMethod(name = "createImageBitmap")
-    public native Promise createImageBitmap(ImageBitmap imageBitmap, long sx, long sy, long sw, long sh, ImageBitmapOptions options);
+    public native Promise createImageBitmap(ImageBitmap imageBitmap, double sx, double sy, double sw, double sh, ImageBitmapOptions options);
     
     @JsMethod(name = "createImageBitmap")
-    public native Promise createImageBitmap(OffscreenCanvas imageBitmap, long sx, long sy, long sw, long sh, ImageBitmapOptions options);
+    public native Promise createImageBitmap(OffscreenCanvas imageBitmap, double sx, double sy, double sw, double sh, ImageBitmapOptions options);
     
     @JsMethod(name = "fetch")
     public native Promise<Response> fetch(Request input);
@@ -229,27 +229,27 @@ public class WorkerGlobalScope extends EventTarget{
     public native void importScripts(String urls);
     
     @JsMethod(name = "setInterval")
-    public native long setInterval(Function handler);
+    public native double setInterval(Function handler);
     
     @JsMethod(name = "setInterval")
-    public native long setInterval(String handler);
+    public native double setInterval(String handler);
     
     @JsMethod(name = "setInterval")
-    public native long setInterval(Function handler, long timeout, Any arguments);
+    public native double setInterval(Function handler, double timeout, Any arguments);
     
     @JsMethod(name = "setInterval")
-    public native long setInterval(String handler, long timeout, Any arguments);
+    public native double setInterval(String handler, double timeout, Any arguments);
     
     @JsMethod(name = "setTimeout")
-    public native long setTimeout(Function handler);
+    public native double setTimeout(Function handler);
     
     @JsMethod(name = "setTimeout")
-    public native long setTimeout(String handler);
+    public native double setTimeout(String handler);
     
     @JsMethod(name = "setTimeout")
-    public native long setTimeout(Function handler, long timeout, Any arguments);
+    public native double setTimeout(Function handler, double timeout, Any arguments);
     
     @JsMethod(name = "setTimeout")
-    public native long setTimeout(String handler, long timeout, Any arguments);
+    public native double setTimeout(String handler, double timeout, Any arguments);
     
 }

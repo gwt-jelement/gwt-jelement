@@ -24,10 +24,10 @@ import jsinterop.annotations.JsType;
 public class WebGLTexture{
     
     @JsProperty(name="lastUploadedVideoWidth")
-    public native long getLastUploadedVideoWidth();
+    public native double getLastUploadedVideoWidth();
     
     @JsProperty(name="lastUploadedVideoHeight")
-    public native long getLastUploadedVideoHeight();
+    public native double getLastUploadedVideoHeight();
     
     @JsProperty(name="lastUploadedVideoTimestamp")
     public native double getLastUploadedVideoTimestamp();

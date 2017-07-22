@@ -31,10 +31,10 @@ public class HTMLTableCellElement extends HTMLElement{
     }
     
     @JsProperty(name="colSpan")
-    public long colSpan;
+    public double colSpan;
     
     @JsProperty(name="rowSpan")
-    public long rowSpan;
+    public double rowSpan;
     
     @JsProperty(name="headers")
     public String headers;
@@ -73,7 +73,7 @@ public class HTMLTableCellElement extends HTMLElement{
     public String scope;
     
     @JsProperty(name="cellIndex")
-    public native long getCellIndex();
+    public native double getCellIndex();
     
     
 }

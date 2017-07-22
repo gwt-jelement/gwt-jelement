@@ -38,7 +38,7 @@ public class ParentNode{
     public native Element getLastElementChild();
     
     @JsProperty(name="childElementCount")
-    public native long getChildElementCount();
+    public native double getChildElementCount();
     
     @JsMethod(name = "append")
     public native void append(Node nodes);

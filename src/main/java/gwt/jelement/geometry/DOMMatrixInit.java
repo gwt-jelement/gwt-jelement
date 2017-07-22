@@ -48,10 +48,10 @@ public class DOMMatrixInit{
     public double m12;
 
     @JsProperty(name="m13")
-    public double m13 = 0;
+    public double m13;
 
     @JsProperty(name="m14")
-    public double m14 = 0;
+    public double m14;
 
     @JsProperty(name="m21")
     public double m21;
@@ -60,22 +60,22 @@ public class DOMMatrixInit{
     public double m22;
 
     @JsProperty(name="m23")
-    public double m23 = 0;
+    public double m23;
 
     @JsProperty(name="m24")
-    public double m24 = 0;
+    public double m24;
 
     @JsProperty(name="m31")
-    public double m31 = 0;
+    public double m31;
 
     @JsProperty(name="m32")
-    public double m32 = 0;
+    public double m32;
 
     @JsProperty(name="m33")
-    public double m33 = 1;
+    public double m33;
 
     @JsProperty(name="m34")
-    public double m34 = 0;
+    public double m34;
 
     @JsProperty(name="m41")
     public double m41;
@@ -84,10 +84,10 @@ public class DOMMatrixInit{
     public double m42;
 
     @JsProperty(name="m43")
-    public double m43 = 0;
+    public double m43;
 
     @JsProperty(name="m44")
-    public double m44 = 1;
+    public double m44;
 
     @JsProperty(name="is2D")
     public boolean is2D;

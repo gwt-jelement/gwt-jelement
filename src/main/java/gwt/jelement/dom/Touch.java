@@ -31,7 +31,7 @@ public class Touch{
     }
     
     @JsProperty(name="identifier")
-    public native long getIdentifier();
+    public native double getIdentifier();
     
     @JsProperty(name="target")
     public native EventTarget getTarget();

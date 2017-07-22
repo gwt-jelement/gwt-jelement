@@ -25,16 +25,16 @@ import jsinterop.annotations.JsType;
 public class AnalyserOptions extends AudioNodeOptions{
 
     @JsProperty(name="fftSize")
-    public long fftSize = 2048;
+    public double fftSize;
 
     @JsProperty(name="maxDecibels")
-    public float maxDecibels = -30;
+    public float maxDecibels;
 
     @JsProperty(name="minDecibels")
-    public float minDecibels = -100;
+    public float minDecibels;
 
     @JsProperty(name="smoothingTimeConstant")
-    public float smoothingTimeConstant = 0.8f;
+    public float smoothingTimeConstant;
 
 
 }

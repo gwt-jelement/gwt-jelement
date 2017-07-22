@@ -93,7 +93,7 @@ public class HTMLTableElement extends HTMLElement{
     public native void deleteCaption();
     
     @JsMethod(name = "deleteRow")
-    public native void deleteRow(long index);
+    public native void deleteRow(double index);
     
     @JsMethod(name = "deleteTFoot")
     public native void deleteTFoot();
@@ -105,6 +105,6 @@ public class HTMLTableElement extends HTMLElement{
     public native HTMLTableRowElement insertRow();
     
     @JsMethod(name = "insertRow")
-    public native HTMLTableRowElement insertRow(long index);
+    public native HTMLTableRowElement insertRow(double index);
     
 }

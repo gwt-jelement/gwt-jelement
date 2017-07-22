@@ -27,9 +27,9 @@ import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, isNative = true)
 public class EventSource extends EventTarget{
-    public static final int CONNECTING = 0;
-    public static final int OPEN = 1;
-    public static final int CLOSED = 2;
+    public static int CONNECTING;
+    public static int OPEN;
+    public static int CLOSED;
     
     
     @JsConstructor

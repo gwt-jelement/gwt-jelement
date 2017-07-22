@@ -28,10 +28,10 @@ public class VREyeParameters{
     public native Float32Array getOffset();
     
     @JsProperty(name="renderWidth")
-    public native long getRenderWidth();
+    public native double getRenderWidth();
     
     @JsProperty(name="renderHeight")
-    public native long getRenderHeight();
+    public native double getRenderHeight();
     
     
 }

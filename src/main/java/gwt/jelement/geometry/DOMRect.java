@@ -22,6 +22,7 @@ import gwt.jelement.geometry.DOMRectReadOnly;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsPackage;
+import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, isNative = true)
@@ -51,6 +52,18 @@ public class DOMRect extends DOMRectReadOnly{
     public DOMRect(double x, double y, double width, double height){
         super();
     }
+    
+    @JsProperty(name="x")
+    public double x;
+    
+    @JsProperty(name="y")
+    public double y;
+    
+    @JsProperty(name="width")
+    public double width;
+    
+    @JsProperty(name="height")
+    public double height;
     
     @JsMethod(name = "fromRect")
     public native DOMRect fromRect();

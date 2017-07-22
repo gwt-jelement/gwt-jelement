@@ -26,12 +26,12 @@ import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, isNative = true)
 public class ApplicationCache extends EventTarget{
-    public static final int UNCACHED = 0;
-    public static final int IDLE = 1;
-    public static final int CHECKING = 2;
-    public static final int DOWNLOADING = 3;
-    public static final int UPDATEREADY = 4;
-    public static final int OBSOLETE = 5;
+    public static int UNCACHED;
+    public static int IDLE;
+    public static int CHECKING;
+    public static int DOWNLOADING;
+    public static int UPDATEREADY;
+    public static int OBSOLETE;
     
     
     @JsConstructor

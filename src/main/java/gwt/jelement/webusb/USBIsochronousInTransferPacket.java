@@ -36,7 +36,7 @@ public class USBIsochronousInTransferPacket{
     }
     
     @JsOverlay
-    public  USBTransferStatus getStatusAsUSBTransferStatus(){
+    public final USBTransferStatus getStatusAsUSBTransferStatus(){
         return USBTransferStatus.of(getStatus());
     }
     

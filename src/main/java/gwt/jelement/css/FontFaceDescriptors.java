@@ -24,25 +24,25 @@ import jsinterop.annotations.JsType;
 public class FontFaceDescriptors{
 
     @JsProperty(name="style")
-    public String style = "normal";
+    public String style;
 
     @JsProperty(name="weight")
-    public String weight = "normal";
+    public String weight;
 
     @JsProperty(name="stretch")
-    public String stretch = "normal";
+    public String stretch;
 
     @JsProperty(name="unicodeRange")
-    public String unicodeRange = "U+0-10FFFF";
+    public String unicodeRange;
 
     @JsProperty(name="variant")
-    public String variant = "normal";
+    public String variant;
 
     @JsProperty(name="featureSettings")
-    public String featureSettings = "normal";
+    public String featureSettings;
 
     @JsProperty(name="display")
-    public String display = "auto";
+    public String display;
 
 
 }

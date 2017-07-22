@@ -88,7 +88,7 @@ public class RTCPeerConnection extends EventTarget{
     public native RTCSessionDescription getRemoteDescription();
     
     @JsOverlay
-    public  RTCSignalingState getSignalingStateAsRTCSignalingState(){
+    public final RTCSignalingState getSignalingStateAsRTCSignalingState(){
         return RTCSignalingState.of(getSignalingState());
     }
     
@@ -96,7 +96,7 @@ public class RTCPeerConnection extends EventTarget{
     public native String getSignalingState();
     
     @JsOverlay
-    public  RTCIceGatheringState getIceGatheringStateAsRTCIceGatheringState(){
+    public final RTCIceGatheringState getIceGatheringStateAsRTCIceGatheringState(){
         return RTCIceGatheringState.of(getIceGatheringState());
     }
     
@@ -104,7 +104,7 @@ public class RTCPeerConnection extends EventTarget{
     public native String getIceGatheringState();
     
     @JsOverlay
-    public  RTCIceConnectionState getIceConnectionStateAsRTCIceConnectionState(){
+    public final RTCIceConnectionState getIceConnectionStateAsRTCIceConnectionState(){
         return RTCIceConnectionState.of(getIceConnectionState());
     }
     

@@ -55,7 +55,7 @@ public class IDBRequest extends EventTarget{
     public native IDBTransaction getTransaction();
     
     @JsOverlay
-    public  IDBRequestReadyState getReadyStateAsIDBRequestReadyState(){
+    public final IDBRequestReadyState getReadyStateAsIDBRequestReadyState(){
         return IDBRequestReadyState.of(getReadyState());
     }
     

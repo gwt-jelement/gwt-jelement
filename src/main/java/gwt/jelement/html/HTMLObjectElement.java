@@ -66,13 +66,13 @@ public class HTMLObjectElement extends HTMLElement{
     public boolean declare;
     
     @JsProperty(name="hspace")
-    public long hspace;
+    public double hspace;
     
     @JsProperty(name="standby")
     public String standby;
     
     @JsProperty(name="vspace")
-    public long vspace;
+    public double vspace;
     
     @JsProperty(name="codeBase")
     public String codeBase;

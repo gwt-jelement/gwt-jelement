@@ -26,7 +26,7 @@ import jsinterop.annotations.JsType;
 public class Blob{
     
     @JsProperty(name="size")
-    public native long getSize();
+    public native double getSize();
     
     @JsProperty(name="type")
     public native String getType();
@@ -41,12 +41,12 @@ public class Blob{
     public native Blob slice();
     
     @JsMethod(name = "slice")
-    public native Blob slice(long start);
+    public native Blob slice(double start);
     
     @JsMethod(name = "slice")
-    public native Blob slice(long start, long end);
+    public native Blob slice(double start, double end);
     
     @JsMethod(name = "slice")
-    public native Blob slice(long start, long end, String contentType);
+    public native Blob slice(double start, double end, String contentType);
     
 }

@@ -47,7 +47,7 @@ public class SpeechRecognition extends EventTarget{
     public boolean interimResults;
     
     @JsProperty(name="maxAlternatives")
-    public long maxAlternatives;
+    public double maxAlternatives;
     
     @JsProperty(name="audioTrack")
     public MediaStreamTrack audioTrack;

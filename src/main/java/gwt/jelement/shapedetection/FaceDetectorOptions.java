@@ -24,10 +24,10 @@ import jsinterop.annotations.JsType;
 public class FaceDetectorOptions{
 
     @JsProperty(name="maxDetectedFaces")
-    public short maxDetectedFaces = 10;
+    public short maxDetectedFaces;
 
     @JsProperty(name="fastMode")
-    public boolean fastMode = false;
+    public boolean fastMode;
 
 
 }

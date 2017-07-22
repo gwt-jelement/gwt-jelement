@@ -27,10 +27,10 @@ public class MediaImage{
     public String src;
 
     @JsProperty(name="sizes")
-    public String sizes = "";
+    public String sizes;
 
     @JsProperty(name="type")
-    public String type = "";
+    public String type;
 
 
 }

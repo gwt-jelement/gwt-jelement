@@ -28,7 +28,7 @@ public class AddEventListenerOptions extends EventListenerOptions{
     public boolean passive;
 
     @JsProperty(name="once")
-    public boolean once = false;
+    public boolean once;
 
 
 }

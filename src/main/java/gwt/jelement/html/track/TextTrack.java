@@ -44,7 +44,7 @@ public class TextTrack extends EventTarget{
     public EventHandlerNonNull oncuechange;
     
     @JsOverlay
-    public  TextTrackKind getKindAsTextTrackKind(){
+    public final TextTrackKind getKindAsTextTrackKind(){
         return TextTrackKind.of(getKind());
     }
     

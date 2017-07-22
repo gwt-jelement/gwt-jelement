@@ -16,6 +16,7 @@
  */
 package gwt.jelement.peerconnection;
 
+import gwt.jelement.indexeddb.IDBObjectStoreParameters;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -25,32 +26,8 @@ import jsinterop.base.Js;
 @JsType(namespace = JsPackage.GLOBAL, isNative = true)
 public class RTCIceServer{
 
-    @JsType(isNative = true, name = "?", namespace = JsPackage.GLOBAL)
-    public interface StringOrStringArrayUnionType {
-        @JsOverlay
-        default String asString(){
-            return Js.cast(this);
-        }
-    
-        @JsOverlay
-        default String[] asStringArray(){
-            return Js.cast(this);
-        }
-    
-        @JsOverlay
-        default boolean isString(){
-            return (Object) this instanceof String;
-        }
-    
-        @JsOverlay
-        default boolean isStringArray(){
-            return (Object) this instanceof String[];
-        }
-    
-    }
-    
     @JsProperty(name="urls")
-    public RTCIceServer.StringOrStringArrayUnionType urls;
+    public IDBObjectStoreParameters.StringOrStringArrayUnionType urls;
 
     @JsProperty(name="url")
     public String url;

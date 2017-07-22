@@ -27,22 +27,22 @@ import jsinterop.annotations.JsType;
 public class MediaKeySystemConfiguration{
 
     @JsProperty(name="label")
-    public String label = "";
+    public String label;
 
     @JsProperty(name="initDataTypes")
-    public String[] initDataTypes = new String[0];
+    public String[] initDataTypes;
 
     @JsProperty(name="audioCapabilities")
-    public MediaKeySystemMediaCapability[] audioCapabilities = new MediaKeySystemMediaCapability[0];
+    public MediaKeySystemMediaCapability[] audioCapabilities;
 
     @JsProperty(name="videoCapabilities")
-    public MediaKeySystemMediaCapability[] videoCapabilities = new MediaKeySystemMediaCapability[0];
+    public MediaKeySystemMediaCapability[] videoCapabilities;
 
     @JsProperty(name="distinctiveIdentifier")
-    public MediaKeysRequirement distinctiveIdentifier = MediaKeysRequirement.of("optional");
+    public MediaKeysRequirement distinctiveIdentifier;
 
     @JsProperty(name="persistentState")
-    public MediaKeysRequirement persistentState = MediaKeysRequirement.of("optional");
+    public MediaKeysRequirement persistentState;
 
     @JsProperty(name="sessionTypes")
     public String[] sessionTypes;

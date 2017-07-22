@@ -138,22 +138,22 @@ public class Element extends Node{
     public native HTMLSlotElement getAssignedSlot();
     
     @JsProperty(name="scrollWidth")
-    public native long getScrollWidth();
+    public native double getScrollWidth();
     
     @JsProperty(name="scrollHeight")
-    public native long getScrollHeight();
+    public native double getScrollHeight();
     
     @JsProperty(name="clientTop")
-    public native long getClientTop();
+    public native double getClientTop();
     
     @JsProperty(name="clientLeft")
-    public native long getClientLeft();
+    public native double getClientLeft();
     
     @JsProperty(name="clientWidth")
-    public native long getClientWidth();
+    public native double getClientWidth();
     
     @JsProperty(name="clientHeight")
-    public native long getClientHeight();
+    public native double getClientHeight();
     
     @JsProperty(name="styleMap")
     public native StylePropertyMap getStyleMap();
@@ -177,7 +177,7 @@ public class Element extends Node{
     public native Element getLastElementChild();
     
     @JsProperty(name="childElementCount")
-    public native long getChildElementCount();
+    public native double getChildElementCount();
     
     @JsProperty(name="previousElementSibling")
     public native Element getPreviousElementSibling();
@@ -276,7 +276,7 @@ public class Element extends Node{
     public native boolean hasAttributes();
     
     @JsMethod(name = "hasPointerCapture")
-    public native boolean hasPointerCapture(long pointerId);
+    public native boolean hasPointerCapture(double pointerId);
     
     @JsMethod(name = "insertAdjacentElement")
     public native Element insertAdjacentElement(String where, Element element);
@@ -303,7 +303,7 @@ public class Element extends Node{
     public native NodeList querySelectorAll(String selectors);
     
     @JsMethod(name = "releasePointerCapture")
-    public native void releasePointerCapture(long pointerId);
+    public native void releasePointerCapture(double pointerId);
     
     @JsMethod(name = "remove")
     public native void remove();
@@ -372,7 +372,7 @@ public class Element extends Node{
     public native void scrollTo(double x, double y);
     
     @JsOverlay
-    public void setApplyScroll(ScrollStateCallback scrollStateCallback, NativeScrollBehavior nativeScrollBehavior){
+    public final void setApplyScroll(ScrollStateCallback scrollStateCallback, NativeScrollBehavior nativeScrollBehavior){
         setApplyScroll(scrollStateCallback, nativeScrollBehavior.getInternalValue());
     }
     
@@ -392,7 +392,7 @@ public class Element extends Node{
     public native Attr setAttributeNodeNS(Attr attr);
     
     @JsOverlay
-    public void setDistributeScroll(ScrollStateCallback scrollStateCallback, NativeScrollBehavior nativeScrollBehavior){
+    public final void setDistributeScroll(ScrollStateCallback scrollStateCallback, NativeScrollBehavior nativeScrollBehavior){
         setDistributeScroll(scrollStateCallback, nativeScrollBehavior.getInternalValue());
     }
     
@@ -400,7 +400,7 @@ public class Element extends Node{
     public native void setDistributeScroll(ScrollStateCallback scrollStateCallback, String nativeScrollBehavior);
     
     @JsMethod(name = "setPointerCapture")
-    public native void setPointerCapture(long pointerId);
+    public native void setPointerCapture(double pointerId);
     
     @JsMethod(name = "webkitMatchesSelector")
     public native boolean webkitMatchesSelector(String selectors);

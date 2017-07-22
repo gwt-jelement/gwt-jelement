@@ -26,10 +26,10 @@ import jsinterop.annotations.JsType;
 public class SVGNumberList{
     
     @JsProperty(name="length")
-    public native long getLength();
+    public native double getLength();
     
     @JsProperty(name="numberOfItems")
-    public native long getNumberOfItems();
+    public native double getNumberOfItems();
     
     @JsMethod(name = "appendItem")
     public native SVGNumber appendItem(SVGNumber newItem);
@@ -41,12 +41,12 @@ public class SVGNumberList{
     public native SVGNumber initialize(SVGNumber newItem);
     
     @JsMethod(name = "insertItemBefore")
-    public native SVGNumber insertItemBefore(SVGNumber newItem, long index);
+    public native SVGNumber insertItemBefore(SVGNumber newItem, double index);
     
     @JsMethod(name = "removeItem")
-    public native SVGNumber removeItem(long index);
+    public native SVGNumber removeItem(double index);
     
     @JsMethod(name = "replaceItem")
-    public native SVGNumber replaceItem(SVGNumber newItem, long index);
+    public native SVGNumber replaceItem(SVGNumber newItem, double index);
     
 }

@@ -51,13 +51,13 @@ public class IntersectionObserverInit{
     }
     
     @JsProperty(name="root")
-    public Element root = null;
+    public Element root;
 
     @JsProperty(name="rootMargin")
-    public String rootMargin = "0px";
+    public String rootMargin;
 
     @JsProperty(name="threshold")
-    public IntersectionObserverInit.DoubleOrDoubleArrayUnionType threshold = Js.cast(0);
+    public IntersectionObserverInit.DoubleOrDoubleArrayUnionType threshold;
 
 
 }

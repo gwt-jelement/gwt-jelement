@@ -25,7 +25,7 @@ import jsinterop.annotations.JsType;
 public class KeyframeAnimationOptions extends KeyframeEffectOptions{
 
     @JsProperty(name="id")
-    public String id = "";
+    public String id;
 
 
 }

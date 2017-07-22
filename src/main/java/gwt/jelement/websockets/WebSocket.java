@@ -31,10 +31,10 @@ import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, isNative = true)
 public class WebSocket extends EventTarget{
-    public static final int CONNECTING = 0;
-    public static final int OPEN = 1;
-    public static final int CLOSING = 2;
-    public static final int CLOSED = 3;
+    public static int CONNECTING;
+    public static int OPEN;
+    public static int CLOSING;
+    public static int CLOSED;
     
     
     @JsConstructor
@@ -64,7 +64,7 @@ public class WebSocket extends EventTarget{
     public native short getReadyState();
     
     @JsProperty(name="bufferedAmount")
-    public native long getBufferedAmount();
+    public native double getBufferedAmount();
     
     @JsProperty(name="extensions")
     public native String getExtensions();

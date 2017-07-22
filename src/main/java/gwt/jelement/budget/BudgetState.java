@@ -27,7 +27,7 @@ public class BudgetState{
     public native double getBudgetAt();
     
     @JsProperty(name="time")
-    public native long getTime();
+    public native double getTime();
     
     
 }

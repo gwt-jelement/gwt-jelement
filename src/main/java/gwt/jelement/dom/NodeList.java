@@ -24,7 +24,7 @@ import jsinterop.annotations.JsType;
 public class NodeList{
     
     @JsProperty(name="length")
-    public native long getLength();
+    public native double getLength();
     
     
 }

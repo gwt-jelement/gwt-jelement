@@ -31,7 +31,7 @@ public class MediaDeviceInfo{
     public native String getDeviceId();
     
     @JsOverlay
-    public  MediaDeviceKind getKindAsMediaDeviceKind(){
+    public final MediaDeviceKind getKindAsMediaDeviceKind(){
         return MediaDeviceKind.of(getKind());
     }
     

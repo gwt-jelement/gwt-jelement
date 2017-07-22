@@ -24,10 +24,10 @@ import jsinterop.annotations.JsType;
 public class ElementRegistrationOptions{
 
     @JsProperty(name="prototype")
-    public Object prototype = null;
+    public Object prototype;
 
     @JsProperty(name="extends")
-    public String extends_ = null;
+    public String extends_;
 
 
 }

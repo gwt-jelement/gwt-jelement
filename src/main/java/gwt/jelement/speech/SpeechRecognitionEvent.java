@@ -39,7 +39,7 @@ public class SpeechRecognitionEvent extends Event{
     }
     
     @JsProperty(name="resultIndex")
-    public native long getResultIndex();
+    public native double getResultIndex();
     
     @JsProperty(name="results")
     public native SpeechRecognitionResultList getResults();

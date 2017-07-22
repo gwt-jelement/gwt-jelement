@@ -22,20 +22,20 @@ import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, isNative = true)
 public class SVGPreserveAspectRatio{
-    public static final int SVG_PRESERVEASPECTRATIO_UNKNOWN = 0;
-    public static final int SVG_PRESERVEASPECTRATIO_NONE = 1;
-    public static final int SVG_PRESERVEASPECTRATIO_XMINYMIN = 2;
-    public static final int SVG_PRESERVEASPECTRATIO_XMIDYMIN = 3;
-    public static final int SVG_PRESERVEASPECTRATIO_XMAXYMIN = 4;
-    public static final int SVG_PRESERVEASPECTRATIO_XMINYMID = 5;
-    public static final int SVG_PRESERVEASPECTRATIO_XMIDYMID = 6;
-    public static final int SVG_PRESERVEASPECTRATIO_XMAXYMID = 7;
-    public static final int SVG_PRESERVEASPECTRATIO_XMINYMAX = 8;
-    public static final int SVG_PRESERVEASPECTRATIO_XMIDYMAX = 9;
-    public static final int SVG_PRESERVEASPECTRATIO_XMAXYMAX = 10;
-    public static final int SVG_MEETORSLICE_UNKNOWN = 0;
-    public static final int SVG_MEETORSLICE_MEET = 1;
-    public static final int SVG_MEETORSLICE_SLICE = 2;
+    public static int SVG_PRESERVEASPECTRATIO_UNKNOWN;
+    public static int SVG_PRESERVEASPECTRATIO_NONE;
+    public static int SVG_PRESERVEASPECTRATIO_XMINYMIN;
+    public static int SVG_PRESERVEASPECTRATIO_XMIDYMIN;
+    public static int SVG_PRESERVEASPECTRATIO_XMAXYMIN;
+    public static int SVG_PRESERVEASPECTRATIO_XMINYMID;
+    public static int SVG_PRESERVEASPECTRATIO_XMIDYMID;
+    public static int SVG_PRESERVEASPECTRATIO_XMAXYMID;
+    public static int SVG_PRESERVEASPECTRATIO_XMINYMAX;
+    public static int SVG_PRESERVEASPECTRATIO_XMIDYMAX;
+    public static int SVG_PRESERVEASPECTRATIO_XMAXYMAX;
+    public static int SVG_MEETORSLICE_UNKNOWN;
+    public static int SVG_MEETORSLICE_MEET;
+    public static int SVG_MEETORSLICE_SLICE;
     
     
     @JsProperty(name="align")

@@ -59,7 +59,7 @@ public class BluetoothRemoteGATTCharacteristic extends EventTarget{
     public native Promise<BluetoothRemoteGATTDescriptor> getDescriptor(String descriptor);
     
     @JsMethod(name = "getDescriptor")
-    public native Promise<BluetoothRemoteGATTDescriptor> getDescriptor(long descriptor);
+    public native Promise<BluetoothRemoteGATTDescriptor> getDescriptor(double descriptor);
     
     @JsMethod(name = "getDescriptors")
     public native Promise<BluetoothRemoteGATTDescriptor[]> getDescriptors();
@@ -68,7 +68,7 @@ public class BluetoothRemoteGATTCharacteristic extends EventTarget{
     public native Promise<BluetoothRemoteGATTDescriptor[]> getDescriptors(String descriptor);
     
     @JsMethod(name = "getDescriptors")
-    public native Promise<BluetoothRemoteGATTDescriptor[]> getDescriptors(long descriptor);
+    public native Promise<BluetoothRemoteGATTDescriptor[]> getDescriptors(double descriptor);
     
     @JsMethod(name = "readValue")
     public native Promise<DataView> readValue();

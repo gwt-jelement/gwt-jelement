@@ -41,15 +41,15 @@ import jsinterop.base.Any;
 
 @JsType(namespace = JsPackage.GLOBAL, isNative = true)
 public class HTMLMediaElement extends HTMLElement{
-    public static final int NETWORK_EMPTY = 0;
-    public static final int NETWORK_IDLE = 1;
-    public static final int NETWORK_LOADING = 2;
-    public static final int NETWORK_NO_SOURCE = 3;
-    public static final int HAVE_NOTHING = 0;
-    public static final int HAVE_METADATA = 1;
-    public static final int HAVE_CURRENT_DATA = 2;
-    public static final int HAVE_FUTURE_DATA = 3;
-    public static final int HAVE_ENOUGH_DATA = 4;
+    public static int NETWORK_EMPTY;
+    public static int NETWORK_IDLE;
+    public static int NETWORK_LOADING;
+    public static int NETWORK_NO_SOURCE;
+    public static int HAVE_NOTHING;
+    public static int HAVE_METADATA;
+    public static int HAVE_CURRENT_DATA;
+    public static int HAVE_FUTURE_DATA;
+    public static int HAVE_ENOUGH_DATA;
     
     
     @JsConstructor
@@ -151,10 +151,10 @@ public class HTMLMediaElement extends HTMLElement{
     public native TextTrackList getTextTracks();
     
     @JsProperty(name="webkitAudioDecodedByteCount")
-    public native long getWebkitAudioDecodedByteCount();
+    public native double getWebkitAudioDecodedByteCount();
     
     @JsProperty(name="webkitVideoDecodedByteCount")
-    public native long getWebkitVideoDecodedByteCount();
+    public native double getWebkitVideoDecodedByteCount();
     
     @JsProperty(name="sinkId")
     public native String getSinkId();
@@ -166,7 +166,7 @@ public class HTMLMediaElement extends HTMLElement{
     public native RemotePlayback getRemote();
     
     @JsOverlay
-    public TextTrack addTextTrack(TextTrackKind kind){
+    public final TextTrack addTextTrack(TextTrackKind kind){
         return addTextTrack(kind.getInternalValue());
     }
     
@@ -174,7 +174,7 @@ public class HTMLMediaElement extends HTMLElement{
     public native TextTrack addTextTrack(String kind);
     
     @JsOverlay
-    public TextTrack addTextTrack(TextTrackKind kind, String label){
+    public final TextTrack addTextTrack(TextTrackKind kind, String label){
         return addTextTrack(kind.getInternalValue(), label);
     }
     
@@ -182,7 +182,7 @@ public class HTMLMediaElement extends HTMLElement{
     public native TextTrack addTextTrack(String kind, String label);
     
     @JsOverlay
-    public TextTrack addTextTrack(TextTrackKind kind, String label, String language){
+    public final TextTrack addTextTrack(TextTrackKind kind, String label, String language){
         return addTextTrack(kind.getInternalValue(), label, language);
     }
     
@@ -190,7 +190,7 @@ public class HTMLMediaElement extends HTMLElement{
     public native TextTrack addTextTrack(String kind, String label, String language);
     
     @JsOverlay
-    public CanPlayTypeResult canPlayTypeAsCanPlayTypeResult(String type){
+    public final CanPlayTypeResult canPlayTypeAsCanPlayTypeResult(String type){
         return CanPlayTypeResult.of(canPlayType(type));
     }
     

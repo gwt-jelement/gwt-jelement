@@ -28,13 +28,13 @@ public class PagePopupController{
     public native void closePopup();
     
     @JsMethod(name = "formatMonth")
-    public native String formatMonth(long year, long zeroBaseMonth);
+    public native String formatMonth(double year, double zeroBaseMonth);
     
     @JsMethod(name = "formatShortMonth")
-    public native String formatShortMonth(long year, long zeroBaseMonth);
+    public native String formatShortMonth(double year, double zeroBaseMonth);
     
     @JsMethod(name = "formatWeek")
-    public native String formatWeek(long year, long weekNumber, String localizedStartDate);
+    public native String formatWeek(double year, double weekNumber, String localizedStartDate);
     
     @JsMethod(name = "localizeNumberString")
     public native String localizeNumberString(String numberString);
@@ -46,9 +46,9 @@ public class PagePopupController{
     public native void setValue(String value);
     
     @JsMethod(name = "setValueAndClosePopup")
-    public native void setValueAndClosePopup(long numberValue, String stringValue);
+    public native void setValueAndClosePopup(double numberValue, String stringValue);
     
     @JsMethod(name = "setWindowRect")
-    public native void setWindowRect(long x, long y, long width, long height);
+    public native void setWindowRect(double x, double y, double width, double height);
     
 }

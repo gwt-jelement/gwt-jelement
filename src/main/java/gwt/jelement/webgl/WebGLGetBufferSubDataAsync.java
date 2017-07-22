@@ -26,12 +26,12 @@ import jsinterop.annotations.JsType;
 public class WebGLGetBufferSubDataAsync{
     
     @JsMethod(name = "getBufferSubDataAsync")
-    public native Promise<ArrayBufferView> getBufferSubDataAsync(long target, long srcByteOffset, ArrayBufferView dstData);
+    public native Promise<ArrayBufferView> getBufferSubDataAsync(double target, double srcByteOffset, ArrayBufferView dstData);
     
     @JsMethod(name = "getBufferSubDataAsync")
-    public native Promise<ArrayBufferView> getBufferSubDataAsync(long target, long srcByteOffset, ArrayBufferView dstData, long dstOffset);
+    public native Promise<ArrayBufferView> getBufferSubDataAsync(double target, double srcByteOffset, ArrayBufferView dstData, double dstOffset);
     
     @JsMethod(name = "getBufferSubDataAsync")
-    public native Promise<ArrayBufferView> getBufferSubDataAsync(long target, long srcByteOffset, ArrayBufferView dstData, long dstOffset, long length);
+    public native Promise<ArrayBufferView> getBufferSubDataAsync(double target, double srcByteOffset, ArrayBufferView dstData, double dstOffset, double length);
     
 }

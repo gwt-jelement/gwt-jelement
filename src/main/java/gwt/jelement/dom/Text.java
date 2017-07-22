@@ -49,6 +49,6 @@ public class Text extends CharacterData{
     public native NodeList getDestinationInsertionPoints();
     
     @JsMethod(name = "splitText")
-    public native Text splitText(long offset);
+    public native Text splitText(double offset);
     
 }

@@ -51,7 +51,7 @@ public class SecurityPolicyViolationEvent extends Event{
     public native String getOriginalPolicy();
     
     @JsOverlay
-    public  SecurityPolicyViolationEventDisposition getDispositionAsSecurityPolicyViolationEventDisposition(){
+    public final SecurityPolicyViolationEventDisposition getDispositionAsSecurityPolicyViolationEventDisposition(){
         return SecurityPolicyViolationEventDisposition.of(getDisposition());
     }
     
@@ -65,10 +65,10 @@ public class SecurityPolicyViolationEvent extends Event{
     public native short getStatusCode();
     
     @JsProperty(name="lineNumber")
-    public native long getLineNumber();
+    public native double getLineNumber();
     
     @JsProperty(name="columnNumber")
-    public native long getColumnNumber();
+    public native double getColumnNumber();
     
     @JsProperty(name="sample")
     public native String getSample();

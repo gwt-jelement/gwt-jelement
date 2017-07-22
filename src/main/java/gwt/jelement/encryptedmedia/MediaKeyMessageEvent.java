@@ -34,7 +34,7 @@ public class MediaKeyMessageEvent extends Event{
     }
     
     @JsOverlay
-    public  MediaKeyMessageType getMessageTypeAsMediaKeyMessageType(){
+    public final MediaKeyMessageType getMessageTypeAsMediaKeyMessageType(){
         return MediaKeyMessageType.of(getMessageType());
     }
     

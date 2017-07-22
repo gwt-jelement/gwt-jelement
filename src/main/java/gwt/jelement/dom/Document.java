@@ -71,6 +71,16 @@ public class Document extends Node{
     @JsType(isNative = true, name = "?", namespace = JsPackage.GLOBAL)
     public interface HTMLOrSVGScriptElement {
         @JsOverlay
+        static HTMLOrSVGScriptElement of(HTMLScriptElement value){
+            return Js.cast(value);
+        }
+    
+        @JsOverlay
+        static HTMLOrSVGScriptElement of(SVGScriptElement value){
+            return Js.cast(value);
+        }
+    
+        @JsOverlay
         default HTMLScriptElement asHTMLScriptElement(){
             return Js.cast(this);
         }
@@ -449,7 +459,7 @@ public class Document extends Node{
     public native String getLastModified();
     
     @JsOverlay
-    public  DocumentReadyState getReadyStateAsDocumentReadyState(){
+    public final DocumentReadyState getReadyStateAsDocumentReadyState(){
         return DocumentReadyState.of(getReadyState());
     }
     
@@ -499,7 +509,7 @@ public class Document extends Node{
     public native boolean getHidden();
     
     @JsOverlay
-    public  VisibilityState getVisibilityStateAsVisibilityState(){
+    public final VisibilityState getVisibilityStateAsVisibilityState(){
         return VisibilityState.of(getVisibilityState());
     }
     
@@ -507,7 +517,7 @@ public class Document extends Node{
     public native String getVisibilityState();
     
     @JsOverlay
-    public  AddressSpace getAddressSpaceAsAddressSpace(){
+    public final AddressSpace getAddressSpaceAsAddressSpace(){
         return AddressSpace.of(getAddressSpace());
     }
     
@@ -551,7 +561,7 @@ public class Document extends Node{
     public native Element getLastElementChild();
     
     @JsProperty(name="childElementCount")
-    public native long getChildElementCount();
+    public native double getChildElementCount();
     
     @JsProperty(name="activeElement")
     public native Element getActiveElement();
@@ -581,10 +591,10 @@ public class Document extends Node{
     public native Range caretRangeFromPoint();
     
     @JsMethod(name = "caretRangeFromPoint")
-    public native Range caretRangeFromPoint(long x);
+    public native Range caretRangeFromPoint(double x);
     
     @JsMethod(name = "caretRangeFromPoint")
-    public native Range caretRangeFromPoint(long x, long y);
+    public native Range caretRangeFromPoint(double x, double y);
     
     @JsMethod(name = "close")
     public native void close();
@@ -638,10 +648,10 @@ public class Document extends Node{
     public native NodeIterator createNodeIterator(Node root);
     
     @JsMethod(name = "createNodeIterator")
-    public native NodeIterator createNodeIterator(Node root, long whatToShow);
+    public native NodeIterator createNodeIterator(Node root, double whatToShow);
     
     @JsMethod(name = "createNodeIterator")
-    public native NodeIterator createNodeIterator(Node root, long whatToShow, NodeFilter filter);
+    public native NodeIterator createNodeIterator(Node root, double whatToShow, NodeFilter filter);
     
     @JsMethod(name = "createProcessingInstruction")
     public native ProcessingInstruction createProcessingInstruction(String target, String data);
@@ -653,19 +663,19 @@ public class Document extends Node{
     public native Text createTextNode(String data);
     
     @JsMethod(name = "createTouch")
-    public native Touch createTouch(Window view, EventTarget target, long identifier, double pageX, double pageY, double screenX, double screenY);
+    public native Touch createTouch(Window view, EventTarget target, double identifier, double pageX, double pageY, double screenX, double screenY);
     
     @JsMethod(name = "createTouch")
-    public native Touch createTouch(Window view, EventTarget target, long identifier, double pageX, double pageY, double screenX, double screenY, double radiusX);
+    public native Touch createTouch(Window view, EventTarget target, double identifier, double pageX, double pageY, double screenX, double screenY, double radiusX);
     
     @JsMethod(name = "createTouch")
-    public native Touch createTouch(Window view, EventTarget target, long identifier, double pageX, double pageY, double screenX, double screenY, double radiusX, double radiusY);
+    public native Touch createTouch(Window view, EventTarget target, double identifier, double pageX, double pageY, double screenX, double screenY, double radiusX, double radiusY);
     
     @JsMethod(name = "createTouch")
-    public native Touch createTouch(Window view, EventTarget target, long identifier, double pageX, double pageY, double screenX, double screenY, double radiusX, double radiusY, float rotationAngle);
+    public native Touch createTouch(Window view, EventTarget target, double identifier, double pageX, double pageY, double screenX, double screenY, double radiusX, double radiusY, float rotationAngle);
     
     @JsMethod(name = "createTouch")
-    public native Touch createTouch(Window view, EventTarget target, long identifier, double pageX, double pageY, double screenX, double screenY, double radiusX, double radiusY, float rotationAngle, float force);
+    public native Touch createTouch(Window view, EventTarget target, double identifier, double pageX, double pageY, double screenX, double screenY, double radiusX, double radiusY, float rotationAngle, float force);
     
     @JsMethod(name = "createTouchList")
     public native TouchList createTouchList(Touch touches);
@@ -674,16 +684,16 @@ public class Document extends Node{
     public native TreeWalker createTreeWalker(Node root);
     
     @JsMethod(name = "createTreeWalker")
-    public native TreeWalker createTreeWalker(Node root, long whatToShow);
+    public native TreeWalker createTreeWalker(Node root, double whatToShow);
     
     @JsMethod(name = "createTreeWalker")
-    public native TreeWalker createTreeWalker(Node root, long whatToShow, NodeFilter filter);
+    public native TreeWalker createTreeWalker(Node root, double whatToShow, NodeFilter filter);
     
     @JsMethod(name = "elementFromPoint")
-    public native Element elementFromPoint(long x, long y);
+    public native Element elementFromPoint(double x, double y);
     
     @JsMethod(name = "elementsFromPoint")
-    public native Element[] elementsFromPoint(long x, long y);
+    public native Element[] elementsFromPoint(double x, double y);
     
     @JsMethod(name = "evaluate")
     public native XPathResult evaluate(String expression, Node contextNode);

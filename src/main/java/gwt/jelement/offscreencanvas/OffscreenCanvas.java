@@ -41,6 +41,21 @@ public class OffscreenCanvas extends EventTarget{
     @JsType(isNative = true, name = "?", namespace = JsPackage.GLOBAL)
     public interface OffscreenRenderingContext {
         @JsOverlay
+        static OffscreenRenderingContext of(OffscreenCanvasRenderingContext2D value){
+            return Js.cast(value);
+        }
+    
+        @JsOverlay
+        static OffscreenRenderingContext of(WebGLRenderingContext value){
+            return Js.cast(value);
+        }
+    
+        @JsOverlay
+        static OffscreenRenderingContext of(WebGL2RenderingContext value){
+            return Js.cast(value);
+        }
+    
+        @JsOverlay
         default OffscreenCanvasRenderingContext2D asOffscreenCanvasRenderingContext2D(){
             return Js.cast(this);
         }
@@ -73,15 +88,15 @@ public class OffscreenCanvas extends EventTarget{
     }
     
     @JsConstructor
-    public OffscreenCanvas(long width, long height){
+    public OffscreenCanvas(double width, double height){
         super();
     }
     
     @JsProperty(name="width")
-    public long width;
+    public double width;
     
     @JsProperty(name="height")
-    public long height;
+    public double height;
     
     @JsMethod(name = "convertToBlob")
     public native Promise<Blob> convertToBlob();
@@ -90,7 +105,7 @@ public class OffscreenCanvas extends EventTarget{
     public native Promise<Blob> convertToBlob(ImageEncodeOptions options);
     
     @JsOverlay
-    public OffscreenCanvas.OffscreenRenderingContext getContext(OffscreenRenderingContextType contextType){
+    public final OffscreenCanvas.OffscreenRenderingContext getContext(OffscreenRenderingContextType contextType){
         return getContext(contextType.getInternalValue());
     }
     
@@ -98,7 +113,7 @@ public class OffscreenCanvas extends EventTarget{
     public native OffscreenCanvas.OffscreenRenderingContext getContext(String contextType);
     
     @JsOverlay
-    public OffscreenCanvas.OffscreenRenderingContext getContext(OffscreenRenderingContextType contextType, CanvasContextCreationAttributes attributes){
+    public final OffscreenCanvas.OffscreenRenderingContext getContext(OffscreenRenderingContextType contextType, CanvasContextCreationAttributes attributes){
         return getContext(contextType.getInternalValue(), attributes);
     }
     

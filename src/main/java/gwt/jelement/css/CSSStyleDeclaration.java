@@ -32,7 +32,7 @@ public class CSSStyleDeclaration{
     public String cssFloat;
     
     @JsProperty(name="length")
-    public native long getLength();
+    public native double getLength();
     
     @JsProperty(name="parentRule")
     public native CSSRule getParentRule();

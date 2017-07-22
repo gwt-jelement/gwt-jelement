@@ -21,9 +21,9 @@ import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, isNative = true)
 public class SVGUnitTypes{
-    public static final int SVG_UNIT_TYPE_UNKNOWN = 0;
-    public static final int SVG_UNIT_TYPE_USERSPACEONUSE = 1;
-    public static final int SVG_UNIT_TYPE_OBJECTBOUNDINGBOX = 2;
+    public static int SVG_UNIT_TYPE_UNKNOWN;
+    public static int SVG_UNIT_TYPE_USERSPACEONUSE;
+    public static int SVG_UNIT_TYPE_OBJECTBOUNDINGBOX;
     
     
     

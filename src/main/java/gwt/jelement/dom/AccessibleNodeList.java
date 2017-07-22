@@ -35,7 +35,7 @@ public class AccessibleNodeList{
     }
     
     @JsProperty(name="length")
-    public long length;
+    public double length;
     
     @JsMethod(name = "add")
     public native void add(AccessibleNode node);
@@ -44,6 +44,6 @@ public class AccessibleNodeList{
     public native void add(AccessibleNode node, AccessibleNode before);
     
     @JsMethod(name = "remove")
-    public native void remove(long index);
+    public native void remove(double index);
     
 }

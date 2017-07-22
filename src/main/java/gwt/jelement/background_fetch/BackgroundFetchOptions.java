@@ -25,13 +25,13 @@ import jsinterop.annotations.JsType;
 public class BackgroundFetchOptions{
 
     @JsProperty(name="icons")
-    public IconDefinition[] icons = new IconDefinition[0];
+    public IconDefinition[] icons;
 
     @JsProperty(name="title")
-    public String title = "";
+    public String title;
 
     @JsProperty(name="totalDownloadSize")
-    public long totalDownloadSize = 0;
+    public double totalDownloadSize;
 
 
 }

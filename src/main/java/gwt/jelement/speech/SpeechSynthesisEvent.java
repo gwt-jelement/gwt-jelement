@@ -35,7 +35,7 @@ public class SpeechSynthesisEvent extends Event{
     public native SpeechSynthesisUtterance getUtterance();
     
     @JsProperty(name="charIndex")
-    public native long getCharIndex();
+    public native double getCharIndex();
     
     @JsProperty(name="elapsedTime")
     public native float getElapsedTime();

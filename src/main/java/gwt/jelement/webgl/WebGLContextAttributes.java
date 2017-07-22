@@ -24,25 +24,25 @@ import jsinterop.annotations.JsType;
 public class WebGLContextAttributes{
 
     @JsProperty(name="alpha")
-    public boolean alpha = true;
+    public boolean alpha;
 
     @JsProperty(name="depth")
-    public boolean depth = true;
+    public boolean depth;
 
     @JsProperty(name="stencil")
-    public boolean stencil = false;
+    public boolean stencil;
 
     @JsProperty(name="antialias")
-    public boolean antialias = true;
+    public boolean antialias;
 
     @JsProperty(name="premultipliedAlpha")
-    public boolean premultipliedAlpha = true;
+    public boolean premultipliedAlpha;
 
     @JsProperty(name="preserveDrawingBuffer")
-    public boolean preserveDrawingBuffer = false;
+    public boolean preserveDrawingBuffer;
 
     @JsProperty(name="failIfMajorPerformanceCaveat")
-    public boolean failIfMajorPerformanceCaveat = false;
+    public boolean failIfMajorPerformanceCaveat;
 
 
 }

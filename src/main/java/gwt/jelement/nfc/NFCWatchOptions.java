@@ -27,16 +27,16 @@ import jsinterop.annotations.JsType;
 public class NFCWatchOptions{
 
     @JsProperty(name="url")
-    public String url = "";
+    public String url;
 
     @JsProperty(name="recordType")
     public NFCRecordType recordType;
 
     @JsProperty(name="mediaType")
-    public String mediaType = "";
+    public String mediaType;
 
     @JsProperty(name="mode")
-    public NFCWatchMode mode = NFCWatchMode.of("web-nfc-only");
+    public NFCWatchMode mode;
 
 
 }

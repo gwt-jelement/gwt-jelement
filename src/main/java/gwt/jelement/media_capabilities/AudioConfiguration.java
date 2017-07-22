@@ -30,10 +30,10 @@ public class AudioConfiguration{
     public String channels;
 
     @JsProperty(name="bitrate")
-    public long bitrate;
+    public double bitrate;
 
     @JsProperty(name="samplerate")
-    public long samplerate;
+    public double samplerate;
 
 
 }

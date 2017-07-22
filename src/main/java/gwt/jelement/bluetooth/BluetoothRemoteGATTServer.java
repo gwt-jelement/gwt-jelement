@@ -44,7 +44,7 @@ public class BluetoothRemoteGATTServer{
     public native Promise<BluetoothRemoteGATTService> getPrimaryService(String service);
     
     @JsMethod(name = "getPrimaryService")
-    public native Promise<BluetoothRemoteGATTService> getPrimaryService(long service);
+    public native Promise<BluetoothRemoteGATTService> getPrimaryService(double service);
     
     @JsMethod(name = "getPrimaryServices")
     public native Promise<BluetoothRemoteGATTService[]> getPrimaryServices();
@@ -53,6 +53,6 @@ public class BluetoothRemoteGATTServer{
     public native Promise<BluetoothRemoteGATTService[]> getPrimaryServices(String service);
     
     @JsMethod(name = "getPrimaryServices")
-    public native Promise<BluetoothRemoteGATTService[]> getPrimaryServices(long service);
+    public native Promise<BluetoothRemoteGATTService[]> getPrimaryServices(double service);
     
 }

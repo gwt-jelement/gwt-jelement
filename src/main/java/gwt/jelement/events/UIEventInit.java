@@ -27,13 +27,13 @@ import jsinterop.annotations.JsType;
 public class UIEventInit extends EventInit{
 
     @JsProperty(name="view")
-    public Window view = null;
+    public Window view;
 
     @JsProperty(name="detail")
-    public long detail = 0;
+    public double detail;
 
     @JsProperty(name="sourceCapabilities")
-    public InputDeviceCapabilities sourceCapabilities = null;
+    public InputDeviceCapabilities sourceCapabilities;
 
 
 }

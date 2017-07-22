@@ -30,7 +30,7 @@ import jsinterop.annotations.JsType;
 public class OfflineAudioContext extends BaseAudioContext{
     
     @JsConstructor
-    public OfflineAudioContext(long numberOfChannels, long numberOfFrames, float sampleRate){
+    public OfflineAudioContext(double numberOfChannels, double numberOfFrames, float sampleRate){
         super();
     }
     
@@ -38,7 +38,7 @@ public class OfflineAudioContext extends BaseAudioContext{
     public EventHandlerNonNull oncomplete;
     
     @JsProperty(name="length")
-    public native long getLength();
+    public native double getLength();
     
     @JsMethod(name = "startRendering")
     public native Promise<AudioBuffer> startRendering();

@@ -29,40 +29,40 @@ import jsinterop.base.Js;
 public class NotificationOptions{
 
     @JsType(isNative = true, name = "?", namespace = JsPackage.GLOBAL)
-    public interface LongOrLongArrayUnionType {
+    public interface DoubleOrDoubleArrayUnionType {
         @JsOverlay
-        default long asLong(){
+        default double asDouble(){
             return Js.cast(this);
         }
     
         @JsOverlay
-        default long[] asLongArray(){
+        default double[] asDoubleArray(){
             return Js.cast(this);
         }
     
         @JsOverlay
-        default boolean isLong(){
-            return (Object) this instanceof Long;
+        default boolean isDouble(){
+            return (Object) this instanceof Double;
         }
     
         @JsOverlay
-        default boolean isLongArray(){
-            return (Object) this instanceof long[];
+        default boolean isDoubleArray(){
+            return (Object) this instanceof double[];
         }
     
     }
     
     @JsProperty(name="dir")
-    public NotificationDirection dir = NotificationDirection.of("auto");
+    public NotificationDirection dir;
 
     @JsProperty(name="lang")
-    public String lang = "";
+    public String lang;
 
     @JsProperty(name="body")
-    public String body = "";
+    public String body;
 
     @JsProperty(name="tag")
-    public String tag = "";
+    public String tag;
 
     @JsProperty(name="image")
     public String image;
@@ -74,25 +74,25 @@ public class NotificationOptions{
     public String badge;
 
     @JsProperty(name="vibrate")
-    public NotificationOptions.LongOrLongArrayUnionType vibrate;
+    public NotificationOptions.DoubleOrDoubleArrayUnionType vibrate;
 
     @JsProperty(name="timestamp")
-    public long timestamp;
+    public double timestamp;
 
     @JsProperty(name="renotify")
-    public boolean renotify = false;
+    public boolean renotify;
 
     @JsProperty(name="silent")
-    public boolean silent = false;
+    public boolean silent;
 
     @JsProperty(name="requireInteraction")
-    public boolean requireInteraction = false;
+    public boolean requireInteraction;
 
     @JsProperty(name="data")
-    public Any data = null;
+    public Any data;
 
     @JsProperty(name="actions")
-    public NotificationAction[] actions = new NotificationAction[0];
+    public NotificationAction[] actions;
 
 
 }

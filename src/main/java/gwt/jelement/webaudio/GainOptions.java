@@ -25,7 +25,7 @@ import jsinterop.annotations.JsType;
 public class GainOptions extends AudioNodeOptions{
 
     @JsProperty(name="gain")
-    public float gain = 1;
+    public float gain;
 
 
 }

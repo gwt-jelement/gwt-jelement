@@ -21,7 +21,7 @@ import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, isNative = true)
 public class OESTextureHalfFloat{
-    public static final int HALF_FLOAT_OES = 0x8D61;
+    public static int HALF_FLOAT_OES;
     
     
     

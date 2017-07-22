@@ -28,13 +28,13 @@ import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, isNative = true)
 public class SVGFECompositeElement extends SVGElement{
-    public static final int SVG_FECOMPOSITE_OPERATOR_UNKNOWN = 0;
-    public static final int SVG_FECOMPOSITE_OPERATOR_OVER = 1;
-    public static final int SVG_FECOMPOSITE_OPERATOR_IN = 2;
-    public static final int SVG_FECOMPOSITE_OPERATOR_OUT = 3;
-    public static final int SVG_FECOMPOSITE_OPERATOR_ATOP = 4;
-    public static final int SVG_FECOMPOSITE_OPERATOR_XOR = 5;
-    public static final int SVG_FECOMPOSITE_OPERATOR_ARITHMETIC = 6;
+    public static int SVG_FECOMPOSITE_OPERATOR_UNKNOWN;
+    public static int SVG_FECOMPOSITE_OPERATOR_OVER;
+    public static int SVG_FECOMPOSITE_OPERATOR_IN;
+    public static int SVG_FECOMPOSITE_OPERATOR_OUT;
+    public static int SVG_FECOMPOSITE_OPERATOR_ATOP;
+    public static int SVG_FECOMPOSITE_OPERATOR_XOR;
+    public static int SVG_FECOMPOSITE_OPERATOR_ARITHMETIC;
     
     
     @JsConstructor

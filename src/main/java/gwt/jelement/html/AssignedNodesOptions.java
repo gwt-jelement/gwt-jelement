@@ -24,7 +24,7 @@ import jsinterop.annotations.JsType;
 public class AssignedNodesOptions{
 
     @JsProperty(name="flatten")
-    public boolean flatten = false;
+    public boolean flatten;
 
 
 }

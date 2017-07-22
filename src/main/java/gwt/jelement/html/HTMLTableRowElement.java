@@ -48,21 +48,21 @@ public class HTMLTableRowElement extends HTMLElement{
     public String bgColor;
     
     @JsProperty(name="rowIndex")
-    public native long getRowIndex();
+    public native double getRowIndex();
     
     @JsProperty(name="sectionRowIndex")
-    public native long getSectionRowIndex();
+    public native double getSectionRowIndex();
     
     @JsProperty(name="cells")
     public native HTMLCollection getCells();
     
     @JsMethod(name = "deleteCell")
-    public native void deleteCell(long index);
+    public native void deleteCell(double index);
     
     @JsMethod(name = "insertCell")
     public native HTMLElement insertCell();
     
     @JsMethod(name = "insertCell")
-    public native HTMLElement insertCell(long index);
+    public native HTMLElement insertCell(double index);
     
 }

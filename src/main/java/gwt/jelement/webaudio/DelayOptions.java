@@ -25,10 +25,10 @@ import jsinterop.annotations.JsType;
 public class DelayOptions extends AudioNodeOptions{
 
     @JsProperty(name="maxDelayTime")
-    public double maxDelayTime = 1;
+    public double maxDelayTime;
 
     @JsProperty(name="delayTime")
-    public double delayTime = 0;
+    public double delayTime;
 
 
 }

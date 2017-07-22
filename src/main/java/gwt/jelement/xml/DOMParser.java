@@ -28,7 +28,7 @@ import jsinterop.base.Any;
 public class DOMParser{
     
     @JsOverlay
-    public Document parseFromString(String str, SupportedType type){
+    public final Document parseFromString(String str, SupportedType type){
         return parseFromString(str, type.getInternalValue());
     }
     

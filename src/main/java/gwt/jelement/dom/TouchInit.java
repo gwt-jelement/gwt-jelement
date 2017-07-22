@@ -25,43 +25,43 @@ import jsinterop.annotations.JsType;
 public class TouchInit{
 
     @JsProperty(name="identifier")
-    public long identifier;
+    public double identifier;
 
     @JsProperty(name="target")
     public EventTarget target;
 
     @JsProperty(name="clientX")
-    public double clientX = 0;
+    public double clientX;
 
     @JsProperty(name="clientY")
-    public double clientY = 0;
+    public double clientY;
 
     @JsProperty(name="screenX")
-    public double screenX = 0;
+    public double screenX;
 
     @JsProperty(name="screenY")
-    public double screenY = 0;
+    public double screenY;
 
     @JsProperty(name="pageX")
-    public double pageX = 0;
+    public double pageX;
 
     @JsProperty(name="pageY")
-    public double pageY = 0;
+    public double pageY;
 
     @JsProperty(name="radiusX")
-    public float radiusX = 0;
+    public float radiusX;
 
     @JsProperty(name="radiusY")
-    public float radiusY = 0;
+    public float radiusY;
 
     @JsProperty(name="rotationAngle")
-    public float rotationAngle = 0;
+    public float rotationAngle;
 
     @JsProperty(name="force")
-    public float force = 0;
+    public float force;
 
     @JsProperty(name="region")
-    public String region = null;
+    public String region;
 
 
 }

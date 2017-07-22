@@ -38,7 +38,7 @@ public class SVGElement extends Element{
     }
     
     @JsProperty(name="tabIndex")
-    public long tabIndex;
+    public double tabIndex;
     
     @JsProperty(name="onabort")
     public EventHandlerNonNull onabort;
@@ -265,9 +265,6 @@ public class SVGElement extends Element{
     @JsProperty(name="className")
     public native SVGAnimatedString getClassName();
     
-    @JsProperty(name="className")
-    public native SVGAnimatedString getSVGAnimatedStringClassName();
-    
     @JsProperty(name="dataset")
     public native DOMStringMap getDataset();
     
@@ -279,9 +276,6 @@ public class SVGElement extends Element{
     
     @JsProperty(name="viewportElement")
     public native SVGElement getViewportElement();
-    
-    @JsProperty(name="className")
-    public native void setClassName(SVGAnimatedString className);
     
     @JsMethod(name = "blur")
     public native void blur();

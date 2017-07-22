@@ -38,7 +38,7 @@ public class AudioNode extends EventTarget{
     }
     
     @JsProperty(name="channelCount")
-    public long channelCount;
+    public double channelCount;
     
     @JsProperty(name="channelCountMode")
     public ChannelCountMode channelCountMode;
@@ -50,10 +50,10 @@ public class AudioNode extends EventTarget{
     public native BaseAudioContext getContext();
     
     @JsProperty(name="numberOfInputs")
-    public native long getNumberOfInputs();
+    public native double getNumberOfInputs();
     
     @JsProperty(name="numberOfOutputs")
-    public native long getNumberOfOutputs();
+    public native double getNumberOfOutputs();
     
     @JsMethod(name = "connect")
     public native AudioNode connect(AudioNode destination);
@@ -62,19 +62,19 @@ public class AudioNode extends EventTarget{
     public native void connect(AudioParam destination);
     
     @JsMethod(name = "connect")
-    public native AudioNode connect(AudioNode destination, long output);
+    public native AudioNode connect(AudioNode destination, double output);
     
     @JsMethod(name = "connect")
-    public native void connect(AudioParam destination, long output);
+    public native void connect(AudioParam destination, double output);
     
     @JsMethod(name = "connect")
-    public native AudioNode connect(AudioNode destination, long output, long input);
+    public native AudioNode connect(AudioNode destination, double output, double input);
     
     @JsMethod(name = "disconnect")
     public native void disconnect();
     
     @JsMethod(name = "disconnect")
-    public native void disconnect(long output);
+    public native void disconnect(double output);
     
     @JsMethod(name = "disconnect")
     public native void disconnect(AudioNode destination);
@@ -83,12 +83,12 @@ public class AudioNode extends EventTarget{
     public native void disconnect(AudioParam destination);
     
     @JsMethod(name = "disconnect")
-    public native void disconnect(AudioNode destination, long output);
+    public native void disconnect(AudioNode destination, double output);
     
     @JsMethod(name = "disconnect")
-    public native void disconnect(AudioParam destination, long output);
+    public native void disconnect(AudioParam destination, double output);
     
     @JsMethod(name = "disconnect")
-    public native void disconnect(AudioNode destination, long output, long input);
+    public native void disconnect(AudioNode destination, double output, double input);
     
 }

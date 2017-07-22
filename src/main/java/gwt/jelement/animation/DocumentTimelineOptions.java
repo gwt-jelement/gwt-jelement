@@ -24,7 +24,7 @@ import jsinterop.annotations.JsType;
 public class DocumentTimelineOptions{
 
     @JsProperty(name="originTime")
-    public double originTime = 0;
+    public double originTime;
 
 
 }

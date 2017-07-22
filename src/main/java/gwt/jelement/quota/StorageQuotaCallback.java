@@ -24,6 +24,6 @@ import jsinterop.annotations.JsType;
 public class StorageQuotaCallback{
     
     @JsMethod(name = "handleEvent")
-    public native void handleEvent(long grantedQuotaInBytes);
+    public native void handleEvent(double grantedQuotaInBytes);
     
 }

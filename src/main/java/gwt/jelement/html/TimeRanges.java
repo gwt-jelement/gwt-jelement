@@ -25,12 +25,12 @@ import jsinterop.annotations.JsType;
 public class TimeRanges{
     
     @JsProperty(name="length")
-    public native long getLength();
+    public native double getLength();
     
     @JsMethod(name = "end")
-    public native double end(long index);
+    public native double end(double index);
     
     @JsMethod(name = "start")
-    public native double start(long index);
+    public native double start(double index);
     
 }

@@ -51,7 +51,7 @@ public class IDBTransaction extends EventTarget{
     public native DOMStringList getObjectStoreNames();
     
     @JsOverlay
-    public  IDBTransactionMode getModeAsIDBTransactionMode(){
+    public final IDBTransactionMode getModeAsIDBTransactionMode(){
         return IDBTransactionMode.of(getMode());
     }
     

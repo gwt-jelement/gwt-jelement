@@ -27,10 +27,10 @@ public class PropertyDescriptor{
     public String name;
 
     @JsProperty(name="syntax")
-    public String syntax = "*";
+    public String syntax;
 
     @JsProperty(name="inherits")
-    public boolean inherits = false;
+    public boolean inherits;
 
     @JsProperty(name="initialValue")
     public String initialValue;

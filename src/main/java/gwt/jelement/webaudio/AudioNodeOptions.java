@@ -27,7 +27,7 @@ import jsinterop.annotations.JsType;
 public class AudioNodeOptions{
 
     @JsProperty(name="channelCount")
-    public long channelCount;
+    public double channelCount;
 
     @JsProperty(name="channelCountMode")
     public ChannelCountMode channelCountMode;

@@ -91,7 +91,7 @@ public class USBDevice{
     public native Promise<Void> claimInterface(byte interfaceNumber);
     
     @JsOverlay
-    public Promise<Void> clearHalt(USBDirection direction, byte endpointNumber){
+    public final Promise<Void> clearHalt(USBDirection direction, byte endpointNumber){
         return clearHalt(direction.getInternalValue(), endpointNumber);
     }
     
@@ -114,13 +114,13 @@ public class USBDevice{
     public native Promise<USBOutTransferResult> controlTransferOut(USBControlTransferParameters setup, ArrayBufferView data);
     
     @JsMethod(name = "isochronousTransferIn")
-    public native Promise<USBIsochronousInTransferResult> isochronousTransferIn(byte endpointNumber, long[] packetLengths);
+    public native Promise<USBIsochronousInTransferResult> isochronousTransferIn(byte endpointNumber, double[] packetLengths);
     
     @JsMethod(name = "isochronousTransferOut")
-    public native Promise<USBIsochronousOutTransferResult> isochronousTransferOut(byte endpointNumber, ArrayBuffer data, long[] packetLengths);
+    public native Promise<USBIsochronousOutTransferResult> isochronousTransferOut(byte endpointNumber, ArrayBuffer data, double[] packetLengths);
     
     @JsMethod(name = "isochronousTransferOut")
-    public native Promise<USBIsochronousOutTransferResult> isochronousTransferOut(byte endpointNumber, ArrayBufferView data, long[] packetLengths);
+    public native Promise<USBIsochronousOutTransferResult> isochronousTransferOut(byte endpointNumber, ArrayBufferView data, double[] packetLengths);
     
     @JsMethod(name = "open")
     public native Promise<Void> open();
@@ -138,7 +138,7 @@ public class USBDevice{
     public native Promise<Void> selectConfiguration(byte configurationValue);
     
     @JsMethod(name = "transferIn")
-    public native Promise<USBInTransferResult> transferIn(byte endpointNumber, long length);
+    public native Promise<USBInTransferResult> transferIn(byte endpointNumber, double length);
     
     @JsMethod(name = "transferOut")
     public native Promise<USBOutTransferResult> transferOut(byte endpointNumber, ArrayBuffer data);

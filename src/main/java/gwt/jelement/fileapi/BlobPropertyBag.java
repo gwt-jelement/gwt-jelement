@@ -26,10 +26,10 @@ import jsinterop.annotations.JsType;
 public class BlobPropertyBag{
 
     @JsProperty(name="type")
-    public String type = "";
+    public String type;
 
     @JsProperty(name="endings")
-    public NormalizeLineEndings endings = NormalizeLineEndings.of("transparent");
+    public NormalizeLineEndings endings;
 
 
 }

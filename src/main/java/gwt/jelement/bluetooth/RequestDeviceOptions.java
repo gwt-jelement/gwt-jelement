@@ -30,10 +30,10 @@ public class RequestDeviceOptions{
     public BluetoothLEScanFilterInit[] filters;
 
     @JsProperty(name="optionalServices")
-    public BluetoothLEScanFilterInit.BluetoothServiceUUID[] optionalServices = new BluetoothLEScanFilterInit.BluetoothServiceUUID[0];
+    public BluetoothLEScanFilterInit.BluetoothDescriptorUUID[] optionalServices;
 
     @JsProperty(name="acceptAllDevices")
-    public boolean acceptAllDevices = false;
+    public boolean acceptAllDevices;
 
 
 }

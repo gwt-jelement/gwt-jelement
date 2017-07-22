@@ -29,9 +29,9 @@ import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, isNative = true)
 public class SVGTextContentElement extends SVGGraphicsElement{
-    public static final int LENGTHADJUST_UNKNOWN = 0;
-    public static final int LENGTHADJUST_SPACING = 1;
-    public static final int LENGTHADJUST_SPACINGANDGLYPHS = 2;
+    public static int LENGTHADJUST_UNKNOWN;
+    public static int LENGTHADJUST_SPACING;
+    public static int LENGTHADJUST_SPACINGANDGLYPHS;
     
     
     @JsConstructor
@@ -46,30 +46,30 @@ public class SVGTextContentElement extends SVGGraphicsElement{
     public native SVGAnimatedEnumeration getLengthAdjust();
     
     @JsMethod(name = "getCharNumAtPosition")
-    public native long getCharNumAtPosition(SVGPoint point);
+    public native double getCharNumAtPosition(SVGPoint point);
     
     @JsMethod(name = "getComputedTextLength")
     public native float getComputedTextLength();
     
     @JsMethod(name = "getEndPositionOfChar")
-    public native SVGPoint getEndPositionOfChar(long charnum);
+    public native SVGPoint getEndPositionOfChar(double charnum);
     
     @JsMethod(name = "getExtentOfChar")
-    public native SVGRect getExtentOfChar(long charnum);
+    public native SVGRect getExtentOfChar(double charnum);
     
     @JsMethod(name = "getNumberOfChars")
-    public native long getNumberOfChars();
+    public native double getNumberOfChars();
     
     @JsMethod(name = "getRotationOfChar")
-    public native float getRotationOfChar(long charnum);
+    public native float getRotationOfChar(double charnum);
     
     @JsMethod(name = "getStartPositionOfChar")
-    public native SVGPoint getStartPositionOfChar(long charnum);
+    public native SVGPoint getStartPositionOfChar(double charnum);
     
     @JsMethod(name = "getSubStringLength")
-    public native float getSubStringLength(long charnum, long nchars);
+    public native float getSubStringLength(double charnum, double nchars);
     
     @JsMethod(name = "selectSubString")
-    public native void selectSubString(long charnum, long nchars);
+    public native void selectSubString(double charnum, double nchars);
     
 }

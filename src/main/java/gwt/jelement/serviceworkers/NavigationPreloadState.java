@@ -24,7 +24,7 @@ import jsinterop.annotations.JsType;
 public class NavigationPreloadState{
 
     @JsProperty(name="enabled")
-    public boolean enabled = false;
+    public boolean enabled;
 
     @JsProperty(name="headerValue")
     public String headerValue;

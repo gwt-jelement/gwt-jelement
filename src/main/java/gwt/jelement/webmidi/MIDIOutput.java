@@ -35,12 +35,12 @@ public class MIDIOutput extends MIDIPort{
     public native void send(Uint8Array data);
     
     @JsMethod(name = "send")
-    public native void send(long[] data);
+    public native void send(double[] data);
     
     @JsMethod(name = "send")
     public native void send(Uint8Array data, double timestamp);
     
     @JsMethod(name = "send")
-    public native void send(long[] data, double timestamp);
+    public native void send(double[] data, double timestamp);
     
 }

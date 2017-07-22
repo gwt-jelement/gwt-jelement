@@ -59,7 +59,7 @@ public class PerformanceNavigationTiming extends PerformanceResourceTiming{
     public native double getLoadEventEnd();
     
     @JsOverlay
-    public  NavigationType getTypeAsNavigationType(){
+    public final NavigationType getTypeAsNavigationType(){
         return NavigationType.of(getType());
     }
     
