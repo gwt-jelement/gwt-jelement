@@ -14,7 +14,8 @@
  * License for the specific language governing permissions and limitations under
  * the License.
  */
-package gwt.jelement.jelement;
+
+package gwt.jelement;
 
 import gwt.jelement.frame.Location;
 import gwt.jelement.frame.Navigator;
@@ -22,32 +23,15 @@ import gwt.jelement.frame.Screen;
 import gwt.jelement.frame.Window;
 import gwt.jelement.html.HTMLDocument;
 import jsinterop.annotations.JsPackage;
-import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
-public class Browser{
-    
-    @JsProperty(name="document")
+@JsType(name = "window", isNative = true, namespace = JsPackage.GLOBAL)
+public class Browser {
     public static HTMLDocument document;
-    
-    @JsProperty(name="location")
     public static Location location;
-    
-    @JsProperty(name="navigator")
     public static Navigator navigator;
-    
-    @JsProperty(name="screen")
     public static Screen screen;
-    
-    @JsProperty(name="self")
     public static Window self;
-    
-    @JsProperty(name="top")
     public static Window top;
-    
-    @JsProperty(name="window")
     public static Window window;
-    
-    
 }
