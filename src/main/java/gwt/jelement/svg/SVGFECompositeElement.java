@@ -43,40 +43,40 @@ public class SVGFECompositeElement extends SVGElement{
     }
     
     @JsProperty(name="in2")
-    public native SVGAnimatedString getIn2();
+    public SVGAnimatedString in2;
     
     @JsProperty(name="in1")
-    public native SVGAnimatedString getIn1();
+    public SVGAnimatedString in1;
     
     @JsProperty(name="operator")
-    public native SVGAnimatedEnumeration getOperator();
+    public SVGAnimatedEnumeration operator;
     
     @JsProperty(name="k1")
-    public native SVGAnimatedNumber getK1();
+    public SVGAnimatedNumber k1;
     
     @JsProperty(name="k2")
-    public native SVGAnimatedNumber getK2();
+    public SVGAnimatedNumber k2;
     
     @JsProperty(name="k3")
-    public native SVGAnimatedNumber getK3();
+    public SVGAnimatedNumber k3;
     
     @JsProperty(name="k4")
-    public native SVGAnimatedNumber getK4();
+    public SVGAnimatedNumber k4;
     
     @JsProperty(name="x")
-    public native SVGAnimatedLength getX();
+    public SVGAnimatedLength x;
     
     @JsProperty(name="y")
-    public native SVGAnimatedLength getY();
+    public SVGAnimatedLength y;
     
     @JsProperty(name="width")
-    public native SVGAnimatedLength getWidth();
+    public SVGAnimatedLength width;
     
     @JsProperty(name="height")
-    public native SVGAnimatedLength getHeight();
+    public SVGAnimatedLength height;
     
     @JsProperty(name="result")
-    public native SVGAnimatedString getResult();
+    public SVGAnimatedString result;
     
     
 }

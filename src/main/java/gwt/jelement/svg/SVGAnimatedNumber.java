@@ -27,7 +27,7 @@ public class SVGAnimatedNumber{
     public float baseVal;
     
     @JsProperty(name="animVal")
-    public native float getAnimVal();
+    public float animVal;
     
     
 }

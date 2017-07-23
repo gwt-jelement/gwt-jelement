@@ -24,22 +24,22 @@ import jsinterop.annotations.JsType;
 public class NavigatorID{
     
     @JsProperty(name="appCodeName")
-    public native String getAppCodeName();
+    public String appCodeName;
     
     @JsProperty(name="appName")
-    public native String getAppName();
+    public String appName;
     
     @JsProperty(name="appVersion")
-    public native String getAppVersion();
+    public String appVersion;
     
     @JsProperty(name="platform")
-    public native String getPlatform();
+    public String platform;
     
     @JsProperty(name="product")
-    public native String getProduct();
+    public String product;
     
     @JsProperty(name="userAgent")
-    public native String getUserAgent();
+    public String userAgent;
     
     
 }

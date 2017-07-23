@@ -31,7 +31,7 @@ public class IDBCursorWithValue extends IDBCursor{
     }
     
     @JsProperty(name="value")
-    public native Object getValue();
+    public Object value;
     
     
 }

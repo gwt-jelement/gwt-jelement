@@ -28,21 +28,20 @@ import jsinterop.annotations.JsType;
 public class IDBCursor{
     
     @JsProperty(name="source")
-    public native Object getSource();
-    
-    @JsOverlay
-    public final IDBCursorDirection getDirectionAsIDBCursorDirection(){
-        return IDBCursorDirection.of(getDirection());
-    }
+    public Object source;
     
     @JsProperty(name="direction")
-    public native String getDirection();
+    public String direction;
+    @JsOverlay
+    public final IDBCursorDirection getDirection(){
+       return IDBCursorDirection.of(direction);
+    }
     
     @JsProperty(name="key")
-    public native Object getKey();
+    public Object key;
     
     @JsProperty(name="primaryKey")
-    public native Object getPrimaryKey();
+    public Object primaryKey;
     
     @JsMethod(name = "advance")
     public native void advance(double count);

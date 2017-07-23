@@ -32,13 +32,13 @@ public class DocumentType extends Node{
     }
     
     @JsProperty(name="name")
-    public native String getName();
+    public String name;
     
     @JsProperty(name="publicId")
-    public native String getPublicId();
+    public String publicId;
     
     @JsProperty(name="systemId")
-    public native String getSystemId();
+    public String systemId;
     
     @JsMethod(name = "after")
     public native void after();

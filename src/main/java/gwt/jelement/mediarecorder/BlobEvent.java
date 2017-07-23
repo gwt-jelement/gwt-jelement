@@ -33,10 +33,10 @@ public class BlobEvent extends Event{
     }
     
     @JsProperty(name="data")
-    public native Blob getData();
+    public Blob data;
     
     @JsProperty(name="timecode")
-    public native double getTimecode();
+    public double timecode;
     
     
 }

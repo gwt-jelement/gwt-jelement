@@ -40,20 +40,20 @@ public class BluetoothRemoteGATTCharacteristic extends EventTarget{
         super();
     }
     
-    @JsProperty(name="oncharacteristicvaluechanged")
-    public EventHandlerNonNull oncharacteristicvaluechanged;
-    
     @JsProperty(name="service")
-    public native BluetoothRemoteGATTService getService();
+    public BluetoothRemoteGATTService service;
     
     @JsProperty(name="uuid")
-    public native String getUuid();
+    public String uuid;
     
     @JsProperty(name="properties")
-    public native BluetoothCharacteristicProperties getProperties();
+    public BluetoothCharacteristicProperties properties;
     
     @JsProperty(name="value")
-    public native DataView getValue();
+    public DataView value;
+    
+    @JsProperty(name="oncharacteristicvaluechanged")
+    public EventHandlerNonNull oncharacteristicvaluechanged;
     
     @JsMethod(name = "getDescriptor")
     public native Promise<BluetoothRemoteGATTDescriptor> getDescriptor(String descriptor);

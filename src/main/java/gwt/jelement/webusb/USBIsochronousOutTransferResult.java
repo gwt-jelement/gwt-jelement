@@ -30,7 +30,7 @@ public class USBIsochronousOutTransferResult{
     }
     
     @JsProperty(name="packets")
-    public native USBIsochronousOutTransferPacket[] getPackets();
+    public USBIsochronousOutTransferPacket[] packets;
     
     
 }

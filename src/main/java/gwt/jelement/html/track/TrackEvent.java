@@ -91,7 +91,7 @@ public class TrackEvent extends Event{
     }
     
     @JsProperty(name="track")
-    public native TrackEvent.VideoTrackOrAudioTrackOrTextTrackUnionType getTrack();
+    public TrackEvent.VideoTrackOrAudioTrackOrTextTrackUnionType track;
     
     
 }

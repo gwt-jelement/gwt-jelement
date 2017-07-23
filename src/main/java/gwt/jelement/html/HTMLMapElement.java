@@ -35,7 +35,7 @@ public class HTMLMapElement extends HTMLElement{
     public String name;
     
     @JsProperty(name="areas")
-    public native HTMLCollection getAreas();
+    public HTMLCollection areas;
     
     
 }

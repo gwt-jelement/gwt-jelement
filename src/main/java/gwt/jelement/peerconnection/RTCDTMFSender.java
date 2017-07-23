@@ -33,23 +33,23 @@ public class RTCDTMFSender extends EventTarget{
         super();
     }
     
-    @JsProperty(name="ontonechange")
-    public EventHandlerNonNull ontonechange;
-    
     @JsProperty(name="canInsertDTMF")
-    public native boolean getCanInsertDTMF();
+    public boolean canInsertDTMF;
     
     @JsProperty(name="track")
-    public native MediaStreamTrack getTrack();
+    public MediaStreamTrack track;
     
     @JsProperty(name="toneBuffer")
-    public native String getToneBuffer();
+    public String toneBuffer;
     
     @JsProperty(name="duration")
-    public native double getDuration();
+    public double duration;
     
     @JsProperty(name="interToneGap")
-    public native double getInterToneGap();
+    public double interToneGap;
+    
+    @JsProperty(name="ontonechange")
+    public EventHandlerNonNull ontonechange;
     
     @JsMethod(name = "insertDTMF")
     public native void insertDTMF(String tones);

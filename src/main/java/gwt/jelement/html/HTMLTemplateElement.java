@@ -32,7 +32,7 @@ public class HTMLTemplateElement extends HTMLElement{
     }
     
     @JsProperty(name="content")
-    public native DocumentFragment getContent();
+    public DocumentFragment content;
     
     
 }

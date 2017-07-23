@@ -26,17 +26,17 @@ import jsinterop.annotations.JsType;
 @JsType(namespace = JsPackage.GLOBAL, isNative = true)
 public class TreeWalker{
     
-    @JsProperty(name="currentNode")
-    public Node currentNode;
-    
     @JsProperty(name="root")
-    public native Node getRoot();
+    public Node root;
     
     @JsProperty(name="whatToShow")
-    public native double getWhatToShow();
+    public double whatToShow;
     
     @JsProperty(name="filter")
-    public native NodeFilter getFilter();
+    public NodeFilter filter;
+    
+    @JsProperty(name="currentNode")
+    public Node currentNode;
     
     @JsMethod(name = "firstChild")
     public native Node firstChild();

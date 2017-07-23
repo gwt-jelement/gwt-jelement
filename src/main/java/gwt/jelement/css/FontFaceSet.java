@@ -47,15 +47,14 @@ public class FontFaceSet extends EventTarget{
     public EventHandlerNonNull onloadingerror;
     
     @JsProperty(name="ready")
-    public native Promise<FontFaceSet> getReady();
-    
-    @JsOverlay
-    public final FontFaceSetLoadStatus getStatusAsFontFaceSetLoadStatus(){
-        return FontFaceSetLoadStatus.of(getStatus());
-    }
+    public Promise<FontFaceSet> ready;
     
     @JsProperty(name="status")
-    public native String getStatus();
+    public String status;
+    @JsOverlay
+    public final FontFaceSetLoadStatus getStatus(){
+       return FontFaceSetLoadStatus.of(status);
+    }
     
     @JsMethod(name = "check")
     public native boolean check(String font);

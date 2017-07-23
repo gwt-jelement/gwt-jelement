@@ -24,7 +24,7 @@ import jsinterop.annotations.JsType;
 public class BarProp{
     
     @JsProperty(name="visible")
-    public native boolean getVisible();
+    public boolean visible;
     
     
 }

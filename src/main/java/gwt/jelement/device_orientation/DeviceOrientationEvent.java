@@ -37,16 +37,16 @@ public class DeviceOrientationEvent extends Event{
     }
     
     @JsProperty(name="alpha")
-    public native double getAlpha();
+    public double alpha;
     
     @JsProperty(name="beta")
-    public native double getBeta();
+    public double beta;
     
     @JsProperty(name="gamma")
-    public native double getGamma();
+    public double gamma;
     
     @JsProperty(name="absolute")
-    public native boolean getAbsolute();
+    public boolean absolute;
     
     
 }

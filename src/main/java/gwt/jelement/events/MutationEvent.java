@@ -37,19 +37,19 @@ public class MutationEvent extends Event{
     }
     
     @JsProperty(name="relatedNode")
-    public native Node getRelatedNode();
+    public Node relatedNode;
     
     @JsProperty(name="prevValue")
-    public native String getPrevValue();
+    public String prevValue;
     
     @JsProperty(name="newValue")
-    public native String getNewValue();
+    public String newValue;
     
     @JsProperty(name="attrName")
-    public native String getAttrName();
+    public String attrName;
     
     @JsProperty(name="attrChange")
-    public native short getAttrChange();
+    public short attrChange;
     
     @JsMethod(name = "initMutationEvent")
     public native void initMutationEvent();

@@ -32,16 +32,16 @@ public class FederatedCredential extends Credential{
     }
     
     @JsProperty(name="provider")
-    public native String getProvider();
+    public String provider;
     
     @JsProperty(name="protocol")
-    public native String getProtocol();
+    public String protocol;
     
     @JsProperty(name="name")
-    public native String getName();
+    public String name;
     
     @JsProperty(name="iconURL")
-    public native String getIconURL();
+    public String iconURL;
     
     
 }

@@ -24,10 +24,10 @@ import jsinterop.annotations.JsType;
 public class BudgetState{
     
     @JsProperty(name="budgetAt")
-    public native double getBudgetAt();
+    public double budgetAt;
     
     @JsProperty(name="time")
-    public native double getTime();
+    public double time;
     
     
 }

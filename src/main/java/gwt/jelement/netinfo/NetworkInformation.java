@@ -34,36 +34,34 @@ public class NetworkInformation extends EventTarget{
         super();
     }
     
+    @JsProperty(name="type")
+    public String type;
+    @JsOverlay
+    public final ConnectionType getType(){
+       return ConnectionType.of(type);
+    }
+    
+    @JsProperty(name="downlinkMax")
+    public double downlinkMax;
+    
     @JsProperty(name="onchange")
     public EventHandlerNonNull onchange;
     
     @JsProperty(name="ontypechange")
     public EventHandlerNonNull ontypechange;
     
-    @JsOverlay
-    public final ConnectionType getTypeAsConnectionType(){
-        return ConnectionType.of(getType());
-    }
-    
-    @JsProperty(name="type")
-    public native String getType();
-    
-    @JsProperty(name="downlinkMax")
-    public native double getDownlinkMax();
-    
-    @JsOverlay
-    public final EffectiveConnectionType getEffectiveTypeAsEffectiveConnectionType(){
-        return EffectiveConnectionType.of(getEffectiveType());
-    }
-    
     @JsProperty(name="effectiveType")
-    public native String getEffectiveType();
+    public String effectiveType;
+    @JsOverlay
+    public final EffectiveConnectionType getEffectiveType(){
+       return EffectiveConnectionType.of(effectiveType);
+    }
     
     @JsProperty(name="rtt")
-    public native double getRtt();
+    public double rtt;
     
     @JsProperty(name="downlink")
-    public native double getDownlink();
+    public double downlink;
     
     
 }

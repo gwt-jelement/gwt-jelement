@@ -50,38 +50,47 @@ public class XMLHttpRequest extends XMLHttpRequestEventTarget{
     @JsProperty(name="onreadystatechange")
     public EventHandlerNonNull onreadystatechange;
     
+    @JsProperty(name="readyState")
+    public short readyState;
+    
     @JsProperty(name="timeout")
     public double timeout;
     
     @JsProperty(name="withCredentials")
     public boolean withCredentials;
     
-    @JsProperty(name="responseType")
-    public XMLHttpRequestResponseType responseType;
-    
-    @JsProperty(name="readyState")
-    public native short getReadyState();
-    
     @JsProperty(name="upload")
-    public native XMLHttpRequestUpload getUpload();
+    public XMLHttpRequestUpload upload;
     
     @JsProperty(name="responseURL")
-    public native String getResponseURL();
+    public String responseURL;
     
     @JsProperty(name="status")
-    public native short getStatus();
+    public short status;
     
     @JsProperty(name="statusText")
-    public native String getStatusText();
+    public String statusText;
+    
+    @JsProperty(name="responseType")
+    public String responseType;
+    @JsOverlay
+    public final XMLHttpRequestResponseType getResponseType(){
+       return XMLHttpRequestResponseType.of(responseType);
+    }
+    
+    @JsOverlay
+    public final void setResponseType(XMLHttpRequestResponseType responseType){
+       this.responseType = responseType.getInternalValue();
+    }
     
     @JsProperty(name="response")
-    public native Object getResponse();
+    public Object response;
     
     @JsProperty(name="responseText")
-    public native String getResponseText();
+    public String responseText;
     
     @JsProperty(name="responseXML")
-    public native Document getResponseXML();
+    public Document responseXML;
     
     @JsMethod(name = "abort")
     public native void abort();

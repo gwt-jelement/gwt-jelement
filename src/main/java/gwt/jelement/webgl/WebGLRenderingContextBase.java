@@ -346,13 +346,13 @@ public class WebGLRenderingContextBase{
     
     
     @JsProperty(name="canvas")
-    public native WebGL2RenderingContext.VRSource getCanvas();
+    public WebGL2RenderingContext.VRSource canvas;
     
     @JsProperty(name="drawingBufferWidth")
-    public native double getDrawingBufferWidth();
+    public double drawingBufferWidth;
     
     @JsProperty(name="drawingBufferHeight")
-    public native double getDrawingBufferHeight();
+    public double drawingBufferHeight;
     
     @JsMethod(name = "activeTexture")
     public native void activeTexture(double texture);

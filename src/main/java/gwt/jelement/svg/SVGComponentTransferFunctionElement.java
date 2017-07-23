@@ -41,25 +41,25 @@ public class SVGComponentTransferFunctionElement extends SVGElement{
     }
     
     @JsProperty(name="type")
-    public native SVGAnimatedEnumeration getType();
+    public SVGAnimatedEnumeration type;
     
     @JsProperty(name="tableValues")
-    public native SVGAnimatedNumberList getTableValues();
+    public SVGAnimatedNumberList tableValues;
     
     @JsProperty(name="slope")
-    public native SVGAnimatedNumber getSlope();
+    public SVGAnimatedNumber slope;
     
     @JsProperty(name="intercept")
-    public native SVGAnimatedNumber getIntercept();
+    public SVGAnimatedNumber intercept;
     
     @JsProperty(name="amplitude")
-    public native SVGAnimatedNumber getAmplitude();
+    public SVGAnimatedNumber amplitude;
     
     @JsProperty(name="exponent")
-    public native SVGAnimatedNumber getExponent();
+    public SVGAnimatedNumber exponent;
     
     @JsProperty(name="offset")
-    public native SVGAnimatedNumber getOffset();
+    public SVGAnimatedNumber offset;
     
     
 }

@@ -33,7 +33,7 @@ public class USBConnectionEvent extends Event{
     }
     
     @JsProperty(name="device")
-    public native USBDevice getDevice();
+    public USBDevice device;
     
     
 }

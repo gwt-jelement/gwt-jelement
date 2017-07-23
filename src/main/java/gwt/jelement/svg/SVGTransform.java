@@ -34,13 +34,13 @@ public class SVGTransform{
     
     
     @JsProperty(name="type")
-    public native short getType();
+    public short type;
     
     @JsProperty(name="matrix")
-    public native SVGMatrix getMatrix();
+    public SVGMatrix matrix;
     
     @JsProperty(name="angle")
-    public native float getAngle();
+    public float angle;
     
     @JsMethod(name = "setMatrix")
     public native void setMatrix(SVGMatrix matrix);

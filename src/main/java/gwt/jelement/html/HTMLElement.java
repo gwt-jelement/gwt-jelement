@@ -46,6 +46,9 @@ public class HTMLElement extends Element{
     @JsProperty(name="dir")
     public String dir;
     
+    @JsProperty(name="dataset")
+    public DOMStringMap dataset;
+    
     @JsProperty(name="hidden")
     public boolean hidden;
     
@@ -67,8 +70,29 @@ public class HTMLElement extends Element{
     @JsProperty(name="contentEditable")
     public String contentEditable;
     
+    @JsProperty(name="isContentEditable")
+    public boolean isContentEditable;
+    
     @JsProperty(name="inputMode")
     public String inputMode;
+    
+    @JsProperty(name="offsetParent")
+    public Element offsetParent;
+    
+    @JsProperty(name="offsetTop")
+    public double offsetTop;
+    
+    @JsProperty(name="offsetLeft")
+    public double offsetLeft;
+    
+    @JsProperty(name="offsetWidth")
+    public double offsetWidth;
+    
+    @JsProperty(name="offsetHeight")
+    public double offsetHeight;
+    
+    @JsProperty(name="style")
+    public CSSStyleDeclaration style;
     
     @JsProperty(name="innerText")
     public String innerText;
@@ -297,30 +321,6 @@ public class HTMLElement extends Element{
     
     @JsProperty(name="nonce")
     public String nonce;
-    
-    @JsProperty(name="dataset")
-    public native DOMStringMap getDataset();
-    
-    @JsProperty(name="isContentEditable")
-    public native boolean getIsContentEditable();
-    
-    @JsProperty(name="offsetParent")
-    public native Element getOffsetParent();
-    
-    @JsProperty(name="offsetTop")
-    public native double getOffsetTop();
-    
-    @JsProperty(name="offsetLeft")
-    public native double getOffsetLeft();
-    
-    @JsProperty(name="offsetWidth")
-    public native double getOffsetWidth();
-    
-    @JsProperty(name="offsetHeight")
-    public native double getOffsetHeight();
-    
-    @JsProperty(name="style")
-    public native CSSStyleDeclaration getStyle();
     
     @JsMethod(name = "blur")
     public native void blur();

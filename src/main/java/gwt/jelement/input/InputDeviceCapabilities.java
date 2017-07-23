@@ -34,7 +34,7 @@ public class InputDeviceCapabilities{
     }
     
     @JsProperty(name="firesTouchEvents")
-    public native boolean getFiresTouchEvents();
+    public boolean firesTouchEvents;
     
     
 }

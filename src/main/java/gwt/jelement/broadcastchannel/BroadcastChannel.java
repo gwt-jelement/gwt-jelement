@@ -32,14 +32,14 @@ public class BroadcastChannel extends EventTarget{
         super();
     }
     
+    @JsProperty(name="name")
+    public String name;
+    
     @JsProperty(name="onmessage")
     public EventHandlerNonNull onmessage;
     
     @JsProperty(name="onmessageerror")
     public EventHandlerNonNull onmessageerror;
-    
-    @JsProperty(name="name")
-    public native String getName();
     
     @JsMethod(name = "close")
     public native void close();

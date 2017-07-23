@@ -64,13 +64,13 @@ public class DOMException{
     }
     
     @JsProperty(name="code")
-    public native short getCode();
+    public short code;
     
     @JsProperty(name="name")
-    public native String getName();
+    public String name;
     
     @JsProperty(name="message")
-    public native String getMessage();
+    public String message;
     
     @JsMethod(name = "toString")
     public native String toString();

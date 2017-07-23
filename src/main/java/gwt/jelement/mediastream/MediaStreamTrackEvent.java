@@ -33,7 +33,7 @@ public class MediaStreamTrackEvent extends Event{
     }
     
     @JsProperty(name="track")
-    public native MediaStreamTrack getTrack();
+    public MediaStreamTrack track;
     
     
 }

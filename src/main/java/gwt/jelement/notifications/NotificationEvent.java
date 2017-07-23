@@ -33,13 +33,13 @@ public class NotificationEvent extends ExtendableEvent{
     }
     
     @JsProperty(name="notification")
-    public native Notification getNotification();
+    public Notification notification;
     
     @JsProperty(name="action")
-    public native String getAction();
+    public String action;
     
     @JsProperty(name="reply")
-    public native String getReply();
+    public String reply;
     
     
 }

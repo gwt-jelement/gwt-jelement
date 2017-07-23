@@ -32,37 +32,36 @@ import jsinterop.annotations.JsType;
 @JsType(namespace = JsPackage.GLOBAL, isNative = true)
 public class Response{
     
+    @JsProperty(name="type")
+    public String type;
     @JsOverlay
-    public final ResponseType getTypeAsResponseType(){
-        return ResponseType.of(getType());
+    public final ResponseType getType(){
+       return ResponseType.of(type);
     }
     
-    @JsProperty(name="type")
-    public native String getType();
-    
     @JsProperty(name="url")
-    public native String getUrl();
+    public String url;
     
     @JsProperty(name="redirected")
-    public native boolean getRedirected();
+    public boolean redirected;
     
     @JsProperty(name="status")
-    public native short getStatus();
+    public short status;
     
     @JsProperty(name="ok")
-    public native boolean getOk();
+    public boolean ok;
     
     @JsProperty(name="statusText")
-    public native String getStatusText();
+    public String statusText;
     
     @JsProperty(name="headers")
-    public native Headers getHeaders();
+    public Headers headers;
     
     @JsProperty(name="body")
-    public native Object getBody();
+    public Object body;
     
     @JsProperty(name="bodyUsed")
-    public native boolean getBodyUsed();
+    public boolean bodyUsed;
     
     @JsMethod(name = "arrayBuffer")
     public native Promise<ArrayBuffer> arrayBuffer();

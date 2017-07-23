@@ -24,10 +24,10 @@ import jsinterop.annotations.JsType;
 public class SpeechRecognitionAlternative{
     
     @JsProperty(name="transcript")
-    public native String getTranscript();
+    public String transcript;
     
     @JsProperty(name="confidence")
-    public native float getConfidence();
+    public float confidence;
     
     
 }

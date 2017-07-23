@@ -75,18 +75,17 @@ public class ScrollTimeline extends AnimationTimeline{
     }
     
     @JsProperty(name="scrollSource")
-    public native Element getScrollSource();
-    
-    @JsOverlay
-    public final ScrollDirection getOrientationAsScrollDirection(){
-        return ScrollDirection.of(getOrientation());
-    }
+    public Element scrollSource;
     
     @JsProperty(name="orientation")
-    public native String getOrientation();
+    public String orientation;
+    @JsOverlay
+    public final ScrollDirection getOrientation(){
+       return ScrollDirection.of(orientation);
+    }
     
     @JsProperty(name="timeRange")
-    public native ScrollTimeline.DoubleOrScrollTimelineAutoKeywordUnionType getTimeRange();
+    public ScrollTimeline.DoubleOrScrollTimelineAutoKeywordUnionType timeRange;
     
     
 }

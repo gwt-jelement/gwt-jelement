@@ -32,7 +32,7 @@ public class SVGFEMergeNodeElement extends SVGElement{
     }
     
     @JsProperty(name="in1")
-    public native SVGAnimatedString getIn1();
+    public SVGAnimatedString in1;
     
     
 }

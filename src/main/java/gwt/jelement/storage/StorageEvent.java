@@ -39,19 +39,19 @@ public class StorageEvent extends Event{
     }
     
     @JsProperty(name="key")
-    public native String getKey();
+    public String key;
     
     @JsProperty(name="oldValue")
-    public native String getOldValue();
+    public String oldValue;
     
     @JsProperty(name="newValue")
-    public native String getNewValue();
+    public String newValue;
     
     @JsProperty(name="url")
-    public native String getUrl();
+    public String url;
     
     @JsProperty(name="storageArea")
-    public native Storage getStorageArea();
+    public Storage storageArea;
     
     @JsMethod(name = "initStorageEvent")
     public native void initStorageEvent();

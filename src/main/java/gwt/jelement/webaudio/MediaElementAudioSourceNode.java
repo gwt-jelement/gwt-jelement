@@ -34,7 +34,7 @@ public class MediaElementAudioSourceNode extends AudioNode{
     }
     
     @JsProperty(name="mediaElement")
-    public native HTMLMediaElement getMediaElement();
+    public HTMLMediaElement mediaElement;
     
     
 }

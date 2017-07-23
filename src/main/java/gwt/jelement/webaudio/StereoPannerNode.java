@@ -39,7 +39,7 @@ public class StereoPannerNode extends AudioNode{
     }
     
     @JsProperty(name="pan")
-    public native AudioParam getPan();
+    public AudioParam pan;
     
     
 }

@@ -31,43 +31,43 @@ public class Touch{
     }
     
     @JsProperty(name="identifier")
-    public native double getIdentifier();
+    public double identifier;
     
     @JsProperty(name="target")
-    public native EventTarget getTarget();
+    public EventTarget target;
     
     @JsProperty(name="screenX")
-    public native double getScreenX();
+    public double screenX;
     
     @JsProperty(name="screenY")
-    public native double getScreenY();
+    public double screenY;
     
     @JsProperty(name="clientX")
-    public native double getClientX();
+    public double clientX;
     
     @JsProperty(name="clientY")
-    public native double getClientY();
+    public double clientY;
     
     @JsProperty(name="pageX")
-    public native double getPageX();
+    public double pageX;
     
     @JsProperty(name="pageY")
-    public native double getPageY();
+    public double pageY;
     
     @JsProperty(name="radiusX")
-    public native float getRadiusX();
+    public float radiusX;
     
     @JsProperty(name="radiusY")
-    public native float getRadiusY();
+    public float radiusY;
     
     @JsProperty(name="rotationAngle")
-    public native float getRotationAngle();
+    public float rotationAngle;
     
     @JsProperty(name="force")
-    public native float getForce();
+    public float force;
     
     @JsProperty(name="region")
-    public native String getRegion();
+    public String region;
     
     
 }

@@ -40,16 +40,16 @@ public class UIEvent extends Event{
     }
     
     @JsProperty(name="view")
-    public native Window getView();
+    public Window view;
     
     @JsProperty(name="detail")
-    public native double getDetail();
+    public double detail;
     
     @JsProperty(name="sourceCapabilities")
-    public native InputDeviceCapabilities getSourceCapabilities();
+    public InputDeviceCapabilities sourceCapabilities;
     
     @JsProperty(name="which")
-    public native double getWhich();
+    public double which;
     
     @JsMethod(name = "initUIEvent")
     public native void initUIEvent();

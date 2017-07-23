@@ -24,10 +24,10 @@ import jsinterop.annotations.JsType;
 public class Credential{
     
     @JsProperty(name="id")
-    public native String getId();
+    public String id;
     
     @JsProperty(name="type")
-    public native String getType();
+    public String type;
     
     
 }

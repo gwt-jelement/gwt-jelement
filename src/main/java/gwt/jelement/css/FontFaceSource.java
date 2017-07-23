@@ -25,7 +25,7 @@ import jsinterop.annotations.JsType;
 public class FontFaceSource{
     
     @JsProperty(name="fonts")
-    public native FontFaceSet getFonts();
+    public FontFaceSet fonts;
     
     
 }

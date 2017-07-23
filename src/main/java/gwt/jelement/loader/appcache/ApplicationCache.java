@@ -39,6 +39,9 @@ public class ApplicationCache extends EventTarget{
         super();
     }
     
+    @JsProperty(name="status")
+    public short status;
+    
     @JsProperty(name="onchecking")
     public EventHandlerNonNull onchecking;
     
@@ -62,9 +65,6 @@ public class ApplicationCache extends EventTarget{
     
     @JsProperty(name="onobsolete")
     public EventHandlerNonNull onobsolete;
-    
-    @JsProperty(name="status")
-    public native short getStatus();
     
     @JsMethod(name = "abort")
     public native void abort();

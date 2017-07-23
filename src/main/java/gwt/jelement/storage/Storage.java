@@ -25,7 +25,7 @@ import jsinterop.annotations.JsType;
 public class Storage{
     
     @JsProperty(name="length")
-    public native double getLength();
+    public double length;
     
     @JsMethod(name = "clear")
     public native void clear();

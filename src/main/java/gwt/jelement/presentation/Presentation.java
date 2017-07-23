@@ -29,7 +29,7 @@ public class Presentation{
     public PresentationRequest defaultRequest;
     
     @JsProperty(name="receiver")
-    public native PresentationReceiver getReceiver();
+    public PresentationReceiver receiver;
     
     
 }

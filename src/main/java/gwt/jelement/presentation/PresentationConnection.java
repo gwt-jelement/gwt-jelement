@@ -38,6 +38,19 @@ public class PresentationConnection extends EventTarget{
         super();
     }
     
+    @JsProperty(name="id")
+    public String id;
+    
+    @JsProperty(name="url")
+    public String url;
+    
+    @JsProperty(name="state")
+    public String state;
+    @JsOverlay
+    public final PresentationConnectionState getState(){
+       return PresentationConnectionState.of(state);
+    }
+    
     @JsProperty(name="onconnect")
     public EventHandlerNonNull onconnect;
     
@@ -48,24 +61,19 @@ public class PresentationConnection extends EventTarget{
     public EventHandlerNonNull onterminate;
     
     @JsProperty(name="binaryType")
-    public BinaryType binaryType;
+    public String binaryType;
+    @JsOverlay
+    public final BinaryType getBinaryType(){
+       return BinaryType.of(binaryType);
+    }
+    
+    @JsOverlay
+    public final void setBinaryType(BinaryType binaryType){
+       this.binaryType = binaryType.getInternalValue();
+    }
     
     @JsProperty(name="onmessage")
     public EventHandlerNonNull onmessage;
-    
-    @JsProperty(name="id")
-    public native String getId();
-    
-    @JsProperty(name="url")
-    public native String getUrl();
-    
-    @JsOverlay
-    public final PresentationConnectionState getStateAsPresentationConnectionState(){
-        return PresentationConnectionState.of(getState());
-    }
-    
-    @JsProperty(name="state")
-    public native String getState();
     
     @JsMethod(name = "close")
     public native void close();

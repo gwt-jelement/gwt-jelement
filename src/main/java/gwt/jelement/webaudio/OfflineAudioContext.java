@@ -38,7 +38,7 @@ public class OfflineAudioContext extends BaseAudioContext{
     public EventHandlerNonNull oncomplete;
     
     @JsProperty(name="length")
-    public native double getLength();
+    public double length;
     
     @JsMethod(name = "startRendering")
     public native Promise<AudioBuffer> startRendering();

@@ -38,7 +38,7 @@ public class WorkerPerformance extends EventTarget{
     public EventHandlerNonNull onresourcetimingbufferfull;
     
     @JsProperty(name="memory")
-    public native MemoryInfo getMemory();
+    public MemoryInfo memory;
     
     @JsMethod(name = "clearMarks")
     public native void clearMarks();

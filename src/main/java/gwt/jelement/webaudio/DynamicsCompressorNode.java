@@ -39,22 +39,22 @@ public class DynamicsCompressorNode extends AudioNode{
     }
     
     @JsProperty(name="threshold")
-    public native AudioParam getThreshold();
+    public AudioParam threshold;
     
     @JsProperty(name="knee")
-    public native AudioParam getKnee();
+    public AudioParam knee;
     
     @JsProperty(name="ratio")
-    public native AudioParam getRatio();
+    public AudioParam ratio;
     
     @JsProperty(name="reduction")
-    public native float getReduction();
+    public float reduction;
     
     @JsProperty(name="attack")
-    public native AudioParam getAttack();
+    public AudioParam attack;
     
     @JsProperty(name="release")
-    public native AudioParam getRelease();
+    public AudioParam release;
     
     
 }

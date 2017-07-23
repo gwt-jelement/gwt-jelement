@@ -26,14 +26,23 @@ import jsinterop.annotations.JsType;
 @JsType(namespace = JsPackage.GLOBAL, isNative = true)
 public class History{
     
-    @JsProperty(name="scrollRestoration")
-    public ScrollRestoration scrollRestoration;
-    
     @JsProperty(name="length")
-    public native double getLength();
+    public double length;
+    
+    @JsProperty(name="scrollRestoration")
+    public String scrollRestoration;
+    @JsOverlay
+    public final ScrollRestoration getScrollRestoration(){
+       return ScrollRestoration.of(scrollRestoration);
+    }
+    
+    @JsOverlay
+    public final void setScrollRestoration(ScrollRestoration scrollRestoration){
+       this.scrollRestoration = scrollRestoration.getInternalValue();
+    }
     
     @JsProperty(name="state")
-    public native Object getState();
+    public Object state;
     
     @JsMethod(name = "back")
     public native void back();

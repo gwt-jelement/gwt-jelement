@@ -24,10 +24,10 @@ import jsinterop.annotations.JsType;
 public class CredentialUserData{
     
     @JsProperty(name="name")
-    public native String getName();
+    public String name;
     
     @JsProperty(name="iconURL")
-    public native String getIconURL();
+    public String iconURL;
     
     
 }

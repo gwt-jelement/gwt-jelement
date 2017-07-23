@@ -31,19 +31,19 @@ public class VRFrameData{
     }
     
     @JsProperty(name="leftProjectionMatrix")
-    public native Float32Array getLeftProjectionMatrix();
+    public Float32Array leftProjectionMatrix;
     
     @JsProperty(name="leftViewMatrix")
-    public native Float32Array getLeftViewMatrix();
+    public Float32Array leftViewMatrix;
     
     @JsProperty(name="rightProjectionMatrix")
-    public native Float32Array getRightProjectionMatrix();
+    public Float32Array rightProjectionMatrix;
     
     @JsProperty(name="rightViewMatrix")
-    public native Float32Array getRightViewMatrix();
+    public Float32Array rightViewMatrix;
     
     @JsProperty(name="pose")
-    public native VRPose getPose();
+    public VRPose pose;
     
     
 }

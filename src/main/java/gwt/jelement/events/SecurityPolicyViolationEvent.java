@@ -33,45 +33,44 @@ public class SecurityPolicyViolationEvent extends Event{
     }
     
     @JsProperty(name="documentURI")
-    public native String getDocumentURI();
+    public String documentURI;
     
     @JsProperty(name="referrer")
-    public native String getReferrer();
+    public String referrer;
     
     @JsProperty(name="blockedURI")
-    public native String getBlockedURI();
+    public String blockedURI;
     
     @JsProperty(name="violatedDirective")
-    public native String getViolatedDirective();
+    public String violatedDirective;
     
     @JsProperty(name="effectiveDirective")
-    public native String getEffectiveDirective();
+    public String effectiveDirective;
     
     @JsProperty(name="originalPolicy")
-    public native String getOriginalPolicy();
-    
-    @JsOverlay
-    public final SecurityPolicyViolationEventDisposition getDispositionAsSecurityPolicyViolationEventDisposition(){
-        return SecurityPolicyViolationEventDisposition.of(getDisposition());
-    }
+    public String originalPolicy;
     
     @JsProperty(name="disposition")
-    public native String getDisposition();
+    public String disposition;
+    @JsOverlay
+    public final SecurityPolicyViolationEventDisposition getDisposition(){
+       return SecurityPolicyViolationEventDisposition.of(disposition);
+    }
     
     @JsProperty(name="sourceFile")
-    public native String getSourceFile();
+    public String sourceFile;
     
     @JsProperty(name="statusCode")
-    public native short getStatusCode();
+    public short statusCode;
     
     @JsProperty(name="lineNumber")
-    public native double getLineNumber();
+    public double lineNumber;
     
     @JsProperty(name="columnNumber")
-    public native double getColumnNumber();
+    public double columnNumber;
     
     @JsProperty(name="sample")
-    public native String getSample();
+    public String sample;
     
     
 }

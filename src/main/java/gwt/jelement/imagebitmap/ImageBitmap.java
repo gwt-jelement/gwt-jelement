@@ -25,10 +25,10 @@ import jsinterop.annotations.JsType;
 public class ImageBitmap{
     
     @JsProperty(name="width")
-    public native double getWidth();
+    public double width;
     
     @JsProperty(name="height")
-    public native double getHeight();
+    public double height;
     
     @JsMethod(name = "close")
     public native void close();

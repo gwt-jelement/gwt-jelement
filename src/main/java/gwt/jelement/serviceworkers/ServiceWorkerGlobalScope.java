@@ -37,6 +37,12 @@ public class ServiceWorkerGlobalScope extends WorkerGlobalScope{
         super();
     }
     
+    @JsProperty(name="clients")
+    public Clients clients;
+    
+    @JsProperty(name="registration")
+    public ServiceWorkerRegistration registration;
+    
     @JsProperty(name="onactivate")
     public EventHandlerNonNull onactivate;
     
@@ -75,12 +81,6 @@ public class ServiceWorkerGlobalScope extends WorkerGlobalScope{
     
     @JsProperty(name="onpush")
     public EventHandlerNonNull onpush;
-    
-    @JsProperty(name="clients")
-    public native Clients getClients();
-    
-    @JsProperty(name="registration")
-    public native ServiceWorkerRegistration getRegistration();
     
     @JsMethod(name = "fetch")
     public native Promise<Response> fetch(Request input);

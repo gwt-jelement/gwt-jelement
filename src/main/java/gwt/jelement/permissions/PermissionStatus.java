@@ -33,16 +33,15 @@ public class PermissionStatus extends EventTarget{
         super();
     }
     
-    @JsProperty(name="onchange")
-    public EventHandlerNonNull onchange;
-    
+    @JsProperty(name="state")
+    public String state;
     @JsOverlay
-    public final PermissionState getStateAsPermissionState(){
-        return PermissionState.of(getState());
+    public final PermissionState getState(){
+       return PermissionState.of(state);
     }
     
-    @JsProperty(name="state")
-    public native String getState();
+    @JsProperty(name="onchange")
+    public EventHandlerNonNull onchange;
     
     
 }

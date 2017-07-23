@@ -32,7 +32,7 @@ public class SVGStopElement extends SVGElement{
     }
     
     @JsProperty(name="offset")
-    public native SVGAnimatedNumber getOffset();
+    public SVGAnimatedNumber offset;
     
     
 }

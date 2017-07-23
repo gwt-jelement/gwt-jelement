@@ -37,7 +37,7 @@ public class PopStateEvent extends Event{
     }
     
     @JsProperty(name="state")
-    public native Object getState();
+    public Object state;
     
     
 }

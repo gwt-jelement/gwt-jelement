@@ -39,13 +39,13 @@ public class DataTransfer{
     public String effectAllowed;
     
     @JsProperty(name="items")
-    public native DataTransferItemList getItems();
+    public DataTransferItemList items;
     
     @JsProperty(name="types")
-    public native String[] getTypes();
+    public String[] types;
     
     @JsProperty(name="files")
-    public native FileList getFiles();
+    public FileList files;
     
     @JsMethod(name = "clearData")
     public native void clearData();

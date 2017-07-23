@@ -30,10 +30,10 @@ public class PerformanceNavigation{
     
     
     @JsProperty(name="type")
-    public native short getType();
+    public short type;
     
     @JsProperty(name="redirectCount")
-    public native short getRedirectCount();
+    public short redirectCount;
     
     @JsMethod(name = "toJSON")
     public native Object toJSON();

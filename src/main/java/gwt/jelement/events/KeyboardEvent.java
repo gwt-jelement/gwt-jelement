@@ -44,37 +44,37 @@ public class KeyboardEvent extends UIEvent{
     }
     
     @JsProperty(name="key")
-    public native String getKey();
+    public String key;
     
     @JsProperty(name="code")
-    public native String getCode();
+    public String code;
     
     @JsProperty(name="location")
-    public native double getLocation();
+    public double location;
     
     @JsProperty(name="ctrlKey")
-    public native boolean getCtrlKey();
+    public boolean ctrlKey;
     
     @JsProperty(name="shiftKey")
-    public native boolean getShiftKey();
+    public boolean shiftKey;
     
     @JsProperty(name="altKey")
-    public native boolean getAltKey();
+    public boolean altKey;
     
     @JsProperty(name="metaKey")
-    public native boolean getMetaKey();
+    public boolean metaKey;
     
     @JsProperty(name="repeat")
-    public native boolean getRepeat();
+    public boolean repeat;
     
     @JsProperty(name="isComposing")
-    public native boolean getIsComposing();
+    public boolean isComposing;
     
     @JsProperty(name="charCode")
-    public native double getCharCode();
+    public double charCode;
     
     @JsProperty(name="keyCode")
-    public native double getKeyCode();
+    public double keyCode;
     
     @JsMethod(name = "getModifierState")
     public native boolean getModifierState(String keyArg);

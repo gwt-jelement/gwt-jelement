@@ -32,58 +32,58 @@ public class PerformanceResourceTiming extends PerformanceEntry{
     }
     
     @JsProperty(name="initiatorType")
-    public native String getInitiatorType();
+    public String initiatorType;
     
     @JsProperty(name="nextHopProtocol")
-    public native String getNextHopProtocol();
+    public String nextHopProtocol;
     
     @JsProperty(name="workerStart")
-    public native double getWorkerStart();
+    public double workerStart;
     
     @JsProperty(name="redirectStart")
-    public native double getRedirectStart();
+    public double redirectStart;
     
     @JsProperty(name="redirectEnd")
-    public native double getRedirectEnd();
+    public double redirectEnd;
     
     @JsProperty(name="fetchStart")
-    public native double getFetchStart();
+    public double fetchStart;
     
     @JsProperty(name="domainLookupStart")
-    public native double getDomainLookupStart();
+    public double domainLookupStart;
     
     @JsProperty(name="domainLookupEnd")
-    public native double getDomainLookupEnd();
+    public double domainLookupEnd;
     
     @JsProperty(name="connectStart")
-    public native double getConnectStart();
+    public double connectStart;
     
     @JsProperty(name="connectEnd")
-    public native double getConnectEnd();
+    public double connectEnd;
     
     @JsProperty(name="secureConnectionStart")
-    public native double getSecureConnectionStart();
+    public double secureConnectionStart;
     
     @JsProperty(name="requestStart")
-    public native double getRequestStart();
+    public double requestStart;
     
     @JsProperty(name="responseStart")
-    public native double getResponseStart();
+    public double responseStart;
     
     @JsProperty(name="responseEnd")
-    public native double getResponseEnd();
+    public double responseEnd;
     
     @JsProperty(name="transferSize")
-    public native double getTransferSize();
+    public double transferSize;
     
     @JsProperty(name="encodedBodySize")
-    public native double getEncodedBodySize();
+    public double encodedBodySize;
     
     @JsProperty(name="decodedBodySize")
-    public native double getDecodedBodySize();
+    public double decodedBodySize;
     
     @JsProperty(name="serverTiming")
-    public native PerformanceServerTiming[] getServerTiming();
+    public PerformanceServerTiming[] serverTiming;
     
     
 }

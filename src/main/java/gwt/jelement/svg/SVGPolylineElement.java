@@ -32,10 +32,10 @@ public class SVGPolylineElement extends SVGGeometryElement{
     }
     
     @JsProperty(name="points")
-    public native SVGPointList getPoints();
+    public SVGPointList points;
     
     @JsProperty(name="animatedPoints")
-    public native SVGPointList getAnimatedPoints();
+    public SVGPointList animatedPoints;
     
     
 }

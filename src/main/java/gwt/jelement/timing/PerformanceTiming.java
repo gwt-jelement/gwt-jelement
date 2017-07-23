@@ -25,67 +25,67 @@ import jsinterop.annotations.JsType;
 public class PerformanceTiming{
     
     @JsProperty(name="navigationStart")
-    public native double getNavigationStart();
+    public double navigationStart;
     
     @JsProperty(name="unloadEventStart")
-    public native double getUnloadEventStart();
+    public double unloadEventStart;
     
     @JsProperty(name="unloadEventEnd")
-    public native double getUnloadEventEnd();
+    public double unloadEventEnd;
     
     @JsProperty(name="redirectStart")
-    public native double getRedirectStart();
+    public double redirectStart;
     
     @JsProperty(name="redirectEnd")
-    public native double getRedirectEnd();
+    public double redirectEnd;
     
     @JsProperty(name="fetchStart")
-    public native double getFetchStart();
+    public double fetchStart;
     
     @JsProperty(name="domainLookupStart")
-    public native double getDomainLookupStart();
+    public double domainLookupStart;
     
     @JsProperty(name="domainLookupEnd")
-    public native double getDomainLookupEnd();
+    public double domainLookupEnd;
     
     @JsProperty(name="connectStart")
-    public native double getConnectStart();
+    public double connectStart;
     
     @JsProperty(name="connectEnd")
-    public native double getConnectEnd();
+    public double connectEnd;
     
     @JsProperty(name="secureConnectionStart")
-    public native double getSecureConnectionStart();
+    public double secureConnectionStart;
     
     @JsProperty(name="requestStart")
-    public native double getRequestStart();
+    public double requestStart;
     
     @JsProperty(name="responseStart")
-    public native double getResponseStart();
+    public double responseStart;
     
     @JsProperty(name="responseEnd")
-    public native double getResponseEnd();
+    public double responseEnd;
     
     @JsProperty(name="domLoading")
-    public native double getDomLoading();
+    public double domLoading;
     
     @JsProperty(name="domInteractive")
-    public native double getDomInteractive();
+    public double domInteractive;
     
     @JsProperty(name="domContentLoadedEventStart")
-    public native double getDomContentLoadedEventStart();
+    public double domContentLoadedEventStart;
     
     @JsProperty(name="domContentLoadedEventEnd")
-    public native double getDomContentLoadedEventEnd();
+    public double domContentLoadedEventEnd;
     
     @JsProperty(name="domComplete")
-    public native double getDomComplete();
+    public double domComplete;
     
     @JsProperty(name="loadEventStart")
-    public native double getLoadEventStart();
+    public double loadEventStart;
     
     @JsProperty(name="loadEventEnd")
-    public native double getLoadEventEnd();
+    public double loadEventEnd;
     
     @JsMethod(name = "toJSON")
     public native Object toJSON();

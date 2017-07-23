@@ -33,7 +33,7 @@ public class OfflineAudioCompletionEvent extends Event{
     }
     
     @JsProperty(name="renderedBuffer")
-    public native AudioBuffer getRenderedBuffer();
+    public AudioBuffer renderedBuffer;
     
     
 }

@@ -26,7 +26,7 @@ import jsinterop.annotations.JsType;
 public class HTMLAllCollection{
     
     @JsProperty(name="length")
-    public native double getLength();
+    public double length;
     
     @JsMethod(name = "item")
     public native Element item();

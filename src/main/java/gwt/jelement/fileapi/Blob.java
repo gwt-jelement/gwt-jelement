@@ -26,13 +26,13 @@ import jsinterop.annotations.JsType;
 public class Blob{
     
     @JsProperty(name="size")
-    public native double getSize();
+    public double size;
     
     @JsProperty(name="type")
-    public native String getType();
+    public String type;
     
     @JsProperty(name="isClosed")
-    public native boolean getIsClosed();
+    public boolean isClosed;
     
     @JsMethod(name = "close")
     public native void close();

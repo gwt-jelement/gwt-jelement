@@ -29,26 +29,24 @@ import jsinterop.annotations.JsType;
 public class Client{
     
     @JsProperty(name="url")
-    public native String getUrl();
+    public String url;
     
     @JsProperty(name="id")
-    public native String getId();
-    
-    @JsOverlay
-    public final ClientType getTypeAsClientType(){
-        return ClientType.of(getType());
-    }
+    public String id;
     
     @JsProperty(name="type")
-    public native String getType();
-    
+    public String type;
     @JsOverlay
-    public final ContextFrameType getFrameTypeAsContextFrameType(){
-        return ContextFrameType.of(getFrameType());
+    public final ClientType getType(){
+       return ClientType.of(type);
     }
     
     @JsProperty(name="frameType")
-    public native String getFrameType();
+    public String frameType;
+    @JsOverlay
+    public final ContextFrameType getFrameType(){
+       return ContextFrameType.of(frameType);
+    }
     
     @JsMethod(name = "postMessage")
     public native void postMessage(Object message);

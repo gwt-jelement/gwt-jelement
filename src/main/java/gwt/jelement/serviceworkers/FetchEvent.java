@@ -36,16 +36,16 @@ public class FetchEvent extends ExtendableEvent{
     }
     
     @JsProperty(name="request")
-    public native Request getRequest();
+    public Request request;
     
     @JsProperty(name="clientId")
-    public native String getClientId();
+    public String clientId;
     
     @JsProperty(name="isReload")
-    public native boolean getIsReload();
+    public boolean isReload;
     
     @JsProperty(name="preloadResponse")
-    public native Promise<Object> getPreloadResponse();
+    public Promise<Object> preloadResponse;
     
     @JsMethod(name = "respondWith")
     public native void respondWith(Promise<Response> r);

@@ -36,23 +36,23 @@ public class MediaKeySession extends EventTarget{
         super();
     }
     
+    @JsProperty(name="sessionId")
+    public String sessionId;
+    
+    @JsProperty(name="expiration")
+    public double expiration;
+    
+    @JsProperty(name="closed")
+    public Promise closed;
+    
+    @JsProperty(name="keyStatuses")
+    public MediaKeyStatusMap keyStatuses;
+    
     @JsProperty(name="onkeystatuseschange")
     public EventHandlerNonNull onkeystatuseschange;
     
     @JsProperty(name="onmessage")
     public EventHandlerNonNull onmessage;
-    
-    @JsProperty(name="sessionId")
-    public native String getSessionId();
-    
-    @JsProperty(name="expiration")
-    public native double getExpiration();
-    
-    @JsProperty(name="closed")
-    public native Promise getClosed();
-    
-    @JsProperty(name="keyStatuses")
-    public native MediaKeyStatusMap getKeyStatuses();
     
     @JsMethod(name = "close")
     public native Promise<Void> close();

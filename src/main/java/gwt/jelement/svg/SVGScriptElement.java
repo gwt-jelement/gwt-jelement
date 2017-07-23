@@ -35,7 +35,7 @@ public class SVGScriptElement extends SVGElement{
     public String type;
     
     @JsProperty(name="href")
-    public native SVGAnimatedString getHref();
+    public SVGAnimatedString href;
     
     
 }

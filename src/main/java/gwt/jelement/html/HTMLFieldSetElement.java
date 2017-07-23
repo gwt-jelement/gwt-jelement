@@ -37,26 +37,26 @@ public class HTMLFieldSetElement extends HTMLElement{
     @JsProperty(name="disabled")
     public boolean disabled;
     
+    @JsProperty(name="form")
+    public HTMLFormElement form;
+    
     @JsProperty(name="name")
     public String name;
     
-    @JsProperty(name="form")
-    public native HTMLFormElement getForm();
-    
     @JsProperty(name="type")
-    public native String getType();
+    public String type;
     
     @JsProperty(name="elements")
-    public native HTMLCollection getElements();
+    public HTMLCollection elements;
     
     @JsProperty(name="willValidate")
-    public native boolean getWillValidate();
+    public boolean willValidate;
     
     @JsProperty(name="validity")
-    public native ValidityState getValidity();
+    public ValidityState validity;
     
     @JsProperty(name="validationMessage")
-    public native String getValidationMessage();
+    public String validationMessage;
     
     @JsMethod(name = "checkValidity")
     public native boolean checkValidity();

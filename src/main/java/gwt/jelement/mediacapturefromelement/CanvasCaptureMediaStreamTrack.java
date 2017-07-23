@@ -33,7 +33,7 @@ public class CanvasCaptureMediaStreamTrack extends MediaStreamTrack{
     }
     
     @JsProperty(name="canvas")
-    public native HTMLCanvasElement getCanvas();
+    public HTMLCanvasElement canvas;
     
     @JsMethod(name = "requestFrame")
     public native void requestFrame();

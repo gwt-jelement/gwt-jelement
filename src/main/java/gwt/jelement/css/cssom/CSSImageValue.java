@@ -31,13 +31,13 @@ public class CSSImageValue extends CSSResourceValue{
     }
     
     @JsProperty(name="intrinsicWidth")
-    public native double getIntrinsicWidth();
+    public double intrinsicWidth;
     
     @JsProperty(name="intrinsicHeight")
-    public native double getIntrinsicHeight();
+    public double intrinsicHeight;
     
     @JsProperty(name="intrinsicRatio")
-    public native double getIntrinsicRatio();
+    public double intrinsicRatio;
     
     
 }

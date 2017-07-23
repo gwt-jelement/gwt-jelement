@@ -32,16 +32,16 @@ public class SVGEllipseElement extends SVGGeometryElement{
     }
     
     @JsProperty(name="cx")
-    public native SVGAnimatedLength getCx();
+    public SVGAnimatedLength cx;
     
     @JsProperty(name="cy")
-    public native SVGAnimatedLength getCy();
+    public SVGAnimatedLength cy;
     
     @JsProperty(name="rx")
-    public native SVGAnimatedLength getRx();
+    public SVGAnimatedLength rx;
     
     @JsProperty(name="ry")
-    public native SVGAnimatedLength getRy();
+    public SVGAnimatedLength ry;
     
     
 }

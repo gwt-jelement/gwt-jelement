@@ -25,10 +25,10 @@ import jsinterop.annotations.JsType;
 public class SVGAnimatedLength{
     
     @JsProperty(name="baseVal")
-    public native SVGLength getBaseVal();
+    public SVGLength baseVal;
     
     @JsProperty(name="animVal")
-    public native SVGLength getAnimVal();
+    public SVGLength animVal;
     
     
 }

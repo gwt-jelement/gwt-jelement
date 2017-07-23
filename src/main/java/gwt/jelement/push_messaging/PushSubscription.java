@@ -31,13 +31,13 @@ import jsinterop.base.Any;
 public class PushSubscription{
     
     @JsProperty(name="endpoint")
-    public native String getEndpoint();
+    public String endpoint;
     
     @JsProperty(name="expirationTime")
-    public native double getExpirationTime();
+    public double expirationTime;
     
     @JsProperty(name="options")
-    public native PushSubscriptionOptions getOptions();
+    public PushSubscriptionOptions options;
     
     @JsOverlay
     public final ArrayBuffer getKey(PushEncryptionKeyName name){

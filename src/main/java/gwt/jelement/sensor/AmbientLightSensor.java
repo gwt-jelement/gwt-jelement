@@ -37,7 +37,7 @@ public class AmbientLightSensor extends Sensor{
     }
     
     @JsProperty(name="illuminance")
-    public native double getIlluminance();
+    public double illuminance;
     
     
 }

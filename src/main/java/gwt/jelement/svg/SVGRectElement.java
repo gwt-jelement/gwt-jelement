@@ -32,22 +32,22 @@ public class SVGRectElement extends SVGGeometryElement{
     }
     
     @JsProperty(name="x")
-    public native SVGAnimatedLength getX();
+    public SVGAnimatedLength x;
     
     @JsProperty(name="y")
-    public native SVGAnimatedLength getY();
+    public SVGAnimatedLength y;
     
     @JsProperty(name="width")
-    public native SVGAnimatedLength getWidth();
+    public SVGAnimatedLength width;
     
     @JsProperty(name="height")
-    public native SVGAnimatedLength getHeight();
+    public SVGAnimatedLength height;
     
     @JsProperty(name="rx")
-    public native SVGAnimatedLength getRx();
+    public SVGAnimatedLength rx;
     
     @JsProperty(name="ry")
-    public native SVGAnimatedLength getRy();
+    public SVGAnimatedLength ry;
     
     
 }

@@ -35,22 +35,21 @@ public class ServiceWorker extends EventTarget{
         super();
     }
     
+    @JsProperty(name="scriptURL")
+    public String scriptURL;
+    
+    @JsProperty(name="state")
+    public String state;
+    @JsOverlay
+    public final ServiceWorkerState getState(){
+       return ServiceWorkerState.of(state);
+    }
+    
     @JsProperty(name="onstatechange")
     public EventHandlerNonNull onstatechange;
     
     @JsProperty(name="onerror")
     public EventHandlerNonNull onerror;
-    
-    @JsProperty(name="scriptURL")
-    public native String getScriptURL();
-    
-    @JsOverlay
-    public final ServiceWorkerState getStateAsServiceWorkerState(){
-        return ServiceWorkerState.of(getState());
-    }
-    
-    @JsProperty(name="state")
-    public native String getState();
     
     @JsMethod(name = "postMessage")
     public native void postMessage(Object message);

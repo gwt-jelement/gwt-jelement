@@ -28,39 +28,38 @@ import jsinterop.annotations.JsType;
 public class Gamepad{
     
     @JsProperty(name="id")
-    public native String getId();
+    public String id;
     
     @JsProperty(name="index")
-    public native double getIndex();
+    public double index;
     
     @JsProperty(name="connected")
-    public native boolean getConnected();
+    public boolean connected;
     
     @JsProperty(name="timestamp")
-    public native double getTimestamp();
+    public double timestamp;
     
     @JsProperty(name="mapping")
-    public native String getMapping();
+    public String mapping;
     
     @JsProperty(name="axes")
-    public native double[] getAxes();
+    public double[] axes;
     
     @JsProperty(name="buttons")
-    public native GamepadButton[] getButtons();
+    public GamepadButton[] buttons;
     
     @JsProperty(name="pose")
-    public native GamepadPose getPose();
-    
-    @JsOverlay
-    public final GamepadHand getHandAsGamepadHand(){
-        return GamepadHand.of(getHand());
-    }
+    public GamepadPose pose;
     
     @JsProperty(name="hand")
-    public native String getHand();
+    public String hand;
+    @JsOverlay
+    public final GamepadHand getHand(){
+       return GamepadHand.of(hand);
+    }
     
     @JsProperty(name="displayId")
-    public native double getDisplayId();
+    public double displayId;
     
     
 }

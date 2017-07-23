@@ -41,25 +41,25 @@ public class WheelEvent extends MouseEvent{
     }
     
     @JsProperty(name="deltaX")
-    public native double getDeltaX();
+    public double deltaX;
     
     @JsProperty(name="deltaY")
-    public native double getDeltaY();
+    public double deltaY;
     
     @JsProperty(name="deltaZ")
-    public native double getDeltaZ();
+    public double deltaZ;
     
     @JsProperty(name="deltaMode")
-    public native double getDeltaMode();
+    public double deltaMode;
     
     @JsProperty(name="wheelDeltaX")
-    public native double getWheelDeltaX();
+    public double wheelDeltaX;
     
     @JsProperty(name="wheelDeltaY")
-    public native double getWheelDeltaY();
+    public double wheelDeltaY;
     
     @JsProperty(name="wheelDelta")
-    public native double getWheelDelta();
+    public double wheelDelta;
     
     
 }

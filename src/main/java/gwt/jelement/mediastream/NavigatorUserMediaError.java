@@ -24,13 +24,13 @@ import jsinterop.annotations.JsType;
 public class NavigatorUserMediaError{
     
     @JsProperty(name="name")
-    public native String getName();
+    public String name;
     
     @JsProperty(name="message")
-    public native String getMessage();
+    public String message;
     
     @JsProperty(name="constraintName")
-    public native String getConstraintName();
+    public String constraintName;
     
     
 }

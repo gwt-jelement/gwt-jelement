@@ -35,16 +35,15 @@ public class WindowClient extends Client{
         super();
     }
     
+    @JsProperty(name="visibilityState")
+    public String visibilityState;
     @JsOverlay
-    public final VisibilityState getVisibilityStateAsVisibilityState(){
-        return VisibilityState.of(getVisibilityState());
+    public final VisibilityState getVisibilityState(){
+       return VisibilityState.of(visibilityState);
     }
     
-    @JsProperty(name="visibilityState")
-    public native String getVisibilityState();
-    
     @JsProperty(name="focused")
-    public native boolean getFocused();
+    public boolean focused;
     
     @JsMethod(name = "focus")
     public native Promise<WindowClient> focus();

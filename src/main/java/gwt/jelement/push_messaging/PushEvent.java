@@ -38,7 +38,7 @@ public class PushEvent extends ExtendableEvent{
     }
     
     @JsProperty(name="data")
-    public native PushMessageData getData();
+    public PushMessageData data;
     
     
 }

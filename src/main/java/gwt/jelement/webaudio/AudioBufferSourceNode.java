@@ -43,6 +43,12 @@ public class AudioBufferSourceNode extends AudioScheduledSourceNode{
     @JsProperty(name="buffer")
     public AudioBuffer buffer;
     
+    @JsProperty(name="playbackRate")
+    public AudioParam playbackRate;
+    
+    @JsProperty(name="detune")
+    public AudioParam detune;
+    
     @JsProperty(name="loop")
     public boolean loop;
     
@@ -51,12 +57,6 @@ public class AudioBufferSourceNode extends AudioScheduledSourceNode{
     
     @JsProperty(name="loopEnd")
     public double loopEnd;
-    
-    @JsProperty(name="playbackRate")
-    public native AudioParam getPlaybackRate();
-    
-    @JsProperty(name="detune")
-    public native AudioParam getDetune();
     
     @JsMethod(name = "start")
     public native void start();

@@ -32,10 +32,10 @@ public class CSSPositionValue extends CSSStyleValue{
     }
     
     @JsProperty(name="x")
-    public native CSSNumericValue getX();
+    public CSSNumericValue x;
     
     @JsProperty(name="y")
-    public native CSSNumericValue getY();
+    public CSSNumericValue y;
     
     
 }

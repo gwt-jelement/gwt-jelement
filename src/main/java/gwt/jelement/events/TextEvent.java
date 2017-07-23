@@ -33,7 +33,7 @@ public class TextEvent extends UIEvent{
     }
     
     @JsProperty(name="data")
-    public native String getData();
+    public String data;
     
     @JsMethod(name = "initTextEvent")
     public native void initTextEvent();

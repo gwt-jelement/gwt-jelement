@@ -24,16 +24,16 @@ import jsinterop.annotations.JsType;
 public class VRDisplayCapabilities{
     
     @JsProperty(name="hasPosition")
-    public native boolean getHasPosition();
+    public boolean hasPosition;
     
     @JsProperty(name="hasExternalDisplay")
-    public native boolean getHasExternalDisplay();
+    public boolean hasExternalDisplay;
     
     @JsProperty(name="canPresent")
-    public native boolean getCanPresent();
+    public boolean canPresent;
     
     @JsProperty(name="maxLayers")
-    public native double getMaxLayers();
+    public double maxLayers;
     
     
 }

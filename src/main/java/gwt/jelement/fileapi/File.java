@@ -70,16 +70,16 @@ public class File extends Blob{
     }
     
     @JsProperty(name="name")
-    public native String getName();
+    public String name;
     
     @JsProperty(name="lastModified")
-    public native double getLastModified();
+    public double lastModified;
     
     @JsProperty(name="lastModifiedDate")
-    public native Date getLastModifiedDate();
+    public Date lastModifiedDate;
     
     @JsProperty(name="webkitRelativePath")
-    public native String getWebkitRelativePath();
+    public String webkitRelativePath;
     
     
 }

@@ -42,13 +42,13 @@ public class TextDecoder{
     }
     
     @JsProperty(name="encoding")
-    public native String getEncoding();
+    public String encoding;
     
     @JsProperty(name="fatal")
-    public native boolean getFatal();
+    public boolean fatal;
     
     @JsProperty(name="ignoreBOM")
-    public native boolean getIgnoreBOM();
+    public boolean ignoreBOM;
     
     @JsMethod(name = "decode")
     public native String decode();

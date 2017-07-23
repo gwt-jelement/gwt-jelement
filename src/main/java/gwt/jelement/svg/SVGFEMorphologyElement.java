@@ -39,31 +39,31 @@ public class SVGFEMorphologyElement extends SVGElement{
     }
     
     @JsProperty(name="in1")
-    public native SVGAnimatedString getIn1();
+    public SVGAnimatedString in1;
     
     @JsProperty(name="operator")
-    public native SVGAnimatedEnumeration getOperator();
+    public SVGAnimatedEnumeration operator;
     
     @JsProperty(name="radiusX")
-    public native SVGAnimatedNumber getRadiusX();
+    public SVGAnimatedNumber radiusX;
     
     @JsProperty(name="radiusY")
-    public native SVGAnimatedNumber getRadiusY();
+    public SVGAnimatedNumber radiusY;
     
     @JsProperty(name="x")
-    public native SVGAnimatedLength getX();
+    public SVGAnimatedLength x;
     
     @JsProperty(name="y")
-    public native SVGAnimatedLength getY();
+    public SVGAnimatedLength y;
     
     @JsProperty(name="width")
-    public native SVGAnimatedLength getWidth();
+    public SVGAnimatedLength width;
     
     @JsProperty(name="height")
-    public native SVGAnimatedLength getHeight();
+    public SVGAnimatedLength height;
     
     @JsProperty(name="result")
-    public native SVGAnimatedString getResult();
+    public SVGAnimatedString result;
     
     
 }

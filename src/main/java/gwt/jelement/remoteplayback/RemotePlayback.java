@@ -36,6 +36,13 @@ public class RemotePlayback extends EventTarget{
         super();
     }
     
+    @JsProperty(name="state")
+    public String state;
+    @JsOverlay
+    public final RemotePlaybackState getState(){
+       return RemotePlaybackState.of(state);
+    }
+    
     @JsProperty(name="onconnecting")
     public EventHandlerNonNull onconnecting;
     
@@ -44,14 +51,6 @@ public class RemotePlayback extends EventTarget{
     
     @JsProperty(name="ondisconnect")
     public EventHandlerNonNull ondisconnect;
-    
-    @JsOverlay
-    public final RemotePlaybackState getStateAsRemotePlaybackState(){
-        return RemotePlaybackState.of(getState());
-    }
-    
-    @JsProperty(name="state")
-    public native String getState();
     
     @JsMethod(name = "cancelWatchAvailability")
     public native Promise<Void> cancelWatchAvailability();

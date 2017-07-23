@@ -32,7 +32,7 @@ public class SVGClipPathElement extends SVGGraphicsElement{
     }
     
     @JsProperty(name="clipPathUnits")
-    public native SVGAnimatedEnumeration getClipPathUnits();
+    public SVGAnimatedEnumeration clipPathUnits;
     
     
 }

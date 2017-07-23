@@ -24,10 +24,10 @@ import jsinterop.annotations.JsType;
 public class SpeechRecognitionResult{
     
     @JsProperty(name="length")
-    public native double getLength();
+    public double length;
     
     @JsProperty(name="isFinal")
-    public native boolean getIsFinal();
+    public boolean isFinal;
     
     
 }

@@ -33,10 +33,10 @@ public class SVGSymbolElement extends SVGElement{
     }
     
     @JsProperty(name="viewBox")
-    public native SVGAnimatedRect getViewBox();
+    public SVGAnimatedRect viewBox;
     
     @JsProperty(name="preserveAspectRatio")
-    public native SVGAnimatedPreserveAspectRatio getPreserveAspectRatio();
+    public SVGAnimatedPreserveAspectRatio preserveAspectRatio;
     
     
 }

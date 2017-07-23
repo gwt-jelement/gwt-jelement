@@ -26,10 +26,10 @@ import jsinterop.annotations.JsType;
 public class SVGPointList{
     
     @JsProperty(name="length")
-    public native double getLength();
+    public double length;
     
     @JsProperty(name="numberOfItems")
-    public native double getNumberOfItems();
+    public double numberOfItems;
     
     @JsMethod(name = "appendItem")
     public native SVGPoint appendItem(SVGPoint newItem);

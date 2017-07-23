@@ -29,10 +29,10 @@ import jsinterop.annotations.JsType;
 public class BluetoothRemoteGATTServer{
     
     @JsProperty(name="device")
-    public native BluetoothDevice getDevice();
+    public BluetoothDevice device;
     
     @JsProperty(name="connected")
-    public native boolean getConnected();
+    public boolean connected;
     
     @JsMethod(name = "connect")
     public native Promise<BluetoothRemoteGATTServer> connect();

@@ -35,16 +35,16 @@ public class DocumentFragment extends Node{
     }
     
     @JsProperty(name="children")
-    public native HTMLCollection getChildren();
+    public HTMLCollection children;
     
     @JsProperty(name="firstElementChild")
-    public native Element getFirstElementChild();
+    public Element firstElementChild;
     
     @JsProperty(name="lastElementChild")
-    public native Element getLastElementChild();
+    public Element lastElementChild;
     
     @JsProperty(name="childElementCount")
-    public native double getChildElementCount();
+    public double childElementCount;
     
     @JsMethod(name = "append")
     public native void append();

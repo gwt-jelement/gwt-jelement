@@ -107,8 +107,47 @@ public class Document extends Node{
         super();
     }
     
+    @JsProperty(name="implementation")
+    public DOMImplementation implementation;
+    
+    @JsProperty(name="URL")
+    public String URL;
+    
+    @JsProperty(name="documentURI")
+    public String documentURI;
+    
+    @JsProperty(name="origin")
+    public String origin;
+    
+    @JsProperty(name="suborigin")
+    public String suborigin;
+    
+    @JsProperty(name="compatMode")
+    public String compatMode;
+    
+    @JsProperty(name="characterSet")
+    public String characterSet;
+    
+    @JsProperty(name="charset")
+    public String charset;
+    
+    @JsProperty(name="inputEncoding")
+    public String inputEncoding;
+    
+    @JsProperty(name="contentType")
+    public String contentType;
+    
+    @JsProperty(name="doctype")
+    public DocumentType doctype;
+    
+    @JsProperty(name="documentElement")
+    public Element documentElement;
+    
     @JsProperty(name="rootScroller")
     public Element rootScroller;
+    
+    @JsProperty(name="xmlEncoding")
+    public String xmlEncoding;
     
     @JsProperty(name="xmlVersion")
     public String xmlVersion;
@@ -116,11 +155,27 @@ public class Document extends Node{
     @JsProperty(name="xmlStandalone")
     public boolean xmlStandalone;
     
+    @JsProperty(name="location")
+    public Location location;
+    
     @JsProperty(name="domain")
     public String domain;
     
+    @JsProperty(name="referrer")
+    public String referrer;
+    
     @JsProperty(name="cookie")
     public String cookie;
+    
+    @JsProperty(name="lastModified")
+    public String lastModified;
+    
+    @JsProperty(name="readyState")
+    public String readyState;
+    @JsOverlay
+    public final DocumentReadyState getReadyState(){
+       return DocumentReadyState.of(readyState);
+    }
     
     @JsProperty(name="title")
     public String title;
@@ -131,20 +186,82 @@ public class Document extends Node{
     @JsProperty(name="body")
     public HTMLElement body;
     
+    @JsProperty(name="head")
+    public HTMLHeadElement head;
+    
+    @JsProperty(name="images")
+    public HTMLCollection images;
+    
+    @JsProperty(name="embeds")
+    public HTMLCollection embeds;
+    
+    @JsProperty(name="plugins")
+    public HTMLCollection plugins;
+    
+    @JsProperty(name="links")
+    public HTMLCollection links;
+    
+    @JsProperty(name="forms")
+    public HTMLCollection forms;
+    
+    @JsProperty(name="scripts")
+    public HTMLCollection scripts;
+    
+    @JsProperty(name="currentScript")
+    public Document.HTMLOrSVGScriptElement currentScript;
+    
+    @JsProperty(name="defaultView")
+    public Window defaultView;
+    
     @JsProperty(name="designMode")
     public String designMode;
     
     @JsProperty(name="onreadystatechange")
     public EventHandlerNonNull onreadystatechange;
     
+    @JsProperty(name="anchors")
+    public HTMLCollection anchors;
+    
+    @JsProperty(name="applets")
+    public HTMLCollection applets;
+    
     @JsProperty(name="selectedStylesheetSet")
     public String selectedStylesheetSet;
+    
+    @JsProperty(name="preferredStylesheetSet")
+    public String preferredStylesheetSet;
+    
+    @JsProperty(name="scrollingElement")
+    public Element scrollingElement;
     
     @JsProperty(name="onpointerlockchange")
     public EventHandlerNonNull onpointerlockchange;
     
     @JsProperty(name="onpointerlockerror")
     public EventHandlerNonNull onpointerlockerror;
+    
+    @JsProperty(name="hidden")
+    public boolean hidden;
+    
+    @JsProperty(name="visibilityState")
+    public String visibilityState;
+    @JsOverlay
+    public final VisibilityState getVisibilityState(){
+       return VisibilityState.of(visibilityState);
+    }
+    
+    @JsProperty(name="addressSpace")
+    public String addressSpace;
+    @JsOverlay
+    public final AddressSpace getAddressSpace(){
+       return AddressSpace.of(addressSpace);
+    }
+    
+    @JsProperty(name="webkitVisibilityState")
+    public String webkitVisibilityState;
+    
+    @JsProperty(name="webkitHidden")
+    public boolean webkitHidden;
     
     @JsProperty(name="onbeforecopy")
     public EventHandlerNonNull onbeforecopy;
@@ -179,17 +296,38 @@ public class Document extends Node{
     @JsProperty(name="onwheel")
     public EventHandlerNonNull onwheel;
     
+    @JsProperty(name="timeline")
+    public DocumentTimeline timeline;
+    
+    @JsProperty(name="fullscreenEnabled")
+    public boolean fullscreenEnabled;
+    
     @JsProperty(name="onfullscreenchange")
     public EventHandlerNonNull onfullscreenchange;
     
     @JsProperty(name="onfullscreenerror")
     public EventHandlerNonNull onfullscreenerror;
     
+    @JsProperty(name="webkitIsFullScreen")
+    public boolean webkitIsFullScreen;
+    
+    @JsProperty(name="webkitCurrentFullScreenElement")
+    public Element webkitCurrentFullScreenElement;
+    
+    @JsProperty(name="webkitFullscreenEnabled")
+    public boolean webkitFullscreenEnabled;
+    
+    @JsProperty(name="webkitFullscreenElement")
+    public Element webkitFullscreenElement;
+    
     @JsProperty(name="onwebkitfullscreenchange")
     public EventHandlerNonNull onwebkitfullscreenchange;
     
     @JsProperty(name="onwebkitfullscreenerror")
     public EventHandlerNonNull onwebkitfullscreenerror;
+    
+    @JsProperty(name="rootElement")
+    public SVGSVGElement rootElement;
     
     @JsProperty(name="onabort")
     public EventHandlerNonNull onabort;
@@ -410,173 +548,32 @@ public class Document extends Node{
     @JsProperty(name="ontouchstart")
     public EventHandlerNonNull ontouchstart;
     
-    @JsProperty(name="implementation")
-    public native DOMImplementation getImplementation();
-    
-    @JsProperty(name="URL")
-    public native String getURL();
-    
-    @JsProperty(name="documentURI")
-    public native String getDocumentURI();
-    
-    @JsProperty(name="origin")
-    public native String getOrigin();
-    
-    @JsProperty(name="suborigin")
-    public native String getSuborigin();
-    
-    @JsProperty(name="compatMode")
-    public native String getCompatMode();
-    
-    @JsProperty(name="characterSet")
-    public native String getCharacterSet();
-    
-    @JsProperty(name="charset")
-    public native String getCharset();
-    
-    @JsProperty(name="inputEncoding")
-    public native String getInputEncoding();
-    
-    @JsProperty(name="contentType")
-    public native String getContentType();
-    
-    @JsProperty(name="doctype")
-    public native DocumentType getDoctype();
-    
-    @JsProperty(name="documentElement")
-    public native Element getDocumentElement();
-    
-    @JsProperty(name="xmlEncoding")
-    public native String getXmlEncoding();
-    
-    @JsProperty(name="location")
-    public native Location getLocation();
-    
-    @JsProperty(name="referrer")
-    public native String getReferrer();
-    
-    @JsProperty(name="lastModified")
-    public native String getLastModified();
-    
-    @JsOverlay
-    public final DocumentReadyState getReadyStateAsDocumentReadyState(){
-        return DocumentReadyState.of(getReadyState());
-    }
-    
-    @JsProperty(name="readyState")
-    public native String getReadyState();
-    
-    @JsProperty(name="head")
-    public native HTMLHeadElement getHead();
-    
-    @JsProperty(name="images")
-    public native HTMLCollection getImages();
-    
-    @JsProperty(name="embeds")
-    public native HTMLCollection getEmbeds();
-    
-    @JsProperty(name="plugins")
-    public native HTMLCollection getPlugins();
-    
-    @JsProperty(name="links")
-    public native HTMLCollection getLinks();
-    
-    @JsProperty(name="forms")
-    public native HTMLCollection getForms();
-    
-    @JsProperty(name="scripts")
-    public native HTMLCollection getScripts();
-    
-    @JsProperty(name="currentScript")
-    public native Document.HTMLOrSVGScriptElement getCurrentScript();
-    
-    @JsProperty(name="defaultView")
-    public native Window getDefaultView();
-    
-    @JsProperty(name="anchors")
-    public native HTMLCollection getAnchors();
-    
-    @JsProperty(name="applets")
-    public native HTMLCollection getApplets();
-    
-    @JsProperty(name="preferredStylesheetSet")
-    public native String getPreferredStylesheetSet();
-    
-    @JsProperty(name="scrollingElement")
-    public native Element getScrollingElement();
-    
-    @JsProperty(name="hidden")
-    public native boolean getHidden();
-    
-    @JsOverlay
-    public final VisibilityState getVisibilityStateAsVisibilityState(){
-        return VisibilityState.of(getVisibilityState());
-    }
-    
-    @JsProperty(name="visibilityState")
-    public native String getVisibilityState();
-    
-    @JsOverlay
-    public final AddressSpace getAddressSpaceAsAddressSpace(){
-        return AddressSpace.of(getAddressSpace());
-    }
-    
-    @JsProperty(name="addressSpace")
-    public native String getAddressSpace();
-    
-    @JsProperty(name="webkitVisibilityState")
-    public native String getWebkitVisibilityState();
-    
-    @JsProperty(name="webkitHidden")
-    public native boolean getWebkitHidden();
-    
-    @JsProperty(name="timeline")
-    public native DocumentTimeline getTimeline();
-    
-    @JsProperty(name="fullscreenEnabled")
-    public native boolean getFullscreenEnabled();
-    
-    @JsProperty(name="webkitIsFullScreen")
-    public native boolean getWebkitIsFullScreen();
-    
-    @JsProperty(name="webkitCurrentFullScreenElement")
-    public native Element getWebkitCurrentFullScreenElement();
-    
-    @JsProperty(name="webkitFullscreenEnabled")
-    public native boolean getWebkitFullscreenEnabled();
-    
-    @JsProperty(name="webkitFullscreenElement")
-    public native Element getWebkitFullscreenElement();
-    
-    @JsProperty(name="rootElement")
-    public native SVGSVGElement getRootElement();
-    
     @JsProperty(name="children")
-    public native HTMLCollection getChildren();
+    public HTMLCollection children;
     
     @JsProperty(name="firstElementChild")
-    public native Element getFirstElementChild();
+    public Element firstElementChild;
     
     @JsProperty(name="lastElementChild")
-    public native Element getLastElementChild();
+    public Element lastElementChild;
     
     @JsProperty(name="childElementCount")
-    public native double getChildElementCount();
+    public double childElementCount;
     
     @JsProperty(name="activeElement")
-    public native Element getActiveElement();
+    public Element activeElement;
     
     @JsProperty(name="styleSheets")
-    public native StyleSheetList getStyleSheets();
+    public StyleSheetList styleSheets;
     
     @JsProperty(name="pointerLockElement")
-    public native Element getPointerLockElement();
+    public Element pointerLockElement;
     
     @JsProperty(name="fullscreenElement")
-    public native Element getFullscreenElement();
+    public Element fullscreenElement;
     
     @JsProperty(name="fonts")
-    public native FontFaceSet getFonts();
+    public FontFaceSet fonts;
     
     @JsMethod(name = "adoptNode")
     public native Node adoptNode(Node node);

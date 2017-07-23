@@ -32,16 +32,15 @@ public class PresentationConnectionCloseEvent extends Event{
         super((String) null);
     }
     
+    @JsProperty(name="reason")
+    public String reason;
     @JsOverlay
-    public final PresentationConnectionCloseReason getReasonAsPresentationConnectionCloseReason(){
-        return PresentationConnectionCloseReason.of(getReason());
+    public final PresentationConnectionCloseReason getReason(){
+       return PresentationConnectionCloseReason.of(reason);
     }
     
-    @JsProperty(name="reason")
-    public native String getReason();
-    
     @JsProperty(name="message")
-    public native String getMessage();
+    public String message;
     
     
 }

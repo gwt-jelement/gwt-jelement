@@ -25,16 +25,16 @@ import jsinterop.annotations.JsType;
 public class MimeType{
     
     @JsProperty(name="type")
-    public native String getType();
+    public String type;
     
     @JsProperty(name="suffixes")
-    public native String getSuffixes();
+    public String suffixes;
     
     @JsProperty(name="description")
-    public native String getDescription();
+    public String description;
     
     @JsProperty(name="enabledPlugin")
-    public native Plugin getEnabledPlugin();
+    public Plugin enabledPlugin;
     
     
 }

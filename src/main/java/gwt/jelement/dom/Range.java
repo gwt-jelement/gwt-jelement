@@ -40,22 +40,22 @@ public class Range{
     }
     
     @JsProperty(name="startContainer")
-    public native Node getStartContainer();
+    public Node startContainer;
     
     @JsProperty(name="startOffset")
-    public native double getStartOffset();
+    public double startOffset;
     
     @JsProperty(name="endContainer")
-    public native Node getEndContainer();
+    public Node endContainer;
     
     @JsProperty(name="endOffset")
-    public native double getEndOffset();
+    public double endOffset;
     
     @JsProperty(name="collapsed")
-    public native boolean getCollapsed();
+    public boolean collapsed;
     
     @JsProperty(name="commonAncestorContainer")
-    public native Node getCommonAncestorContainer();
+    public Node commonAncestorContainer;
     
     @JsMethod(name = "cloneContents")
     public native DocumentFragment cloneContents();

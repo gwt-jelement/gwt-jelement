@@ -34,28 +34,28 @@ public class SVGFEOffsetElement extends SVGElement{
     }
     
     @JsProperty(name="in1")
-    public native SVGAnimatedString getIn1();
+    public SVGAnimatedString in1;
     
     @JsProperty(name="dx")
-    public native SVGAnimatedNumber getDx();
+    public SVGAnimatedNumber dx;
     
     @JsProperty(name="dy")
-    public native SVGAnimatedNumber getDy();
+    public SVGAnimatedNumber dy;
     
     @JsProperty(name="x")
-    public native SVGAnimatedLength getX();
+    public SVGAnimatedLength x;
     
     @JsProperty(name="y")
-    public native SVGAnimatedLength getY();
+    public SVGAnimatedLength y;
     
     @JsProperty(name="width")
-    public native SVGAnimatedLength getWidth();
+    public SVGAnimatedLength width;
     
     @JsProperty(name="height")
-    public native SVGAnimatedLength getHeight();
+    public SVGAnimatedLength height;
     
     @JsProperty(name="result")
-    public native SVGAnimatedString getResult();
+    public SVGAnimatedString result;
     
     
 }

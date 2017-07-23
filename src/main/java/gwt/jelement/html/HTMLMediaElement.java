@@ -57,23 +57,56 @@ public class HTMLMediaElement extends HTMLElement{
         super();
     }
     
+    @JsProperty(name="error")
+    public MediaError error;
+    
     @JsProperty(name="src")
     public String src;
+    
+    @JsProperty(name="currentSrc")
+    public String currentSrc;
     
     @JsProperty(name="crossOrigin")
     public String crossOrigin;
     
+    @JsProperty(name="networkState")
+    public short networkState;
+    
     @JsProperty(name="preload")
     public String preload;
     
+    @JsProperty(name="buffered")
+    public TimeRanges buffered;
+    
+    @JsProperty(name="readyState")
+    public short readyState;
+    
+    @JsProperty(name="seeking")
+    public boolean seeking;
+    
     @JsProperty(name="currentTime")
     public double currentTime;
+    
+    @JsProperty(name="duration")
+    public double duration;
+    
+    @JsProperty(name="paused")
+    public boolean paused;
     
     @JsProperty(name="defaultPlaybackRate")
     public double defaultPlaybackRate;
     
     @JsProperty(name="playbackRate")
     public double playbackRate;
+    
+    @JsProperty(name="played")
+    public TimeRanges played;
+    
+    @JsProperty(name="seekable")
+    public TimeRanges seekable;
+    
+    @JsProperty(name="ended")
+    public boolean ended;
     
     @JsProperty(name="autoplay")
     public boolean autoplay;
@@ -84,6 +117,9 @@ public class HTMLMediaElement extends HTMLElement{
     @JsProperty(name="controls")
     public boolean controls;
     
+    @JsProperty(name="controlsList")
+    public DOMTokenList controlsList;
+    
     @JsProperty(name="volume")
     public double volume;
     
@@ -93,77 +129,41 @@ public class HTMLMediaElement extends HTMLElement{
     @JsProperty(name="defaultMuted")
     public boolean defaultMuted;
     
+    @JsProperty(name="audioTracks")
+    public AudioTrackList audioTracks;
+    
+    @JsProperty(name="videoTracks")
+    public VideoTrackList videoTracks;
+    
+    @JsProperty(name="textTracks")
+    public TextTrackList textTracks;
+    
+    @JsProperty(name="webkitAudioDecodedByteCount")
+    public double webkitAudioDecodedByteCount;
+    
+    @JsProperty(name="webkitVideoDecodedByteCount")
+    public double webkitVideoDecodedByteCount;
+    
+    @JsProperty(name="sinkId")
+    public String sinkId;
+    
+    @JsProperty(name="mediaKeys")
+    public MediaKeys mediaKeys;
+    
     @JsProperty(name="onencrypted")
     public EventHandlerNonNull onencrypted;
     
     @JsProperty(name="onwaitingforkey")
     public EventHandlerNonNull onwaitingforkey;
     
+    @JsProperty(name="remote")
+    public RemotePlayback remote;
+    
     @JsProperty(name="disableRemotePlayback")
     public boolean disableRemotePlayback;
     
     @JsProperty(name="srcObject")
     public MediaStream srcObject;
-    
-    @JsProperty(name="error")
-    public native MediaError getError();
-    
-    @JsProperty(name="currentSrc")
-    public native String getCurrentSrc();
-    
-    @JsProperty(name="networkState")
-    public native short getNetworkState();
-    
-    @JsProperty(name="buffered")
-    public native TimeRanges getBuffered();
-    
-    @JsProperty(name="readyState")
-    public native short getReadyState();
-    
-    @JsProperty(name="seeking")
-    public native boolean getSeeking();
-    
-    @JsProperty(name="duration")
-    public native double getDuration();
-    
-    @JsProperty(name="paused")
-    public native boolean getPaused();
-    
-    @JsProperty(name="played")
-    public native TimeRanges getPlayed();
-    
-    @JsProperty(name="seekable")
-    public native TimeRanges getSeekable();
-    
-    @JsProperty(name="ended")
-    public native boolean getEnded();
-    
-    @JsProperty(name="controlsList")
-    public native DOMTokenList getControlsList();
-    
-    @JsProperty(name="audioTracks")
-    public native AudioTrackList getAudioTracks();
-    
-    @JsProperty(name="videoTracks")
-    public native VideoTrackList getVideoTracks();
-    
-    @JsProperty(name="textTracks")
-    public native TextTrackList getTextTracks();
-    
-    @JsProperty(name="webkitAudioDecodedByteCount")
-    public native double getWebkitAudioDecodedByteCount();
-    
-    @JsProperty(name="webkitVideoDecodedByteCount")
-    public native double getWebkitVideoDecodedByteCount();
-    
-    @JsProperty(name="sinkId")
-    public native String getSinkId();
-    
-    @JsProperty(name="mediaKeys")
-    public native MediaKeys getMediaKeys();
-    
-    @JsProperty(name="remote")
-    public native RemotePlayback getRemote();
     
     @JsOverlay
     public final TextTrack addTextTrack(TextTrackKind kind){

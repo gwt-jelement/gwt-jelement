@@ -25,16 +25,16 @@ import jsinterop.annotations.JsType;
 public class PerformanceEntry{
     
     @JsProperty(name="name")
-    public native String getName();
+    public String name;
     
     @JsProperty(name="entryType")
-    public native String getEntryType();
+    public String entryType;
     
     @JsProperty(name="startTime")
-    public native double getStartTime();
+    public double startTime;
     
     @JsProperty(name="duration")
-    public native double getDuration();
+    public double duration;
     
     @JsMethod(name = "toJSON")
     public native Object toJSON();

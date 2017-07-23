@@ -38,10 +38,10 @@ public class HTMLProgressElement extends HTMLElement{
     public double max;
     
     @JsProperty(name="position")
-    public native double getPosition();
+    public double position;
     
     @JsProperty(name="labels")
-    public native NodeList getLabels();
+    public NodeList labels;
     
     
 }

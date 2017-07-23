@@ -27,16 +27,16 @@ import jsinterop.annotations.JsType;
 public class BackgroundFetchRegistration{
     
     @JsProperty(name="tag")
-    public native String getTag();
+    public String tag;
     
     @JsProperty(name="icons")
-    public native IconDefinition[] getIcons();
+    public IconDefinition[] icons;
     
     @JsProperty(name="totalDownloadSize")
-    public native double getTotalDownloadSize();
+    public double totalDownloadSize;
     
     @JsProperty(name="title")
-    public native String getTitle();
+    public String title;
     
     @JsMethod(name = "abort")
     public native Promise<Boolean> abort();

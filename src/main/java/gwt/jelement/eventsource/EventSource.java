@@ -42,6 +42,15 @@ public class EventSource extends EventTarget{
         super();
     }
     
+    @JsProperty(name="url")
+    public String url;
+    
+    @JsProperty(name="withCredentials")
+    public boolean withCredentials;
+    
+    @JsProperty(name="readyState")
+    public short readyState;
+    
     @JsProperty(name="onopen")
     public EventHandlerNonNull onopen;
     
@@ -50,15 +59,6 @@ public class EventSource extends EventTarget{
     
     @JsProperty(name="onerror")
     public EventHandlerNonNull onerror;
-    
-    @JsProperty(name="url")
-    public native String getUrl();
-    
-    @JsProperty(name="withCredentials")
-    public native boolean getWithCredentials();
-    
-    @JsProperty(name="readyState")
-    public native short getReadyState();
     
     @JsMethod(name = "close")
     public native void close();

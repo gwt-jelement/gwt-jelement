@@ -32,16 +32,16 @@ public class SVGForeignObjectElement extends SVGGraphicsElement{
     }
     
     @JsProperty(name="x")
-    public native SVGAnimatedLength getX();
+    public SVGAnimatedLength x;
     
     @JsProperty(name="y")
-    public native SVGAnimatedLength getY();
+    public SVGAnimatedLength y;
     
     @JsProperty(name="width")
-    public native SVGAnimatedLength getWidth();
+    public SVGAnimatedLength width;
     
     @JsProperty(name="height")
-    public native SVGAnimatedLength getHeight();
+    public SVGAnimatedLength height;
     
     
 }

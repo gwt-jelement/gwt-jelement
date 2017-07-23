@@ -29,7 +29,7 @@ import jsinterop.annotations.JsType;
 public class Body{
     
     @JsProperty(name="bodyUsed")
-    public native boolean getBodyUsed();
+    public boolean bodyUsed;
     
     @JsMethod(name = "arrayBuffer")
     public native Promise<ArrayBuffer> arrayBuffer();

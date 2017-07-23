@@ -33,10 +33,10 @@ public class SQLError{
     
     
     @JsProperty(name="code")
-    public native double getCode();
+    public double code;
     
     @JsProperty(name="message")
-    public native String getMessage();
+    public String message;
     
     
 }

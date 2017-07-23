@@ -32,13 +32,12 @@ public class BackgroundFetchClickEvent extends BackgroundFetchEvent{
         super((String) null, (BackgroundFetchEventInit) null);
     }
     
-    @JsOverlay
-    public final BackgroundFetchState getStateAsBackgroundFetchState(){
-        return BackgroundFetchState.of(getState());
-    }
-    
     @JsProperty(name="state")
-    public native String getState();
+    public String state;
+    @JsOverlay
+    public final BackgroundFetchState getState(){
+       return BackgroundFetchState.of(state);
+    }
     
     
 }

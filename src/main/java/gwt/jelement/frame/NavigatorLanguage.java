@@ -24,10 +24,10 @@ import jsinterop.annotations.JsType;
 public class NavigatorLanguage{
     
     @JsProperty(name="language")
-    public native String getLanguage();
+    public String language;
     
     @JsProperty(name="languages")
-    public native String[] getLanguages();
+    public String[] languages;
     
     
 }

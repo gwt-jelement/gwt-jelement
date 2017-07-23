@@ -37,10 +37,10 @@ public class HashChangeEvent extends Event{
     }
     
     @JsProperty(name="oldURL")
-    public native String getOldURL();
+    public String oldURL;
     
     @JsProperty(name="newURL")
-    public native String getNewURL();
+    public String newURL;
     
     
 }

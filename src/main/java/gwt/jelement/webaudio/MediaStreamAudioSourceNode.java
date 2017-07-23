@@ -34,7 +34,7 @@ public class MediaStreamAudioSourceNode extends AudioNode{
     }
     
     @JsProperty(name="mediaStream")
-    public native MediaStream getMediaStream();
+    public MediaStream mediaStream;
     
     
 }

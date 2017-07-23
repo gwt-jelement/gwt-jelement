@@ -33,17 +33,17 @@ public class MIDIAccess extends EventTarget{
         super();
     }
     
-    @JsProperty(name="onstatechange")
-    public EventHandlerNonNull onstatechange;
-    
     @JsProperty(name="inputs")
-    public native MIDIInputMap getInputs();
+    public MIDIInputMap inputs;
     
     @JsProperty(name="outputs")
-    public native MIDIOutputMap getOutputs();
+    public MIDIOutputMap outputs;
     
     @JsProperty(name="sysexEnabled")
-    public native boolean getSysexEnabled();
+    public boolean sysexEnabled;
+    
+    @JsProperty(name="onstatechange")
+    public EventHandlerNonNull onstatechange;
     
     
 }

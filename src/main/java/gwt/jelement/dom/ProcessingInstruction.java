@@ -32,10 +32,10 @@ public class ProcessingInstruction extends CharacterData{
     }
     
     @JsProperty(name="target")
-    public native String getTarget();
+    public String target;
     
     @JsProperty(name="sheet")
-    public native StyleSheet getSheet();
+    public StyleSheet sheet;
     
     
 }

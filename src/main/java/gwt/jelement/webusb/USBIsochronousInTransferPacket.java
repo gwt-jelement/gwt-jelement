@@ -35,16 +35,15 @@ public class USBIsochronousInTransferPacket{
     public USBIsochronousInTransferPacket(USBTransferStatus status, DataView data){
     }
     
+    @JsProperty(name="status")
+    public String status;
     @JsOverlay
-    public final USBTransferStatus getStatusAsUSBTransferStatus(){
-        return USBTransferStatus.of(getStatus());
+    public final USBTransferStatus getStatus(){
+       return USBTransferStatus.of(status);
     }
     
-    @JsProperty(name="status")
-    public native String getStatus();
-    
     @JsProperty(name="data")
-    public native DataView getData();
+    public DataView data;
     
     
 }

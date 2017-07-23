@@ -37,44 +37,41 @@ public class MIDIPort extends EventTarget{
         super();
     }
     
-    @JsProperty(name="onstatechange")
-    public EventHandlerNonNull onstatechange;
-    
-    @JsOverlay
-    public final MIDIPortConnectionState getConnectionAsMIDIPortConnectionState(){
-        return MIDIPortConnectionState.of(getConnection());
-    }
-    
     @JsProperty(name="connection")
-    public native String getConnection();
+    public String connection;
+    @JsOverlay
+    public final MIDIPortConnectionState getConnection(){
+       return MIDIPortConnectionState.of(connection);
+    }
     
     @JsProperty(name="id")
-    public native String getId();
+    public String id;
     
     @JsProperty(name="manufacturer")
-    public native String getManufacturer();
+    public String manufacturer;
     
     @JsProperty(name="name")
-    public native String getName();
-    
-    @JsOverlay
-    public final MIDIPortDeviceState getStateAsMIDIPortDeviceState(){
-        return MIDIPortDeviceState.of(getState());
-    }
+    public String name;
     
     @JsProperty(name="state")
-    public native String getState();
-    
+    public String state;
     @JsOverlay
-    public final MIDIPortType getTypeAsMIDIPortType(){
-        return MIDIPortType.of(getType());
+    public final MIDIPortDeviceState getState(){
+       return MIDIPortDeviceState.of(state);
     }
     
     @JsProperty(name="type")
-    public native String getType();
+    public String type;
+    @JsOverlay
+    public final MIDIPortType getType(){
+       return MIDIPortType.of(type);
+    }
     
     @JsProperty(name="version")
-    public native String getVersion();
+    public String version;
+    
+    @JsProperty(name="onstatechange")
+    public EventHandlerNonNull onstatechange;
     
     @JsMethod(name = "close")
     public native Promise close();

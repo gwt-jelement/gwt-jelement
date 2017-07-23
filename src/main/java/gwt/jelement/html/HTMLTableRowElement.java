@@ -32,6 +32,15 @@ public class HTMLTableRowElement extends HTMLElement{
         super();
     }
     
+    @JsProperty(name="rowIndex")
+    public double rowIndex;
+    
+    @JsProperty(name="sectionRowIndex")
+    public double sectionRowIndex;
+    
+    @JsProperty(name="cells")
+    public HTMLCollection cells;
+    
     @JsProperty(name="align")
     public String align;
     
@@ -46,15 +55,6 @@ public class HTMLTableRowElement extends HTMLElement{
     
     @JsProperty(name="bgColor")
     public String bgColor;
-    
-    @JsProperty(name="rowIndex")
-    public native double getRowIndex();
-    
-    @JsProperty(name="sectionRowIndex")
-    public native double getSectionRowIndex();
-    
-    @JsProperty(name="cells")
-    public native HTMLCollection getCells();
     
     @JsMethod(name = "deleteCell")
     public native void deleteCell(double index);

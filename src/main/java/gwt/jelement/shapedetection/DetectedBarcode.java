@@ -31,13 +31,13 @@ public class DetectedBarcode{
     }
     
     @JsProperty(name="rawValue")
-    public native String getRawValue();
+    public String rawValue;
     
     @JsProperty(name="boundingBox")
-    public native DOMRect getBoundingBox();
+    public DOMRect boundingBox;
     
     @JsProperty(name="cornerPoints")
-    public native Point2D[] getCornerPoints();
+    public Point2D[] cornerPoints;
     
     
 }

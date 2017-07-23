@@ -39,6 +39,15 @@ public class IDBDatabase extends EventTarget{
         super();
     }
     
+    @JsProperty(name="name")
+    public String name;
+    
+    @JsProperty(name="version")
+    public double version;
+    
+    @JsProperty(name="objectStoreNames")
+    public DOMStringList objectStoreNames;
+    
     @JsProperty(name="onabort")
     public EventHandlerNonNull onabort;
     
@@ -50,15 +59,6 @@ public class IDBDatabase extends EventTarget{
     
     @JsProperty(name="onversionchange")
     public EventHandlerNonNull onversionchange;
-    
-    @JsProperty(name="name")
-    public native String getName();
-    
-    @JsProperty(name="version")
-    public native double getVersion();
-    
-    @JsProperty(name="objectStoreNames")
-    public native DOMStringList getObjectStoreNames();
     
     @JsMethod(name = "close")
     public native void close();

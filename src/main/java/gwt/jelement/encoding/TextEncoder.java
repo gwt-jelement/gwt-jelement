@@ -31,7 +31,7 @@ public class TextEncoder{
     }
     
     @JsProperty(name="encoding")
-    public native String getEncoding();
+    public String encoding;
     
     @JsMethod(name = "encode")
     public native Uint8Array encode();

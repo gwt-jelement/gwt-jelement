@@ -25,13 +25,13 @@ import jsinterop.annotations.JsType;
 public class SQLResultSet{
     
     @JsProperty(name="rows")
-    public native SQLResultSetRowList getRows();
+    public SQLResultSetRowList rows;
     
     @JsProperty(name="insertId")
-    public native double getInsertId();
+    public double insertId;
     
     @JsProperty(name="rowsAffected")
-    public native double getRowsAffected();
+    public double rowsAffected;
     
     
 }

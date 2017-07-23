@@ -27,13 +27,13 @@ import jsinterop.annotations.JsType;
 public class IntersectionObserver{
     
     @JsProperty(name="root")
-    public native Element getRoot();
+    public Element root;
     
     @JsProperty(name="rootMargin")
-    public native String getRootMargin();
+    public String rootMargin;
     
     @JsProperty(name="thresholds")
-    public native double[] getThresholds();
+    public double[] thresholds;
     
     @JsMethod(name = "disconnect")
     public native void disconnect();

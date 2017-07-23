@@ -50,7 +50,7 @@ public class HTMLMeterElement extends HTMLElement{
     public double optimum;
     
     @JsProperty(name="labels")
-    public native NodeList getLabels();
+    public NodeList labels;
     
     
 }

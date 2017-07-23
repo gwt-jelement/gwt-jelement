@@ -25,19 +25,18 @@ import jsinterop.annotations.JsType;
 @JsType(namespace = JsPackage.GLOBAL, isNative = true)
 public class IDBObservation{
     
+    @JsProperty(name="type")
+    public String type;
     @JsOverlay
-    public final IDBObservationType getTypeAsIDBObservationType(){
-        return IDBObservationType.of(getType());
+    public final IDBObservationType getType(){
+       return IDBObservationType.of(type);
     }
     
-    @JsProperty(name="type")
-    public native String getType();
-    
     @JsProperty(name="key")
-    public native Object getKey();
+    public Object key;
     
     @JsProperty(name="value")
-    public native Object getValue();
+    public Object value;
     
     
 }

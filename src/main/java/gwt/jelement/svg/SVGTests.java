@@ -25,10 +25,10 @@ import jsinterop.annotations.JsType;
 public class SVGTests{
     
     @JsProperty(name="requiredExtensions")
-    public native SVGStringList getRequiredExtensions();
+    public SVGStringList requiredExtensions;
     
     @JsProperty(name="systemLanguage")
-    public native SVGStringList getSystemLanguage();
+    public SVGStringList systemLanguage;
     
     
 }

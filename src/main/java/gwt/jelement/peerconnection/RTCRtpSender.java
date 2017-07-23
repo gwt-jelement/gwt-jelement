@@ -25,7 +25,7 @@ import jsinterop.annotations.JsType;
 public class RTCRtpSender{
     
     @JsProperty(name="track")
-    public native MediaStreamTrack getTrack();
+    public MediaStreamTrack track;
     
     
 }

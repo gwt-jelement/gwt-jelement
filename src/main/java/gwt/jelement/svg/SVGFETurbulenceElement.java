@@ -43,37 +43,37 @@ public class SVGFETurbulenceElement extends SVGElement{
     }
     
     @JsProperty(name="baseFrequencyX")
-    public native SVGAnimatedNumber getBaseFrequencyX();
+    public SVGAnimatedNumber baseFrequencyX;
     
     @JsProperty(name="baseFrequencyY")
-    public native SVGAnimatedNumber getBaseFrequencyY();
+    public SVGAnimatedNumber baseFrequencyY;
     
     @JsProperty(name="numOctaves")
-    public native SVGAnimatedInteger getNumOctaves();
+    public SVGAnimatedInteger numOctaves;
     
     @JsProperty(name="seed")
-    public native SVGAnimatedNumber getSeed();
+    public SVGAnimatedNumber seed;
     
     @JsProperty(name="stitchTiles")
-    public native SVGAnimatedEnumeration getStitchTiles();
+    public SVGAnimatedEnumeration stitchTiles;
     
     @JsProperty(name="type")
-    public native SVGAnimatedEnumeration getType();
+    public SVGAnimatedEnumeration type;
     
     @JsProperty(name="x")
-    public native SVGAnimatedLength getX();
+    public SVGAnimatedLength x;
     
     @JsProperty(name="y")
-    public native SVGAnimatedLength getY();
+    public SVGAnimatedLength y;
     
     @JsProperty(name="width")
-    public native SVGAnimatedLength getWidth();
+    public SVGAnimatedLength width;
     
     @JsProperty(name="height")
-    public native SVGAnimatedLength getHeight();
+    public SVGAnimatedLength height;
     
     @JsProperty(name="result")
-    public native SVGAnimatedString getResult();
+    public SVGAnimatedString result;
     
     
 }

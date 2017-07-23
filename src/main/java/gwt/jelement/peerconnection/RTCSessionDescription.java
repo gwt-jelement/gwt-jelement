@@ -27,7 +27,16 @@ import jsinterop.annotations.JsType;
 public class RTCSessionDescription{
     
     @JsProperty(name="type")
-    public RTCSdpType type;
+    public String type;
+    @JsOverlay
+    public final RTCSdpType getType(){
+       return RTCSdpType.of(type);
+    }
+    
+    @JsOverlay
+    public final void setType(RTCSdpType type){
+       this.type = type.getInternalValue();
+    }
     
     @JsProperty(name="sdp")
     public String sdp;

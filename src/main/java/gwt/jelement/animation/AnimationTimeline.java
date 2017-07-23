@@ -24,7 +24,7 @@ import jsinterop.annotations.JsType;
 public class AnimationTimeline{
     
     @JsProperty(name="currentTime")
-    public native double getCurrentTime();
+    public double currentTime;
     
     
 }

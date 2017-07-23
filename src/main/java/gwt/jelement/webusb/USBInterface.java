@@ -31,16 +31,16 @@ public class USBInterface{
     }
     
     @JsProperty(name="interfaceNumber")
-    public native byte getInterfaceNumber();
+    public byte interfaceNumber;
     
     @JsProperty(name="alternate")
-    public native USBAlternateInterface getAlternate();
+    public USBAlternateInterface alternate;
     
     @JsProperty(name="alternates")
-    public native USBAlternateInterface[] getAlternates();
+    public USBAlternateInterface[] alternates;
     
     @JsProperty(name="claimed")
-    public native boolean getClaimed();
+    public boolean claimed;
     
     
 }

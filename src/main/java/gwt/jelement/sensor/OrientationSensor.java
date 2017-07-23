@@ -35,7 +35,7 @@ public class OrientationSensor extends Sensor{
     }
     
     @JsProperty(name="quaternion")
-    public native double[] getQuaternion();
+    public double[] quaternion;
     
     @JsMethod(name = "populateMatrix")
     public native void populateMatrix(Float32Array targetBuffer);

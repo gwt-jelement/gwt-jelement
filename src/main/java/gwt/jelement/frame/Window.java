@@ -98,26 +98,152 @@ public class Window extends EventTarget{
         super();
     }
     
+    @JsProperty(name="window")
+    public Window window;
+    
+    @JsProperty(name="self")
+    public Window self;
+    
+    @JsProperty(name="document")
+    public Document document;
+    
+    @JsProperty(name="origin")
+    public String origin;
+    
     @JsProperty(name="name")
     public String name;
+    
+    @JsProperty(name="location")
+    public Location location;
+    
+    @JsProperty(name="history")
+    public History history;
+    
+    @JsProperty(name="locationbar")
+    public BarProp locationbar;
+    
+    @JsProperty(name="menubar")
+    public BarProp menubar;
+    
+    @JsProperty(name="personalbar")
+    public BarProp personalbar;
+    
+    @JsProperty(name="scrollbars")
+    public BarProp scrollbars;
+    
+    @JsProperty(name="statusbar")
+    public BarProp statusbar;
+    
+    @JsProperty(name="toolbar")
+    public BarProp toolbar;
     
     @JsProperty(name="status")
     public String status;
     
+    @JsProperty(name="closed")
+    public boolean closed;
+    
+    @JsProperty(name="frames")
+    public Window frames;
+    
+    @JsProperty(name="length")
+    public double length;
+    
+    @JsProperty(name="top")
+    public Window top;
+    
     @JsProperty(name="opener")
     public Window opener;
+    
+    @JsProperty(name="parent")
+    public Window parent;
+    
+    @JsProperty(name="frameElement")
+    public Element frameElement;
+    
+    @JsProperty(name="navigator")
+    public Navigator navigator;
+    
+    @JsProperty(name="applicationCache")
+    public ApplicationCache applicationCache;
+    
+    @JsProperty(name="customElements")
+    public CustomElementRegistry customElements;
+    
+    @JsProperty(name="external")
+    public External external;
+    
+    @JsProperty(name="screen")
+    public Screen screen;
+    
+    @JsProperty(name="innerWidth")
+    public double innerWidth;
+    
+    @JsProperty(name="innerHeight")
+    public double innerHeight;
+    
+    @JsProperty(name="scrollX")
+    public double scrollX;
+    
+    @JsProperty(name="pageXOffset")
+    public double pageXOffset;
+    
+    @JsProperty(name="scrollY")
+    public double scrollY;
+    
+    @JsProperty(name="pageYOffset")
+    public double pageYOffset;
+    
+    @JsProperty(name="visualViewport")
+    public VisualViewport visualViewport;
+    
+    @JsProperty(name="screenX")
+    public double screenX;
+    
+    @JsProperty(name="screenY")
+    public double screenY;
+    
+    @JsProperty(name="outerWidth")
+    public double outerWidth;
+    
+    @JsProperty(name="outerHeight")
+    public double outerHeight;
+    
+    @JsProperty(name="devicePixelRatio")
+    public double devicePixelRatio;
+    
+    @JsProperty(name="console")
+    public Console console;
     
     @JsProperty(name="onorientationchange")
     public EventHandlerNonNull onorientationchange;
     
+    @JsProperty(name="orientation")
+    public double orientation;
+    
+    @JsProperty(name="clientInformation")
+    public Navigator clientInformation;
+    
     @JsProperty(name="event")
     public Event event;
+    
+    @JsProperty(name="offscreenBuffering")
+    public boolean offscreenBuffering;
+    
+    @JsProperty(name="screenLeft")
+    public double screenLeft;
+    
+    @JsProperty(name="screenTop")
+    public double screenTop;
     
     @JsProperty(name="defaultStatus")
     public String defaultStatus;
     
     @JsProperty(name="defaultstatus")
     public String defaultstatus;
+    
+    @JsProperty(name="styleMedia")
+    public StyleMedia styleMedia;
     
     @JsProperty(name="WebKitTransitionEvent")
     public TransitionEvent WebKitTransitionEvent;
@@ -161,6 +287,9 @@ public class Window extends EventTarget{
     @JsProperty(name="onwheel")
     public EventHandlerNonNull onwheel;
     
+    @JsProperty(name="isSecureContext")
+    public boolean isSecureContext;
+    
     @JsProperty(name="WebKitCSSMatrix")
     public DOMMatrix WebKitCSSMatrix;
     
@@ -169,6 +298,18 @@ public class Window extends EventTarget{
     
     @JsProperty(name="onbeforeinstallprompt")
     public EventHandlerNonNull onbeforeinstallprompt;
+    
+    @JsProperty(name="caches")
+    public CacheStorage caches;
+    
+    @JsProperty(name="animationWorklet")
+    public Worklet animationWorklet;
+    
+    @JsProperty(name="crypto")
+    public Crypto crypto;
+    
+    @JsProperty(name="paintWorklet")
+    public Worklet paintWorklet;
     
     @JsProperty(name="ondevicemotion")
     public EventHandlerNonNull ondevicemotion;
@@ -179,11 +320,17 @@ public class Window extends EventTarget{
     @JsProperty(name="ondeviceorientationabsolute")
     public EventHandlerNonNull ondeviceorientationabsolute;
     
+    @JsProperty(name="indexedDB")
+    public IDBFactory indexedDB;
+    
     @JsProperty(name="webkitMediaStream")
     public MediaStream webkitMediaStream;
     
     @JsProperty(name="webkitRTCPeerConnection")
     public RTCPeerConnection webkitRTCPeerConnection;
+    
+    @JsProperty(name="webkitStorageInfo")
+    public DeprecatedStorageInfo webkitStorageInfo;
     
     @JsProperty(name="webkitSpeechGrammar")
     public SpeechGrammar webkitSpeechGrammar;
@@ -199,6 +346,21 @@ public class Window extends EventTarget{
     
     @JsProperty(name="webkitSpeechRecognitionEvent")
     public SpeechRecognitionEvent webkitSpeechRecognitionEvent;
+    
+    @JsProperty(name="speechSynthesis")
+    public SpeechSynthesis speechSynthesis;
+    
+    @JsProperty(name="sessionStorage")
+    public Storage sessionStorage;
+    
+    @JsProperty(name="localStorage")
+    public Storage localStorage;
+    
+    @JsProperty(name="performance")
+    public Performance performance;
+    
+    @JsProperty(name="audioWorklet")
+    public Worklet audioWorklet;
     
     @JsProperty(name="onabort")
     public EventHandlerNonNull onabort;
@@ -460,168 +622,6 @@ public class Window extends EventTarget{
     
     @JsProperty(name="onunload")
     public EventHandlerNonNull onunload;
-    
-    @JsProperty(name="window")
-    public native Window getWindow();
-    
-    @JsProperty(name="self")
-    public native Window getSelf();
-    
-    @JsProperty(name="document")
-    public native Document getDocument();
-    
-    @JsProperty(name="origin")
-    public native String getOrigin();
-    
-    @JsProperty(name="location")
-    public native Location getLocation();
-    
-    @JsProperty(name="history")
-    public native History getHistory();
-    
-    @JsProperty(name="locationbar")
-    public native BarProp getLocationbar();
-    
-    @JsProperty(name="menubar")
-    public native BarProp getMenubar();
-    
-    @JsProperty(name="personalbar")
-    public native BarProp getPersonalbar();
-    
-    @JsProperty(name="scrollbars")
-    public native BarProp getScrollbars();
-    
-    @JsProperty(name="statusbar")
-    public native BarProp getStatusbar();
-    
-    @JsProperty(name="toolbar")
-    public native BarProp getToolbar();
-    
-    @JsProperty(name="closed")
-    public native boolean getClosed();
-    
-    @JsProperty(name="frames")
-    public native Window getFrames();
-    
-    @JsProperty(name="length")
-    public native double getLength();
-    
-    @JsProperty(name="top")
-    public native Window getTop();
-    
-    @JsProperty(name="parent")
-    public native Window getParent();
-    
-    @JsProperty(name="frameElement")
-    public native Element getFrameElement();
-    
-    @JsProperty(name="navigator")
-    public native Navigator getNavigator();
-    
-    @JsProperty(name="applicationCache")
-    public native ApplicationCache getApplicationCache();
-    
-    @JsProperty(name="customElements")
-    public native CustomElementRegistry getCustomElements();
-    
-    @JsProperty(name="external")
-    public native External getExternal();
-    
-    @JsProperty(name="screen")
-    public native Screen getScreen();
-    
-    @JsProperty(name="innerWidth")
-    public native double getInnerWidth();
-    
-    @JsProperty(name="innerHeight")
-    public native double getInnerHeight();
-    
-    @JsProperty(name="scrollX")
-    public native double getScrollX();
-    
-    @JsProperty(name="pageXOffset")
-    public native double getPageXOffset();
-    
-    @JsProperty(name="scrollY")
-    public native double getScrollY();
-    
-    @JsProperty(name="pageYOffset")
-    public native double getPageYOffset();
-    
-    @JsProperty(name="visualViewport")
-    public native VisualViewport getVisualViewport();
-    
-    @JsProperty(name="screenX")
-    public native double getScreenX();
-    
-    @JsProperty(name="screenY")
-    public native double getScreenY();
-    
-    @JsProperty(name="outerWidth")
-    public native double getOuterWidth();
-    
-    @JsProperty(name="outerHeight")
-    public native double getOuterHeight();
-    
-    @JsProperty(name="devicePixelRatio")
-    public native double getDevicePixelRatio();
-    
-    @JsProperty(name="console")
-    public native Console getConsole();
-    
-    @JsProperty(name="orientation")
-    public native double getOrientation();
-    
-    @JsProperty(name="clientInformation")
-    public native Navigator getClientInformation();
-    
-    @JsProperty(name="offscreenBuffering")
-    public native boolean getOffscreenBuffering();
-    
-    @JsProperty(name="screenLeft")
-    public native double getScreenLeft();
-    
-    @JsProperty(name="screenTop")
-    public native double getScreenTop();
-    
-    @JsProperty(name="styleMedia")
-    public native StyleMedia getStyleMedia();
-    
-    @JsProperty(name="isSecureContext")
-    public native boolean getIsSecureContext();
-    
-    @JsProperty(name="caches")
-    public native CacheStorage getCaches();
-    
-    @JsProperty(name="animationWorklet")
-    public native Worklet getAnimationWorklet();
-    
-    @JsProperty(name="crypto")
-    public native Crypto getCrypto();
-    
-    @JsProperty(name="paintWorklet")
-    public native Worklet getPaintWorklet();
-    
-    @JsProperty(name="indexedDB")
-    public native IDBFactory getIndexedDB();
-    
-    @JsProperty(name="webkitStorageInfo")
-    public native DeprecatedStorageInfo getWebkitStorageInfo();
-    
-    @JsProperty(name="speechSynthesis")
-    public native SpeechSynthesis getSpeechSynthesis();
-    
-    @JsProperty(name="sessionStorage")
-    public native Storage getSessionStorage();
-    
-    @JsProperty(name="localStorage")
-    public native Storage getLocalStorage();
-    
-    @JsProperty(name="performance")
-    public native Performance getPerformance();
-    
-    @JsProperty(name="audioWorklet")
-    public native Worklet getAudioWorklet();
     
     @JsMethod(name = "alert")
     public native void alert();

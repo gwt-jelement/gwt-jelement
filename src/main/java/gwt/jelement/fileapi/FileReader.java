@@ -75,6 +75,15 @@ public class FileReader extends EventTarget{
         super();
     }
     
+    @JsProperty(name="readyState")
+    public short readyState;
+    
+    @JsProperty(name="result")
+    public FileReader.StringOrArrayBufferUnionType result;
+    
+    @JsProperty(name="error")
+    public DOMException error;
+    
     @JsProperty(name="onloadstart")
     public EventHandlerNonNull onloadstart;
     
@@ -92,15 +101,6 @@ public class FileReader extends EventTarget{
     
     @JsProperty(name="onloadend")
     public EventHandlerNonNull onloadend;
-    
-    @JsProperty(name="readyState")
-    public native short getReadyState();
-    
-    @JsProperty(name="result")
-    public native FileReader.StringOrArrayBufferUnionType getResult();
-    
-    @JsProperty(name="error")
-    public native DOMException getError();
     
     @JsMethod(name = "abort")
     public native void abort();

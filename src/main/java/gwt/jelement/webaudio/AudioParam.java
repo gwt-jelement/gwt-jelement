@@ -29,13 +29,13 @@ public class AudioParam{
     public float value;
     
     @JsProperty(name="defaultValue")
-    public native float getDefaultValue();
+    public float defaultValue;
     
     @JsProperty(name="minValue")
-    public native float getMinValue();
+    public float minValue;
     
     @JsProperty(name="maxValue")
-    public native float getMaxValue();
+    public float maxValue;
     
     @JsMethod(name = "cancelAndHoldAtTime")
     public native AudioParam cancelAndHoldAtTime(double startTime);

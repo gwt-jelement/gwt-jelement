@@ -27,7 +27,7 @@ import jsinterop.annotations.JsType;
 public class DataTransferItemList{
     
     @JsProperty(name="length")
-    public native double getLength();
+    public double length;
     
     @JsMethod(name = "add")
     public native DataTransferItem add(File file);

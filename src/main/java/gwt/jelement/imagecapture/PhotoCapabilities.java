@@ -27,27 +27,25 @@ import jsinterop.annotations.JsType;
 @JsType(namespace = JsPackage.GLOBAL, isNative = true)
 public class PhotoCapabilities{
     
-    @JsOverlay
-    public final RedEyeReduction getRedEyeReductionAsRedEyeReduction(){
-        return RedEyeReduction.of(getRedEyeReduction());
-    }
-    
     @JsProperty(name="redEyeReduction")
-    public native String getRedEyeReduction();
+    public String redEyeReduction;
+    @JsOverlay
+    public final RedEyeReduction getRedEyeReduction(){
+       return RedEyeReduction.of(redEyeReduction);
+    }
     
     @JsProperty(name="imageHeight")
-    public native MediaSettingsRange getImageHeight();
+    public MediaSettingsRange imageHeight;
     
     @JsProperty(name="imageWidth")
-    public native MediaSettingsRange getImageWidth();
-    
-    @JsOverlay
-    public final FillLightMode[] getFillLightModeAsFillLightModeArray    (){
-        return FillLightMode.ofArray(getFillLightMode());
-    }
+    public MediaSettingsRange imageWidth;
     
     @JsProperty(name="fillLightMode")
-    public native String[] getFillLightMode();
+    public String[] fillLightMode;
+    @JsOverlay
+    public final FillLightMode[] getFillLightMode(){
+       return FillLightMode.ofArray(fillLightMode);
+    }
     
     
 }

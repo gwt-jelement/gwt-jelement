@@ -32,7 +32,7 @@ public class BackgroundFetchEvent extends ExtendableEvent{
     }
     
     @JsProperty(name="tag")
-    public native String getTag();
+    public String tag;
     
     
 }

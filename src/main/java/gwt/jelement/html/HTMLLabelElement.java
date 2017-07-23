@@ -31,14 +31,14 @@ public class HTMLLabelElement extends HTMLElement{
         super();
     }
     
+    @JsProperty(name="form")
+    public HTMLFormElement form;
+    
     @JsProperty(name="htmlFor")
     public String htmlFor;
     
-    @JsProperty(name="form")
-    public native HTMLFormElement getForm();
-    
     @JsProperty(name="control")
-    public native HTMLElement getControl();
+    public HTMLElement control;
     
     
 }

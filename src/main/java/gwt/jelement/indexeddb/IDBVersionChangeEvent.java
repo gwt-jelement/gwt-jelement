@@ -33,21 +33,20 @@ public class IDBVersionChangeEvent extends Event{
     }
     
     @JsProperty(name="oldVersion")
-    public native double getOldVersion();
+    public double oldVersion;
     
     @JsProperty(name="newVersion")
-    public native double getNewVersion();
-    
-    @JsOverlay
-    public final IDBDataLossAmount getDataLossAsIDBDataLossAmount(){
-        return IDBDataLossAmount.of(getDataLoss());
-    }
+    public double newVersion;
     
     @JsProperty(name="dataLoss")
-    public native String getDataLoss();
+    public String dataLoss;
+    @JsOverlay
+    public final IDBDataLossAmount getDataLoss(){
+       return IDBDataLossAmount.of(dataLoss);
+    }
     
     @JsProperty(name="dataLossMessage")
-    public native String getDataLossMessage();
+    public String dataLossMessage;
     
     
 }

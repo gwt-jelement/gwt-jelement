@@ -32,13 +32,13 @@ public class SVGFEPointLightElement extends SVGElement{
     }
     
     @JsProperty(name="x")
-    public native SVGAnimatedNumber getX();
+    public SVGAnimatedNumber x;
     
     @JsProperty(name="y")
-    public native SVGAnimatedNumber getY();
+    public SVGAnimatedNumber y;
     
     @JsProperty(name="z")
-    public native SVGAnimatedNumber getZ();
+    public SVGAnimatedNumber z;
     
     
 }

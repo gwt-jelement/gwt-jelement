@@ -34,6 +34,9 @@ public class HTMLOptionElement extends HTMLElement{
     @JsProperty(name="disabled")
     public boolean disabled;
     
+    @JsProperty(name="form")
+    public HTMLFormElement form;
+    
     @JsProperty(name="label")
     public String label;
     
@@ -49,11 +52,8 @@ public class HTMLOptionElement extends HTMLElement{
     @JsProperty(name="text")
     public String text;
     
-    @JsProperty(name="form")
-    public native HTMLFormElement getForm();
-    
     @JsProperty(name="index")
-    public native double getIndex();
+    public double index;
     
     
 }

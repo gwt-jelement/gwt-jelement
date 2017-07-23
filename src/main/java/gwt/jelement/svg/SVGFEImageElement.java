@@ -34,25 +34,25 @@ public class SVGFEImageElement extends SVGElement{
     }
     
     @JsProperty(name="preserveAspectRatio")
-    public native SVGAnimatedPreserveAspectRatio getPreserveAspectRatio();
+    public SVGAnimatedPreserveAspectRatio preserveAspectRatio;
     
     @JsProperty(name="x")
-    public native SVGAnimatedLength getX();
+    public SVGAnimatedLength x;
     
     @JsProperty(name="y")
-    public native SVGAnimatedLength getY();
+    public SVGAnimatedLength y;
     
     @JsProperty(name="width")
-    public native SVGAnimatedLength getWidth();
+    public SVGAnimatedLength width;
     
     @JsProperty(name="height")
-    public native SVGAnimatedLength getHeight();
+    public SVGAnimatedLength height;
     
     @JsProperty(name="result")
-    public native SVGAnimatedString getResult();
+    public SVGAnimatedString result;
     
     @JsProperty(name="href")
-    public native SVGAnimatedString getHref();
+    public SVGAnimatedString href;
     
     
 }

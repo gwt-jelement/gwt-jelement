@@ -53,14 +53,38 @@ public class Element extends Node{
         super();
     }
     
+    @JsProperty(name="namespaceURI")
+    public String namespaceURI;
+    
+    @JsProperty(name="prefix")
+    public String prefix;
+    
+    @JsProperty(name="localName")
+    public String localName;
+    
+    @JsProperty(name="tagName")
+    public String tagName;
+    
     @JsProperty(name="id")
     public String id;
     
     @JsProperty(name="className")
     public String className;
     
+    @JsProperty(name="classList")
+    public DOMTokenList classList;
+    
     @JsProperty(name="slot")
     public String slot;
+    
+    @JsProperty(name="attributes")
+    public NamedNodeMap attributes;
+    
+    @JsProperty(name="shadowRoot")
+    public ShadowRoot shadowRoot;
+    
+    @JsProperty(name="assignedSlot")
+    public HTMLSlotElement assignedSlot;
     
     @JsProperty(name="innerHTML")
     public String innerHTML;
@@ -73,6 +97,36 @@ public class Element extends Node{
     
     @JsProperty(name="scrollLeft")
     public double scrollLeft;
+    
+    @JsProperty(name="scrollWidth")
+    public double scrollWidth;
+    
+    @JsProperty(name="scrollHeight")
+    public double scrollHeight;
+    
+    @JsProperty(name="clientTop")
+    public double clientTop;
+    
+    @JsProperty(name="clientLeft")
+    public double clientLeft;
+    
+    @JsProperty(name="clientWidth")
+    public double clientWidth;
+    
+    @JsProperty(name="clientHeight")
+    public double clientHeight;
+    
+    @JsProperty(name="styleMap")
+    public StylePropertyMap styleMap;
+    
+    @JsProperty(name="computedRole")
+    public String computedRole;
+    
+    @JsProperty(name="computedName")
+    public String computedName;
+    
+    @JsProperty(name="accessibleNode")
+    public AccessibleNode accessibleNode;
     
     @JsProperty(name="onbeforecopy")
     public EventHandlerNonNull onbeforecopy;
@@ -113,77 +167,23 @@ public class Element extends Node{
     @JsProperty(name="onwebkitfullscreenerror")
     public EventHandlerNonNull onwebkitfullscreenerror;
     
-    @JsProperty(name="namespaceURI")
-    public native String getNamespaceURI();
-    
-    @JsProperty(name="prefix")
-    public native String getPrefix();
-    
-    @JsProperty(name="localName")
-    public native String getLocalName();
-    
-    @JsProperty(name="tagName")
-    public native String getTagName();
-    
-    @JsProperty(name="classList")
-    public native DOMTokenList getClassList();
-    
-    @JsProperty(name="attributes")
-    public native NamedNodeMap getAttributes();
-    
-    @JsProperty(name="shadowRoot")
-    public native ShadowRoot getShadowRoot();
-    
-    @JsProperty(name="assignedSlot")
-    public native HTMLSlotElement getAssignedSlot();
-    
-    @JsProperty(name="scrollWidth")
-    public native double getScrollWidth();
-    
-    @JsProperty(name="scrollHeight")
-    public native double getScrollHeight();
-    
-    @JsProperty(name="clientTop")
-    public native double getClientTop();
-    
-    @JsProperty(name="clientLeft")
-    public native double getClientLeft();
-    
-    @JsProperty(name="clientWidth")
-    public native double getClientWidth();
-    
-    @JsProperty(name="clientHeight")
-    public native double getClientHeight();
-    
-    @JsProperty(name="styleMap")
-    public native StylePropertyMap getStyleMap();
-    
-    @JsProperty(name="computedRole")
-    public native String getComputedRole();
-    
-    @JsProperty(name="computedName")
-    public native String getComputedName();
-    
-    @JsProperty(name="accessibleNode")
-    public native AccessibleNode getAccessibleNode();
-    
     @JsProperty(name="children")
-    public native HTMLCollection getChildren();
+    public HTMLCollection children;
     
     @JsProperty(name="firstElementChild")
-    public native Element getFirstElementChild();
+    public Element firstElementChild;
     
     @JsProperty(name="lastElementChild")
-    public native Element getLastElementChild();
+    public Element lastElementChild;
     
     @JsProperty(name="childElementCount")
-    public native double getChildElementCount();
+    public double childElementCount;
     
     @JsProperty(name="previousElementSibling")
-    public native Element getPreviousElementSibling();
+    public Element previousElementSibling;
     
     @JsProperty(name="nextElementSibling")
-    public native Element getNextElementSibling();
+    public Element nextElementSibling;
     
     @JsMethod(name = "after")
     public native void after();

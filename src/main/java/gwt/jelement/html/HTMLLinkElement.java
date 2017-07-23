@@ -45,6 +45,9 @@ public class HTMLLinkElement extends HTMLElement{
     @JsProperty(name="rel")
     public String rel;
     
+    @JsProperty(name="relList")
+    public DOMTokenList relList;
+    
     @JsProperty(name="media")
     public String media;
     
@@ -60,6 +63,9 @@ public class HTMLLinkElement extends HTMLElement{
     @JsProperty(name="referrerPolicy")
     public String referrerPolicy;
     
+    @JsProperty(name="sizes")
+    public DOMTokenList sizes;
+    
     @JsProperty(name="charset")
     public String charset;
     
@@ -69,23 +75,17 @@ public class HTMLLinkElement extends HTMLElement{
     @JsProperty(name="target")
     public String target;
     
+    @JsProperty(name="sheet")
+    public StyleSheet sheet;
+    
+    @JsProperty(name="import")
+    public Document import_;
+    
     @JsProperty(name="integrity")
     public String integrity;
     
     @JsProperty(name="scope")
     public String scope;
-    
-    @JsProperty(name="relList")
-    public native DOMTokenList getRelList();
-    
-    @JsProperty(name="sizes")
-    public native DOMTokenList getSizes();
-    
-    @JsProperty(name="sheet")
-    public native StyleSheet getSheet();
-    
-    @JsProperty(name="import")
-    public native Document getImport();
     
     
 }

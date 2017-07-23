@@ -41,76 +41,76 @@ public class MouseEvent extends UIEvent{
     }
     
     @JsProperty(name="screenX")
-    public native double getScreenX();
+    public double screenX;
     
     @JsProperty(name="screenY")
-    public native double getScreenY();
+    public double screenY;
     
     @JsProperty(name="clientX")
-    public native double getClientX();
+    public double clientX;
     
     @JsProperty(name="clientY")
-    public native double getClientY();
+    public double clientY;
     
     @JsProperty(name="ctrlKey")
-    public native boolean getCtrlKey();
+    public boolean ctrlKey;
     
     @JsProperty(name="shiftKey")
-    public native boolean getShiftKey();
+    public boolean shiftKey;
     
     @JsProperty(name="altKey")
-    public native boolean getAltKey();
+    public boolean altKey;
     
     @JsProperty(name="metaKey")
-    public native boolean getMetaKey();
+    public boolean metaKey;
     
     @JsProperty(name="button")
-    public native short getButton();
+    public short button;
     
     @JsProperty(name="buttons")
-    public native short getButtons();
+    public short buttons;
     
     @JsProperty(name="relatedTarget")
-    public native EventTarget getRelatedTarget();
+    public EventTarget relatedTarget;
     
     @JsProperty(name="pageX")
-    public native double getPageX();
+    public double pageX;
     
     @JsProperty(name="pageY")
-    public native double getPageY();
+    public double pageY;
     
     @JsProperty(name="x")
-    public native double getX();
+    public double x;
     
     @JsProperty(name="y")
-    public native double getY();
+    public double y;
     
     @JsProperty(name="offsetX")
-    public native double getOffsetX();
+    public double offsetX;
     
     @JsProperty(name="offsetY")
-    public native double getOffsetY();
+    public double offsetY;
     
     @JsProperty(name="movementX")
-    public native double getMovementX();
+    public double movementX;
     
     @JsProperty(name="movementY")
-    public native double getMovementY();
+    public double movementY;
     
     @JsProperty(name="region")
-    public native String getRegion();
+    public String region;
     
     @JsProperty(name="fromElement")
-    public native Node getFromElement();
+    public Node fromElement;
     
     @JsProperty(name="toElement")
-    public native Node getToElement();
+    public Node toElement;
     
     @JsProperty(name="layerX")
-    public native double getLayerX();
+    public double layerX;
     
     @JsProperty(name="layerY")
-    public native double getLayerY();
+    public double layerY;
     
     @JsMethod(name = "getModifierState")
     public native boolean getModifierState(String keyArg);

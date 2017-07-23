@@ -31,13 +31,13 @@ public class USBConfiguration{
     }
     
     @JsProperty(name="configurationValue")
-    public native byte getConfigurationValue();
+    public byte configurationValue;
     
     @JsProperty(name="configurationName")
-    public native String getConfigurationName();
+    public String configurationName;
     
     @JsProperty(name="interfaces")
-    public native USBInterface[] getInterfaces();
+    public USBInterface[] interfaces;
     
     
 }

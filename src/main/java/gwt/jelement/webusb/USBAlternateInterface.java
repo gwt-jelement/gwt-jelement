@@ -31,22 +31,22 @@ public class USBAlternateInterface{
     }
     
     @JsProperty(name="alternateSetting")
-    public native byte getAlternateSetting();
+    public byte alternateSetting;
     
     @JsProperty(name="interfaceClass")
-    public native byte getInterfaceClass();
+    public byte interfaceClass;
     
     @JsProperty(name="interfaceSubclass")
-    public native byte getInterfaceSubclass();
+    public byte interfaceSubclass;
     
     @JsProperty(name="interfaceProtocol")
-    public native byte getInterfaceProtocol();
+    public byte interfaceProtocol;
     
     @JsProperty(name="interfaceName")
-    public native String getInterfaceName();
+    public String interfaceName;
     
     @JsProperty(name="endpoints")
-    public native USBEndpoint[] getEndpoints();
+    public USBEndpoint[] endpoints;
     
     
 }

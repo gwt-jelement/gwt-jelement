@@ -40,47 +40,47 @@ public class Event{
     public Event(String type, EventInit eventInitDict){
     }
     
+    @JsProperty(name="type")
+    public String type;
+    
+    @JsProperty(name="target")
+    public EventTarget target;
+    
+    @JsProperty(name="currentTarget")
+    public EventTarget currentTarget;
+    
+    @JsProperty(name="eventPhase")
+    public short eventPhase;
+    
+    @JsProperty(name="bubbles")
+    public boolean bubbles;
+    
+    @JsProperty(name="cancelable")
+    public boolean cancelable;
+    
+    @JsProperty(name="defaultPrevented")
+    public boolean defaultPrevented;
+    
+    @JsProperty(name="composed")
+    public boolean composed;
+    
+    @JsProperty(name="isTrusted")
+    public boolean isTrusted;
+    
+    @JsProperty(name="timeStamp")
+    public double timeStamp;
+    
+    @JsProperty(name="srcElement")
+    public EventTarget srcElement;
+    
     @JsProperty(name="returnValue")
     public boolean returnValue;
     
     @JsProperty(name="cancelBubble")
     public boolean cancelBubble;
     
-    @JsProperty(name="type")
-    public native String getType();
-    
-    @JsProperty(name="target")
-    public native EventTarget getTarget();
-    
-    @JsProperty(name="currentTarget")
-    public native EventTarget getCurrentTarget();
-    
-    @JsProperty(name="eventPhase")
-    public native short getEventPhase();
-    
-    @JsProperty(name="bubbles")
-    public native boolean getBubbles();
-    
-    @JsProperty(name="cancelable")
-    public native boolean getCancelable();
-    
-    @JsProperty(name="defaultPrevented")
-    public native boolean getDefaultPrevented();
-    
-    @JsProperty(name="composed")
-    public native boolean getComposed();
-    
-    @JsProperty(name="isTrusted")
-    public native boolean getIsTrusted();
-    
-    @JsProperty(name="timeStamp")
-    public native double getTimeStamp();
-    
-    @JsProperty(name="srcElement")
-    public native EventTarget getSrcElement();
-    
     @JsProperty(name="path")
-    public native EventTarget[] getPath();
+    public EventTarget[] path;
     
     @JsMethod(name = "composedPath")
     public native EventTarget[] composedPath();

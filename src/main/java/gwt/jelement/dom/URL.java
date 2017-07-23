@@ -40,6 +40,9 @@ public class URL{
     @JsProperty(name="href")
     public String href;
     
+    @JsProperty(name="origin")
+    public String origin;
+    
     @JsProperty(name="protocol")
     public String protocol;
     
@@ -64,14 +67,11 @@ public class URL{
     @JsProperty(name="search")
     public String search;
     
+    @JsProperty(name="searchParams")
+    public URLSearchParams searchParams;
+    
     @JsProperty(name="hash")
     public String hash;
-    
-    @JsProperty(name="origin")
-    public native String getOrigin();
-    
-    @JsProperty(name="searchParams")
-    public native URLSearchParams getSearchParams();
     
     @JsMethod(name = "createObjectURL")
     public native String createObjectURL(Blob blob);

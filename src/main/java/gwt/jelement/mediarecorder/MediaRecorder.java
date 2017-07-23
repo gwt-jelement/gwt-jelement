@@ -35,6 +35,19 @@ public class MediaRecorder extends EventTarget{
         super();
     }
     
+    @JsProperty(name="stream")
+    public MediaStream stream;
+    
+    @JsProperty(name="mimeType")
+    public String mimeType;
+    
+    @JsProperty(name="state")
+    public String state;
+    @JsOverlay
+    public final RecordingState getState(){
+       return RecordingState.of(state);
+    }
+    
     @JsProperty(name="onstart")
     public EventHandlerNonNull onstart;
     
@@ -53,25 +66,11 @@ public class MediaRecorder extends EventTarget{
     @JsProperty(name="onerror")
     public EventHandlerNonNull onerror;
     
-    @JsProperty(name="stream")
-    public native MediaStream getStream();
-    
-    @JsProperty(name="mimeType")
-    public native String getMimeType();
-    
-    @JsOverlay
-    public final RecordingState getStateAsRecordingState(){
-        return RecordingState.of(getState());
-    }
-    
-    @JsProperty(name="state")
-    public native String getState();
-    
     @JsProperty(name="videoBitsPerSecond")
-    public native double getVideoBitsPerSecond();
+    public double videoBitsPerSecond;
     
     @JsProperty(name="audioBitsPerSecond")
-    public native double getAudioBitsPerSecond();
+    public double audioBitsPerSecond;
     
     @JsMethod(name = "isTypeSupported")
     public native boolean isTypeSupported(String type);

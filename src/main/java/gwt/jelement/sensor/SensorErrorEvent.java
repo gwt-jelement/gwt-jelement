@@ -33,7 +33,7 @@ public class SensorErrorEvent extends Event{
     }
     
     @JsProperty(name="error")
-    public native DOMException getError();
+    public DOMException error;
     
     
 }

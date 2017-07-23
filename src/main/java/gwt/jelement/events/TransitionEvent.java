@@ -37,13 +37,13 @@ public class TransitionEvent extends Event{
     }
     
     @JsProperty(name="propertyName")
-    public native String getPropertyName();
+    public String propertyName;
     
     @JsProperty(name="elapsedTime")
-    public native double getElapsedTime();
+    public double elapsedTime;
     
     @JsProperty(name="pseudoElement")
-    public native String getPseudoElement();
+    public String pseudoElement;
     
     
 }

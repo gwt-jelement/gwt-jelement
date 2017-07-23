@@ -38,7 +38,7 @@ public class GamepadEvent extends Event{
     }
     
     @JsProperty(name="gamepad")
-    public native Gamepad getGamepad();
+    public Gamepad gamepad;
     
     
 }

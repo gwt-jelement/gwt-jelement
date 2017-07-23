@@ -35,10 +35,10 @@ public class USBIsochronousInTransferResult{
     }
     
     @JsProperty(name="data")
-    public native DataView getData();
+    public DataView data;
     
     @JsProperty(name="packets")
-    public native USBIsochronousInTransferPacket[] getPackets();
+    public USBIsochronousInTransferPacket[] packets;
     
     
 }

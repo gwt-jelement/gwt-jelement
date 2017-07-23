@@ -26,7 +26,7 @@ import jsinterop.annotations.JsType;
 public class RTCCertificate{
     
     @JsProperty(name="expires")
-    public native double getExpires();
+    public double expires;
     
     @JsMethod(name = "getFingerprints")
     public native RTCDtlsFingerprint[] getFingerprints();

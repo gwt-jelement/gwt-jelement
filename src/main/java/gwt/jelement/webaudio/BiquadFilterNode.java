@@ -36,19 +36,28 @@ public class BiquadFilterNode extends AudioNode{
     }
     
     @JsProperty(name="type")
-    public BiquadFilterType type;
+    public String type;
+    @JsOverlay
+    public final BiquadFilterType getType(){
+       return BiquadFilterType.of(type);
+    }
+    
+    @JsOverlay
+    public final void setType(BiquadFilterType type){
+       this.type = type.getInternalValue();
+    }
     
     @JsProperty(name="frequency")
-    public native AudioParam getFrequency();
+    public AudioParam frequency;
     
     @JsProperty(name="detune")
-    public native AudioParam getDetune();
+    public AudioParam detune;
     
     @JsProperty(name="Q")
-    public native AudioParam getQ();
+    public AudioParam Q;
     
     @JsProperty(name="gain")
-    public native AudioParam getGain();
+    public AudioParam gain;
     
     @JsMethod(name = "getFrequencyResponse")
     public native void getFrequencyResponse(Float32Array frequencyHz, Float32Array magResponse, Float32Array phaseResponse);

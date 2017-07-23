@@ -39,16 +39,16 @@ public class DeviceMotionEvent extends Event{
     }
     
     @JsProperty(name="acceleration")
-    public native DeviceAcceleration getAcceleration();
+    public DeviceAcceleration acceleration;
     
     @JsProperty(name="accelerationIncludingGravity")
-    public native DeviceAcceleration getAccelerationIncludingGravity();
+    public DeviceAcceleration accelerationIncludingGravity;
     
     @JsProperty(name="rotationRate")
-    public native DeviceRotationRate getRotationRate();
+    public DeviceRotationRate rotationRate;
     
     @JsProperty(name="interval")
-    public native double getInterval();
+    public double interval;
     
     
 }

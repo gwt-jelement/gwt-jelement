@@ -26,7 +26,7 @@ import jsinterop.annotations.JsType;
 public class PresentationReceiver{
     
     @JsProperty(name="connectionList")
-    public native Promise<PresentationConnectionList> getConnectionList();
+    public Promise<PresentationConnectionList> connectionList;
     
     
 }

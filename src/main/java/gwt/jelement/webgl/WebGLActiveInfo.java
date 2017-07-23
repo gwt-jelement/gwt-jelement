@@ -24,13 +24,13 @@ import jsinterop.annotations.JsType;
 public class WebGLActiveInfo{
     
     @JsProperty(name="size")
-    public native double getSize();
+    public double size;
     
     @JsProperty(name="type")
-    public native double getType();
+    public double type;
     
     @JsProperty(name="name")
-    public native String getName();
+    public String name;
     
     
 }

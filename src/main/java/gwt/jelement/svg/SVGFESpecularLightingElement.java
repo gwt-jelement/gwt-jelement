@@ -34,37 +34,37 @@ public class SVGFESpecularLightingElement extends SVGElement{
     }
     
     @JsProperty(name="in1")
-    public native SVGAnimatedString getIn1();
+    public SVGAnimatedString in1;
     
     @JsProperty(name="surfaceScale")
-    public native SVGAnimatedNumber getSurfaceScale();
+    public SVGAnimatedNumber surfaceScale;
     
     @JsProperty(name="specularConstant")
-    public native SVGAnimatedNumber getSpecularConstant();
+    public SVGAnimatedNumber specularConstant;
     
     @JsProperty(name="specularExponent")
-    public native SVGAnimatedNumber getSpecularExponent();
+    public SVGAnimatedNumber specularExponent;
     
     @JsProperty(name="kernelUnitLengthX")
-    public native SVGAnimatedNumber getKernelUnitLengthX();
+    public SVGAnimatedNumber kernelUnitLengthX;
     
     @JsProperty(name="kernelUnitLengthY")
-    public native SVGAnimatedNumber getKernelUnitLengthY();
+    public SVGAnimatedNumber kernelUnitLengthY;
     
     @JsProperty(name="x")
-    public native SVGAnimatedLength getX();
+    public SVGAnimatedLength x;
     
     @JsProperty(name="y")
-    public native SVGAnimatedLength getY();
+    public SVGAnimatedLength y;
     
     @JsProperty(name="width")
-    public native SVGAnimatedLength getWidth();
+    public SVGAnimatedLength width;
     
     @JsProperty(name="height")
-    public native SVGAnimatedLength getHeight();
+    public SVGAnimatedLength height;
     
     @JsProperty(name="result")
-    public native SVGAnimatedString getResult();
+    public SVGAnimatedString result;
     
     
 }

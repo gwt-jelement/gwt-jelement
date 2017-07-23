@@ -31,10 +31,10 @@ public class DetectedFace{
     }
     
     @JsProperty(name="boundingBox")
-    public native DOMRect getBoundingBox();
+    public DOMRect boundingBox;
     
     @JsProperty(name="landmarks")
-    public native Landmark[] getLandmarks();
+    public Landmark[] landmarks;
     
     
 }

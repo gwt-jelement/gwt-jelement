@@ -31,7 +31,7 @@ public class CSSConditionRule extends CSSGroupingRule{
     }
     
     @JsProperty(name="conditionText")
-    public native String getConditionText();
+    public String conditionText;
     
     
 }

@@ -37,55 +37,55 @@ import jsinterop.base.Any;
 public class USBDevice{
     
     @JsProperty(name="usbVersionMajor")
-    public native byte getUsbVersionMajor();
+    public byte usbVersionMajor;
     
     @JsProperty(name="usbVersionMinor")
-    public native byte getUsbVersionMinor();
+    public byte usbVersionMinor;
     
     @JsProperty(name="usbVersionSubminor")
-    public native byte getUsbVersionSubminor();
+    public byte usbVersionSubminor;
     
     @JsProperty(name="deviceClass")
-    public native byte getDeviceClass();
+    public byte deviceClass;
     
     @JsProperty(name="deviceSubclass")
-    public native byte getDeviceSubclass();
+    public byte deviceSubclass;
     
     @JsProperty(name="deviceProtocol")
-    public native byte getDeviceProtocol();
+    public byte deviceProtocol;
     
     @JsProperty(name="vendorId")
-    public native short getVendorId();
+    public short vendorId;
     
     @JsProperty(name="productId")
-    public native short getProductId();
+    public short productId;
     
     @JsProperty(name="deviceVersionMajor")
-    public native byte getDeviceVersionMajor();
+    public byte deviceVersionMajor;
     
     @JsProperty(name="deviceVersionMinor")
-    public native byte getDeviceVersionMinor();
+    public byte deviceVersionMinor;
     
     @JsProperty(name="deviceVersionSubminor")
-    public native byte getDeviceVersionSubminor();
+    public byte deviceVersionSubminor;
     
     @JsProperty(name="manufacturerName")
-    public native String getManufacturerName();
+    public String manufacturerName;
     
     @JsProperty(name="productName")
-    public native String getProductName();
+    public String productName;
     
     @JsProperty(name="serialNumber")
-    public native String getSerialNumber();
+    public String serialNumber;
     
     @JsProperty(name="configuration")
-    public native USBConfiguration getConfiguration();
+    public USBConfiguration configuration;
     
     @JsProperty(name="configurations")
-    public native USBConfiguration[] getConfigurations();
+    public USBConfiguration[] configurations;
     
     @JsProperty(name="opened")
-    public native boolean getOpened();
+    public boolean opened;
     
     @JsMethod(name = "claimInterface")
     public native Promise<Void> claimInterface(byte interfaceNumber);

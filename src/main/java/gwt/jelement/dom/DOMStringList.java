@@ -25,7 +25,7 @@ import jsinterop.annotations.JsType;
 public class DOMStringList{
     
     @JsProperty(name="length")
-    public native double getLength();
+    public double length;
     
     @JsMethod(name = "contains")
     public native boolean contains(String string);

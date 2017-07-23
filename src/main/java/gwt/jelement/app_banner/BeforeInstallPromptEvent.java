@@ -40,10 +40,10 @@ public class BeforeInstallPromptEvent extends Event{
     }
     
     @JsProperty(name="platforms")
-    public native String[] getPlatforms();
+    public String[] platforms;
     
     @JsProperty(name="userChoice")
-    public native Promise<AppBannerPromptResult> getUserChoice();
+    public Promise<AppBannerPromptResult> userChoice;
     
     @JsMethod(name = "prompt")
     public native Promise<Void> prompt();

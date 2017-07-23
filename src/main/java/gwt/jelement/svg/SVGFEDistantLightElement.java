@@ -32,10 +32,10 @@ public class SVGFEDistantLightElement extends SVGElement{
     }
     
     @JsProperty(name="azimuth")
-    public native SVGAnimatedNumber getAzimuth();
+    public SVGAnimatedNumber azimuth;
     
     @JsProperty(name="elevation")
-    public native SVGAnimatedNumber getElevation();
+    public SVGAnimatedNumber elevation;
     
     
 }

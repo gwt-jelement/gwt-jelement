@@ -32,7 +32,7 @@ public class CSSFontFaceRule extends CSSRule{
     }
     
     @JsProperty(name="style")
-    public native CSSStyleDeclaration getStyle();
+    public CSSStyleDeclaration style;
     
     
 }

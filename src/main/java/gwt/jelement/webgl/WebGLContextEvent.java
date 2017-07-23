@@ -37,7 +37,7 @@ public class WebGLContextEvent extends Event{
     }
     
     @JsProperty(name="statusMessage")
-    public native String getStatusMessage();
+    public String statusMessage;
     
     
 }

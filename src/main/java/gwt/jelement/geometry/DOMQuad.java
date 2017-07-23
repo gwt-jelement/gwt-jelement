@@ -52,16 +52,16 @@ public class DOMQuad{
     }
     
     @JsProperty(name="p1")
-    public native DOMPoint getP1();
+    public DOMPoint p1;
     
     @JsProperty(name="p2")
-    public native DOMPoint getP2();
+    public DOMPoint p2;
     
     @JsProperty(name="p3")
-    public native DOMPoint getP3();
+    public DOMPoint p3;
     
     @JsProperty(name="p4")
-    public native DOMPoint getP4();
+    public DOMPoint p4;
     
     @JsMethod(name = "fromQuad")
     public native DOMQuad fromQuad();

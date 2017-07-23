@@ -40,11 +40,11 @@ public class SVGStyleElement extends SVGElement{
     @JsProperty(name="title")
     public String title;
     
+    @JsProperty(name="sheet")
+    public StyleSheet sheet;
+    
     @JsProperty(name="disabled")
     public boolean disabled;
-    
-    @JsProperty(name="sheet")
-    public native StyleSheet getSheet();
     
     
 }

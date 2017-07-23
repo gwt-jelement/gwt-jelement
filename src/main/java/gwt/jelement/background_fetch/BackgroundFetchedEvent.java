@@ -35,7 +35,7 @@ public class BackgroundFetchedEvent extends BackgroundFetchEvent{
     }
     
     @JsProperty(name="fetches")
-    public native BackgroundFetchSettledFetch[] getFetches();
+    public BackgroundFetchSettledFetch[] fetches;
     
     @JsMethod(name = "updateUI")
     public native Promise<Void> updateUI(String title);

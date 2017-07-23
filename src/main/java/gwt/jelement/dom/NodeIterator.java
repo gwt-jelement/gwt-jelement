@@ -27,19 +27,19 @@ import jsinterop.annotations.JsType;
 public class NodeIterator{
     
     @JsProperty(name="root")
-    public native Node getRoot();
+    public Node root;
     
     @JsProperty(name="referenceNode")
-    public native Node getReferenceNode();
+    public Node referenceNode;
     
     @JsProperty(name="pointerBeforeReferenceNode")
-    public native boolean getPointerBeforeReferenceNode();
+    public boolean pointerBeforeReferenceNode;
     
     @JsProperty(name="whatToShow")
-    public native double getWhatToShow();
+    public double whatToShow;
     
     @JsProperty(name="filter")
-    public native NodeFilter getFilter();
+    public NodeFilter filter;
     
     @JsMethod(name = "detach")
     public native void detach();

@@ -39,6 +39,9 @@ public class HTMLTableCellElement extends HTMLElement{
     @JsProperty(name="headers")
     public String headers;
     
+    @JsProperty(name="cellIndex")
+    public double cellIndex;
+    
     @JsProperty(name="align")
     public String align;
     
@@ -71,9 +74,6 @@ public class HTMLTableCellElement extends HTMLElement{
     
     @JsProperty(name="scope")
     public String scope;
-    
-    @JsProperty(name="cellIndex")
-    public native double getCellIndex();
     
     
 }

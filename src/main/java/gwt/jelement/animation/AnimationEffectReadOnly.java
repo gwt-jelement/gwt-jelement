@@ -27,7 +27,7 @@ import jsinterop.annotations.JsType;
 public class AnimationEffectReadOnly{
     
     @JsProperty(name="timing")
-    public native AnimationEffectTimingReadOnly getTiming();
+    public AnimationEffectTimingReadOnly timing;
     
     @JsMethod(name = "getComputedTiming")
     public native ComputedTimingProperties getComputedTiming();

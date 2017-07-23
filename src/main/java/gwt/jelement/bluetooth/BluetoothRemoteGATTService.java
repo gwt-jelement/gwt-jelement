@@ -28,13 +28,13 @@ import jsinterop.annotations.JsType;
 public class BluetoothRemoteGATTService{
     
     @JsProperty(name="device")
-    public native BluetoothDevice getDevice();
+    public BluetoothDevice device;
     
     @JsProperty(name="uuid")
-    public native String getUuid();
+    public String uuid;
     
     @JsProperty(name="isPrimary")
-    public native boolean getIsPrimary();
+    public boolean isPrimary;
     
     @JsMethod(name = "getCharacteristic")
     public native Promise<BluetoothRemoteGATTCharacteristic> getCharacteristic(String characteristic);

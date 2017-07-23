@@ -33,10 +33,10 @@ public class DOMError{
     }
     
     @JsProperty(name="name")
-    public native String getName();
+    public String name;
     
     @JsProperty(name="message")
-    public native String getMessage();
+    public String message;
     
     
 }

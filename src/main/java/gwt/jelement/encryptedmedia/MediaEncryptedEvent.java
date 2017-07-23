@@ -38,10 +38,10 @@ public class MediaEncryptedEvent extends Event{
     }
     
     @JsProperty(name="initDataType")
-    public native String getInitDataType();
+    public String initDataType;
     
     @JsProperty(name="initData")
-    public native ArrayBuffer getInitData();
+    public ArrayBuffer initData;
     
     
 }

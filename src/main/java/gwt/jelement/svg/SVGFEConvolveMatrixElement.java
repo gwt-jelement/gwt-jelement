@@ -43,55 +43,55 @@ public class SVGFEConvolveMatrixElement extends SVGElement{
     }
     
     @JsProperty(name="in1")
-    public native SVGAnimatedString getIn1();
+    public SVGAnimatedString in1;
     
     @JsProperty(name="orderX")
-    public native SVGAnimatedInteger getOrderX();
+    public SVGAnimatedInteger orderX;
     
     @JsProperty(name="orderY")
-    public native SVGAnimatedInteger getOrderY();
+    public SVGAnimatedInteger orderY;
     
     @JsProperty(name="kernelMatrix")
-    public native SVGAnimatedNumberList getKernelMatrix();
+    public SVGAnimatedNumberList kernelMatrix;
     
     @JsProperty(name="divisor")
-    public native SVGAnimatedNumber getDivisor();
+    public SVGAnimatedNumber divisor;
     
     @JsProperty(name="bias")
-    public native SVGAnimatedNumber getBias();
+    public SVGAnimatedNumber bias;
     
     @JsProperty(name="targetX")
-    public native SVGAnimatedInteger getTargetX();
+    public SVGAnimatedInteger targetX;
     
     @JsProperty(name="targetY")
-    public native SVGAnimatedInteger getTargetY();
+    public SVGAnimatedInteger targetY;
     
     @JsProperty(name="edgeMode")
-    public native SVGAnimatedEnumeration getEdgeMode();
+    public SVGAnimatedEnumeration edgeMode;
     
     @JsProperty(name="kernelUnitLengthX")
-    public native SVGAnimatedNumber getKernelUnitLengthX();
+    public SVGAnimatedNumber kernelUnitLengthX;
     
     @JsProperty(name="kernelUnitLengthY")
-    public native SVGAnimatedNumber getKernelUnitLengthY();
+    public SVGAnimatedNumber kernelUnitLengthY;
     
     @JsProperty(name="preserveAlpha")
-    public native SVGAnimatedBoolean getPreserveAlpha();
+    public SVGAnimatedBoolean preserveAlpha;
     
     @JsProperty(name="x")
-    public native SVGAnimatedLength getX();
+    public SVGAnimatedLength x;
     
     @JsProperty(name="y")
-    public native SVGAnimatedLength getY();
+    public SVGAnimatedLength y;
     
     @JsProperty(name="width")
-    public native SVGAnimatedLength getWidth();
+    public SVGAnimatedLength width;
     
     @JsProperty(name="height")
-    public native SVGAnimatedLength getHeight();
+    public SVGAnimatedLength height;
     
     @JsProperty(name="result")
-    public native SVGAnimatedString getResult();
+    public SVGAnimatedString result;
     
     
 }

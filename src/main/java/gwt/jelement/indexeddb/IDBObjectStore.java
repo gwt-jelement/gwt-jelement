@@ -36,16 +36,16 @@ public class IDBObjectStore{
     public String name;
     
     @JsProperty(name="keyPath")
-    public native Object getKeyPath();
+    public Object keyPath;
     
     @JsProperty(name="indexNames")
-    public native DOMStringList getIndexNames();
+    public DOMStringList indexNames;
     
     @JsProperty(name="transaction")
-    public native IDBTransaction getTransaction();
+    public IDBTransaction transaction;
     
     @JsProperty(name="autoIncrement")
-    public native boolean getAutoIncrement();
+    public boolean autoIncrement;
     
     @JsMethod(name = "add")
     public native IDBRequest add(Object value);

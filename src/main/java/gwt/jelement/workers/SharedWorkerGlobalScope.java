@@ -40,11 +40,11 @@ public class SharedWorkerGlobalScope extends WorkerGlobalScope{
         super();
     }
     
+    @JsProperty(name="name")
+    public String name;
+    
     @JsProperty(name="onconnect")
     public EventHandlerNonNull onconnect;
-    
-    @JsProperty(name="name")
-    public native String getName();
     
     @JsMethod(name = "close")
     public native void close();

@@ -31,19 +31,19 @@ import jsinterop.annotations.JsType;
 public class Entry{
     
     @JsProperty(name="isFile")
-    public native boolean getIsFile();
+    public boolean isFile;
     
     @JsProperty(name="isDirectory")
-    public native boolean getIsDirectory();
+    public boolean isDirectory;
     
     @JsProperty(name="name")
-    public native String getName();
+    public String name;
     
     @JsProperty(name="fullPath")
-    public native String getFullPath();
+    public String fullPath;
     
     @JsProperty(name="filesystem")
-    public native DOMFileSystem getFilesystem();
+    public DOMFileSystem filesystem;
     
     @JsMethod(name = "copyTo")
     public native void copyTo(DirectoryEntry parent);

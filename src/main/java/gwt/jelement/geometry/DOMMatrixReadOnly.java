@@ -45,76 +45,76 @@ public class DOMMatrixReadOnly{
     }
     
     @JsProperty(name="a")
-    public native double getA();
+    public double a;
     
     @JsProperty(name="b")
-    public native double getB();
+    public double b;
     
     @JsProperty(name="c")
-    public native double getC();
+    public double c;
     
     @JsProperty(name="d")
-    public native double getD();
+    public double d;
     
     @JsProperty(name="e")
-    public native double getE();
+    public double e;
     
     @JsProperty(name="f")
-    public native double getF();
+    public double f;
     
     @JsProperty(name="m11")
-    public native double getM11();
+    public double m11;
     
     @JsProperty(name="m12")
-    public native double getM12();
+    public double m12;
     
     @JsProperty(name="m13")
-    public native double getM13();
+    public double m13;
     
     @JsProperty(name="m14")
-    public native double getM14();
+    public double m14;
     
     @JsProperty(name="m21")
-    public native double getM21();
+    public double m21;
     
     @JsProperty(name="m22")
-    public native double getM22();
+    public double m22;
     
     @JsProperty(name="m23")
-    public native double getM23();
+    public double m23;
     
     @JsProperty(name="m24")
-    public native double getM24();
+    public double m24;
     
     @JsProperty(name="m31")
-    public native double getM31();
+    public double m31;
     
     @JsProperty(name="m32")
-    public native double getM32();
+    public double m32;
     
     @JsProperty(name="m33")
-    public native double getM33();
+    public double m33;
     
     @JsProperty(name="m34")
-    public native double getM34();
+    public double m34;
     
     @JsProperty(name="m41")
-    public native double getM41();
+    public double m41;
     
     @JsProperty(name="m42")
-    public native double getM42();
+    public double m42;
     
     @JsProperty(name="m43")
-    public native double getM43();
+    public double m43;
     
     @JsProperty(name="m44")
-    public native double getM44();
+    public double m44;
     
     @JsProperty(name="is2D")
-    public native boolean getIs2D();
+    public boolean is2D;
     
     @JsProperty(name="isIdentity")
-    public native boolean getIsIdentity();
+    public boolean isIdentity;
     
     @JsMethod(name = "flipX")
     public native DOMMatrix flipX();

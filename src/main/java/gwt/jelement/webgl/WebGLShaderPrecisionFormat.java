@@ -24,13 +24,13 @@ import jsinterop.annotations.JsType;
 public class WebGLShaderPrecisionFormat{
     
     @JsProperty(name="rangeMin")
-    public native double getRangeMin();
+    public double rangeMin;
     
     @JsProperty(name="rangeMax")
-    public native double getRangeMax();
+    public double rangeMax;
     
     @JsProperty(name="precision")
-    public native double getPrecision();
+    public double precision;
     
     
 }

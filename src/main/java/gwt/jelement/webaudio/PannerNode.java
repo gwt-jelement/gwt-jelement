@@ -36,10 +36,46 @@ public class PannerNode extends AudioNode{
     }
     
     @JsProperty(name="panningModel")
-    public PanningModelType panningModel;
+    public String panningModel;
+    @JsOverlay
+    public final PanningModelType getPanningModel(){
+       return PanningModelType.of(panningModel);
+    }
+    
+    @JsOverlay
+    public final void setPanningModel(PanningModelType panningModel){
+       this.panningModel = panningModel.getInternalValue();
+    }
+    
+    @JsProperty(name="positionX")
+    public AudioParam positionX;
+    
+    @JsProperty(name="positionY")
+    public AudioParam positionY;
+    
+    @JsProperty(name="positionZ")
+    public AudioParam positionZ;
+    
+    @JsProperty(name="orientationX")
+    public AudioParam orientationX;
+    
+    @JsProperty(name="orientationY")
+    public AudioParam orientationY;
+    
+    @JsProperty(name="orientationZ")
+    public AudioParam orientationZ;
     
     @JsProperty(name="distanceModel")
-    public DistanceModelType distanceModel;
+    public String distanceModel;
+    @JsOverlay
+    public final DistanceModelType getDistanceModel(){
+       return DistanceModelType.of(distanceModel);
+    }
+    
+    @JsOverlay
+    public final void setDistanceModel(DistanceModelType distanceModel){
+       this.distanceModel = distanceModel.getInternalValue();
+    }
     
     @JsProperty(name="refDistance")
     public double refDistance;
@@ -58,24 +94,6 @@ public class PannerNode extends AudioNode{
     
     @JsProperty(name="coneOuterGain")
     public double coneOuterGain;
-    
-    @JsProperty(name="positionX")
-    public native AudioParam getPositionX();
-    
-    @JsProperty(name="positionY")
-    public native AudioParam getPositionY();
-    
-    @JsProperty(name="positionZ")
-    public native AudioParam getPositionZ();
-    
-    @JsProperty(name="orientationX")
-    public native AudioParam getOrientationX();
-    
-    @JsProperty(name="orientationY")
-    public native AudioParam getOrientationY();
-    
-    @JsProperty(name="orientationZ")
-    public native AudioParam getOrientationZ();
     
     @JsMethod(name = "setOrientation")
     public native void setOrientation(float x, float y, float z);

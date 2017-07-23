@@ -44,6 +44,9 @@ public class HTMLSelectElement extends HTMLElement{
     @JsProperty(name="disabled")
     public boolean disabled;
     
+    @JsProperty(name="form")
+    public HTMLFormElement form;
+    
     @JsProperty(name="multiple")
     public boolean multiple;
     
@@ -56,8 +59,17 @@ public class HTMLSelectElement extends HTMLElement{
     @JsProperty(name="size")
     public double size;
     
+    @JsProperty(name="type")
+    public String type;
+    
+    @JsProperty(name="options")
+    public HTMLOptionsCollection options;
+    
     @JsProperty(name="length")
     public double length;
+    
+    @JsProperty(name="selectedOptions")
+    public HTMLCollection selectedOptions;
     
     @JsProperty(name="selectedIndex")
     public double selectedIndex;
@@ -65,29 +77,17 @@ public class HTMLSelectElement extends HTMLElement{
     @JsProperty(name="value")
     public String value;
     
-    @JsProperty(name="form")
-    public native HTMLFormElement getForm();
-    
-    @JsProperty(name="type")
-    public native String getType();
-    
-    @JsProperty(name="options")
-    public native HTMLOptionsCollection getOptions();
-    
-    @JsProperty(name="selectedOptions")
-    public native HTMLCollection getSelectedOptions();
-    
     @JsProperty(name="willValidate")
-    public native boolean getWillValidate();
+    public boolean willValidate;
     
     @JsProperty(name="validity")
-    public native ValidityState getValidity();
+    public ValidityState validity;
     
     @JsProperty(name="validationMessage")
-    public native String getValidationMessage();
+    public String validationMessage;
     
     @JsProperty(name="labels")
-    public native NodeList getLabels();
+    public NodeList labels;
     
     @JsMethod(name = "add")
     public native void add(HTMLOptionElement element);

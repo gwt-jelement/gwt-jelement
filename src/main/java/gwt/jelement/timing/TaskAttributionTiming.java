@@ -31,16 +31,16 @@ public class TaskAttributionTiming extends PerformanceEntry{
     }
     
     @JsProperty(name="containerType")
-    public native String getContainerType();
+    public String containerType;
     
     @JsProperty(name="containerSrc")
-    public native String getContainerSrc();
+    public String containerSrc;
     
     @JsProperty(name="containerId")
-    public native String getContainerId();
+    public String containerId;
     
     @JsProperty(name="containerName")
-    public native String getContainerName();
+    public String containerName;
     
     
 }

@@ -30,13 +30,13 @@ import jsinterop.annotations.JsType;
 public class BluetoothRemoteGATTDescriptor{
     
     @JsProperty(name="characteristic")
-    public native BluetoothRemoteGATTCharacteristic getCharacteristic();
+    public BluetoothRemoteGATTCharacteristic characteristic;
     
     @JsProperty(name="uuid")
-    public native String getUuid();
+    public String uuid;
     
     @JsProperty(name="value")
-    public native DataView getValue();
+    public DataView value;
     
     @JsMethod(name = "readValue")
     public native Promise<DataView> readValue();

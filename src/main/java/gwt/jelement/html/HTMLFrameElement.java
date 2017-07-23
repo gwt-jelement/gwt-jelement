@@ -50,17 +50,17 @@ public class HTMLFrameElement extends HTMLElement{
     @JsProperty(name="noResize")
     public boolean noResize;
     
+    @JsProperty(name="contentDocument")
+    public Document contentDocument;
+    
+    @JsProperty(name="contentWindow")
+    public Window contentWindow;
+    
     @JsProperty(name="marginHeight")
     public String marginHeight;
     
     @JsProperty(name="marginWidth")
     public String marginWidth;
-    
-    @JsProperty(name="contentDocument")
-    public native Document getContentDocument();
-    
-    @JsProperty(name="contentWindow")
-    public native Window getContentWindow();
     
     
 }

@@ -33,13 +33,13 @@ public class CSSImportRule extends CSSRule{
     }
     
     @JsProperty(name="href")
-    public native String getHref();
+    public String href;
     
     @JsProperty(name="media")
-    public native MediaList getMedia();
+    public MediaList media;
     
     @JsProperty(name="styleSheet")
-    public native CSSStyleSheet getStyleSheet();
+    public CSSStyleSheet styleSheet;
     
     
 }

@@ -37,19 +37,19 @@ public class ErrorEvent extends Event{
     }
     
     @JsProperty(name="message")
-    public native String getMessage();
+    public String message;
     
     @JsProperty(name="filename")
-    public native String getFilename();
+    public String filename;
     
     @JsProperty(name="lineno")
-    public native double getLineno();
+    public double lineno;
     
     @JsProperty(name="colno")
-    public native double getColno();
+    public double colno;
     
     @JsProperty(name="error")
-    public native Object getError();
+    public Object error;
     
     
 }

@@ -34,39 +34,38 @@ public class PerformanceNavigationTiming extends PerformanceResourceTiming{
     }
     
     @JsProperty(name="unloadEventStart")
-    public native double getUnloadEventStart();
+    public double unloadEventStart;
     
     @JsProperty(name="unloadEventEnd")
-    public native double getUnloadEventEnd();
+    public double unloadEventEnd;
     
     @JsProperty(name="domInteractive")
-    public native double getDomInteractive();
+    public double domInteractive;
     
     @JsProperty(name="domContentLoadedEventStart")
-    public native double getDomContentLoadedEventStart();
+    public double domContentLoadedEventStart;
     
     @JsProperty(name="domContentLoadedEventEnd")
-    public native double getDomContentLoadedEventEnd();
+    public double domContentLoadedEventEnd;
     
     @JsProperty(name="domComplete")
-    public native double getDomComplete();
+    public double domComplete;
     
     @JsProperty(name="loadEventStart")
-    public native double getLoadEventStart();
+    public double loadEventStart;
     
     @JsProperty(name="loadEventEnd")
-    public native double getLoadEventEnd();
-    
-    @JsOverlay
-    public final NavigationType getTypeAsNavigationType(){
-        return NavigationType.of(getType());
-    }
+    public double loadEventEnd;
     
     @JsProperty(name="type")
-    public native String getType();
+    public String type;
+    @JsOverlay
+    public final NavigationType getType(){
+       return NavigationType.of(type);
+    }
     
     @JsProperty(name="redirectCount")
-    public native short getRedirectCount();
+    public short redirectCount;
     
     @JsMethod(name = "toJSON")
     public native Object toJSON();

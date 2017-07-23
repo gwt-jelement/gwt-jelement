@@ -39,7 +39,7 @@ public class GainNode extends AudioNode{
     }
     
     @JsProperty(name="gain")
-    public native AudioParam getGain();
+    public AudioParam gain;
     
     
 }

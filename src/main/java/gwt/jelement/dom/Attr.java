@@ -31,26 +31,26 @@ public class Attr extends Node{
         super();
     }
     
+    @JsProperty(name="namespaceURI")
+    public String namespaceURI;
+    
+    @JsProperty(name="prefix")
+    public String prefix;
+    
+    @JsProperty(name="localName")
+    public String localName;
+    
+    @JsProperty(name="name")
+    public String name;
+    
     @JsProperty(name="value")
     public String value;
     
-    @JsProperty(name="namespaceURI")
-    public native String getNamespaceURI();
-    
-    @JsProperty(name="prefix")
-    public native String getPrefix();
-    
-    @JsProperty(name="localName")
-    public native String getLocalName();
-    
-    @JsProperty(name="name")
-    public native String getName();
-    
     @JsProperty(name="ownerElement")
-    public native Element getOwnerElement();
+    public Element ownerElement;
     
     @JsProperty(name="specified")
-    public native boolean getSpecified();
+    public boolean specified;
     
     
 }

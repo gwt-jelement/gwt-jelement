@@ -35,7 +35,7 @@ public class CSSPageRule extends CSSRule{
     public String selectorText;
     
     @JsProperty(name="style")
-    public native CSSStyleDeclaration getStyle();
+    public CSSStyleDeclaration style;
     
     
 }

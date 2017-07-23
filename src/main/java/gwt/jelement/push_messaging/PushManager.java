@@ -28,7 +28,7 @@ import jsinterop.annotations.JsType;
 public class PushManager{
     
     @JsProperty(name="supportedContentEncodings")
-    public static native String[] getSupportedContentEncodings();
+    public static String[] supportedContentEncodings;
     
     @JsMethod(name = "getSubscription")
     public native Promise<PushSubscription> getSubscription();

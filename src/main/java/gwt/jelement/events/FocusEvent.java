@@ -38,7 +38,7 @@ public class FocusEvent extends UIEvent{
     }
     
     @JsProperty(name="relatedTarget")
-    public native EventTarget getRelatedTarget();
+    public EventTarget relatedTarget;
     
     
 }

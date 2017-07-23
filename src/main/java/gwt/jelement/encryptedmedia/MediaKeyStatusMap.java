@@ -27,7 +27,7 @@ import jsinterop.annotations.JsType;
 public class MediaKeyStatusMap{
     
     @JsProperty(name="size")
-    public native double getSize();
+    public double size;
     
     @JsMethod(name = "get")
     public native Object get(ArrayBuffer keyId);

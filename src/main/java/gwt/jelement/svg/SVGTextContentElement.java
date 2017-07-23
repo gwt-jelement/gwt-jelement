@@ -40,10 +40,10 @@ public class SVGTextContentElement extends SVGGraphicsElement{
     }
     
     @JsProperty(name="textLength")
-    public native SVGAnimatedLength getTextLength();
+    public SVGAnimatedLength textLength;
     
     @JsProperty(name="lengthAdjust")
-    public native SVGAnimatedEnumeration getLengthAdjust();
+    public SVGAnimatedEnumeration lengthAdjust;
     
     @JsMethod(name = "getCharNumAtPosition")
     public native double getCharNumAtPosition(SVGPoint point);

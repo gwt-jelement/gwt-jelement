@@ -39,10 +39,10 @@ public class CSSTransformValue extends CSSStyleValue{
     }
     
     @JsProperty(name="length")
-    public native double getLength();
+    public double length;
     
     @JsProperty(name="is2D")
-    public native boolean getIs2D();
+    public boolean is2D;
     
     @JsMethod(name = "toMatrix")
     public native DOMMatrix toMatrix();

@@ -32,13 +32,12 @@ public class CSSResourceValue extends CSSStyleValue{
         super();
     }
     
-    @JsOverlay
-    public final CSSResourceState getStateAsCSSResourceState(){
-        return CSSResourceState.of(getState());
-    }
-    
     @JsProperty(name="state")
-    public native String getState();
+    public String state;
+    @JsOverlay
+    public final CSSResourceState getState(){
+       return CSSResourceState.of(state);
+    }
     
     
 }

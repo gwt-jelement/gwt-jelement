@@ -37,7 +37,7 @@ public class PageTransitionEvent extends Event{
     }
     
     @JsProperty(name="persisted")
-    public native boolean getPersisted();
+    public boolean persisted;
     
     
 }

@@ -24,13 +24,13 @@ import jsinterop.annotations.JsType;
 public class DeviceRotationRate{
     
     @JsProperty(name="alpha")
-    public native double getAlpha();
+    public double alpha;
     
     @JsProperty(name="beta")
-    public native double getBeta();
+    public double beta;
     
     @JsProperty(name="gamma")
-    public native double getGamma();
+    public double gamma;
     
     
 }

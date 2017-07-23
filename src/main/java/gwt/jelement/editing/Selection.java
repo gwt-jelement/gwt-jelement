@@ -27,37 +27,37 @@ import jsinterop.annotations.JsType;
 public class Selection{
     
     @JsProperty(name="anchorNode")
-    public native Node getAnchorNode();
+    public Node anchorNode;
     
     @JsProperty(name="anchorOffset")
-    public native double getAnchorOffset();
+    public double anchorOffset;
     
     @JsProperty(name="focusNode")
-    public native Node getFocusNode();
+    public Node focusNode;
     
     @JsProperty(name="focusOffset")
-    public native double getFocusOffset();
+    public double focusOffset;
     
     @JsProperty(name="isCollapsed")
-    public native boolean getIsCollapsed();
+    public boolean isCollapsed;
     
     @JsProperty(name="rangeCount")
-    public native double getRangeCount();
+    public double rangeCount;
     
     @JsProperty(name="type")
-    public native String getType();
+    public String type;
     
     @JsProperty(name="baseNode")
-    public native Node getBaseNode();
+    public Node baseNode;
     
     @JsProperty(name="baseOffset")
-    public native double getBaseOffset();
+    public double baseOffset;
     
     @JsProperty(name="extentNode")
-    public native Node getExtentNode();
+    public Node extentNode;
     
     @JsProperty(name="extentOffset")
-    public native double getExtentOffset();
+    public double extentOffset;
     
     @JsMethod(name = "addRange")
     public native void addRange(Range range);

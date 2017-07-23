@@ -57,7 +57,16 @@ public class PaintRenderingContext2D{
     public boolean imageSmoothingEnabled;
     
     @JsProperty(name="imageSmoothingQuality")
-    public ImageSmoothingQuality imageSmoothingQuality;
+    public String imageSmoothingQuality;
+    @JsOverlay
+    public final ImageSmoothingQuality getImageSmoothingQuality(){
+       return ImageSmoothingQuality.of(imageSmoothingQuality);
+    }
+    
+    @JsOverlay
+    public final void setImageSmoothingQuality(ImageSmoothingQuality imageSmoothingQuality){
+       this.imageSmoothingQuality = imageSmoothingQuality.getInternalValue();
+    }
     
     @JsProperty(name="strokeStyle")
     public CanvasRenderingContext2D.StringOrCanvasGradientOrCanvasPatternUnionType strokeStyle;

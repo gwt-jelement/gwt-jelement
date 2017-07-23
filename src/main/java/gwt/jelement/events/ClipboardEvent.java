@@ -38,7 +38,7 @@ public class ClipboardEvent extends Event{
     }
     
     @JsProperty(name="clipboardData")
-    public native DataTransfer getClipboardData();
+    public DataTransfer clipboardData;
     
     
 }

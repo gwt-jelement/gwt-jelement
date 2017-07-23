@@ -37,7 +37,7 @@ public class CSSUnitValue extends CSSNumericValue{
     public String unit;
     
     @JsProperty(name="type")
-    public native String getType();
+    public String type;
     
     
 }

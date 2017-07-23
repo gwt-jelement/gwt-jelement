@@ -26,31 +26,31 @@ import jsinterop.annotations.JsType;
 public class MutationRecord{
     
     @JsProperty(name="type")
-    public native String getType();
+    public String type;
     
     @JsProperty(name="target")
-    public native Node getTarget();
+    public Node target;
     
     @JsProperty(name="addedNodes")
-    public native NodeList getAddedNodes();
+    public NodeList addedNodes;
     
     @JsProperty(name="removedNodes")
-    public native NodeList getRemovedNodes();
+    public NodeList removedNodes;
     
     @JsProperty(name="previousSibling")
-    public native Node getPreviousSibling();
+    public Node previousSibling;
     
     @JsProperty(name="nextSibling")
-    public native Node getNextSibling();
+    public Node nextSibling;
     
     @JsProperty(name="attributeName")
-    public native String getAttributeName();
+    public String attributeName;
     
     @JsProperty(name="attributeNamespace")
-    public native String getAttributeNamespace();
+    public String attributeNamespace;
     
     @JsProperty(name="oldValue")
-    public native String getOldValue();
+    public String oldValue;
     
     
 }

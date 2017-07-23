@@ -48,32 +48,32 @@ public class SVGSVGElement extends SVGGraphicsElement{
         super();
     }
     
+    @JsProperty(name="x")
+    public SVGAnimatedLength x;
+    
+    @JsProperty(name="y")
+    public SVGAnimatedLength y;
+    
+    @JsProperty(name="width")
+    public SVGAnimatedLength width;
+    
+    @JsProperty(name="height")
+    public SVGAnimatedLength height;
+    
     @JsProperty(name="currentScale")
     public float currentScale;
     
-    @JsProperty(name="zoomAndPan")
-    public short zoomAndPan;
-    
-    @JsProperty(name="x")
-    public native SVGAnimatedLength getX();
-    
-    @JsProperty(name="y")
-    public native SVGAnimatedLength getY();
-    
-    @JsProperty(name="width")
-    public native SVGAnimatedLength getWidth();
-    
-    @JsProperty(name="height")
-    public native SVGAnimatedLength getHeight();
-    
     @JsProperty(name="currentTranslate")
-    public native SVGPoint getCurrentTranslate();
+    public SVGPoint currentTranslate;
     
     @JsProperty(name="viewBox")
-    public native SVGAnimatedRect getViewBox();
+    public SVGAnimatedRect viewBox;
     
     @JsProperty(name="preserveAspectRatio")
-    public native SVGAnimatedPreserveAspectRatio getPreserveAspectRatio();
+    public SVGAnimatedPreserveAspectRatio preserveAspectRatio;
+    
+    @JsProperty(name="zoomAndPan")
+    public short zoomAndPan;
     
     @JsMethod(name = "animationsPaused")
     public native boolean animationsPaused();

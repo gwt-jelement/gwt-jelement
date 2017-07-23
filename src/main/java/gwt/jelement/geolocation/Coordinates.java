@@ -24,25 +24,25 @@ import jsinterop.annotations.JsType;
 public class Coordinates{
     
     @JsProperty(name="latitude")
-    public native double getLatitude();
+    public double latitude;
     
     @JsProperty(name="longitude")
-    public native double getLongitude();
+    public double longitude;
     
     @JsProperty(name="altitude")
-    public native double getAltitude();
+    public double altitude;
     
     @JsProperty(name="accuracy")
-    public native double getAccuracy();
+    public double accuracy;
     
     @JsProperty(name="altitudeAccuracy")
-    public native double getAltitudeAccuracy();
+    public double altitudeAccuracy;
     
     @JsProperty(name="heading")
-    public native double getHeading();
+    public double heading;
     
     @JsProperty(name="speed")
-    public native double getSpeed();
+    public double speed;
     
     
 }

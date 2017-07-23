@@ -37,37 +37,36 @@ public class ShadowRoot extends DocumentFragment{
         super();
     }
     
+    @JsProperty(name="mode")
+    public String mode;
+    @JsOverlay
+    public final ShadowRootMode getMode(){
+       return ShadowRootMode.of(mode);
+    }
+    
+    @JsProperty(name="host")
+    public Element host;
+    
+    @JsProperty(name="olderShadowRoot")
+    public ShadowRoot olderShadowRoot;
+    
     @JsProperty(name="innerHTML")
     public String innerHTML;
     
-    @JsOverlay
-    public final ShadowRootMode getModeAsShadowRootMode(){
-        return ShadowRootMode.of(getMode());
-    }
-    
-    @JsProperty(name="mode")
-    public native String getMode();
-    
-    @JsProperty(name="host")
-    public native Element getHost();
-    
-    @JsProperty(name="olderShadowRoot")
-    public native ShadowRoot getOlderShadowRoot();
-    
     @JsProperty(name="delegatesFocus")
-    public native boolean getDelegatesFocus();
+    public boolean delegatesFocus;
     
     @JsProperty(name="activeElement")
-    public native Element getActiveElement();
+    public Element activeElement;
     
     @JsProperty(name="styleSheets")
-    public native StyleSheetList getStyleSheets();
+    public StyleSheetList styleSheets;
     
     @JsProperty(name="pointerLockElement")
-    public native Element getPointerLockElement();
+    public Element pointerLockElement;
     
     @JsProperty(name="fullscreenElement")
-    public native Element getFullscreenElement();
+    public Element fullscreenElement;
     
     @JsMethod(name = "elementFromPoint")
     public native Element elementFromPoint(double x, double y);

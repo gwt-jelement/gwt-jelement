@@ -24,11 +24,11 @@ import jsinterop.annotations.JsType;
 @JsType(namespace = JsPackage.GLOBAL, isNative = true)
 public class DOMTokenList{
     
+    @JsProperty(name="length")
+    public double length;
+    
     @JsProperty(name="value")
     public String value;
-    
-    @JsProperty(name="length")
-    public native double getLength();
     
     @JsMethod(name = "add")
     public native void add();

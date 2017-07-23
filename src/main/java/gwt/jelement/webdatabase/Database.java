@@ -28,7 +28,7 @@ import jsinterop.annotations.JsType;
 public class Database{
     
     @JsProperty(name="version")
-    public native String getVersion();
+    public String version;
     
     @JsMethod(name = "changeVersion")
     public native void changeVersion(String oldVersion, String newVersion);

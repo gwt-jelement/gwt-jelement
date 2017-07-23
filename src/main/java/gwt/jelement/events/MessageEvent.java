@@ -40,22 +40,22 @@ public class MessageEvent extends Event{
     }
     
     @JsProperty(name="data")
-    public native Object getData();
+    public Object data;
     
     @JsProperty(name="origin")
-    public native String getOrigin();
+    public String origin;
     
     @JsProperty(name="lastEventId")
-    public native String getLastEventId();
+    public String lastEventId;
     
     @JsProperty(name="source")
-    public native EventTarget getSource();
+    public EventTarget source;
     
     @JsProperty(name="ports")
-    public native MessagePort[] getPorts();
+    public MessagePort[] ports;
     
     @JsProperty(name="suborigin")
-    public native String getSuborigin();
+    public String suborigin;
     
     @JsMethod(name = "initMessageEvent")
     public native void initMessageEvent();

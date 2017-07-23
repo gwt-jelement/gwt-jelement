@@ -38,7 +38,7 @@ public class RTCPeerConnectionIceEvent extends Event{
     }
     
     @JsProperty(name="candidate")
-    public native RTCIceCandidate getCandidate();
+    public RTCIceCandidate candidate;
     
     
 }

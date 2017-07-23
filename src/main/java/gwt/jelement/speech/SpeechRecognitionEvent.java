@@ -39,16 +39,16 @@ public class SpeechRecognitionEvent extends Event{
     }
     
     @JsProperty(name="resultIndex")
-    public native double getResultIndex();
+    public double resultIndex;
     
     @JsProperty(name="results")
-    public native SpeechRecognitionResultList getResults();
+    public SpeechRecognitionResultList results;
     
     @JsProperty(name="interpretation")
-    public native Document getInterpretation();
+    public Document interpretation;
     
     @JsProperty(name="emma")
-    public native Document getEmma();
+    public Document emma;
     
     
 }

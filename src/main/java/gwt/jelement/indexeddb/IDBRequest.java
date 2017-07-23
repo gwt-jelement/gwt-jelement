@@ -35,31 +35,30 @@ public class IDBRequest extends EventTarget{
         super();
     }
     
+    @JsProperty(name="result")
+    public Object result;
+    
+    @JsProperty(name="error")
+    public DOMException error;
+    
+    @JsProperty(name="source")
+    public Object source;
+    
+    @JsProperty(name="transaction")
+    public IDBTransaction transaction;
+    
+    @JsProperty(name="readyState")
+    public String readyState;
+    @JsOverlay
+    public final IDBRequestReadyState getReadyState(){
+       return IDBRequestReadyState.of(readyState);
+    }
+    
     @JsProperty(name="onsuccess")
     public EventHandlerNonNull onsuccess;
     
     @JsProperty(name="onerror")
     public EventHandlerNonNull onerror;
-    
-    @JsProperty(name="result")
-    public native Object getResult();
-    
-    @JsProperty(name="error")
-    public native DOMException getError();
-    
-    @JsProperty(name="source")
-    public native Object getSource();
-    
-    @JsProperty(name="transaction")
-    public native IDBTransaction getTransaction();
-    
-    @JsOverlay
-    public final IDBRequestReadyState getReadyStateAsIDBRequestReadyState(){
-        return IDBRequestReadyState.of(getReadyState());
-    }
-    
-    @JsProperty(name="readyState")
-    public native String getReadyState();
     
     
 }

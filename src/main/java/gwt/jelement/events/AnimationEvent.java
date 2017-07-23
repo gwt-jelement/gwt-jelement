@@ -37,10 +37,10 @@ public class AnimationEvent extends Event{
     }
     
     @JsProperty(name="animationName")
-    public native String getAnimationName();
+    public String animationName;
     
     @JsProperty(name="elapsedTime")
-    public native double getElapsedTime();
+    public double elapsedTime;
     
     
 }

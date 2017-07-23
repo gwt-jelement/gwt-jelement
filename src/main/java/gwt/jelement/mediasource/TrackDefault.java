@@ -25,25 +25,24 @@ import jsinterop.annotations.JsType;
 @JsType(namespace = JsPackage.GLOBAL, isNative = true)
 public class TrackDefault{
     
+    @JsProperty(name="type")
+    public String type;
     @JsOverlay
-    public final TrackDefaultType getTypeAsTrackDefaultType(){
-        return TrackDefaultType.of(getType());
+    public final TrackDefaultType getType(){
+       return TrackDefaultType.of(type);
     }
     
-    @JsProperty(name="type")
-    public native String getType();
-    
     @JsProperty(name="byteStreamTrackID")
-    public native String getByteStreamTrackID();
+    public String byteStreamTrackID;
     
     @JsProperty(name="language")
-    public native String getLanguage();
+    public String language;
     
     @JsProperty(name="label")
-    public native String getLabel();
+    public String label;
     
     @JsProperty(name="kinds")
-    public native String[] getKinds();
+    public String[] kinds;
     
     
 }

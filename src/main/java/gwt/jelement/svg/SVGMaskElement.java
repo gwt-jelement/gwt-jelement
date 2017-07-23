@@ -34,28 +34,28 @@ public class SVGMaskElement extends SVGElement{
     }
     
     @JsProperty(name="maskUnits")
-    public native SVGAnimatedEnumeration getMaskUnits();
+    public SVGAnimatedEnumeration maskUnits;
     
     @JsProperty(name="maskContentUnits")
-    public native SVGAnimatedEnumeration getMaskContentUnits();
+    public SVGAnimatedEnumeration maskContentUnits;
     
     @JsProperty(name="x")
-    public native SVGAnimatedLength getX();
+    public SVGAnimatedLength x;
     
     @JsProperty(name="y")
-    public native SVGAnimatedLength getY();
+    public SVGAnimatedLength y;
     
     @JsProperty(name="width")
-    public native SVGAnimatedLength getWidth();
+    public SVGAnimatedLength width;
     
     @JsProperty(name="height")
-    public native SVGAnimatedLength getHeight();
+    public SVGAnimatedLength height;
     
     @JsProperty(name="requiredExtensions")
-    public native SVGStringList getRequiredExtensions();
+    public SVGStringList requiredExtensions;
     
     @JsProperty(name="systemLanguage")
-    public native SVGStringList getSystemLanguage();
+    public SVGStringList systemLanguage;
     
     
 }

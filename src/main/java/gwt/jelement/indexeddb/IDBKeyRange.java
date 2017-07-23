@@ -26,16 +26,16 @@ import jsinterop.annotations.JsType;
 public class IDBKeyRange{
     
     @JsProperty(name="lower")
-    public native Object getLower();
+    public Object lower;
     
     @JsProperty(name="upper")
-    public native Object getUpper();
+    public Object upper;
     
     @JsProperty(name="lowerOpen")
-    public native boolean getLowerOpen();
+    public boolean lowerOpen;
     
     @JsProperty(name="upperOpen")
-    public native boolean getUpperOpen();
+    public boolean upperOpen;
     
     @JsMethod(name = "bound")
     public native IDBKeyRange bound(Object lower, Object upper);

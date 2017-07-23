@@ -24,13 +24,13 @@ import jsinterop.annotations.JsType;
 public class MediaSettingsRange{
     
     @JsProperty(name="max")
-    public native double getMax();
+    public double max;
     
     @JsProperty(name="min")
-    public native double getMin();
+    public double min;
     
     @JsProperty(name="step")
-    public native double getStep();
+    public double step;
     
     
 }

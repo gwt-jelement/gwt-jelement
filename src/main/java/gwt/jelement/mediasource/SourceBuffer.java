@@ -41,10 +41,31 @@ public class SourceBuffer extends EventTarget{
     }
     
     @JsProperty(name="mode")
-    public AppendMode mode;
+    public String mode;
+    @JsOverlay
+    public final AppendMode getMode(){
+       return AppendMode.of(mode);
+    }
+    
+    @JsOverlay
+    public final void setMode(AppendMode mode){
+       this.mode = mode.getInternalValue();
+    }
+    
+    @JsProperty(name="updating")
+    public boolean updating;
+    
+    @JsProperty(name="buffered")
+    public TimeRanges buffered;
     
     @JsProperty(name="timestampOffset")
     public double timestampOffset;
+    
+    @JsProperty(name="audioTracks")
+    public AudioTrackList audioTracks;
+    
+    @JsProperty(name="videoTracks")
+    public VideoTrackList videoTracks;
     
     @JsProperty(name="appendWindowStart")
     public double appendWindowStart;
@@ -69,18 +90,6 @@ public class SourceBuffer extends EventTarget{
     
     @JsProperty(name="trackDefaults")
     public TrackDefaultList trackDefaults;
-    
-    @JsProperty(name="updating")
-    public native boolean getUpdating();
-    
-    @JsProperty(name="buffered")
-    public native TimeRanges getBuffered();
-    
-    @JsProperty(name="audioTracks")
-    public native AudioTrackList getAudioTracks();
-    
-    @JsProperty(name="videoTracks")
-    public native VideoTrackList getVideoTracks();
     
     @JsMethod(name = "abort")
     public native void abort();

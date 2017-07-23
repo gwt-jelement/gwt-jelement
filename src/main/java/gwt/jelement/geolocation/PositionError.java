@@ -28,10 +28,10 @@ public class PositionError{
     
     
     @JsProperty(name="code")
-    public native short getCode();
+    public short code;
     
     @JsProperty(name="message")
-    public native String getMessage();
+    public String message;
     
     
 }

@@ -26,26 +26,26 @@ import jsinterop.annotations.JsType;
 @JsType(namespace = JsPackage.GLOBAL, isNative = true)
 public class StyleSheet{
     
-    @JsProperty(name="disabled")
-    public boolean disabled;
-    
     @JsProperty(name="type")
-    public native String getType();
+    public String type;
     
     @JsProperty(name="href")
-    public native String getHref();
+    public String href;
     
     @JsProperty(name="ownerNode")
-    public native Node getOwnerNode();
+    public Node ownerNode;
     
     @JsProperty(name="parentStyleSheet")
-    public native StyleSheet getParentStyleSheet();
+    public StyleSheet parentStyleSheet;
     
     @JsProperty(name="title")
-    public native String getTitle();
+    public String title;
     
     @JsProperty(name="media")
-    public native MediaList getMedia();
+    public MediaList media;
+    
+    @JsProperty(name="disabled")
+    public boolean disabled;
     
     
 }

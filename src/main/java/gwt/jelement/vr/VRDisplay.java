@@ -41,26 +41,26 @@ public class VRDisplay extends EventTarget{
         super();
     }
     
+    @JsProperty(name="displayId")
+    public double displayId;
+    
+    @JsProperty(name="displayName")
+    public String displayName;
+    
+    @JsProperty(name="isPresenting")
+    public boolean isPresenting;
+    
+    @JsProperty(name="capabilities")
+    public VRDisplayCapabilities capabilities;
+    
+    @JsProperty(name="stageParameters")
+    public VRStageParameters stageParameters;
+    
     @JsProperty(name="depthNear")
     public double depthNear;
     
     @JsProperty(name="depthFar")
     public double depthFar;
-    
-    @JsProperty(name="displayId")
-    public native double getDisplayId();
-    
-    @JsProperty(name="displayName")
-    public native String getDisplayName();
-    
-    @JsProperty(name="isPresenting")
-    public native boolean getIsPresenting();
-    
-    @JsProperty(name="capabilities")
-    public native VRDisplayCapabilities getCapabilities();
-    
-    @JsProperty(name="stageParameters")
-    public native VRStageParameters getStageParameters();
     
     @JsMethod(name = "cancelAnimationFrame")
     public native void cancelAnimationFrame(double handle);

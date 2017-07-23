@@ -30,10 +30,10 @@ public class DetectedText{
     }
     
     @JsProperty(name="rawValue")
-    public native String getRawValue();
+    public String rawValue;
     
     @JsProperty(name="boundingBox")
-    public native DOMRect getBoundingBox();
+    public DOMRect boundingBox;
     
     
 }

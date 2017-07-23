@@ -28,16 +28,16 @@ import jsinterop.annotations.JsType;
 public class DocumentOrShadowRoot{
     
     @JsProperty(name="activeElement")
-    public native Element getActiveElement();
+    public Element activeElement;
     
     @JsProperty(name="styleSheets")
-    public native StyleSheetList getStyleSheets();
+    public StyleSheetList styleSheets;
     
     @JsProperty(name="pointerLockElement")
-    public native Element getPointerLockElement();
+    public Element pointerLockElement;
     
     @JsProperty(name="fullscreenElement")
-    public native Element getFullscreenElement();
+    public Element fullscreenElement;
     
     @JsMethod(name = "elementFromPoint")
     public native Element elementFromPoint(double x, double y);

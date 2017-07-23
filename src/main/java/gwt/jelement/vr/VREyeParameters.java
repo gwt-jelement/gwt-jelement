@@ -25,13 +25,13 @@ import jsinterop.annotations.JsType;
 public class VREyeParameters{
     
     @JsProperty(name="offset")
-    public native Float32Array getOffset();
+    public Float32Array offset;
     
     @JsProperty(name="renderWidth")
-    public native double getRenderWidth();
+    public double renderWidth;
     
     @JsProperty(name="renderHeight")
-    public native double getRenderHeight();
+    public double renderHeight;
     
     
 }

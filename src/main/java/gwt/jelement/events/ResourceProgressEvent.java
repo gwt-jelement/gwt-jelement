@@ -31,7 +31,7 @@ public class ResourceProgressEvent extends ProgressEvent{
     }
     
     @JsProperty(name="url")
-    public native String getUrl();
+    public String url;
     
     
 }

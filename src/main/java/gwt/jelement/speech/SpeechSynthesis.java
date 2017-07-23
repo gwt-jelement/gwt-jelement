@@ -34,17 +34,17 @@ public class SpeechSynthesis extends EventTarget{
         super();
     }
     
-    @JsProperty(name="onvoiceschanged")
-    public EventHandlerNonNull onvoiceschanged;
-    
     @JsProperty(name="pending")
-    public native boolean getPending();
+    public boolean pending;
     
     @JsProperty(name="speaking")
-    public native boolean getSpeaking();
+    public boolean speaking;
     
     @JsProperty(name="paused")
-    public native boolean getPaused();
+    public boolean paused;
+    
+    @JsProperty(name="onvoiceschanged")
+    public EventHandlerNonNull onvoiceschanged;
     
     @JsMethod(name = "cancel")
     public native void cancel();

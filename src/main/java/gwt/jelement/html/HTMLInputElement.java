@@ -64,6 +64,9 @@ public class HTMLInputElement extends HTMLElement{
     @JsProperty(name="disabled")
     public boolean disabled;
     
+    @JsProperty(name="form")
+    public HTMLFormElement form;
+    
     @JsProperty(name="files")
     public FileList files;
     
@@ -87,6 +90,9 @@ public class HTMLInputElement extends HTMLElement{
     
     @JsProperty(name="indeterminate")
     public boolean indeterminate;
+    
+    @JsProperty(name="list")
+    public HTMLElement list;
     
     @JsProperty(name="max")
     public String max;
@@ -145,6 +151,18 @@ public class HTMLInputElement extends HTMLElement{
     @JsProperty(name="width")
     public double width;
     
+    @JsProperty(name="willValidate")
+    public boolean willValidate;
+    
+    @JsProperty(name="validity")
+    public ValidityState validity;
+    
+    @JsProperty(name="validationMessage")
+    public String validationMessage;
+    
+    @JsProperty(name="labels")
+    public NodeList labels;
+    
     @JsProperty(name="selectionStart")
     public double selectionStart;
     
@@ -172,26 +190,8 @@ public class HTMLInputElement extends HTMLElement{
     @JsProperty(name="incremental")
     public boolean incremental;
     
-    @JsProperty(name="form")
-    public native HTMLFormElement getForm();
-    
-    @JsProperty(name="list")
-    public native HTMLElement getList();
-    
-    @JsProperty(name="willValidate")
-    public native boolean getWillValidate();
-    
-    @JsProperty(name="validity")
-    public native ValidityState getValidity();
-    
-    @JsProperty(name="validationMessage")
-    public native String getValidationMessage();
-    
-    @JsProperty(name="labels")
-    public native NodeList getLabels();
-    
     @JsProperty(name="webkitEntries")
-    public native Entry[] getWebkitEntries();
+    public Entry[] webkitEntries;
     
     @JsMethod(name = "checkValidity")
     public native boolean checkValidity();

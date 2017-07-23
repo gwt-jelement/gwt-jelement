@@ -31,25 +31,25 @@ public class VisualViewport extends EventTarget{
     }
     
     @JsProperty(name="offsetLeft")
-    public native double getOffsetLeft();
+    public double offsetLeft;
     
     @JsProperty(name="offsetTop")
-    public native double getOffsetTop();
+    public double offsetTop;
     
     @JsProperty(name="pageLeft")
-    public native double getPageLeft();
+    public double pageLeft;
     
     @JsProperty(name="pageTop")
-    public native double getPageTop();
+    public double pageTop;
     
     @JsProperty(name="width")
-    public native double getWidth();
+    public double width;
     
     @JsProperty(name="height")
-    public native double getHeight();
+    public double height;
     
     @JsProperty(name="scale")
-    public native double getScale();
+    public double scale;
     
     
 }

@@ -24,35 +24,35 @@ import jsinterop.annotations.JsType;
 @JsType(namespace = JsPackage.GLOBAL, isNative = true)
 public class Screen{
     
-    @JsProperty(name="keepAwake")
-    public boolean keepAwake;
-    
     @JsProperty(name="availWidth")
-    public native double getAvailWidth();
+    public double availWidth;
     
     @JsProperty(name="availHeight")
-    public native double getAvailHeight();
+    public double availHeight;
     
     @JsProperty(name="width")
-    public native double getWidth();
+    public double width;
     
     @JsProperty(name="height")
-    public native double getHeight();
+    public double height;
     
     @JsProperty(name="colorDepth")
-    public native double getColorDepth();
+    public double colorDepth;
     
     @JsProperty(name="pixelDepth")
-    public native double getPixelDepth();
+    public double pixelDepth;
     
     @JsProperty(name="availLeft")
-    public native double getAvailLeft();
+    public double availLeft;
     
     @JsProperty(name="availTop")
-    public native double getAvailTop();
+    public double availTop;
     
     @JsProperty(name="orientation")
-    public native ScreenOrientation getOrientation();
+    public ScreenOrientation orientation;
+    
+    @JsProperty(name="keepAwake")
+    public boolean keepAwake;
     
     
 }

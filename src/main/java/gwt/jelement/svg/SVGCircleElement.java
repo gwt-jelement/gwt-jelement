@@ -32,13 +32,13 @@ public class SVGCircleElement extends SVGGeometryElement{
     }
     
     @JsProperty(name="cx")
-    public native SVGAnimatedLength getCx();
+    public SVGAnimatedLength cx;
     
     @JsProperty(name="cy")
-    public native SVGAnimatedLength getCy();
+    public SVGAnimatedLength cy;
     
     @JsProperty(name="r")
-    public native SVGAnimatedLength getR();
+    public SVGAnimatedLength r;
     
     
 }

@@ -38,7 +38,7 @@ public class MIDIMessageEvent extends Event{
     }
     
     @JsProperty(name="data")
-    public native Uint8Array getData();
+    public Uint8Array data;
     
     
 }

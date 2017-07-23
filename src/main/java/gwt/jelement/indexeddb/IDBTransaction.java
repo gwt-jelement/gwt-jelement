@@ -38,6 +38,22 @@ public class IDBTransaction extends EventTarget{
         super();
     }
     
+    @JsProperty(name="objectStoreNames")
+    public DOMStringList objectStoreNames;
+    
+    @JsProperty(name="mode")
+    public String mode;
+    @JsOverlay
+    public final IDBTransactionMode getMode(){
+       return IDBTransactionMode.of(mode);
+    }
+    
+    @JsProperty(name="db")
+    public IDBDatabase db;
+    
+    @JsProperty(name="error")
+    public DOMException error;
+    
     @JsProperty(name="onabort")
     public EventHandlerNonNull onabort;
     
@@ -46,23 +62,6 @@ public class IDBTransaction extends EventTarget{
     
     @JsProperty(name="onerror")
     public EventHandlerNonNull onerror;
-    
-    @JsProperty(name="objectStoreNames")
-    public native DOMStringList getObjectStoreNames();
-    
-    @JsOverlay
-    public final IDBTransactionMode getModeAsIDBTransactionMode(){
-        return IDBTransactionMode.of(getMode());
-    }
-    
-    @JsProperty(name="mode")
-    public native String getMode();
-    
-    @JsProperty(name="db")
-    public native IDBDatabase getDb();
-    
-    @JsProperty(name="error")
-    public native DOMException getError();
     
     @JsMethod(name = "abort")
     public native void abort();

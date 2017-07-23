@@ -28,7 +28,7 @@ public class MediaList{
     public String mediaText;
     
     @JsProperty(name="length")
-    public native double getLength();
+    public double length;
     
     @JsMethod(name = "appendMedium")
     public native void appendMedium(String medium);

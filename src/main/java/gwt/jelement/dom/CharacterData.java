@@ -36,13 +36,13 @@ public class CharacterData extends Node{
     public String data;
     
     @JsProperty(name="length")
-    public native double getLength();
+    public double length;
     
     @JsProperty(name="previousElementSibling")
-    public native Element getPreviousElementSibling();
+    public Element previousElementSibling;
     
     @JsProperty(name="nextElementSibling")
-    public native Element getNextElementSibling();
+    public Element nextElementSibling;
     
     @JsMethod(name = "after")
     public native void after();

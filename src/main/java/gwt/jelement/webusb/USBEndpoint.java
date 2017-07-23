@@ -27,26 +27,24 @@ import jsinterop.annotations.JsType;
 public class USBEndpoint{
     
     @JsProperty(name="endpointNumber")
-    public native byte getEndpointNumber();
-    
-    @JsOverlay
-    public final USBDirection getDirectionAsUSBDirection(){
-        return USBDirection.of(getDirection());
-    }
+    public byte endpointNumber;
     
     @JsProperty(name="direction")
-    public native String getDirection();
-    
+    public String direction;
     @JsOverlay
-    public final USBEndpointType getTypeAsUSBEndpointType(){
-        return USBEndpointType.of(getType());
+    public final USBDirection getDirection(){
+       return USBDirection.of(direction);
     }
     
     @JsProperty(name="type")
-    public native String getType();
+    public String type;
+    @JsOverlay
+    public final USBEndpointType getType(){
+       return USBEndpointType.of(type);
+    }
     
     @JsProperty(name="packetSize")
-    public native double getPacketSize();
+    public double packetSize;
     
     
 }

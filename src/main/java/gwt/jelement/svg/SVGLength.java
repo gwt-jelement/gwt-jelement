@@ -36,6 +36,9 @@ public class SVGLength{
     public static int SVG_LENGTHTYPE_PC;
     
     
+    @JsProperty(name="unitType")
+    public short unitType;
+    
     @JsProperty(name="value")
     public float value;
     
@@ -44,9 +47,6 @@ public class SVGLength{
     
     @JsProperty(name="valueAsString")
     public String valueAsString;
-    
-    @JsProperty(name="unitType")
-    public native short getUnitType();
     
     @JsMethod(name = "convertToSpecifiedUnits")
     public native void convertToSpecifiedUnits(short unitType);

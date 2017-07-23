@@ -33,7 +33,7 @@ public class BackgroundFetchSettledFetch extends BackgroundFetchFetch{
     }
     
     @JsProperty(name="response")
-    public native Response getResponse();
+    public Response response;
     
     
 }

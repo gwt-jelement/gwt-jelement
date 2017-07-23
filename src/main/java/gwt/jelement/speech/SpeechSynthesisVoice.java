@@ -24,19 +24,19 @@ import jsinterop.annotations.JsType;
 public class SpeechSynthesisVoice{
     
     @JsProperty(name="voiceURI")
-    public native String getVoiceURI();
+    public String voiceURI;
     
     @JsProperty(name="name")
-    public native String getName();
+    public String name;
     
     @JsProperty(name="lang")
-    public native String getLang();
+    public String lang;
     
     @JsProperty(name="localService")
-    public native boolean getLocalService();
+    public boolean localService;
     
     @JsProperty(name="default")
-    public native boolean getDefault();
+    public boolean default_;
     
     
 }

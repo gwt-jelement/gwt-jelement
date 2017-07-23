@@ -24,7 +24,7 @@ import jsinterop.annotations.JsType;
 public class NavigatorOnLine{
     
     @JsProperty(name="onLine")
-    public native boolean getOnLine();
+    public boolean onLine;
     
     
 }

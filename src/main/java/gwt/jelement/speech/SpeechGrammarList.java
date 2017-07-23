@@ -30,7 +30,7 @@ public class SpeechGrammarList{
     }
     
     @JsProperty(name="length")
-    public native double getLength();
+    public double length;
     
     @JsMethod(name = "addFromString")
     public native void addFromString(String string);

@@ -40,16 +40,16 @@ public class InputEvent extends UIEvent{
     }
     
     @JsProperty(name="data")
-    public native String getData();
+    public String data;
     
     @JsProperty(name="isComposing")
-    public native boolean getIsComposing();
+    public boolean isComposing;
     
     @JsProperty(name="inputType")
-    public native String getInputType();
+    public String inputType;
     
     @JsProperty(name="dataTransfer")
-    public native DataTransfer getDataTransfer();
+    public DataTransfer dataTransfer;
     
     @JsMethod(name = "getTargetRanges")
     public native StaticRange[] getTargetRanges();

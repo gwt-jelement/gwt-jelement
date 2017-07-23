@@ -35,7 +35,7 @@ public class CSSKeyframeRule extends CSSRule{
     public String keyText;
     
     @JsProperty(name="style")
-    public native CSSStyleDeclaration getStyle();
+    public CSSStyleDeclaration style;
     
     
 }

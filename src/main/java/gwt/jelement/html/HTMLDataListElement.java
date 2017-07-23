@@ -32,7 +32,7 @@ public class HTMLDataListElement extends HTMLElement{
     }
     
     @JsProperty(name="options")
-    public native HTMLCollection getOptions();
+    public HTMLCollection options;
     
     
 }

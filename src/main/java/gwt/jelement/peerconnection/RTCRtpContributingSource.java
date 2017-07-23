@@ -24,10 +24,10 @@ import jsinterop.annotations.JsType;
 public class RTCRtpContributingSource{
     
     @JsProperty(name="timestamp")
-    public native double getTimestamp();
+    public double timestamp;
     
     @JsProperty(name="source")
-    public native double getSource();
+    public double source;
     
     
 }

@@ -24,37 +24,37 @@ import jsinterop.annotations.JsType;
 public class ValidityState{
     
     @JsProperty(name="valueMissing")
-    public native boolean getValueMissing();
+    public boolean valueMissing;
     
     @JsProperty(name="typeMismatch")
-    public native boolean getTypeMismatch();
+    public boolean typeMismatch;
     
     @JsProperty(name="patternMismatch")
-    public native boolean getPatternMismatch();
+    public boolean patternMismatch;
     
     @JsProperty(name="tooLong")
-    public native boolean getTooLong();
+    public boolean tooLong;
     
     @JsProperty(name="tooShort")
-    public native boolean getTooShort();
+    public boolean tooShort;
     
     @JsProperty(name="rangeUnderflow")
-    public native boolean getRangeUnderflow();
+    public boolean rangeUnderflow;
     
     @JsProperty(name="rangeOverflow")
-    public native boolean getRangeOverflow();
+    public boolean rangeOverflow;
     
     @JsProperty(name="stepMismatch")
-    public native boolean getStepMismatch();
+    public boolean stepMismatch;
     
     @JsProperty(name="badInput")
-    public native boolean getBadInput();
+    public boolean badInput;
     
     @JsProperty(name="customError")
-    public native boolean getCustomError();
+    public boolean customError;
     
     @JsProperty(name="valid")
-    public native boolean getValid();
+    public boolean valid;
     
     
 }

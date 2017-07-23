@@ -32,6 +32,9 @@ public class HTMLTableSectionElement extends HTMLElement{
         super();
     }
     
+    @JsProperty(name="rows")
+    public HTMLCollection rows;
+    
     @JsProperty(name="align")
     public String align;
     
@@ -43,9 +46,6 @@ public class HTMLTableSectionElement extends HTMLElement{
     
     @JsProperty(name="vAlign")
     public String vAlign;
-    
-    @JsProperty(name="rows")
-    public native HTMLCollection getRows();
     
     @JsMethod(name = "deleteRow")
     public native void deleteRow(double index);

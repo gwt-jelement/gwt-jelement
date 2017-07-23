@@ -41,7 +41,7 @@ public class HTMLStyleElement extends HTMLElement{
     public String type;
     
     @JsProperty(name="sheet")
-    public native StyleSheet getSheet();
+    public StyleSheet sheet;
     
     
 }

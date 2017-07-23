@@ -37,10 +37,10 @@ public class SpeechRecognitionError extends Event{
     }
     
     @JsProperty(name="error")
-    public native String getError();
+    public String error;
     
     @JsProperty(name="message")
-    public native String getMessage();
+    public String message;
     
     
 }

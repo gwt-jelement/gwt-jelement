@@ -25,13 +25,13 @@ import jsinterop.annotations.JsType;
 public class VRStageParameters{
     
     @JsProperty(name="sittingToStandingTransform")
-    public native Float32Array getSittingToStandingTransform();
+    public Float32Array sittingToStandingTransform;
     
     @JsProperty(name="sizeX")
-    public native float getSizeX();
+    public float sizeX;
     
     @JsProperty(name="sizeZ")
-    public native float getSizeZ();
+    public float sizeZ;
     
     
 }

@@ -25,10 +25,10 @@ import jsinterop.annotations.JsType;
 public class SVGAnimatedTransformList{
     
     @JsProperty(name="baseVal")
-    public native SVGTransformList getBaseVal();
+    public SVGTransformList baseVal;
     
     @JsProperty(name="animVal")
-    public native SVGTransformList getAnimVal();
+    public SVGTransformList animVal;
     
     
 }

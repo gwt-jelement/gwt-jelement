@@ -34,7 +34,7 @@ public class TrackDefaultList{
     }
     
     @JsProperty(name="length")
-    public native double getLength();
+    public double length;
     
     
 }

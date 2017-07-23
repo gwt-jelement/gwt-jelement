@@ -25,10 +25,10 @@ import jsinterop.annotations.JsType;
 public class NonDocumentTypeChildNode{
     
     @JsProperty(name="previousElementSibling")
-    public native Element getPreviousElementSibling();
+    public Element previousElementSibling;
     
     @JsProperty(name="nextElementSibling")
-    public native Element getNextElementSibling();
+    public Element nextElementSibling;
     
     
 }

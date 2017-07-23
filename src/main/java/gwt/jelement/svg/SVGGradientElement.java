@@ -39,16 +39,16 @@ public class SVGGradientElement extends SVGElement{
     }
     
     @JsProperty(name="gradientUnits")
-    public native SVGAnimatedEnumeration getGradientUnits();
+    public SVGAnimatedEnumeration gradientUnits;
     
     @JsProperty(name="gradientTransform")
-    public native SVGAnimatedTransformList getGradientTransform();
+    public SVGAnimatedTransformList gradientTransform;
     
     @JsProperty(name="spreadMethod")
-    public native SVGAnimatedEnumeration getSpreadMethod();
+    public SVGAnimatedEnumeration spreadMethod;
     
     @JsProperty(name="href")
-    public native SVGAnimatedString getHref();
+    public SVGAnimatedString href;
     
     
 }

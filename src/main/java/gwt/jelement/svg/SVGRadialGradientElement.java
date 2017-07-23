@@ -32,22 +32,22 @@ public class SVGRadialGradientElement extends SVGGradientElement{
     }
     
     @JsProperty(name="cx")
-    public native SVGAnimatedLength getCx();
+    public SVGAnimatedLength cx;
     
     @JsProperty(name="cy")
-    public native SVGAnimatedLength getCy();
+    public SVGAnimatedLength cy;
     
     @JsProperty(name="r")
-    public native SVGAnimatedLength getR();
+    public SVGAnimatedLength r;
     
     @JsProperty(name="fx")
-    public native SVGAnimatedLength getFx();
+    public SVGAnimatedLength fx;
     
     @JsProperty(name="fy")
-    public native SVGAnimatedLength getFy();
+    public SVGAnimatedLength fy;
     
     @JsProperty(name="fr")
-    public native SVGAnimatedLength getFr();
+    public SVGAnimatedLength fr;
     
     
 }

@@ -38,7 +38,7 @@ public class FontFaceSetLoadEvent extends Event{
     }
     
     @JsProperty(name="fontfaces")
-    public native FontFace[] getFontfaces();
+    public FontFace[] fontfaces;
     
     
 }

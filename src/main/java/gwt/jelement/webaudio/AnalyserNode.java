@@ -43,6 +43,9 @@ public class AnalyserNode extends AudioNode{
     @JsProperty(name="fftSize")
     public double fftSize;
     
+    @JsProperty(name="frequencyBinCount")
+    public double frequencyBinCount;
+    
     @JsProperty(name="minDecibels")
     public double minDecibels;
     
@@ -51,9 +54,6 @@ public class AnalyserNode extends AudioNode{
     
     @JsProperty(name="smoothingTimeConstant")
     public double smoothingTimeConstant;
-    
-    @JsProperty(name="frequencyBinCount")
-    public native double getFrequencyBinCount();
     
     @JsMethod(name = "getByteFrequencyData")
     public native void getByteFrequencyData(Uint8Array array);

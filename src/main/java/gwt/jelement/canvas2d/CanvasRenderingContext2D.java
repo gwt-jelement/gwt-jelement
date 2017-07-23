@@ -98,6 +98,9 @@ public class CanvasRenderingContext2D{
     
     }
     
+    @JsProperty(name="canvas")
+    public HTMLCanvasElement canvas;
+    
     @JsProperty(name="currentTransform")
     public SVGMatrix currentTransform;
     
@@ -114,7 +117,16 @@ public class CanvasRenderingContext2D{
     public boolean imageSmoothingEnabled;
     
     @JsProperty(name="imageSmoothingQuality")
-    public ImageSmoothingQuality imageSmoothingQuality;
+    public String imageSmoothingQuality;
+    @JsOverlay
+    public final ImageSmoothingQuality getImageSmoothingQuality(){
+       return ImageSmoothingQuality.of(imageSmoothingQuality);
+    }
+    
+    @JsOverlay
+    public final void setImageSmoothingQuality(ImageSmoothingQuality imageSmoothingQuality){
+       this.imageSmoothingQuality = imageSmoothingQuality.getInternalValue();
+    }
     
     @JsProperty(name="strokeStyle")
     public CanvasRenderingContext2D.StringOrCanvasGradientOrCanvasPatternUnionType strokeStyle;
@@ -160,9 +172,6 @@ public class CanvasRenderingContext2D{
     
     @JsProperty(name="direction")
     public String direction;
-    
-    @JsProperty(name="canvas")
-    public native HTMLCanvasElement getCanvas();
     
     @JsMethod(name = "addHitRegion")
     public native void addHitRegion();

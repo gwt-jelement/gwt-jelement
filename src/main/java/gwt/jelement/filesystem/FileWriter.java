@@ -38,6 +38,18 @@ public class FileWriter extends EventTarget{
         super();
     }
     
+    @JsProperty(name="readyState")
+    public short readyState;
+    
+    @JsProperty(name="error")
+    public DOMException error;
+    
+    @JsProperty(name="position")
+    public double position;
+    
+    @JsProperty(name="length")
+    public double length;
+    
     @JsProperty(name="onwritestart")
     public EventHandlerNonNull onwritestart;
     
@@ -55,18 +67,6 @@ public class FileWriter extends EventTarget{
     
     @JsProperty(name="onwriteend")
     public EventHandlerNonNull onwriteend;
-    
-    @JsProperty(name="readyState")
-    public native short getReadyState();
-    
-    @JsProperty(name="error")
-    public native DOMException getError();
-    
-    @JsProperty(name="position")
-    public native double getPosition();
-    
-    @JsProperty(name="length")
-    public native double getLength();
     
     @JsMethod(name = "abort")
     public native void abort();

@@ -27,7 +27,7 @@ import jsinterop.annotations.JsType;
 public class Crypto{
     
     @JsProperty(name="subtle")
-    public native SubtleCrypto getSubtle();
+    public SubtleCrypto subtle;
     
     @JsMethod(name = "getRandomValues")
     public native ArrayBufferView getRandomValues(ArrayBufferView array);

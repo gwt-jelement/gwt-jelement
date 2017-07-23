@@ -24,22 +24,22 @@ import jsinterop.annotations.JsType;
 public class ClientRect{
     
     @JsProperty(name="top")
-    public native float getTop();
+    public float top;
     
     @JsProperty(name="right")
-    public native float getRight();
+    public float right;
     
     @JsProperty(name="bottom")
-    public native float getBottom();
+    public float bottom;
     
     @JsProperty(name="left")
-    public native float getLeft();
+    public float left;
     
     @JsProperty(name="width")
-    public native float getWidth();
+    public float width;
     
     @JsProperty(name="height")
-    public native float getHeight();
+    public float height;
     
     
 }

@@ -80,16 +80,16 @@ public class ImageData{
     }
     
     @JsProperty(name="width")
-    public native double getWidth();
+    public double width;
     
     @JsProperty(name="height")
-    public native double getHeight();
+    public double height;
     
     @JsProperty(name="data")
-    public native Uint8ClampedArray getData();
+    public Uint8ClampedArray data;
     
     @JsProperty(name="dataUnion")
-    public native ImageData.ImageDataArray getDataUnion();
+    public ImageData.ImageDataArray dataUnion;
     
     @JsMethod(name = "getColorSettings")
     public native ImageDataColorSettings getColorSettings();

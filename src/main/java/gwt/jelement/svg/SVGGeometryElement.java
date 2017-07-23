@@ -34,7 +34,7 @@ public class SVGGeometryElement extends SVGGraphicsElement{
     }
     
     @JsProperty(name="pathLength")
-    public native SVGAnimatedNumber getPathLength();
+    public SVGAnimatedNumber pathLength;
     
     @JsMethod(name = "getPointAtLength")
     public native SVGPoint getPointAtLength(float distance);

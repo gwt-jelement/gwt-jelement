@@ -40,10 +40,10 @@ public class Text extends CharacterData{
     }
     
     @JsProperty(name="wholeText")
-    public native String getWholeText();
+    public String wholeText;
     
     @JsProperty(name="assignedSlot")
-    public native HTMLSlotElement getAssignedSlot();
+    public HTMLSlotElement assignedSlot;
     
     @JsMethod(name = "getDestinationInsertionPoints")
     public native NodeList getDestinationInsertionPoints();

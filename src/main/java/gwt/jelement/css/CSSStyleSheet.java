@@ -34,13 +34,13 @@ public class CSSStyleSheet extends StyleSheet{
     }
     
     @JsProperty(name="ownerRule")
-    public native CSSRule getOwnerRule();
+    public CSSRule ownerRule;
     
     @JsProperty(name="cssRules")
-    public native CSSRuleList getCssRules();
+    public CSSRuleList cssRules;
     
     @JsProperty(name="rules")
-    public native CSSRuleList getRules();
+    public CSSRuleList rules;
     
     @JsMethod(name = "addRule")
     public native double addRule();

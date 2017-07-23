@@ -37,17 +37,17 @@ public class CSSRule{
     public static int VIEWPORT_RULE;
     
     
+    @JsProperty(name="type")
+    public short type;
+    
     @JsProperty(name="cssText")
     public String cssText;
     
-    @JsProperty(name="type")
-    public native short getType();
-    
     @JsProperty(name="parentRule")
-    public native CSSRule getParentRule();
+    public CSSRule parentRule;
     
     @JsProperty(name="parentStyleSheet")
-    public native CSSStyleSheet getParentStyleSheet();
+    public CSSStyleSheet parentStyleSheet;
     
     
 }

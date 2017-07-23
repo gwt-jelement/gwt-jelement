@@ -37,13 +37,13 @@ public class CloseEvent extends Event{
     }
     
     @JsProperty(name="wasClean")
-    public native boolean getWasClean();
+    public boolean wasClean;
     
     @JsProperty(name="code")
-    public native short getCode();
+    public short code;
     
     @JsProperty(name="reason")
-    public native String getReason();
+    public String reason;
     
     
 }

@@ -33,10 +33,10 @@ public class PromiseRejectionEvent extends Event{
     }
     
     @JsProperty(name="promise")
-    public native Promise<Object> getPromise();
+    public Promise<Object> promise;
     
     @JsProperty(name="reason")
-    public native Object getReason();
+    public Object reason;
     
     
 }

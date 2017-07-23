@@ -25,8 +25,14 @@ import jsinterop.annotations.JsType;
 @JsType(namespace = JsPackage.GLOBAL, isNative = true)
 public class Location{
     
+    @JsProperty(name="ancestorOrigins")
+    public DOMStringList ancestorOrigins;
+    
     @JsProperty(name="href")
     public String href;
+    
+    @JsProperty(name="origin")
+    public String origin;
     
     @JsProperty(name="protocol")
     public String protocol;
@@ -48,12 +54,6 @@ public class Location{
     
     @JsProperty(name="hash")
     public String hash;
-    
-    @JsProperty(name="ancestorOrigins")
-    public native DOMStringList getAncestorOrigins();
-    
-    @JsProperty(name="origin")
-    public native String getOrigin();
     
     @JsMethod(name = "assign")
     public native void assign(String url);

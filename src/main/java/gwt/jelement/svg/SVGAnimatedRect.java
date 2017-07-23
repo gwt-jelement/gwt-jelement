@@ -25,10 +25,10 @@ import jsinterop.annotations.JsType;
 public class SVGAnimatedRect{
     
     @JsProperty(name="baseVal")
-    public native SVGRect getBaseVal();
+    public SVGRect baseVal;
     
     @JsProperty(name="animVal")
-    public native SVGRect getAnimVal();
+    public SVGRect animVal;
     
     
 }

@@ -36,17 +36,17 @@ public class ServiceWorkerContainer extends EventTarget{
         super();
     }
     
+    @JsProperty(name="controller")
+    public ServiceWorker controller;
+    
+    @JsProperty(name="ready")
+    public Promise<ServiceWorkerRegistration> ready;
+    
     @JsProperty(name="oncontrollerchange")
     public EventHandlerNonNull oncontrollerchange;
     
     @JsProperty(name="onmessage")
     public EventHandlerNonNull onmessage;
-    
-    @JsProperty(name="controller")
-    public native ServiceWorker getController();
-    
-    @JsProperty(name="ready")
-    public native Promise<ServiceWorkerRegistration> getReady();
     
     @JsMethod(name = "getRegistration")
     public native Promise<ServiceWorkerRegistration> getRegistration();

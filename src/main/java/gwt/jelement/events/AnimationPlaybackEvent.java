@@ -37,10 +37,10 @@ public class AnimationPlaybackEvent extends Event{
     }
     
     @JsProperty(name="currentTime")
-    public native double getCurrentTime();
+    public double currentTime;
     
     @JsProperty(name="timelineTime")
-    public native double getTimelineTime();
+    public double timelineTime;
     
     
 }

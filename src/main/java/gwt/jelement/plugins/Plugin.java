@@ -26,16 +26,16 @@ import jsinterop.annotations.JsType;
 public class Plugin{
     
     @JsProperty(name="name")
-    public native String getName();
+    public String name;
     
     @JsProperty(name="filename")
-    public native String getFilename();
+    public String filename;
     
     @JsProperty(name="description")
-    public native String getDescription();
+    public String description;
     
     @JsProperty(name="length")
-    public native double getLength();
+    public double length;
     
     @JsMethod(name = "namedItem")
     public native MimeType namedItem(String name);

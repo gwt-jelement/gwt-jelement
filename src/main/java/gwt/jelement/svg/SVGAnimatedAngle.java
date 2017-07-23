@@ -25,10 +25,10 @@ import jsinterop.annotations.JsType;
 public class SVGAnimatedAngle{
     
     @JsProperty(name="baseVal")
-    public native SVGAngle getBaseVal();
+    public SVGAngle baseVal;
     
     @JsProperty(name="animVal")
-    public native SVGAngle getAnimVal();
+    public SVGAngle animVal;
     
     
 }

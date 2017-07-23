@@ -25,10 +25,10 @@ import jsinterop.annotations.JsType;
 public class SVGAnimatedPreserveAspectRatio{
     
     @JsProperty(name="baseVal")
-    public native SVGPreserveAspectRatio getBaseVal();
+    public SVGPreserveAspectRatio baseVal;
     
     @JsProperty(name="animVal")
-    public native SVGPreserveAspectRatio getAnimVal();
+    public SVGPreserveAspectRatio animVal;
     
     
 }

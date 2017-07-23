@@ -34,7 +34,16 @@ public class MediaSession{
     public MediaMetadata metadata;
     
     @JsProperty(name="playbackState")
-    public MediaSessionPlaybackState playbackState;
+    public String playbackState;
+    @JsOverlay
+    public final MediaSessionPlaybackState getPlaybackState(){
+       return MediaSessionPlaybackState.of(playbackState);
+    }
+    
+    @JsOverlay
+    public final void setPlaybackState(MediaSessionPlaybackState playbackState){
+       this.playbackState = playbackState.getInternalValue();
+    }
     
     @JsOverlay
     public final void setActionHandler(MediaSessionAction action, MediaSessionActionHandler handler){

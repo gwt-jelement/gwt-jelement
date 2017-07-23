@@ -25,10 +25,10 @@ import jsinterop.annotations.JsType;
 public class MessageChannel{
     
     @JsProperty(name="port1")
-    public native MessagePort getPort1();
+    public MessagePort port1;
     
     @JsProperty(name="port2")
-    public native MessagePort getPort2();
+    public MessagePort port2;
     
     
 }

@@ -24,16 +24,16 @@ import jsinterop.annotations.JsType;
 public class CryptoKey{
     
     @JsProperty(name="type")
-    public native String getType();
+    public String type;
     
     @JsProperty(name="extractable")
-    public native boolean getExtractable();
+    public boolean extractable;
     
     @JsProperty(name="algorithm")
-    public native Object getAlgorithm();
+    public Object algorithm;
     
     @JsProperty(name="usages")
-    public native String[] getUsages();
+    public String[] usages;
     
     
 }

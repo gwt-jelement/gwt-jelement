@@ -44,6 +44,12 @@ public class MediaStream extends EventTarget{
         super();
     }
     
+    @JsProperty(name="id")
+    public String id;
+    
+    @JsProperty(name="active")
+    public boolean active;
+    
     @JsProperty(name="onaddtrack")
     public EventHandlerNonNull onaddtrack;
     
@@ -55,12 +61,6 @@ public class MediaStream extends EventTarget{
     
     @JsProperty(name="oninactive")
     public EventHandlerNonNull oninactive;
-    
-    @JsProperty(name="id")
-    public native String getId();
-    
-    @JsProperty(name="active")
-    public native boolean getActive();
     
     @JsMethod(name = "addTrack")
     public native void addTrack(MediaStreamTrack track);

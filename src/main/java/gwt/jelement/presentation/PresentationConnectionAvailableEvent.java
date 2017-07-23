@@ -33,7 +33,7 @@ public class PresentationConnectionAvailableEvent extends Event{
     }
     
     @JsProperty(name="connection")
-    public native PresentationConnection getConnection();
+    public PresentationConnection connection;
     
     
 }

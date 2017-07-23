@@ -24,40 +24,40 @@ import jsinterop.annotations.JsType;
 public class TextMetrics{
     
     @JsProperty(name="width")
-    public native float getWidth();
+    public float width;
     
     @JsProperty(name="actualBoundingBoxLeft")
-    public native float getActualBoundingBoxLeft();
+    public float actualBoundingBoxLeft;
     
     @JsProperty(name="actualBoundingBoxRight")
-    public native float getActualBoundingBoxRight();
+    public float actualBoundingBoxRight;
     
     @JsProperty(name="fontBoundingBoxAscent")
-    public native float getFontBoundingBoxAscent();
+    public float fontBoundingBoxAscent;
     
     @JsProperty(name="fontBoundingBoxDescent")
-    public native float getFontBoundingBoxDescent();
+    public float fontBoundingBoxDescent;
     
     @JsProperty(name="actualBoundingBoxAscent")
-    public native float getActualBoundingBoxAscent();
+    public float actualBoundingBoxAscent;
     
     @JsProperty(name="actualBoundingBoxDescent")
-    public native float getActualBoundingBoxDescent();
+    public float actualBoundingBoxDescent;
     
     @JsProperty(name="emHeightAscent")
-    public native float getEmHeightAscent();
+    public float emHeightAscent;
     
     @JsProperty(name="emHeightDescent")
-    public native float getEmHeightDescent();
+    public float emHeightDescent;
     
     @JsProperty(name="hangingBaseline")
-    public native float getHangingBaseline();
+    public float hangingBaseline;
     
     @JsProperty(name="alphabeticBaseline")
-    public native float getAlphabeticBaseline();
+    public float alphabeticBaseline;
     
     @JsProperty(name="ideographicBaseline")
-    public native float getIdeographicBaseline();
+    public float ideographicBaseline;
     
     
 }

@@ -31,7 +31,7 @@ public class AudioDestinationNode extends AudioNode{
     }
     
     @JsProperty(name="maxChannelCount")
-    public native double getMaxChannelCount();
+    public double maxChannelCount;
     
     
 }

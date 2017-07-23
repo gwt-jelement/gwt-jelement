@@ -32,28 +32,28 @@ public class SVGFESpotLightElement extends SVGElement{
     }
     
     @JsProperty(name="x")
-    public native SVGAnimatedNumber getX();
+    public SVGAnimatedNumber x;
     
     @JsProperty(name="y")
-    public native SVGAnimatedNumber getY();
+    public SVGAnimatedNumber y;
     
     @JsProperty(name="z")
-    public native SVGAnimatedNumber getZ();
+    public SVGAnimatedNumber z;
     
     @JsProperty(name="pointsAtX")
-    public native SVGAnimatedNumber getPointsAtX();
+    public SVGAnimatedNumber pointsAtX;
     
     @JsProperty(name="pointsAtY")
-    public native SVGAnimatedNumber getPointsAtY();
+    public SVGAnimatedNumber pointsAtY;
     
     @JsProperty(name="pointsAtZ")
-    public native SVGAnimatedNumber getPointsAtZ();
+    public SVGAnimatedNumber pointsAtZ;
     
     @JsProperty(name="specularExponent")
-    public native SVGAnimatedNumber getSpecularExponent();
+    public SVGAnimatedNumber specularExponent;
     
     @JsProperty(name="limitingConeAngle")
-    public native SVGAnimatedNumber getLimitingConeAngle();
+    public SVGAnimatedNumber limitingConeAngle;
     
     
 }

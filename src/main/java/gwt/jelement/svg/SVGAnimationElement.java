@@ -33,6 +33,9 @@ public class SVGAnimationElement extends SVGElement{
         super();
     }
     
+    @JsProperty(name="targetElement")
+    public SVGElement targetElement;
+    
     @JsProperty(name="onbegin")
     public EventHandlerNonNull onbegin;
     
@@ -42,14 +45,11 @@ public class SVGAnimationElement extends SVGElement{
     @JsProperty(name="onrepeat")
     public EventHandlerNonNull onrepeat;
     
-    @JsProperty(name="targetElement")
-    public native SVGElement getTargetElement();
-    
     @JsProperty(name="requiredExtensions")
-    public native SVGStringList getRequiredExtensions();
+    public SVGStringList requiredExtensions;
     
     @JsProperty(name="systemLanguage")
-    public native SVGStringList getSystemLanguage();
+    public SVGStringList systemLanguage;
     
     @JsMethod(name = "beginElement")
     public native void beginElement();

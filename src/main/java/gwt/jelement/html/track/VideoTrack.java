@@ -24,23 +24,23 @@ import jsinterop.annotations.JsType;
 @JsType(namespace = JsPackage.GLOBAL, isNative = true)
 public class VideoTrack{
     
+    @JsProperty(name="id")
+    public String id;
+    
+    @JsProperty(name="kind")
+    public String kind;
+    
+    @JsProperty(name="label")
+    public String label;
+    
+    @JsProperty(name="language")
+    public String language;
+    
     @JsProperty(name="selected")
     public boolean selected;
     
-    @JsProperty(name="id")
-    public native String getId();
-    
-    @JsProperty(name="kind")
-    public native String getKind();
-    
-    @JsProperty(name="label")
-    public native String getLabel();
-    
-    @JsProperty(name="language")
-    public native String getLanguage();
-    
     @JsProperty(name="sourceBuffer")
-    public native SourceBuffer getSourceBuffer();
+    public SourceBuffer sourceBuffer;
     
     
 }

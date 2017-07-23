@@ -33,14 +33,14 @@ public class MediaQueryList extends EventTarget{
         super();
     }
     
-    @JsProperty(name="onchange")
-    public EventHandlerNonNull onchange;
-    
     @JsProperty(name="media")
-    public native String getMedia();
+    public String media;
     
     @JsProperty(name="matches")
-    public native boolean getMatches();
+    public boolean matches;
+    
+    @JsProperty(name="onchange")
+    public EventHandlerNonNull onchange;
     
     @JsMethod(name = "addListener")
     public native void addListener(EventListener listener);

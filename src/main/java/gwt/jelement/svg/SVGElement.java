@@ -20,7 +20,6 @@ import gwt.jelement.css.CSSStyleDeclaration;
 import gwt.jelement.dom.DOMStringMap;
 import gwt.jelement.dom.Element;
 import gwt.jelement.events.EventHandlerNonNull;
-import gwt.jelement.svg.SVGAnimatedString;
 import gwt.jelement.svg.SVGElement;
 import gwt.jelement.svg.SVGSVGElement;
 import jsinterop.annotations.JsConstructor;
@@ -36,6 +35,18 @@ public class SVGElement extends Element{
     public SVGElement(){
         super();
     }
+    
+    @JsProperty(name="dataset")
+    public DOMStringMap dataset;
+    
+    @JsProperty(name="style")
+    public CSSStyleDeclaration style;
+    
+    @JsProperty(name="ownerSVGElement")
+    public SVGSVGElement ownerSVGElement;
+    
+    @JsProperty(name="viewportElement")
+    public SVGElement viewportElement;
     
     @JsProperty(name="tabIndex")
     public double tabIndex;
@@ -261,21 +272,6 @@ public class SVGElement extends Element{
     
     @JsProperty(name="nonce")
     public String nonce;
-    
-    @JsProperty(name="className")
-    public native SVGAnimatedString getClassName();
-    
-    @JsProperty(name="dataset")
-    public native DOMStringMap getDataset();
-    
-    @JsProperty(name="style")
-    public native CSSStyleDeclaration getStyle();
-    
-    @JsProperty(name="ownerSVGElement")
-    public native SVGSVGElement getOwnerSVGElement();
-    
-    @JsProperty(name="viewportElement")
-    public native SVGElement getViewportElement();
     
     @JsMethod(name = "blur")
     public native void blur();

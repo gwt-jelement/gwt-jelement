@@ -38,7 +38,7 @@ public class MIDIConnectionEvent extends Event{
     }
     
     @JsProperty(name="port")
-    public native MIDIPort getPort();
+    public MIDIPort port;
     
     
 }

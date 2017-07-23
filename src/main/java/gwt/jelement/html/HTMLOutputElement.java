@@ -35,8 +35,17 @@ public class HTMLOutputElement extends HTMLElement{
         super();
     }
     
+    @JsProperty(name="htmlFor")
+    public DOMTokenList htmlFor;
+    
+    @JsProperty(name="form")
+    public HTMLFormElement form;
+    
     @JsProperty(name="name")
     public String name;
+    
+    @JsProperty(name="type")
+    public String type;
     
     @JsProperty(name="defaultValue")
     public String defaultValue;
@@ -44,26 +53,17 @@ public class HTMLOutputElement extends HTMLElement{
     @JsProperty(name="value")
     public String value;
     
-    @JsProperty(name="htmlFor")
-    public native DOMTokenList getHtmlFor();
-    
-    @JsProperty(name="form")
-    public native HTMLFormElement getForm();
-    
-    @JsProperty(name="type")
-    public native String getType();
-    
     @JsProperty(name="willValidate")
-    public native boolean getWillValidate();
+    public boolean willValidate;
     
     @JsProperty(name="validity")
-    public native ValidityState getValidity();
+    public ValidityState validity;
     
     @JsProperty(name="validationMessage")
-    public native String getValidationMessage();
+    public String validationMessage;
     
     @JsProperty(name="labels")
-    public native NodeList getLabels();
+    public NodeList labels;
     
     @JsMethod(name = "checkValidity")
     public native boolean checkValidity();

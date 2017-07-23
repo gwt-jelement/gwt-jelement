@@ -38,7 +38,7 @@ public class MediaStreamEvent extends Event{
     }
     
     @JsProperty(name="stream")
-    public native MediaStream getStream();
+    public MediaStream stream;
     
     
 }

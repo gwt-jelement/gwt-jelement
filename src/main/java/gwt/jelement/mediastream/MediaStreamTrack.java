@@ -39,8 +39,20 @@ public class MediaStreamTrack extends EventTarget{
         super();
     }
     
+    @JsProperty(name="kind")
+    public String kind;
+    
+    @JsProperty(name="id")
+    public String id;
+    
+    @JsProperty(name="label")
+    public String label;
+    
     @JsProperty(name="enabled")
     public boolean enabled;
+    
+    @JsProperty(name="muted")
+    public boolean muted;
     
     @JsProperty(name="onmute")
     public EventHandlerNonNull onmute;
@@ -48,31 +60,18 @@ public class MediaStreamTrack extends EventTarget{
     @JsProperty(name="onunmute")
     public EventHandlerNonNull onunmute;
     
+    @JsProperty(name="readyState")
+    public String readyState;
+    @JsOverlay
+    public final MediaStreamTrackState getReadyState(){
+       return MediaStreamTrackState.of(readyState);
+    }
+    
     @JsProperty(name="onended")
     public EventHandlerNonNull onended;
     
     @JsProperty(name="contentHint")
     public String contentHint;
-    
-    @JsProperty(name="kind")
-    public native String getKind();
-    
-    @JsProperty(name="id")
-    public native String getId();
-    
-    @JsProperty(name="label")
-    public native String getLabel();
-    
-    @JsProperty(name="muted")
-    public native boolean getMuted();
-    
-    @JsOverlay
-    public final MediaStreamTrackState getReadyStateAsMediaStreamTrackState(){
-        return MediaStreamTrackState.of(getReadyState());
-    }
-    
-    @JsProperty(name="readyState")
-    public native String getReadyState();
     
     @JsMethod(name = "applyConstraints")
     public native Promise<MediaTrackConstraints> applyConstraints();

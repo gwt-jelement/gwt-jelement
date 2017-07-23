@@ -35,15 +35,14 @@ public class USBIsochronousOutTransferPacket{
     }
     
     @JsProperty(name="bytesWritten")
-    public native double getBytesWritten();
-    
-    @JsOverlay
-    public final USBTransferStatus getStatusAsUSBTransferStatus(){
-        return USBTransferStatus.of(getStatus());
-    }
+    public double bytesWritten;
     
     @JsProperty(name="status")
-    public native String getStatus();
+    public String status;
+    @JsOverlay
+    public final USBTransferStatus getStatus(){
+       return USBTransferStatus.of(status);
+    }
     
     
 }

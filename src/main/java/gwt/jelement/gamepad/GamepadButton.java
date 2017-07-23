@@ -24,13 +24,13 @@ import jsinterop.annotations.JsType;
 public class GamepadButton{
     
     @JsProperty(name="pressed")
-    public native boolean getPressed();
+    public boolean pressed;
     
     @JsProperty(name="touched")
-    public native boolean getTouched();
+    public boolean touched;
     
     @JsProperty(name="value")
-    public native double getValue();
+    public double value;
     
     
 }

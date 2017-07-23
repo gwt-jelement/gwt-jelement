@@ -47,11 +47,29 @@ public class HTMLObjectElement extends HTMLElement{
     @JsProperty(name="useMap")
     public String useMap;
     
+    @JsProperty(name="form")
+    public HTMLFormElement form;
+    
     @JsProperty(name="width")
     public String width;
     
     @JsProperty(name="height")
     public String height;
+    
+    @JsProperty(name="contentDocument")
+    public Document contentDocument;
+    
+    @JsProperty(name="contentWindow")
+    public Window contentWindow;
+    
+    @JsProperty(name="willValidate")
+    public boolean willValidate;
+    
+    @JsProperty(name="validity")
+    public ValidityState validity;
+    
+    @JsProperty(name="validationMessage")
+    public String validationMessage;
     
     @JsProperty(name="align")
     public String align;
@@ -82,24 +100,6 @@ public class HTMLObjectElement extends HTMLElement{
     
     @JsProperty(name="border")
     public String border;
-    
-    @JsProperty(name="form")
-    public native HTMLFormElement getForm();
-    
-    @JsProperty(name="contentDocument")
-    public native Document getContentDocument();
-    
-    @JsProperty(name="contentWindow")
-    public native Window getContentWindow();
-    
-    @JsProperty(name="willValidate")
-    public native boolean getWillValidate();
-    
-    @JsProperty(name="validity")
-    public native ValidityState getValidity();
-    
-    @JsProperty(name="validationMessage")
-    public native String getValidationMessage();
     
     @JsMethod(name = "checkValidity")
     public native boolean checkValidity();

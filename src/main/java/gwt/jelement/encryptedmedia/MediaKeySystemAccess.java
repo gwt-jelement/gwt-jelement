@@ -28,7 +28,7 @@ import jsinterop.annotations.JsType;
 public class MediaKeySystemAccess{
     
     @JsProperty(name="keySystem")
-    public native String getKeySystem();
+    public String keySystem;
     
     @JsMethod(name = "createMediaKeys")
     public native Promise<MediaKeys> createMediaKeys();

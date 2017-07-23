@@ -24,7 +24,7 @@ import jsinterop.annotations.JsType;
 public class NavigatorCookies{
     
     @JsProperty(name="cookieEnabled")
-    public native boolean getCookieEnabled();
+    public boolean cookieEnabled;
     
     
 }

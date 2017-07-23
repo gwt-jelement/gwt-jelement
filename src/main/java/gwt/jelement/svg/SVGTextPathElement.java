@@ -41,16 +41,16 @@ public class SVGTextPathElement extends SVGTextContentElement{
     }
     
     @JsProperty(name="startOffset")
-    public native SVGAnimatedLength getStartOffset();
+    public SVGAnimatedLength startOffset;
     
     @JsProperty(name="method")
-    public native SVGAnimatedEnumeration getMethod();
+    public SVGAnimatedEnumeration method;
     
     @JsProperty(name="spacing")
-    public native SVGAnimatedEnumeration getSpacing();
+    public SVGAnimatedEnumeration spacing;
     
     @JsProperty(name="href")
-    public native SVGAnimatedString getHref();
+    public SVGAnimatedString href;
     
     
 }

@@ -27,21 +27,20 @@ import jsinterop.annotations.JsType;
 public class MediaDeviceInfo{
     
     @JsProperty(name="deviceId")
-    public native String getDeviceId();
-    
-    @JsOverlay
-    public final MediaDeviceKind getKindAsMediaDeviceKind(){
-        return MediaDeviceKind.of(getKind());
-    }
+    public String deviceId;
     
     @JsProperty(name="kind")
-    public native String getKind();
+    public String kind;
+    @JsOverlay
+    public final MediaDeviceKind getKind(){
+       return MediaDeviceKind.of(kind);
+    }
     
     @JsProperty(name="label")
-    public native String getLabel();
+    public String label;
     
     @JsProperty(name="groupId")
-    public native String getGroupId();
+    public String groupId;
     
     @JsMethod(name = "toJSON")
     public native Object toJSON();

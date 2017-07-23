@@ -37,6 +37,16 @@ public class Notification extends EventTarget{
         super();
     }
     
+    @JsProperty(name="permission")
+    public static String permission;
+    @JsOverlay
+    public final static NotificationPermission getPermission(){
+       return NotificationPermission.of(permission);
+    }
+    
+    @JsProperty(name="maxActions")
+    public static double maxActions;
+    
     @JsProperty(name="onclick")
     public EventHandlerNonNull onclick;
     
@@ -49,61 +59,50 @@ public class Notification extends EventTarget{
     @JsProperty(name="onclose")
     public EventHandlerNonNull onclose;
     
-    @JsOverlay
-    public static final NotificationPermission getPermissionAsNotificationPermission(){
-        return NotificationPermission.of(getPermission());
-    }
-    
-    @JsProperty(name="permission")
-    public static native String getPermission();
-    
-    @JsProperty(name="maxActions")
-    public static native double getMaxActions();
-    
     @JsProperty(name="title")
-    public native String getTitle();
+    public String title;
     
     @JsProperty(name="dir")
-    public native String getDir();
+    public String dir;
     
     @JsProperty(name="lang")
-    public native String getLang();
+    public String lang;
     
     @JsProperty(name="body")
-    public native String getBody();
+    public String body;
     
     @JsProperty(name="tag")
-    public native String getTag();
+    public String tag;
     
     @JsProperty(name="image")
-    public native String getImage();
+    public String image;
     
     @JsProperty(name="icon")
-    public native String getIcon();
+    public String icon;
     
     @JsProperty(name="badge")
-    public native String getBadge();
+    public String badge;
     
     @JsProperty(name="vibrate")
-    public native double[] getVibrate();
+    public double[] vibrate;
     
     @JsProperty(name="timestamp")
-    public native double getTimestamp();
+    public double timestamp;
     
     @JsProperty(name="renotify")
-    public native boolean getRenotify();
+    public boolean renotify;
     
     @JsProperty(name="silent")
-    public native boolean getSilent();
+    public boolean silent;
     
     @JsProperty(name="requireInteraction")
-    public native boolean getRequireInteraction();
+    public boolean requireInteraction;
     
     @JsProperty(name="data")
-    public native Object getData();
+    public Object data;
     
     @JsProperty(name="actions")
-    public native NotificationAction[] getActions();
+    public NotificationAction[] actions;
     
     @JsMethod(name = "close")
     public native void close();

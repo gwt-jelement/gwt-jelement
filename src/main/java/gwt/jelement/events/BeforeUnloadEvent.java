@@ -19,7 +19,6 @@ package gwt.jelement.events;
 import gwt.jelement.events.Event;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsPackage;
-import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, isNative = true)
@@ -29,9 +28,6 @@ public class BeforeUnloadEvent extends Event{
     public BeforeUnloadEvent(){
         super((String) null);
     }
-    
-    @JsProperty(name="returnValue")
-    public String returnValue;
     
     
 }

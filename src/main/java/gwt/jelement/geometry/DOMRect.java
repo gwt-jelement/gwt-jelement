@@ -21,9 +21,11 @@ import gwt.jelement.geometry.DOMRectInit;
 import gwt.jelement.geometry.DOMRectReadOnly;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
+import jsinterop.base.Js;
 
 @JsType(namespace = JsPackage.GLOBAL, isNative = true)
 public class DOMRect extends DOMRectReadOnly{

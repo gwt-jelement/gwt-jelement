@@ -25,7 +25,7 @@ import jsinterop.annotations.JsType;
 public class StyleMedia{
     
     @JsProperty(name="type")
-    public native String getType();
+    public String type;
     
     @JsMethod(name = "matchMedium")
     public native boolean matchMedium();

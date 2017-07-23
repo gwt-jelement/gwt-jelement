@@ -32,7 +32,7 @@ public class CSSMediaRule extends CSSConditionRule{
     }
     
     @JsProperty(name="media")
-    public native MediaList getMedia();
+    public MediaList media;
     
     
 }

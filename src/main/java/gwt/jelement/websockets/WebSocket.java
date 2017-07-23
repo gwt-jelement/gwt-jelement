@@ -42,6 +42,15 @@ public class WebSocket extends EventTarget{
         super();
     }
     
+    @JsProperty(name="url")
+    public String url;
+    
+    @JsProperty(name="readyState")
+    public short readyState;
+    
+    @JsProperty(name="bufferedAmount")
+    public double bufferedAmount;
+    
     @JsProperty(name="onopen")
     public EventHandlerNonNull onopen;
     
@@ -51,26 +60,26 @@ public class WebSocket extends EventTarget{
     @JsProperty(name="onclose")
     public EventHandlerNonNull onclose;
     
+    @JsProperty(name="extensions")
+    public String extensions;
+    
+    @JsProperty(name="protocol")
+    public String protocol;
+    
     @JsProperty(name="onmessage")
     public EventHandlerNonNull onmessage;
     
     @JsProperty(name="binaryType")
-    public BinaryType binaryType;
+    public String binaryType;
+    @JsOverlay
+    public final BinaryType getBinaryType(){
+       return BinaryType.of(binaryType);
+    }
     
-    @JsProperty(name="url")
-    public native String getUrl();
-    
-    @JsProperty(name="readyState")
-    public native short getReadyState();
-    
-    @JsProperty(name="bufferedAmount")
-    public native double getBufferedAmount();
-    
-    @JsProperty(name="extensions")
-    public native String getExtensions();
-    
-    @JsProperty(name="protocol")
-    public native String getProtocol();
+    @JsOverlay
+    public final void setBinaryType(BinaryType binaryType){
+       this.binaryType = binaryType.getInternalValue();
+    }
     
     @JsMethod(name = "close")
     public native void close();

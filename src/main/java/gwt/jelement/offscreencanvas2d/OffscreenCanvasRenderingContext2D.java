@@ -46,6 +46,9 @@ import jsinterop.base.Js;
 @JsType(namespace = JsPackage.GLOBAL, isNative = true)
 public class OffscreenCanvasRenderingContext2D{
     
+    @JsProperty(name="canvas")
+    public OffscreenCanvas canvas;
+    
     @JsProperty(name="globalAlpha")
     public double globalAlpha;
     
@@ -59,7 +62,16 @@ public class OffscreenCanvasRenderingContext2D{
     public boolean imageSmoothingEnabled;
     
     @JsProperty(name="imageSmoothingQuality")
-    public ImageSmoothingQuality imageSmoothingQuality;
+    public String imageSmoothingQuality;
+    @JsOverlay
+    public final ImageSmoothingQuality getImageSmoothingQuality(){
+       return ImageSmoothingQuality.of(imageSmoothingQuality);
+    }
+    
+    @JsOverlay
+    public final void setImageSmoothingQuality(ImageSmoothingQuality imageSmoothingQuality){
+       this.imageSmoothingQuality = imageSmoothingQuality.getInternalValue();
+    }
     
     @JsProperty(name="strokeStyle")
     public CanvasRenderingContext2D.StringOrCanvasGradientOrCanvasPatternUnionType strokeStyle;
@@ -93,9 +105,6 @@ public class OffscreenCanvasRenderingContext2D{
     
     @JsProperty(name="lineDashOffset")
     public double lineDashOffset;
-    
-    @JsProperty(name="canvas")
-    public native OffscreenCanvas getCanvas();
     
     @JsMethod(name = "arc")
     public native void arc(float x, float y, float radius, float startAngle, float endAngle);

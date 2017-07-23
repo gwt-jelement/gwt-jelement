@@ -33,7 +33,7 @@ public class RTCDataChannelEvent extends Event{
     }
     
     @JsProperty(name="channel")
-    public native RTCDataChannel getChannel();
+    public RTCDataChannel channel;
     
     
 }

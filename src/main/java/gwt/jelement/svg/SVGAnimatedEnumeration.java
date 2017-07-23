@@ -27,7 +27,7 @@ public class SVGAnimatedEnumeration{
     public short baseVal;
     
     @JsProperty(name="animVal")
-    public native short getAnimVal();
+    public short animVal;
     
     
 }

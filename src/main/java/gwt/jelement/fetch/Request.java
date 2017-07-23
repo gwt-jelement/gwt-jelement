@@ -37,62 +37,57 @@ import jsinterop.annotations.JsType;
 public class Request{
     
     @JsProperty(name="method")
-    public native String getMethod();
+    public String method;
     
     @JsProperty(name="url")
-    public native String getUrl();
+    public String url;
     
     @JsProperty(name="headers")
-    public native Headers getHeaders();
+    public Headers headers;
     
     @JsProperty(name="referrer")
-    public native String getReferrer();
-    
-    @JsOverlay
-    public final ReferrerPolicy getReferrerPolicyAsReferrerPolicy(){
-        return ReferrerPolicy.of(getReferrerPolicy());
-    }
+    public String referrer;
     
     @JsProperty(name="referrerPolicy")
-    public native String getReferrerPolicy();
-    
+    public String referrerPolicy;
     @JsOverlay
-    public final RequestMode getModeAsRequestMode(){
-        return RequestMode.of(getMode());
+    public final ReferrerPolicy getReferrerPolicy(){
+       return ReferrerPolicy.of(referrerPolicy);
     }
     
     @JsProperty(name="mode")
-    public native String getMode();
-    
+    public String mode;
     @JsOverlay
-    public final RequestCredentials getCredentialsAsRequestCredentials(){
-        return RequestCredentials.of(getCredentials());
+    public final RequestMode getMode(){
+       return RequestMode.of(mode);
     }
     
     @JsProperty(name="credentials")
-    public native String getCredentials();
-    
+    public String credentials;
     @JsOverlay
-    public final RequestCache getCacheAsRequestCache(){
-        return RequestCache.of(getCache());
+    public final RequestCredentials getCredentials(){
+       return RequestCredentials.of(credentials);
     }
     
     @JsProperty(name="cache")
-    public native String getCache();
-    
+    public String cache;
     @JsOverlay
-    public final RequestRedirect getRedirectAsRequestRedirect(){
-        return RequestRedirect.of(getRedirect());
+    public final RequestCache getCache(){
+       return RequestCache.of(cache);
     }
     
     @JsProperty(name="redirect")
-    public native String getRedirect();
+    public String redirect;
+    @JsOverlay
+    public final RequestRedirect getRedirect(){
+       return RequestRedirect.of(redirect);
+    }
     
     @JsProperty(name="integrity")
-    public native String getIntegrity();
+    public String integrity;
     
     @JsProperty(name="bodyUsed")
-    public native boolean getBodyUsed();
+    public boolean bodyUsed;
     
     @JsMethod(name = "arrayBuffer")
     public native Promise<ArrayBuffer> arrayBuffer();

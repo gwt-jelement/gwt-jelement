@@ -37,14 +37,14 @@ public class SharedWorker extends EventTarget{
         super();
     }
     
-    @JsProperty(name="onerror")
-    public EventHandlerNonNull onerror;
-    
     @JsProperty(name="port")
-    public native MessagePort getPort();
+    public MessagePort port;
     
     @JsProperty(name="workerStart")
-    public native double getWorkerStart();
+    public double workerStart;
+    
+    @JsProperty(name="onerror")
+    public EventHandlerNonNull onerror;
     
     
 }

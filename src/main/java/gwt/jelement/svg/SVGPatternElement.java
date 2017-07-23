@@ -38,40 +38,40 @@ public class SVGPatternElement extends SVGElement{
     }
     
     @JsProperty(name="patternUnits")
-    public native SVGAnimatedEnumeration getPatternUnits();
+    public SVGAnimatedEnumeration patternUnits;
     
     @JsProperty(name="patternContentUnits")
-    public native SVGAnimatedEnumeration getPatternContentUnits();
+    public SVGAnimatedEnumeration patternContentUnits;
     
     @JsProperty(name="patternTransform")
-    public native SVGAnimatedTransformList getPatternTransform();
+    public SVGAnimatedTransformList patternTransform;
     
     @JsProperty(name="x")
-    public native SVGAnimatedLength getX();
+    public SVGAnimatedLength x;
     
     @JsProperty(name="y")
-    public native SVGAnimatedLength getY();
+    public SVGAnimatedLength y;
     
     @JsProperty(name="width")
-    public native SVGAnimatedLength getWidth();
+    public SVGAnimatedLength width;
     
     @JsProperty(name="height")
-    public native SVGAnimatedLength getHeight();
+    public SVGAnimatedLength height;
     
     @JsProperty(name="viewBox")
-    public native SVGAnimatedRect getViewBox();
+    public SVGAnimatedRect viewBox;
     
     @JsProperty(name="preserveAspectRatio")
-    public native SVGAnimatedPreserveAspectRatio getPreserveAspectRatio();
+    public SVGAnimatedPreserveAspectRatio preserveAspectRatio;
     
     @JsProperty(name="href")
-    public native SVGAnimatedString getHref();
+    public SVGAnimatedString href;
     
     @JsProperty(name="requiredExtensions")
-    public native SVGStringList getRequiredExtensions();
+    public SVGStringList requiredExtensions;
     
     @JsProperty(name="systemLanguage")
-    public native SVGStringList getSystemLanguage();
+    public SVGStringList systemLanguage;
     
     
 }

@@ -26,13 +26,13 @@ import jsinterop.annotations.JsType;
 public class IDBObserverChanges{
     
     @JsProperty(name="database")
-    public native IDBDatabase getDatabase();
+    public IDBDatabase database;
     
     @JsProperty(name="transaction")
-    public native IDBTransaction getTransaction();
+    public IDBTransaction transaction;
     
     @JsProperty(name="records")
-    public native Object getRecords();
+    public Object records;
     
     
 }

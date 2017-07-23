@@ -32,16 +32,16 @@ public class SpeechSynthesisEvent extends Event{
     }
     
     @JsProperty(name="utterance")
-    public native SpeechSynthesisUtterance getUtterance();
+    public SpeechSynthesisUtterance utterance;
     
     @JsProperty(name="charIndex")
-    public native double getCharIndex();
+    public double charIndex;
     
     @JsProperty(name="elapsedTime")
-    public native float getElapsedTime();
+    public float elapsedTime;
     
     @JsProperty(name="name")
-    public native String getName();
+    public String name;
     
     
 }

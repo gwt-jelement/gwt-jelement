@@ -38,7 +38,7 @@ public class CustomEvent extends Event{
     }
     
     @JsProperty(name="detail")
-    public native Object getDetail();
+    public Object detail;
     
     @JsMethod(name = "initCustomEvent")
     public native void initCustomEvent(String type);

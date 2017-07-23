@@ -24,16 +24,16 @@ import jsinterop.annotations.JsType;
 public class VideoPlaybackQuality{
     
     @JsProperty(name="creationTime")
-    public native double getCreationTime();
+    public double creationTime;
     
     @JsProperty(name="totalVideoFrames")
-    public native double getTotalVideoFrames();
+    public double totalVideoFrames;
     
     @JsProperty(name="droppedVideoFrames")
-    public native double getDroppedVideoFrames();
+    public double droppedVideoFrames;
     
     @JsProperty(name="corruptedVideoFrames")
-    public native double getCorruptedVideoFrames();
+    public double corruptedVideoFrames;
     
     
 }

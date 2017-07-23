@@ -34,15 +34,14 @@ public class VRDisplayEvent extends Event{
     }
     
     @JsProperty(name="display")
-    public native VRDisplay getDisplay();
-    
-    @JsOverlay
-    public final VRDisplayEventReason getReasonAsVRDisplayEventReason(){
-        return VRDisplayEventReason.of(getReason());
-    }
+    public VRDisplay display;
     
     @JsProperty(name="reason")
-    public native String getReason();
+    public String reason;
+    @JsOverlay
+    public final VRDisplayEventReason getReason(){
+       return VRDisplayEventReason.of(reason);
+    }
     
     
 }

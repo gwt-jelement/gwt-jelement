@@ -37,6 +37,12 @@ public class MediaSource extends EventTarget{
         super();
     }
     
+    @JsProperty(name="sourceBuffers")
+    public SourceBufferList sourceBuffers;
+    
+    @JsProperty(name="activeSourceBuffers")
+    public SourceBufferList activeSourceBuffers;
+    
     @JsProperty(name="duration")
     public double duration;
     
@@ -49,14 +55,8 @@ public class MediaSource extends EventTarget{
     @JsProperty(name="onsourceclose")
     public EventHandlerNonNull onsourceclose;
     
-    @JsProperty(name="sourceBuffers")
-    public native SourceBufferList getSourceBuffers();
-    
-    @JsProperty(name="activeSourceBuffers")
-    public native SourceBufferList getActiveSourceBuffers();
-    
     @JsProperty(name="readyState")
-    public native String getReadyState();
+    public String readyState;
     
     @JsMethod(name = "addSourceBuffer")
     public native SourceBuffer addSourceBuffer(String type);

@@ -38,7 +38,7 @@ public class DragEvent extends MouseEvent{
     }
     
     @JsProperty(name="dataTransfer")
-    public native DataTransfer getDataTransfer();
+    public DataTransfer dataTransfer;
     
     
 }

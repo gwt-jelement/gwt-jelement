@@ -26,7 +26,7 @@ import jsinterop.annotations.JsType;
 public class PluginArray{
     
     @JsProperty(name="length")
-    public native double getLength();
+    public double length;
     
     @JsMethod(name = "namedItem")
     public native Plugin namedItem(String name);

@@ -30,7 +30,7 @@ public class MediaKeysPolicy{
     }
     
     @JsProperty(name="minHdcpVersion")
-    public native String getMinHdcpVersion();
+    public String minHdcpVersion;
     
     
 }

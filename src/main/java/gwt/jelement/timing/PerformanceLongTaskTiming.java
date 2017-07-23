@@ -32,7 +32,7 @@ public class PerformanceLongTaskTiming extends PerformanceEntry{
     }
     
     @JsProperty(name="attribution")
-    public native TaskAttributionTiming[] getAttribution();
+    public TaskAttributionTiming[] attribution;
     
     
 }

@@ -36,19 +36,19 @@ public class SVGGraphicsElement extends SVGElement{
     }
     
     @JsProperty(name="transform")
-    public native SVGAnimatedTransformList getTransform();
+    public SVGAnimatedTransformList transform;
     
     @JsProperty(name="nearestViewportElement")
-    public native SVGElement getNearestViewportElement();
+    public SVGElement nearestViewportElement;
     
     @JsProperty(name="farthestViewportElement")
-    public native SVGElement getFarthestViewportElement();
+    public SVGElement farthestViewportElement;
     
     @JsProperty(name="requiredExtensions")
-    public native SVGStringList getRequiredExtensions();
+    public SVGStringList requiredExtensions;
     
     @JsProperty(name="systemLanguage")
-    public native SVGStringList getSystemLanguage();
+    public SVGStringList systemLanguage;
     
     @JsMethod(name = "getBBox")
     public native SVGRect getBBox();

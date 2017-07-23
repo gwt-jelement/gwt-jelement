@@ -33,13 +33,13 @@ public class AudioProcessingEvent extends Event{
     }
     
     @JsProperty(name="playbackTime")
-    public native double getPlaybackTime();
+    public double playbackTime;
     
     @JsProperty(name="inputBuffer")
-    public native AudioBuffer getInputBuffer();
+    public AudioBuffer inputBuffer;
     
     @JsProperty(name="outputBuffer")
-    public native AudioBuffer getOutputBuffer();
+    public AudioBuffer outputBuffer;
     
     
 }

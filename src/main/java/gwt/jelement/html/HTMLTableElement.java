@@ -44,6 +44,12 @@ public class HTMLTableElement extends HTMLElement{
     @JsProperty(name="tFoot")
     public HTMLTableSectionElement tFoot;
     
+    @JsProperty(name="tBodies")
+    public HTMLCollection tBodies;
+    
+    @JsProperty(name="rows")
+    public HTMLCollection rows;
+    
     @JsProperty(name="align")
     public String align;
     
@@ -70,12 +76,6 @@ public class HTMLTableElement extends HTMLElement{
     
     @JsProperty(name="cellSpacing")
     public String cellSpacing;
-    
-    @JsProperty(name="tBodies")
-    public native HTMLCollection getTBodies();
-    
-    @JsProperty(name="rows")
-    public native HTMLCollection getRows();
     
     @JsMethod(name = "createCaption")
     public native HTMLTableCaptionElement createCaption();

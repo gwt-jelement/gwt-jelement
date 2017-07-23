@@ -40,13 +40,13 @@ public class Performance extends EventTarget{
     public EventHandlerNonNull onresourcetimingbufferfull;
     
     @JsProperty(name="timing")
-    public native PerformanceTiming getTiming();
+    public PerformanceTiming timing;
     
     @JsProperty(name="navigation")
-    public native PerformanceNavigation getNavigation();
+    public PerformanceNavigation navigation;
     
     @JsProperty(name="memory")
-    public native MemoryInfo getMemory();
+    public MemoryInfo memory;
     
     @JsMethod(name = "clearMarks")
     public native void clearMarks();

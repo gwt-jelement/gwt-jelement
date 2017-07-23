@@ -26,7 +26,7 @@ import jsinterop.annotations.JsType;
 public class MimeTypeArray{
     
     @JsProperty(name="length")
-    public native double getLength();
+    public double length;
     
     @JsMethod(name = "namedItem")
     public native MimeType namedItem(String name);

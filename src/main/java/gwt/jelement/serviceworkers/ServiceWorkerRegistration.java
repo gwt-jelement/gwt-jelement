@@ -41,32 +41,32 @@ public class ServiceWorkerRegistration extends EventTarget{
         super();
     }
     
+    @JsProperty(name="installing")
+    public ServiceWorker installing;
+    
+    @JsProperty(name="waiting")
+    public ServiceWorker waiting;
+    
+    @JsProperty(name="active")
+    public ServiceWorker active;
+    
+    @JsProperty(name="navigationPreload")
+    public NavigationPreloadManager navigationPreload;
+    
+    @JsProperty(name="scope")
+    public String scope;
+    
     @JsProperty(name="onupdatefound")
     public EventHandlerNonNull onupdatefound;
     
-    @JsProperty(name="installing")
-    public native ServiceWorker getInstalling();
-    
-    @JsProperty(name="waiting")
-    public native ServiceWorker getWaiting();
-    
-    @JsProperty(name="active")
-    public native ServiceWorker getActive();
-    
-    @JsProperty(name="navigationPreload")
-    public native NavigationPreloadManager getNavigationPreload();
-    
-    @JsProperty(name="scope")
-    public native String getScope();
-    
     @JsProperty(name="backgroundFetch")
-    public native BackgroundFetchManager getBackgroundFetch();
+    public BackgroundFetchManager backgroundFetch;
     
     @JsProperty(name="sync")
-    public native SyncManager getSync();
+    public SyncManager sync;
     
     @JsProperty(name="pushManager")
-    public native PushManager getPushManager();
+    public PushManager pushManager;
     
     @JsMethod(name = "getNotifications")
     public native Promise<Notification[]> getNotifications();

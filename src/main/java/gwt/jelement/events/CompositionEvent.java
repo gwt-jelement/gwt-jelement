@@ -39,7 +39,7 @@ public class CompositionEvent extends UIEvent{
     }
     
     @JsProperty(name="data")
-    public native String getData();
+    public String data;
     
     @JsMethod(name = "initCompositionEvent")
     public native void initCompositionEvent();

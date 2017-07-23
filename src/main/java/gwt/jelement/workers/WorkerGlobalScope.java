@@ -55,8 +55,27 @@ public class WorkerGlobalScope extends EventTarget{
         super();
     }
     
+    @JsProperty(name="self")
+    public WorkerGlobalScope self;
+    
+    @JsProperty(name="location")
+    public WorkerLocation location;
+    
     @JsProperty(name="onerror")
     public EventHandlerNonNull onerror;
+    
+    @JsProperty(name="navigator")
+    public WorkerNavigator navigator;
+    
+    @JsProperty(name="console")
+    public Console console;
+    
+    @JsProperty(name="addressSpace")
+    public String addressSpace;
+    @JsOverlay
+    public final AddressSpace getAddressSpace(){
+       return AddressSpace.of(addressSpace);
+    }
     
     @JsProperty(name="onrejectionhandled")
     public EventHandlerNonNull onrejectionhandled;
@@ -64,43 +83,23 @@ public class WorkerGlobalScope extends EventTarget{
     @JsProperty(name="onunhandledrejection")
     public EventHandlerNonNull onunhandledrejection;
     
-    @JsProperty(name="self")
-    public native WorkerGlobalScope getSelf();
-    
-    @JsProperty(name="location")
-    public native WorkerLocation getLocation();
-    
-    @JsProperty(name="navigator")
-    public native WorkerNavigator getNavigator();
-    
-    @JsProperty(name="console")
-    public native Console getConsole();
-    
-    @JsOverlay
-    public final AddressSpace getAddressSpaceAsAddressSpace(){
-        return AddressSpace.of(getAddressSpace());
-    }
-    
-    @JsProperty(name="addressSpace")
-    public native String getAddressSpace();
-    
     @JsProperty(name="isSecureContext")
-    public native boolean getIsSecureContext();
+    public boolean isSecureContext;
     
     @JsProperty(name="origin")
-    public native String getOrigin();
+    public String origin;
     
     @JsProperty(name="caches")
-    public native CacheStorage getCaches();
+    public CacheStorage caches;
     
     @JsProperty(name="crypto")
-    public native Crypto getCrypto();
+    public Crypto crypto;
     
     @JsProperty(name="indexedDB")
-    public native IDBFactory getIndexedDB();
+    public IDBFactory indexedDB;
     
     @JsProperty(name="performance")
-    public native WorkerPerformance getPerformance();
+    public WorkerPerformance performance;
     
     @JsMethod(name = "atob")
     public native String atob(String atob);

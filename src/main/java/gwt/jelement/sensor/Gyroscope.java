@@ -37,13 +37,13 @@ public class Gyroscope extends Sensor{
     }
     
     @JsProperty(name="x")
-    public native double getX();
+    public double x;
     
     @JsProperty(name="y")
-    public native double getY();
+    public double y;
     
     @JsProperty(name="z")
-    public native double getZ();
+    public double z;
     
     
 }

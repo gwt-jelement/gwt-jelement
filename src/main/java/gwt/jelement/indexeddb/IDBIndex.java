@@ -33,16 +33,16 @@ public class IDBIndex{
     public String name;
     
     @JsProperty(name="objectStore")
-    public native IDBObjectStore getObjectStore();
+    public IDBObjectStore objectStore;
     
     @JsProperty(name="keyPath")
-    public native Object getKeyPath();
+    public Object keyPath;
     
     @JsProperty(name="multiEntry")
-    public native boolean getMultiEntry();
+    public boolean multiEntry;
     
     @JsProperty(name="unique")
-    public native boolean getUnique();
+    public boolean unique;
     
     @JsMethod(name = "count")
     public native IDBRequest count();

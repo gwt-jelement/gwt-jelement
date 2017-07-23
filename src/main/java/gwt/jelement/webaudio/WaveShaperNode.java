@@ -37,7 +37,16 @@ public class WaveShaperNode extends AudioNode{
     public Float32Array curve;
     
     @JsProperty(name="oversample")
-    public OverSampleType oversample;
+    public String oversample;
+    @JsOverlay
+    public final OverSampleType getOversample(){
+       return OverSampleType.of(oversample);
+    }
+    
+    @JsOverlay
+    public final void setOversample(OverSampleType oversample){
+       this.oversample = oversample.getInternalValue();
+    }
     
     
 }

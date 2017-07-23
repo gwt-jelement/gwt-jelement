@@ -52,10 +52,10 @@ public class HTMLTrackElement extends HTMLElement{
     public boolean default_;
     
     @JsProperty(name="readyState")
-    public native short getReadyState();
+    public short readyState;
     
     @JsProperty(name="track")
-    public native TextTrack getTrack();
+    public TextTrack track;
     
     
 }

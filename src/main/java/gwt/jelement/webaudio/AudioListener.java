@@ -26,31 +26,31 @@ import jsinterop.annotations.JsType;
 public class AudioListener{
     
     @JsProperty(name="positionX")
-    public native AudioParam getPositionX();
+    public AudioParam positionX;
     
     @JsProperty(name="positionY")
-    public native AudioParam getPositionY();
+    public AudioParam positionY;
     
     @JsProperty(name="positionZ")
-    public native AudioParam getPositionZ();
+    public AudioParam positionZ;
     
     @JsProperty(name="forwardX")
-    public native AudioParam getForwardX();
+    public AudioParam forwardX;
     
     @JsProperty(name="forwardY")
-    public native AudioParam getForwardY();
+    public AudioParam forwardY;
     
     @JsProperty(name="forwardZ")
-    public native AudioParam getForwardZ();
+    public AudioParam forwardZ;
     
     @JsProperty(name="upX")
-    public native AudioParam getUpX();
+    public AudioParam upX;
     
     @JsProperty(name="upY")
-    public native AudioParam getUpY();
+    public AudioParam upY;
     
     @JsProperty(name="upZ")
-    public native AudioParam getUpZ();
+    public AudioParam upZ;
     
     @JsMethod(name = "setOrientation")
     public native void setOrientation(float x, float y, float z, float xUp, float yUp, float zUp);

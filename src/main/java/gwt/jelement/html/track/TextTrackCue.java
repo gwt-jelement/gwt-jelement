@@ -32,6 +32,9 @@ public class TextTrackCue extends EventTarget{
         super();
     }
     
+    @JsProperty(name="track")
+    public TextTrack track;
+    
     @JsProperty(name="id")
     public String id;
     
@@ -49,9 +52,6 @@ public class TextTrackCue extends EventTarget{
     
     @JsProperty(name="onexit")
     public EventHandlerNonNull onexit;
-    
-    @JsProperty(name="track")
-    public native TextTrack getTrack();
     
     
 }

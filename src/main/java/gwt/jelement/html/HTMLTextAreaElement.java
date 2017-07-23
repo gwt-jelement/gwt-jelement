@@ -49,6 +49,9 @@ public class HTMLTextAreaElement extends HTMLElement{
     @JsProperty(name="disabled")
     public boolean disabled;
     
+    @JsProperty(name="form")
+    public HTMLFormElement form;
+    
     @JsProperty(name="maxLength")
     public double maxLength;
     
@@ -73,11 +76,29 @@ public class HTMLTextAreaElement extends HTMLElement{
     @JsProperty(name="wrap")
     public String wrap;
     
+    @JsProperty(name="type")
+    public String type;
+    
     @JsProperty(name="defaultValue")
     public String defaultValue;
     
     @JsProperty(name="value")
     public String value;
+    
+    @JsProperty(name="textLength")
+    public double textLength;
+    
+    @JsProperty(name="willValidate")
+    public boolean willValidate;
+    
+    @JsProperty(name="validity")
+    public ValidityState validity;
+    
+    @JsProperty(name="validationMessage")
+    public String validationMessage;
+    
+    @JsProperty(name="labels")
+    public NodeList labels;
     
     @JsProperty(name="selectionStart")
     public double selectionStart;
@@ -90,27 +111,6 @@ public class HTMLTextAreaElement extends HTMLElement{
     
     @JsProperty(name="autocapitalize")
     public String autocapitalize;
-    
-    @JsProperty(name="form")
-    public native HTMLFormElement getForm();
-    
-    @JsProperty(name="type")
-    public native String getType();
-    
-    @JsProperty(name="textLength")
-    public native double getTextLength();
-    
-    @JsProperty(name="willValidate")
-    public native boolean getWillValidate();
-    
-    @JsProperty(name="validity")
-    public native ValidityState getValidity();
-    
-    @JsProperty(name="validationMessage")
-    public native String getValidationMessage();
-    
-    @JsProperty(name="labels")
-    public native NodeList getLabels();
     
     @JsMethod(name = "checkValidity")
     public native boolean checkValidity();

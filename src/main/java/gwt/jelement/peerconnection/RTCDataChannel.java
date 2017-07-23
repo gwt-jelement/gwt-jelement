@@ -37,6 +37,37 @@ public class RTCDataChannel extends EventTarget{
         super();
     }
     
+    @JsProperty(name="label")
+    public String label;
+    
+    @JsProperty(name="ordered")
+    public boolean ordered;
+    
+    @JsProperty(name="maxRetransmitTime")
+    public short maxRetransmitTime;
+    
+    @JsProperty(name="maxRetransmits")
+    public short maxRetransmits;
+    
+    @JsProperty(name="protocol")
+    public String protocol;
+    
+    @JsProperty(name="negotiated")
+    public boolean negotiated;
+    
+    @JsProperty(name="id")
+    public short id;
+    
+    @JsProperty(name="readyState")
+    public String readyState;
+    @JsOverlay
+    public final RTCDataChannelState getReadyState(){
+       return RTCDataChannelState.of(readyState);
+    }
+    
+    @JsProperty(name="bufferedAmount")
+    public double bufferedAmount;
+    
     @JsProperty(name="bufferedAmountLowThreshold")
     public double bufferedAmountLowThreshold;
     
@@ -58,40 +89,8 @@ public class RTCDataChannel extends EventTarget{
     @JsProperty(name="binaryType")
     public String binaryType;
     
-    @JsProperty(name="label")
-    public native String getLabel();
-    
-    @JsProperty(name="ordered")
-    public native boolean getOrdered();
-    
-    @JsProperty(name="maxRetransmitTime")
-    public native short getMaxRetransmitTime();
-    
-    @JsProperty(name="maxRetransmits")
-    public native short getMaxRetransmits();
-    
-    @JsProperty(name="protocol")
-    public native String getProtocol();
-    
-    @JsProperty(name="negotiated")
-    public native boolean getNegotiated();
-    
-    @JsProperty(name="id")
-    public native short getId();
-    
-    @JsOverlay
-    public final RTCDataChannelState getReadyStateAsRTCDataChannelState(){
-        return RTCDataChannelState.of(getReadyState());
-    }
-    
-    @JsProperty(name="readyState")
-    public native String getReadyState();
-    
-    @JsProperty(name="bufferedAmount")
-    public native double getBufferedAmount();
-    
     @JsProperty(name="reliable")
-    public native boolean getReliable();
+    public boolean reliable;
     
     @JsMethod(name = "close")
     public native void close();

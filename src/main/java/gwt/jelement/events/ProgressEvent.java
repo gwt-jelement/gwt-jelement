@@ -37,13 +37,13 @@ public class ProgressEvent extends Event{
     }
     
     @JsProperty(name="lengthComputable")
-    public native boolean getLengthComputable();
+    public boolean lengthComputable;
     
     @JsProperty(name="loaded")
-    public native double getLoaded();
+    public double loaded;
     
     @JsProperty(name="total")
-    public native double getTotal();
+    public double total;
     
     
 }

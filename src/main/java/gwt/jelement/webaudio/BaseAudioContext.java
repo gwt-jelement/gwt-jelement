@@ -64,28 +64,27 @@ public class BaseAudioContext extends EventTarget{
         super();
     }
     
-    @JsProperty(name="onstatechange")
-    public EventHandlerNonNull onstatechange;
-    
     @JsProperty(name="destination")
-    public native AudioDestinationNode getDestination();
+    public AudioDestinationNode destination;
     
     @JsProperty(name="currentTime")
-    public native double getCurrentTime();
+    public double currentTime;
     
     @JsProperty(name="sampleRate")
-    public native float getSampleRate();
+    public float sampleRate;
     
     @JsProperty(name="listener")
-    public native AudioListener getListener();
-    
-    @JsOverlay
-    public final AudioContextState getStateAsAudioContextState(){
-        return AudioContextState.of(getState());
-    }
+    public AudioListener listener;
     
     @JsProperty(name="state")
-    public native String getState();
+    public String state;
+    @JsOverlay
+    public final AudioContextState getState(){
+       return AudioContextState.of(state);
+    }
+    
+    @JsProperty(name="onstatechange")
+    public EventHandlerNonNull onstatechange;
     
     @JsMethod(name = "createAnalyser")
     public native AnalyserNode createAnalyser();

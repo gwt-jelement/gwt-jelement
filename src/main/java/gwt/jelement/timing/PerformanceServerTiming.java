@@ -24,13 +24,13 @@ import jsinterop.annotations.JsType;
 public class PerformanceServerTiming{
     
     @JsProperty(name="metric")
-    public native String getMetric();
+    public String metric;
     
     @JsProperty(name="value")
-    public native double getValue();
+    public double value;
     
     @JsProperty(name="description")
-    public native String getDescription();
+    public String description;
     
     
 }

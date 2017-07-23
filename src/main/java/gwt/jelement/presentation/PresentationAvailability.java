@@ -31,11 +31,11 @@ public class PresentationAvailability extends EventTarget{
         super();
     }
     
+    @JsProperty(name="value")
+    public boolean value;
+    
     @JsProperty(name="onchange")
     public EventHandlerNonNull onchange;
-    
-    @JsProperty(name="value")
-    public native boolean getValue();
     
     
 }

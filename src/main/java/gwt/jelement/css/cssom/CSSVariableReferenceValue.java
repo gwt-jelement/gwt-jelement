@@ -25,10 +25,10 @@ import jsinterop.annotations.JsType;
 public class CSSVariableReferenceValue{
     
     @JsProperty(name="variable")
-    public native String getVariable();
+    public String variable;
     
     @JsProperty(name="fallback")
-    public native CSSUnparsedValue getFallback();
+    public CSSUnparsedValue fallback;
     
     
 }

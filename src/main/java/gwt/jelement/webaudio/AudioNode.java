@@ -37,23 +37,41 @@ public class AudioNode extends EventTarget{
         super();
     }
     
+    @JsProperty(name="context")
+    public BaseAudioContext context;
+    
+    @JsProperty(name="numberOfInputs")
+    public double numberOfInputs;
+    
+    @JsProperty(name="numberOfOutputs")
+    public double numberOfOutputs;
+    
     @JsProperty(name="channelCount")
     public double channelCount;
     
     @JsProperty(name="channelCountMode")
-    public ChannelCountMode channelCountMode;
+    public String channelCountMode;
+    @JsOverlay
+    public final ChannelCountMode getChannelCountMode(){
+       return ChannelCountMode.of(channelCountMode);
+    }
+    
+    @JsOverlay
+    public final void setChannelCountMode(ChannelCountMode channelCountMode){
+       this.channelCountMode = channelCountMode.getInternalValue();
+    }
     
     @JsProperty(name="channelInterpretation")
-    public ChannelInterpretation channelInterpretation;
+    public String channelInterpretation;
+    @JsOverlay
+    public final ChannelInterpretation getChannelInterpretation(){
+       return ChannelInterpretation.of(channelInterpretation);
+    }
     
-    @JsProperty(name="context")
-    public native BaseAudioContext getContext();
-    
-    @JsProperty(name="numberOfInputs")
-    public native double getNumberOfInputs();
-    
-    @JsProperty(name="numberOfOutputs")
-    public native double getNumberOfOutputs();
+    @JsOverlay
+    public final void setChannelInterpretation(ChannelInterpretation channelInterpretation){
+       this.channelInterpretation = channelInterpretation.getInternalValue();
+    }
     
     @JsMethod(name = "connect")
     public native AudioNode connect(AudioNode destination);

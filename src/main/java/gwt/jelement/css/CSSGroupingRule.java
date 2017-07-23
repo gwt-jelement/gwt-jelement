@@ -33,7 +33,7 @@ public class CSSGroupingRule extends CSSRule{
     }
     
     @JsProperty(name="cssRules")
-    public native CSSRuleList getCssRules();
+    public CSSRuleList cssRules;
     
     @JsMethod(name = "deleteRule")
     public native void deleteRule(double index);

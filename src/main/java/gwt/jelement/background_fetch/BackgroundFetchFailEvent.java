@@ -33,7 +33,7 @@ public class BackgroundFetchFailEvent extends BackgroundFetchEvent{
     }
     
     @JsProperty(name="fetches")
-    public native BackgroundFetchSettledFetch[] getFetches();
+    public BackgroundFetchSettledFetch[] fetches;
     
     
 }

@@ -24,13 +24,13 @@ import jsinterop.annotations.JsType;
 public class MediaCapabilitiesInfo{
     
     @JsProperty(name="supported")
-    public native boolean getSupported();
+    public boolean supported;
     
     @JsProperty(name="smooth")
-    public native boolean getSmooth();
+    public boolean smooth;
     
     @JsProperty(name="powerEfficient")
-    public native boolean getPowerEfficient();
+    public boolean powerEfficient;
     
     
 }

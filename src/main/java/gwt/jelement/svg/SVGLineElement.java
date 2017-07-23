@@ -32,16 +32,16 @@ public class SVGLineElement extends SVGGeometryElement{
     }
     
     @JsProperty(name="x1")
-    public native SVGAnimatedLength getX1();
+    public SVGAnimatedLength x1;
     
     @JsProperty(name="y1")
-    public native SVGAnimatedLength getY1();
+    public SVGAnimatedLength y1;
     
     @JsProperty(name="x2")
-    public native SVGAnimatedLength getX2();
+    public SVGAnimatedLength x2;
     
     @JsProperty(name="y2")
-    public native SVGAnimatedLength getY2();
+    public SVGAnimatedLength y2;
     
     
 }

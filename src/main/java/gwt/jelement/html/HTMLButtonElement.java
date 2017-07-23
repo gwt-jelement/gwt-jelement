@@ -40,6 +40,9 @@ public class HTMLButtonElement extends HTMLElement{
     @JsProperty(name="disabled")
     public boolean disabled;
     
+    @JsProperty(name="form")
+    public HTMLFormElement form;
+    
     @JsProperty(name="formAction")
     public String formAction;
     
@@ -64,20 +67,17 @@ public class HTMLButtonElement extends HTMLElement{
     @JsProperty(name="value")
     public String value;
     
-    @JsProperty(name="form")
-    public native HTMLFormElement getForm();
-    
     @JsProperty(name="willValidate")
-    public native boolean getWillValidate();
+    public boolean willValidate;
     
     @JsProperty(name="validity")
-    public native ValidityState getValidity();
+    public ValidityState validity;
     
     @JsProperty(name="validationMessage")
-    public native String getValidationMessage();
+    public String validationMessage;
     
     @JsProperty(name="labels")
-    public native NodeList getLabels();
+    public NodeList labels;
     
     @JsMethod(name = "checkValidity")
     public native boolean checkValidity();

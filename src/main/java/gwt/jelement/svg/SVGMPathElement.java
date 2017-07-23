@@ -32,7 +32,7 @@ public class SVGMPathElement extends SVGElement{
     }
     
     @JsProperty(name="href")
-    public native SVGAnimatedString getHref();
+    public SVGAnimatedString href;
     
     
 }

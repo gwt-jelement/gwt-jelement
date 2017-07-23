@@ -55,47 +55,47 @@ public class Node extends EventTarget{
         super();
     }
     
+    @JsProperty(name="nodeType")
+    public short nodeType;
+    
+    @JsProperty(name="nodeName")
+    public String nodeName;
+    
+    @JsProperty(name="baseURI")
+    public String baseURI;
+    
+    @JsProperty(name="isConnected")
+    public boolean isConnected;
+    
+    @JsProperty(name="ownerDocument")
+    public Document ownerDocument;
+    
+    @JsProperty(name="parentNode")
+    public Node parentNode;
+    
+    @JsProperty(name="parentElement")
+    public Element parentElement;
+    
+    @JsProperty(name="childNodes")
+    public NodeList childNodes;
+    
+    @JsProperty(name="firstChild")
+    public Node firstChild;
+    
+    @JsProperty(name="lastChild")
+    public Node lastChild;
+    
+    @JsProperty(name="previousSibling")
+    public Node previousSibling;
+    
+    @JsProperty(name="nextSibling")
+    public Node nextSibling;
+    
     @JsProperty(name="nodeValue")
     public String nodeValue;
     
     @JsProperty(name="textContent")
     public String textContent;
-    
-    @JsProperty(name="nodeType")
-    public native short getNodeType();
-    
-    @JsProperty(name="nodeName")
-    public native String getNodeName();
-    
-    @JsProperty(name="baseURI")
-    public native String getBaseURI();
-    
-    @JsProperty(name="isConnected")
-    public native boolean getIsConnected();
-    
-    @JsProperty(name="ownerDocument")
-    public native Document getOwnerDocument();
-    
-    @JsProperty(name="parentNode")
-    public native Node getParentNode();
-    
-    @JsProperty(name="parentElement")
-    public native Element getParentElement();
-    
-    @JsProperty(name="childNodes")
-    public native NodeList getChildNodes();
-    
-    @JsProperty(name="firstChild")
-    public native Node getFirstChild();
-    
-    @JsProperty(name="lastChild")
-    public native Node getLastChild();
-    
-    @JsProperty(name="previousSibling")
-    public native Node getPreviousSibling();
-    
-    @JsProperty(name="nextSibling")
-    public native Node getNextSibling();
     
     @JsMethod(name = "appendChild")
     public native Node appendChild(Node node);

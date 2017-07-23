@@ -24,7 +24,7 @@ import jsinterop.annotations.JsType;
 public class FileList{
     
     @JsProperty(name="length")
-    public native double getLength();
+    public double length;
     
     
 }

@@ -36,14 +36,14 @@ public class SVGViewElement extends SVGElement{
         super();
     }
     
-    @JsProperty(name="zoomAndPan")
-    public short zoomAndPan;
-    
     @JsProperty(name="viewBox")
-    public native SVGAnimatedRect getViewBox();
+    public SVGAnimatedRect viewBox;
     
     @JsProperty(name="preserveAspectRatio")
-    public native SVGAnimatedPreserveAspectRatio getPreserveAspectRatio();
+    public SVGAnimatedPreserveAspectRatio preserveAspectRatio;
+    
+    @JsProperty(name="zoomAndPan")
+    public short zoomAndPan;
     
     
 }

@@ -41,6 +41,9 @@ public class Animation extends EventTarget{
     @JsProperty(name="effect")
     public AnimationEffectReadOnly effect;
     
+    @JsProperty(name="timeline")
+    public AnimationTimeline timeline;
+    
     @JsProperty(name="startTime")
     public double startTime;
     
@@ -49,6 +52,13 @@ public class Animation extends EventTarget{
     
     @JsProperty(name="playbackRate")
     public double playbackRate;
+    
+    @JsProperty(name="playState")
+    public String playState;
+    @JsOverlay
+    public final AnimationPlayState getPlayState(){
+       return AnimationPlayState.of(playState);
+    }
     
     @JsProperty(name="id")
     public String id;
@@ -59,22 +69,11 @@ public class Animation extends EventTarget{
     @JsProperty(name="oncancel")
     public EventHandlerNonNull oncancel;
     
-    @JsProperty(name="timeline")
-    public native AnimationTimeline getTimeline();
-    
-    @JsOverlay
-    public final AnimationPlayState getPlayStateAsAnimationPlayState(){
-        return AnimationPlayState.of(getPlayState());
-    }
-    
-    @JsProperty(name="playState")
-    public native String getPlayState();
-    
     @JsProperty(name="finished")
-    public native Promise<Animation> getFinished();
+    public Promise<Animation> finished;
     
     @JsProperty(name="ready")
-    public native Promise<Animation> getReady();
+    public Promise<Animation> ready;
     
     @JsMethod(name = "cancel")
     public native void cancel();

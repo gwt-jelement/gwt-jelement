@@ -48,7 +48,7 @@ public class HTMLDocument extends Document{
     public String bgColor;
     
     @JsProperty(name="all")
-    public native HTMLAllCollection getAll();
+    public HTMLAllCollection all;
     
     @JsMethod(name = "captureEvents")
     public native void captureEvents();

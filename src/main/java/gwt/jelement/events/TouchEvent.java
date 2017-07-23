@@ -38,25 +38,25 @@ public class TouchEvent extends UIEvent{
     }
     
     @JsProperty(name="touches")
-    public native TouchList getTouches();
+    public TouchList touches;
     
     @JsProperty(name="targetTouches")
-    public native TouchList getTargetTouches();
+    public TouchList targetTouches;
     
     @JsProperty(name="changedTouches")
-    public native TouchList getChangedTouches();
+    public TouchList changedTouches;
     
     @JsProperty(name="altKey")
-    public native boolean getAltKey();
+    public boolean altKey;
     
     @JsProperty(name="metaKey")
-    public native boolean getMetaKey();
+    public boolean metaKey;
     
     @JsProperty(name="ctrlKey")
-    public native boolean getCtrlKey();
+    public boolean ctrlKey;
     
     @JsProperty(name="shiftKey")
-    public native boolean getShiftKey();
+    public boolean shiftKey;
     
     
 }

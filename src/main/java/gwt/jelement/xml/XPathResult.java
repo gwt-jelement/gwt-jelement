@@ -37,25 +37,25 @@ public class XPathResult{
     
     
     @JsProperty(name="resultType")
-    public native short getResultType();
+    public short resultType;
     
     @JsProperty(name="numberValue")
-    public native double getNumberValue();
+    public double numberValue;
     
     @JsProperty(name="stringValue")
-    public native String getStringValue();
+    public String stringValue;
     
     @JsProperty(name="booleanValue")
-    public native boolean getBooleanValue();
+    public boolean booleanValue;
     
     @JsProperty(name="singleNodeValue")
-    public native Node getSingleNodeValue();
+    public Node singleNodeValue;
     
     @JsProperty(name="invalidIteratorState")
-    public native boolean getInvalidIteratorState();
+    public boolean invalidIteratorState;
     
     @JsProperty(name="snapshotLength")
-    public native double getSnapshotLength();
+    public double snapshotLength;
     
     @JsMethod(name = "iterateNext")
     public native Node iterateNext();

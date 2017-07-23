@@ -24,31 +24,31 @@ import jsinterop.annotations.JsType;
 public class URLUtilsReadOnly{
     
     @JsProperty(name="href")
-    public native String getHref();
+    public String href;
     
     @JsProperty(name="origin")
-    public native String getOrigin();
+    public String origin;
     
     @JsProperty(name="protocol")
-    public native String getProtocol();
+    public String protocol;
     
     @JsProperty(name="host")
-    public native String getHost();
+    public String host;
     
     @JsProperty(name="hostname")
-    public native String getHostname();
+    public String hostname;
     
     @JsProperty(name="port")
-    public native String getPort();
+    public String port;
     
     @JsProperty(name="pathname")
-    public native String getPathname();
+    public String pathname;
     
     @JsProperty(name="search")
-    public native String getSearch();
+    public String search;
     
     @JsProperty(name="hash")
-    public native String getHash();
+    public String hash;
     
     
 }

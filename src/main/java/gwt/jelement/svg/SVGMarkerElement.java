@@ -45,31 +45,31 @@ public class SVGMarkerElement extends SVGElement{
     }
     
     @JsProperty(name="refX")
-    public native SVGAnimatedLength getRefX();
+    public SVGAnimatedLength refX;
     
     @JsProperty(name="refY")
-    public native SVGAnimatedLength getRefY();
+    public SVGAnimatedLength refY;
     
     @JsProperty(name="markerUnits")
-    public native SVGAnimatedEnumeration getMarkerUnits();
+    public SVGAnimatedEnumeration markerUnits;
     
     @JsProperty(name="markerWidth")
-    public native SVGAnimatedLength getMarkerWidth();
+    public SVGAnimatedLength markerWidth;
     
     @JsProperty(name="markerHeight")
-    public native SVGAnimatedLength getMarkerHeight();
+    public SVGAnimatedLength markerHeight;
     
     @JsProperty(name="orientType")
-    public native SVGAnimatedEnumeration getOrientType();
+    public SVGAnimatedEnumeration orientType;
     
     @JsProperty(name="orientAngle")
-    public native SVGAnimatedAngle getOrientAngle();
+    public SVGAnimatedAngle orientAngle;
     
     @JsProperty(name="viewBox")
-    public native SVGAnimatedRect getViewBox();
+    public SVGAnimatedRect viewBox;
     
     @JsProperty(name="preserveAspectRatio")
-    public native SVGAnimatedPreserveAspectRatio getPreserveAspectRatio();
+    public SVGAnimatedPreserveAspectRatio preserveAspectRatio;
     
     @JsMethod(name = "setOrientToAngle")
     public native void setOrientToAngle(SVGAngle angle);

@@ -33,6 +33,12 @@ public class VideoTrackList extends EventTarget{
         super();
     }
     
+    @JsProperty(name="length")
+    public double length;
+    
+    @JsProperty(name="selectedIndex")
+    public double selectedIndex;
+    
     @JsProperty(name="onchange")
     public EventHandlerNonNull onchange;
     
@@ -41,12 +47,6 @@ public class VideoTrackList extends EventTarget{
     
     @JsProperty(name="onremovetrack")
     public EventHandlerNonNull onremovetrack;
-    
-    @JsProperty(name="length")
-    public native double getLength();
-    
-    @JsProperty(name="selectedIndex")
-    public native double getSelectedIndex();
     
     @JsMethod(name = "getTrackById")
     public native VideoTrack getTrackById(String id);

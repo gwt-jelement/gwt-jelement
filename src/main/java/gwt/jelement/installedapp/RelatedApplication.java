@@ -24,13 +24,13 @@ import jsinterop.annotations.JsType;
 public class RelatedApplication{
     
     @JsProperty(name="platform")
-    public native String getPlatform();
+    public String platform;
     
     @JsProperty(name="url")
-    public native String getUrl();
+    public String url;
     
     @JsProperty(name="id")
-    public native String getId();
+    public String id;
     
     
 }

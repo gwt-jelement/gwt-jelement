@@ -78,13 +78,13 @@ public class PasswordCredential extends Credential{
     public PasswordCredential.CredentialBodyType additionalData;
     
     @JsProperty(name="password")
-    public native String getPassword();
+    public String password;
     
     @JsProperty(name="name")
-    public native String getName();
+    public String name;
     
     @JsProperty(name="iconURL")
-    public native String getIconURL();
+    public String iconURL;
     
     
 }

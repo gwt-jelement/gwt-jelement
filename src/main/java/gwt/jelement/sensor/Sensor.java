@@ -32,6 +32,12 @@ public class Sensor extends EventTarget{
         super();
     }
     
+    @JsProperty(name="activated")
+    public boolean activated;
+    
+    @JsProperty(name="timestamp")
+    public double timestamp;
+    
     @JsProperty(name="onerror")
     public EventHandlerNonNull onerror;
     
@@ -40,12 +46,6 @@ public class Sensor extends EventTarget{
     
     @JsProperty(name="onactivate")
     public EventHandlerNonNull onactivate;
-    
-    @JsProperty(name="activated")
-    public native boolean getActivated();
-    
-    @JsProperty(name="timestamp")
-    public native double getTimestamp();
     
     @JsMethod(name = "start")
     public native void start();

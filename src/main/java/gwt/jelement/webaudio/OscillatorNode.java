@@ -36,13 +36,22 @@ public class OscillatorNode extends AudioScheduledSourceNode{
     }
     
     @JsProperty(name="type")
-    public OscillatorType type;
+    public String type;
+    @JsOverlay
+    public final OscillatorType getType(){
+       return OscillatorType.of(type);
+    }
+    
+    @JsOverlay
+    public final void setType(OscillatorType type){
+       this.type = type.getInternalValue();
+    }
     
     @JsProperty(name="frequency")
-    public native AudioParam getFrequency();
+    public AudioParam frequency;
     
     @JsProperty(name="detune")
-    public native AudioParam getDetune();
+    public AudioParam detune;
     
     @JsMethod(name = "setPeriodicWave")
     public native void setPeriodicWave(PeriodicWave periodicWave);

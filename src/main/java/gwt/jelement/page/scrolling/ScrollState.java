@@ -35,43 +35,43 @@ public class ScrollState{
     }
     
     @JsProperty(name="deltaX")
-    public native double getDeltaX();
+    public double deltaX;
     
     @JsProperty(name="deltaY")
-    public native double getDeltaY();
+    public double deltaY;
     
     @JsProperty(name="positionX")
-    public native double getPositionX();
+    public double positionX;
     
     @JsProperty(name="positionY")
-    public native double getPositionY();
+    public double positionY;
     
     @JsProperty(name="velocityX")
-    public native double getVelocityX();
+    public double velocityX;
     
     @JsProperty(name="velocityY")
-    public native double getVelocityY();
+    public double velocityY;
     
     @JsProperty(name="isBeginning")
-    public native boolean getIsBeginning();
+    public boolean isBeginning;
     
     @JsProperty(name="inInertialPhase")
-    public native boolean getInInertialPhase();
+    public boolean inInertialPhase;
     
     @JsProperty(name="isEnding")
-    public native boolean getIsEnding();
+    public boolean isEnding;
     
     @JsProperty(name="shouldPropagate")
-    public native boolean getShouldPropagate();
+    public boolean shouldPropagate;
     
     @JsProperty(name="fromUserInput")
-    public native boolean getFromUserInput();
+    public boolean fromUserInput;
     
     @JsProperty(name="isDirectManipulation")
-    public native boolean getIsDirectManipulation();
+    public boolean isDirectManipulation;
     
     @JsProperty(name="deltaGranularity")
-    public native double getDeltaGranularity();
+    public double deltaGranularity;
     
     @JsMethod(name = "consumeDelta")
     public native void consumeDelta(double x, double y);

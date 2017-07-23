@@ -26,15 +26,14 @@ import jsinterop.annotations.JsType;
 public class AppBannerPromptResult{
     
     @JsProperty(name="platform")
-    public native String getPlatform();
-    
-    @JsOverlay
-    public final AppBannerPromptOutcome getOutcomeAsAppBannerPromptOutcome(){
-        return AppBannerPromptOutcome.of(getOutcome());
-    }
+    public String platform;
     
     @JsProperty(name="outcome")
-    public native String getOutcome();
+    public String outcome;
+    @JsOverlay
+    public final AppBannerPromptOutcome getOutcome(){
+       return AppBannerPromptOutcome.of(outcome);
+    }
     
     
 }

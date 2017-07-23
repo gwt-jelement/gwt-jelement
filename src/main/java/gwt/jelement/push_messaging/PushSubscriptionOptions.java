@@ -25,10 +25,10 @@ import jsinterop.annotations.JsType;
 public class PushSubscriptionOptions{
     
     @JsProperty(name="userVisibleOnly")
-    public native boolean getUserVisibleOnly();
+    public boolean userVisibleOnly;
     
     @JsProperty(name="applicationServerKey")
-    public native ArrayBuffer getApplicationServerKey();
+    public ArrayBuffer applicationServerKey;
     
     
 }

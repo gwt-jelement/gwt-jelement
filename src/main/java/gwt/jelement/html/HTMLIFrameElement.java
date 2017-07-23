@@ -43,6 +43,9 @@ public class HTMLIFrameElement extends HTMLElement{
     @JsProperty(name="name")
     public String name;
     
+    @JsProperty(name="sandbox")
+    public DOMTokenList sandbox;
+    
     @JsProperty(name="allowFullscreen")
     public boolean allowFullscreen;
     
@@ -52,11 +55,20 @@ public class HTMLIFrameElement extends HTMLElement{
     @JsProperty(name="height")
     public String height;
     
+    @JsProperty(name="contentDocument")
+    public Document contentDocument;
+    
+    @JsProperty(name="contentWindow")
+    public Window contentWindow;
+    
     @JsProperty(name="referrerPolicy")
     public String referrerPolicy;
     
     @JsProperty(name="csp")
     public String csp;
+    
+    @JsProperty(name="allow")
+    public DOMTokenList allow;
     
     @JsProperty(name="align")
     public String align;
@@ -75,18 +87,6 @@ public class HTMLIFrameElement extends HTMLElement{
     
     @JsProperty(name="marginWidth")
     public String marginWidth;
-    
-    @JsProperty(name="sandbox")
-    public native DOMTokenList getSandbox();
-    
-    @JsProperty(name="contentDocument")
-    public native Document getContentDocument();
-    
-    @JsProperty(name="contentWindow")
-    public native Window getContentWindow();
-    
-    @JsProperty(name="allow")
-    public native DOMTokenList getAllow();
     
     @JsMethod(name = "getSVGDocument")
     public native Document getSVGDocument();

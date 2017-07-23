@@ -37,34 +37,42 @@ public class TextTrack extends EventTarget{
         super();
     }
     
+    @JsProperty(name="kind")
+    public String kind;
+    @JsOverlay
+    public final TextTrackKind getKind(){
+       return TextTrackKind.of(kind);
+    }
+    
+    @JsProperty(name="label")
+    public String label;
+    
+    @JsProperty(name="language")
+    public String language;
+    
+    @JsProperty(name="id")
+    public String id;
+    
     @JsProperty(name="mode")
-    public TextTrackMode mode;
+    public String mode;
+    @JsOverlay
+    public final TextTrackMode getMode(){
+       return TextTrackMode.of(mode);
+    }
+    
+    @JsOverlay
+    public final void setMode(TextTrackMode mode){
+       this.mode = mode.getInternalValue();
+    }
+    
+    @JsProperty(name="cues")
+    public TextTrackCueList cues;
+    
+    @JsProperty(name="activeCues")
+    public TextTrackCueList activeCues;
     
     @JsProperty(name="oncuechange")
     public EventHandlerNonNull oncuechange;
-    
-    @JsOverlay
-    public final TextTrackKind getKindAsTextTrackKind(){
-        return TextTrackKind.of(getKind());
-    }
-    
-    @JsProperty(name="kind")
-    public native String getKind();
-    
-    @JsProperty(name="label")
-    public native String getLabel();
-    
-    @JsProperty(name="language")
-    public native String getLanguage();
-    
-    @JsProperty(name="id")
-    public native String getId();
-    
-    @JsProperty(name="cues")
-    public native TextTrackCueList getCues();
-    
-    @JsProperty(name="activeCues")
-    public native TextTrackCueList getActiveCues();
     
     @JsMethod(name = "addCue")
     public native void addCue(TextTrackCue cue);

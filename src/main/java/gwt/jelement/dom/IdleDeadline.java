@@ -25,7 +25,7 @@ import jsinterop.annotations.JsType;
 public class IdleDeadline{
     
     @JsProperty(name="didTimeout")
-    public native boolean getDidTimeout();
+    public boolean didTimeout;
     
     @JsMethod(name = "timeRemaining")
     public native double timeRemaining();

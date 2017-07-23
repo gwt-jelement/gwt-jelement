@@ -50,16 +50,16 @@ public class DOMPointReadOnly{
     }
     
     @JsProperty(name="x")
-    public native double getX();
+    public double x;
     
     @JsProperty(name="y")
-    public native double getY();
+    public double y;
     
     @JsProperty(name="z")
-    public native double getZ();
+    public double z;
     
     @JsProperty(name="w")
-    public native double getW();
+    public double w;
     
     @JsMethod(name = "fromPoint")
     public native DOMPointReadOnly fromPoint();

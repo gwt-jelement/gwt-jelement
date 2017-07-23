@@ -25,28 +25,28 @@ import jsinterop.annotations.JsType;
 public class GamepadPose{
     
     @JsProperty(name="hasOrientation")
-    public native boolean getHasOrientation();
+    public boolean hasOrientation;
     
     @JsProperty(name="hasPosition")
-    public native boolean getHasPosition();
+    public boolean hasPosition;
     
     @JsProperty(name="position")
-    public native Float32Array getPosition();
+    public Float32Array position;
     
     @JsProperty(name="linearVelocity")
-    public native Float32Array getLinearVelocity();
+    public Float32Array linearVelocity;
     
     @JsProperty(name="linearAcceleration")
-    public native Float32Array getLinearAcceleration();
+    public Float32Array linearAcceleration;
     
     @JsProperty(name="orientation")
-    public native Float32Array getOrientation();
+    public Float32Array orientation;
     
     @JsProperty(name="angularVelocity")
-    public native Float32Array getAngularVelocity();
+    public Float32Array angularVelocity;
     
     @JsProperty(name="angularAcceleration")
-    public native Float32Array getAngularAcceleration();
+    public Float32Array angularAcceleration;
     
     
 }

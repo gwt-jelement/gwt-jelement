@@ -52,7 +52,12 @@ public class AnimationEffectTiming extends AnimationEffectTimingReadOnly{
     public AnimationEffectTimingReadOnly.DoubleOrStringUnionType duration;
     
     @JsProperty(name="direction")
-    public PlaybackDirection direction;
+    public String direction;
+
+    @JsOverlay
+    public final void setDirection(PlaybackDirection direction){
+       this.direction = direction.getInternalValue();
+    }
     
     @JsProperty(name="easing")
     public String easing;

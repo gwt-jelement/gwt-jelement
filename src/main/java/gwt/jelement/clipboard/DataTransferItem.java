@@ -28,10 +28,10 @@ import jsinterop.annotations.JsType;
 public class DataTransferItem{
     
     @JsProperty(name="kind")
-    public native String getKind();
+    public String kind;
     
     @JsProperty(name="type")
-    public native String getType();
+    public String type;
     
     @JsMethod(name = "getAsFile")
     public native File getAsFile();

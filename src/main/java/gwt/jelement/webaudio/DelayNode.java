@@ -39,7 +39,7 @@ public class DelayNode extends AudioNode{
     }
     
     @JsProperty(name="delayTime")
-    public native AudioParam getDelayTime();
+    public AudioParam delayTime;
     
     
 }

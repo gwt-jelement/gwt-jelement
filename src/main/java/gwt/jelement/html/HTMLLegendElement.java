@@ -31,11 +31,11 @@ public class HTMLLegendElement extends HTMLElement{
         super();
     }
     
+    @JsProperty(name="form")
+    public HTMLFormElement form;
+    
     @JsProperty(name="align")
     public String align;
-    
-    @JsProperty(name="form")
-    public native HTMLFormElement getForm();
     
     
 }

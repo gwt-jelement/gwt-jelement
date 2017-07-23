@@ -25,10 +25,10 @@ import jsinterop.annotations.JsType;
 public class Metadata{
     
     @JsProperty(name="modificationTime")
-    public native Date getModificationTime();
+    public Date modificationTime;
     
     @JsProperty(name="size")
-    public native double getSize();
+    public double size;
     
     
 }

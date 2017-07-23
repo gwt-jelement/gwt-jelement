@@ -75,7 +75,16 @@ public class VTTCue extends TextTrackCue{
     public VTTRegion region;
     
     @JsProperty(name="vertical")
-    public DirectionSetting vertical;
+    public String vertical;
+    @JsOverlay
+    public final DirectionSetting getVertical(){
+       return DirectionSetting.of(vertical);
+    }
+    
+    @JsOverlay
+    public final void setVertical(DirectionSetting vertical){
+       this.vertical = vertical.getInternalValue();
+    }
     
     @JsProperty(name="snapToLines")
     public boolean snapToLines;
@@ -90,7 +99,16 @@ public class VTTCue extends TextTrackCue{
     public double size;
     
     @JsProperty(name="align")
-    public AlignSetting align;
+    public String align;
+    @JsOverlay
+    public final AlignSetting getAlign(){
+       return AlignSetting.of(align);
+    }
+    
+    @JsOverlay
+    public final void setAlign(AlignSetting align){
+       this.align = align.getInternalValue();
+    }
     
     @JsProperty(name="text")
     public String text;

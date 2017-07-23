@@ -24,13 +24,13 @@ import jsinterop.annotations.JsType;
 public class MemoryInfo{
     
     @JsProperty(name="totalJSHeapSize")
-    public native double getTotalJSHeapSize();
+    public double totalJSHeapSize;
     
     @JsProperty(name="usedJSHeapSize")
-    public native double getUsedJSHeapSize();
+    public double usedJSHeapSize;
     
     @JsProperty(name="jsHeapSizeLimit")
-    public native double getJsHeapSizeLimit();
+    public double jsHeapSizeLimit;
     
     
 }

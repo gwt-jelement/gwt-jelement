@@ -39,7 +39,7 @@ public class ConstantSourceNode extends AudioScheduledSourceNode{
     }
     
     @JsProperty(name="offset")
-    public native AudioParam getOffset();
+    public AudioParam offset;
     
     
 }

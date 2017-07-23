@@ -36,7 +36,7 @@ public class ImageCapture{
     }
     
     @JsProperty(name="track")
-    public native MediaStreamTrack getTrack();
+    public MediaStreamTrack track;
     
     @JsMethod(name = "getPhotoCapabilities")
     public native Promise<PhotoCapabilities> getPhotoCapabilities();

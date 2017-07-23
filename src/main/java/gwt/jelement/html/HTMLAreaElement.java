@@ -60,6 +60,9 @@ public class HTMLAreaElement extends HTMLElement{
     @JsProperty(name="href")
     public String href;
     
+    @JsProperty(name="origin")
+    public String origin;
+    
     @JsProperty(name="protocol")
     public String protocol;
     
@@ -86,9 +89,6 @@ public class HTMLAreaElement extends HTMLElement{
     
     @JsProperty(name="hash")
     public String hash;
-    
-    @JsProperty(name="origin")
-    public native String getOrigin();
     
     
 }

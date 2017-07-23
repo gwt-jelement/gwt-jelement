@@ -26,10 +26,10 @@ import jsinterop.annotations.JsType;
 public class ResizeObserverEntry{
     
     @JsProperty(name="target")
-    public native Element getTarget();
+    public Element target;
     
     @JsProperty(name="contentRect")
-    public native ClientRect getContentRect();
+    public ClientRect contentRect;
     
     
 }

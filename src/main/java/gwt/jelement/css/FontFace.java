@@ -52,16 +52,15 @@ public class FontFace{
     @JsProperty(name="display")
     public String display;
     
+    @JsProperty(name="status")
+    public String status;
     @JsOverlay
-    public final FontFaceLoadStatus getStatusAsFontFaceLoadStatus(){
-        return FontFaceLoadStatus.of(getStatus());
+    public final FontFaceLoadStatus getStatus(){
+       return FontFaceLoadStatus.of(status);
     }
     
-    @JsProperty(name="status")
-    public native String getStatus();
-    
     @JsProperty(name="loaded")
-    public native Promise<FontFace> getLoaded();
+    public Promise<FontFace> loaded;
     
     @JsMethod(name = "load")
     public native Promise<FontFace> load();

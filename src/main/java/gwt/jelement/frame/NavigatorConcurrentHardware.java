@@ -24,7 +24,7 @@ import jsinterop.annotations.JsType;
 public class NavigatorConcurrentHardware{
     
     @JsProperty(name="hardwareConcurrency")
-    public native double getHardwareConcurrency();
+    public double hardwareConcurrency;
     
     
 }

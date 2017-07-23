@@ -32,7 +32,7 @@ public class RTCDTMFToneChangeEvent extends Event{
     }
     
     @JsProperty(name="tone")
-    public native String getTone();
+    public String tone;
     
     
 }

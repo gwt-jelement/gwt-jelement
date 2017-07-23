@@ -24,31 +24,31 @@ import jsinterop.annotations.JsType;
 public class BluetoothCharacteristicProperties{
     
     @JsProperty(name="broadcast")
-    public native boolean getBroadcast();
+    public boolean broadcast;
     
     @JsProperty(name="read")
-    public native boolean getRead();
+    public boolean read;
     
     @JsProperty(name="writeWithoutResponse")
-    public native boolean getWriteWithoutResponse();
+    public boolean writeWithoutResponse;
     
     @JsProperty(name="write")
-    public native boolean getWrite();
+    public boolean write;
     
     @JsProperty(name="notify")
-    public native boolean getNotify();
+    public boolean notify;
     
     @JsProperty(name="indicate")
-    public native boolean getIndicate();
+    public boolean indicate;
     
     @JsProperty(name="authenticatedSignedWrites")
-    public native boolean getAuthenticatedSignedWrites();
+    public boolean authenticatedSignedWrites;
     
     @JsProperty(name="reliableWrite")
-    public native boolean getReliableWrite();
+    public boolean reliableWrite;
     
     @JsProperty(name="writableAuxiliaries")
-    public native boolean getWritableAuxiliaries();
+    public boolean writableAuxiliaries;
     
     
 }

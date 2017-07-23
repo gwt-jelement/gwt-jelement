@@ -48,28 +48,28 @@ public class DOMRectReadOnly{
     }
     
     @JsProperty(name="x")
-    public native double getX();
+    public double x;
     
     @JsProperty(name="y")
-    public native double getY();
+    public double y;
     
     @JsProperty(name="width")
-    public native double getWidth();
+    public double width;
     
     @JsProperty(name="height")
-    public native double getHeight();
+    public double height;
     
     @JsProperty(name="top")
-    public native double getTop();
+    public double top;
     
     @JsProperty(name="right")
-    public native double getRight();
+    public double right;
     
     @JsProperty(name="bottom")
-    public native double getBottom();
+    public double bottom;
     
     @JsProperty(name="left")
-    public native double getLeft();
+    public double left;
     
     @JsMethod(name = "fromRect")
     public native DOMRectReadOnly fromRect();

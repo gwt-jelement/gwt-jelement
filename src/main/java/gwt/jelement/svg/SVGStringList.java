@@ -25,10 +25,10 @@ import jsinterop.annotations.JsType;
 public class SVGStringList{
     
     @JsProperty(name="length")
-    public native double getLength();
+    public double length;
     
     @JsProperty(name="numberOfItems")
-    public native double getNumberOfItems();
+    public double numberOfItems;
     
     @JsMethod(name = "appendItem")
     public native String appendItem(String newItem);

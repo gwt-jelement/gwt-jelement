@@ -26,25 +26,25 @@ import jsinterop.annotations.JsType;
 public class IntersectionObserverEntry{
     
     @JsProperty(name="time")
-    public native double getTime();
+    public double time;
     
     @JsProperty(name="rootBounds")
-    public native ClientRect getRootBounds();
+    public ClientRect rootBounds;
     
     @JsProperty(name="boundingClientRect")
-    public native ClientRect getBoundingClientRect();
+    public ClientRect boundingClientRect;
     
     @JsProperty(name="intersectionRect")
-    public native ClientRect getIntersectionRect();
+    public ClientRect intersectionRect;
     
     @JsProperty(name="isIntersecting")
-    public native boolean getIsIntersecting();
+    public boolean isIntersecting;
     
     @JsProperty(name="intersectionRatio")
-    public native double getIntersectionRatio();
+    public double intersectionRatio;
     
     @JsProperty(name="target")
-    public native Element getTarget();
+    public Element target;
     
     
 }

@@ -27,7 +27,7 @@ public class SVGAnimatedInteger{
     public double baseVal;
     
     @JsProperty(name="animVal")
-    public native double getAnimVal();
+    public double animVal;
     
     
 }

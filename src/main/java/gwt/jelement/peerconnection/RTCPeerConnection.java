@@ -57,6 +57,33 @@ public class RTCPeerConnection extends EventTarget{
         super();
     }
     
+    @JsProperty(name="localDescription")
+    public RTCSessionDescription localDescription;
+    
+    @JsProperty(name="remoteDescription")
+    public RTCSessionDescription remoteDescription;
+    
+    @JsProperty(name="signalingState")
+    public String signalingState;
+    @JsOverlay
+    public final RTCSignalingState getSignalingState(){
+       return RTCSignalingState.of(signalingState);
+    }
+    
+    @JsProperty(name="iceGatheringState")
+    public String iceGatheringState;
+    @JsOverlay
+    public final RTCIceGatheringState getIceGatheringState(){
+       return RTCIceGatheringState.of(iceGatheringState);
+    }
+    
+    @JsProperty(name="iceConnectionState")
+    public String iceConnectionState;
+    @JsOverlay
+    public final RTCIceConnectionState getIceConnectionState(){
+       return RTCIceConnectionState.of(iceConnectionState);
+    }
+    
     @JsProperty(name="onnegotiationneeded")
     public EventHandlerNonNull onnegotiationneeded;
     
@@ -80,36 +107,6 @@ public class RTCPeerConnection extends EventTarget{
     
     @JsProperty(name="onremovestream")
     public EventHandlerNonNull onremovestream;
-    
-    @JsProperty(name="localDescription")
-    public native RTCSessionDescription getLocalDescription();
-    
-    @JsProperty(name="remoteDescription")
-    public native RTCSessionDescription getRemoteDescription();
-    
-    @JsOverlay
-    public final RTCSignalingState getSignalingStateAsRTCSignalingState(){
-        return RTCSignalingState.of(getSignalingState());
-    }
-    
-    @JsProperty(name="signalingState")
-    public native String getSignalingState();
-    
-    @JsOverlay
-    public final RTCIceGatheringState getIceGatheringStateAsRTCIceGatheringState(){
-        return RTCIceGatheringState.of(getIceGatheringState());
-    }
-    
-    @JsProperty(name="iceGatheringState")
-    public native String getIceGatheringState();
-    
-    @JsOverlay
-    public final RTCIceConnectionState getIceConnectionStateAsRTCIceConnectionState(){
-        return RTCIceConnectionState.of(getIceConnectionState());
-    }
-    
-    @JsProperty(name="iceConnectionState")
-    public native String getIceConnectionState();
     
     @JsMethod(name = "addIceCandidate")
     public native Promise<Void> addIceCandidate(RTCIceCandidateInit candidate);

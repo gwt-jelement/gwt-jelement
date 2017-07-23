@@ -31,10 +31,10 @@ public class CSSNamespaceRule extends CSSRule{
     }
     
     @JsProperty(name="namespaceURI")
-    public native String getNamespaceURI();
+    public String namespaceURI;
     
     @JsProperty(name="prefix")
-    public native String getPrefix();
+    public String prefix;
     
     
 }

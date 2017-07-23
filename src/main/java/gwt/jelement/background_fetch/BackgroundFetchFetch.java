@@ -25,7 +25,7 @@ import jsinterop.annotations.JsType;
 public class BackgroundFetchFetch{
     
     @JsProperty(name="request")
-    public native Request getRequest();
+    public Request request;
     
     
 }

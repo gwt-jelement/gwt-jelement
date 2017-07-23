@@ -27,7 +27,7 @@ public class SVGAnimatedBoolean{
     public boolean baseVal;
     
     @JsProperty(name="animVal")
-    public native boolean getAnimVal();
+    public boolean animVal;
     
     
 }

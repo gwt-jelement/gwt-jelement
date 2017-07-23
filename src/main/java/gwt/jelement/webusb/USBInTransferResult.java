@@ -36,15 +36,14 @@ public class USBInTransferResult{
     }
     
     @JsProperty(name="data")
-    public native DataView getData();
-    
-    @JsOverlay
-    public final USBTransferStatus getStatusAsUSBTransferStatus(){
-        return USBTransferStatus.of(getStatus());
-    }
+    public DataView data;
     
     @JsProperty(name="status")
-    public native String getStatus();
+    public String status;
+    @JsOverlay
+    public final USBTransferStatus getStatus(){
+       return USBTransferStatus.of(status);
+    }
     
     
 }

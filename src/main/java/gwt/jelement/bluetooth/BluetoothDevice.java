@@ -32,17 +32,17 @@ public class BluetoothDevice extends EventTarget{
         super();
     }
     
-    @JsProperty(name="ongattserverdisconnected")
-    public EventHandlerNonNull ongattserverdisconnected;
-    
     @JsProperty(name="id")
-    public native String getId();
+    public String id;
     
     @JsProperty(name="name")
-    public native String getName();
+    public String name;
     
     @JsProperty(name="gatt")
-    public native BluetoothRemoteGATTServer getGatt();
+    public BluetoothRemoteGATTServer gatt;
+    
+    @JsProperty(name="ongattserverdisconnected")
+    public EventHandlerNonNull ongattserverdisconnected;
     
     
 }

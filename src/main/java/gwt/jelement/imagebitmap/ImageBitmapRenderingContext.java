@@ -27,7 +27,7 @@ import jsinterop.annotations.JsType;
 public class ImageBitmapRenderingContext{
     
     @JsProperty(name="canvas")
-    public native HTMLCanvasElement getCanvas();
+    public HTMLCanvasElement canvas;
     
     @JsMethod(name = "transferFromImageBitmap")
     public native void transferFromImageBitmap(ImageBitmap bitmap);

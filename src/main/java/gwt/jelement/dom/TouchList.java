@@ -24,7 +24,7 @@ import jsinterop.annotations.JsType;
 public class TouchList{
     
     @JsProperty(name="length")
-    public native double getLength();
+    public double length;
     
     
 }

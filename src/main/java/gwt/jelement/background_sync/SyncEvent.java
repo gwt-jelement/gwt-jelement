@@ -32,10 +32,10 @@ public class SyncEvent extends ExtendableEvent{
     }
     
     @JsProperty(name="tag")
-    public native String getTag();
+    public String tag;
     
     @JsProperty(name="lastChance")
-    public native boolean getLastChance();
+    public boolean lastChance;
     
     
 }

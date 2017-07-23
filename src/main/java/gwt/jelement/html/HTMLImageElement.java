@@ -59,6 +59,18 @@ public class HTMLImageElement extends HTMLElement{
     @JsProperty(name="height")
     public double height;
     
+    @JsProperty(name="naturalWidth")
+    public double naturalWidth;
+    
+    @JsProperty(name="naturalHeight")
+    public double naturalHeight;
+    
+    @JsProperty(name="complete")
+    public boolean complete;
+    
+    @JsProperty(name="currentSrc")
+    public String currentSrc;
+    
     @JsProperty(name="referrerPolicy")
     public String referrerPolicy;
     
@@ -83,23 +95,11 @@ public class HTMLImageElement extends HTMLElement{
     @JsProperty(name="border")
     public String border;
     
-    @JsProperty(name="naturalWidth")
-    public native double getNaturalWidth();
-    
-    @JsProperty(name="naturalHeight")
-    public native double getNaturalHeight();
-    
-    @JsProperty(name="complete")
-    public native boolean getComplete();
-    
-    @JsProperty(name="currentSrc")
-    public native String getCurrentSrc();
-    
     @JsProperty(name="x")
-    public native double getX();
+    public double x;
     
     @JsProperty(name="y")
-    public native double getY();
+    public double y;
     
     @JsMethod(name = "decode")
     public native Promise decode();

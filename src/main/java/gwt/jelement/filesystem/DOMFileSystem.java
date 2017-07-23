@@ -25,10 +25,10 @@ import jsinterop.annotations.JsType;
 public class DOMFileSystem{
     
     @JsProperty(name="name")
-    public native String getName();
+    public String name;
     
     @JsProperty(name="root")
-    public native DirectoryEntry getRoot();
+    public DirectoryEntry root;
     
     
 }

@@ -36,10 +36,10 @@ public class ForeignFetchEvent extends ExtendableEvent{
     }
     
     @JsProperty(name="request")
-    public native Request getRequest();
+    public Request request;
     
     @JsProperty(name="origin")
-    public native String getOrigin();
+    public String origin;
     
     @JsMethod(name = "respondWith")
     public native void respondWith(Promise<ForeignFetchResponse> r);

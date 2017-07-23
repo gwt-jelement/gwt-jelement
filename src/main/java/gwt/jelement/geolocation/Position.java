@@ -25,10 +25,10 @@ import jsinterop.annotations.JsType;
 public class Position{
     
     @JsProperty(name="coords")
-    public native Coordinates getCoords();
+    public Coordinates coords;
     
     @JsProperty(name="timestamp")
-    public native double getTimestamp();
+    public double timestamp;
     
     
 }

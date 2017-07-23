@@ -26,10 +26,10 @@ import jsinterop.annotations.JsType;
 public class FileWriterSync{
     
     @JsProperty(name="position")
-    public native double getPosition();
+    public double position;
     
     @JsProperty(name="length")
-    public native double getLength();
+    public double length;
     
     @JsMethod(name = "seek")
     public native void seek(double position);

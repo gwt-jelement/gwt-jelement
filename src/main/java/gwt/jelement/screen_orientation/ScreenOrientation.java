@@ -36,14 +36,14 @@ public class ScreenOrientation extends EventTarget{
         super();
     }
     
-    @JsProperty(name="onchange")
-    public EventHandlerNonNull onchange;
-    
     @JsProperty(name="angle")
-    public native short getAngle();
+    public short angle;
     
     @JsProperty(name="type")
-    public native String getType();
+    public String type;
+    
+    @JsProperty(name="onchange")
+    public EventHandlerNonNull onchange;
     
     @JsOverlay
     public final Promise lock(OrientationLockType orientation){

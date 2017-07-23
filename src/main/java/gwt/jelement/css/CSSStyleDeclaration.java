@@ -28,14 +28,14 @@ public class CSSStyleDeclaration{
     @JsProperty(name="cssText")
     public String cssText;
     
-    @JsProperty(name="cssFloat")
-    public String cssFloat;
-    
     @JsProperty(name="length")
-    public native double getLength();
+    public double length;
     
     @JsProperty(name="parentRule")
-    public native CSSRule getParentRule();
+    public CSSRule parentRule;
+    
+    @JsProperty(name="cssFloat")
+    public String cssFloat;
     
     @JsMethod(name = "getPropertyPriority")
     public native String getPropertyPriority(String property);

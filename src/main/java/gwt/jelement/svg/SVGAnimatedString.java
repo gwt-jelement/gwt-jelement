@@ -27,7 +27,7 @@ public class SVGAnimatedString{
     public String baseVal;
     
     @JsProperty(name="animVal")
-    public native String getAnimVal();
+    public String animVal;
     
     
 }

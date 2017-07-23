@@ -34,7 +34,7 @@ public class AudioContext extends BaseAudioContext{
     }
     
     @JsProperty(name="baseLatency")
-    public native double getBaseLatency();
+    public double baseLatency;
     
     @JsMethod(name = "close")
     public native Promise<Void> close();

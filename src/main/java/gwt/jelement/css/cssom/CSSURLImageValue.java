@@ -31,7 +31,7 @@ public class CSSURLImageValue extends CSSImageValue{
     }
     
     @JsProperty(name="url")
-    public native String getUrl();
+    public String url;
     
     
 }

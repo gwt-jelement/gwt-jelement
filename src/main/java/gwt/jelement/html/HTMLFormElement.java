@@ -60,10 +60,10 @@ public class HTMLFormElement extends HTMLElement{
     public String target;
     
     @JsProperty(name="elements")
-    public native HTMLFormControlsCollection getElements();
+    public HTMLFormControlsCollection elements;
     
     @JsProperty(name="length")
-    public native double getLength();
+    public double length;
     
     @JsMethod(name = "checkValidity")
     public native boolean checkValidity();

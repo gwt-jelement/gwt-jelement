@@ -25,10 +25,10 @@ import jsinterop.annotations.JsType;
 public class SVGAnimatedNumberList{
     
     @JsProperty(name="baseVal")
-    public native SVGNumberList getBaseVal();
+    public SVGNumberList baseVal;
     
     @JsProperty(name="animVal")
-    public native SVGNumberList getAnimVal();
+    public SVGNumberList animVal;
     
     
 }

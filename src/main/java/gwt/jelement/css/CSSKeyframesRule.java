@@ -37,7 +37,7 @@ public class CSSKeyframesRule extends CSSRule{
     public String name;
     
     @JsProperty(name="cssRules")
-    public native CSSRuleList getCssRules();
+    public CSSRuleList cssRules;
     
     @JsMethod(name = "appendRule")
     public native void appendRule(String rule);

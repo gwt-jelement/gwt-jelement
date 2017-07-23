@@ -56,109 +56,109 @@ import jsinterop.annotations.JsType;
 public class Navigator{
     
     @JsProperty(name="vendorSub")
-    public native String getVendorSub();
+    public String vendorSub;
     
     @JsProperty(name="productSub")
-    public native String getProductSub();
+    public String productSub;
     
     @JsProperty(name="vendor")
-    public native String getVendor();
+    public String vendor;
     
     @JsProperty(name="bluetooth")
-    public native Bluetooth getBluetooth();
+    public Bluetooth bluetooth;
     
     @JsProperty(name="budget")
-    public native BudgetService getBudget();
+    public BudgetService budget;
     
     @JsProperty(name="credentials")
-    public native CredentialsContainer getCredentials();
+    public CredentialsContainer credentials;
     
     @JsProperty(name="doNotTrack")
-    public native String getDoNotTrack();
+    public String doNotTrack;
     
     @JsProperty(name="maxTouchPoints")
-    public native double getMaxTouchPoints();
+    public double maxTouchPoints;
     
     @JsProperty(name="clipboard")
-    public native Clipboard getClipboard();
+    public Clipboard clipboard;
     
     @JsProperty(name="geolocation")
-    public native Geolocation getGeolocation();
+    public Geolocation geolocation;
     
     @JsProperty(name="mediaSession")
-    public native MediaSession getMediaSession();
+    public MediaSession mediaSession;
     
     @JsProperty(name="mediaDevices")
-    public native MediaDevices getMediaDevices();
+    public MediaDevices mediaDevices;
     
     @JsProperty(name="mediaCapabilities")
-    public native MediaCapabilities getMediaCapabilities();
+    public MediaCapabilities mediaCapabilities;
     
     @JsProperty(name="connection")
-    public native NetworkInformation getConnection();
+    public NetworkInformation connection;
     
     @JsProperty(name="nfc")
-    public native NFC getNfc();
+    public NFC nfc;
     
     @JsProperty(name="permissions")
-    public native Permissions getPermissions();
+    public Permissions permissions;
     
     @JsProperty(name="plugins")
-    public native PluginArray getPlugins();
+    public PluginArray plugins;
     
     @JsProperty(name="mimeTypes")
-    public native MimeTypeArray getMimeTypes();
+    public MimeTypeArray mimeTypes;
     
     @JsProperty(name="presentation")
-    public native Presentation getPresentation();
+    public Presentation presentation;
     
     @JsProperty(name="webkitTemporaryStorage")
-    public native DeprecatedStorageQuota getWebkitTemporaryStorage();
+    public DeprecatedStorageQuota webkitTemporaryStorage;
     
     @JsProperty(name="webkitPersistentStorage")
-    public native DeprecatedStorageQuota getWebkitPersistentStorage();
+    public DeprecatedStorageQuota webkitPersistentStorage;
     
     @JsProperty(name="storage")
-    public native StorageManager getStorage();
+    public StorageManager storage;
     
     @JsProperty(name="serviceWorker")
-    public native ServiceWorkerContainer getServiceWorker();
+    public ServiceWorkerContainer serviceWorker;
     
     @JsProperty(name="usb")
-    public native USB getUsb();
+    public USB usb;
     
     @JsProperty(name="hardwareConcurrency")
-    public native double getHardwareConcurrency();
+    public double hardwareConcurrency;
     
     @JsProperty(name="cookieEnabled")
-    public native boolean getCookieEnabled();
+    public boolean cookieEnabled;
     
     @JsProperty(name="appCodeName")
-    public native String getAppCodeName();
+    public String appCodeName;
     
     @JsProperty(name="appName")
-    public native String getAppName();
+    public String appName;
     
     @JsProperty(name="appVersion")
-    public native String getAppVersion();
+    public String appVersion;
     
     @JsProperty(name="platform")
-    public native String getPlatform();
+    public String platform;
     
     @JsProperty(name="product")
-    public native String getProduct();
+    public String product;
     
     @JsProperty(name="userAgent")
-    public native String getUserAgent();
+    public String userAgent;
     
     @JsProperty(name="language")
-    public native String getLanguage();
+    public String language;
     
     @JsProperty(name="languages")
-    public native String[] getLanguages();
+    public String[] languages;
     
     @JsProperty(name="onLine")
-    public native boolean getOnLine();
+    public boolean onLine;
     
     @JsMethod(name = "cancelKeyboardLock")
     public native void cancelKeyboardLock();

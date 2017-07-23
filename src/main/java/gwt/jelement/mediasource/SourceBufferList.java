@@ -31,14 +31,14 @@ public class SourceBufferList extends EventTarget{
         super();
     }
     
+    @JsProperty(name="length")
+    public double length;
+    
     @JsProperty(name="onaddsourcebuffer")
     public EventHandlerNonNull onaddsourcebuffer;
     
     @JsProperty(name="onremovesourcebuffer")
     public EventHandlerNonNull onremovesourcebuffer;
-    
-    @JsProperty(name="length")
-    public native double getLength();
     
     
 }

@@ -37,16 +37,16 @@ public class ApplicationCacheErrorEvent extends Event{
     }
     
     @JsProperty(name="reason")
-    public native String getReason();
+    public String reason;
     
     @JsProperty(name="url")
-    public native String getUrl();
+    public String url;
     
     @JsProperty(name="status")
-    public native short getStatus();
+    public short status;
     
     @JsProperty(name="message")
-    public native String getMessage();
+    public String message;
     
     
 }

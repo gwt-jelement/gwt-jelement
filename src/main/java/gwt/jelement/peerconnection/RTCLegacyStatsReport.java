@@ -26,13 +26,13 @@ import jsinterop.annotations.JsType;
 public class RTCLegacyStatsReport{
     
     @JsProperty(name="timestamp")
-    public native Date getTimestamp();
+    public Date timestamp;
     
     @JsProperty(name="id")
-    public native String getId();
+    public String id;
     
     @JsProperty(name="type")
-    public native String getType();
+    public String type;
     
     @JsMethod(name = "names")
     public native String[] names();

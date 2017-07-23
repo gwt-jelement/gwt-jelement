@@ -32,11 +32,11 @@ public class PresentationConnectionList extends EventTarget{
         super();
     }
     
+    @JsProperty(name="connections")
+    public PresentationConnection[] connections;
+    
     @JsProperty(name="onconnectionavailable")
     public EventHandlerNonNull onconnectionavailable;
-    
-    @JsProperty(name="connections")
-    public native PresentationConnection[] getConnections();
     
     
 }

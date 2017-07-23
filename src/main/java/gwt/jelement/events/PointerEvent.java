@@ -39,34 +39,34 @@ public class PointerEvent extends MouseEvent{
     }
     
     @JsProperty(name="pointerId")
-    public native double getPointerId();
+    public double pointerId;
     
     @JsProperty(name="width")
-    public native double getWidth();
+    public double width;
     
     @JsProperty(name="height")
-    public native double getHeight();
+    public double height;
     
     @JsProperty(name="pressure")
-    public native float getPressure();
+    public float pressure;
     
     @JsProperty(name="tiltX")
-    public native double getTiltX();
+    public double tiltX;
     
     @JsProperty(name="tiltY")
-    public native double getTiltY();
+    public double tiltY;
     
     @JsProperty(name="tangentialPressure")
-    public native float getTangentialPressure();
+    public float tangentialPressure;
     
     @JsProperty(name="twist")
-    public native double getTwist();
+    public double twist;
     
     @JsProperty(name="pointerType")
-    public native String getPointerType();
+    public String pointerType;
     
     @JsProperty(name="isPrimary")
-    public native boolean getIsPrimary();
+    public boolean isPrimary;
     
     @JsMethod(name = "getCoalescedEvents")
     public native PointerEvent[] getCoalescedEvents();

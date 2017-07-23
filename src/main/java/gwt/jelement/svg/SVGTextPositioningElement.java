@@ -33,19 +33,19 @@ public class SVGTextPositioningElement extends SVGTextContentElement{
     }
     
     @JsProperty(name="x")
-    public native SVGAnimatedLengthList getX();
+    public SVGAnimatedLengthList x;
     
     @JsProperty(name="y")
-    public native SVGAnimatedLengthList getY();
+    public SVGAnimatedLengthList y;
     
     @JsProperty(name="dx")
-    public native SVGAnimatedLengthList getDx();
+    public SVGAnimatedLengthList dx;
     
     @JsProperty(name="dy")
-    public native SVGAnimatedLengthList getDy();
+    public SVGAnimatedLengthList dy;
     
     @JsProperty(name="rotate")
-    public native SVGAnimatedNumberList getRotate();
+    public SVGAnimatedNumberList rotate;
     
     
 }
