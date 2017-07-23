@@ -17,7 +17,6 @@
 package gwt.jelement.svg;
 
 import gwt.jelement.svg.SVGAnimatedLength;
-import gwt.jelement.svg.SVGAnimatedString;
 import gwt.jelement.svg.SVGGraphicsElement;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsPackage;
@@ -43,9 +42,6 @@ public class SVGUseElement extends SVGGraphicsElement{
     
     @JsProperty(name="height")
     public SVGAnimatedLength height;
-    
-    @JsProperty(name="href")
-    public SVGAnimatedString href;
     
     
 }

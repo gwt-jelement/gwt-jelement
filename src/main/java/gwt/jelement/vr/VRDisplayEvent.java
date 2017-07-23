@@ -38,6 +38,7 @@ public class VRDisplayEvent extends Event{
     
     @JsProperty(name="reason")
     public String reason;
+    
     @JsOverlay
     public final VRDisplayEventReason getReason(){
        return VRDisplayEventReason.of(reason);

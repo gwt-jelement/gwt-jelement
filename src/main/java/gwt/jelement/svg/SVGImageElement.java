@@ -18,7 +18,6 @@ package gwt.jelement.svg;
 
 import gwt.jelement.svg.SVGAnimatedLength;
 import gwt.jelement.svg.SVGAnimatedPreserveAspectRatio;
-import gwt.jelement.svg.SVGAnimatedString;
 import gwt.jelement.svg.SVGGraphicsElement;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsPackage;
@@ -47,9 +46,6 @@ public class SVGImageElement extends SVGGraphicsElement{
     
     @JsProperty(name="preserveAspectRatio")
     public SVGAnimatedPreserveAspectRatio preserveAspectRatio;
-    
-    @JsProperty(name="href")
-    public SVGAnimatedString href;
     
     
 }

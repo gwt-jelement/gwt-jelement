@@ -38,6 +38,7 @@ public class RemotePlayback extends EventTarget{
     
     @JsProperty(name="state")
     public String state;
+    
     @JsOverlay
     public final RemotePlaybackState getState(){
        return RemotePlaybackState.of(state);

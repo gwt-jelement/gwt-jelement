@@ -35,6 +35,7 @@ public class PermissionStatus extends EventTarget{
     
     @JsProperty(name="state")
     public String state;
+    
     @JsOverlay
     public final PermissionState getState(){
        return PermissionState.of(state);

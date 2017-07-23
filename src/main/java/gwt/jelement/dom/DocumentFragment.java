@@ -16,14 +16,9 @@
  */
 package gwt.jelement.dom;
 
-import gwt.jelement.dom.Element;
 import gwt.jelement.dom.Node;
-import gwt.jelement.dom.NodeList;
-import gwt.jelement.html.HTMLCollection;
 import jsinterop.annotations.JsConstructor;
-import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsPackage;
-import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, isNative = true)
@@ -34,43 +29,5 @@ public class DocumentFragment extends Node{
         super();
     }
     
-    @JsProperty(name="children")
-    public HTMLCollection children;
-    
-    @JsProperty(name="firstElementChild")
-    public Element firstElementChild;
-    
-    @JsProperty(name="lastElementChild")
-    public Element lastElementChild;
-    
-    @JsProperty(name="childElementCount")
-    public double childElementCount;
-    
-    @JsMethod(name = "append")
-    public native void append();
-    
-    @JsMethod(name = "append")
-    public native void append(Node... nodes);
-    
-    @JsMethod(name = "append")
-    public native void append(String... nodes);
-    
-    @JsMethod(name = "getElementById")
-    public native Element getElementById(String elementId);
-    
-    @JsMethod(name = "prepend")
-    public native void prepend();
-    
-    @JsMethod(name = "prepend")
-    public native void prepend(Node... nodes);
-    
-    @JsMethod(name = "prepend")
-    public native void prepend(String... nodes);
-    
-    @JsMethod(name = "querySelector")
-    public native Element querySelector(String selectors);
-    
-    @JsMethod(name = "querySelectorAll")
-    public native NodeList querySelectorAll(String selectors);
     
 }

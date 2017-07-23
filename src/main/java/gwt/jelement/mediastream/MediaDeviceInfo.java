@@ -31,6 +31,7 @@ public class MediaDeviceInfo{
     
     @JsProperty(name="kind")
     public String kind;
+    
     @JsOverlay
     public final MediaDeviceKind getKind(){
        return MediaDeviceKind.of(kind);

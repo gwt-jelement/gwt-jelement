@@ -80,6 +80,7 @@ public class AnimationEffectTimingReadOnly{
     
     @JsProperty(name="direction")
     public String direction;
+    
     @JsOverlay
     public final PlaybackDirection getDirection(){
        return PlaybackDirection.of(direction);

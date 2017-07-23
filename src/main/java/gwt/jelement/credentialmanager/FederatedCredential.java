@@ -37,11 +37,5 @@ public class FederatedCredential extends Credential{
     @JsProperty(name="protocol")
     public String protocol;
     
-    @JsProperty(name="name")
-    public String name;
-    
-    @JsProperty(name="iconURL")
-    public String iconURL;
-    
     
 }

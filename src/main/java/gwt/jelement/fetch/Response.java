@@ -19,10 +19,6 @@ package gwt.jelement.fetch;
 import gwt.jelement.fetch.Headers;
 import gwt.jelement.fetch.Response;
 import gwt.jelement.fetch.ResponseType;
-import gwt.jelement.fileapi.Blob;
-import gwt.jelement.html.FormData;
-import elemental2.core.ArrayBuffer;
-import elemental2.promise.Promise;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
@@ -34,6 +30,7 @@ public class Response{
     
     @JsProperty(name="type")
     public String type;
+    
     @JsOverlay
     public final ResponseType getType(){
        return ResponseType.of(type);
@@ -60,34 +57,16 @@ public class Response{
     @JsProperty(name="body")
     public Object body;
     
-    @JsProperty(name="bodyUsed")
-    public boolean bodyUsed;
-    
-    @JsMethod(name = "arrayBuffer")
-    public native Promise<ArrayBuffer> arrayBuffer();
-    
-    @JsMethod(name = "blob")
-    public native Promise<Blob> blob();
-    
     @JsMethod(name = "clone")
     public native Response clone();
     
     @JsMethod(name = "error")
     public native Response error();
     
-    @JsMethod(name = "formData")
-    public native Promise<FormData> formData();
-    
-    @JsMethod(name = "json")
-    public native Promise<Object> json();
-    
     @JsMethod(name = "redirect")
     public native Response redirect(String url);
     
     @JsMethod(name = "redirect")
     public native Response redirect(String url, short status);
-    
-    @JsMethod(name = "text")
-    public native Promise<String> text();
     
 }

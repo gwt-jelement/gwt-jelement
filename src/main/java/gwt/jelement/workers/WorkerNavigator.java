@@ -39,29 +39,5 @@ public class WorkerNavigator{
     @JsProperty(name="storage")
     public StorageManager storage;
     
-    @JsProperty(name="hardwareConcurrency")
-    public double hardwareConcurrency;
-    
-    @JsProperty(name="appCodeName")
-    public String appCodeName;
-    
-    @JsProperty(name="appName")
-    public String appName;
-    
-    @JsProperty(name="appVersion")
-    public String appVersion;
-    
-    @JsProperty(name="platform")
-    public String platform;
-    
-    @JsProperty(name="product")
-    public String product;
-    
-    @JsProperty(name="userAgent")
-    public String userAgent;
-    
-    @JsProperty(name="onLine")
-    public boolean onLine;
-    
     
 }

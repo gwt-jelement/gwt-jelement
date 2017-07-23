@@ -60,6 +60,7 @@ public class RTCDataChannel extends EventTarget{
     
     @JsProperty(name="readyState")
     public String readyState;
+    
     @JsOverlay
     public final RTCDataChannelState getReadyState(){
        return RTCDataChannelState.of(readyState);

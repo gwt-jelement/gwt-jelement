@@ -29,6 +29,7 @@ public class PhotoCapabilities{
     
     @JsProperty(name="redEyeReduction")
     public String redEyeReduction;
+    
     @JsOverlay
     public final RedEyeReduction getRedEyeReduction(){
        return RedEyeReduction.of(redEyeReduction);
@@ -42,6 +43,7 @@ public class PhotoCapabilities{
     
     @JsProperty(name="fillLightMode")
     public String[] fillLightMode;
+    
     @JsOverlay
     public final FillLightMode[] getFillLightMode(){
        return FillLightMode.ofArray(fillLightMode);

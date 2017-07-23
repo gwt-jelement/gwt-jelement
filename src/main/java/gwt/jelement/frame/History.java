@@ -31,6 +31,7 @@ public class History{
     
     @JsProperty(name="scrollRestoration")
     public String scrollRestoration;
+    
     @JsOverlay
     public final ScrollRestoration getScrollRestoration(){
        return ScrollRestoration.of(scrollRestoration);

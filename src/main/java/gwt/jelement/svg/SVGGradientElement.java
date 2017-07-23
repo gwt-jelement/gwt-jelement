@@ -17,7 +17,6 @@
 package gwt.jelement.svg;
 
 import gwt.jelement.svg.SVGAnimatedEnumeration;
-import gwt.jelement.svg.SVGAnimatedString;
 import gwt.jelement.svg.SVGAnimatedTransformList;
 import gwt.jelement.svg.SVGElement;
 import jsinterop.annotations.JsConstructor;
@@ -46,9 +45,6 @@ public class SVGGradientElement extends SVGElement{
     
     @JsProperty(name="spreadMethod")
     public SVGAnimatedEnumeration spreadMethod;
-    
-    @JsProperty(name="href")
-    public SVGAnimatedString href;
     
     
 }

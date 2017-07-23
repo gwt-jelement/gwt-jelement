@@ -79,6 +79,7 @@ public class ScrollTimeline extends AnimationTimeline{
     
     @JsProperty(name="orientation")
     public String orientation;
+    
     @JsOverlay
     public final ScrollDirection getOrientation(){
        return ScrollDirection.of(orientation);

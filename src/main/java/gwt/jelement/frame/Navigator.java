@@ -127,39 +127,6 @@ public class Navigator{
     @JsProperty(name="usb")
     public USB usb;
     
-    @JsProperty(name="hardwareConcurrency")
-    public double hardwareConcurrency;
-    
-    @JsProperty(name="cookieEnabled")
-    public boolean cookieEnabled;
-    
-    @JsProperty(name="appCodeName")
-    public String appCodeName;
-    
-    @JsProperty(name="appName")
-    public String appName;
-    
-    @JsProperty(name="appVersion")
-    public String appVersion;
-    
-    @JsProperty(name="platform")
-    public String platform;
-    
-    @JsProperty(name="product")
-    public String product;
-    
-    @JsProperty(name="userAgent")
-    public String userAgent;
-    
-    @JsProperty(name="language")
-    public String language;
-    
-    @JsProperty(name="languages")
-    public String[] languages;
-    
-    @JsProperty(name="onLine")
-    public boolean onLine;
-    
     @JsMethod(name = "cancelKeyboardLock")
     public native void cancelKeyboardLock();
     

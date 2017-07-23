@@ -27,6 +27,7 @@ public class IDBObservation{
     
     @JsProperty(name="type")
     public String type;
+    
     @JsOverlay
     public final IDBObservationType getType(){
        return IDBObservationType.of(type);

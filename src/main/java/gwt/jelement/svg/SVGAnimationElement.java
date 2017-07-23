@@ -18,7 +18,6 @@ package gwt.jelement.svg;
 
 import gwt.jelement.events.EventHandlerNonNull;
 import gwt.jelement.svg.SVGElement;
-import gwt.jelement.svg.SVGStringList;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsPackage;
@@ -44,12 +43,6 @@ public class SVGAnimationElement extends SVGElement{
     
     @JsProperty(name="onrepeat")
     public EventHandlerNonNull onrepeat;
-    
-    @JsProperty(name="requiredExtensions")
-    public SVGStringList requiredExtensions;
-    
-    @JsProperty(name="systemLanguage")
-    public SVGStringList systemLanguage;
     
     @JsMethod(name = "beginElement")
     public native void beginElement();

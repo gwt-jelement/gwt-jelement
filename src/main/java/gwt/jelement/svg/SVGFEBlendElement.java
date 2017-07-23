@@ -17,7 +17,6 @@
 package gwt.jelement.svg;
 
 import gwt.jelement.svg.SVGAnimatedEnumeration;
-import gwt.jelement.svg.SVGAnimatedLength;
 import gwt.jelement.svg.SVGAnimatedString;
 import gwt.jelement.svg.SVGElement;
 import jsinterop.annotations.JsConstructor;
@@ -48,21 +47,6 @@ public class SVGFEBlendElement extends SVGElement{
     
     @JsProperty(name="mode")
     public SVGAnimatedEnumeration mode;
-    
-    @JsProperty(name="x")
-    public SVGAnimatedLength x;
-    
-    @JsProperty(name="y")
-    public SVGAnimatedLength y;
-    
-    @JsProperty(name="width")
-    public SVGAnimatedLength width;
-    
-    @JsProperty(name="height")
-    public SVGAnimatedLength height;
-    
-    @JsProperty(name="result")
-    public SVGAnimatedString result;
     
     
 }

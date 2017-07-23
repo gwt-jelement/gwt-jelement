@@ -53,6 +53,7 @@ public class Gamepad{
     
     @JsProperty(name="hand")
     public String hand;
+    
     @JsOverlay
     public final GamepadHand getHand(){
        return GamepadHand.of(hand);

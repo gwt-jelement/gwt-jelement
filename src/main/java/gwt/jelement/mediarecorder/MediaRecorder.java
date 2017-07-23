@@ -43,6 +43,7 @@ public class MediaRecorder extends EventTarget{
     
     @JsProperty(name="state")
     public String state;
+    
     @JsOverlay
     public final RecordingState getState(){
        return RecordingState.of(state);

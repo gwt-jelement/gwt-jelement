@@ -37,6 +37,7 @@ public class PannerNode extends AudioNode{
     
     @JsProperty(name="panningModel")
     public String panningModel;
+    
     @JsOverlay
     public final PanningModelType getPanningModel(){
        return PanningModelType.of(panningModel);
@@ -67,6 +68,7 @@ public class PannerNode extends AudioNode{
     
     @JsProperty(name="distanceModel")
     public String distanceModel;
+    
     @JsOverlay
     public final DistanceModelType getDistanceModel(){
        return DistanceModelType.of(distanceModel);

@@ -49,6 +49,7 @@ public class IDBRequest extends EventTarget{
     
     @JsProperty(name="readyState")
     public String readyState;
+    
     @JsOverlay
     public final IDBRequestReadyState getReadyState(){
        return IDBRequestReadyState.of(readyState);

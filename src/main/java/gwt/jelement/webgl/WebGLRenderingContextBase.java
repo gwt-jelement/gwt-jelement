@@ -22,7 +22,6 @@ import gwt.jelement.html.HTMLVideoElement;
 import gwt.jelement.html.ImageData;
 import gwt.jelement.imagebitmap.ImageBitmap;
 import gwt.jelement.offscreencanvas.OffscreenCanvas;
-import gwt.jelement.webgl.WebGL2RenderingContext;
 import gwt.jelement.webgl.WebGLActiveInfo;
 import gwt.jelement.webgl.WebGLBuffer;
 import gwt.jelement.webgl.WebGLContextAttributes;
@@ -345,8 +344,42 @@ public class WebGLRenderingContextBase{
     public static int BROWSER_DEFAULT_WEBGL;
     
     
+    @JsType(isNative = true, name = "?", namespace = JsPackage.GLOBAL)
+    public interface VRSource {
+        @JsOverlay
+        static VRSource of(HTMLCanvasElement value){
+            return Js.cast(value);
+        }
+    
+        @JsOverlay
+        static VRSource of(OffscreenCanvas value){
+            return Js.cast(value);
+        }
+    
+        @JsOverlay
+        default HTMLCanvasElement asHTMLCanvasElement(){
+            return Js.cast(this);
+        }
+    
+        @JsOverlay
+        default OffscreenCanvas asOffscreenCanvas(){
+            return Js.cast(this);
+        }
+    
+        @JsOverlay
+        default boolean isHTMLCanvasElement(){
+            return (Object) this instanceof HTMLCanvasElement;
+        }
+    
+        @JsOverlay
+        default boolean isOffscreenCanvas(){
+            return (Object) this instanceof OffscreenCanvas;
+        }
+    
+    }
+    
     @JsProperty(name="canvas")
-    public WebGL2RenderingContext.VRSource canvas;
+    public WebGLRenderingContextBase.VRSource canvas;
     
     @JsProperty(name="drawingBufferWidth")
     public double drawingBufferWidth;

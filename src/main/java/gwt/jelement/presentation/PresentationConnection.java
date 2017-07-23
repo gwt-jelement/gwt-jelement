@@ -46,6 +46,7 @@ public class PresentationConnection extends EventTarget{
     
     @JsProperty(name="state")
     public String state;
+    
     @JsOverlay
     public final PresentationConnectionState getState(){
        return PresentationConnectionState.of(state);
@@ -62,6 +63,7 @@ public class PresentationConnection extends EventTarget{
     
     @JsProperty(name="binaryType")
     public String binaryType;
+    
     @JsOverlay
     public final BinaryType getBinaryType(){
        return BinaryType.of(binaryType);

@@ -40,6 +40,7 @@ public class ServiceWorker extends EventTarget{
     
     @JsProperty(name="state")
     public String state;
+    
     @JsOverlay
     public final ServiceWorkerState getState(){
        return ServiceWorkerState.of(state);
@@ -47,9 +48,6 @@ public class ServiceWorker extends EventTarget{
     
     @JsProperty(name="onstatechange")
     public EventHandlerNonNull onstatechange;
-    
-    @JsProperty(name="onerror")
-    public EventHandlerNonNull onerror;
     
     @JsMethod(name = "postMessage")
     public native void postMessage(Object message);

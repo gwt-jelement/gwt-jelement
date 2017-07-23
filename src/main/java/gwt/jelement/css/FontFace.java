@@ -54,6 +54,7 @@ public class FontFace{
     
     @JsProperty(name="status")
     public String status;
+    
     @JsOverlay
     public final FontFaceLoadStatus getStatus(){
        return FontFaceLoadStatus.of(status);

@@ -59,6 +59,7 @@ public class PerformanceNavigationTiming extends PerformanceResourceTiming{
     
     @JsProperty(name="type")
     public String type;
+    
     @JsOverlay
     public final NavigationType getType(){
        return NavigationType.of(type);

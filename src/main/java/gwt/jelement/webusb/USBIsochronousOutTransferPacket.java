@@ -39,6 +39,7 @@ public class USBIsochronousOutTransferPacket{
     
     @JsProperty(name="status")
     public String status;
+    
     @JsOverlay
     public final USBTransferStatus getStatus(){
        return USBTransferStatus.of(status);

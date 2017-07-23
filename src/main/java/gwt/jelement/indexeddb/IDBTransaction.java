@@ -43,6 +43,7 @@ public class IDBTransaction extends EventTarget{
     
     @JsProperty(name="mode")
     public String mode;
+    
     @JsOverlay
     public final IDBTransactionMode getMode(){
        return IDBTransactionMode.of(mode);

@@ -45,6 +45,7 @@ public class VTTRegion{
     
     @JsProperty(name="scroll")
     public String scroll;
+    
     @JsOverlay
     public final ScrollSetting getScroll(){
        return ScrollSetting.of(scroll);

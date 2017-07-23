@@ -118,6 +118,7 @@ public class CanvasRenderingContext2D{
     
     @JsProperty(name="imageSmoothingQuality")
     public String imageSmoothingQuality;
+    
     @JsOverlay
     public final ImageSmoothingQuality getImageSmoothingQuality(){
        return ImageSmoothingQuality.of(imageSmoothingQuality);
@@ -179,20 +180,8 @@ public class CanvasRenderingContext2D{
     @JsMethod(name = "addHitRegion")
     public native void addHitRegion(HitRegionOptions options);
     
-    @JsMethod(name = "arc")
-    public native void arc(float x, float y, float radius, float startAngle, float endAngle);
-    
-    @JsMethod(name = "arc")
-    public native void arc(float x, float y, float radius, float startAngle, float endAngle, boolean anticlockwise);
-    
-    @JsMethod(name = "arcTo")
-    public native void arcTo(float x1, float y1, float x2, float y2, float radius);
-    
     @JsMethod(name = "beginPath")
     public native void beginPath();
-    
-    @JsMethod(name = "bezierCurveTo")
-    public native void bezierCurveTo(float cp1x, float cp1y, float cp2x, float cp2y, float x, float y);
     
     @JsMethod(name = "clearHitRegions")
     public native void clearHitRegions();
@@ -221,9 +210,6 @@ public class CanvasRenderingContext2D{
     
     @JsMethod(name = "clip")
     public native void clip(Path2D path, String winding);
-    
-    @JsMethod(name = "closePath")
-    public native void closePath();
     
     @JsMethod(name = "createImageData")
     public native ImageData createImageData(ImageData imagedata);
@@ -348,12 +334,6 @@ public class CanvasRenderingContext2D{
     @JsMethod(name = "drawImage")
     public native void drawImage(OffscreenCanvas image, double sx, double sy, double sw, double sh, double dx, double dy, double dw, double dh);
     
-    @JsMethod(name = "ellipse")
-    public native void ellipse(float x, float y, float radiusX, float radiusY, float rotation, float startAngle, float endAngle);
-    
-    @JsMethod(name = "ellipse")
-    public native void ellipse(float x, float y, float radiusX, float radiusY, float rotation, float startAngle, float endAngle, boolean anticlockwise);
-    
     @JsMethod(name = "fill")
     public native void fill();
     
@@ -425,26 +405,14 @@ public class CanvasRenderingContext2D{
     @JsMethod(name = "isPointInStroke")
     public native boolean isPointInStroke(Path2D path, double x, double y);
     
-    @JsMethod(name = "lineTo")
-    public native void lineTo(float x, float y);
-    
     @JsMethod(name = "measureText")
     public native TextMetrics measureText(String text);
-    
-    @JsMethod(name = "moveTo")
-    public native void moveTo(float x, float y);
     
     @JsMethod(name = "putImageData")
     public native void putImageData(ImageData imagedata, double dx, double dy);
     
     @JsMethod(name = "putImageData")
     public native void putImageData(ImageData imagedata, double dx, double dy, double dirtyX, double dirtyY, double dirtyWidth, double dirtyHeight);
-    
-    @JsMethod(name = "quadraticCurveTo")
-    public native void quadraticCurveTo(float cpx, float cpy, float x, float y);
-    
-    @JsMethod(name = "rect")
-    public native void rect(float x, float y, float width, float height);
     
     @JsMethod(name = "removeHitRegion")
     public native void removeHitRegion(String id);

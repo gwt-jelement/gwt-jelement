@@ -30,6 +30,7 @@ public class AppBannerPromptResult{
     
     @JsProperty(name="outcome")
     public String outcome;
+    
     @JsOverlay
     public final AppBannerPromptOutcome getOutcome(){
        return AppBannerPromptOutcome.of(outcome);

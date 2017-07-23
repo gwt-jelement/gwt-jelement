@@ -35,6 +35,7 @@ public class MediaSession{
     
     @JsProperty(name="playbackState")
     public String playbackState;
+    
     @JsOverlay
     public final MediaSessionPlaybackState getPlaybackState(){
        return MediaSessionPlaybackState.of(playbackState);

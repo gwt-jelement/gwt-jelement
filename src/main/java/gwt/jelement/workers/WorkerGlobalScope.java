@@ -32,7 +32,6 @@ import gwt.jelement.html.ImageData;
 import gwt.jelement.imagebitmap.ImageBitmap;
 import gwt.jelement.imagebitmap.ImageBitmapOptions;
 import gwt.jelement.indexeddb.IDBFactory;
-import gwt.jelement.jelement.Function;
 import gwt.jelement.offscreencanvas.OffscreenCanvas;
 import gwt.jelement.svg.SVGImageElement;
 import gwt.jelement.timing.WorkerPerformance;
@@ -72,6 +71,7 @@ public class WorkerGlobalScope extends EventTarget{
     
     @JsProperty(name="addressSpace")
     public String addressSpace;
+    
     @JsOverlay
     public final AddressSpace getAddressSpace(){
        return AddressSpace.of(addressSpace);
@@ -100,24 +100,6 @@ public class WorkerGlobalScope extends EventTarget{
     
     @JsProperty(name="performance")
     public WorkerPerformance performance;
-    
-    @JsMethod(name = "atob")
-    public native String atob(String atob);
-    
-    @JsMethod(name = "btoa")
-    public native String btoa(String btoa);
-    
-    @JsMethod(name = "clearInterval")
-    public native void clearInterval();
-    
-    @JsMethod(name = "clearInterval")
-    public native void clearInterval(double handle);
-    
-    @JsMethod(name = "clearTimeout")
-    public native void clearTimeout();
-    
-    @JsMethod(name = "clearTimeout")
-    public native void clearTimeout(double handle);
     
     @JsMethod(name = "createImageBitmap")
     public native Promise createImageBitmap(HTMLImageElement imageBitmap);
@@ -232,41 +214,5 @@ public class WorkerGlobalScope extends EventTarget{
     
     @JsMethod(name = "importScripts")
     public native void importScripts(String... urls);
-    
-    @JsMethod(name = "setInterval")
-    public native double setInterval(Function handler);
-    
-    @JsMethod(name = "setInterval")
-    public native double setInterval(String handler);
-    
-    @JsMethod(name = "setInterval")
-    public native double setInterval(Function handler, double timeout);
-    
-    @JsMethod(name = "setInterval")
-    public native double setInterval(String handler, double timeout);
-    
-    @JsMethod(name = "setInterval")
-    public native double setInterval(Function handler, double timeout, Object... arguments);
-    
-    @JsMethod(name = "setInterval")
-    public native double setInterval(String handler, double timeout, Object... arguments);
-    
-    @JsMethod(name = "setTimeout")
-    public native double setTimeout(Function handler);
-    
-    @JsMethod(name = "setTimeout")
-    public native double setTimeout(String handler);
-    
-    @JsMethod(name = "setTimeout")
-    public native double setTimeout(Function handler, double timeout);
-    
-    @JsMethod(name = "setTimeout")
-    public native double setTimeout(String handler, double timeout);
-    
-    @JsMethod(name = "setTimeout")
-    public native double setTimeout(Function handler, double timeout, Object... arguments);
-    
-    @JsMethod(name = "setTimeout")
-    public native double setTimeout(String handler, double timeout, Object... arguments);
     
 }

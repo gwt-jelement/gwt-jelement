@@ -73,6 +73,7 @@ public class XMLHttpRequest extends XMLHttpRequestEventTarget{
     
     @JsProperty(name="responseType")
     public String responseType;
+    
     @JsOverlay
     public final XMLHttpRequestResponseType getResponseType(){
        return XMLHttpRequestResponseType.of(responseType);

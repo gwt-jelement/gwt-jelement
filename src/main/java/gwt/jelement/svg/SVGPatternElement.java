@@ -18,12 +18,8 @@ package gwt.jelement.svg;
 
 import gwt.jelement.svg.SVGAnimatedEnumeration;
 import gwt.jelement.svg.SVGAnimatedLength;
-import gwt.jelement.svg.SVGAnimatedPreserveAspectRatio;
-import gwt.jelement.svg.SVGAnimatedRect;
-import gwt.jelement.svg.SVGAnimatedString;
 import gwt.jelement.svg.SVGAnimatedTransformList;
 import gwt.jelement.svg.SVGElement;
-import gwt.jelement.svg.SVGStringList;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -57,21 +53,6 @@ public class SVGPatternElement extends SVGElement{
     
     @JsProperty(name="height")
     public SVGAnimatedLength height;
-    
-    @JsProperty(name="viewBox")
-    public SVGAnimatedRect viewBox;
-    
-    @JsProperty(name="preserveAspectRatio")
-    public SVGAnimatedPreserveAspectRatio preserveAspectRatio;
-    
-    @JsProperty(name="href")
-    public SVGAnimatedString href;
-    
-    @JsProperty(name="requiredExtensions")
-    public SVGStringList requiredExtensions;
-    
-    @JsProperty(name="systemLanguage")
-    public SVGStringList systemLanguage;
     
     
 }

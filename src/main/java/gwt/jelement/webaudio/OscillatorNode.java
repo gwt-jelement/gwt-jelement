@@ -37,6 +37,7 @@ public class OscillatorNode extends AudioScheduledSourceNode{
     
     @JsProperty(name="type")
     public String type;
+    
     @JsOverlay
     public final OscillatorType getType(){
        return OscillatorType.of(type);

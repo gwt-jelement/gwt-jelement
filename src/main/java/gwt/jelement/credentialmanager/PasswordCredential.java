@@ -80,11 +80,5 @@ public class PasswordCredential extends Credential{
     @JsProperty(name="password")
     public String password;
     
-    @JsProperty(name="name")
-    public String name;
-    
-    @JsProperty(name="iconURL")
-    public String iconURL;
-    
     
 }

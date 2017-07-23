@@ -38,6 +38,7 @@ public class WaveShaperNode extends AudioNode{
     
     @JsProperty(name="oversample")
     public String oversample;
+    
     @JsOverlay
     public final OverSampleType getOversample(){
        return OverSampleType.of(oversample);

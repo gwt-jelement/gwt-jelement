@@ -31,6 +31,7 @@ public class USBEndpoint{
     
     @JsProperty(name="direction")
     public String direction;
+    
     @JsOverlay
     public final USBDirection getDirection(){
        return USBDirection.of(direction);
@@ -38,6 +39,7 @@ public class USBEndpoint{
     
     @JsProperty(name="type")
     public String type;
+    
     @JsOverlay
     public final USBEndpointType getType(){
        return USBEndpointType.of(type);

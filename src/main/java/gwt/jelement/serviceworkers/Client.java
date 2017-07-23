@@ -36,6 +36,7 @@ public class Client{
     
     @JsProperty(name="type")
     public String type;
+    
     @JsOverlay
     public final ClientType getType(){
        return ClientType.of(type);
@@ -43,6 +44,7 @@ public class Client{
     
     @JsProperty(name="frameType")
     public String frameType;
+    
     @JsOverlay
     public final ContextFrameType getFrameType(){
        return ContextFrameType.of(frameType);

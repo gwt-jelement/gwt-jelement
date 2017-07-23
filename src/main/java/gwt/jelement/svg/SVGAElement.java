@@ -34,8 +34,5 @@ public class SVGAElement extends SVGGraphicsElement{
     @JsProperty(name="target")
     public SVGAnimatedString target;
     
-    @JsProperty(name="href")
-    public SVGAnimatedString href;
-    
     
 }

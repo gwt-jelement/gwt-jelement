@@ -42,6 +42,7 @@ public class SourceBuffer extends EventTarget{
     
     @JsProperty(name="mode")
     public String mode;
+    
     @JsOverlay
     public final AppendMode getMode(){
        return AppendMode.of(mode);

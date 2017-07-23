@@ -39,6 +39,7 @@ public class MIDIPort extends EventTarget{
     
     @JsProperty(name="connection")
     public String connection;
+    
     @JsOverlay
     public final MIDIPortConnectionState getConnection(){
        return MIDIPortConnectionState.of(connection);
@@ -55,6 +56,7 @@ public class MIDIPort extends EventTarget{
     
     @JsProperty(name="state")
     public String state;
+    
     @JsOverlay
     public final MIDIPortDeviceState getState(){
        return MIDIPortDeviceState.of(state);
@@ -62,6 +64,7 @@ public class MIDIPort extends EventTarget{
     
     @JsProperty(name="type")
     public String type;
+    
     @JsOverlay
     public final MIDIPortType getType(){
        return MIDIPortType.of(type);

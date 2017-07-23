@@ -39,6 +39,7 @@ public class TextTrack extends EventTarget{
     
     @JsProperty(name="kind")
     public String kind;
+    
     @JsOverlay
     public final TextTrackKind getKind(){
        return TextTrackKind.of(kind);
@@ -55,6 +56,7 @@ public class TextTrack extends EventTarget{
     
     @JsProperty(name="mode")
     public String mode;
+    
     @JsOverlay
     public final TextTrackMode getMode(){
        return TextTrackMode.of(mode);

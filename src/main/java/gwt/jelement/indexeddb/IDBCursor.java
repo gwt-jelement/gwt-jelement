@@ -32,6 +32,7 @@ public class IDBCursor{
     
     @JsProperty(name="direction")
     public String direction;
+    
     @JsOverlay
     public final IDBCursorDirection getDirection(){
        return IDBCursorDirection.of(direction);

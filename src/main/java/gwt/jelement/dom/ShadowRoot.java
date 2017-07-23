@@ -16,14 +16,11 @@
  */
 package gwt.jelement.dom;
 
-import gwt.jelement.css.StyleSheetList;
 import gwt.jelement.dom.DocumentFragment;
 import gwt.jelement.dom.Element;
 import gwt.jelement.dom.ShadowRoot;
 import gwt.jelement.dom.ShadowRootMode;
-import gwt.jelement.editing.Selection;
 import jsinterop.annotations.JsConstructor;
-import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -39,6 +36,7 @@ public class ShadowRoot extends DocumentFragment{
     
     @JsProperty(name="mode")
     public String mode;
+    
     @JsOverlay
     public final ShadowRootMode getMode(){
        return ShadowRootMode.of(mode);
@@ -56,25 +54,5 @@ public class ShadowRoot extends DocumentFragment{
     @JsProperty(name="delegatesFocus")
     public boolean delegatesFocus;
     
-    @JsProperty(name="activeElement")
-    public Element activeElement;
-    
-    @JsProperty(name="styleSheets")
-    public StyleSheetList styleSheets;
-    
-    @JsProperty(name="pointerLockElement")
-    public Element pointerLockElement;
-    
-    @JsProperty(name="fullscreenElement")
-    public Element fullscreenElement;
-    
-    @JsMethod(name = "elementFromPoint")
-    public native Element elementFromPoint(double x, double y);
-    
-    @JsMethod(name = "elementsFromPoint")
-    public native Element[] elementsFromPoint(double x, double y);
-    
-    @JsMethod(name = "getSelection")
-    public native Selection getSelection();
     
 }

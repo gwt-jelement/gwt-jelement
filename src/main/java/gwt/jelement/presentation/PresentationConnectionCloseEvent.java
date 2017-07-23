@@ -34,6 +34,7 @@ public class PresentationConnectionCloseEvent extends Event{
     
     @JsProperty(name="reason")
     public String reason;
+    
     @JsOverlay
     public final PresentationConnectionCloseReason getReason(){
        return PresentationConnectionCloseReason.of(reason);

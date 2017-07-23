@@ -37,6 +37,7 @@ public class BiquadFilterNode extends AudioNode{
     
     @JsProperty(name="type")
     public String type;
+    
     @JsOverlay
     public final BiquadFilterType getType(){
        return BiquadFilterType.of(type);

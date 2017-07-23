@@ -28,6 +28,7 @@ public class RTCSessionDescription{
     
     @JsProperty(name="type")
     public String type;
+    
     @JsOverlay
     public final RTCSdpType getType(){
        return RTCSdpType.of(type);

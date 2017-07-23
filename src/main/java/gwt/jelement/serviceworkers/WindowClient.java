@@ -37,6 +37,7 @@ public class WindowClient extends Client{
     
     @JsProperty(name="visibilityState")
     public String visibilityState;
+    
     @JsOverlay
     public final VisibilityState getVisibilityState(){
        return VisibilityState.of(visibilityState);

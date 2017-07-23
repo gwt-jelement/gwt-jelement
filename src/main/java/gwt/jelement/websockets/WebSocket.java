@@ -71,6 +71,7 @@ public class WebSocket extends EventTarget{
     
     @JsProperty(name="binaryType")
     public String binaryType;
+    
     @JsOverlay
     public final BinaryType getBinaryType(){
        return BinaryType.of(binaryType);

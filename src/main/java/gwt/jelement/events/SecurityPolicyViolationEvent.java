@@ -52,6 +52,7 @@ public class SecurityPolicyViolationEvent extends Event{
     
     @JsProperty(name="disposition")
     public String disposition;
+    
     @JsOverlay
     public final SecurityPolicyViolationEventDisposition getDisposition(){
        return SecurityPolicyViolationEventDisposition.of(disposition);

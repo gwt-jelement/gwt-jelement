@@ -36,6 +36,7 @@ public class NetworkInformation extends EventTarget{
     
     @JsProperty(name="type")
     public String type;
+    
     @JsOverlay
     public final ConnectionType getType(){
        return ConnectionType.of(type);
@@ -52,6 +53,7 @@ public class NetworkInformation extends EventTarget{
     
     @JsProperty(name="effectiveType")
     public String effectiveType;
+    
     @JsOverlay
     public final EffectiveConnectionType getEffectiveType(){
        return EffectiveConnectionType.of(effectiveType);

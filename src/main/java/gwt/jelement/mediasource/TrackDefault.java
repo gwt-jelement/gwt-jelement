@@ -27,6 +27,7 @@ public class TrackDefault{
     
     @JsProperty(name="type")
     public String type;
+    
     @JsOverlay
     public final TrackDefaultType getType(){
        return TrackDefaultType.of(type);

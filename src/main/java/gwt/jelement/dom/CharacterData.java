@@ -16,7 +16,6 @@
  */
 package gwt.jelement.dom;
 
-import gwt.jelement.dom.Element;
 import gwt.jelement.dom.Node;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
@@ -38,32 +37,8 @@ public class CharacterData extends Node{
     @JsProperty(name="length")
     public double length;
     
-    @JsProperty(name="previousElementSibling")
-    public Element previousElementSibling;
-    
-    @JsProperty(name="nextElementSibling")
-    public Element nextElementSibling;
-    
-    @JsMethod(name = "after")
-    public native void after();
-    
-    @JsMethod(name = "after")
-    public native void after(Node... nodes);
-    
-    @JsMethod(name = "after")
-    public native void after(String... nodes);
-    
     @JsMethod(name = "appendData")
     public native void appendData(String data);
-    
-    @JsMethod(name = "before")
-    public native void before();
-    
-    @JsMethod(name = "before")
-    public native void before(Node... nodes);
-    
-    @JsMethod(name = "before")
-    public native void before(String... nodes);
     
     @JsMethod(name = "deleteData")
     public native void deleteData(double offset, double count);
@@ -71,20 +46,8 @@ public class CharacterData extends Node{
     @JsMethod(name = "insertData")
     public native void insertData(double offset, String data);
     
-    @JsMethod(name = "remove")
-    public native void remove();
-    
     @JsMethod(name = "replaceData")
     public native void replaceData(double offset, double count, String data);
-    
-    @JsMethod(name = "replaceWith")
-    public native void replaceWith();
-    
-    @JsMethod(name = "replaceWith")
-    public native void replaceWith(Node... nodes);
-    
-    @JsMethod(name = "replaceWith")
-    public native void replaceWith(String... nodes);
     
     @JsMethod(name = "substringData")
     public native String substringData(double offset, double count);

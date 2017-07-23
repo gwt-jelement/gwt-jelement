@@ -16,7 +16,6 @@
  */
 package gwt.jelement.svg;
 
-import gwt.jelement.svg.SVGAnimatedString;
 import gwt.jelement.svg.SVGElement;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsPackage;
@@ -33,9 +32,6 @@ public class SVGScriptElement extends SVGElement{
     
     @JsProperty(name="type")
     public String type;
-    
-    @JsProperty(name="href")
-    public SVGAnimatedString href;
     
     
 }

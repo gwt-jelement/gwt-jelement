@@ -51,6 +51,7 @@ public class FontFaceSet extends EventTarget{
     
     @JsProperty(name="status")
     public String status;
+    
     @JsOverlay
     public final FontFaceSetLoadStatus getStatus(){
        return FontFaceSetLoadStatus.of(status);

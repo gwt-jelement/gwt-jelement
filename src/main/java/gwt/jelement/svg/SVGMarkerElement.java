@@ -20,8 +20,6 @@ import gwt.jelement.svg.SVGAngle;
 import gwt.jelement.svg.SVGAnimatedAngle;
 import gwt.jelement.svg.SVGAnimatedEnumeration;
 import gwt.jelement.svg.SVGAnimatedLength;
-import gwt.jelement.svg.SVGAnimatedPreserveAspectRatio;
-import gwt.jelement.svg.SVGAnimatedRect;
 import gwt.jelement.svg.SVGElement;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
@@ -64,12 +62,6 @@ public class SVGMarkerElement extends SVGElement{
     
     @JsProperty(name="orientAngle")
     public SVGAnimatedAngle orientAngle;
-    
-    @JsProperty(name="viewBox")
-    public SVGAnimatedRect viewBox;
-    
-    @JsProperty(name="preserveAspectRatio")
-    public SVGAnimatedPreserveAspectRatio preserveAspectRatio;
     
     @JsMethod(name = "setOrientToAngle")
     public native void setOrientToAngle(SVGAngle angle);

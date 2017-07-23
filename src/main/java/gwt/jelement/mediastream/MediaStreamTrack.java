@@ -62,6 +62,7 @@ public class MediaStreamTrack extends EventTarget{
     
     @JsProperty(name="readyState")
     public String readyState;
+    
     @JsOverlay
     public final MediaStreamTrackState getReadyState(){
        return MediaStreamTrackState.of(readyState);

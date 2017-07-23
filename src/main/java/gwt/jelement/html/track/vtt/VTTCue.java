@@ -76,6 +76,7 @@ public class VTTCue extends TextTrackCue{
     
     @JsProperty(name="vertical")
     public String vertical;
+    
     @JsOverlay
     public final DirectionSetting getVertical(){
        return DirectionSetting.of(vertical);
@@ -100,6 +101,7 @@ public class VTTCue extends TextTrackCue{
     
     @JsProperty(name="align")
     public String align;
+    
     @JsOverlay
     public final AlignSetting getAlign(){
        return AlignSetting.of(align);

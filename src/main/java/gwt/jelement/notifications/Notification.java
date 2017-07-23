@@ -39,6 +39,7 @@ public class Notification extends EventTarget{
     
     @JsProperty(name="permission")
     public static String permission;
+    
     @JsOverlay
     public final static NotificationPermission getPermission(){
        return NotificationPermission.of(permission);

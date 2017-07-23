@@ -34,6 +34,7 @@ public class BackgroundFetchClickEvent extends BackgroundFetchEvent{
     
     @JsProperty(name="state")
     public String state;
+    
     @JsOverlay
     public final BackgroundFetchState getState(){
        return BackgroundFetchState.of(state);

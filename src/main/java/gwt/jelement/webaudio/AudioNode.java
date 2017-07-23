@@ -51,6 +51,7 @@ public class AudioNode extends EventTarget{
     
     @JsProperty(name="channelCountMode")
     public String channelCountMode;
+    
     @JsOverlay
     public final ChannelCountMode getChannelCountMode(){
        return ChannelCountMode.of(channelCountMode);
@@ -63,6 +64,7 @@ public class AudioNode extends EventTarget{
     
     @JsProperty(name="channelInterpretation")
     public String channelInterpretation;
+    
     @JsOverlay
     public final ChannelInterpretation getChannelInterpretation(){
        return ChannelInterpretation.of(channelInterpretation);

@@ -65,6 +65,7 @@ public class RTCPeerConnection extends EventTarget{
     
     @JsProperty(name="signalingState")
     public String signalingState;
+    
     @JsOverlay
     public final RTCSignalingState getSignalingState(){
        return RTCSignalingState.of(signalingState);
@@ -72,6 +73,7 @@ public class RTCPeerConnection extends EventTarget{
     
     @JsProperty(name="iceGatheringState")
     public String iceGatheringState;
+    
     @JsOverlay
     public final RTCIceGatheringState getIceGatheringState(){
        return RTCIceGatheringState.of(iceGatheringState);
@@ -79,6 +81,7 @@ public class RTCPeerConnection extends EventTarget{
     
     @JsProperty(name="iceConnectionState")
     public String iceConnectionState;
+    
     @JsOverlay
     public final RTCIceConnectionState getIceConnectionState(){
        return RTCIceConnectionState.of(iceConnectionState);

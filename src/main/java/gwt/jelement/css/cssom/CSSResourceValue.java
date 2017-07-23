@@ -34,6 +34,7 @@ public class CSSResourceValue extends CSSStyleValue{
     
     @JsProperty(name="state")
     public String state;
+    
     @JsOverlay
     public final CSSResourceState getState(){
        return CSSResourceState.of(state);

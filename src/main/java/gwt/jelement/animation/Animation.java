@@ -55,6 +55,7 @@ public class Animation extends EventTarget{
     
     @JsProperty(name="playState")
     public String playState;
+    
     @JsOverlay
     public final AnimationPlayState getPlayState(){
        return AnimationPlayState.of(playState);

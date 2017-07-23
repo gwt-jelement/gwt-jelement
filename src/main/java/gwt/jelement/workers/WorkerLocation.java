@@ -17,38 +17,10 @@
 package gwt.jelement.workers;
 
 import jsinterop.annotations.JsPackage;
-import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, isNative = true)
 public class WorkerLocation{
-    
-    @JsProperty(name="href")
-    public String href;
-    
-    @JsProperty(name="origin")
-    public String origin;
-    
-    @JsProperty(name="protocol")
-    public String protocol;
-    
-    @JsProperty(name="host")
-    public String host;
-    
-    @JsProperty(name="hostname")
-    public String hostname;
-    
-    @JsProperty(name="port")
-    public String port;
-    
-    @JsProperty(name="pathname")
-    public String pathname;
-    
-    @JsProperty(name="search")
-    public String search;
-    
-    @JsProperty(name="hash")
-    public String hash;
     
     
 }

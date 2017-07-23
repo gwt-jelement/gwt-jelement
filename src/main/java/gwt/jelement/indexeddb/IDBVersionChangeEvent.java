@@ -40,6 +40,7 @@ public class IDBVersionChangeEvent extends Event{
     
     @JsProperty(name="dataLoss")
     public String dataLoss;
+    
     @JsOverlay
     public final IDBDataLossAmount getDataLoss(){
        return IDBDataLossAmount.of(dataLoss);

@@ -78,6 +78,7 @@ public class BaseAudioContext extends EventTarget{
     
     @JsProperty(name="state")
     public String state;
+    
     @JsOverlay
     public final AudioContextState getState(){
        return AudioContextState.of(state);

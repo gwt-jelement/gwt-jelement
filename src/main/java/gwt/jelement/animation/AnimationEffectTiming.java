@@ -53,7 +53,7 @@ public class AnimationEffectTiming extends AnimationEffectTimingReadOnly{
     
     @JsProperty(name="direction")
     public String direction;
-
+    
     @JsOverlay
     public final void setDirection(PlaybackDirection direction){
        this.direction = direction.getInternalValue();
