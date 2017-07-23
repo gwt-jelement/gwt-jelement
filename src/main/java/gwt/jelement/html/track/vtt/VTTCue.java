@@ -93,8 +93,28 @@ public class VTTCue extends TextTrackCue{
     @JsProperty(name="line")
     public VTTCue.DoubleOrAutoKeywordUnionType line;
     
+    @JsOverlay
+    public final void setLine(double line){
+        this.line = VTTCue.DoubleOrAutoKeywordUnionType.of(line);
+    }
+    
+    @JsOverlay
+    public final void setLine(String line){
+        this.line = VTTCue.DoubleOrAutoKeywordUnionType.of(line);
+    }
+    
     @JsProperty(name="position")
     public VTTCue.DoubleOrAutoKeywordUnionType position;
+    
+    @JsOverlay
+    public final void setPosition(double position){
+        this.position = VTTCue.DoubleOrAutoKeywordUnionType.of(position);
+    }
+    
+    @JsOverlay
+    public final void setPosition(String position){
+        this.position = VTTCue.DoubleOrAutoKeywordUnionType.of(position);
+    }
     
     @JsProperty(name="size")
     public double size;

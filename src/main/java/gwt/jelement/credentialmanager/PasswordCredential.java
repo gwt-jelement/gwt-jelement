@@ -77,8 +77,24 @@ public class PasswordCredential extends Credential{
     @JsProperty(name="additionalData")
     public PasswordCredential.CredentialBodyType additionalData;
     
+    @JsOverlay
+    public final void setAdditionalData(FormData additionalData){
+        this.additionalData = PasswordCredential.CredentialBodyType.of(additionalData);
+    }
+    
+    @JsOverlay
+    public final void setAdditionalData(URLSearchParams additionalData){
+        this.additionalData = PasswordCredential.CredentialBodyType.of(additionalData);
+    }
+    
     @JsProperty(name="password")
     public String password;
+    
+    @JsProperty(name="name")
+    public String name;
+    
+    @JsProperty(name="iconURL")
+    public String iconURL;
     
     
 }

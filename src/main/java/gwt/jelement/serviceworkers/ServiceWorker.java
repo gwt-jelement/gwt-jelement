@@ -49,6 +49,9 @@ public class ServiceWorker extends EventTarget{
     @JsProperty(name="onstatechange")
     public EventHandlerNonNull onstatechange;
     
+    @JsProperty(name="onerror")
+    public EventHandlerNonNull onerror;
+    
     @JsMethod(name = "postMessage")
     public native void postMessage(Object message);
     

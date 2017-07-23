@@ -22,7 +22,11 @@ import gwt.jelement.fetch.Request;
 import gwt.jelement.fetch.RequestCache;
 import gwt.jelement.fetch.RequestMode;
 import gwt.jelement.fetch.RequestRedirect;
+import gwt.jelement.fileapi.Blob;
+import gwt.jelement.html.FormData;
 import gwt.jelement.workers.RequestCredentials;
+import elemental2.core.ArrayBuffer;
+import elemental2.promise.Promise;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
@@ -87,7 +91,25 @@ public class Request{
     @JsProperty(name="integrity")
     public String integrity;
     
+    @JsProperty(name="bodyUsed")
+    public boolean bodyUsed;
+    
+    @JsMethod(name = "arrayBuffer")
+    public native Promise<ArrayBuffer> arrayBuffer();
+    
+    @JsMethod(name = "blob")
+    public native Promise<Blob> blob();
+    
     @JsMethod(name = "clone")
     public native Request clone();
+    
+    @JsMethod(name = "formData")
+    public native Promise<FormData> formData();
+    
+    @JsMethod(name = "json")
+    public native Promise<Object> json();
+    
+    @JsMethod(name = "text")
+    public native Promise<String> text();
     
 }

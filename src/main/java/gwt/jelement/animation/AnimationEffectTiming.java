@@ -51,6 +51,16 @@ public class AnimationEffectTiming extends AnimationEffectTimingReadOnly{
     @JsProperty(name="duration")
     public AnimationEffectTimingReadOnly.DoubleOrStringUnionType duration;
     
+    @JsOverlay
+    public final void setDuration(double duration){
+        this.duration = AnimationEffectTimingReadOnly.DoubleOrStringUnionType.of(duration);
+    }
+    
+    @JsOverlay
+    public final void setDuration(String duration){
+        this.duration = AnimationEffectTimingReadOnly.DoubleOrStringUnionType.of(duration);
+    }
+    
     @JsProperty(name="direction")
     public String direction;
     

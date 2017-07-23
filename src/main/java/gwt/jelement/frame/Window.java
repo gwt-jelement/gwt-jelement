@@ -39,6 +39,7 @@ import gwt.jelement.events.EventTarget;
 import gwt.jelement.events.TransitionEvent;
 import gwt.jelement.fetch.Request;
 import gwt.jelement.fetch.Response;
+import gwt.jelement.fileapi.Blob;
 import gwt.jelement.filesystem.EntryCallback;
 import gwt.jelement.filesystem.ErrorCallback;
 import gwt.jelement.filesystem.FileSystemCallback;
@@ -53,10 +54,18 @@ import gwt.jelement.frame.ScrollToOptions;
 import gwt.jelement.frame.VisualViewport;
 import gwt.jelement.frame.Window;
 import gwt.jelement.geometry.DOMMatrix;
+import gwt.jelement.html.HTMLCanvasElement;
+import gwt.jelement.html.HTMLImageElement;
+import gwt.jelement.html.HTMLVideoElement;
+import gwt.jelement.html.ImageData;
 import gwt.jelement.html.custom.CustomElementRegistry;
+import gwt.jelement.imagebitmap.ImageBitmap;
+import gwt.jelement.imagebitmap.ImageBitmapOptions;
 import gwt.jelement.indexeddb.IDBFactory;
+import gwt.jelement.jelement.Function;
 import gwt.jelement.loader.appcache.ApplicationCache;
 import gwt.jelement.mediastream.MediaStream;
+import gwt.jelement.offscreencanvas.OffscreenCanvas;
 import gwt.jelement.peerconnection.RTCPeerConnection;
 import gwt.jelement.quota.DeprecatedStorageInfo;
 import gwt.jelement.speech.SpeechGrammar;
@@ -66,6 +75,7 @@ import gwt.jelement.speech.SpeechRecognitionError;
 import gwt.jelement.speech.SpeechRecognitionEvent;
 import gwt.jelement.speech.SpeechSynthesis;
 import gwt.jelement.storage.Storage;
+import gwt.jelement.svg.SVGImageElement;
 import gwt.jelement.timing.Performance;
 import gwt.jelement.webdatabase.Database;
 import gwt.jelement.webdatabase.DatabaseCallback;
@@ -352,14 +362,281 @@ public class Window extends EventTarget{
     @JsProperty(name="audioWorklet")
     public Worklet audioWorklet;
     
+    @JsProperty(name="onabort")
+    public EventHandlerNonNull onabort;
+    
+    @JsProperty(name="onblur")
+    public EventHandlerNonNull onblur;
+    
+    @JsProperty(name="oncancel")
+    public EventHandlerNonNull oncancel;
+    
+    @JsProperty(name="oncanplay")
+    public EventHandlerNonNull oncanplay;
+    
+    @JsProperty(name="oncanplaythrough")
+    public EventHandlerNonNull oncanplaythrough;
+    
+    @JsProperty(name="onchange")
+    public EventHandlerNonNull onchange;
+    
+    @JsProperty(name="onclick")
+    public EventHandlerNonNull onclick;
+    
+    @JsProperty(name="onclose")
+    public EventHandlerNonNull onclose;
+    
+    @JsProperty(name="oncontextmenu")
+    public EventHandlerNonNull oncontextmenu;
+    
+    @JsProperty(name="oncuechange")
+    public EventHandlerNonNull oncuechange;
+    
+    @JsProperty(name="ondblclick")
+    public EventHandlerNonNull ondblclick;
+    
+    @JsProperty(name="ondrag")
+    public EventHandlerNonNull ondrag;
+    
+    @JsProperty(name="ondragend")
+    public EventHandlerNonNull ondragend;
+    
+    @JsProperty(name="ondragenter")
+    public EventHandlerNonNull ondragenter;
+    
+    @JsProperty(name="ondragleave")
+    public EventHandlerNonNull ondragleave;
+    
+    @JsProperty(name="ondragover")
+    public EventHandlerNonNull ondragover;
+    
+    @JsProperty(name="ondragstart")
+    public EventHandlerNonNull ondragstart;
+    
+    @JsProperty(name="ondrop")
+    public EventHandlerNonNull ondrop;
+    
+    @JsProperty(name="ondurationchange")
+    public EventHandlerNonNull ondurationchange;
+    
+    @JsProperty(name="onemptied")
+    public EventHandlerNonNull onemptied;
+    
+    @JsProperty(name="onended")
+    public EventHandlerNonNull onended;
+    
+    @JsProperty(name="onerror")
+    public EventHandlerNonNull onerror;
+    
+    @JsProperty(name="onfocus")
+    public EventHandlerNonNull onfocus;
+    
+    @JsProperty(name="oninput")
+    public EventHandlerNonNull oninput;
+    
+    @JsProperty(name="oninvalid")
+    public EventHandlerNonNull oninvalid;
+    
+    @JsProperty(name="onkeydown")
+    public EventHandlerNonNull onkeydown;
+    
+    @JsProperty(name="onkeypress")
+    public EventHandlerNonNull onkeypress;
+    
+    @JsProperty(name="onkeyup")
+    public EventHandlerNonNull onkeyup;
+    
+    @JsProperty(name="onload")
+    public EventHandlerNonNull onload;
+    
+    @JsProperty(name="onloadeddata")
+    public EventHandlerNonNull onloadeddata;
+    
+    @JsProperty(name="onloadedmetadata")
+    public EventHandlerNonNull onloadedmetadata;
+    
+    @JsProperty(name="onloadstart")
+    public EventHandlerNonNull onloadstart;
+    
+    @JsProperty(name="onmousedown")
+    public EventHandlerNonNull onmousedown;
+    
+    @JsProperty(name="onmouseenter")
+    public EventHandlerNonNull onmouseenter;
+    
+    @JsProperty(name="onmouseleave")
+    public EventHandlerNonNull onmouseleave;
+    
+    @JsProperty(name="onmousemove")
+    public EventHandlerNonNull onmousemove;
+    
+    @JsProperty(name="onmouseout")
+    public EventHandlerNonNull onmouseout;
+    
+    @JsProperty(name="onmouseover")
+    public EventHandlerNonNull onmouseover;
+    
+    @JsProperty(name="onmouseup")
+    public EventHandlerNonNull onmouseup;
+    
+    @JsProperty(name="onmousewheel")
+    public EventHandlerNonNull onmousewheel;
+    
+    @JsProperty(name="onpause")
+    public EventHandlerNonNull onpause;
+    
+    @JsProperty(name="onplay")
+    public EventHandlerNonNull onplay;
+    
+    @JsProperty(name="onplaying")
+    public EventHandlerNonNull onplaying;
+    
+    @JsProperty(name="onprogress")
+    public EventHandlerNonNull onprogress;
+    
+    @JsProperty(name="onratechange")
+    public EventHandlerNonNull onratechange;
+    
+    @JsProperty(name="onreset")
+    public EventHandlerNonNull onreset;
+    
+    @JsProperty(name="onresize")
+    public EventHandlerNonNull onresize;
+    
+    @JsProperty(name="onscroll")
+    public EventHandlerNonNull onscroll;
+    
+    @JsProperty(name="onseeked")
+    public EventHandlerNonNull onseeked;
+    
+    @JsProperty(name="onseeking")
+    public EventHandlerNonNull onseeking;
+    
+    @JsProperty(name="onselect")
+    public EventHandlerNonNull onselect;
+    
+    @JsProperty(name="onstalled")
+    public EventHandlerNonNull onstalled;
+    
+    @JsProperty(name="onsubmit")
+    public EventHandlerNonNull onsubmit;
+    
+    @JsProperty(name="onsuspend")
+    public EventHandlerNonNull onsuspend;
+    
+    @JsProperty(name="ontimeupdate")
+    public EventHandlerNonNull ontimeupdate;
+    
+    @JsProperty(name="ontoggle")
+    public EventHandlerNonNull ontoggle;
+    
+    @JsProperty(name="onvolumechange")
+    public EventHandlerNonNull onvolumechange;
+    
+    @JsProperty(name="onwaiting")
+    public EventHandlerNonNull onwaiting;
+    
+    @JsProperty(name="onauxclick")
+    public EventHandlerNonNull onauxclick;
+    
+    @JsProperty(name="ongotpointercapture")
+    public EventHandlerNonNull ongotpointercapture;
+    
+    @JsProperty(name="onlostpointercapture")
+    public EventHandlerNonNull onlostpointercapture;
+    
+    @JsProperty(name="onpointerdown")
+    public EventHandlerNonNull onpointerdown;
+    
+    @JsProperty(name="onpointermove")
+    public EventHandlerNonNull onpointermove;
+    
+    @JsProperty(name="onpointerup")
+    public EventHandlerNonNull onpointerup;
+    
+    @JsProperty(name="onpointercancel")
+    public EventHandlerNonNull onpointercancel;
+    
+    @JsProperty(name="onpointerover")
+    public EventHandlerNonNull onpointerover;
+    
+    @JsProperty(name="onpointerout")
+    public EventHandlerNonNull onpointerout;
+    
+    @JsProperty(name="onpointerenter")
+    public EventHandlerNonNull onpointerenter;
+    
+    @JsProperty(name="onpointerleave")
+    public EventHandlerNonNull onpointerleave;
+    
+    @JsProperty(name="ontouchcancel")
+    public EventHandlerNonNull ontouchcancel;
+    
+    @JsProperty(name="ontouchend")
+    public EventHandlerNonNull ontouchend;
+    
+    @JsProperty(name="ontouchmove")
+    public EventHandlerNonNull ontouchmove;
+    
+    @JsProperty(name="ontouchstart")
+    public EventHandlerNonNull ontouchstart;
+    
+    @JsProperty(name="onbeforeunload")
+    public EventHandlerNonNull onbeforeunload;
+    
+    @JsProperty(name="onhashchange")
+    public EventHandlerNonNull onhashchange;
+    
+    @JsProperty(name="onlanguagechange")
+    public EventHandlerNonNull onlanguagechange;
+    
+    @JsProperty(name="onmessage")
+    public EventHandlerNonNull onmessage;
+    
+    @JsProperty(name="onmessageerror")
+    public EventHandlerNonNull onmessageerror;
+    
+    @JsProperty(name="onoffline")
+    public EventHandlerNonNull onoffline;
+    
+    @JsProperty(name="ononline")
+    public EventHandlerNonNull ononline;
+    
+    @JsProperty(name="onpagehide")
+    public EventHandlerNonNull onpagehide;
+    
+    @JsProperty(name="onpageshow")
+    public EventHandlerNonNull onpageshow;
+    
+    @JsProperty(name="onpopstate")
+    public EventHandlerNonNull onpopstate;
+    
+    @JsProperty(name="onrejectionhandled")
+    public EventHandlerNonNull onrejectionhandled;
+    
+    @JsProperty(name="onstorage")
+    public EventHandlerNonNull onstorage;
+    
+    @JsProperty(name="onunhandledrejection")
+    public EventHandlerNonNull onunhandledrejection;
+    
+    @JsProperty(name="onunload")
+    public EventHandlerNonNull onunload;
+    
     @JsMethod(name = "alert")
     public native void alert();
     
     @JsMethod(name = "alert")
     public native void alert(String message);
     
+    @JsMethod(name = "atob")
+    public native String atob(String atob);
+    
     @JsMethod(name = "blur")
     public native void blur();
+    
+    @JsMethod(name = "btoa")
+    public native String btoa(String btoa);
     
     @JsMethod(name = "cancelAnimationFrame")
     public native void cancelAnimationFrame(double handle);
@@ -370,6 +647,18 @@ public class Window extends EventTarget{
     @JsMethod(name = "captureEvents")
     public native void captureEvents();
     
+    @JsMethod(name = "clearInterval")
+    public native void clearInterval();
+    
+    @JsMethod(name = "clearInterval")
+    public native void clearInterval(double handle);
+    
+    @JsMethod(name = "clearTimeout")
+    public native void clearTimeout();
+    
+    @JsMethod(name = "clearTimeout")
+    public native void clearTimeout(double handle);
+    
     @JsMethod(name = "close")
     public native void close();
     
@@ -378,6 +667,102 @@ public class Window extends EventTarget{
     
     @JsMethod(name = "confirm")
     public native boolean confirm(String message);
+    
+    @JsMethod(name = "createImageBitmap")
+    public native Promise createImageBitmap(HTMLImageElement imageBitmap);
+    
+    @JsMethod(name = "createImageBitmap")
+    public native Promise createImageBitmap(SVGImageElement imageBitmap);
+    
+    @JsMethod(name = "createImageBitmap")
+    public native Promise createImageBitmap(HTMLVideoElement imageBitmap);
+    
+    @JsMethod(name = "createImageBitmap")
+    public native Promise createImageBitmap(HTMLCanvasElement imageBitmap);
+    
+    @JsMethod(name = "createImageBitmap")
+    public native Promise createImageBitmap(Blob imageBitmap);
+    
+    @JsMethod(name = "createImageBitmap")
+    public native Promise createImageBitmap(ImageData imageBitmap);
+    
+    @JsMethod(name = "createImageBitmap")
+    public native Promise createImageBitmap(ImageBitmap imageBitmap);
+    
+    @JsMethod(name = "createImageBitmap")
+    public native Promise createImageBitmap(OffscreenCanvas imageBitmap);
+    
+    @JsMethod(name = "createImageBitmap")
+    public native Promise createImageBitmap(HTMLImageElement imageBitmap, ImageBitmapOptions options);
+    
+    @JsMethod(name = "createImageBitmap")
+    public native Promise createImageBitmap(SVGImageElement imageBitmap, ImageBitmapOptions options);
+    
+    @JsMethod(name = "createImageBitmap")
+    public native Promise createImageBitmap(HTMLVideoElement imageBitmap, ImageBitmapOptions options);
+    
+    @JsMethod(name = "createImageBitmap")
+    public native Promise createImageBitmap(HTMLCanvasElement imageBitmap, ImageBitmapOptions options);
+    
+    @JsMethod(name = "createImageBitmap")
+    public native Promise createImageBitmap(Blob imageBitmap, ImageBitmapOptions options);
+    
+    @JsMethod(name = "createImageBitmap")
+    public native Promise createImageBitmap(ImageData imageBitmap, ImageBitmapOptions options);
+    
+    @JsMethod(name = "createImageBitmap")
+    public native Promise createImageBitmap(ImageBitmap imageBitmap, ImageBitmapOptions options);
+    
+    @JsMethod(name = "createImageBitmap")
+    public native Promise createImageBitmap(OffscreenCanvas imageBitmap, ImageBitmapOptions options);
+    
+    @JsMethod(name = "createImageBitmap")
+    public native Promise createImageBitmap(HTMLImageElement imageBitmap, double sx, double sy, double sw, double sh);
+    
+    @JsMethod(name = "createImageBitmap")
+    public native Promise createImageBitmap(SVGImageElement imageBitmap, double sx, double sy, double sw, double sh);
+    
+    @JsMethod(name = "createImageBitmap")
+    public native Promise createImageBitmap(HTMLVideoElement imageBitmap, double sx, double sy, double sw, double sh);
+    
+    @JsMethod(name = "createImageBitmap")
+    public native Promise createImageBitmap(HTMLCanvasElement imageBitmap, double sx, double sy, double sw, double sh);
+    
+    @JsMethod(name = "createImageBitmap")
+    public native Promise createImageBitmap(Blob imageBitmap, double sx, double sy, double sw, double sh);
+    
+    @JsMethod(name = "createImageBitmap")
+    public native Promise createImageBitmap(ImageData imageBitmap, double sx, double sy, double sw, double sh);
+    
+    @JsMethod(name = "createImageBitmap")
+    public native Promise createImageBitmap(ImageBitmap imageBitmap, double sx, double sy, double sw, double sh);
+    
+    @JsMethod(name = "createImageBitmap")
+    public native Promise createImageBitmap(OffscreenCanvas imageBitmap, double sx, double sy, double sw, double sh);
+    
+    @JsMethod(name = "createImageBitmap")
+    public native Promise createImageBitmap(HTMLImageElement imageBitmap, double sx, double sy, double sw, double sh, ImageBitmapOptions options);
+    
+    @JsMethod(name = "createImageBitmap")
+    public native Promise createImageBitmap(SVGImageElement imageBitmap, double sx, double sy, double sw, double sh, ImageBitmapOptions options);
+    
+    @JsMethod(name = "createImageBitmap")
+    public native Promise createImageBitmap(HTMLVideoElement imageBitmap, double sx, double sy, double sw, double sh, ImageBitmapOptions options);
+    
+    @JsMethod(name = "createImageBitmap")
+    public native Promise createImageBitmap(HTMLCanvasElement imageBitmap, double sx, double sy, double sw, double sh, ImageBitmapOptions options);
+    
+    @JsMethod(name = "createImageBitmap")
+    public native Promise createImageBitmap(Blob imageBitmap, double sx, double sy, double sw, double sh, ImageBitmapOptions options);
+    
+    @JsMethod(name = "createImageBitmap")
+    public native Promise createImageBitmap(ImageData imageBitmap, double sx, double sy, double sw, double sh, ImageBitmapOptions options);
+    
+    @JsMethod(name = "createImageBitmap")
+    public native Promise createImageBitmap(ImageBitmap imageBitmap, double sx, double sy, double sw, double sh, ImageBitmapOptions options);
+    
+    @JsMethod(name = "createImageBitmap")
+    public native Promise createImageBitmap(OffscreenCanvas imageBitmap, double sx, double sy, double sw, double sh, ImageBitmapOptions options);
     
     @JsMethod(name = "fetch")
     public native Promise<Response> fetch(Request input);
@@ -525,6 +910,42 @@ public class Window extends EventTarget{
     
     @JsMethod(name = "scrollTo")
     public native void scrollTo(double x, double y);
+    
+    @JsMethod(name = "setInterval")
+    public native double setInterval(Function handler);
+    
+    @JsMethod(name = "setInterval")
+    public native double setInterval(String handler);
+    
+    @JsMethod(name = "setInterval")
+    public native double setInterval(Function handler, double timeout);
+    
+    @JsMethod(name = "setInterval")
+    public native double setInterval(String handler, double timeout);
+    
+    @JsMethod(name = "setInterval")
+    public native double setInterval(Function handler, double timeout, Object... arguments);
+    
+    @JsMethod(name = "setInterval")
+    public native double setInterval(String handler, double timeout, Object... arguments);
+    
+    @JsMethod(name = "setTimeout")
+    public native double setTimeout(Function handler);
+    
+    @JsMethod(name = "setTimeout")
+    public native double setTimeout(String handler);
+    
+    @JsMethod(name = "setTimeout")
+    public native double setTimeout(Function handler, double timeout);
+    
+    @JsMethod(name = "setTimeout")
+    public native double setTimeout(String handler, double timeout);
+    
+    @JsMethod(name = "setTimeout")
+    public native double setTimeout(Function handler, double timeout, Object... arguments);
+    
+    @JsMethod(name = "setTimeout")
+    public native double setTimeout(String handler, double timeout, Object... arguments);
     
     @JsMethod(name = "stop")
     public native void stop();

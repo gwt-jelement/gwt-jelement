@@ -18,6 +18,7 @@ package gwt.jelement.svg;
 
 import gwt.jelement.svg.SVGAnimatedEnumeration;
 import gwt.jelement.svg.SVGAnimatedLength;
+import gwt.jelement.svg.SVGAnimatedString;
 import gwt.jelement.svg.SVGTextContentElement;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsPackage;
@@ -47,6 +48,9 @@ public class SVGTextPathElement extends SVGTextContentElement{
     
     @JsProperty(name="spacing")
     public SVGAnimatedEnumeration spacing;
+    
+    @JsProperty(name="href")
+    public SVGAnimatedString href;
     
     
 }

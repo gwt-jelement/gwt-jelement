@@ -36,6 +36,9 @@ public class CompositorWorker extends EventTarget{
     @JsProperty(name="onmessage")
     public EventHandlerNonNull onmessage;
     
+    @JsProperty(name="onerror")
+    public EventHandlerNonNull onerror;
+    
     @JsMethod(name = "postMessage")
     public native void postMessage(Object message);
     

@@ -18,7 +18,7 @@ package gwt.jelement.vr;
 
 import gwt.jelement.html.HTMLCanvasElement;
 import gwt.jelement.offscreencanvas.OffscreenCanvas;
-import gwt.jelement.webgl.WebGLRenderingContextBase;
+import gwt.jelement.webgl.WebGL2RenderingContext;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -29,7 +29,7 @@ import jsinterop.base.Js;
 public class VRLayer{
 
     @JsProperty(name="source")
-    public WebGLRenderingContextBase.VRSource source;
+    public WebGL2RenderingContext.VRSource source;
 
     @JsProperty(name="leftBounds")
     public float[] leftBounds;

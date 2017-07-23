@@ -20,6 +20,7 @@ import gwt.jelement.svg.SVGAnimatedTransformList;
 import gwt.jelement.svg.SVGElement;
 import gwt.jelement.svg.SVGMatrix;
 import gwt.jelement.svg.SVGRect;
+import gwt.jelement.svg.SVGStringList;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsPackage;
@@ -42,6 +43,12 @@ public class SVGGraphicsElement extends SVGElement{
     
     @JsProperty(name="farthestViewportElement")
     public SVGElement farthestViewportElement;
+    
+    @JsProperty(name="requiredExtensions")
+    public SVGStringList requiredExtensions;
+    
+    @JsProperty(name="systemLanguage")
+    public SVGStringList systemLanguage;
     
     @JsMethod(name = "getBBox")
     public native SVGRect getBBox();

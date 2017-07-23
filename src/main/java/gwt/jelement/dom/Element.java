@@ -167,6 +167,33 @@ public class Element extends Node{
     @JsProperty(name="onwebkitfullscreenerror")
     public EventHandlerNonNull onwebkitfullscreenerror;
     
+    @JsProperty(name="children")
+    public HTMLCollection children;
+    
+    @JsProperty(name="firstElementChild")
+    public Element firstElementChild;
+    
+    @JsProperty(name="lastElementChild")
+    public Element lastElementChild;
+    
+    @JsProperty(name="childElementCount")
+    public double childElementCount;
+    
+    @JsProperty(name="previousElementSibling")
+    public Element previousElementSibling;
+    
+    @JsProperty(name="nextElementSibling")
+    public Element nextElementSibling;
+    
+    @JsMethod(name = "after")
+    public native void after();
+    
+    @JsMethod(name = "after")
+    public native void after(Node... nodes);
+    
+    @JsMethod(name = "after")
+    public native void after(String... nodes);
+    
     @JsMethod(name = "animate")
     public native Animation animate(Object[] effect);
     
@@ -185,8 +212,26 @@ public class Element extends Node{
     @JsMethod(name = "animate")
     public native Animation animate(Object effect, KeyframeAnimationOptions options);
     
+    @JsMethod(name = "append")
+    public native void append();
+    
+    @JsMethod(name = "append")
+    public native void append(Node... nodes);
+    
+    @JsMethod(name = "append")
+    public native void append(String... nodes);
+    
     @JsMethod(name = "attachShadow")
     public native ShadowRoot attachShadow(ShadowRootInit shadowRootInitDict);
+    
+    @JsMethod(name = "before")
+    public native void before();
+    
+    @JsMethod(name = "before")
+    public native void before(Node... nodes);
+    
+    @JsMethod(name = "before")
+    public native void before(String... nodes);
     
     @JsMethod(name = "closest")
     public native Element closest(String selectors);
@@ -254,8 +299,26 @@ public class Element extends Node{
     @JsMethod(name = "matches")
     public native boolean matches(String selectors);
     
+    @JsMethod(name = "prepend")
+    public native void prepend();
+    
+    @JsMethod(name = "prepend")
+    public native void prepend(Node... nodes);
+    
+    @JsMethod(name = "prepend")
+    public native void prepend(String... nodes);
+    
+    @JsMethod(name = "querySelector")
+    public native Element querySelector(String selectors);
+    
+    @JsMethod(name = "querySelectorAll")
+    public native NodeList querySelectorAll(String selectors);
+    
     @JsMethod(name = "releasePointerCapture")
     public native void releasePointerCapture(double pointerId);
+    
+    @JsMethod(name = "remove")
+    public native void remove();
     
     @JsMethod(name = "removeAttribute")
     public native void removeAttribute(String name);
@@ -265,6 +328,15 @@ public class Element extends Node{
     
     @JsMethod(name = "removeAttributeNode")
     public native Attr removeAttributeNode(Attr attr);
+    
+    @JsMethod(name = "replaceWith")
+    public native void replaceWith();
+    
+    @JsMethod(name = "replaceWith")
+    public native void replaceWith(Node... nodes);
+    
+    @JsMethod(name = "replaceWith")
+    public native void replaceWith(String... nodes);
     
     @JsMethod(name = "requestFullscreen")
     public native void requestFullscreen();

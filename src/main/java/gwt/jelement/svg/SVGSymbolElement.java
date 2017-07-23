@@ -16,9 +16,12 @@
  */
 package gwt.jelement.svg;
 
+import gwt.jelement.svg.SVGAnimatedPreserveAspectRatio;
+import gwt.jelement.svg.SVGAnimatedRect;
 import gwt.jelement.svg.SVGElement;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsPackage;
+import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, isNative = true)
@@ -28,6 +31,12 @@ public class SVGSymbolElement extends SVGElement{
     public SVGSymbolElement(){
         super();
     }
+    
+    @JsProperty(name="viewBox")
+    public SVGAnimatedRect viewBox;
+    
+    @JsProperty(name="preserveAspectRatio")
+    public SVGAnimatedPreserveAspectRatio preserveAspectRatio;
     
     
 }

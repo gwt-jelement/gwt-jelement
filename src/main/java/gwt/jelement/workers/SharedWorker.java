@@ -17,6 +17,7 @@
 package gwt.jelement.workers;
 
 import gwt.jelement.dom.MessagePort;
+import gwt.jelement.events.EventHandlerNonNull;
 import gwt.jelement.events.EventTarget;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsPackage;
@@ -41,6 +42,9 @@ public class SharedWorker extends EventTarget{
     
     @JsProperty(name="workerStart")
     public double workerStart;
+    
+    @JsProperty(name="onerror")
+    public EventHandlerNonNull onerror;
     
     
 }

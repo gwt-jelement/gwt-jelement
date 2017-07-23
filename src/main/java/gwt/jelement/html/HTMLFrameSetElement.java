@@ -37,26 +37,50 @@ public class HTMLFrameSetElement extends HTMLElement{
     @JsProperty(name="rows")
     public String rows;
     
-    @JsProperty(name="onblur")
-    public EventHandlerNonNull onblur;
-    
-    @JsProperty(name="onerror")
-    public EventHandlerNonNull onerror;
-    
-    @JsProperty(name="onfocus")
-    public EventHandlerNonNull onfocus;
-    
-    @JsProperty(name="onload")
-    public EventHandlerNonNull onload;
-    
-    @JsProperty(name="onresize")
-    public EventHandlerNonNull onresize;
-    
-    @JsProperty(name="onscroll")
-    public EventHandlerNonNull onscroll;
-    
     @JsProperty(name="onorientationchange")
     public EventHandlerNonNull onorientationchange;
+    
+    @JsProperty(name="onbeforeunload")
+    public EventHandlerNonNull onbeforeunload;
+    
+    @JsProperty(name="onhashchange")
+    public EventHandlerNonNull onhashchange;
+    
+    @JsProperty(name="onlanguagechange")
+    public EventHandlerNonNull onlanguagechange;
+    
+    @JsProperty(name="onmessage")
+    public EventHandlerNonNull onmessage;
+    
+    @JsProperty(name="onmessageerror")
+    public EventHandlerNonNull onmessageerror;
+    
+    @JsProperty(name="onoffline")
+    public EventHandlerNonNull onoffline;
+    
+    @JsProperty(name="ononline")
+    public EventHandlerNonNull ononline;
+    
+    @JsProperty(name="onpagehide")
+    public EventHandlerNonNull onpagehide;
+    
+    @JsProperty(name="onpageshow")
+    public EventHandlerNonNull onpageshow;
+    
+    @JsProperty(name="onpopstate")
+    public EventHandlerNonNull onpopstate;
+    
+    @JsProperty(name="onrejectionhandled")
+    public EventHandlerNonNull onrejectionhandled;
+    
+    @JsProperty(name="onstorage")
+    public EventHandlerNonNull onstorage;
+    
+    @JsProperty(name="onunhandledrejection")
+    public EventHandlerNonNull onunhandledrejection;
+    
+    @JsProperty(name="onunload")
+    public EventHandlerNonNull onunload;
     
     
 }

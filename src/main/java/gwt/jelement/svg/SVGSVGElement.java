@@ -20,6 +20,8 @@ import gwt.jelement.dom.Element;
 import gwt.jelement.dom.NodeList;
 import gwt.jelement.svg.SVGAngle;
 import gwt.jelement.svg.SVGAnimatedLength;
+import gwt.jelement.svg.SVGAnimatedPreserveAspectRatio;
+import gwt.jelement.svg.SVGAnimatedRect;
 import gwt.jelement.svg.SVGElement;
 import gwt.jelement.svg.SVGGraphicsElement;
 import gwt.jelement.svg.SVGLength;
@@ -36,6 +38,10 @@ import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, isNative = true)
 public class SVGSVGElement extends SVGGraphicsElement{
+    public static int SVG_ZOOMANDPAN_UNKNOWN;
+    public static int SVG_ZOOMANDPAN_DISABLE;
+    public static int SVG_ZOOMANDPAN_MAGNIFY;
+    
     
     @JsConstructor
     public SVGSVGElement(){
@@ -59,6 +65,15 @@ public class SVGSVGElement extends SVGGraphicsElement{
     
     @JsProperty(name="currentTranslate")
     public SVGPoint currentTranslate;
+    
+    @JsProperty(name="viewBox")
+    public SVGAnimatedRect viewBox;
+    
+    @JsProperty(name="preserveAspectRatio")
+    public SVGAnimatedPreserveAspectRatio preserveAspectRatio;
+    
+    @JsProperty(name="zoomAndPan")
+    public short zoomAndPan;
     
     @JsMethod(name = "animationsPaused")
     public native boolean animationsPaused();

@@ -18,6 +18,8 @@ package gwt.jelement.dom;
 
 import gwt.jelement.animation.Animation;
 import gwt.jelement.animation.DocumentTimeline;
+import gwt.jelement.css.FontFaceSet;
+import gwt.jelement.css.StyleSheetList;
 import gwt.jelement.dom.AddressSpace;
 import gwt.jelement.dom.Attr;
 import gwt.jelement.dom.CDATASection;
@@ -40,6 +42,7 @@ import gwt.jelement.dom.Touch;
 import gwt.jelement.dom.TouchList;
 import gwt.jelement.dom.TreeWalker;
 import gwt.jelement.dom.VisibilityState;
+import gwt.jelement.editing.Selection;
 import gwt.jelement.events.Event;
 import gwt.jelement.events.EventHandlerNonNull;
 import gwt.jelement.events.EventTarget;
@@ -329,8 +332,263 @@ public class Document extends Node{
     @JsProperty(name="rootElement")
     public SVGSVGElement rootElement;
     
+    @JsProperty(name="onabort")
+    public EventHandlerNonNull onabort;
+    
+    @JsProperty(name="onblur")
+    public EventHandlerNonNull onblur;
+    
+    @JsProperty(name="oncancel")
+    public EventHandlerNonNull oncancel;
+    
+    @JsProperty(name="oncanplay")
+    public EventHandlerNonNull oncanplay;
+    
+    @JsProperty(name="oncanplaythrough")
+    public EventHandlerNonNull oncanplaythrough;
+    
+    @JsProperty(name="onchange")
+    public EventHandlerNonNull onchange;
+    
+    @JsProperty(name="onclick")
+    public EventHandlerNonNull onclick;
+    
+    @JsProperty(name="onclose")
+    public EventHandlerNonNull onclose;
+    
+    @JsProperty(name="oncontextmenu")
+    public EventHandlerNonNull oncontextmenu;
+    
+    @JsProperty(name="oncuechange")
+    public EventHandlerNonNull oncuechange;
+    
+    @JsProperty(name="ondblclick")
+    public EventHandlerNonNull ondblclick;
+    
+    @JsProperty(name="ondrag")
+    public EventHandlerNonNull ondrag;
+    
+    @JsProperty(name="ondragend")
+    public EventHandlerNonNull ondragend;
+    
+    @JsProperty(name="ondragenter")
+    public EventHandlerNonNull ondragenter;
+    
+    @JsProperty(name="ondragleave")
+    public EventHandlerNonNull ondragleave;
+    
+    @JsProperty(name="ondragover")
+    public EventHandlerNonNull ondragover;
+    
+    @JsProperty(name="ondragstart")
+    public EventHandlerNonNull ondragstart;
+    
+    @JsProperty(name="ondrop")
+    public EventHandlerNonNull ondrop;
+    
+    @JsProperty(name="ondurationchange")
+    public EventHandlerNonNull ondurationchange;
+    
+    @JsProperty(name="onemptied")
+    public EventHandlerNonNull onemptied;
+    
+    @JsProperty(name="onended")
+    public EventHandlerNonNull onended;
+    
+    @JsProperty(name="onerror")
+    public EventHandlerNonNull onerror;
+    
+    @JsProperty(name="onfocus")
+    public EventHandlerNonNull onfocus;
+    
+    @JsProperty(name="oninput")
+    public EventHandlerNonNull oninput;
+    
+    @JsProperty(name="oninvalid")
+    public EventHandlerNonNull oninvalid;
+    
+    @JsProperty(name="onkeydown")
+    public EventHandlerNonNull onkeydown;
+    
+    @JsProperty(name="onkeypress")
+    public EventHandlerNonNull onkeypress;
+    
+    @JsProperty(name="onkeyup")
+    public EventHandlerNonNull onkeyup;
+    
+    @JsProperty(name="onload")
+    public EventHandlerNonNull onload;
+    
+    @JsProperty(name="onloadeddata")
+    public EventHandlerNonNull onloadeddata;
+    
+    @JsProperty(name="onloadedmetadata")
+    public EventHandlerNonNull onloadedmetadata;
+    
+    @JsProperty(name="onloadstart")
+    public EventHandlerNonNull onloadstart;
+    
+    @JsProperty(name="onmousedown")
+    public EventHandlerNonNull onmousedown;
+    
+    @JsProperty(name="onmouseenter")
+    public EventHandlerNonNull onmouseenter;
+    
+    @JsProperty(name="onmouseleave")
+    public EventHandlerNonNull onmouseleave;
+    
+    @JsProperty(name="onmousemove")
+    public EventHandlerNonNull onmousemove;
+    
+    @JsProperty(name="onmouseout")
+    public EventHandlerNonNull onmouseout;
+    
+    @JsProperty(name="onmouseover")
+    public EventHandlerNonNull onmouseover;
+    
+    @JsProperty(name="onmouseup")
+    public EventHandlerNonNull onmouseup;
+    
+    @JsProperty(name="onmousewheel")
+    public EventHandlerNonNull onmousewheel;
+    
+    @JsProperty(name="onpause")
+    public EventHandlerNonNull onpause;
+    
+    @JsProperty(name="onplay")
+    public EventHandlerNonNull onplay;
+    
+    @JsProperty(name="onplaying")
+    public EventHandlerNonNull onplaying;
+    
+    @JsProperty(name="onprogress")
+    public EventHandlerNonNull onprogress;
+    
+    @JsProperty(name="onratechange")
+    public EventHandlerNonNull onratechange;
+    
+    @JsProperty(name="onreset")
+    public EventHandlerNonNull onreset;
+    
+    @JsProperty(name="onresize")
+    public EventHandlerNonNull onresize;
+    
+    @JsProperty(name="onscroll")
+    public EventHandlerNonNull onscroll;
+    
+    @JsProperty(name="onseeked")
+    public EventHandlerNonNull onseeked;
+    
+    @JsProperty(name="onseeking")
+    public EventHandlerNonNull onseeking;
+    
+    @JsProperty(name="onselect")
+    public EventHandlerNonNull onselect;
+    
+    @JsProperty(name="onstalled")
+    public EventHandlerNonNull onstalled;
+    
+    @JsProperty(name="onsubmit")
+    public EventHandlerNonNull onsubmit;
+    
+    @JsProperty(name="onsuspend")
+    public EventHandlerNonNull onsuspend;
+    
+    @JsProperty(name="ontimeupdate")
+    public EventHandlerNonNull ontimeupdate;
+    
+    @JsProperty(name="ontoggle")
+    public EventHandlerNonNull ontoggle;
+    
+    @JsProperty(name="onvolumechange")
+    public EventHandlerNonNull onvolumechange;
+    
+    @JsProperty(name="onwaiting")
+    public EventHandlerNonNull onwaiting;
+    
+    @JsProperty(name="onauxclick")
+    public EventHandlerNonNull onauxclick;
+    
+    @JsProperty(name="ongotpointercapture")
+    public EventHandlerNonNull ongotpointercapture;
+    
+    @JsProperty(name="onlostpointercapture")
+    public EventHandlerNonNull onlostpointercapture;
+    
+    @JsProperty(name="onpointerdown")
+    public EventHandlerNonNull onpointerdown;
+    
+    @JsProperty(name="onpointermove")
+    public EventHandlerNonNull onpointermove;
+    
+    @JsProperty(name="onpointerup")
+    public EventHandlerNonNull onpointerup;
+    
+    @JsProperty(name="onpointercancel")
+    public EventHandlerNonNull onpointercancel;
+    
+    @JsProperty(name="onpointerover")
+    public EventHandlerNonNull onpointerover;
+    
+    @JsProperty(name="onpointerout")
+    public EventHandlerNonNull onpointerout;
+    
+    @JsProperty(name="onpointerenter")
+    public EventHandlerNonNull onpointerenter;
+    
+    @JsProperty(name="onpointerleave")
+    public EventHandlerNonNull onpointerleave;
+    
+    @JsProperty(name="ontouchcancel")
+    public EventHandlerNonNull ontouchcancel;
+    
+    @JsProperty(name="ontouchend")
+    public EventHandlerNonNull ontouchend;
+    
+    @JsProperty(name="ontouchmove")
+    public EventHandlerNonNull ontouchmove;
+    
+    @JsProperty(name="ontouchstart")
+    public EventHandlerNonNull ontouchstart;
+    
+    @JsProperty(name="children")
+    public HTMLCollection children;
+    
+    @JsProperty(name="firstElementChild")
+    public Element firstElementChild;
+    
+    @JsProperty(name="lastElementChild")
+    public Element lastElementChild;
+    
+    @JsProperty(name="childElementCount")
+    public double childElementCount;
+    
+    @JsProperty(name="activeElement")
+    public Element activeElement;
+    
+    @JsProperty(name="styleSheets")
+    public StyleSheetList styleSheets;
+    
+    @JsProperty(name="pointerLockElement")
+    public Element pointerLockElement;
+    
+    @JsProperty(name="fullscreenElement")
+    public Element fullscreenElement;
+    
+    @JsProperty(name="fonts")
+    public FontFaceSet fonts;
+    
     @JsMethod(name = "adoptNode")
     public native Node adoptNode(Node node);
+    
+    @JsMethod(name = "append")
+    public native void append();
+    
+    @JsMethod(name = "append")
+    public native void append(Node... nodes);
+    
+    @JsMethod(name = "append")
+    public native void append(String... nodes);
     
     @JsMethod(name = "caretRangeFromPoint")
     public native Range caretRangeFromPoint();
@@ -437,6 +695,12 @@ public class Document extends Node{
     @JsMethod(name = "createTreeWalker")
     public native TreeWalker createTreeWalker(Node root, double whatToShow, NodeFilter filter);
     
+    @JsMethod(name = "elementFromPoint")
+    public native Element elementFromPoint(double x, double y);
+    
+    @JsMethod(name = "elementsFromPoint")
+    public native Element[] elementsFromPoint(double x, double y);
+    
     @JsMethod(name = "evaluate")
     public native XPathResult evaluate(String expression, Node contextNode);
     
@@ -467,6 +731,9 @@ public class Document extends Node{
     @JsMethod(name = "getAnimations")
     public native Animation[] getAnimations();
     
+    @JsMethod(name = "getElementById")
+    public native Element getElementById(String elementId);
+    
     @JsMethod(name = "getElementsByClassName")
     public native HTMLCollection getElementsByClassName(String classNames);
     
@@ -479,6 +746,9 @@ public class Document extends Node{
     @JsMethod(name = "getElementsByTagNameNS")
     public native HTMLCollection getElementsByTagNameNS(String namespaceURI, String localName);
     
+    @JsMethod(name = "getSelection")
+    public native Selection getSelection();
+    
     @JsMethod(name = "hasFocus")
     public native boolean hasFocus();
     
@@ -490,6 +760,15 @@ public class Document extends Node{
     
     @JsMethod(name = "open")
     public native void open();
+    
+    @JsMethod(name = "prepend")
+    public native void prepend();
+    
+    @JsMethod(name = "prepend")
+    public native void prepend(Node... nodes);
+    
+    @JsMethod(name = "prepend")
+    public native void prepend(String... nodes);
     
     @JsMethod(name = "queryCommandEnabled")
     public native boolean queryCommandEnabled(String commandId);
@@ -505,6 +784,12 @@ public class Document extends Node{
     
     @JsMethod(name = "queryCommandValue")
     public native String queryCommandValue(String commandId);
+    
+    @JsMethod(name = "querySelector")
+    public native Element querySelector(String selectors);
+    
+    @JsMethod(name = "querySelectorAll")
+    public native NodeList querySelectorAll(String selectors);
     
     @JsMethod(name = "registerElement")
     public native CustomElementConstructor registerElement(String type);

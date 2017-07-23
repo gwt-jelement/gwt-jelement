@@ -19,6 +19,7 @@ package gwt.jelement.svg;
 import gwt.jelement.svg.SVGAnimatedEnumeration;
 import gwt.jelement.svg.SVGAnimatedLength;
 import gwt.jelement.svg.SVGElement;
+import gwt.jelement.svg.SVGStringList;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -49,6 +50,12 @@ public class SVGMaskElement extends SVGElement{
     
     @JsProperty(name="height")
     public SVGAnimatedLength height;
+    
+    @JsProperty(name="requiredExtensions")
+    public SVGStringList requiredExtensions;
+    
+    @JsProperty(name="systemLanguage")
+    public SVGStringList systemLanguage;
     
     
 }

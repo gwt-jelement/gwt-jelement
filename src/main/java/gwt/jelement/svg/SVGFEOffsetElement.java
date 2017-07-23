@@ -16,6 +16,7 @@
  */
 package gwt.jelement.svg;
 
+import gwt.jelement.svg.SVGAnimatedLength;
 import gwt.jelement.svg.SVGAnimatedNumber;
 import gwt.jelement.svg.SVGAnimatedString;
 import gwt.jelement.svg.SVGElement;
@@ -40,6 +41,21 @@ public class SVGFEOffsetElement extends SVGElement{
     
     @JsProperty(name="dy")
     public SVGAnimatedNumber dy;
+    
+    @JsProperty(name="x")
+    public SVGAnimatedLength x;
+    
+    @JsProperty(name="y")
+    public SVGAnimatedLength y;
+    
+    @JsProperty(name="width")
+    public SVGAnimatedLength width;
+    
+    @JsProperty(name="height")
+    public SVGAnimatedLength height;
+    
+    @JsProperty(name="result")
+    public SVGAnimatedString result;
     
     
 }
