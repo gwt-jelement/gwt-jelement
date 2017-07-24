@@ -618,22 +618,22 @@ public class Document extends Node{
     public native DocumentFragment createDocumentFragment();
     
     @JsMethod(name = "createElement")
-    public native Element createElement(String localName);
+    public native <T extends Element> T createElement(String localName);
     
     @JsMethod(name = "createElement")
-    public native Element createElement(String localName, String options);
+    public native <T extends Element> T createElement(String localName, String options);
     
     @JsMethod(name = "createElement")
-    public native Element createElement(String localName, Object options);
+    public native <T extends Element> T createElement(String localName, Object options);
     
     @JsMethod(name = "createElementNS")
-    public native Element createElementNS(String namespaceURI, String qualifiedName);
+    public native <T extends Element> T createElementNS(String namespaceURI, String qualifiedName);
     
     @JsMethod(name = "createElementNS")
-    public native Element createElementNS(String namespaceURI, String qualifiedName, String options);
+    public native <T extends Element> T createElementNS(String namespaceURI, String qualifiedName, String options);
     
     @JsMethod(name = "createElementNS")
-    public native Element createElementNS(String namespaceURI, String qualifiedName, Object options);
+    public native <T extends Element> T createElementNS(String namespaceURI, String qualifiedName, Object options);
     
     @JsMethod(name = "createEvent")
     public native Event createEvent(String eventType);
@@ -732,7 +732,7 @@ public class Document extends Node{
     public native Animation[] getAnimations();
     
     @JsMethod(name = "getElementById")
-    public native Element getElementById(String elementId);
+    public native <T extends Element> T getElementById(String elementId);
     
     @JsMethod(name = "getElementsByClassName")
     public native HTMLCollection getElementsByClassName(String classNames);

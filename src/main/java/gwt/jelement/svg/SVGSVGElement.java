@@ -118,7 +118,7 @@ public class SVGSVGElement extends SVGGraphicsElement{
     public native float getCurrentTime();
     
     @JsMethod(name = "getElementById")
-    public native Element getElementById(String elementId);
+    public native <T extends Element> T getElementById(String elementId);
     
     @JsMethod(name = "getEnclosureList")
     public native NodeList getEnclosureList(SVGRect rect, SVGElement referenceElement);

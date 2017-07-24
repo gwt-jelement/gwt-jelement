@@ -118,10 +118,10 @@ public class HTMLCanvasElement extends HTMLElement{
     public native MediaStream captureStream(double frameRate);
     
     @JsMethod(name = "getContext")
-    public native HTMLCanvasElement.RenderingContext getContext(String contextId);
+    public native <T extends HTMLCanvasElement.RenderingContext> T getContext(String contextId);
     
     @JsMethod(name = "getContext")
-    public native HTMLCanvasElement.RenderingContext getContext(String contextId, CanvasContextCreationAttributes attributes);
+    public native <T extends HTMLCanvasElement.RenderingContext> T getContext(String contextId, CanvasContextCreationAttributes attributes);
     
     @JsMethod(name = "toBlob")
     public native void toBlob(BlobCallback _callback);

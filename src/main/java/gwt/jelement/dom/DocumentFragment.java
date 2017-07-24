@@ -56,7 +56,7 @@ public class DocumentFragment extends Node{
     public native void append(String... nodes);
     
     @JsMethod(name = "getElementById")
-    public native Element getElementById(String elementId);
+    public native <T extends Element> T getElementById(String elementId);
     
     @JsMethod(name = "prepend")
     public native void prepend();
