@@ -220,7 +220,7 @@ public class MediaTrackConstraintSet{
     }
     
     @JsProperty(name="width")
-    public MediaTrackConstraintSet.ConstrainLong width;
+    public ConstrainLong width;
 
     @JsOverlay
     public final void setWidth(double width){
@@ -233,7 +233,7 @@ public class MediaTrackConstraintSet{
     }
 
     @JsProperty(name="height")
-    public MediaTrackConstraintSet.ConstrainLong height;
+    public ConstrainLong height;
 
     @JsOverlay
     public final void setHeight(double height){
@@ -246,7 +246,7 @@ public class MediaTrackConstraintSet{
     }
 
     @JsProperty(name="aspectRatio")
-    public MediaTrackConstraintSet.ConstrainDouble aspectRatio;
+    public ConstrainDouble aspectRatio;
 
     @JsOverlay
     public final void setAspectRatio(double aspectRatio){
@@ -259,7 +259,7 @@ public class MediaTrackConstraintSet{
     }
 
     @JsProperty(name="frameRate")
-    public MediaTrackConstraintSet.ConstrainDouble frameRate;
+    public ConstrainDouble frameRate;
 
     @JsOverlay
     public final void setFrameRate(double frameRate){
@@ -272,7 +272,7 @@ public class MediaTrackConstraintSet{
     }
 
     @JsProperty(name="facingMode")
-    public MediaTrackConstraintSet.ConstrainDOMString facingMode;
+    public ConstrainDOMString facingMode;
 
     @JsOverlay
     public final void setFacingMode(String facingMode){
@@ -290,7 +290,7 @@ public class MediaTrackConstraintSet{
     }
 
     @JsProperty(name="volume")
-    public MediaTrackConstraintSet.ConstrainDouble volume;
+    public ConstrainDouble volume;
 
     @JsOverlay
     public final void setVolume(double volume){
@@ -303,7 +303,7 @@ public class MediaTrackConstraintSet{
     }
 
     @JsProperty(name="sampleRate")
-    public MediaTrackConstraintSet.ConstrainLong sampleRate;
+    public ConstrainLong sampleRate;
 
     @JsOverlay
     public final void setSampleRate(double sampleRate){
@@ -316,7 +316,7 @@ public class MediaTrackConstraintSet{
     }
 
     @JsProperty(name="sampleSize")
-    public MediaTrackConstraintSet.ConstrainLong sampleSize;
+    public ConstrainLong sampleSize;
 
     @JsOverlay
     public final void setSampleSize(double sampleSize){
@@ -329,7 +329,7 @@ public class MediaTrackConstraintSet{
     }
 
     @JsProperty(name="echoCancellation")
-    public MediaTrackConstraintSet.ConstrainBoolean echoCancellation;
+    public ConstrainBoolean echoCancellation;
 
     @JsOverlay
     public final void setEchoCancellation(boolean echoCancellation){
@@ -342,7 +342,7 @@ public class MediaTrackConstraintSet{
     }
 
     @JsProperty(name="latency")
-    public MediaTrackConstraintSet.ConstrainDouble latency;
+    public ConstrainDouble latency;
 
     @JsOverlay
     public final void setLatency(double latency){
@@ -355,7 +355,7 @@ public class MediaTrackConstraintSet{
     }
 
     @JsProperty(name="channelCount")
-    public MediaTrackConstraintSet.ConstrainLong channelCount;
+    public ConstrainLong channelCount;
 
     @JsOverlay
     public final void setChannelCount(double channelCount){
@@ -368,7 +368,7 @@ public class MediaTrackConstraintSet{
     }
 
     @JsProperty(name="deviceId")
-    public MediaTrackConstraintSet.ConstrainDOMString deviceId;
+    public ConstrainDOMString deviceId;
 
     @JsOverlay
     public final void setDeviceId(String deviceId){
@@ -386,7 +386,7 @@ public class MediaTrackConstraintSet{
     }
 
     @JsProperty(name="groupId")
-    public MediaTrackConstraintSet.ConstrainDOMString groupId;
+    public ConstrainDOMString groupId;
 
     @JsOverlay
     public final void setGroupId(String groupId){
@@ -404,7 +404,7 @@ public class MediaTrackConstraintSet{
     }
 
     @JsProperty(name="videoKind")
-    public MediaTrackConstraintSet.ConstrainDOMString videoKind;
+    public ConstrainDOMString videoKind;
 
     @JsOverlay
     public final void setVideoKind(String videoKind){
@@ -422,7 +422,7 @@ public class MediaTrackConstraintSet{
     }
 
     @JsProperty(name="depthNear")
-    public MediaTrackConstraintSet.ConstrainDouble depthNear;
+    public ConstrainDouble depthNear;
 
     @JsOverlay
     public final void setDepthNear(double depthNear){
@@ -435,7 +435,7 @@ public class MediaTrackConstraintSet{
     }
 
     @JsProperty(name="depthFar")
-    public MediaTrackConstraintSet.ConstrainDouble depthFar;
+    public ConstrainDouble depthFar;
 
     @JsOverlay
     public final void setDepthFar(double depthFar){
@@ -448,7 +448,7 @@ public class MediaTrackConstraintSet{
     }
 
     @JsProperty(name="focalLengthX")
-    public MediaTrackConstraintSet.ConstrainDouble focalLengthX;
+    public ConstrainDouble focalLengthX;
 
     @JsOverlay
     public final void setFocalLengthX(double focalLengthX){
@@ -461,7 +461,7 @@ public class MediaTrackConstraintSet{
     }
 
     @JsProperty(name="focalLengthY")
-    public MediaTrackConstraintSet.ConstrainDouble focalLengthY;
+    public ConstrainDouble focalLengthY;
 
     @JsOverlay
     public final void setFocalLengthY(double focalLengthY){
@@ -474,7 +474,7 @@ public class MediaTrackConstraintSet{
     }
 
     @JsProperty(name="whiteBalanceMode")
-    public MediaTrackConstraintSet.ConstrainDOMString whiteBalanceMode;
+    public ConstrainDOMString whiteBalanceMode;
 
     @JsOverlay
     public final void setWhiteBalanceMode(String whiteBalanceMode){
@@ -492,7 +492,7 @@ public class MediaTrackConstraintSet{
     }
 
     @JsProperty(name="exposureMode")
-    public MediaTrackConstraintSet.ConstrainDOMString exposureMode;
+    public ConstrainDOMString exposureMode;
 
     @JsOverlay
     public final void setExposureMode(String exposureMode){
@@ -510,7 +510,7 @@ public class MediaTrackConstraintSet{
     }
 
     @JsProperty(name="focusMode")
-    public MediaTrackConstraintSet.ConstrainDOMString focusMode;
+    public ConstrainDOMString focusMode;
 
     @JsOverlay
     public final void setFocusMode(String focusMode){
@@ -528,7 +528,7 @@ public class MediaTrackConstraintSet{
     }
 
     @JsProperty(name="pointsOfInterest")
-    public MediaTrackConstraintSet.ConstrainPoint2D pointsOfInterest;
+    public ConstrainPoint2D pointsOfInterest;
 
     @JsOverlay
     public final void setPointsOfInterest(Point2D[] pointsOfInterest){
@@ -541,7 +541,7 @@ public class MediaTrackConstraintSet{
     }
 
     @JsProperty(name="exposureCompensation")
-    public MediaTrackConstraintSet.ConstrainDouble exposureCompensation;
+    public ConstrainDouble exposureCompensation;
 
     @JsOverlay
     public final void setExposureCompensation(double exposureCompensation){
@@ -554,7 +554,7 @@ public class MediaTrackConstraintSet{
     }
 
     @JsProperty(name="colorTemperature")
-    public MediaTrackConstraintSet.ConstrainDouble colorTemperature;
+    public ConstrainDouble colorTemperature;
 
     @JsOverlay
     public final void setColorTemperature(double colorTemperature){
@@ -567,7 +567,7 @@ public class MediaTrackConstraintSet{
     }
 
     @JsProperty(name="iso")
-    public MediaTrackConstraintSet.ConstrainDouble iso;
+    public ConstrainDouble iso;
 
     @JsOverlay
     public final void setIso(double iso){
@@ -580,7 +580,7 @@ public class MediaTrackConstraintSet{
     }
 
     @JsProperty(name="brightness")
-    public MediaTrackConstraintSet.ConstrainDouble brightness;
+    public ConstrainDouble brightness;
 
     @JsOverlay
     public final void setBrightness(double brightness){
@@ -593,7 +593,7 @@ public class MediaTrackConstraintSet{
     }
 
     @JsProperty(name="contrast")
-    public MediaTrackConstraintSet.ConstrainDouble contrast;
+    public ConstrainDouble contrast;
 
     @JsOverlay
     public final void setContrast(double contrast){
@@ -606,7 +606,7 @@ public class MediaTrackConstraintSet{
     }
 
     @JsProperty(name="saturation")
-    public MediaTrackConstraintSet.ConstrainDouble saturation;
+    public ConstrainDouble saturation;
 
     @JsOverlay
     public final void setSaturation(double saturation){
@@ -619,7 +619,7 @@ public class MediaTrackConstraintSet{
     }
 
     @JsProperty(name="sharpness")
-    public MediaTrackConstraintSet.ConstrainDouble sharpness;
+    public ConstrainDouble sharpness;
 
     @JsOverlay
     public final void setSharpness(double sharpness){
@@ -632,7 +632,7 @@ public class MediaTrackConstraintSet{
     }
 
     @JsProperty(name="zoom")
-    public MediaTrackConstraintSet.ConstrainDouble zoom;
+    public ConstrainDouble zoom;
 
     @JsOverlay
     public final void setZoom(double zoom){
@@ -645,7 +645,7 @@ public class MediaTrackConstraintSet{
     }
 
     @JsProperty(name="torch")
-    public MediaTrackConstraintSet.ConstrainBoolean torch;
+    public ConstrainBoolean torch;
 
     @JsOverlay
     public final void setTorch(boolean torch){

@@ -31,19 +31,19 @@ import jsinterop.base.Js;
 public class ExtendableMessageEvent extends ExtendableEvent{
     
     @JsType(isNative = true, name = "?", namespace = JsPackage.GLOBAL)
-    public interface ClientOrServiceWorkerOrMessagePortUnionType {
+    public interface SourceUnion {
         @JsOverlay
-        static ClientOrServiceWorkerOrMessagePortUnionType of(Client value){
+        static SourceUnion of(Client value){
             return Js.cast(value);
         }
     
         @JsOverlay
-        static ClientOrServiceWorkerOrMessagePortUnionType of(ServiceWorker value){
+        static SourceUnion of(ServiceWorker value){
             return Js.cast(value);
         }
     
         @JsOverlay
-        static ClientOrServiceWorkerOrMessagePortUnionType of(MessagePort value){
+        static SourceUnion of(MessagePort value){
             return Js.cast(value);
         }
     
@@ -94,7 +94,7 @@ public class ExtendableMessageEvent extends ExtendableEvent{
     public String lastEventId;
     
     @JsProperty(name="source")
-    public ExtendableMessageEvent.ClientOrServiceWorkerOrMessagePortUnionType source;
+    public SourceUnion source;
     
     @JsProperty(name="ports")
     public MessagePort[] ports;

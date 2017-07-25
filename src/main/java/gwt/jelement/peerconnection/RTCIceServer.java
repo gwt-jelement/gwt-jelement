@@ -30,16 +30,16 @@ public class RTCIceServer{
     }
 
     @JsProperty(name="urls")
-    public IDBObjectStoreParameters.StringOrStringArrayUnionType urls;
+    public IDBObjectStoreParameters.KeyPathUnion urls;
 
     @JsOverlay
     public final void setUrls(String urls){
-        this.urls = IDBObjectStoreParameters.StringOrStringArrayUnionType.of(urls);
+        this.urls = IDBObjectStoreParameters.KeyPathUnion.of(urls);
     }
 
     @JsOverlay
     public final void setUrls(String[] urls){
-        this.urls = IDBObjectStoreParameters.StringOrStringArrayUnionType.of(urls);
+        this.urls = IDBObjectStoreParameters.KeyPathUnion.of(urls);
     }
 
     @JsProperty(name="url")

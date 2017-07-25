@@ -78,7 +78,7 @@ public class PushSubscriptionOptionsInit{
     }
 
     @JsProperty(name="applicationServerKey")
-    public PushSubscriptionOptionsInit.BufferSource applicationServerKey;
+    public BufferSource applicationServerKey;
 
     @JsOverlay
     public final void setApplicationServerKey(ArrayBuffer applicationServerKey){

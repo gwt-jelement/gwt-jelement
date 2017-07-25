@@ -29,14 +29,14 @@ public class IDBObjectStoreParameters{
     }
 
     @JsType(isNative = true, name = "?", namespace = JsPackage.GLOBAL)
-    public interface StringOrStringArrayUnionType {
+    public interface KeyPathUnion {
         @JsOverlay
-        static StringOrStringArrayUnionType of(String value){
+        static KeyPathUnion of(String value){
             return Js.cast(value);
         }
     
         @JsOverlay
-        static StringOrStringArrayUnionType of(String[] value){
+        static KeyPathUnion of(String[] value){
             return Js.cast(value);
         }
     
@@ -63,16 +63,16 @@ public class IDBObjectStoreParameters{
     }
     
     @JsProperty(name="keyPath")
-    public IDBObjectStoreParameters.StringOrStringArrayUnionType keyPath;
+    public KeyPathUnion keyPath;
 
     @JsOverlay
     public final void setKeyPath(String keyPath){
-        this.keyPath = IDBObjectStoreParameters.StringOrStringArrayUnionType.of(keyPath);
+        this.keyPath = IDBObjectStoreParameters.KeyPathUnion.of(keyPath);
     }
 
     @JsOverlay
     public final void setKeyPath(String[] keyPath){
-        this.keyPath = IDBObjectStoreParameters.StringOrStringArrayUnionType.of(keyPath);
+        this.keyPath = IDBObjectStoreParameters.KeyPathUnion.of(keyPath);
     }
 
     @JsProperty(name="autoIncrement")

@@ -648,7 +648,7 @@ public class WebGL2RenderingContext{
     }
     
     @JsProperty(name="canvas")
-    public WebGL2RenderingContext.VRSource canvas;
+    public VRSource canvas;
     
     @JsProperty(name="drawingBufferWidth")
     public double drawingBufferWidth;

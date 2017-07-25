@@ -30,29 +30,29 @@ public class ConstrainDOMStringParameters{
     }
 
     @JsProperty(name="exact")
-    public IDBObjectStoreParameters.StringOrStringArrayUnionType exact;
+    public IDBObjectStoreParameters.KeyPathUnion exact;
 
     @JsOverlay
     public final void setExact(String exact){
-        this.exact = IDBObjectStoreParameters.StringOrStringArrayUnionType.of(exact);
+        this.exact = IDBObjectStoreParameters.KeyPathUnion.of(exact);
     }
 
     @JsOverlay
     public final void setExact(String[] exact){
-        this.exact = IDBObjectStoreParameters.StringOrStringArrayUnionType.of(exact);
+        this.exact = IDBObjectStoreParameters.KeyPathUnion.of(exact);
     }
 
     @JsProperty(name="ideal")
-    public IDBObjectStoreParameters.StringOrStringArrayUnionType ideal;
+    public IDBObjectStoreParameters.KeyPathUnion ideal;
 
     @JsOverlay
     public final void setIdeal(String ideal){
-        this.ideal = IDBObjectStoreParameters.StringOrStringArrayUnionType.of(ideal);
+        this.ideal = IDBObjectStoreParameters.KeyPathUnion.of(ideal);
     }
 
     @JsOverlay
     public final void setIdeal(String[] ideal){
-        this.ideal = IDBObjectStoreParameters.StringOrStringArrayUnionType.of(ideal);
+        this.ideal = IDBObjectStoreParameters.KeyPathUnion.of(ideal);
     }
 
 

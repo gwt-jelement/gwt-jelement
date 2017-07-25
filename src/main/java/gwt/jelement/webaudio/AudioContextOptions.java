@@ -29,14 +29,14 @@ public class AudioContextOptions{
     }
 
     @JsType(isNative = true, name = "?", namespace = JsPackage.GLOBAL)
-    public interface AudioContextLatencyCategoryOrDoubleUnionType {
+    public interface LatencyHintUnion {
         @JsOverlay
-        static AudioContextLatencyCategoryOrDoubleUnionType of(String value){
+        static LatencyHintUnion of(String value){
             return Js.cast(value);
         }
     
         @JsOverlay
-        static AudioContextLatencyCategoryOrDoubleUnionType of(double value){
+        static LatencyHintUnion of(double value){
             return Js.cast(value);
         }
     
@@ -63,16 +63,16 @@ public class AudioContextOptions{
     }
     
     @JsProperty(name="latencyHint")
-    public AudioContextOptions.AudioContextLatencyCategoryOrDoubleUnionType latencyHint;
+    public LatencyHintUnion latencyHint;
 
     @JsOverlay
     public final void setLatencyHint(String latencyHint){
-        this.latencyHint = AudioContextOptions.AudioContextLatencyCategoryOrDoubleUnionType.of(latencyHint);
+        this.latencyHint = AudioContextOptions.LatencyHintUnion.of(latencyHint);
     }
 
     @JsOverlay
     public final void setLatencyHint(double latencyHint){
-        this.latencyHint = AudioContextOptions.AudioContextLatencyCategoryOrDoubleUnionType.of(latencyHint);
+        this.latencyHint = AudioContextOptions.LatencyHintUnion.of(latencyHint);
     }
 
 

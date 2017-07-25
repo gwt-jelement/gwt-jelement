@@ -30,14 +30,14 @@ public class MediaStreamConstraints{
     }
 
     @JsType(isNative = true, name = "?", namespace = JsPackage.GLOBAL)
-    public interface BooleanOrMediaTrackConstraintsUnionType {
+    public interface VideoUnion {
         @JsOverlay
-        static BooleanOrMediaTrackConstraintsUnionType of(boolean value){
+        static VideoUnion of(boolean value){
             return Js.cast(value);
         }
     
         @JsOverlay
-        static BooleanOrMediaTrackConstraintsUnionType of(MediaTrackConstraints value){
+        static VideoUnion of(MediaTrackConstraints value){
             return Js.cast(value);
         }
     
@@ -64,29 +64,29 @@ public class MediaStreamConstraints{
     }
     
     @JsProperty(name="video")
-    public MediaStreamConstraints.BooleanOrMediaTrackConstraintsUnionType video;
+    public VideoUnion video;
 
     @JsOverlay
     public final void setVideo(boolean video){
-        this.video = MediaStreamConstraints.BooleanOrMediaTrackConstraintsUnionType.of(video);
+        this.video = MediaStreamConstraints.VideoUnion.of(video);
     }
 
     @JsOverlay
     public final void setVideo(MediaTrackConstraints video){
-        this.video = MediaStreamConstraints.BooleanOrMediaTrackConstraintsUnionType.of(video);
+        this.video = MediaStreamConstraints.VideoUnion.of(video);
     }
 
     @JsProperty(name="audio")
-    public MediaStreamConstraints.BooleanOrMediaTrackConstraintsUnionType audio;
+    public VideoUnion audio;
 
     @JsOverlay
     public final void setAudio(boolean audio){
-        this.audio = MediaStreamConstraints.BooleanOrMediaTrackConstraintsUnionType.of(audio);
+        this.audio = MediaStreamConstraints.VideoUnion.of(audio);
     }
 
     @JsOverlay
     public final void setAudio(MediaTrackConstraints audio){
-        this.audio = MediaStreamConstraints.BooleanOrMediaTrackConstraintsUnionType.of(audio);
+        this.audio = MediaStreamConstraints.VideoUnion.of(audio);
     }
 
 

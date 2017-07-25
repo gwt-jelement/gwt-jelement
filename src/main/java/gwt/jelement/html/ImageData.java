@@ -89,7 +89,7 @@ public class ImageData{
     public Uint8ClampedArray data;
     
     @JsProperty(name="dataUnion")
-    public ImageData.ImageDataArray dataUnion;
+    public ImageDataArray dataUnion;
     
     @JsMethod(name = "getColorSettings")
     public native ImageDataColorSettings getColorSettings();

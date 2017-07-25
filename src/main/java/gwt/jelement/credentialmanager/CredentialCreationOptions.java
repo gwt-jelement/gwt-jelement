@@ -66,7 +66,7 @@ public class CredentialCreationOptions{
     }
     
     @JsProperty(name="password")
-    public CredentialCreationOptions.PasswordCredentialInit password;
+    public PasswordCredentialInit password;
 
     @JsOverlay
     public final void setPassword(PasswordCredentialData password){

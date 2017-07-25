@@ -27,14 +27,14 @@ import jsinterop.base.Js;
 public class AnimationEffectTimingReadOnly{
     
     @JsType(isNative = true, name = "?", namespace = JsPackage.GLOBAL)
-    public interface DoubleOrStringUnionType {
+    public interface DurationUnion {
         @JsOverlay
-        static DoubleOrStringUnionType of(double value){
+        static DurationUnion of(double value){
             return Js.cast(value);
         }
     
         @JsOverlay
-        static DoubleOrStringUnionType of(String value){
+        static DurationUnion of(String value){
             return Js.cast(value);
         }
     
@@ -76,7 +76,7 @@ public class AnimationEffectTimingReadOnly{
     public double iterations;
     
     @JsProperty(name="duration")
-    public AnimationEffectTimingReadOnly.DoubleOrStringUnionType duration;
+    public DurationUnion duration;
     
     @JsProperty(name="direction")
     public String direction;

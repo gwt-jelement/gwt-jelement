@@ -33,14 +33,14 @@ import jsinterop.base.Js;
 public class VTTCue extends TextTrackCue{
     
     @JsType(isNative = true, name = "?", namespace = JsPackage.GLOBAL)
-    public interface DoubleOrAutoKeywordUnionType {
+    public interface LineUnion {
         @JsOverlay
-        static DoubleOrAutoKeywordUnionType of(double value){
+        static LineUnion of(double value){
             return Js.cast(value);
         }
     
         @JsOverlay
-        static DoubleOrAutoKeywordUnionType of(String value){
+        static LineUnion of(String value){
             return Js.cast(value);
         }
     
@@ -91,29 +91,29 @@ public class VTTCue extends TextTrackCue{
     public boolean snapToLines;
     
     @JsProperty(name="line")
-    public VTTCue.DoubleOrAutoKeywordUnionType line;
+    public LineUnion line;
     
     @JsOverlay
     public final void setLine(double line){
-        this.line = VTTCue.DoubleOrAutoKeywordUnionType.of(line);
+        this.line = VTTCue.LineUnion.of(line);
     }
     
     @JsOverlay
     public final void setLine(String line){
-        this.line = VTTCue.DoubleOrAutoKeywordUnionType.of(line);
+        this.line = VTTCue.LineUnion.of(line);
     }
     
     @JsProperty(name="position")
-    public VTTCue.DoubleOrAutoKeywordUnionType position;
+    public LineUnion position;
     
     @JsOverlay
     public final void setPosition(double position){
-        this.position = VTTCue.DoubleOrAutoKeywordUnionType.of(position);
+        this.position = VTTCue.LineUnion.of(position);
     }
     
     @JsOverlay
     public final void setPosition(String position){
-        this.position = VTTCue.DoubleOrAutoKeywordUnionType.of(position);
+        this.position = VTTCue.LineUnion.of(position);
     }
     
     @JsProperty(name="size")

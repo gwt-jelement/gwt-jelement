@@ -75,7 +75,7 @@ public class PasswordCredential extends Credential{
     public String passwordName;
     
     @JsProperty(name="additionalData")
-    public PasswordCredential.CredentialBodyType additionalData;
+    public CredentialBodyType additionalData;
     
     @JsOverlay
     public final void setAdditionalData(FormData additionalData){

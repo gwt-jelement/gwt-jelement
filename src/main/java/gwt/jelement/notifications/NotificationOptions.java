@@ -31,14 +31,14 @@ public class NotificationOptions{
     }
 
     @JsType(isNative = true, name = "?", namespace = JsPackage.GLOBAL)
-    public interface DoubleOrDoubleArrayUnionType {
+    public interface VibrateUnion {
         @JsOverlay
-        static DoubleOrDoubleArrayUnionType of(double value){
+        static VibrateUnion of(double value){
             return Js.cast(value);
         }
     
         @JsOverlay
-        static DoubleOrDoubleArrayUnionType of(double[] value){
+        static VibrateUnion of(double[] value){
             return Js.cast(value);
         }
     
@@ -156,16 +156,16 @@ public class NotificationOptions{
     }
 
     @JsProperty(name="vibrate")
-    public NotificationOptions.DoubleOrDoubleArrayUnionType vibrate;
+    public VibrateUnion vibrate;
 
     @JsOverlay
     public final void setVibrate(double vibrate){
-        this.vibrate = NotificationOptions.DoubleOrDoubleArrayUnionType.of(vibrate);
+        this.vibrate = NotificationOptions.VibrateUnion.of(vibrate);
     }
 
     @JsOverlay
     public final void setVibrate(double[] vibrate){
-        this.vibrate = NotificationOptions.DoubleOrDoubleArrayUnionType.of(vibrate);
+        this.vibrate = NotificationOptions.VibrateUnion.of(vibrate);
     }
 
     @JsProperty(name="timestamp")

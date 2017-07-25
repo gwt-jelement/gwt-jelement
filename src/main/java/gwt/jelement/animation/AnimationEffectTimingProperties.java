@@ -97,16 +97,16 @@ public class AnimationEffectTimingProperties{
     }
 
     @JsProperty(name="duration")
-    public AnimationEffectTimingReadOnly.DoubleOrStringUnionType duration;
+    public AnimationEffectTimingReadOnly.DurationUnion duration;
 
     @JsOverlay
     public final void setDuration(double duration){
-        this.duration = AnimationEffectTimingReadOnly.DoubleOrStringUnionType.of(duration);
+        this.duration = AnimationEffectTimingReadOnly.DurationUnion.of(duration);
     }
 
     @JsOverlay
     public final void setDuration(String duration){
-        this.duration = AnimationEffectTimingReadOnly.DoubleOrStringUnionType.of(duration);
+        this.duration = AnimationEffectTimingReadOnly.DurationUnion.of(duration);
     }
 
     @JsProperty(name="direction")

@@ -58,16 +58,16 @@ public class ScrollTimelineOptions{
     }
 
     @JsProperty(name="timeRange")
-    public ScrollTimeline.DoubleOrScrollTimelineAutoKeywordUnionType timeRange;
+    public ScrollTimeline.TimeRangeUnion timeRange;
 
     @JsOverlay
     public final void setTimeRange(double timeRange){
-        this.timeRange = ScrollTimeline.DoubleOrScrollTimelineAutoKeywordUnionType.of(timeRange);
+        this.timeRange = ScrollTimeline.TimeRangeUnion.of(timeRange);
     }
 
     @JsOverlay
     public final void setTimeRange(String timeRange){
-        this.timeRange = ScrollTimeline.DoubleOrScrollTimelineAutoKeywordUnionType.of(timeRange);
+        this.timeRange = ScrollTimeline.TimeRangeUnion.of(timeRange);
     }
 
 

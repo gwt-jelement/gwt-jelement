@@ -34,21 +34,21 @@ public class TrackEventInit extends EventInit{
     }
 
     @JsProperty(name="track")
-    public TrackEvent.VideoTrackOrAudioTrackOrTextTrackUnionType track;
+    public TrackEvent.TrackUnion track;
 
     @JsOverlay
     public final void setTrack(VideoTrack track){
-        this.track = TrackEvent.VideoTrackOrAudioTrackOrTextTrackUnionType.of(track);
+        this.track = TrackEvent.TrackUnion.of(track);
     }
 
     @JsOverlay
     public final void setTrack(AudioTrack track){
-        this.track = TrackEvent.VideoTrackOrAudioTrackOrTextTrackUnionType.of(track);
+        this.track = TrackEvent.TrackUnion.of(track);
     }
 
     @JsOverlay
     public final void setTrack(TextTrack track){
-        this.track = TrackEvent.VideoTrackOrAudioTrackOrTextTrackUnionType.of(track);
+        this.track = TrackEvent.TrackUnion.of(track);
     }
 
 

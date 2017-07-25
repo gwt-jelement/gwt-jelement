@@ -90,7 +90,7 @@ public class ResponseInit{
     }
 
     @JsProperty(name="headers")
-    public ResponseInit.HeadersInit headers;
+    public HeadersInit headers;
 
     @JsOverlay
     public final void setHeaders(String[][] headers){

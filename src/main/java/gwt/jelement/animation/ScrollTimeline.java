@@ -31,14 +31,14 @@ import jsinterop.base.Js;
 public class ScrollTimeline extends AnimationTimeline{
     
     @JsType(isNative = true, name = "?", namespace = JsPackage.GLOBAL)
-    public interface DoubleOrScrollTimelineAutoKeywordUnionType {
+    public interface TimeRangeUnion {
         @JsOverlay
-        static DoubleOrScrollTimelineAutoKeywordUnionType of(double value){
+        static TimeRangeUnion of(double value){
             return Js.cast(value);
         }
     
         @JsOverlay
-        static DoubleOrScrollTimelineAutoKeywordUnionType of(String value){
+        static TimeRangeUnion of(String value){
             return Js.cast(value);
         }
     
@@ -86,7 +86,7 @@ public class ScrollTimeline extends AnimationTimeline{
     }
     
     @JsProperty(name="timeRange")
-    public ScrollTimeline.DoubleOrScrollTimelineAutoKeywordUnionType timeRange;
+    public TimeRangeUnion timeRange;
     
     
 }

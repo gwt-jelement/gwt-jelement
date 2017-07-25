@@ -30,14 +30,14 @@ public class IntersectionObserverInit{
     }
 
     @JsType(isNative = true, name = "?", namespace = JsPackage.GLOBAL)
-    public interface DoubleOrDoubleArrayUnionType {
+    public interface ThresholdUnion {
         @JsOverlay
-        static DoubleOrDoubleArrayUnionType of(double value){
+        static ThresholdUnion of(double value){
             return Js.cast(value);
         }
     
         @JsOverlay
-        static DoubleOrDoubleArrayUnionType of(double[] value){
+        static ThresholdUnion of(double[] value){
             return Js.cast(value);
         }
     
@@ -90,16 +90,16 @@ public class IntersectionObserverInit{
     }
 
     @JsProperty(name="threshold")
-    public IntersectionObserverInit.DoubleOrDoubleArrayUnionType threshold;
+    public ThresholdUnion threshold;
 
     @JsOverlay
     public final void setThreshold(double threshold){
-        this.threshold = IntersectionObserverInit.DoubleOrDoubleArrayUnionType.of(threshold);
+        this.threshold = IntersectionObserverInit.ThresholdUnion.of(threshold);
     }
 
     @JsOverlay
     public final void setThreshold(double[] threshold){
-        this.threshold = IntersectionObserverInit.DoubleOrDoubleArrayUnionType.of(threshold);
+        this.threshold = IntersectionObserverInit.ThresholdUnion.of(threshold);
     }
 
 

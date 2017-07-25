@@ -50,19 +50,19 @@ import jsinterop.base.Js;
 public class CanvasRenderingContext2D{
     
     @JsType(isNative = true, name = "?", namespace = JsPackage.GLOBAL)
-    public interface StringOrCanvasGradientOrCanvasPatternUnionType {
+    public interface StrokeStyleUnion {
         @JsOverlay
-        static StringOrCanvasGradientOrCanvasPatternUnionType of(String value){
+        static StrokeStyleUnion of(String value){
             return Js.cast(value);
         }
     
         @JsOverlay
-        static StringOrCanvasGradientOrCanvasPatternUnionType of(CanvasGradient value){
+        static StrokeStyleUnion of(CanvasGradient value){
             return Js.cast(value);
         }
     
         @JsOverlay
-        static StringOrCanvasGradientOrCanvasPatternUnionType of(CanvasPattern value){
+        static StrokeStyleUnion of(CanvasPattern value){
             return Js.cast(value);
         }
     
@@ -130,39 +130,39 @@ public class CanvasRenderingContext2D{
     }
     
     @JsProperty(name="strokeStyle")
-    public CanvasRenderingContext2D.StringOrCanvasGradientOrCanvasPatternUnionType strokeStyle;
+    public StrokeStyleUnion strokeStyle;
     
     @JsOverlay
     public final void setStrokeStyle(String strokeStyle){
-        this.strokeStyle = CanvasRenderingContext2D.StringOrCanvasGradientOrCanvasPatternUnionType.of(strokeStyle);
+        this.strokeStyle = CanvasRenderingContext2D.StrokeStyleUnion.of(strokeStyle);
     }
     
     @JsOverlay
     public final void setStrokeStyle(CanvasGradient strokeStyle){
-        this.strokeStyle = CanvasRenderingContext2D.StringOrCanvasGradientOrCanvasPatternUnionType.of(strokeStyle);
+        this.strokeStyle = CanvasRenderingContext2D.StrokeStyleUnion.of(strokeStyle);
     }
     
     @JsOverlay
     public final void setStrokeStyle(CanvasPattern strokeStyle){
-        this.strokeStyle = CanvasRenderingContext2D.StringOrCanvasGradientOrCanvasPatternUnionType.of(strokeStyle);
+        this.strokeStyle = CanvasRenderingContext2D.StrokeStyleUnion.of(strokeStyle);
     }
     
     @JsProperty(name="fillStyle")
-    public CanvasRenderingContext2D.StringOrCanvasGradientOrCanvasPatternUnionType fillStyle;
+    public StrokeStyleUnion fillStyle;
     
     @JsOverlay
     public final void setFillStyle(String fillStyle){
-        this.fillStyle = CanvasRenderingContext2D.StringOrCanvasGradientOrCanvasPatternUnionType.of(fillStyle);
+        this.fillStyle = CanvasRenderingContext2D.StrokeStyleUnion.of(fillStyle);
     }
     
     @JsOverlay
     public final void setFillStyle(CanvasGradient fillStyle){
-        this.fillStyle = CanvasRenderingContext2D.StringOrCanvasGradientOrCanvasPatternUnionType.of(fillStyle);
+        this.fillStyle = CanvasRenderingContext2D.StrokeStyleUnion.of(fillStyle);
     }
     
     @JsOverlay
     public final void setFillStyle(CanvasPattern fillStyle){
-        this.fillStyle = CanvasRenderingContext2D.StringOrCanvasGradientOrCanvasPatternUnionType.of(fillStyle);
+        this.fillStyle = CanvasRenderingContext2D.StrokeStyleUnion.of(fillStyle);
     }
     
     @JsProperty(name="shadowOffsetX")

@@ -32,19 +32,19 @@ import jsinterop.base.Js;
 public class TrackEvent extends Event{
     
     @JsType(isNative = true, name = "?", namespace = JsPackage.GLOBAL)
-    public interface VideoTrackOrAudioTrackOrTextTrackUnionType {
+    public interface TrackUnion {
         @JsOverlay
-        static VideoTrackOrAudioTrackOrTextTrackUnionType of(VideoTrack value){
+        static TrackUnion of(VideoTrack value){
             return Js.cast(value);
         }
     
         @JsOverlay
-        static VideoTrackOrAudioTrackOrTextTrackUnionType of(AudioTrack value){
+        static TrackUnion of(AudioTrack value){
             return Js.cast(value);
         }
     
         @JsOverlay
-        static VideoTrackOrAudioTrackOrTextTrackUnionType of(TextTrack value){
+        static TrackUnion of(TextTrack value){
             return Js.cast(value);
         }
     
@@ -91,7 +91,7 @@ public class TrackEvent extends Event{
     }
     
     @JsProperty(name="track")
-    public TrackEvent.VideoTrackOrAudioTrackOrTextTrackUnionType track;
+    public TrackUnion track;
     
     
 }

@@ -37,14 +37,14 @@ public class FileReader extends EventTarget{
     
     
     @JsType(isNative = true, name = "?", namespace = JsPackage.GLOBAL)
-    public interface StringOrArrayBufferUnionType {
+    public interface ResultUnion {
         @JsOverlay
-        static StringOrArrayBufferUnionType of(String value){
+        static ResultUnion of(String value){
             return Js.cast(value);
         }
     
         @JsOverlay
-        static StringOrArrayBufferUnionType of(ArrayBuffer value){
+        static ResultUnion of(ArrayBuffer value){
             return Js.cast(value);
         }
     
@@ -79,7 +79,7 @@ public class FileReader extends EventTarget{
     public short readyState;
     
     @JsProperty(name="result")
-    public FileReader.StringOrArrayBufferUnionType result;
+    public ResultUnion result;
     
     @JsProperty(name="error")
     public DOMException error;

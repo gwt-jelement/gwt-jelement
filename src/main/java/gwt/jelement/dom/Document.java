@@ -209,7 +209,7 @@ public class Document extends Node{
     public HTMLCollection scripts;
     
     @JsProperty(name="currentScript")
-    public Document.HTMLOrSVGScriptElement currentScript;
+    public HTMLOrSVGScriptElement currentScript;
     
     @JsProperty(name="defaultView")
     public Window defaultView;

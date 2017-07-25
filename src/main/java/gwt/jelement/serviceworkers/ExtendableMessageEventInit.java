@@ -73,21 +73,21 @@ public class ExtendableMessageEventInit extends ExtendableEventInit{
     }
 
     @JsProperty(name="source")
-    public ExtendableMessageEvent.ClientOrServiceWorkerOrMessagePortUnionType source;
+    public ExtendableMessageEvent.SourceUnion source;
 
     @JsOverlay
     public final void setSource(Client source){
-        this.source = ExtendableMessageEvent.ClientOrServiceWorkerOrMessagePortUnionType.of(source);
+        this.source = ExtendableMessageEvent.SourceUnion.of(source);
     }
 
     @JsOverlay
     public final void setSource(ServiceWorker source){
-        this.source = ExtendableMessageEvent.ClientOrServiceWorkerOrMessagePortUnionType.of(source);
+        this.source = ExtendableMessageEvent.SourceUnion.of(source);
     }
 
     @JsOverlay
     public final void setSource(MessagePort source){
-        this.source = ExtendableMessageEvent.ClientOrServiceWorkerOrMessagePortUnionType.of(source);
+        this.source = ExtendableMessageEvent.SourceUnion.of(source);
     }
 
     @JsProperty(name="ports")

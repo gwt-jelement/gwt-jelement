@@ -75,39 +75,39 @@ public class OffscreenCanvasRenderingContext2D{
     }
     
     @JsProperty(name="strokeStyle")
-    public CanvasRenderingContext2D.StringOrCanvasGradientOrCanvasPatternUnionType strokeStyle;
+    public CanvasRenderingContext2D.StrokeStyleUnion strokeStyle;
     
     @JsOverlay
     public final void setStrokeStyle(String strokeStyle){
-        this.strokeStyle = CanvasRenderingContext2D.StringOrCanvasGradientOrCanvasPatternUnionType.of(strokeStyle);
+        this.strokeStyle = CanvasRenderingContext2D.StrokeStyleUnion.of(strokeStyle);
     }
     
     @JsOverlay
     public final void setStrokeStyle(CanvasGradient strokeStyle){
-        this.strokeStyle = CanvasRenderingContext2D.StringOrCanvasGradientOrCanvasPatternUnionType.of(strokeStyle);
+        this.strokeStyle = CanvasRenderingContext2D.StrokeStyleUnion.of(strokeStyle);
     }
     
     @JsOverlay
     public final void setStrokeStyle(CanvasPattern strokeStyle){
-        this.strokeStyle = CanvasRenderingContext2D.StringOrCanvasGradientOrCanvasPatternUnionType.of(strokeStyle);
+        this.strokeStyle = CanvasRenderingContext2D.StrokeStyleUnion.of(strokeStyle);
     }
     
     @JsProperty(name="fillStyle")
-    public CanvasRenderingContext2D.StringOrCanvasGradientOrCanvasPatternUnionType fillStyle;
+    public CanvasRenderingContext2D.StrokeStyleUnion fillStyle;
     
     @JsOverlay
     public final void setFillStyle(String fillStyle){
-        this.fillStyle = CanvasRenderingContext2D.StringOrCanvasGradientOrCanvasPatternUnionType.of(fillStyle);
+        this.fillStyle = CanvasRenderingContext2D.StrokeStyleUnion.of(fillStyle);
     }
     
     @JsOverlay
     public final void setFillStyle(CanvasGradient fillStyle){
-        this.fillStyle = CanvasRenderingContext2D.StringOrCanvasGradientOrCanvasPatternUnionType.of(fillStyle);
+        this.fillStyle = CanvasRenderingContext2D.StrokeStyleUnion.of(fillStyle);
     }
     
     @JsOverlay
     public final void setFillStyle(CanvasPattern fillStyle){
-        this.fillStyle = CanvasRenderingContext2D.StringOrCanvasGradientOrCanvasPatternUnionType.of(fillStyle);
+        this.fillStyle = CanvasRenderingContext2D.StrokeStyleUnion.of(fillStyle);
     }
     
     @JsProperty(name="shadowOffsetX")
