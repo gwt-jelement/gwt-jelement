@@ -26,11 +26,14 @@ import jsinterop.annotations.JsType;
 @JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class WaveShaperOptions extends AudioNodeOptions{
 
+    @JsProperty(name="curve")
+    private float[] curve;
+
+    @JsProperty(name="oversample")
+    private String oversample;
+
     public WaveShaperOptions(){
     }
-
-    @JsProperty(name="curve")
-    public float[] curve;
 
     @JsOverlay
     public final float[] getCurve(){
@@ -42,9 +45,6 @@ public class WaveShaperOptions extends AudioNodeOptions{
         this.curve = curve;
     }
 
-    @JsProperty(name="oversample")
-    public String oversample;
-
     @JsOverlay
     public final OverSampleType getOversample(){
         return OverSampleType.of(this.oversample);
@@ -54,6 +54,5 @@ public class WaveShaperOptions extends AudioNodeOptions{
     public final void setOversample(OverSampleType oversample){
         this.oversample = oversample.getInternalValue();
     }
-
 
 }

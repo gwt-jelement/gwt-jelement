@@ -16,6 +16,7 @@
  */
 package gwt.jelement.workers;
 
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -24,31 +25,31 @@ import jsinterop.annotations.JsType;
 public class WorkerLocation{
     
     @JsProperty(name="href")
-    public String href;
+    public native String getHref();
     
     @JsProperty(name="origin")
-    public String origin;
+    public native String getOrigin();
     
     @JsProperty(name="protocol")
-    public String protocol;
+    public native String getProtocol();
     
     @JsProperty(name="host")
-    public String host;
+    public native String getHost();
     
     @JsProperty(name="hostname")
-    public String hostname;
+    public native String getHostname();
     
     @JsProperty(name="port")
-    public String port;
+    public native String getPort();
     
     @JsProperty(name="pathname")
-    public String pathname;
+    public native String getPathname();
     
     @JsProperty(name="search")
-    public String search;
+    public native String getSearch();
     
     @JsProperty(name="hash")
-    public String hash;
+    public native String getHash();
     
     
 }

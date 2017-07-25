@@ -18,6 +18,7 @@ package gwt.jelement.frame;
 
 import gwt.jelement.events.EventTarget;
 import jsinterop.annotations.JsConstructor;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -31,25 +32,25 @@ public class VisualViewport extends EventTarget{
     }
     
     @JsProperty(name="offsetLeft")
-    public double offsetLeft;
+    public native double getOffsetLeft();
     
     @JsProperty(name="offsetTop")
-    public double offsetTop;
+    public native double getOffsetTop();
     
     @JsProperty(name="pageLeft")
-    public double pageLeft;
+    public native double getPageLeft();
     
     @JsProperty(name="pageTop")
-    public double pageTop;
+    public native double getPageTop();
     
     @JsProperty(name="width")
-    public double width;
+    public native double getWidth();
     
     @JsProperty(name="height")
-    public double height;
+    public native double getHeight();
     
     @JsProperty(name="scale")
-    public double scale;
+    public native double getScale();
     
     
 }

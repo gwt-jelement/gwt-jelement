@@ -18,6 +18,7 @@ package gwt.jelement.filesystem;
 
 import gwt.jelement.filesystem.EntrySync;
 import jsinterop.annotations.JsMethod;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
@@ -26,5 +27,6 @@ public class DirectoryReaderSync{
     
     @JsMethod(name = "readEntries")
     public native EntrySync[] readEntries();
+    
     
 }

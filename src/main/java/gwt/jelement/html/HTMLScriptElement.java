@@ -18,6 +18,7 @@ package gwt.jelement.html;
 
 import gwt.jelement.html.HTMLElement;
 import jsinterop.annotations.JsConstructor;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -31,37 +32,70 @@ public class HTMLScriptElement extends HTMLElement{
     }
     
     @JsProperty(name="src")
-    public String src;
+    public native String getSrc();
+    
+    @JsProperty(name="src")
+    public native void setSrc(String src);
     
     @JsProperty(name="type")
-    public String type;
+    public native String getType();
+    
+    @JsProperty(name="type")
+    public native void setType(String type);
     
     @JsProperty(name="noModule")
-    public boolean noModule;
+    public native boolean getNoModule();
+    
+    @JsProperty(name="noModule")
+    public native void setNoModule(boolean noModule);
     
     @JsProperty(name="charset")
-    public String charset;
+    public native String getCharset();
+    
+    @JsProperty(name="charset")
+    public native void setCharset(String charset);
     
     @JsProperty(name="async")
-    public boolean async;
+    public native boolean getAsync();
+    
+    @JsProperty(name="async")
+    public native void setAsync(boolean async);
     
     @JsProperty(name="defer")
-    public boolean defer;
+    public native boolean getDefer();
+    
+    @JsProperty(name="defer")
+    public native void setDefer(boolean defer);
     
     @JsProperty(name="crossOrigin")
-    public String crossOrigin;
+    public native String getCrossOrigin();
+    
+    @JsProperty(name="crossOrigin")
+    public native void setCrossOrigin(String crossOrigin);
     
     @JsProperty(name="text")
-    public String text;
+    public native String getText();
+    
+    @JsProperty(name="text")
+    public native void setText(String text);
     
     @JsProperty(name="event")
-    public String event;
+    public native String getEvent();
+    
+    @JsProperty(name="event")
+    public native void setEvent(String event);
     
     @JsProperty(name="htmlFor")
-    public String htmlFor;
+    public native String getHtmlFor();
+    
+    @JsProperty(name="htmlFor")
+    public native void setHtmlFor(String htmlFor);
     
     @JsProperty(name="integrity")
-    public String integrity;
+    public native String getIntegrity();
+    
+    @JsProperty(name="integrity")
+    public native void setIntegrity(String integrity);
     
     
 }

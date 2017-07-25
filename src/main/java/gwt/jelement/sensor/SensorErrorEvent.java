@@ -20,6 +20,7 @@ import gwt.jelement.dom.DOMException;
 import gwt.jelement.events.Event;
 import gwt.jelement.sensor.SensorErrorEventInit;
 import jsinterop.annotations.JsConstructor;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -33,7 +34,7 @@ public class SensorErrorEvent extends Event{
     }
     
     @JsProperty(name="error")
-    public DOMException error;
+    public native DOMException getError();
     
     
 }

@@ -21,6 +21,7 @@ import gwt.jelement.cachestorage.CacheQueryOptions;
 import gwt.jelement.fetch.Request;
 import elemental2.promise.Promise;
 import jsinterop.annotations.JsMethod;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
@@ -30,25 +31,33 @@ public class CacheStorage{
     @JsMethod(name = "delete")
     public native Promise<Boolean> delete(String cacheName);
     
+    
     @JsMethod(name = "has")
     public native Promise<Boolean> has(String cacheName);
+    
     
     @JsMethod(name = "keys")
     public native Promise<String[]> keys();
     
+    
     @JsMethod(name = "match")
     public native Promise<Object> match(Request request);
+    
     
     @JsMethod(name = "match")
     public native Promise<Object> match(String request);
     
+    
     @JsMethod(name = "match")
     public native Promise<Object> match(Request request, CacheQueryOptions options);
+    
     
     @JsMethod(name = "match")
     public native Promise<Object> match(String request, CacheQueryOptions options);
     
+    
     @JsMethod(name = "open")
     public native Promise<Cache> open(String cacheName);
+    
     
 }

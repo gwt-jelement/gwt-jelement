@@ -25,11 +25,14 @@ import jsinterop.annotations.JsType;
 @JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class AddEventListenerOptions extends EventListenerOptions{
 
+    @JsProperty(name="passive")
+    private boolean passive;
+
+    @JsProperty(name="once")
+    private boolean once;
+
     public AddEventListenerOptions(){
     }
-
-    @JsProperty(name="passive")
-    public boolean passive;
 
     @JsOverlay
     public final boolean getPassive(){
@@ -41,9 +44,6 @@ public class AddEventListenerOptions extends EventListenerOptions{
         this.passive = passive;
     }
 
-    @JsProperty(name="once")
-    public boolean once;
-
     @JsOverlay
     public final boolean getOnce(){
         return this.once;
@@ -53,6 +53,5 @@ public class AddEventListenerOptions extends EventListenerOptions{
     public final void setOnce(boolean once){
         this.once = once;
     }
-
 
 }

@@ -22,6 +22,7 @@ import gwt.jelement.events.InputEventInit;
 import gwt.jelement.events.UIEvent;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -40,18 +41,19 @@ public class InputEvent extends UIEvent{
     }
     
     @JsProperty(name="data")
-    public String data;
+    public native String getData();
     
     @JsProperty(name="isComposing")
-    public boolean isComposing;
+    public native boolean getIsComposing();
     
     @JsProperty(name="inputType")
-    public String inputType;
+    public native String getInputType();
     
     @JsProperty(name="dataTransfer")
-    public DataTransfer dataTransfer;
+    public native DataTransfer getDataTransfer();
     
     @JsMethod(name = "getTargetRanges")
     public native StaticRange[] getTargetRanges();
+    
     
 }

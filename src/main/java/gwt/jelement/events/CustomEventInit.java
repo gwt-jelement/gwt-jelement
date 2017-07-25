@@ -25,11 +25,11 @@ import jsinterop.annotations.JsType;
 @JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class CustomEventInit extends EventInit{
 
+    @JsProperty(name="detail")
+    private Object detail;
+
     public CustomEventInit(){
     }
-
-    @JsProperty(name="detail")
-    public Object detail;
 
     @JsOverlay
     public final Object getDetail(){
@@ -40,6 +40,5 @@ public class CustomEventInit extends EventInit{
     public final void setDetail(Object detail){
         this.detail = detail;
     }
-
 
 }

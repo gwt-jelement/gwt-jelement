@@ -23,6 +23,7 @@ import gwt.jelement.filesystem.FileEntrySync;
 import gwt.jelement.filesystem.FileSystemFlags;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
@@ -37,13 +38,17 @@ public class DirectoryEntrySync extends EntrySync{
     @JsMethod(name = "createReader")
     public native DirectoryReaderSync createReader();
     
+    
     @JsMethod(name = "getDirectory")
     public native DirectoryEntrySync getDirectory(String path, FileSystemFlags flags);
+    
     
     @JsMethod(name = "getFile")
     public native FileEntrySync getFile(String path, FileSystemFlags flags);
     
+    
     @JsMethod(name = "removeRecursively")
     public native void removeRecursively();
+    
     
 }

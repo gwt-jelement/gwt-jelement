@@ -32,13 +32,19 @@ import jsinterop.annotations.JsType;
 @JsType(namespace = JsPackage.GLOBAL, isNative = true)
 public class TextTrack extends EventTarget{
     
+    @JsProperty(name="kind")
+    private String kind;
+    
+    @JsProperty(name="mode")
+    private String mode;
+    
+    @JsProperty(name="oncuechange")
+    private EventHandlerNonNull oncuechange;
+    
     @JsConstructor
     public TextTrack(){
         super();
     }
-    
-    @JsProperty(name="kind")
-    public String kind;
     
     @JsOverlay
     public final TextTrackKind getKind(){
@@ -46,16 +52,13 @@ public class TextTrack extends EventTarget{
     }
     
     @JsProperty(name="label")
-    public String label;
+    public native String getLabel();
     
     @JsProperty(name="language")
-    public String language;
+    public native String getLanguage();
     
     @JsProperty(name="id")
-    public String id;
-    
-    @JsProperty(name="mode")
-    public String mode;
+    public native String getId();
     
     @JsOverlay
     public final TextTrackMode getMode(){
@@ -68,18 +71,27 @@ public class TextTrack extends EventTarget{
     }
     
     @JsProperty(name="cues")
-    public TextTrackCueList cues;
+    public native TextTrackCueList getCues();
     
     @JsProperty(name="activeCues")
-    public TextTrackCueList activeCues;
+    public native TextTrackCueList getActiveCues();
     
-    @JsProperty(name="oncuechange")
-    public EventHandlerNonNull oncuechange;
+    @JsOverlay
+    public final EventHandlerNonNull getOnCuechange(){
+        return this.oncuechange;
+    }
+    
+    @JsOverlay
+    public final void setOnCuechange(EventHandlerNonNull oncuechange){
+        this.oncuechange = oncuechange;
+    }
     
     @JsMethod(name = "addCue")
     public native void addCue(TextTrackCue cue);
     
+    
     @JsMethod(name = "removeCue")
     public native void removeCue(TextTrackCue cue);
+    
     
 }

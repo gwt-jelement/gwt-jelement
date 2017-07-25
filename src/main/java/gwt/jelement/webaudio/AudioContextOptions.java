@@ -25,8 +25,8 @@ import jsinterop.base.Js;
 @JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class AudioContextOptions{
 
-    public AudioContextOptions(){
-    }
+    @JsProperty(name="latencyHint")
+    private LatencyHintUnion latencyHint;
 
     @JsType(isNative = true, name = "?", namespace = JsPackage.GLOBAL)
     public interface LatencyHintUnion {
@@ -62,8 +62,8 @@ public class AudioContextOptions{
     
     }
     
-    @JsProperty(name="latencyHint")
-    public LatencyHintUnion latencyHint;
+    public AudioContextOptions(){
+    }
 
     @JsOverlay
     public final void setLatencyHint(String latencyHint){
@@ -74,6 +74,5 @@ public class AudioContextOptions{
     public final void setLatencyHint(double latencyHint){
         this.latencyHint = AudioContextOptions.LatencyHintUnion.of(latencyHint);
     }
-
 
 }

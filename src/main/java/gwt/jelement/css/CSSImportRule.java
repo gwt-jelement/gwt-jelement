@@ -20,6 +20,7 @@ import gwt.jelement.css.CSSRule;
 import gwt.jelement.css.CSSStyleSheet;
 import gwt.jelement.css.MediaList;
 import jsinterop.annotations.JsConstructor;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -33,13 +34,13 @@ public class CSSImportRule extends CSSRule{
     }
     
     @JsProperty(name="href")
-    public String href;
+    public native String getHref();
     
     @JsProperty(name="media")
-    public MediaList media;
+    public native MediaList getMedia();
     
     @JsProperty(name="styleSheet")
-    public CSSStyleSheet styleSheet;
+    public native CSSStyleSheet getStyleSheet();
     
     
 }

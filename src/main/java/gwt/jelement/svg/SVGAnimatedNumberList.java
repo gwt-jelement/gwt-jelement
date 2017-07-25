@@ -17,6 +17,7 @@
 package gwt.jelement.svg;
 
 import gwt.jelement.svg.SVGNumberList;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -25,10 +26,10 @@ import jsinterop.annotations.JsType;
 public class SVGAnimatedNumberList{
     
     @JsProperty(name="baseVal")
-    public SVGNumberList baseVal;
+    public native SVGNumberList getBaseVal();
     
     @JsProperty(name="animVal")
-    public SVGNumberList animVal;
+    public native SVGNumberList getAnimVal();
     
     
 }

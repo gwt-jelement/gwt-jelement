@@ -17,6 +17,7 @@
 package gwt.jelement.css.cssom;
 
 import jsinterop.annotations.JsMethod;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -25,9 +26,13 @@ import jsinterop.annotations.JsType;
 public class CSSTransformComponent{
     
     @JsProperty(name="is2D")
-    public boolean is2D;
+    public native boolean getIs2D();
+    
+    @JsProperty(name="is2D")
+    public native void setIs2D(boolean is2D);
     
     @JsMethod(name = "toString")
     public native String toString();
+    
     
 }

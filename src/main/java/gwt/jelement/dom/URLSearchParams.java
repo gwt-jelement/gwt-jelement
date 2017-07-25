@@ -17,6 +17,7 @@
 package gwt.jelement.dom;
 
 import jsinterop.annotations.JsMethod;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
@@ -26,25 +27,33 @@ public class URLSearchParams{
     @JsMethod(name = "append")
     public native void append(String name, String value);
     
+    
     @JsMethod(name = "delete")
     public native void delete(String name);
+    
     
     @JsMethod(name = "get")
     public native String get(String name);
     
+    
     @JsMethod(name = "getAll")
     public native String[] getAll(String name);
+    
     
     @JsMethod(name = "has")
     public native boolean has(String name);
     
+    
     @JsMethod(name = "set")
     public native void set(String name, String value);
+    
     
     @JsMethod(name = "sort")
     public native void sort();
     
+    
     @JsMethod(name = "toString")
     public native String toString();
+    
     
 }

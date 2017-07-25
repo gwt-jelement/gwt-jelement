@@ -16,6 +16,7 @@
  */
 package gwt.jelement.frame;
 
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -24,10 +25,10 @@ import jsinterop.annotations.JsType;
 public class NavigatorLanguage{
     
     @JsProperty(name="language")
-    public String language;
+    public native String getLanguage();
     
     @JsProperty(name="languages")
-    public String[] languages;
+    public native String[] getLanguages();
     
     
 }

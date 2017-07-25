@@ -29,6 +29,7 @@ import gwt.jelement.serviceworkers.ServiceWorker;
 import elemental2.promise.Promise;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -36,54 +37,70 @@ import jsinterop.annotations.JsType;
 @JsType(namespace = JsPackage.GLOBAL, isNative = true)
 public class ServiceWorkerRegistration extends EventTarget{
     
+    @JsProperty(name="onupdatefound")
+    private EventHandlerNonNull onupdatefound;
+    
     @JsConstructor
     public ServiceWorkerRegistration(){
         super();
     }
     
     @JsProperty(name="installing")
-    public ServiceWorker installing;
+    public native ServiceWorker getInstalling();
     
     @JsProperty(name="waiting")
-    public ServiceWorker waiting;
+    public native ServiceWorker getWaiting();
     
     @JsProperty(name="active")
-    public ServiceWorker active;
+    public native ServiceWorker getActive();
     
     @JsProperty(name="navigationPreload")
-    public NavigationPreloadManager navigationPreload;
+    public native NavigationPreloadManager getNavigationPreload();
     
     @JsProperty(name="scope")
-    public String scope;
+    public native String getScope();
     
-    @JsProperty(name="onupdatefound")
-    public EventHandlerNonNull onupdatefound;
+    @JsOverlay
+    public final EventHandlerNonNull getOnUpdatefound(){
+        return this.onupdatefound;
+    }
+    
+    @JsOverlay
+    public final void setOnUpdatefound(EventHandlerNonNull onupdatefound){
+        this.onupdatefound = onupdatefound;
+    }
     
     @JsProperty(name="backgroundFetch")
-    public BackgroundFetchManager backgroundFetch;
+    public native BackgroundFetchManager getBackgroundFetch();
     
     @JsProperty(name="sync")
-    public SyncManager sync;
+    public native SyncManager getSync();
     
     @JsProperty(name="pushManager")
-    public PushManager pushManager;
+    public native PushManager getPushManager();
     
     @JsMethod(name = "getNotifications")
     public native Promise<Notification[]> getNotifications();
     
+    
     @JsMethod(name = "getNotifications")
     public native Promise<Notification[]> getNotifications(GetNotificationOptions filter);
+    
     
     @JsMethod(name = "showNotification")
     public native Promise showNotification(String title);
     
+    
     @JsMethod(name = "showNotification")
     public native Promise showNotification(String title, NotificationOptions options);
+    
     
     @JsMethod(name = "unregister")
     public native Promise<Boolean> unregister();
     
+    
     @JsMethod(name = "update")
     public native Promise<Void> update();
+    
     
 }

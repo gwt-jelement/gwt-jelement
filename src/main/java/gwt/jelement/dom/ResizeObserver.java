@@ -18,6 +18,7 @@ package gwt.jelement.dom;
 
 import gwt.jelement.dom.Element;
 import jsinterop.annotations.JsMethod;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
@@ -27,10 +28,13 @@ public class ResizeObserver{
     @JsMethod(name = "disconnect")
     public native void disconnect();
     
+    
     @JsMethod(name = "observe")
     public native void observe(Element target);
     
+    
     @JsMethod(name = "unobserve")
     public native void unobserve(Element target);
+    
     
 }

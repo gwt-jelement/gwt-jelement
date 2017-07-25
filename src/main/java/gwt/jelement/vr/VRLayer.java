@@ -28,11 +28,17 @@ import jsinterop.base.Js;
 @JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class VRLayer{
 
+    @JsProperty(name="source")
+    private WebGL2RenderingContext.VRSource source;
+
+    @JsProperty(name="leftBounds")
+    private float[] leftBounds;
+
+    @JsProperty(name="rightBounds")
+    private float[] rightBounds;
+
     public VRLayer(){
     }
-
-    @JsProperty(name="source")
-    public WebGL2RenderingContext.VRSource source;
 
     @JsOverlay
     public final void setSource(HTMLCanvasElement source){
@@ -44,9 +50,6 @@ public class VRLayer{
         this.source = WebGL2RenderingContext.VRSource.of(source);
     }
 
-    @JsProperty(name="leftBounds")
-    public float[] leftBounds;
-
     @JsOverlay
     public final float[] getLeftBounds(){
         return this.leftBounds;
@@ -57,9 +60,6 @@ public class VRLayer{
         this.leftBounds = leftBounds;
     }
 
-    @JsProperty(name="rightBounds")
-    public float[] rightBounds;
-
     @JsOverlay
     public final float[] getRightBounds(){
         return this.rightBounds;
@@ -69,6 +69,5 @@ public class VRLayer{
     public final void setRightBounds(float[] rightBounds){
         this.rightBounds = rightBounds;
     }
-
 
 }

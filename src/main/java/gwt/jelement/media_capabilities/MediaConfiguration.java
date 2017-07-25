@@ -26,11 +26,14 @@ import jsinterop.annotations.JsType;
 @JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class MediaConfiguration{
 
+    @JsProperty(name="video")
+    private VideoConfiguration video;
+
+    @JsProperty(name="audio")
+    private AudioConfiguration audio;
+
     public MediaConfiguration(){
     }
-
-    @JsProperty(name="video")
-    public VideoConfiguration video;
 
     @JsOverlay
     public final VideoConfiguration getVideo(){
@@ -42,9 +45,6 @@ public class MediaConfiguration{
         this.video = video;
     }
 
-    @JsProperty(name="audio")
-    public AudioConfiguration audio;
-
     @JsOverlay
     public final AudioConfiguration getAudio(){
         return this.audio;
@@ -54,6 +54,5 @@ public class MediaConfiguration{
     public final void setAudio(AudioConfiguration audio){
         this.audio = audio;
     }
-
 
 }

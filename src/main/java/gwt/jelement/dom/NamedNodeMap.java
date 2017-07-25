@@ -18,6 +18,7 @@ package gwt.jelement.dom;
 
 import gwt.jelement.dom.Attr;
 import jsinterop.annotations.JsMethod;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -26,24 +27,30 @@ import jsinterop.annotations.JsType;
 public class NamedNodeMap{
     
     @JsProperty(name="length")
-    public double length;
+    public native double getLength();
     
     @JsMethod(name = "getNamedItem")
     public native Attr getNamedItem(String name);
     
+    
     @JsMethod(name = "getNamedItemNS")
     public native Attr getNamedItemNS(String namespaceURI, String localName);
+    
     
     @JsMethod(name = "removeNamedItem")
     public native Attr removeNamedItem(String name);
     
+    
     @JsMethod(name = "removeNamedItemNS")
     public native Attr removeNamedItemNS(String namespaceURI, String localName);
+    
     
     @JsMethod(name = "setNamedItem")
     public native Attr setNamedItem(Attr attr);
     
+    
     @JsMethod(name = "setNamedItemNS")
     public native Attr setNamedItemNS(Attr attr);
+    
     
 }

@@ -22,6 +22,7 @@ import gwt.jelement.svg.SVGAnimatedNumberList;
 import gwt.jelement.svg.SVGAnimatedString;
 import gwt.jelement.svg.SVGElement;
 import jsinterop.annotations.JsConstructor;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -41,28 +42,28 @@ public class SVGFEColorMatrixElement extends SVGElement{
     }
     
     @JsProperty(name="in1")
-    public SVGAnimatedString in1;
+    public native SVGAnimatedString getIn1();
     
     @JsProperty(name="type")
-    public SVGAnimatedEnumeration type;
+    public native SVGAnimatedEnumeration getType();
     
     @JsProperty(name="values")
-    public SVGAnimatedNumberList values;
+    public native SVGAnimatedNumberList getValues();
     
     @JsProperty(name="x")
-    public SVGAnimatedLength x;
+    public native SVGAnimatedLength getX();
     
     @JsProperty(name="y")
-    public SVGAnimatedLength y;
+    public native SVGAnimatedLength getY();
     
     @JsProperty(name="width")
-    public SVGAnimatedLength width;
+    public native SVGAnimatedLength getWidth();
     
     @JsProperty(name="height")
-    public SVGAnimatedLength height;
+    public native SVGAnimatedLength getHeight();
     
     @JsProperty(name="result")
-    public SVGAnimatedString result;
+    public native SVGAnimatedString getResult();
     
     
 }

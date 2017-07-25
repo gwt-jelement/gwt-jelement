@@ -17,6 +17,7 @@
 package gwt.jelement.dom;
 
 import gwt.jelement.events.EventHandlerNonNull;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -25,223 +26,953 @@ import jsinterop.annotations.JsType;
 public class GlobalEventHandlers{
     
     @JsProperty(name="onabort")
-    public EventHandlerNonNull onabort;
+    private EventHandlerNonNull onabort;
     
     @JsProperty(name="onblur")
-    public EventHandlerNonNull onblur;
+    private EventHandlerNonNull onblur;
     
     @JsProperty(name="oncancel")
-    public EventHandlerNonNull oncancel;
+    private EventHandlerNonNull oncancel;
     
     @JsProperty(name="oncanplay")
-    public EventHandlerNonNull oncanplay;
+    private EventHandlerNonNull oncanplay;
     
     @JsProperty(name="oncanplaythrough")
-    public EventHandlerNonNull oncanplaythrough;
+    private EventHandlerNonNull oncanplaythrough;
     
     @JsProperty(name="onchange")
-    public EventHandlerNonNull onchange;
+    private EventHandlerNonNull onchange;
     
     @JsProperty(name="onclick")
-    public EventHandlerNonNull onclick;
+    private EventHandlerNonNull onclick;
     
     @JsProperty(name="onclose")
-    public EventHandlerNonNull onclose;
+    private EventHandlerNonNull onclose;
     
     @JsProperty(name="oncontextmenu")
-    public EventHandlerNonNull oncontextmenu;
+    private EventHandlerNonNull oncontextmenu;
     
     @JsProperty(name="oncuechange")
-    public EventHandlerNonNull oncuechange;
+    private EventHandlerNonNull oncuechange;
     
     @JsProperty(name="ondblclick")
-    public EventHandlerNonNull ondblclick;
+    private EventHandlerNonNull ondblclick;
     
     @JsProperty(name="ondrag")
-    public EventHandlerNonNull ondrag;
+    private EventHandlerNonNull ondrag;
     
     @JsProperty(name="ondragend")
-    public EventHandlerNonNull ondragend;
+    private EventHandlerNonNull ondragend;
     
     @JsProperty(name="ondragenter")
-    public EventHandlerNonNull ondragenter;
+    private EventHandlerNonNull ondragenter;
     
     @JsProperty(name="ondragleave")
-    public EventHandlerNonNull ondragleave;
+    private EventHandlerNonNull ondragleave;
     
     @JsProperty(name="ondragover")
-    public EventHandlerNonNull ondragover;
+    private EventHandlerNonNull ondragover;
     
     @JsProperty(name="ondragstart")
-    public EventHandlerNonNull ondragstart;
+    private EventHandlerNonNull ondragstart;
     
     @JsProperty(name="ondrop")
-    public EventHandlerNonNull ondrop;
+    private EventHandlerNonNull ondrop;
     
     @JsProperty(name="ondurationchange")
-    public EventHandlerNonNull ondurationchange;
+    private EventHandlerNonNull ondurationchange;
     
     @JsProperty(name="onemptied")
-    public EventHandlerNonNull onemptied;
+    private EventHandlerNonNull onemptied;
     
     @JsProperty(name="onended")
-    public EventHandlerNonNull onended;
+    private EventHandlerNonNull onended;
     
     @JsProperty(name="onerror")
-    public EventHandlerNonNull onerror;
+    private EventHandlerNonNull onerror;
     
     @JsProperty(name="onfocus")
-    public EventHandlerNonNull onfocus;
+    private EventHandlerNonNull onfocus;
     
     @JsProperty(name="oninput")
-    public EventHandlerNonNull oninput;
+    private EventHandlerNonNull oninput;
     
     @JsProperty(name="oninvalid")
-    public EventHandlerNonNull oninvalid;
+    private EventHandlerNonNull oninvalid;
     
     @JsProperty(name="onkeydown")
-    public EventHandlerNonNull onkeydown;
+    private EventHandlerNonNull onkeydown;
     
     @JsProperty(name="onkeypress")
-    public EventHandlerNonNull onkeypress;
+    private EventHandlerNonNull onkeypress;
     
     @JsProperty(name="onkeyup")
-    public EventHandlerNonNull onkeyup;
+    private EventHandlerNonNull onkeyup;
     
     @JsProperty(name="onload")
-    public EventHandlerNonNull onload;
+    private EventHandlerNonNull onload;
     
     @JsProperty(name="onloadeddata")
-    public EventHandlerNonNull onloadeddata;
+    private EventHandlerNonNull onloadeddata;
     
     @JsProperty(name="onloadedmetadata")
-    public EventHandlerNonNull onloadedmetadata;
+    private EventHandlerNonNull onloadedmetadata;
     
     @JsProperty(name="onloadstart")
-    public EventHandlerNonNull onloadstart;
+    private EventHandlerNonNull onloadstart;
     
     @JsProperty(name="onmousedown")
-    public EventHandlerNonNull onmousedown;
+    private EventHandlerNonNull onmousedown;
     
     @JsProperty(name="onmouseenter")
-    public EventHandlerNonNull onmouseenter;
+    private EventHandlerNonNull onmouseenter;
     
     @JsProperty(name="onmouseleave")
-    public EventHandlerNonNull onmouseleave;
+    private EventHandlerNonNull onmouseleave;
     
     @JsProperty(name="onmousemove")
-    public EventHandlerNonNull onmousemove;
+    private EventHandlerNonNull onmousemove;
     
     @JsProperty(name="onmouseout")
-    public EventHandlerNonNull onmouseout;
+    private EventHandlerNonNull onmouseout;
     
     @JsProperty(name="onmouseover")
-    public EventHandlerNonNull onmouseover;
+    private EventHandlerNonNull onmouseover;
     
     @JsProperty(name="onmouseup")
-    public EventHandlerNonNull onmouseup;
+    private EventHandlerNonNull onmouseup;
     
     @JsProperty(name="onmousewheel")
-    public EventHandlerNonNull onmousewheel;
+    private EventHandlerNonNull onmousewheel;
     
     @JsProperty(name="onpause")
-    public EventHandlerNonNull onpause;
+    private EventHandlerNonNull onpause;
     
     @JsProperty(name="onplay")
-    public EventHandlerNonNull onplay;
+    private EventHandlerNonNull onplay;
     
     @JsProperty(name="onplaying")
-    public EventHandlerNonNull onplaying;
+    private EventHandlerNonNull onplaying;
     
     @JsProperty(name="onprogress")
-    public EventHandlerNonNull onprogress;
+    private EventHandlerNonNull onprogress;
     
     @JsProperty(name="onratechange")
-    public EventHandlerNonNull onratechange;
+    private EventHandlerNonNull onratechange;
     
     @JsProperty(name="onreset")
-    public EventHandlerNonNull onreset;
+    private EventHandlerNonNull onreset;
     
     @JsProperty(name="onresize")
-    public EventHandlerNonNull onresize;
+    private EventHandlerNonNull onresize;
     
     @JsProperty(name="onscroll")
-    public EventHandlerNonNull onscroll;
+    private EventHandlerNonNull onscroll;
     
     @JsProperty(name="onseeked")
-    public EventHandlerNonNull onseeked;
+    private EventHandlerNonNull onseeked;
     
     @JsProperty(name="onseeking")
-    public EventHandlerNonNull onseeking;
+    private EventHandlerNonNull onseeking;
     
     @JsProperty(name="onselect")
-    public EventHandlerNonNull onselect;
+    private EventHandlerNonNull onselect;
     
     @JsProperty(name="onstalled")
-    public EventHandlerNonNull onstalled;
+    private EventHandlerNonNull onstalled;
     
     @JsProperty(name="onsubmit")
-    public EventHandlerNonNull onsubmit;
+    private EventHandlerNonNull onsubmit;
     
     @JsProperty(name="onsuspend")
-    public EventHandlerNonNull onsuspend;
+    private EventHandlerNonNull onsuspend;
     
     @JsProperty(name="ontimeupdate")
-    public EventHandlerNonNull ontimeupdate;
+    private EventHandlerNonNull ontimeupdate;
     
     @JsProperty(name="ontoggle")
-    public EventHandlerNonNull ontoggle;
+    private EventHandlerNonNull ontoggle;
     
     @JsProperty(name="onvolumechange")
-    public EventHandlerNonNull onvolumechange;
+    private EventHandlerNonNull onvolumechange;
     
     @JsProperty(name="onwaiting")
-    public EventHandlerNonNull onwaiting;
+    private EventHandlerNonNull onwaiting;
     
     @JsProperty(name="onauxclick")
-    public EventHandlerNonNull onauxclick;
+    private EventHandlerNonNull onauxclick;
     
     @JsProperty(name="ongotpointercapture")
-    public EventHandlerNonNull ongotpointercapture;
+    private EventHandlerNonNull ongotpointercapture;
     
     @JsProperty(name="onlostpointercapture")
-    public EventHandlerNonNull onlostpointercapture;
+    private EventHandlerNonNull onlostpointercapture;
     
     @JsProperty(name="onpointerdown")
-    public EventHandlerNonNull onpointerdown;
+    private EventHandlerNonNull onpointerdown;
     
     @JsProperty(name="onpointermove")
-    public EventHandlerNonNull onpointermove;
+    private EventHandlerNonNull onpointermove;
     
     @JsProperty(name="onpointerup")
-    public EventHandlerNonNull onpointerup;
+    private EventHandlerNonNull onpointerup;
     
     @JsProperty(name="onpointercancel")
-    public EventHandlerNonNull onpointercancel;
+    private EventHandlerNonNull onpointercancel;
     
     @JsProperty(name="onpointerover")
-    public EventHandlerNonNull onpointerover;
+    private EventHandlerNonNull onpointerover;
     
     @JsProperty(name="onpointerout")
-    public EventHandlerNonNull onpointerout;
+    private EventHandlerNonNull onpointerout;
     
     @JsProperty(name="onpointerenter")
-    public EventHandlerNonNull onpointerenter;
+    private EventHandlerNonNull onpointerenter;
     
     @JsProperty(name="onpointerleave")
-    public EventHandlerNonNull onpointerleave;
+    private EventHandlerNonNull onpointerleave;
     
     @JsProperty(name="ontouchcancel")
-    public EventHandlerNonNull ontouchcancel;
+    private EventHandlerNonNull ontouchcancel;
     
     @JsProperty(name="ontouchend")
-    public EventHandlerNonNull ontouchend;
+    private EventHandlerNonNull ontouchend;
     
     @JsProperty(name="ontouchmove")
-    public EventHandlerNonNull ontouchmove;
+    private EventHandlerNonNull ontouchmove;
     
     @JsProperty(name="ontouchstart")
-    public EventHandlerNonNull ontouchstart;
+    private EventHandlerNonNull ontouchstart;
+    
+    @JsOverlay
+    public final EventHandlerNonNull getOnAbort(){
+        return this.onabort;
+    }
+    
+    @JsOverlay
+    public final void setOnAbort(EventHandlerNonNull onabort){
+        this.onabort = onabort;
+    }
+    
+    @JsOverlay
+    public final EventHandlerNonNull getOnBlur(){
+        return this.onblur;
+    }
+    
+    @JsOverlay
+    public final void setOnBlur(EventHandlerNonNull onblur){
+        this.onblur = onblur;
+    }
+    
+    @JsOverlay
+    public final EventHandlerNonNull getOnCancel(){
+        return this.oncancel;
+    }
+    
+    @JsOverlay
+    public final void setOnCancel(EventHandlerNonNull oncancel){
+        this.oncancel = oncancel;
+    }
+    
+    @JsOverlay
+    public final EventHandlerNonNull getOnCanplay(){
+        return this.oncanplay;
+    }
+    
+    @JsOverlay
+    public final void setOnCanplay(EventHandlerNonNull oncanplay){
+        this.oncanplay = oncanplay;
+    }
+    
+    @JsOverlay
+    public final EventHandlerNonNull getOnCanplaythrough(){
+        return this.oncanplaythrough;
+    }
+    
+    @JsOverlay
+    public final void setOnCanplaythrough(EventHandlerNonNull oncanplaythrough){
+        this.oncanplaythrough = oncanplaythrough;
+    }
+    
+    @JsOverlay
+    public final EventHandlerNonNull getOnChange(){
+        return this.onchange;
+    }
+    
+    @JsOverlay
+    public final void setOnChange(EventHandlerNonNull onchange){
+        this.onchange = onchange;
+    }
+    
+    @JsOverlay
+    public final EventHandlerNonNull getOnClick(){
+        return this.onclick;
+    }
+    
+    @JsOverlay
+    public final void setOnClick(EventHandlerNonNull onclick){
+        this.onclick = onclick;
+    }
+    
+    @JsOverlay
+    public final EventHandlerNonNull getOnClose(){
+        return this.onclose;
+    }
+    
+    @JsOverlay
+    public final void setOnClose(EventHandlerNonNull onclose){
+        this.onclose = onclose;
+    }
+    
+    @JsOverlay
+    public final EventHandlerNonNull getOnContextmenu(){
+        return this.oncontextmenu;
+    }
+    
+    @JsOverlay
+    public final void setOnContextmenu(EventHandlerNonNull oncontextmenu){
+        this.oncontextmenu = oncontextmenu;
+    }
+    
+    @JsOverlay
+    public final EventHandlerNonNull getOnCuechange(){
+        return this.oncuechange;
+    }
+    
+    @JsOverlay
+    public final void setOnCuechange(EventHandlerNonNull oncuechange){
+        this.oncuechange = oncuechange;
+    }
+    
+    @JsOverlay
+    public final EventHandlerNonNull getOnDblclick(){
+        return this.ondblclick;
+    }
+    
+    @JsOverlay
+    public final void setOnDblclick(EventHandlerNonNull ondblclick){
+        this.ondblclick = ondblclick;
+    }
+    
+    @JsOverlay
+    public final EventHandlerNonNull getOnDrag(){
+        return this.ondrag;
+    }
+    
+    @JsOverlay
+    public final void setOnDrag(EventHandlerNonNull ondrag){
+        this.ondrag = ondrag;
+    }
+    
+    @JsOverlay
+    public final EventHandlerNonNull getOnDragend(){
+        return this.ondragend;
+    }
+    
+    @JsOverlay
+    public final void setOnDragend(EventHandlerNonNull ondragend){
+        this.ondragend = ondragend;
+    }
+    
+    @JsOverlay
+    public final EventHandlerNonNull getOnDragenter(){
+        return this.ondragenter;
+    }
+    
+    @JsOverlay
+    public final void setOnDragenter(EventHandlerNonNull ondragenter){
+        this.ondragenter = ondragenter;
+    }
+    
+    @JsOverlay
+    public final EventHandlerNonNull getOnDragleave(){
+        return this.ondragleave;
+    }
+    
+    @JsOverlay
+    public final void setOnDragleave(EventHandlerNonNull ondragleave){
+        this.ondragleave = ondragleave;
+    }
+    
+    @JsOverlay
+    public final EventHandlerNonNull getOnDragover(){
+        return this.ondragover;
+    }
+    
+    @JsOverlay
+    public final void setOnDragover(EventHandlerNonNull ondragover){
+        this.ondragover = ondragover;
+    }
+    
+    @JsOverlay
+    public final EventHandlerNonNull getOnDragstart(){
+        return this.ondragstart;
+    }
+    
+    @JsOverlay
+    public final void setOnDragstart(EventHandlerNonNull ondragstart){
+        this.ondragstart = ondragstart;
+    }
+    
+    @JsOverlay
+    public final EventHandlerNonNull getOnDrop(){
+        return this.ondrop;
+    }
+    
+    @JsOverlay
+    public final void setOnDrop(EventHandlerNonNull ondrop){
+        this.ondrop = ondrop;
+    }
+    
+    @JsOverlay
+    public final EventHandlerNonNull getOnDurationchange(){
+        return this.ondurationchange;
+    }
+    
+    @JsOverlay
+    public final void setOnDurationchange(EventHandlerNonNull ondurationchange){
+        this.ondurationchange = ondurationchange;
+    }
+    
+    @JsOverlay
+    public final EventHandlerNonNull getOnEmptied(){
+        return this.onemptied;
+    }
+    
+    @JsOverlay
+    public final void setOnEmptied(EventHandlerNonNull onemptied){
+        this.onemptied = onemptied;
+    }
+    
+    @JsOverlay
+    public final EventHandlerNonNull getOnEnded(){
+        return this.onended;
+    }
+    
+    @JsOverlay
+    public final void setOnEnded(EventHandlerNonNull onended){
+        this.onended = onended;
+    }
+    
+    @JsOverlay
+    public final EventHandlerNonNull getOnError(){
+        return this.onerror;
+    }
+    
+    @JsOverlay
+    public final void setOnError(EventHandlerNonNull onerror){
+        this.onerror = onerror;
+    }
+    
+    @JsOverlay
+    public final EventHandlerNonNull getOnFocus(){
+        return this.onfocus;
+    }
+    
+    @JsOverlay
+    public final void setOnFocus(EventHandlerNonNull onfocus){
+        this.onfocus = onfocus;
+    }
+    
+    @JsOverlay
+    public final EventHandlerNonNull getOnInput(){
+        return this.oninput;
+    }
+    
+    @JsOverlay
+    public final void setOnInput(EventHandlerNonNull oninput){
+        this.oninput = oninput;
+    }
+    
+    @JsOverlay
+    public final EventHandlerNonNull getOnInvalid(){
+        return this.oninvalid;
+    }
+    
+    @JsOverlay
+    public final void setOnInvalid(EventHandlerNonNull oninvalid){
+        this.oninvalid = oninvalid;
+    }
+    
+    @JsOverlay
+    public final EventHandlerNonNull getOnKeydown(){
+        return this.onkeydown;
+    }
+    
+    @JsOverlay
+    public final void setOnKeydown(EventHandlerNonNull onkeydown){
+        this.onkeydown = onkeydown;
+    }
+    
+    @JsOverlay
+    public final EventHandlerNonNull getOnKeypress(){
+        return this.onkeypress;
+    }
+    
+    @JsOverlay
+    public final void setOnKeypress(EventHandlerNonNull onkeypress){
+        this.onkeypress = onkeypress;
+    }
+    
+    @JsOverlay
+    public final EventHandlerNonNull getOnKeyup(){
+        return this.onkeyup;
+    }
+    
+    @JsOverlay
+    public final void setOnKeyup(EventHandlerNonNull onkeyup){
+        this.onkeyup = onkeyup;
+    }
+    
+    @JsOverlay
+    public final EventHandlerNonNull getOnLoad(){
+        return this.onload;
+    }
+    
+    @JsOverlay
+    public final void setOnLoad(EventHandlerNonNull onload){
+        this.onload = onload;
+    }
+    
+    @JsOverlay
+    public final EventHandlerNonNull getOnLoadeddata(){
+        return this.onloadeddata;
+    }
+    
+    @JsOverlay
+    public final void setOnLoadeddata(EventHandlerNonNull onloadeddata){
+        this.onloadeddata = onloadeddata;
+    }
+    
+    @JsOverlay
+    public final EventHandlerNonNull getOnLoadedmetadata(){
+        return this.onloadedmetadata;
+    }
+    
+    @JsOverlay
+    public final void setOnLoadedmetadata(EventHandlerNonNull onloadedmetadata){
+        this.onloadedmetadata = onloadedmetadata;
+    }
+    
+    @JsOverlay
+    public final EventHandlerNonNull getOnLoadstart(){
+        return this.onloadstart;
+    }
+    
+    @JsOverlay
+    public final void setOnLoadstart(EventHandlerNonNull onloadstart){
+        this.onloadstart = onloadstart;
+    }
+    
+    @JsOverlay
+    public final EventHandlerNonNull getOnMousedown(){
+        return this.onmousedown;
+    }
+    
+    @JsOverlay
+    public final void setOnMousedown(EventHandlerNonNull onmousedown){
+        this.onmousedown = onmousedown;
+    }
+    
+    @JsOverlay
+    public final EventHandlerNonNull getOnMouseenter(){
+        return this.onmouseenter;
+    }
+    
+    @JsOverlay
+    public final void setOnMouseenter(EventHandlerNonNull onmouseenter){
+        this.onmouseenter = onmouseenter;
+    }
+    
+    @JsOverlay
+    public final EventHandlerNonNull getOnMouseleave(){
+        return this.onmouseleave;
+    }
+    
+    @JsOverlay
+    public final void setOnMouseleave(EventHandlerNonNull onmouseleave){
+        this.onmouseleave = onmouseleave;
+    }
+    
+    @JsOverlay
+    public final EventHandlerNonNull getOnMousemove(){
+        return this.onmousemove;
+    }
+    
+    @JsOverlay
+    public final void setOnMousemove(EventHandlerNonNull onmousemove){
+        this.onmousemove = onmousemove;
+    }
+    
+    @JsOverlay
+    public final EventHandlerNonNull getOnMouseout(){
+        return this.onmouseout;
+    }
+    
+    @JsOverlay
+    public final void setOnMouseout(EventHandlerNonNull onmouseout){
+        this.onmouseout = onmouseout;
+    }
+    
+    @JsOverlay
+    public final EventHandlerNonNull getOnMouseover(){
+        return this.onmouseover;
+    }
+    
+    @JsOverlay
+    public final void setOnMouseover(EventHandlerNonNull onmouseover){
+        this.onmouseover = onmouseover;
+    }
+    
+    @JsOverlay
+    public final EventHandlerNonNull getOnMouseup(){
+        return this.onmouseup;
+    }
+    
+    @JsOverlay
+    public final void setOnMouseup(EventHandlerNonNull onmouseup){
+        this.onmouseup = onmouseup;
+    }
+    
+    @JsOverlay
+    public final EventHandlerNonNull getOnMousewheel(){
+        return this.onmousewheel;
+    }
+    
+    @JsOverlay
+    public final void setOnMousewheel(EventHandlerNonNull onmousewheel){
+        this.onmousewheel = onmousewheel;
+    }
+    
+    @JsOverlay
+    public final EventHandlerNonNull getOnPause(){
+        return this.onpause;
+    }
+    
+    @JsOverlay
+    public final void setOnPause(EventHandlerNonNull onpause){
+        this.onpause = onpause;
+    }
+    
+    @JsOverlay
+    public final EventHandlerNonNull getOnPlay(){
+        return this.onplay;
+    }
+    
+    @JsOverlay
+    public final void setOnPlay(EventHandlerNonNull onplay){
+        this.onplay = onplay;
+    }
+    
+    @JsOverlay
+    public final EventHandlerNonNull getOnPlaying(){
+        return this.onplaying;
+    }
+    
+    @JsOverlay
+    public final void setOnPlaying(EventHandlerNonNull onplaying){
+        this.onplaying = onplaying;
+    }
+    
+    @JsOverlay
+    public final EventHandlerNonNull getOnProgress(){
+        return this.onprogress;
+    }
+    
+    @JsOverlay
+    public final void setOnProgress(EventHandlerNonNull onprogress){
+        this.onprogress = onprogress;
+    }
+    
+    @JsOverlay
+    public final EventHandlerNonNull getOnRatechange(){
+        return this.onratechange;
+    }
+    
+    @JsOverlay
+    public final void setOnRatechange(EventHandlerNonNull onratechange){
+        this.onratechange = onratechange;
+    }
+    
+    @JsOverlay
+    public final EventHandlerNonNull getOnReset(){
+        return this.onreset;
+    }
+    
+    @JsOverlay
+    public final void setOnReset(EventHandlerNonNull onreset){
+        this.onreset = onreset;
+    }
+    
+    @JsOverlay
+    public final EventHandlerNonNull getOnResize(){
+        return this.onresize;
+    }
+    
+    @JsOverlay
+    public final void setOnResize(EventHandlerNonNull onresize){
+        this.onresize = onresize;
+    }
+    
+    @JsOverlay
+    public final EventHandlerNonNull getOnScroll(){
+        return this.onscroll;
+    }
+    
+    @JsOverlay
+    public final void setOnScroll(EventHandlerNonNull onscroll){
+        this.onscroll = onscroll;
+    }
+    
+    @JsOverlay
+    public final EventHandlerNonNull getOnSeeked(){
+        return this.onseeked;
+    }
+    
+    @JsOverlay
+    public final void setOnSeeked(EventHandlerNonNull onseeked){
+        this.onseeked = onseeked;
+    }
+    
+    @JsOverlay
+    public final EventHandlerNonNull getOnSeeking(){
+        return this.onseeking;
+    }
+    
+    @JsOverlay
+    public final void setOnSeeking(EventHandlerNonNull onseeking){
+        this.onseeking = onseeking;
+    }
+    
+    @JsOverlay
+    public final EventHandlerNonNull getOnSelect(){
+        return this.onselect;
+    }
+    
+    @JsOverlay
+    public final void setOnSelect(EventHandlerNonNull onselect){
+        this.onselect = onselect;
+    }
+    
+    @JsOverlay
+    public final EventHandlerNonNull getOnStalled(){
+        return this.onstalled;
+    }
+    
+    @JsOverlay
+    public final void setOnStalled(EventHandlerNonNull onstalled){
+        this.onstalled = onstalled;
+    }
+    
+    @JsOverlay
+    public final EventHandlerNonNull getOnSubmit(){
+        return this.onsubmit;
+    }
+    
+    @JsOverlay
+    public final void setOnSubmit(EventHandlerNonNull onsubmit){
+        this.onsubmit = onsubmit;
+    }
+    
+    @JsOverlay
+    public final EventHandlerNonNull getOnSuspend(){
+        return this.onsuspend;
+    }
+    
+    @JsOverlay
+    public final void setOnSuspend(EventHandlerNonNull onsuspend){
+        this.onsuspend = onsuspend;
+    }
+    
+    @JsOverlay
+    public final EventHandlerNonNull getOnTimeupdate(){
+        return this.ontimeupdate;
+    }
+    
+    @JsOverlay
+    public final void setOnTimeupdate(EventHandlerNonNull ontimeupdate){
+        this.ontimeupdate = ontimeupdate;
+    }
+    
+    @JsOverlay
+    public final EventHandlerNonNull getOnToggle(){
+        return this.ontoggle;
+    }
+    
+    @JsOverlay
+    public final void setOnToggle(EventHandlerNonNull ontoggle){
+        this.ontoggle = ontoggle;
+    }
+    
+    @JsOverlay
+    public final EventHandlerNonNull getOnVolumechange(){
+        return this.onvolumechange;
+    }
+    
+    @JsOverlay
+    public final void setOnVolumechange(EventHandlerNonNull onvolumechange){
+        this.onvolumechange = onvolumechange;
+    }
+    
+    @JsOverlay
+    public final EventHandlerNonNull getOnWaiting(){
+        return this.onwaiting;
+    }
+    
+    @JsOverlay
+    public final void setOnWaiting(EventHandlerNonNull onwaiting){
+        this.onwaiting = onwaiting;
+    }
+    
+    @JsOverlay
+    public final EventHandlerNonNull getOnAuxclick(){
+        return this.onauxclick;
+    }
+    
+    @JsOverlay
+    public final void setOnAuxclick(EventHandlerNonNull onauxclick){
+        this.onauxclick = onauxclick;
+    }
+    
+    @JsOverlay
+    public final EventHandlerNonNull getOnGotpointercapture(){
+        return this.ongotpointercapture;
+    }
+    
+    @JsOverlay
+    public final void setOnGotpointercapture(EventHandlerNonNull ongotpointercapture){
+        this.ongotpointercapture = ongotpointercapture;
+    }
+    
+    @JsOverlay
+    public final EventHandlerNonNull getOnLostpointercapture(){
+        return this.onlostpointercapture;
+    }
+    
+    @JsOverlay
+    public final void setOnLostpointercapture(EventHandlerNonNull onlostpointercapture){
+        this.onlostpointercapture = onlostpointercapture;
+    }
+    
+    @JsOverlay
+    public final EventHandlerNonNull getOnPointerdown(){
+        return this.onpointerdown;
+    }
+    
+    @JsOverlay
+    public final void setOnPointerdown(EventHandlerNonNull onpointerdown){
+        this.onpointerdown = onpointerdown;
+    }
+    
+    @JsOverlay
+    public final EventHandlerNonNull getOnPointermove(){
+        return this.onpointermove;
+    }
+    
+    @JsOverlay
+    public final void setOnPointermove(EventHandlerNonNull onpointermove){
+        this.onpointermove = onpointermove;
+    }
+    
+    @JsOverlay
+    public final EventHandlerNonNull getOnPointerup(){
+        return this.onpointerup;
+    }
+    
+    @JsOverlay
+    public final void setOnPointerup(EventHandlerNonNull onpointerup){
+        this.onpointerup = onpointerup;
+    }
+    
+    @JsOverlay
+    public final EventHandlerNonNull getOnPointercancel(){
+        return this.onpointercancel;
+    }
+    
+    @JsOverlay
+    public final void setOnPointercancel(EventHandlerNonNull onpointercancel){
+        this.onpointercancel = onpointercancel;
+    }
+    
+    @JsOverlay
+    public final EventHandlerNonNull getOnPointerover(){
+        return this.onpointerover;
+    }
+    
+    @JsOverlay
+    public final void setOnPointerover(EventHandlerNonNull onpointerover){
+        this.onpointerover = onpointerover;
+    }
+    
+    @JsOverlay
+    public final EventHandlerNonNull getOnPointerout(){
+        return this.onpointerout;
+    }
+    
+    @JsOverlay
+    public final void setOnPointerout(EventHandlerNonNull onpointerout){
+        this.onpointerout = onpointerout;
+    }
+    
+    @JsOverlay
+    public final EventHandlerNonNull getOnPointerenter(){
+        return this.onpointerenter;
+    }
+    
+    @JsOverlay
+    public final void setOnPointerenter(EventHandlerNonNull onpointerenter){
+        this.onpointerenter = onpointerenter;
+    }
+    
+    @JsOverlay
+    public final EventHandlerNonNull getOnPointerleave(){
+        return this.onpointerleave;
+    }
+    
+    @JsOverlay
+    public final void setOnPointerleave(EventHandlerNonNull onpointerleave){
+        this.onpointerleave = onpointerleave;
+    }
+    
+    @JsOverlay
+    public final EventHandlerNonNull getOnTouchcancel(){
+        return this.ontouchcancel;
+    }
+    
+    @JsOverlay
+    public final void setOnTouchcancel(EventHandlerNonNull ontouchcancel){
+        this.ontouchcancel = ontouchcancel;
+    }
+    
+    @JsOverlay
+    public final EventHandlerNonNull getOnTouchend(){
+        return this.ontouchend;
+    }
+    
+    @JsOverlay
+    public final void setOnTouchend(EventHandlerNonNull ontouchend){
+        this.ontouchend = ontouchend;
+    }
+    
+    @JsOverlay
+    public final EventHandlerNonNull getOnTouchmove(){
+        return this.ontouchmove;
+    }
+    
+    @JsOverlay
+    public final void setOnTouchmove(EventHandlerNonNull ontouchmove){
+        this.ontouchmove = ontouchmove;
+    }
+    
+    @JsOverlay
+    public final EventHandlerNonNull getOnTouchstart(){
+        return this.ontouchstart;
+    }
+    
+    @JsOverlay
+    public final void setOnTouchstart(EventHandlerNonNull ontouchstart){
+        this.ontouchstart = ontouchstart;
+    }
     
     
 }

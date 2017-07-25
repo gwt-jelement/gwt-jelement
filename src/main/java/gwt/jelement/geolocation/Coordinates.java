@@ -16,6 +16,7 @@
  */
 package gwt.jelement.geolocation;
 
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -24,25 +25,25 @@ import jsinterop.annotations.JsType;
 public class Coordinates{
     
     @JsProperty(name="latitude")
-    public double latitude;
+    public native double getLatitude();
     
     @JsProperty(name="longitude")
-    public double longitude;
+    public native double getLongitude();
     
     @JsProperty(name="altitude")
-    public double altitude;
+    public native double getAltitude();
     
     @JsProperty(name="accuracy")
-    public double accuracy;
+    public native double getAccuracy();
     
     @JsProperty(name="altitudeAccuracy")
-    public double altitudeAccuracy;
+    public native double getAltitudeAccuracy();
     
     @JsProperty(name="heading")
-    public double heading;
+    public native double getHeading();
     
     @JsProperty(name="speed")
-    public double speed;
+    public native double getSpeed();
     
     
 }

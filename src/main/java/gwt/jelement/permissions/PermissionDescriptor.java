@@ -25,11 +25,11 @@ import jsinterop.annotations.JsType;
 @JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class PermissionDescriptor{
 
+    @JsProperty(name="name")
+    private String name;
+
     public PermissionDescriptor(){
     }
-
-    @JsProperty(name="name")
-    public String name;
 
     @JsOverlay
     public final PermissionName getName(){
@@ -40,6 +40,5 @@ public class PermissionDescriptor{
     public final void setName(PermissionName name){
         this.name = name.getInternalValue();
     }
-
 
 }

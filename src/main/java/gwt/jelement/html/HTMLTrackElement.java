@@ -19,6 +19,7 @@ package gwt.jelement.html;
 import gwt.jelement.html.HTMLElement;
 import gwt.jelement.html.track.TextTrack;
 import jsinterop.annotations.JsConstructor;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -37,25 +38,40 @@ public class HTMLTrackElement extends HTMLElement{
     }
     
     @JsProperty(name="kind")
-    public String kind;
+    public native String getKind();
+    
+    @JsProperty(name="kind")
+    public native void setKind(String kind);
     
     @JsProperty(name="src")
-    public String src;
+    public native String getSrc();
+    
+    @JsProperty(name="src")
+    public native void setSrc(String src);
     
     @JsProperty(name="srclang")
-    public String srclang;
+    public native String getSrclang();
+    
+    @JsProperty(name="srclang")
+    public native void setSrclang(String srclang);
     
     @JsProperty(name="label")
-    public String label;
+    public native String getLabel();
+    
+    @JsProperty(name="label")
+    public native void setLabel(String label);
     
     @JsProperty(name="default")
-    public boolean default_;
+    public native boolean getDefault();
+    
+    @JsProperty(name="default")
+    public native void setDefault(boolean default_);
     
     @JsProperty(name="readyState")
-    public short readyState;
+    public native short getReadyState();
     
     @JsProperty(name="track")
-    public TextTrack track;
+    public native TextTrack getTrack();
     
     
 }

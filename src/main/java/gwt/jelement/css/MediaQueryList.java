@@ -21,6 +21,7 @@ import gwt.jelement.events.EventListener;
 import gwt.jelement.events.EventTarget;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -28,24 +29,36 @@ import jsinterop.annotations.JsType;
 @JsType(namespace = JsPackage.GLOBAL, isNative = true)
 public class MediaQueryList extends EventTarget{
     
+    @JsProperty(name="onchange")
+    private EventHandlerNonNull onchange;
+    
     @JsConstructor
     public MediaQueryList(){
         super();
     }
     
     @JsProperty(name="media")
-    public String media;
+    public native String getMedia();
     
     @JsProperty(name="matches")
-    public boolean matches;
+    public native boolean getMatches();
     
-    @JsProperty(name="onchange")
-    public EventHandlerNonNull onchange;
+    @JsOverlay
+    public final EventHandlerNonNull getOnChange(){
+        return this.onchange;
+    }
+    
+    @JsOverlay
+    public final void setOnChange(EventHandlerNonNull onchange){
+        this.onchange = onchange;
+    }
     
     @JsMethod(name = "addListener")
     public native void addListener(EventListener listener);
     
+    
     @JsMethod(name = "removeListener")
     public native void removeListener(EventListener listener);
+    
     
 }

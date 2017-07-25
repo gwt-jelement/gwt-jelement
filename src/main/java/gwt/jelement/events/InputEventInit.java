@@ -27,11 +27,23 @@ import jsinterop.annotations.JsType;
 @JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class InputEventInit extends UIEventInit{
 
+    @JsProperty(name="data")
+    private String data;
+
+    @JsProperty(name="isComposing")
+    private boolean isComposing;
+
+    @JsProperty(name="inputType")
+    private String inputType;
+
+    @JsProperty(name="dataTransfer")
+    private DataTransfer dataTransfer;
+
+    @JsProperty(name="targetRanges")
+    private StaticRange[] targetRanges;
+
     public InputEventInit(){
     }
-
-    @JsProperty(name="data")
-    public String data;
 
     @JsOverlay
     public final String getData(){
@@ -43,9 +55,6 @@ public class InputEventInit extends UIEventInit{
         this.data = data;
     }
 
-    @JsProperty(name="isComposing")
-    public boolean isComposing;
-
     @JsOverlay
     public final boolean getIsComposing(){
         return this.isComposing;
@@ -55,9 +64,6 @@ public class InputEventInit extends UIEventInit{
     public final void setIsComposing(boolean isComposing){
         this.isComposing = isComposing;
     }
-
-    @JsProperty(name="inputType")
-    public String inputType;
 
     @JsOverlay
     public final String getInputType(){
@@ -69,9 +75,6 @@ public class InputEventInit extends UIEventInit{
         this.inputType = inputType;
     }
 
-    @JsProperty(name="dataTransfer")
-    public DataTransfer dataTransfer;
-
     @JsOverlay
     public final DataTransfer getDataTransfer(){
         return this.dataTransfer;
@@ -82,9 +85,6 @@ public class InputEventInit extends UIEventInit{
         this.dataTransfer = dataTransfer;
     }
 
-    @JsProperty(name="targetRanges")
-    public StaticRange[] targetRanges;
-
     @JsOverlay
     public final StaticRange[] getTargetRanges(){
         return this.targetRanges;
@@ -94,6 +94,5 @@ public class InputEventInit extends UIEventInit{
     public final void setTargetRanges(StaticRange[] targetRanges){
         this.targetRanges = targetRanges;
     }
-
 
 }

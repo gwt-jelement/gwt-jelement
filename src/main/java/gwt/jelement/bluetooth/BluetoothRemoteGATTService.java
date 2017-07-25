@@ -20,6 +20,7 @@ import gwt.jelement.bluetooth.BluetoothDevice;
 import gwt.jelement.bluetooth.BluetoothRemoteGATTCharacteristic;
 import elemental2.promise.Promise;
 import jsinterop.annotations.JsMethod;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -28,27 +29,32 @@ import jsinterop.annotations.JsType;
 public class BluetoothRemoteGATTService{
     
     @JsProperty(name="device")
-    public BluetoothDevice device;
+    public native BluetoothDevice getDevice();
     
     @JsProperty(name="uuid")
-    public String uuid;
+    public native String getUuid();
     
     @JsProperty(name="isPrimary")
-    public boolean isPrimary;
+    public native boolean getIsPrimary();
     
     @JsMethod(name = "getCharacteristic")
     public native Promise<BluetoothRemoteGATTCharacteristic> getCharacteristic(String characteristic);
     
+    
     @JsMethod(name = "getCharacteristic")
     public native Promise<BluetoothRemoteGATTCharacteristic> getCharacteristic(double characteristic);
+    
     
     @JsMethod(name = "getCharacteristics")
     public native Promise<BluetoothRemoteGATTCharacteristic[]> getCharacteristics();
     
+    
     @JsMethod(name = "getCharacteristics")
     public native Promise<BluetoothRemoteGATTCharacteristic[]> getCharacteristics(String characteristic);
     
+    
     @JsMethod(name = "getCharacteristics")
     public native Promise<BluetoothRemoteGATTCharacteristic[]> getCharacteristics(double characteristic);
+    
     
 }

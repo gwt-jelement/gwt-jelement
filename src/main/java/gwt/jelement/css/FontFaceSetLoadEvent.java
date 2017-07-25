@@ -20,6 +20,7 @@ import gwt.jelement.css.FontFace;
 import gwt.jelement.css.FontFaceSetLoadEventInit;
 import gwt.jelement.events.Event;
 import jsinterop.annotations.JsConstructor;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -38,7 +39,7 @@ public class FontFaceSetLoadEvent extends Event{
     }
     
     @JsProperty(name="fontfaces")
-    public FontFace[] fontfaces;
+    public native FontFace[] getFontfaces();
     
     
 }

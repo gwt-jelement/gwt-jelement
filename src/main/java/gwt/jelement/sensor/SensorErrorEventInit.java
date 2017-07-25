@@ -26,11 +26,11 @@ import jsinterop.annotations.JsType;
 @JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class SensorErrorEventInit extends EventInit{
 
+    @JsProperty(name="error")
+    private DOMException error;
+
     public SensorErrorEventInit(){
     }
-
-    @JsProperty(name="error")
-    public DOMException error;
 
     @JsOverlay
     public final DOMException getError(){
@@ -41,6 +41,5 @@ public class SensorErrorEventInit extends EventInit{
     public final void setError(DOMException error){
         this.error = error;
     }
-
 
 }

@@ -17,6 +17,7 @@
 package gwt.jelement.imagebitmap;
 
 import jsinterop.annotations.JsMethod;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -25,12 +26,13 @@ import jsinterop.annotations.JsType;
 public class ImageBitmap{
     
     @JsProperty(name="width")
-    public double width;
+    public native double getWidth();
     
     @JsProperty(name="height")
-    public double height;
+    public native double getHeight();
     
     @JsMethod(name = "close")
     public native void close();
+    
     
 }

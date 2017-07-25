@@ -22,6 +22,7 @@ import gwt.jelement.xml.XPathNSResolver;
 import gwt.jelement.xml.XPathResult;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
@@ -35,22 +36,29 @@ public class XPathEvaluator{
     @JsMethod(name = "createExpression")
     public native XPathExpression createExpression(String expression);
     
+    
     @JsMethod(name = "createExpression")
     public native XPathExpression createExpression(String expression, XPathNSResolver resolver);
+    
     
     @JsMethod(name = "createNSResolver")
     public native XPathNSResolver createNSResolver(Node nodeResolver);
     
+    
     @JsMethod(name = "evaluate")
     public native XPathResult evaluate(String expression, Node contextNode);
+    
     
     @JsMethod(name = "evaluate")
     public native XPathResult evaluate(String expression, Node contextNode, XPathNSResolver resolver);
     
+    
     @JsMethod(name = "evaluate")
     public native XPathResult evaluate(String expression, Node contextNode, XPathNSResolver resolver, short type);
     
+    
     @JsMethod(name = "evaluate")
     public native XPathResult evaluate(String expression, Node contextNode, XPathNSResolver resolver, short type, Object inResult);
+    
     
 }

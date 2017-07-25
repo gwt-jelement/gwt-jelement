@@ -24,11 +24,29 @@ import jsinterop.annotations.JsType;
 @JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class MutationObserverInit{
 
+    @JsProperty(name="childList")
+    private boolean childList;
+
+    @JsProperty(name="attributes")
+    private boolean attributes;
+
+    @JsProperty(name="characterData")
+    private boolean characterData;
+
+    @JsProperty(name="subtree")
+    private boolean subtree;
+
+    @JsProperty(name="attributeOldValue")
+    private boolean attributeOldValue;
+
+    @JsProperty(name="characterDataOldValue")
+    private boolean characterDataOldValue;
+
+    @JsProperty(name="attributeFilter")
+    private String[] attributeFilter;
+
     public MutationObserverInit(){
     }
-
-    @JsProperty(name="childList")
-    public boolean childList;
 
     @JsOverlay
     public final boolean getChildList(){
@@ -40,9 +58,6 @@ public class MutationObserverInit{
         this.childList = childList;
     }
 
-    @JsProperty(name="attributes")
-    public boolean attributes;
-
     @JsOverlay
     public final boolean getAttributes(){
         return this.attributes;
@@ -52,9 +67,6 @@ public class MutationObserverInit{
     public final void setAttributes(boolean attributes){
         this.attributes = attributes;
     }
-
-    @JsProperty(name="characterData")
-    public boolean characterData;
 
     @JsOverlay
     public final boolean getCharacterData(){
@@ -66,9 +78,6 @@ public class MutationObserverInit{
         this.characterData = characterData;
     }
 
-    @JsProperty(name="subtree")
-    public boolean subtree;
-
     @JsOverlay
     public final boolean getSubtree(){
         return this.subtree;
@@ -78,9 +87,6 @@ public class MutationObserverInit{
     public final void setSubtree(boolean subtree){
         this.subtree = subtree;
     }
-
-    @JsProperty(name="attributeOldValue")
-    public boolean attributeOldValue;
 
     @JsOverlay
     public final boolean getAttributeOldValue(){
@@ -92,9 +98,6 @@ public class MutationObserverInit{
         this.attributeOldValue = attributeOldValue;
     }
 
-    @JsProperty(name="characterDataOldValue")
-    public boolean characterDataOldValue;
-
     @JsOverlay
     public final boolean getCharacterDataOldValue(){
         return this.characterDataOldValue;
@@ -105,9 +108,6 @@ public class MutationObserverInit{
         this.characterDataOldValue = characterDataOldValue;
     }
 
-    @JsProperty(name="attributeFilter")
-    public String[] attributeFilter;
-
     @JsOverlay
     public final String[] getAttributeFilter(){
         return this.attributeFilter;
@@ -117,6 +117,5 @@ public class MutationObserverInit{
     public final void setAttributeFilter(String[] attributeFilter){
         this.attributeFilter = attributeFilter;
     }
-
 
 }

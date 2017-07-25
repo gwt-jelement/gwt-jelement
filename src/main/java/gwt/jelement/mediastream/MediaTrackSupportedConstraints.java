@@ -24,11 +24,101 @@ import jsinterop.annotations.JsType;
 @JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class MediaTrackSupportedConstraints{
 
+    @JsProperty(name="width")
+    private boolean width;
+
+    @JsProperty(name="height")
+    private boolean height;
+
+    @JsProperty(name="aspectRatio")
+    private boolean aspectRatio;
+
+    @JsProperty(name="frameRate")
+    private boolean frameRate;
+
+    @JsProperty(name="facingMode")
+    private boolean facingMode;
+
+    @JsProperty(name="volume")
+    private boolean volume;
+
+    @JsProperty(name="sampleRate")
+    private boolean sampleRate;
+
+    @JsProperty(name="sampleSize")
+    private boolean sampleSize;
+
+    @JsProperty(name="echoCancellation")
+    private boolean echoCancellation;
+
+    @JsProperty(name="latency")
+    private boolean latency;
+
+    @JsProperty(name="channelCount")
+    private boolean channelCount;
+
+    @JsProperty(name="deviceId")
+    private boolean deviceId;
+
+    @JsProperty(name="groupId")
+    private boolean groupId;
+
+    @JsProperty(name="videoKind")
+    private boolean videoKind;
+
+    @JsProperty(name="depthNear")
+    private boolean depthNear;
+
+    @JsProperty(name="depthFar")
+    private boolean depthFar;
+
+    @JsProperty(name="focalLengthX")
+    private boolean focalLengthX;
+
+    @JsProperty(name="focalLengthY")
+    private boolean focalLengthY;
+
+    @JsProperty(name="whiteBalanceMode")
+    private boolean whiteBalanceMode;
+
+    @JsProperty(name="exposureMode")
+    private boolean exposureMode;
+
+    @JsProperty(name="focusMode")
+    private boolean focusMode;
+
+    @JsProperty(name="pointsOfInterest")
+    private boolean pointsOfInterest;
+
+    @JsProperty(name="exposureCompensation")
+    private boolean exposureCompensation;
+
+    @JsProperty(name="colorTemperature")
+    private boolean colorTemperature;
+
+    @JsProperty(name="iso")
+    private boolean iso;
+
+    @JsProperty(name="brightness")
+    private boolean brightness;
+
+    @JsProperty(name="contrast")
+    private boolean contrast;
+
+    @JsProperty(name="saturation")
+    private boolean saturation;
+
+    @JsProperty(name="sharpness")
+    private boolean sharpness;
+
+    @JsProperty(name="zoom")
+    private boolean zoom;
+
+    @JsProperty(name="torch")
+    private boolean torch;
+
     public MediaTrackSupportedConstraints(){
     }
-
-    @JsProperty(name="width")
-    public boolean width;
 
     @JsOverlay
     public final boolean getWidth(){
@@ -40,9 +130,6 @@ public class MediaTrackSupportedConstraints{
         this.width = width;
     }
 
-    @JsProperty(name="height")
-    public boolean height;
-
     @JsOverlay
     public final boolean getHeight(){
         return this.height;
@@ -52,9 +139,6 @@ public class MediaTrackSupportedConstraints{
     public final void setHeight(boolean height){
         this.height = height;
     }
-
-    @JsProperty(name="aspectRatio")
-    public boolean aspectRatio;
 
     @JsOverlay
     public final boolean getAspectRatio(){
@@ -66,9 +150,6 @@ public class MediaTrackSupportedConstraints{
         this.aspectRatio = aspectRatio;
     }
 
-    @JsProperty(name="frameRate")
-    public boolean frameRate;
-
     @JsOverlay
     public final boolean getFrameRate(){
         return this.frameRate;
@@ -78,9 +159,6 @@ public class MediaTrackSupportedConstraints{
     public final void setFrameRate(boolean frameRate){
         this.frameRate = frameRate;
     }
-
-    @JsProperty(name="facingMode")
-    public boolean facingMode;
 
     @JsOverlay
     public final boolean getFacingMode(){
@@ -92,9 +170,6 @@ public class MediaTrackSupportedConstraints{
         this.facingMode = facingMode;
     }
 
-    @JsProperty(name="volume")
-    public boolean volume;
-
     @JsOverlay
     public final boolean getVolume(){
         return this.volume;
@@ -104,9 +179,6 @@ public class MediaTrackSupportedConstraints{
     public final void setVolume(boolean volume){
         this.volume = volume;
     }
-
-    @JsProperty(name="sampleRate")
-    public boolean sampleRate;
 
     @JsOverlay
     public final boolean getSampleRate(){
@@ -118,9 +190,6 @@ public class MediaTrackSupportedConstraints{
         this.sampleRate = sampleRate;
     }
 
-    @JsProperty(name="sampleSize")
-    public boolean sampleSize;
-
     @JsOverlay
     public final boolean getSampleSize(){
         return this.sampleSize;
@@ -130,9 +199,6 @@ public class MediaTrackSupportedConstraints{
     public final void setSampleSize(boolean sampleSize){
         this.sampleSize = sampleSize;
     }
-
-    @JsProperty(name="echoCancellation")
-    public boolean echoCancellation;
 
     @JsOverlay
     public final boolean getEchoCancellation(){
@@ -144,9 +210,6 @@ public class MediaTrackSupportedConstraints{
         this.echoCancellation = echoCancellation;
     }
 
-    @JsProperty(name="latency")
-    public boolean latency;
-
     @JsOverlay
     public final boolean getLatency(){
         return this.latency;
@@ -156,9 +219,6 @@ public class MediaTrackSupportedConstraints{
     public final void setLatency(boolean latency){
         this.latency = latency;
     }
-
-    @JsProperty(name="channelCount")
-    public boolean channelCount;
 
     @JsOverlay
     public final boolean getChannelCount(){
@@ -170,9 +230,6 @@ public class MediaTrackSupportedConstraints{
         this.channelCount = channelCount;
     }
 
-    @JsProperty(name="deviceId")
-    public boolean deviceId;
-
     @JsOverlay
     public final boolean getDeviceId(){
         return this.deviceId;
@@ -182,9 +239,6 @@ public class MediaTrackSupportedConstraints{
     public final void setDeviceId(boolean deviceId){
         this.deviceId = deviceId;
     }
-
-    @JsProperty(name="groupId")
-    public boolean groupId;
 
     @JsOverlay
     public final boolean getGroupId(){
@@ -196,9 +250,6 @@ public class MediaTrackSupportedConstraints{
         this.groupId = groupId;
     }
 
-    @JsProperty(name="videoKind")
-    public boolean videoKind;
-
     @JsOverlay
     public final boolean getVideoKind(){
         return this.videoKind;
@@ -208,9 +259,6 @@ public class MediaTrackSupportedConstraints{
     public final void setVideoKind(boolean videoKind){
         this.videoKind = videoKind;
     }
-
-    @JsProperty(name="depthNear")
-    public boolean depthNear;
 
     @JsOverlay
     public final boolean getDepthNear(){
@@ -222,9 +270,6 @@ public class MediaTrackSupportedConstraints{
         this.depthNear = depthNear;
     }
 
-    @JsProperty(name="depthFar")
-    public boolean depthFar;
-
     @JsOverlay
     public final boolean getDepthFar(){
         return this.depthFar;
@@ -234,9 +279,6 @@ public class MediaTrackSupportedConstraints{
     public final void setDepthFar(boolean depthFar){
         this.depthFar = depthFar;
     }
-
-    @JsProperty(name="focalLengthX")
-    public boolean focalLengthX;
 
     @JsOverlay
     public final boolean getFocalLengthX(){
@@ -248,9 +290,6 @@ public class MediaTrackSupportedConstraints{
         this.focalLengthX = focalLengthX;
     }
 
-    @JsProperty(name="focalLengthY")
-    public boolean focalLengthY;
-
     @JsOverlay
     public final boolean getFocalLengthY(){
         return this.focalLengthY;
@@ -260,9 +299,6 @@ public class MediaTrackSupportedConstraints{
     public final void setFocalLengthY(boolean focalLengthY){
         this.focalLengthY = focalLengthY;
     }
-
-    @JsProperty(name="whiteBalanceMode")
-    public boolean whiteBalanceMode;
 
     @JsOverlay
     public final boolean getWhiteBalanceMode(){
@@ -274,9 +310,6 @@ public class MediaTrackSupportedConstraints{
         this.whiteBalanceMode = whiteBalanceMode;
     }
 
-    @JsProperty(name="exposureMode")
-    public boolean exposureMode;
-
     @JsOverlay
     public final boolean getExposureMode(){
         return this.exposureMode;
@@ -286,9 +319,6 @@ public class MediaTrackSupportedConstraints{
     public final void setExposureMode(boolean exposureMode){
         this.exposureMode = exposureMode;
     }
-
-    @JsProperty(name="focusMode")
-    public boolean focusMode;
 
     @JsOverlay
     public final boolean getFocusMode(){
@@ -300,9 +330,6 @@ public class MediaTrackSupportedConstraints{
         this.focusMode = focusMode;
     }
 
-    @JsProperty(name="pointsOfInterest")
-    public boolean pointsOfInterest;
-
     @JsOverlay
     public final boolean getPointsOfInterest(){
         return this.pointsOfInterest;
@@ -312,9 +339,6 @@ public class MediaTrackSupportedConstraints{
     public final void setPointsOfInterest(boolean pointsOfInterest){
         this.pointsOfInterest = pointsOfInterest;
     }
-
-    @JsProperty(name="exposureCompensation")
-    public boolean exposureCompensation;
 
     @JsOverlay
     public final boolean getExposureCompensation(){
@@ -326,9 +350,6 @@ public class MediaTrackSupportedConstraints{
         this.exposureCompensation = exposureCompensation;
     }
 
-    @JsProperty(name="colorTemperature")
-    public boolean colorTemperature;
-
     @JsOverlay
     public final boolean getColorTemperature(){
         return this.colorTemperature;
@@ -338,9 +359,6 @@ public class MediaTrackSupportedConstraints{
     public final void setColorTemperature(boolean colorTemperature){
         this.colorTemperature = colorTemperature;
     }
-
-    @JsProperty(name="iso")
-    public boolean iso;
 
     @JsOverlay
     public final boolean getIso(){
@@ -352,9 +370,6 @@ public class MediaTrackSupportedConstraints{
         this.iso = iso;
     }
 
-    @JsProperty(name="brightness")
-    public boolean brightness;
-
     @JsOverlay
     public final boolean getBrightness(){
         return this.brightness;
@@ -364,9 +379,6 @@ public class MediaTrackSupportedConstraints{
     public final void setBrightness(boolean brightness){
         this.brightness = brightness;
     }
-
-    @JsProperty(name="contrast")
-    public boolean contrast;
 
     @JsOverlay
     public final boolean getContrast(){
@@ -378,9 +390,6 @@ public class MediaTrackSupportedConstraints{
         this.contrast = contrast;
     }
 
-    @JsProperty(name="saturation")
-    public boolean saturation;
-
     @JsOverlay
     public final boolean getSaturation(){
         return this.saturation;
@@ -390,9 +399,6 @@ public class MediaTrackSupportedConstraints{
     public final void setSaturation(boolean saturation){
         this.saturation = saturation;
     }
-
-    @JsProperty(name="sharpness")
-    public boolean sharpness;
 
     @JsOverlay
     public final boolean getSharpness(){
@@ -404,9 +410,6 @@ public class MediaTrackSupportedConstraints{
         this.sharpness = sharpness;
     }
 
-    @JsProperty(name="zoom")
-    public boolean zoom;
-
     @JsOverlay
     public final boolean getZoom(){
         return this.zoom;
@@ -417,9 +420,6 @@ public class MediaTrackSupportedConstraints{
         this.zoom = zoom;
     }
 
-    @JsProperty(name="torch")
-    public boolean torch;
-
     @JsOverlay
     public final boolean getTorch(){
         return this.torch;
@@ -429,6 +429,5 @@ public class MediaTrackSupportedConstraints{
     public final void setTorch(boolean torch){
         this.torch = torch;
     }
-
 
 }

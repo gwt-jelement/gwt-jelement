@@ -19,6 +19,7 @@ package gwt.jelement.svg;
 import gwt.jelement.svg.SVGMatrix;
 import gwt.jelement.svg.SVGPoint;
 import jsinterop.annotations.JsMethod;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -27,12 +28,19 @@ import jsinterop.annotations.JsType;
 public class SVGPoint{
     
     @JsProperty(name="x")
-    public float x;
+    public native float getX();
+    
+    @JsProperty(name="x")
+    public native void setX(float x);
     
     @JsProperty(name="y")
-    public float y;
+    public native float getY();
+    
+    @JsProperty(name="y")
+    public native void setY(float y);
     
     @JsMethod(name = "matrixTransform")
     public native SVGPoint matrixTransform(SVGMatrix matrix);
+    
     
 }

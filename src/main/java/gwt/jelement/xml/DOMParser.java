@@ -35,4 +35,5 @@ public class DOMParser{
     @JsMethod(name = "parseFromString")
     public native Document parseFromString(String str, String type);
     
+    
 }

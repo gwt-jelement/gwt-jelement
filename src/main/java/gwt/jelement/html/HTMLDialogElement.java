@@ -19,6 +19,7 @@ package gwt.jelement.html;
 import gwt.jelement.html.HTMLElement;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -32,21 +33,31 @@ public class HTMLDialogElement extends HTMLElement{
     }
     
     @JsProperty(name="open")
-    public boolean open;
+    public native boolean getOpen();
+    
+    @JsProperty(name="open")
+    public native void setOpen(boolean open);
     
     @JsProperty(name="returnValue")
-    public String returnValue;
+    public native String getReturnValue();
+    
+    @JsProperty(name="returnValue")
+    public native void setReturnValue(String returnValue);
     
     @JsMethod(name = "close")
     public native void close();
     
+    
     @JsMethod(name = "close")
     public native void close(String returnValue);
+    
     
     @JsMethod(name = "show")
     public native void show();
     
+    
     @JsMethod(name = "showModal")
     public native void showModal();
+    
     
 }

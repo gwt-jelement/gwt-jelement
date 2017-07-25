@@ -93,16 +93,24 @@ public class OffscreenCanvas extends EventTarget{
     }
     
     @JsProperty(name="width")
-    public double width;
+    public native double getWidth();
+    
+    @JsProperty(name="width")
+    public native void setWidth(double width);
     
     @JsProperty(name="height")
-    public double height;
+    public native double getHeight();
+    
+    @JsProperty(name="height")
+    public native void setHeight(double height);
     
     @JsMethod(name = "convertToBlob")
     public native Promise<Blob> convertToBlob();
     
+    
     @JsMethod(name = "convertToBlob")
     public native Promise<Blob> convertToBlob(ImageEncodeOptions options);
+    
     
     @JsOverlay
     public final OffscreenCanvas.OffscreenRenderingContext getContext(OffscreenRenderingContextType contextType){
@@ -112,6 +120,7 @@ public class OffscreenCanvas extends EventTarget{
     @JsMethod(name = "getContext")
     public native OffscreenCanvas.OffscreenRenderingContext getContext(String contextType);
     
+    
     @JsOverlay
     public final OffscreenCanvas.OffscreenRenderingContext getContext(OffscreenRenderingContextType contextType, CanvasContextCreationAttributes attributes){
         return getContext(contextType.getInternalValue(), attributes);
@@ -120,7 +129,9 @@ public class OffscreenCanvas extends EventTarget{
     @JsMethod(name = "getContext")
     public native OffscreenCanvas.OffscreenRenderingContext getContext(String contextType, CanvasContextCreationAttributes attributes);
     
+    
     @JsMethod(name = "transferToImageBitmap")
     public native ImageBitmap transferToImageBitmap();
+    
     
 }

@@ -17,6 +17,7 @@
 package gwt.jelement.dom;
 
 import gwt.jelement.dom.Node;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -25,19 +26,19 @@ import jsinterop.annotations.JsType;
 public class StaticRange{
     
     @JsProperty(name="startContainer")
-    public Node startContainer;
+    public native Node getStartContainer();
     
     @JsProperty(name="startOffset")
-    public double startOffset;
+    public native double getStartOffset();
     
     @JsProperty(name="endContainer")
-    public Node endContainer;
+    public native Node getEndContainer();
     
     @JsProperty(name="endOffset")
-    public double endOffset;
+    public native double getEndOffset();
     
     @JsProperty(name="collapsed")
-    public boolean collapsed;
+    public native boolean getCollapsed();
     
     
 }

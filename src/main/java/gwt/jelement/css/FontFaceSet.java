@@ -32,25 +32,55 @@ import jsinterop.annotations.JsType;
 @JsType(namespace = JsPackage.GLOBAL, isNative = true)
 public class FontFaceSet extends EventTarget{
     
+    @JsProperty(name="onloading")
+    private EventHandlerNonNull onloading;
+    
+    @JsProperty(name="onloadingdone")
+    private EventHandlerNonNull onloadingdone;
+    
+    @JsProperty(name="onloadingerror")
+    private EventHandlerNonNull onloadingerror;
+    
+    @JsProperty(name="status")
+    private String status;
+    
     @JsConstructor
     public FontFaceSet(){
         super();
     }
     
-    @JsProperty(name="onloading")
-    public EventHandlerNonNull onloading;
+    @JsOverlay
+    public final EventHandlerNonNull getOnLoading(){
+        return this.onloading;
+    }
     
-    @JsProperty(name="onloadingdone")
-    public EventHandlerNonNull onloadingdone;
+    @JsOverlay
+    public final void setOnLoading(EventHandlerNonNull onloading){
+        this.onloading = onloading;
+    }
     
-    @JsProperty(name="onloadingerror")
-    public EventHandlerNonNull onloadingerror;
+    @JsOverlay
+    public final EventHandlerNonNull getOnLoadingdone(){
+        return this.onloadingdone;
+    }
+    
+    @JsOverlay
+    public final void setOnLoadingdone(EventHandlerNonNull onloadingdone){
+        this.onloadingdone = onloadingdone;
+    }
+    
+    @JsOverlay
+    public final EventHandlerNonNull getOnLoadingerror(){
+        return this.onloadingerror;
+    }
+    
+    @JsOverlay
+    public final void setOnLoadingerror(EventHandlerNonNull onloadingerror){
+        this.onloadingerror = onloadingerror;
+    }
     
     @JsProperty(name="ready")
-    public Promise<FontFaceSet> ready;
-    
-    @JsProperty(name="status")
-    public String status;
+    public native Promise<FontFaceSet> getReady();
     
     @JsOverlay
     public final FontFaceSetLoadStatus getStatus(){
@@ -60,13 +90,17 @@ public class FontFaceSet extends EventTarget{
     @JsMethod(name = "check")
     public native boolean check(String font);
     
+    
     @JsMethod(name = "check")
     public native boolean check(String font, String text);
+    
     
     @JsMethod(name = "load")
     public native Promise<FontFace[]> load(String font);
     
+    
     @JsMethod(name = "load")
     public native Promise<FontFace[]> load(String font, String text);
+    
     
 }

@@ -28,5 +28,4 @@ public class ExtendableEventInit extends EventInit{
     public ExtendableEventInit(){
     }
 
-
 }

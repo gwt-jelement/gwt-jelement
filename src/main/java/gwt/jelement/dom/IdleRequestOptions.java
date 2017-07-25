@@ -24,11 +24,11 @@ import jsinterop.annotations.JsType;
 @JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class IdleRequestOptions{
 
+    @JsProperty(name="timeout")
+    private double timeout;
+
     public IdleRequestOptions(){
     }
-
-    @JsProperty(name="timeout")
-    public double timeout;
 
     @JsOverlay
     public final double getTimeout(){
@@ -39,6 +39,5 @@ public class IdleRequestOptions{
     public final void setTimeout(double timeout){
         this.timeout = timeout;
     }
-
 
 }

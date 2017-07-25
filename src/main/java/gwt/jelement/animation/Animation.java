@@ -33,28 +33,46 @@ import jsinterop.annotations.JsType;
 @JsType(namespace = JsPackage.GLOBAL, isNative = true)
 public class Animation extends EventTarget{
     
+    @JsProperty(name="playState")
+    private String playState;
+    
+    @JsProperty(name="onfinish")
+    private EventHandlerNonNull onfinish;
+    
+    @JsProperty(name="oncancel")
+    private EventHandlerNonNull oncancel;
+    
     @JsConstructor
     public Animation(){
         super();
     }
     
     @JsProperty(name="effect")
-    public AnimationEffectReadOnly effect;
+    public native AnimationEffectReadOnly getEffect();
+    
+    @JsProperty(name="effect")
+    public native void setEffect(AnimationEffectReadOnly effect);
     
     @JsProperty(name="timeline")
-    public AnimationTimeline timeline;
+    public native AnimationTimeline getTimeline();
     
     @JsProperty(name="startTime")
-    public double startTime;
+    public native double getStartTime();
+    
+    @JsProperty(name="startTime")
+    public native void setStartTime(double startTime);
     
     @JsProperty(name="currentTime")
-    public double currentTime;
+    public native double getCurrentTime();
+    
+    @JsProperty(name="currentTime")
+    public native void setCurrentTime(double currentTime);
     
     @JsProperty(name="playbackRate")
-    public double playbackRate;
+    public native double getPlaybackRate();
     
-    @JsProperty(name="playState")
-    public String playState;
+    @JsProperty(name="playbackRate")
+    public native void setPlaybackRate(double playbackRate);
     
     @JsOverlay
     public final AnimationPlayState getPlayState(){
@@ -62,33 +80,55 @@ public class Animation extends EventTarget{
     }
     
     @JsProperty(name="id")
-    public String id;
+    public native String getId();
     
-    @JsProperty(name="onfinish")
-    public EventHandlerNonNull onfinish;
+    @JsProperty(name="id")
+    public native void setId(String id);
     
-    @JsProperty(name="oncancel")
-    public EventHandlerNonNull oncancel;
+    @JsOverlay
+    public final EventHandlerNonNull getOnFinish(){
+        return this.onfinish;
+    }
+    
+    @JsOverlay
+    public final void setOnFinish(EventHandlerNonNull onfinish){
+        this.onfinish = onfinish;
+    }
+    
+    @JsOverlay
+    public final EventHandlerNonNull getOnCancel(){
+        return this.oncancel;
+    }
+    
+    @JsOverlay
+    public final void setOnCancel(EventHandlerNonNull oncancel){
+        this.oncancel = oncancel;
+    }
     
     @JsProperty(name="finished")
-    public Promise<Animation> finished;
+    public native Promise<Animation> getFinished();
     
     @JsProperty(name="ready")
-    public Promise<Animation> ready;
+    public native Promise<Animation> getReady();
     
     @JsMethod(name = "cancel")
     public native void cancel();
     
+    
     @JsMethod(name = "finish")
     public native void finish();
+    
     
     @JsMethod(name = "pause")
     public native void pause();
     
+    
     @JsMethod(name = "play")
     public native void play();
     
+    
     @JsMethod(name = "reverse")
     public native void reverse();
+    
     
 }

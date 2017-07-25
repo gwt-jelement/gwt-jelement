@@ -25,11 +25,11 @@ import jsinterop.annotations.JsType;
 @JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class USBDeviceRequestOptions{
 
+    @JsProperty(name="filters")
+    private USBDeviceFilter[] filters;
+
     public USBDeviceRequestOptions(){
     }
-
-    @JsProperty(name="filters")
-    public USBDeviceFilter[] filters;
 
     @JsOverlay
     public final USBDeviceFilter[] getFilters(){
@@ -40,6 +40,5 @@ public class USBDeviceRequestOptions{
     public final void setFilters(USBDeviceFilter[] filters){
         this.filters = filters;
     }
-
 
 }

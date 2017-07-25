@@ -18,6 +18,7 @@ package gwt.jelement.css;
 
 import gwt.jelement.css.CSSRule;
 import jsinterop.annotations.JsConstructor;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -31,10 +32,10 @@ public class CSSNamespaceRule extends CSSRule{
     }
     
     @JsProperty(name="namespaceURI")
-    public String namespaceURI;
+    public native String getNamespaceURI();
     
     @JsProperty(name="prefix")
-    public String prefix;
+    public native String getPrefix();
     
     
 }

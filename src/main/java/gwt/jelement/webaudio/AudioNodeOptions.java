@@ -26,11 +26,17 @@ import jsinterop.annotations.JsType;
 @JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class AudioNodeOptions{
 
+    @JsProperty(name="channelCount")
+    private double channelCount;
+
+    @JsProperty(name="channelCountMode")
+    private String channelCountMode;
+
+    @JsProperty(name="channelInterpretation")
+    private String channelInterpretation;
+
     public AudioNodeOptions(){
     }
-
-    @JsProperty(name="channelCount")
-    public double channelCount;
 
     @JsOverlay
     public final double getChannelCount(){
@@ -42,9 +48,6 @@ public class AudioNodeOptions{
         this.channelCount = channelCount;
     }
 
-    @JsProperty(name="channelCountMode")
-    public String channelCountMode;
-
     @JsOverlay
     public final ChannelCountMode getChannelCountMode(){
         return ChannelCountMode.of(this.channelCountMode);
@@ -55,9 +58,6 @@ public class AudioNodeOptions{
         this.channelCountMode = channelCountMode.getInternalValue();
     }
 
-    @JsProperty(name="channelInterpretation")
-    public String channelInterpretation;
-
     @JsOverlay
     public final ChannelInterpretation getChannelInterpretation(){
         return ChannelInterpretation.of(this.channelInterpretation);
@@ -67,6 +67,5 @@ public class AudioNodeOptions{
     public final void setChannelInterpretation(ChannelInterpretation channelInterpretation){
         this.channelInterpretation = channelInterpretation.getInternalValue();
     }
-
 
 }

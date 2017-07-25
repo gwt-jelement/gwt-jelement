@@ -25,11 +25,14 @@ import jsinterop.annotations.JsType;
 @JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class MediaQueryListEventInit extends EventInit{
 
+    @JsProperty(name="media")
+    private String media;
+
+    @JsProperty(name="matches")
+    private boolean matches;
+
     public MediaQueryListEventInit(){
     }
-
-    @JsProperty(name="media")
-    public String media;
 
     @JsOverlay
     public final String getMedia(){
@@ -41,9 +44,6 @@ public class MediaQueryListEventInit extends EventInit{
         this.media = media;
     }
 
-    @JsProperty(name="matches")
-    public boolean matches;
-
     @JsOverlay
     public final boolean getMatches(){
         return this.matches;
@@ -53,6 +53,5 @@ public class MediaQueryListEventInit extends EventInit{
     public final void setMatches(boolean matches){
         this.matches = matches;
     }
-
 
 }

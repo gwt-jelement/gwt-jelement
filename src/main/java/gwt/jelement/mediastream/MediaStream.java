@@ -22,12 +22,25 @@ import gwt.jelement.mediastream.MediaStream;
 import gwt.jelement.mediastream.MediaStreamTrack;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, isNative = true)
 public class MediaStream extends EventTarget{
+    
+    @JsProperty(name="onaddtrack")
+    private EventHandlerNonNull onaddtrack;
+    
+    @JsProperty(name="onremovetrack")
+    private EventHandlerNonNull onremovetrack;
+    
+    @JsProperty(name="onactive")
+    private EventHandlerNonNull onactive;
+    
+    @JsProperty(name="oninactive")
+    private EventHandlerNonNull oninactive;
     
     @JsConstructor
     public MediaStream(){
@@ -45,42 +58,77 @@ public class MediaStream extends EventTarget{
     }
     
     @JsProperty(name="id")
-    public String id;
+    public native String getId();
     
     @JsProperty(name="active")
-    public boolean active;
+    public native boolean getActive();
     
-    @JsProperty(name="onaddtrack")
-    public EventHandlerNonNull onaddtrack;
+    @JsOverlay
+    public final EventHandlerNonNull getOnAddtrack(){
+        return this.onaddtrack;
+    }
     
-    @JsProperty(name="onremovetrack")
-    public EventHandlerNonNull onremovetrack;
+    @JsOverlay
+    public final void setOnAddtrack(EventHandlerNonNull onaddtrack){
+        this.onaddtrack = onaddtrack;
+    }
     
-    @JsProperty(name="onactive")
-    public EventHandlerNonNull onactive;
+    @JsOverlay
+    public final EventHandlerNonNull getOnRemovetrack(){
+        return this.onremovetrack;
+    }
     
-    @JsProperty(name="oninactive")
-    public EventHandlerNonNull oninactive;
+    @JsOverlay
+    public final void setOnRemovetrack(EventHandlerNonNull onremovetrack){
+        this.onremovetrack = onremovetrack;
+    }
+    
+    @JsOverlay
+    public final EventHandlerNonNull getOnActive(){
+        return this.onactive;
+    }
+    
+    @JsOverlay
+    public final void setOnActive(EventHandlerNonNull onactive){
+        this.onactive = onactive;
+    }
+    
+    @JsOverlay
+    public final EventHandlerNonNull getOnInactive(){
+        return this.oninactive;
+    }
+    
+    @JsOverlay
+    public final void setOnInactive(EventHandlerNonNull oninactive){
+        this.oninactive = oninactive;
+    }
     
     @JsMethod(name = "addTrack")
     public native void addTrack(MediaStreamTrack track);
     
+    
     @JsMethod(name = "clone")
     public native MediaStream clone();
+    
     
     @JsMethod(name = "getAudioTracks")
     public native MediaStreamTrack[] getAudioTracks();
     
+    
     @JsMethod(name = "getTrackById")
     public native MediaStreamTrack getTrackById(String trackId);
+    
     
     @JsMethod(name = "getTracks")
     public native MediaStreamTrack[] getTracks();
     
+    
     @JsMethod(name = "getVideoTracks")
     public native MediaStreamTrack[] getVideoTracks();
     
+    
     @JsMethod(name = "removeTrack")
     public native void removeTrack(MediaStreamTrack track);
+    
     
 }

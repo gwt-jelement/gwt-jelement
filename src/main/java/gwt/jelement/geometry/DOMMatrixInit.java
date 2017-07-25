@@ -24,11 +24,77 @@ import jsinterop.annotations.JsType;
 @JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class DOMMatrixInit{
 
+    @JsProperty(name="a")
+    private double a;
+
+    @JsProperty(name="b")
+    private double b;
+
+    @JsProperty(name="c")
+    private double c;
+
+    @JsProperty(name="d")
+    private double d;
+
+    @JsProperty(name="e")
+    private double e;
+
+    @JsProperty(name="f")
+    private double f;
+
+    @JsProperty(name="m11")
+    private double m11;
+
+    @JsProperty(name="m12")
+    private double m12;
+
+    @JsProperty(name="m13")
+    private double m13;
+
+    @JsProperty(name="m14")
+    private double m14;
+
+    @JsProperty(name="m21")
+    private double m21;
+
+    @JsProperty(name="m22")
+    private double m22;
+
+    @JsProperty(name="m23")
+    private double m23;
+
+    @JsProperty(name="m24")
+    private double m24;
+
+    @JsProperty(name="m31")
+    private double m31;
+
+    @JsProperty(name="m32")
+    private double m32;
+
+    @JsProperty(name="m33")
+    private double m33;
+
+    @JsProperty(name="m34")
+    private double m34;
+
+    @JsProperty(name="m41")
+    private double m41;
+
+    @JsProperty(name="m42")
+    private double m42;
+
+    @JsProperty(name="m43")
+    private double m43;
+
+    @JsProperty(name="m44")
+    private double m44;
+
+    @JsProperty(name="is2D")
+    private boolean is2D;
+
     public DOMMatrixInit(){
     }
-
-    @JsProperty(name="a")
-    public double a;
 
     @JsOverlay
     public final double getA(){
@@ -40,9 +106,6 @@ public class DOMMatrixInit{
         this.a = a;
     }
 
-    @JsProperty(name="b")
-    public double b;
-
     @JsOverlay
     public final double getB(){
         return this.b;
@@ -52,9 +115,6 @@ public class DOMMatrixInit{
     public final void setB(double b){
         this.b = b;
     }
-
-    @JsProperty(name="c")
-    public double c;
 
     @JsOverlay
     public final double getC(){
@@ -66,9 +126,6 @@ public class DOMMatrixInit{
         this.c = c;
     }
 
-    @JsProperty(name="d")
-    public double d;
-
     @JsOverlay
     public final double getD(){
         return this.d;
@@ -78,9 +135,6 @@ public class DOMMatrixInit{
     public final void setD(double d){
         this.d = d;
     }
-
-    @JsProperty(name="e")
-    public double e;
 
     @JsOverlay
     public final double getE(){
@@ -92,9 +146,6 @@ public class DOMMatrixInit{
         this.e = e;
     }
 
-    @JsProperty(name="f")
-    public double f;
-
     @JsOverlay
     public final double getF(){
         return this.f;
@@ -104,9 +155,6 @@ public class DOMMatrixInit{
     public final void setF(double f){
         this.f = f;
     }
-
-    @JsProperty(name="m11")
-    public double m11;
 
     @JsOverlay
     public final double getM11(){
@@ -118,9 +166,6 @@ public class DOMMatrixInit{
         this.m11 = m11;
     }
 
-    @JsProperty(name="m12")
-    public double m12;
-
     @JsOverlay
     public final double getM12(){
         return this.m12;
@@ -130,9 +175,6 @@ public class DOMMatrixInit{
     public final void setM12(double m12){
         this.m12 = m12;
     }
-
-    @JsProperty(name="m13")
-    public double m13;
 
     @JsOverlay
     public final double getM13(){
@@ -144,9 +186,6 @@ public class DOMMatrixInit{
         this.m13 = m13;
     }
 
-    @JsProperty(name="m14")
-    public double m14;
-
     @JsOverlay
     public final double getM14(){
         return this.m14;
@@ -156,9 +195,6 @@ public class DOMMatrixInit{
     public final void setM14(double m14){
         this.m14 = m14;
     }
-
-    @JsProperty(name="m21")
-    public double m21;
 
     @JsOverlay
     public final double getM21(){
@@ -170,9 +206,6 @@ public class DOMMatrixInit{
         this.m21 = m21;
     }
 
-    @JsProperty(name="m22")
-    public double m22;
-
     @JsOverlay
     public final double getM22(){
         return this.m22;
@@ -182,9 +215,6 @@ public class DOMMatrixInit{
     public final void setM22(double m22){
         this.m22 = m22;
     }
-
-    @JsProperty(name="m23")
-    public double m23;
 
     @JsOverlay
     public final double getM23(){
@@ -196,9 +226,6 @@ public class DOMMatrixInit{
         this.m23 = m23;
     }
 
-    @JsProperty(name="m24")
-    public double m24;
-
     @JsOverlay
     public final double getM24(){
         return this.m24;
@@ -208,9 +235,6 @@ public class DOMMatrixInit{
     public final void setM24(double m24){
         this.m24 = m24;
     }
-
-    @JsProperty(name="m31")
-    public double m31;
 
     @JsOverlay
     public final double getM31(){
@@ -222,9 +246,6 @@ public class DOMMatrixInit{
         this.m31 = m31;
     }
 
-    @JsProperty(name="m32")
-    public double m32;
-
     @JsOverlay
     public final double getM32(){
         return this.m32;
@@ -234,9 +255,6 @@ public class DOMMatrixInit{
     public final void setM32(double m32){
         this.m32 = m32;
     }
-
-    @JsProperty(name="m33")
-    public double m33;
 
     @JsOverlay
     public final double getM33(){
@@ -248,9 +266,6 @@ public class DOMMatrixInit{
         this.m33 = m33;
     }
 
-    @JsProperty(name="m34")
-    public double m34;
-
     @JsOverlay
     public final double getM34(){
         return this.m34;
@@ -260,9 +275,6 @@ public class DOMMatrixInit{
     public final void setM34(double m34){
         this.m34 = m34;
     }
-
-    @JsProperty(name="m41")
-    public double m41;
 
     @JsOverlay
     public final double getM41(){
@@ -274,9 +286,6 @@ public class DOMMatrixInit{
         this.m41 = m41;
     }
 
-    @JsProperty(name="m42")
-    public double m42;
-
     @JsOverlay
     public final double getM42(){
         return this.m42;
@@ -286,9 +295,6 @@ public class DOMMatrixInit{
     public final void setM42(double m42){
         this.m42 = m42;
     }
-
-    @JsProperty(name="m43")
-    public double m43;
 
     @JsOverlay
     public final double getM43(){
@@ -300,9 +306,6 @@ public class DOMMatrixInit{
         this.m43 = m43;
     }
 
-    @JsProperty(name="m44")
-    public double m44;
-
     @JsOverlay
     public final double getM44(){
         return this.m44;
@@ -313,9 +316,6 @@ public class DOMMatrixInit{
         this.m44 = m44;
     }
 
-    @JsProperty(name="is2D")
-    public boolean is2D;
-
     @JsOverlay
     public final boolean getIs2D(){
         return this.is2D;
@@ -325,6 +325,5 @@ public class DOMMatrixInit{
     public final void setIs2D(boolean is2D){
         this.is2D = is2D;
     }
-
 
 }

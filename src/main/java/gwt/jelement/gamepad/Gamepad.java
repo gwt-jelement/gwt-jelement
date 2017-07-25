@@ -27,32 +27,32 @@ import jsinterop.annotations.JsType;
 @JsType(namespace = JsPackage.GLOBAL, isNative = true)
 public class Gamepad{
     
+    @JsProperty(name="hand")
+    private String hand;
+    
     @JsProperty(name="id")
-    public String id;
+    public native String getId();
     
     @JsProperty(name="index")
-    public double index;
+    public native double getIndex();
     
     @JsProperty(name="connected")
-    public boolean connected;
+    public native boolean getConnected();
     
     @JsProperty(name="timestamp")
-    public double timestamp;
+    public native double getTimestamp();
     
     @JsProperty(name="mapping")
-    public String mapping;
+    public native String getMapping();
     
     @JsProperty(name="axes")
-    public double[] axes;
+    public native double[] getAxes();
     
     @JsProperty(name="buttons")
-    public GamepadButton[] buttons;
+    public native GamepadButton[] getButtons();
     
     @JsProperty(name="pose")
-    public GamepadPose pose;
-    
-    @JsProperty(name="hand")
-    public String hand;
+    public native GamepadPose getPose();
     
     @JsOverlay
     public final GamepadHand getHand(){
@@ -60,7 +60,7 @@ public class Gamepad{
     }
     
     @JsProperty(name="displayId")
-    public double displayId;
+    public native double getDisplayId();
     
     
 }

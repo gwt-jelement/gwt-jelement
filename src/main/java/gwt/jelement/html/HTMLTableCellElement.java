@@ -18,6 +18,7 @@ package gwt.jelement.html;
 
 import gwt.jelement.html.HTMLElement;
 import jsinterop.annotations.JsConstructor;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -31,49 +32,91 @@ public class HTMLTableCellElement extends HTMLElement{
     }
     
     @JsProperty(name="colSpan")
-    public double colSpan;
+    public native double getColSpan();
+    
+    @JsProperty(name="colSpan")
+    public native void setColSpan(double colSpan);
     
     @JsProperty(name="rowSpan")
-    public double rowSpan;
+    public native double getRowSpan();
+    
+    @JsProperty(name="rowSpan")
+    public native void setRowSpan(double rowSpan);
     
     @JsProperty(name="headers")
-    public String headers;
+    public native String getHeaders();
+    
+    @JsProperty(name="headers")
+    public native void setHeaders(String headers);
     
     @JsProperty(name="cellIndex")
-    public double cellIndex;
+    public native double getCellIndex();
     
     @JsProperty(name="align")
-    public String align;
+    public native String getAlign();
+    
+    @JsProperty(name="align")
+    public native void setAlign(String align);
     
     @JsProperty(name="axis")
-    public String axis;
+    public native String getAxis();
+    
+    @JsProperty(name="axis")
+    public native void setAxis(String axis);
     
     @JsProperty(name="height")
-    public String height;
+    public native String getHeight();
+    
+    @JsProperty(name="height")
+    public native void setHeight(String height);
     
     @JsProperty(name="width")
-    public String width;
+    public native String getWidth();
+    
+    @JsProperty(name="width")
+    public native void setWidth(String width);
     
     @JsProperty(name="ch")
-    public String ch;
+    public native String getCh();
+    
+    @JsProperty(name="ch")
+    public native void setCh(String ch);
     
     @JsProperty(name="chOff")
-    public String chOff;
+    public native String getChOff();
+    
+    @JsProperty(name="chOff")
+    public native void setChOff(String chOff);
     
     @JsProperty(name="noWrap")
-    public boolean noWrap;
+    public native boolean getNoWrap();
+    
+    @JsProperty(name="noWrap")
+    public native void setNoWrap(boolean noWrap);
     
     @JsProperty(name="vAlign")
-    public String vAlign;
+    public native String getVAlign();
+    
+    @JsProperty(name="vAlign")
+    public native void setVAlign(String vAlign);
     
     @JsProperty(name="bgColor")
-    public String bgColor;
+    public native String getBgColor();
+    
+    @JsProperty(name="bgColor")
+    public native void setBgColor(String bgColor);
     
     @JsProperty(name="abbr")
-    public String abbr;
+    public native String getAbbr();
+    
+    @JsProperty(name="abbr")
+    public native void setAbbr(String abbr);
     
     @JsProperty(name="scope")
-    public String scope;
+    public native String getScope();
+    
+    @JsProperty(name="scope")
+    public native void setScope(String scope);
     
     
 }

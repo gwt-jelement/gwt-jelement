@@ -24,11 +24,14 @@ import jsinterop.annotations.JsType;
 @JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class ImageEncodeOptions{
 
+    @JsProperty(name="type")
+    private String type;
+
+    @JsProperty(name="quality")
+    private double quality;
+
     public ImageEncodeOptions(){
     }
-
-    @JsProperty(name="type")
-    public String type;
 
     @JsOverlay
     public final String getType(){
@@ -40,9 +43,6 @@ public class ImageEncodeOptions{
         this.type = type;
     }
 
-    @JsProperty(name="quality")
-    public double quality;
-
     @JsOverlay
     public final double getQuality(){
         return this.quality;
@@ -52,6 +52,5 @@ public class ImageEncodeOptions{
     public final void setQuality(double quality){
         this.quality = quality;
     }
-
 
 }

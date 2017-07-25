@@ -26,11 +26,23 @@ import jsinterop.annotations.JsType;
 @JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class StorageEventInit extends EventInit{
 
+    @JsProperty(name="key")
+    private String key;
+
+    @JsProperty(name="oldValue")
+    private String oldValue;
+
+    @JsProperty(name="newValue")
+    private String newValue;
+
+    @JsProperty(name="url")
+    private String url;
+
+    @JsProperty(name="storageArea")
+    private Storage storageArea;
+
     public StorageEventInit(){
     }
-
-    @JsProperty(name="key")
-    public String key;
 
     @JsOverlay
     public final String getKey(){
@@ -42,9 +54,6 @@ public class StorageEventInit extends EventInit{
         this.key = key;
     }
 
-    @JsProperty(name="oldValue")
-    public String oldValue;
-
     @JsOverlay
     public final String getOldValue(){
         return this.oldValue;
@@ -54,9 +63,6 @@ public class StorageEventInit extends EventInit{
     public final void setOldValue(String oldValue){
         this.oldValue = oldValue;
     }
-
-    @JsProperty(name="newValue")
-    public String newValue;
 
     @JsOverlay
     public final String getNewValue(){
@@ -68,9 +74,6 @@ public class StorageEventInit extends EventInit{
         this.newValue = newValue;
     }
 
-    @JsProperty(name="url")
-    public String url;
-
     @JsOverlay
     public final String getUrl(){
         return this.url;
@@ -81,9 +84,6 @@ public class StorageEventInit extends EventInit{
         this.url = url;
     }
 
-    @JsProperty(name="storageArea")
-    public Storage storageArea;
-
     @JsOverlay
     public final Storage getStorageArea(){
         return this.storageArea;
@@ -93,6 +93,5 @@ public class StorageEventInit extends EventInit{
     public final void setStorageArea(Storage storageArea){
         this.storageArea = storageArea;
     }
-
 
 }

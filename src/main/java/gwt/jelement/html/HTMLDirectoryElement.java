@@ -18,6 +18,7 @@ package gwt.jelement.html;
 
 import gwt.jelement.html.HTMLElement;
 import jsinterop.annotations.JsConstructor;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -31,7 +32,10 @@ public class HTMLDirectoryElement extends HTMLElement{
     }
     
     @JsProperty(name="compact")
-    public boolean compact;
+    public native boolean getCompact();
+    
+    @JsProperty(name="compact")
+    public native void setCompact(boolean compact);
     
     
 }

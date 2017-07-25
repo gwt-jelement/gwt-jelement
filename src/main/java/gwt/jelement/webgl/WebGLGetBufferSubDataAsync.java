@@ -19,6 +19,7 @@ package gwt.jelement.webgl;
 import elemental2.core.ArrayBufferView;
 import elemental2.promise.Promise;
 import jsinterop.annotations.JsMethod;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
@@ -28,10 +29,13 @@ public class WebGLGetBufferSubDataAsync{
     @JsMethod(name = "getBufferSubDataAsync")
     public native Promise<ArrayBufferView> getBufferSubDataAsync(double target, double srcByteOffset, ArrayBufferView dstData);
     
+    
     @JsMethod(name = "getBufferSubDataAsync")
     public native Promise<ArrayBufferView> getBufferSubDataAsync(double target, double srcByteOffset, ArrayBufferView dstData, double dstOffset);
     
+    
     @JsMethod(name = "getBufferSubDataAsync")
     public native Promise<ArrayBufferView> getBufferSubDataAsync(double target, double srcByteOffset, ArrayBufferView dstData, double dstOffset, double length);
+    
     
 }

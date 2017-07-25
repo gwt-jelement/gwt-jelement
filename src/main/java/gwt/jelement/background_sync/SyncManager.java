@@ -18,6 +18,7 @@ package gwt.jelement.background_sync;
 
 import elemental2.promise.Promise;
 import jsinterop.annotations.JsMethod;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
@@ -27,7 +28,9 @@ public class SyncManager{
     @JsMethod(name = "getTags")
     public native Promise<String[]> getTags();
     
+    
     @JsMethod(name = "register")
     public native Promise<Void> register(String tag);
+    
     
 }

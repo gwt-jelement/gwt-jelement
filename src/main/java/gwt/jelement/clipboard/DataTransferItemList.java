@@ -19,6 +19,7 @@ package gwt.jelement.clipboard;
 import gwt.jelement.clipboard.DataTransferItem;
 import gwt.jelement.fileapi.File;
 import jsinterop.annotations.JsMethod;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -27,18 +28,22 @@ import jsinterop.annotations.JsType;
 public class DataTransferItemList{
     
     @JsProperty(name="length")
-    public double length;
+    public native double getLength();
     
     @JsMethod(name = "add")
     public native DataTransferItem add(File file);
     
+    
     @JsMethod(name = "add")
     public native DataTransferItem add(String data, String type);
+    
     
     @JsMethod(name = "clear")
     public native void clear();
     
+    
     @JsMethod(name = "remove")
     public native void remove(double index);
+    
     
 }

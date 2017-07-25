@@ -21,6 +21,7 @@ import gwt.jelement.events.EventTarget;
 import gwt.jelement.mediastream.MediaStreamTrack;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -28,36 +29,49 @@ import jsinterop.annotations.JsType;
 @JsType(namespace = JsPackage.GLOBAL, isNative = true)
 public class RTCDTMFSender extends EventTarget{
     
+    @JsProperty(name="ontonechange")
+    private EventHandlerNonNull ontonechange;
+    
     @JsConstructor
     public RTCDTMFSender(){
         super();
     }
     
     @JsProperty(name="canInsertDTMF")
-    public boolean canInsertDTMF;
+    public native boolean getCanInsertDTMF();
     
     @JsProperty(name="track")
-    public MediaStreamTrack track;
+    public native MediaStreamTrack getTrack();
     
     @JsProperty(name="toneBuffer")
-    public String toneBuffer;
+    public native String getToneBuffer();
     
     @JsProperty(name="duration")
-    public double duration;
+    public native double getDuration();
     
     @JsProperty(name="interToneGap")
-    public double interToneGap;
+    public native double getInterToneGap();
     
-    @JsProperty(name="ontonechange")
-    public EventHandlerNonNull ontonechange;
+    @JsOverlay
+    public final EventHandlerNonNull getOnTonechange(){
+        return this.ontonechange;
+    }
+    
+    @JsOverlay
+    public final void setOnTonechange(EventHandlerNonNull ontonechange){
+        this.ontonechange = ontonechange;
+    }
     
     @JsMethod(name = "insertDTMF")
     public native void insertDTMF(String tones);
     
+    
     @JsMethod(name = "insertDTMF")
     public native void insertDTMF(String tones, double duration);
     
+    
     @JsMethod(name = "insertDTMF")
     public native void insertDTMF(String tones, double duration, double interToneGap);
+    
     
 }

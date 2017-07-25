@@ -19,6 +19,7 @@ package gwt.jelement.events;
 import gwt.jelement.events.MouseEvent;
 import gwt.jelement.events.WheelEventInit;
 import jsinterop.annotations.JsConstructor;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -41,25 +42,25 @@ public class WheelEvent extends MouseEvent{
     }
     
     @JsProperty(name="deltaX")
-    public double deltaX;
+    public native double getDeltaX();
     
     @JsProperty(name="deltaY")
-    public double deltaY;
+    public native double getDeltaY();
     
     @JsProperty(name="deltaZ")
-    public double deltaZ;
+    public native double getDeltaZ();
     
     @JsProperty(name="deltaMode")
-    public double deltaMode;
+    public native double getDeltaMode();
     
     @JsProperty(name="wheelDeltaX")
-    public double wheelDeltaX;
+    public native double getWheelDeltaX();
     
     @JsProperty(name="wheelDeltaY")
-    public double wheelDeltaY;
+    public native double getWheelDeltaY();
     
     @JsProperty(name="wheelDelta")
-    public double wheelDelta;
+    public native double getWheelDelta();
     
     
 }

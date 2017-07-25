@@ -26,11 +26,11 @@ import jsinterop.annotations.JsType;
 @JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class USBConnectionEventInit extends EventInit{
 
+    @JsProperty(name="device")
+    private USBDevice device;
+
     public USBConnectionEventInit(){
     }
-
-    @JsProperty(name="device")
-    public USBDevice device;
 
     @JsOverlay
     public final USBDevice getDevice(){
@@ -41,6 +41,5 @@ public class USBConnectionEventInit extends EventInit{
     public final void setDevice(USBDevice device){
         this.device = device;
     }
-
 
 }

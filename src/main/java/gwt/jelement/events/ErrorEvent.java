@@ -19,6 +19,7 @@ package gwt.jelement.events;
 import gwt.jelement.events.ErrorEventInit;
 import gwt.jelement.events.Event;
 import jsinterop.annotations.JsConstructor;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -37,19 +38,19 @@ public class ErrorEvent extends Event{
     }
     
     @JsProperty(name="message")
-    public String message;
+    public native String getMessage();
     
     @JsProperty(name="filename")
-    public String filename;
+    public native String getFilename();
     
     @JsProperty(name="lineno")
-    public double lineno;
+    public native double getLineno();
     
     @JsProperty(name="colno")
-    public double colno;
+    public native double getColno();
     
     @JsProperty(name="error")
-    public Object error;
+    public native Object getError();
     
     
 }

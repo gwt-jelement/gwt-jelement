@@ -22,6 +22,7 @@ import gwt.jelement.events.EventTarget;
 import gwt.jelement.fileapi.Blob;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -33,51 +34,115 @@ public class FileWriter extends EventTarget{
     public static int DONE;
     
     
+    @JsProperty(name="onwritestart")
+    private EventHandlerNonNull onwritestart;
+    
+    @JsProperty(name="onprogress")
+    private EventHandlerNonNull onprogress;
+    
+    @JsProperty(name="onwrite")
+    private EventHandlerNonNull onwrite;
+    
+    @JsProperty(name="onabort")
+    private EventHandlerNonNull onabort;
+    
+    @JsProperty(name="onerror")
+    private EventHandlerNonNull onerror;
+    
+    @JsProperty(name="onwriteend")
+    private EventHandlerNonNull onwriteend;
+    
     @JsConstructor
     public FileWriter(){
         super();
     }
     
     @JsProperty(name="readyState")
-    public short readyState;
+    public native short getReadyState();
     
     @JsProperty(name="error")
-    public DOMException error;
+    public native DOMException getError();
     
     @JsProperty(name="position")
-    public double position;
+    public native double getPosition();
     
     @JsProperty(name="length")
-    public double length;
+    public native double getLength();
     
-    @JsProperty(name="onwritestart")
-    public EventHandlerNonNull onwritestart;
+    @JsOverlay
+    public final EventHandlerNonNull getOnWritestart(){
+        return this.onwritestart;
+    }
     
-    @JsProperty(name="onprogress")
-    public EventHandlerNonNull onprogress;
+    @JsOverlay
+    public final void setOnWritestart(EventHandlerNonNull onwritestart){
+        this.onwritestart = onwritestart;
+    }
     
-    @JsProperty(name="onwrite")
-    public EventHandlerNonNull onwrite;
+    @JsOverlay
+    public final EventHandlerNonNull getOnProgress(){
+        return this.onprogress;
+    }
     
-    @JsProperty(name="onabort")
-    public EventHandlerNonNull onabort;
+    @JsOverlay
+    public final void setOnProgress(EventHandlerNonNull onprogress){
+        this.onprogress = onprogress;
+    }
     
-    @JsProperty(name="onerror")
-    public EventHandlerNonNull onerror;
+    @JsOverlay
+    public final EventHandlerNonNull getOnWrite(){
+        return this.onwrite;
+    }
     
-    @JsProperty(name="onwriteend")
-    public EventHandlerNonNull onwriteend;
+    @JsOverlay
+    public final void setOnWrite(EventHandlerNonNull onwrite){
+        this.onwrite = onwrite;
+    }
+    
+    @JsOverlay
+    public final EventHandlerNonNull getOnAbort(){
+        return this.onabort;
+    }
+    
+    @JsOverlay
+    public final void setOnAbort(EventHandlerNonNull onabort){
+        this.onabort = onabort;
+    }
+    
+    @JsOverlay
+    public final EventHandlerNonNull getOnError(){
+        return this.onerror;
+    }
+    
+    @JsOverlay
+    public final void setOnError(EventHandlerNonNull onerror){
+        this.onerror = onerror;
+    }
+    
+    @JsOverlay
+    public final EventHandlerNonNull getOnWriteend(){
+        return this.onwriteend;
+    }
+    
+    @JsOverlay
+    public final void setOnWriteend(EventHandlerNonNull onwriteend){
+        this.onwriteend = onwriteend;
+    }
     
     @JsMethod(name = "abort")
     public native void abort();
     
+    
     @JsMethod(name = "seek")
     public native void seek(double position);
+    
     
     @JsMethod(name = "truncate")
     public native void truncate(double size);
     
+    
     @JsMethod(name = "write")
     public native void write(Blob data);
+    
     
 }

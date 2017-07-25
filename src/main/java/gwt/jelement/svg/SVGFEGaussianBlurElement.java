@@ -22,6 +22,7 @@ import gwt.jelement.svg.SVGAnimatedString;
 import gwt.jelement.svg.SVGElement;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -35,30 +36,31 @@ public class SVGFEGaussianBlurElement extends SVGElement{
     }
     
     @JsProperty(name="in1")
-    public SVGAnimatedString in1;
+    public native SVGAnimatedString getIn1();
     
     @JsProperty(name="stdDeviationX")
-    public SVGAnimatedNumber stdDeviationX;
+    public native SVGAnimatedNumber getStdDeviationX();
     
     @JsProperty(name="stdDeviationY")
-    public SVGAnimatedNumber stdDeviationY;
+    public native SVGAnimatedNumber getStdDeviationY();
     
     @JsProperty(name="x")
-    public SVGAnimatedLength x;
+    public native SVGAnimatedLength getX();
     
     @JsProperty(name="y")
-    public SVGAnimatedLength y;
+    public native SVGAnimatedLength getY();
     
     @JsProperty(name="width")
-    public SVGAnimatedLength width;
+    public native SVGAnimatedLength getWidth();
     
     @JsProperty(name="height")
-    public SVGAnimatedLength height;
+    public native SVGAnimatedLength getHeight();
     
     @JsProperty(name="result")
-    public SVGAnimatedString result;
+    public native SVGAnimatedString getResult();
     
     @JsMethod(name = "setStdDeviation")
     public native void setStdDeviation(float stdDeviationX, float stdDeviationY);
+    
     
 }

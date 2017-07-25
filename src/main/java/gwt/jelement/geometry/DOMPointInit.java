@@ -24,11 +24,20 @@ import jsinterop.annotations.JsType;
 @JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class DOMPointInit{
 
+    @JsProperty(name="x")
+    private double x;
+
+    @JsProperty(name="y")
+    private double y;
+
+    @JsProperty(name="z")
+    private double z;
+
+    @JsProperty(name="w")
+    private double w;
+
     public DOMPointInit(){
     }
-
-    @JsProperty(name="x")
-    public double x;
 
     @JsOverlay
     public final double getX(){
@@ -40,9 +49,6 @@ public class DOMPointInit{
         this.x = x;
     }
 
-    @JsProperty(name="y")
-    public double y;
-
     @JsOverlay
     public final double getY(){
         return this.y;
@@ -52,9 +58,6 @@ public class DOMPointInit{
     public final void setY(double y){
         this.y = y;
     }
-
-    @JsProperty(name="z")
-    public double z;
 
     @JsOverlay
     public final double getZ(){
@@ -66,9 +69,6 @@ public class DOMPointInit{
         this.z = z;
     }
 
-    @JsProperty(name="w")
-    public double w;
-
     @JsOverlay
     public final double getW(){
         return this.w;
@@ -78,6 +78,5 @@ public class DOMPointInit{
     public final void setW(double w){
         this.w = w;
     }
-
 
 }

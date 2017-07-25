@@ -18,6 +18,7 @@ package gwt.jelement.encryptedmedia;
 
 import gwt.jelement.encryptedmedia.MediaKeysPolicyInit;
 import jsinterop.annotations.JsConstructor;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -30,7 +31,7 @@ public class MediaKeysPolicy{
     }
     
     @JsProperty(name="minHdcpVersion")
-    public String minHdcpVersion;
+    public native String getMinHdcpVersion();
     
     
 }

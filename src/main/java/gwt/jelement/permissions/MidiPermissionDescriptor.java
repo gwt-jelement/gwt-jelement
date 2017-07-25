@@ -25,11 +25,11 @@ import jsinterop.annotations.JsType;
 @JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class MidiPermissionDescriptor extends PermissionDescriptor{
 
+    @JsProperty(name="sysex")
+    private boolean sysex;
+
     public MidiPermissionDescriptor(){
     }
-
-    @JsProperty(name="sysex")
-    public boolean sysex;
 
     @JsOverlay
     public final boolean getSysex(){
@@ -40,6 +40,5 @@ public class MidiPermissionDescriptor extends PermissionDescriptor{
     public final void setSysex(boolean sysex){
         this.sysex = sysex;
     }
-
 
 }

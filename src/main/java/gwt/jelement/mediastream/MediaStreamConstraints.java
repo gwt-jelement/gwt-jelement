@@ -26,8 +26,11 @@ import jsinterop.base.Js;
 @JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class MediaStreamConstraints{
 
-    public MediaStreamConstraints(){
-    }
+    @JsProperty(name="video")
+    private VideoUnion video;
+
+    @JsProperty(name="audio")
+    private VideoUnion audio;
 
     @JsType(isNative = true, name = "?", namespace = JsPackage.GLOBAL)
     public interface VideoUnion {
@@ -63,8 +66,8 @@ public class MediaStreamConstraints{
     
     }
     
-    @JsProperty(name="video")
-    public VideoUnion video;
+    public MediaStreamConstraints(){
+    }
 
     @JsOverlay
     public final void setVideo(boolean video){
@@ -76,9 +79,6 @@ public class MediaStreamConstraints{
         this.video = MediaStreamConstraints.VideoUnion.of(video);
     }
 
-    @JsProperty(name="audio")
-    public VideoUnion audio;
-
     @JsOverlay
     public final void setAudio(boolean audio){
         this.audio = MediaStreamConstraints.VideoUnion.of(audio);
@@ -88,6 +88,5 @@ public class MediaStreamConstraints{
     public final void setAudio(MediaTrackConstraints audio){
         this.audio = MediaStreamConstraints.VideoUnion.of(audio);
     }
-
 
 }

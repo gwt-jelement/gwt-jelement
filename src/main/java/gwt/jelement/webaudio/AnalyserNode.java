@@ -23,6 +23,7 @@ import elemental2.core.Float32Array;
 import elemental2.core.Uint8Array;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -41,30 +42,46 @@ public class AnalyserNode extends AudioNode{
     }
     
     @JsProperty(name="fftSize")
-    public double fftSize;
+    public native double getFftSize();
+    
+    @JsProperty(name="fftSize")
+    public native void setFftSize(double fftSize);
     
     @JsProperty(name="frequencyBinCount")
-    public double frequencyBinCount;
+    public native double getFrequencyBinCount();
     
     @JsProperty(name="minDecibels")
-    public double minDecibels;
+    public native double getMinDecibels();
+    
+    @JsProperty(name="minDecibels")
+    public native void setMinDecibels(double minDecibels);
     
     @JsProperty(name="maxDecibels")
-    public double maxDecibels;
+    public native double getMaxDecibels();
+    
+    @JsProperty(name="maxDecibels")
+    public native void setMaxDecibels(double maxDecibels);
     
     @JsProperty(name="smoothingTimeConstant")
-    public double smoothingTimeConstant;
+    public native double getSmoothingTimeConstant();
+    
+    @JsProperty(name="smoothingTimeConstant")
+    public native void setSmoothingTimeConstant(double smoothingTimeConstant);
     
     @JsMethod(name = "getByteFrequencyData")
     public native void getByteFrequencyData(Uint8Array array);
     
+    
     @JsMethod(name = "getByteTimeDomainData")
     public native void getByteTimeDomainData(Uint8Array array);
+    
     
     @JsMethod(name = "getFloatFrequencyData")
     public native void getFloatFrequencyData(Float32Array array);
     
+    
     @JsMethod(name = "getFloatTimeDomainData")
     public native void getFloatTimeDomainData(Float32Array array);
+    
     
 }

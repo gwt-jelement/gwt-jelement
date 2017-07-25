@@ -26,11 +26,11 @@ import jsinterop.annotations.JsType;
 @JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class OfflineAudioCompletionEventInit extends EventInit{
 
+    @JsProperty(name="renderedBuffer")
+    private AudioBuffer renderedBuffer;
+
     public OfflineAudioCompletionEventInit(){
     }
-
-    @JsProperty(name="renderedBuffer")
-    public AudioBuffer renderedBuffer;
 
     @JsOverlay
     public final AudioBuffer getRenderedBuffer(){
@@ -41,6 +41,5 @@ public class OfflineAudioCompletionEventInit extends EventInit{
     public final void setRenderedBuffer(AudioBuffer renderedBuffer){
         this.renderedBuffer = renderedBuffer;
     }
-
 
 }

@@ -24,11 +24,11 @@ import jsinterop.annotations.JsType;
 @JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class MediaKeysPolicyInit{
 
+    @JsProperty(name="minHdcpVersion")
+    private String minHdcpVersion;
+
     public MediaKeysPolicyInit(){
     }
-
-    @JsProperty(name="minHdcpVersion")
-    public String minHdcpVersion;
 
     @JsOverlay
     public final String getMinHdcpVersion(){
@@ -39,6 +39,5 @@ public class MediaKeysPolicyInit{
     public final void setMinHdcpVersion(String minHdcpVersion){
         this.minHdcpVersion = minHdcpVersion;
     }
-
 
 }

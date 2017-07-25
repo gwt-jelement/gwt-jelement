@@ -18,6 +18,7 @@ package gwt.jelement.timing;
 
 import gwt.jelement.timing.PerformanceEntry;
 import jsinterop.annotations.JsConstructor;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 

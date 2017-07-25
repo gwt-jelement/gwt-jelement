@@ -16,6 +16,7 @@
  */
 package gwt.jelement.webmidi;
 
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 

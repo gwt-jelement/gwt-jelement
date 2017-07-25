@@ -18,6 +18,7 @@ package gwt.jelement.speech;
 
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -30,18 +31,22 @@ public class SpeechGrammarList{
     }
     
     @JsProperty(name="length")
-    public double length;
+    public native double getLength();
     
     @JsMethod(name = "addFromString")
     public native void addFromString(String string);
     
+    
     @JsMethod(name = "addFromString")
     public native void addFromString(String string, float weight);
+    
     
     @JsMethod(name = "addFromUri")
     public native void addFromUri(String src);
     
+    
     @JsMethod(name = "addFromUri")
     public native void addFromUri(String src, float weight);
+    
     
 }

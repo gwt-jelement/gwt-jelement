@@ -25,11 +25,11 @@ import jsinterop.annotations.JsType;
 @JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class MediaElementAudioSourceOptions{
 
+    @JsProperty(name="mediaElement")
+    private HTMLMediaElement mediaElement;
+
     public MediaElementAudioSourceOptions(){
     }
-
-    @JsProperty(name="mediaElement")
-    public HTMLMediaElement mediaElement;
 
     @JsOverlay
     public final HTMLMediaElement getMediaElement(){
@@ -40,6 +40,5 @@ public class MediaElementAudioSourceOptions{
     public final void setMediaElement(HTMLMediaElement mediaElement){
         this.mediaElement = mediaElement;
     }
-
 
 }

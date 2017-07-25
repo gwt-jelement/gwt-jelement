@@ -16,6 +16,7 @@
  */
 package gwt.jelement.webgl;
 
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -24,13 +25,13 @@ import jsinterop.annotations.JsType;
 public class WebGLShaderPrecisionFormat{
     
     @JsProperty(name="rangeMin")
-    public double rangeMin;
+    public native double getRangeMin();
     
     @JsProperty(name="rangeMax")
-    public double rangeMax;
+    public native double getRangeMax();
     
     @JsProperty(name="precision")
-    public double precision;
+    public native double getPrecision();
     
     
 }

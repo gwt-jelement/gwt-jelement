@@ -19,6 +19,7 @@ package gwt.jelement.events;
 import gwt.jelement.events.Event;
 import gwt.jelement.events.ProgressEventInit;
 import jsinterop.annotations.JsConstructor;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -37,13 +38,13 @@ public class ProgressEvent extends Event{
     }
     
     @JsProperty(name="lengthComputable")
-    public boolean lengthComputable;
+    public native boolean getLengthComputable();
     
     @JsProperty(name="loaded")
-    public double loaded;
+    public native double getLoaded();
     
     @JsProperty(name="total")
-    public double total;
+    public native double getTotal();
     
     
 }

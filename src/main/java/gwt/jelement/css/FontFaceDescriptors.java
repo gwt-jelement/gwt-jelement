@@ -24,11 +24,29 @@ import jsinterop.annotations.JsType;
 @JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class FontFaceDescriptors{
 
+    @JsProperty(name="style")
+    private String style;
+
+    @JsProperty(name="weight")
+    private String weight;
+
+    @JsProperty(name="stretch")
+    private String stretch;
+
+    @JsProperty(name="unicodeRange")
+    private String unicodeRange;
+
+    @JsProperty(name="variant")
+    private String variant;
+
+    @JsProperty(name="featureSettings")
+    private String featureSettings;
+
+    @JsProperty(name="display")
+    private String display;
+
     public FontFaceDescriptors(){
     }
-
-    @JsProperty(name="style")
-    public String style;
 
     @JsOverlay
     public final String getStyle(){
@@ -40,9 +58,6 @@ public class FontFaceDescriptors{
         this.style = style;
     }
 
-    @JsProperty(name="weight")
-    public String weight;
-
     @JsOverlay
     public final String getWeight(){
         return this.weight;
@@ -52,9 +67,6 @@ public class FontFaceDescriptors{
     public final void setWeight(String weight){
         this.weight = weight;
     }
-
-    @JsProperty(name="stretch")
-    public String stretch;
 
     @JsOverlay
     public final String getStretch(){
@@ -66,9 +78,6 @@ public class FontFaceDescriptors{
         this.stretch = stretch;
     }
 
-    @JsProperty(name="unicodeRange")
-    public String unicodeRange;
-
     @JsOverlay
     public final String getUnicodeRange(){
         return this.unicodeRange;
@@ -78,9 +87,6 @@ public class FontFaceDescriptors{
     public final void setUnicodeRange(String unicodeRange){
         this.unicodeRange = unicodeRange;
     }
-
-    @JsProperty(name="variant")
-    public String variant;
 
     @JsOverlay
     public final String getVariant(){
@@ -92,9 +98,6 @@ public class FontFaceDescriptors{
         this.variant = variant;
     }
 
-    @JsProperty(name="featureSettings")
-    public String featureSettings;
-
     @JsOverlay
     public final String getFeatureSettings(){
         return this.featureSettings;
@@ -105,9 +108,6 @@ public class FontFaceDescriptors{
         this.featureSettings = featureSettings;
     }
 
-    @JsProperty(name="display")
-    public String display;
-
     @JsOverlay
     public final String getDisplay(){
         return this.display;
@@ -117,6 +117,5 @@ public class FontFaceDescriptors{
     public final void setDisplay(String display){
         this.display = display;
     }
-
 
 }

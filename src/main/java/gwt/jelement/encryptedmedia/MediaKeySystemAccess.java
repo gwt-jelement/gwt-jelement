@@ -20,6 +20,7 @@ import gwt.jelement.encryptedmedia.MediaKeySystemConfiguration;
 import gwt.jelement.encryptedmedia.MediaKeys;
 import elemental2.promise.Promise;
 import jsinterop.annotations.JsMethod;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -28,12 +29,14 @@ import jsinterop.annotations.JsType;
 public class MediaKeySystemAccess{
     
     @JsProperty(name="keySystem")
-    public String keySystem;
+    public native String getKeySystem();
     
     @JsMethod(name = "createMediaKeys")
     public native Promise<MediaKeys> createMediaKeys();
     
+    
     @JsMethod(name = "getConfiguration")
     public native MediaKeySystemConfiguration getConfiguration();
+    
     
 }

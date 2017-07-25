@@ -17,6 +17,7 @@
 package gwt.jelement.fetch;
 
 import jsinterop.annotations.JsMethod;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
@@ -26,16 +27,21 @@ public class Headers{
     @JsMethod(name = "append")
     public native void append(String name, String value);
     
+    
     @JsMethod(name = "delete")
     public native void delete(String key);
+    
     
     @JsMethod(name = "get")
     public native String get(String key);
     
+    
     @JsMethod(name = "has")
     public native boolean has(String key);
     
+    
     @JsMethod(name = "set")
     public native void set(String key, String value);
+    
     
 }

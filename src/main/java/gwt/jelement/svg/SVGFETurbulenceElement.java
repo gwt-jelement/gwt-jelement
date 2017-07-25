@@ -23,6 +23,7 @@ import gwt.jelement.svg.SVGAnimatedNumber;
 import gwt.jelement.svg.SVGAnimatedString;
 import gwt.jelement.svg.SVGElement;
 import jsinterop.annotations.JsConstructor;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -43,37 +44,37 @@ public class SVGFETurbulenceElement extends SVGElement{
     }
     
     @JsProperty(name="baseFrequencyX")
-    public SVGAnimatedNumber baseFrequencyX;
+    public native SVGAnimatedNumber getBaseFrequencyX();
     
     @JsProperty(name="baseFrequencyY")
-    public SVGAnimatedNumber baseFrequencyY;
+    public native SVGAnimatedNumber getBaseFrequencyY();
     
     @JsProperty(name="numOctaves")
-    public SVGAnimatedInteger numOctaves;
+    public native SVGAnimatedInteger getNumOctaves();
     
     @JsProperty(name="seed")
-    public SVGAnimatedNumber seed;
+    public native SVGAnimatedNumber getSeed();
     
     @JsProperty(name="stitchTiles")
-    public SVGAnimatedEnumeration stitchTiles;
+    public native SVGAnimatedEnumeration getStitchTiles();
     
     @JsProperty(name="type")
-    public SVGAnimatedEnumeration type;
+    public native SVGAnimatedEnumeration getType();
     
     @JsProperty(name="x")
-    public SVGAnimatedLength x;
+    public native SVGAnimatedLength getX();
     
     @JsProperty(name="y")
-    public SVGAnimatedLength y;
+    public native SVGAnimatedLength getY();
     
     @JsProperty(name="width")
-    public SVGAnimatedLength width;
+    public native SVGAnimatedLength getWidth();
     
     @JsProperty(name="height")
-    public SVGAnimatedLength height;
+    public native SVGAnimatedLength getHeight();
     
     @JsProperty(name="result")
-    public SVGAnimatedString result;
+    public native SVGAnimatedString getResult();
     
     
 }

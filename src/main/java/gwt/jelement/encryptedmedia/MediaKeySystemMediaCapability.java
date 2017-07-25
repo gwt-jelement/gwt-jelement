@@ -24,11 +24,14 @@ import jsinterop.annotations.JsType;
 @JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class MediaKeySystemMediaCapability{
 
+    @JsProperty(name="contentType")
+    private String contentType;
+
+    @JsProperty(name="robustness")
+    private String robustness;
+
     public MediaKeySystemMediaCapability(){
     }
-
-    @JsProperty(name="contentType")
-    public String contentType;
 
     @JsOverlay
     public final String getContentType(){
@@ -40,9 +43,6 @@ public class MediaKeySystemMediaCapability{
         this.contentType = contentType;
     }
 
-    @JsProperty(name="robustness")
-    public String robustness;
-
     @JsOverlay
     public final String getRobustness(){
         return this.robustness;
@@ -52,6 +52,5 @@ public class MediaKeySystemMediaCapability{
     public final void setRobustness(String robustness){
         this.robustness = robustness;
     }
-
 
 }

@@ -26,11 +26,38 @@ import jsinterop.annotations.JsType;
 @JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class CanvasContextCreationAttributes{
 
+    @JsProperty(name="alpha")
+    private boolean alpha;
+
+    @JsProperty(name="colorSpace")
+    private String colorSpace;
+
+    @JsProperty(name="pixelFormat")
+    private String pixelFormat;
+
+    @JsProperty(name="linearPixelMath")
+    private boolean linearPixelMath;
+
+    @JsProperty(name="depth")
+    private boolean depth;
+
+    @JsProperty(name="stencil")
+    private boolean stencil;
+
+    @JsProperty(name="antialias")
+    private boolean antialias;
+
+    @JsProperty(name="premultipliedAlpha")
+    private boolean premultipliedAlpha;
+
+    @JsProperty(name="preserveDrawingBuffer")
+    private boolean preserveDrawingBuffer;
+
+    @JsProperty(name="failIfMajorPerformanceCaveat")
+    private boolean failIfMajorPerformanceCaveat;
+
     public CanvasContextCreationAttributes(){
     }
-
-    @JsProperty(name="alpha")
-    public boolean alpha;
 
     @JsOverlay
     public final boolean getAlpha(){
@@ -42,9 +69,6 @@ public class CanvasContextCreationAttributes{
         this.alpha = alpha;
     }
 
-    @JsProperty(name="colorSpace")
-    public String colorSpace;
-
     @JsOverlay
     public final CanvasColorSpace getColorSpace(){
         return CanvasColorSpace.of(this.colorSpace);
@@ -54,9 +78,6 @@ public class CanvasContextCreationAttributes{
     public final void setColorSpace(CanvasColorSpace colorSpace){
         this.colorSpace = colorSpace.getInternalValue();
     }
-
-    @JsProperty(name="pixelFormat")
-    public String pixelFormat;
 
     @JsOverlay
     public final CanvasPixelFormat getPixelFormat(){
@@ -68,9 +89,6 @@ public class CanvasContextCreationAttributes{
         this.pixelFormat = pixelFormat.getInternalValue();
     }
 
-    @JsProperty(name="linearPixelMath")
-    public boolean linearPixelMath;
-
     @JsOverlay
     public final boolean getLinearPixelMath(){
         return this.linearPixelMath;
@@ -80,9 +98,6 @@ public class CanvasContextCreationAttributes{
     public final void setLinearPixelMath(boolean linearPixelMath){
         this.linearPixelMath = linearPixelMath;
     }
-
-    @JsProperty(name="depth")
-    public boolean depth;
 
     @JsOverlay
     public final boolean getDepth(){
@@ -94,9 +109,6 @@ public class CanvasContextCreationAttributes{
         this.depth = depth;
     }
 
-    @JsProperty(name="stencil")
-    public boolean stencil;
-
     @JsOverlay
     public final boolean getStencil(){
         return this.stencil;
@@ -106,9 +118,6 @@ public class CanvasContextCreationAttributes{
     public final void setStencil(boolean stencil){
         this.stencil = stencil;
     }
-
-    @JsProperty(name="antialias")
-    public boolean antialias;
 
     @JsOverlay
     public final boolean getAntialias(){
@@ -120,9 +129,6 @@ public class CanvasContextCreationAttributes{
         this.antialias = antialias;
     }
 
-    @JsProperty(name="premultipliedAlpha")
-    public boolean premultipliedAlpha;
-
     @JsOverlay
     public final boolean getPremultipliedAlpha(){
         return this.premultipliedAlpha;
@@ -132,9 +138,6 @@ public class CanvasContextCreationAttributes{
     public final void setPremultipliedAlpha(boolean premultipliedAlpha){
         this.premultipliedAlpha = premultipliedAlpha;
     }
-
-    @JsProperty(name="preserveDrawingBuffer")
-    public boolean preserveDrawingBuffer;
 
     @JsOverlay
     public final boolean getPreserveDrawingBuffer(){
@@ -146,9 +149,6 @@ public class CanvasContextCreationAttributes{
         this.preserveDrawingBuffer = preserveDrawingBuffer;
     }
 
-    @JsProperty(name="failIfMajorPerformanceCaveat")
-    public boolean failIfMajorPerformanceCaveat;
-
     @JsOverlay
     public final boolean getFailIfMajorPerformanceCaveat(){
         return this.failIfMajorPerformanceCaveat;
@@ -158,6 +158,5 @@ public class CanvasContextCreationAttributes{
     public final void setFailIfMajorPerformanceCaveat(boolean failIfMajorPerformanceCaveat){
         this.failIfMajorPerformanceCaveat = failIfMajorPerformanceCaveat;
     }
-
 
 }

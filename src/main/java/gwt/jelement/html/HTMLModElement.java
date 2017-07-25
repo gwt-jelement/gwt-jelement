@@ -18,6 +18,7 @@ package gwt.jelement.html;
 
 import gwt.jelement.html.HTMLElement;
 import jsinterop.annotations.JsConstructor;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -31,10 +32,16 @@ public class HTMLModElement extends HTMLElement{
     }
     
     @JsProperty(name="cite")
-    public String cite;
+    public native String getCite();
+    
+    @JsProperty(name="cite")
+    public native void setCite(String cite);
     
     @JsProperty(name="dateTime")
-    public String dateTime;
+    public native String getDateTime();
+    
+    @JsProperty(name="dateTime")
+    public native void setDateTime(String dateTime);
     
     
 }

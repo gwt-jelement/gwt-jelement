@@ -17,6 +17,7 @@
 package gwt.jelement.inspector;
 
 import jsinterop.annotations.JsMethod;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
@@ -26,7 +27,9 @@ public class InspectorOverlayHost{
     @JsMethod(name = "resume")
     public native void resume();
     
+    
     @JsMethod(name = "stepOver")
     public native void stepOver();
+    
     
 }

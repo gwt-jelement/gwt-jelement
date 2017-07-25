@@ -26,11 +26,11 @@ import jsinterop.annotations.JsType;
 @JsType(namespace = JsPackage.GLOBAL, isNative = true)
 public class MediaDeviceInfo{
     
-    @JsProperty(name="deviceId")
-    public String deviceId;
-    
     @JsProperty(name="kind")
-    public String kind;
+    private String kind;
+    
+    @JsProperty(name="deviceId")
+    public native String getDeviceId();
     
     @JsOverlay
     public final MediaDeviceKind getKind(){
@@ -38,12 +38,13 @@ public class MediaDeviceInfo{
     }
     
     @JsProperty(name="label")
-    public String label;
+    public native String getLabel();
     
     @JsProperty(name="groupId")
-    public String groupId;
+    public native String getGroupId();
     
     @JsMethod(name = "toJSON")
     public native Object toJSON();
+    
     
 }

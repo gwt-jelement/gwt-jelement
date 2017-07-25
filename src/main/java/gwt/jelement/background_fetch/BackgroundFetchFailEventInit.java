@@ -26,11 +26,11 @@ import jsinterop.annotations.JsType;
 @JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class BackgroundFetchFailEventInit extends BackgroundFetchEventInit{
 
+    @JsProperty(name="fetches")
+    private BackgroundFetchSettledFetch[] fetches;
+
     public BackgroundFetchFailEventInit(){
     }
-
-    @JsProperty(name="fetches")
-    public BackgroundFetchSettledFetch[] fetches;
 
     @JsOverlay
     public final BackgroundFetchSettledFetch[] getFetches(){
@@ -41,6 +41,5 @@ public class BackgroundFetchFailEventInit extends BackgroundFetchEventInit{
     public final void setFetches(BackgroundFetchSettledFetch[] fetches){
         this.fetches = fetches;
     }
-
 
 }

@@ -17,6 +17,7 @@
 package gwt.jelement.speech;
 
 import jsinterop.annotations.JsConstructor;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -29,10 +30,16 @@ public class SpeechGrammar{
     }
     
     @JsProperty(name="src")
-    public String src;
+    public native String getSrc();
+    
+    @JsProperty(name="src")
+    public native void setSrc(String src);
     
     @JsProperty(name="weight")
-    public float weight;
+    public native float getWeight();
+    
+    @JsProperty(name="weight")
+    public native void setWeight(float weight);
     
     
 }

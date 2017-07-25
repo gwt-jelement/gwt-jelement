@@ -23,6 +23,7 @@ import gwt.jelement.html.HTMLFormElement;
 import gwt.jelement.html.ValidityState;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -36,81 +37,133 @@ public class HTMLObjectElement extends HTMLElement{
     }
     
     @JsProperty(name="data")
-    public String data;
+    public native String getData();
+    
+    @JsProperty(name="data")
+    public native void setData(String data);
     
     @JsProperty(name="type")
-    public String type;
+    public native String getType();
+    
+    @JsProperty(name="type")
+    public native void setType(String type);
     
     @JsProperty(name="name")
-    public String name;
+    public native String getName();
+    
+    @JsProperty(name="name")
+    public native void setName(String name);
     
     @JsProperty(name="useMap")
-    public String useMap;
+    public native String getUseMap();
+    
+    @JsProperty(name="useMap")
+    public native void setUseMap(String useMap);
     
     @JsProperty(name="form")
-    public HTMLFormElement form;
+    public native HTMLFormElement getForm();
     
     @JsProperty(name="width")
-    public String width;
+    public native String getWidth();
+    
+    @JsProperty(name="width")
+    public native void setWidth(String width);
     
     @JsProperty(name="height")
-    public String height;
+    public native String getHeight();
+    
+    @JsProperty(name="height")
+    public native void setHeight(String height);
     
     @JsProperty(name="contentDocument")
-    public Document contentDocument;
+    public native Document getContentDocument();
     
     @JsProperty(name="contentWindow")
-    public Window contentWindow;
+    public native Window getContentWindow();
     
     @JsProperty(name="willValidate")
-    public boolean willValidate;
+    public native boolean getWillValidate();
     
     @JsProperty(name="validity")
-    public ValidityState validity;
+    public native ValidityState getValidity();
     
     @JsProperty(name="validationMessage")
-    public String validationMessage;
+    public native String getValidationMessage();
     
     @JsProperty(name="align")
-    public String align;
+    public native String getAlign();
+    
+    @JsProperty(name="align")
+    public native void setAlign(String align);
     
     @JsProperty(name="archive")
-    public String archive;
+    public native String getArchive();
+    
+    @JsProperty(name="archive")
+    public native void setArchive(String archive);
     
     @JsProperty(name="code")
-    public String code;
+    public native String getCode();
+    
+    @JsProperty(name="code")
+    public native void setCode(String code);
     
     @JsProperty(name="declare")
-    public boolean declare;
+    public native boolean getDeclare();
+    
+    @JsProperty(name="declare")
+    public native void setDeclare(boolean declare);
     
     @JsProperty(name="hspace")
-    public double hspace;
+    public native double getHspace();
+    
+    @JsProperty(name="hspace")
+    public native void setHspace(double hspace);
     
     @JsProperty(name="standby")
-    public String standby;
+    public native String getStandby();
+    
+    @JsProperty(name="standby")
+    public native void setStandby(String standby);
     
     @JsProperty(name="vspace")
-    public double vspace;
+    public native double getVspace();
+    
+    @JsProperty(name="vspace")
+    public native void setVspace(double vspace);
     
     @JsProperty(name="codeBase")
-    public String codeBase;
+    public native String getCodeBase();
+    
+    @JsProperty(name="codeBase")
+    public native void setCodeBase(String codeBase);
     
     @JsProperty(name="codeType")
-    public String codeType;
+    public native String getCodeType();
+    
+    @JsProperty(name="codeType")
+    public native void setCodeType(String codeType);
     
     @JsProperty(name="border")
-    public String border;
+    public native String getBorder();
+    
+    @JsProperty(name="border")
+    public native void setBorder(String border);
     
     @JsMethod(name = "checkValidity")
     public native boolean checkValidity();
     
+    
     @JsMethod(name = "getSVGDocument")
     public native Document getSVGDocument();
+    
     
     @JsMethod(name = "reportValidity")
     public native boolean reportValidity();
     
+    
     @JsMethod(name = "setCustomValidity")
     public native void setCustomValidity(String error);
+    
     
 }

@@ -26,11 +26,20 @@ import jsinterop.annotations.JsType;
 @JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class NFCWatchOptions{
 
+    @JsProperty(name="url")
+    private String url;
+
+    @JsProperty(name="recordType")
+    private String recordType;
+
+    @JsProperty(name="mediaType")
+    private String mediaType;
+
+    @JsProperty(name="mode")
+    private String mode;
+
     public NFCWatchOptions(){
     }
-
-    @JsProperty(name="url")
-    public String url;
 
     @JsOverlay
     public final String getUrl(){
@@ -42,9 +51,6 @@ public class NFCWatchOptions{
         this.url = url;
     }
 
-    @JsProperty(name="recordType")
-    public String recordType;
-
     @JsOverlay
     public final NFCRecordType getRecordType(){
         return NFCRecordType.of(this.recordType);
@@ -54,9 +60,6 @@ public class NFCWatchOptions{
     public final void setRecordType(NFCRecordType recordType){
         this.recordType = recordType.getInternalValue();
     }
-
-    @JsProperty(name="mediaType")
-    public String mediaType;
 
     @JsOverlay
     public final String getMediaType(){
@@ -68,9 +71,6 @@ public class NFCWatchOptions{
         this.mediaType = mediaType;
     }
 
-    @JsProperty(name="mode")
-    public String mode;
-
     @JsOverlay
     public final NFCWatchMode getMode(){
         return NFCWatchMode.of(this.mode);
@@ -80,6 +80,5 @@ public class NFCWatchOptions{
     public final void setMode(NFCWatchMode mode){
         this.mode = mode.getInternalValue();
     }
-
 
 }

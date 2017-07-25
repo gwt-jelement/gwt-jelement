@@ -17,6 +17,7 @@
 package gwt.jelement.css.cssom;
 
 import gwt.jelement.css.cssom.CSSUnparsedValue;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -25,10 +26,10 @@ import jsinterop.annotations.JsType;
 public class CSSVariableReferenceValue{
     
     @JsProperty(name="variable")
-    public String variable;
+    public native String getVariable();
     
     @JsProperty(name="fallback")
-    public CSSUnparsedValue fallback;
+    public native CSSUnparsedValue getFallback();
     
     
 }

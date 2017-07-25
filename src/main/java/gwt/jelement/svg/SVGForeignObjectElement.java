@@ -19,6 +19,7 @@ package gwt.jelement.svg;
 import gwt.jelement.svg.SVGAnimatedLength;
 import gwt.jelement.svg.SVGGraphicsElement;
 import jsinterop.annotations.JsConstructor;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -32,16 +33,16 @@ public class SVGForeignObjectElement extends SVGGraphicsElement{
     }
     
     @JsProperty(name="x")
-    public SVGAnimatedLength x;
+    public native SVGAnimatedLength getX();
     
     @JsProperty(name="y")
-    public SVGAnimatedLength y;
+    public native SVGAnimatedLength getY();
     
     @JsProperty(name="width")
-    public SVGAnimatedLength width;
+    public native SVGAnimatedLength getWidth();
     
     @JsProperty(name="height")
-    public SVGAnimatedLength height;
+    public native SVGAnimatedLength getHeight();
     
     
 }

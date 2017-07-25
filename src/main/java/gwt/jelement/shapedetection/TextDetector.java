@@ -28,6 +28,7 @@ import gwt.jelement.svg.SVGImageElement;
 import elemental2.promise.Promise;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
@@ -41,25 +42,33 @@ public class TextDetector{
     @JsMethod(name = "detect")
     public native Promise<DetectedText[]> detect(HTMLImageElement image);
     
+    
     @JsMethod(name = "detect")
     public native Promise<DetectedText[]> detect(SVGImageElement image);
+    
     
     @JsMethod(name = "detect")
     public native Promise<DetectedText[]> detect(HTMLVideoElement image);
     
+    
     @JsMethod(name = "detect")
     public native Promise<DetectedText[]> detect(HTMLCanvasElement image);
+    
     
     @JsMethod(name = "detect")
     public native Promise<DetectedText[]> detect(Blob image);
     
+    
     @JsMethod(name = "detect")
     public native Promise<DetectedText[]> detect(ImageData image);
+    
     
     @JsMethod(name = "detect")
     public native Promise<DetectedText[]> detect(ImageBitmap image);
     
+    
     @JsMethod(name = "detect")
     public native Promise<DetectedText[]> detect(OffscreenCanvas image);
+    
     
 }

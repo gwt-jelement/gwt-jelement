@@ -18,6 +18,7 @@ package gwt.jelement.html;
 
 import gwt.jelement.html.HTMLElement;
 import jsinterop.annotations.JsConstructor;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -31,22 +32,40 @@ public class HTMLTableColElement extends HTMLElement{
     }
     
     @JsProperty(name="span")
-    public double span;
+    public native double getSpan();
+    
+    @JsProperty(name="span")
+    public native void setSpan(double span);
     
     @JsProperty(name="align")
-    public String align;
+    public native String getAlign();
+    
+    @JsProperty(name="align")
+    public native void setAlign(String align);
     
     @JsProperty(name="ch")
-    public String ch;
+    public native String getCh();
+    
+    @JsProperty(name="ch")
+    public native void setCh(String ch);
     
     @JsProperty(name="chOff")
-    public String chOff;
+    public native String getChOff();
+    
+    @JsProperty(name="chOff")
+    public native void setChOff(String chOff);
     
     @JsProperty(name="vAlign")
-    public String vAlign;
+    public native String getVAlign();
+    
+    @JsProperty(name="vAlign")
+    public native void setVAlign(String vAlign);
     
     @JsProperty(name="width")
-    public String width;
+    public native String getWidth();
+    
+    @JsProperty(name="width")
+    public native void setWidth(String width);
     
     
 }

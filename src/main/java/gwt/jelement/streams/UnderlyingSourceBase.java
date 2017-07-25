@@ -18,6 +18,7 @@ package gwt.jelement.streams;
 
 import elemental2.promise.Promise;
 import jsinterop.annotations.JsMethod;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
@@ -27,19 +28,25 @@ public class UnderlyingSourceBase{
     @JsMethod(name = "cancel")
     public native Promise<Void> cancel();
     
+    
     @JsMethod(name = "cancel")
     public native Promise<Void> cancel(Object reason);
+    
     
     @JsMethod(name = "notifyLockAcquired")
     public native void notifyLockAcquired();
     
+    
     @JsMethod(name = "notifyLockReleased")
     public native void notifyLockReleased();
+    
     
     @JsMethod(name = "pull")
     public native Promise<Void> pull();
     
+    
     @JsMethod(name = "start")
     public native Promise<Void> start(Object stream);
+    
     
 }

@@ -19,6 +19,7 @@ package gwt.jelement.svg;
 import gwt.jelement.svg.SVGGeometryElement;
 import gwt.jelement.svg.SVGPointList;
 import jsinterop.annotations.JsConstructor;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -32,10 +33,10 @@ public class SVGPolygonElement extends SVGGeometryElement{
     }
     
     @JsProperty(name="points")
-    public SVGPointList points;
+    public native SVGPointList getPoints();
     
     @JsProperty(name="animatedPoints")
-    public SVGPointList animatedPoints;
+    public native SVGPointList getAnimatedPoints();
     
     
 }

@@ -17,6 +17,7 @@
 package gwt.jelement.html;
 
 import jsinterop.annotations.JsMethod;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -25,12 +26,14 @@ import jsinterop.annotations.JsType;
 public class TimeRanges{
     
     @JsProperty(name="length")
-    public double length;
+    public native double getLength();
     
     @JsMethod(name = "end")
     public native double end(double index);
     
+    
     @JsMethod(name = "start")
     public native double start(double index);
+    
     
 }

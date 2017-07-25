@@ -26,11 +26,17 @@ import jsinterop.annotations.JsType;
 @JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class NotificationEventInit extends ExtendableEventInit{
 
+    @JsProperty(name="notification")
+    private Notification notification;
+
+    @JsProperty(name="action")
+    private String action;
+
+    @JsProperty(name="reply")
+    private String reply;
+
     public NotificationEventInit(){
     }
-
-    @JsProperty(name="notification")
-    public Notification notification;
 
     @JsOverlay
     public final Notification getNotification(){
@@ -42,9 +48,6 @@ public class NotificationEventInit extends ExtendableEventInit{
         this.notification = notification;
     }
 
-    @JsProperty(name="action")
-    public String action;
-
     @JsOverlay
     public final String getAction(){
         return this.action;
@@ -55,9 +58,6 @@ public class NotificationEventInit extends ExtendableEventInit{
         this.action = action;
     }
 
-    @JsProperty(name="reply")
-    public String reply;
-
     @JsOverlay
     public final String getReply(){
         return this.reply;
@@ -67,6 +67,5 @@ public class NotificationEventInit extends ExtendableEventInit{
     public final void setReply(String reply){
         this.reply = reply;
     }
-
 
 }

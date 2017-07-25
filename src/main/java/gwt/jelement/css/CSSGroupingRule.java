@@ -20,6 +20,7 @@ import gwt.jelement.css.CSSRule;
 import gwt.jelement.css.CSSRuleList;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -33,12 +34,14 @@ public class CSSGroupingRule extends CSSRule{
     }
     
     @JsProperty(name="cssRules")
-    public CSSRuleList cssRules;
+    public native CSSRuleList getCssRules();
     
     @JsMethod(name = "deleteRule")
     public native void deleteRule(double index);
     
+    
     @JsMethod(name = "insertRule")
     public native double insertRule(String rule, double index);
+    
     
 }

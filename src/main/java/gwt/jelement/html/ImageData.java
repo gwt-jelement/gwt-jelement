@@ -79,19 +79,25 @@ public class ImageData{
     
     }
     
+    @JsProperty(name="dataUnion")
+    private ImageDataArray dataUnion;
+    
     @JsProperty(name="width")
-    public double width;
+    public native double getWidth();
     
     @JsProperty(name="height")
-    public double height;
+    public native double getHeight();
     
     @JsProperty(name="data")
-    public Uint8ClampedArray data;
+    public native Uint8ClampedArray getData();
     
-    @JsProperty(name="dataUnion")
-    public ImageDataArray dataUnion;
+    @JsOverlay
+    public final ImageDataArray getDataUnion(){
+        return this.dataUnion;
+    }
     
     @JsMethod(name = "getColorSettings")
     public native ImageDataColorSettings getColorSettings();
+    
     
 }

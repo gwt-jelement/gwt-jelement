@@ -26,11 +26,11 @@ import jsinterop.annotations.JsType;
 @JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class FontFaceSetLoadEventInit extends EventInit{
 
+    @JsProperty(name="fontfaces")
+    private FontFace[] fontfaces;
+
     public FontFaceSetLoadEventInit(){
     }
-
-    @JsProperty(name="fontfaces")
-    public FontFace[] fontfaces;
 
     @JsOverlay
     public final FontFace[] getFontfaces(){
@@ -41,6 +41,5 @@ public class FontFaceSetLoadEventInit extends EventInit{
     public final void setFontfaces(FontFace[] fontfaces){
         this.fontfaces = fontfaces;
     }
-
 
 }

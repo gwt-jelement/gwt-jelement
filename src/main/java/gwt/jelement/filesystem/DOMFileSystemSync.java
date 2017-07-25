@@ -17,6 +17,7 @@
 package gwt.jelement.filesystem;
 
 import gwt.jelement.filesystem.DirectoryEntrySync;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -25,10 +26,10 @@ import jsinterop.annotations.JsType;
 public class DOMFileSystemSync{
     
     @JsProperty(name="name")
-    public String name;
+    public native String getName();
     
     @JsProperty(name="root")
-    public DirectoryEntrySync root;
+    public native DirectoryEntrySync getRoot();
     
     
 }

@@ -21,6 +21,7 @@ import gwt.jelement.serviceworkers.ExtendableEventInit;
 import gwt.jelement.serviceworkers.ForeignFetchOptions;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
@@ -39,5 +40,6 @@ public class InstallEvent extends ExtendableEvent{
     
     @JsMethod(name = "registerForeignFetch")
     public native void registerForeignFetch(ForeignFetchOptions options);
+    
     
 }

@@ -23,6 +23,7 @@ import gwt.jelement.html.HTMLFormElement;
 import gwt.jelement.html.ValidityState;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -36,42 +37,54 @@ public class HTMLOutputElement extends HTMLElement{
     }
     
     @JsProperty(name="htmlFor")
-    public DOMTokenList htmlFor;
+    public native DOMTokenList getHtmlFor();
     
     @JsProperty(name="form")
-    public HTMLFormElement form;
+    public native HTMLFormElement getForm();
     
     @JsProperty(name="name")
-    public String name;
+    public native String getName();
+    
+    @JsProperty(name="name")
+    public native void setName(String name);
     
     @JsProperty(name="type")
-    public String type;
+    public native String getType();
     
     @JsProperty(name="defaultValue")
-    public String defaultValue;
+    public native String getDefaultValue();
+    
+    @JsProperty(name="defaultValue")
+    public native void setDefaultValue(String defaultValue);
     
     @JsProperty(name="value")
-    public String value;
+    public native String getValue();
+    
+    @JsProperty(name="value")
+    public native void setValue(String value);
     
     @JsProperty(name="willValidate")
-    public boolean willValidate;
+    public native boolean getWillValidate();
     
     @JsProperty(name="validity")
-    public ValidityState validity;
+    public native ValidityState getValidity();
     
     @JsProperty(name="validationMessage")
-    public String validationMessage;
+    public native String getValidationMessage();
     
     @JsProperty(name="labels")
-    public NodeList labels;
+    public native NodeList getLabels();
     
     @JsMethod(name = "checkValidity")
     public native boolean checkValidity();
     
+    
     @JsMethod(name = "reportValidity")
     public native boolean reportValidity();
     
+    
     @JsMethod(name = "setCustomValidity")
     public native void setCustomValidity(String error);
+    
     
 }

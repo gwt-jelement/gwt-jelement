@@ -18,6 +18,7 @@ package gwt.jelement.timing;
 
 import gwt.jelement.timing.PerformanceEntry;
 import jsinterop.annotations.JsConstructor;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -31,16 +32,16 @@ public class TaskAttributionTiming extends PerformanceEntry{
     }
     
     @JsProperty(name="containerType")
-    public String containerType;
+    public native String getContainerType();
     
     @JsProperty(name="containerSrc")
-    public String containerSrc;
+    public native String getContainerSrc();
     
     @JsProperty(name="containerId")
-    public String containerId;
+    public native String getContainerId();
     
     @JsProperty(name="containerName")
-    public String containerName;
+    public native String getContainerName();
     
     
 }

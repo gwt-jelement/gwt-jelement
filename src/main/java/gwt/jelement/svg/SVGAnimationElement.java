@@ -21,6 +21,7 @@ import gwt.jelement.svg.SVGElement;
 import gwt.jelement.svg.SVGStringList;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -28,48 +29,85 @@ import jsinterop.annotations.JsType;
 @JsType(namespace = JsPackage.GLOBAL, isNative = true)
 public class SVGAnimationElement extends SVGElement{
     
+    @JsProperty(name="onbegin")
+    private EventHandlerNonNull onbegin;
+    
+    @JsProperty(name="onend")
+    private EventHandlerNonNull onend;
+    
+    @JsProperty(name="onrepeat")
+    private EventHandlerNonNull onrepeat;
+    
     @JsConstructor
     public SVGAnimationElement(){
         super();
     }
     
     @JsProperty(name="targetElement")
-    public SVGElement targetElement;
+    public native SVGElement getTargetElement();
     
-    @JsProperty(name="onbegin")
-    public EventHandlerNonNull onbegin;
+    @JsOverlay
+    public final EventHandlerNonNull getOnBegin(){
+        return this.onbegin;
+    }
     
-    @JsProperty(name="onend")
-    public EventHandlerNonNull onend;
+    @JsOverlay
+    public final void setOnBegin(EventHandlerNonNull onbegin){
+        this.onbegin = onbegin;
+    }
     
-    @JsProperty(name="onrepeat")
-    public EventHandlerNonNull onrepeat;
+    @JsOverlay
+    public final EventHandlerNonNull getOnEnd(){
+        return this.onend;
+    }
+    
+    @JsOverlay
+    public final void setOnEnd(EventHandlerNonNull onend){
+        this.onend = onend;
+    }
+    
+    @JsOverlay
+    public final EventHandlerNonNull getOnRepeat(){
+        return this.onrepeat;
+    }
+    
+    @JsOverlay
+    public final void setOnRepeat(EventHandlerNonNull onrepeat){
+        this.onrepeat = onrepeat;
+    }
     
     @JsProperty(name="requiredExtensions")
-    public SVGStringList requiredExtensions;
+    public native SVGStringList getRequiredExtensions();
     
     @JsProperty(name="systemLanguage")
-    public SVGStringList systemLanguage;
+    public native SVGStringList getSystemLanguage();
     
     @JsMethod(name = "beginElement")
     public native void beginElement();
     
+    
     @JsMethod(name = "beginElementAt")
     public native void beginElementAt(float offset);
+    
     
     @JsMethod(name = "endElement")
     public native void endElement();
     
+    
     @JsMethod(name = "endElementAt")
     public native void endElementAt(float offset);
+    
     
     @JsMethod(name = "getCurrentTime")
     public native float getCurrentTime();
     
+    
     @JsMethod(name = "getSimpleDuration")
     public native float getSimpleDuration();
     
+    
     @JsMethod(name = "getStartTime")
     public native float getStartTime();
+    
     
 }

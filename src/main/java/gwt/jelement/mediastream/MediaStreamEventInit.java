@@ -26,11 +26,11 @@ import jsinterop.annotations.JsType;
 @JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class MediaStreamEventInit extends EventInit{
 
+    @JsProperty(name="stream")
+    private MediaStream stream;
+
     public MediaStreamEventInit(){
     }
-
-    @JsProperty(name="stream")
-    public MediaStream stream;
 
     @JsOverlay
     public final MediaStream getStream(){
@@ -41,6 +41,5 @@ public class MediaStreamEventInit extends EventInit{
     public final void setStream(MediaStream stream){
         this.stream = stream;
     }
-
 
 }

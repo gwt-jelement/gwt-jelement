@@ -18,6 +18,7 @@ package gwt.jelement.dom;
 
 import gwt.jelement.dom.ClientRect;
 import gwt.jelement.dom.Element;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -26,10 +27,10 @@ import jsinterop.annotations.JsType;
 public class ResizeObserverEntry{
     
     @JsProperty(name="target")
-    public Element target;
+    public native Element getTarget();
     
     @JsProperty(name="contentRect")
-    public ClientRect contentRect;
+    public native ClientRect getContentRect();
     
     
 }

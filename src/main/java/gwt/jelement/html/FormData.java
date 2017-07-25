@@ -64,31 +64,41 @@ public class FormData{
     @JsMethod(name = "append")
     public native void append(String name, String value);
     
+    
     @JsMethod(name = "append")
     public native void append(String name, Blob value);
+    
     
     @JsMethod(name = "append")
     public native void append(String name, Blob value, String filename);
     
+    
     @JsMethod(name = "delete")
     public native void delete(String name);
+    
     
     @JsMethod(name = "get")
     public native FormData.FormDataEntryValue get(String name);
     
+    
     @JsMethod(name = "getAll")
     public native FormData.FormDataEntryValue[] getAll(String name);
+    
     
     @JsMethod(name = "has")
     public native boolean has(String name);
     
+    
     @JsMethod(name = "set")
     public native void set(String name, String value);
+    
     
     @JsMethod(name = "set")
     public native void set(String name, Blob value);
     
+    
     @JsMethod(name = "set")
     public native void set(String name, Blob value, String filename);
+    
     
 }

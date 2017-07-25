@@ -25,11 +25,11 @@ import jsinterop.annotations.JsType;
 @JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class BackgroundFetchEventInit extends ExtendableEventInit{
 
+    @JsProperty(name="tag")
+    private String tag;
+
     public BackgroundFetchEventInit(){
     }
-
-    @JsProperty(name="tag")
-    public String tag;
 
     @JsOverlay
     public final String getTag(){
@@ -40,6 +40,5 @@ public class BackgroundFetchEventInit extends ExtendableEventInit{
     public final void setTag(String tag){
         this.tag = tag;
     }
-
 
 }

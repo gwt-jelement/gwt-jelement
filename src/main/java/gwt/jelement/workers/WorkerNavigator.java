@@ -20,6 +20,7 @@ import gwt.jelement.budget.BudgetService;
 import gwt.jelement.netinfo.NetworkInformation;
 import gwt.jelement.permissions.Permissions;
 import gwt.jelement.quota.StorageManager;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -28,40 +29,40 @@ import jsinterop.annotations.JsType;
 public class WorkerNavigator{
     
     @JsProperty(name="budget")
-    public BudgetService budget;
+    public native BudgetService getBudget();
     
     @JsProperty(name="connection")
-    public NetworkInformation connection;
+    public native NetworkInformation getConnection();
     
     @JsProperty(name="permissions")
-    public Permissions permissions;
+    public native Permissions getPermissions();
     
     @JsProperty(name="storage")
-    public StorageManager storage;
+    public native StorageManager getStorage();
     
     @JsProperty(name="hardwareConcurrency")
-    public double hardwareConcurrency;
+    public native double getHardwareConcurrency();
     
     @JsProperty(name="appCodeName")
-    public String appCodeName;
+    public native String getAppCodeName();
     
     @JsProperty(name="appName")
-    public String appName;
+    public native String getAppName();
     
     @JsProperty(name="appVersion")
-    public String appVersion;
+    public native String getAppVersion();
     
     @JsProperty(name="platform")
-    public String platform;
+    public native String getPlatform();
     
     @JsProperty(name="product")
-    public String product;
+    public native String getProduct();
     
     @JsProperty(name="userAgent")
-    public String userAgent;
+    public native String getUserAgent();
     
     @JsProperty(name="onLine")
-    public boolean onLine;
+    public native boolean getOnLine();
     
     
 }

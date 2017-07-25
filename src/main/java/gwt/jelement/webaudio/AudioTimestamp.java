@@ -24,11 +24,14 @@ import jsinterop.annotations.JsType;
 @JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class AudioTimestamp{
 
+    @JsProperty(name="contextTime")
+    private double contextTime;
+
+    @JsProperty(name="performanceTime")
+    private double performanceTime;
+
     public AudioTimestamp(){
     }
-
-    @JsProperty(name="contextTime")
-    public double contextTime;
 
     @JsOverlay
     public final double getContextTime(){
@@ -40,9 +43,6 @@ public class AudioTimestamp{
         this.contextTime = contextTime;
     }
 
-    @JsProperty(name="performanceTime")
-    public double performanceTime;
-
     @JsOverlay
     public final double getPerformanceTime(){
         return this.performanceTime;
@@ -52,6 +52,5 @@ public class AudioTimestamp{
     public final void setPerformanceTime(double performanceTime){
         this.performanceTime = performanceTime;
     }
-
 
 }

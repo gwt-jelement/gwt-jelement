@@ -18,6 +18,7 @@ package gwt.jelement.html;
 
 import gwt.jelement.html.HTMLElement;
 import jsinterop.annotations.JsConstructor;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -31,10 +32,16 @@ public class HTMLBaseElement extends HTMLElement{
     }
     
     @JsProperty(name="href")
-    public String href;
+    public native String getHref();
+    
+    @JsProperty(name="href")
+    public native void setHref(String href);
     
     @JsProperty(name="target")
-    public String target;
+    public native String getTarget();
+    
+    @JsProperty(name="target")
+    public native void setTarget(String target);
     
     
 }

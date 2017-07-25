@@ -22,6 +22,7 @@ import gwt.jelement.frame.Window;
 import gwt.jelement.html.HTMLElement;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -35,60 +36,103 @@ public class HTMLIFrameElement extends HTMLElement{
     }
     
     @JsProperty(name="src")
-    public String src;
+    public native String getSrc();
+    
+    @JsProperty(name="src")
+    public native void setSrc(String src);
     
     @JsProperty(name="srcdoc")
-    public String srcdoc;
+    public native String getSrcdoc();
+    
+    @JsProperty(name="srcdoc")
+    public native void setSrcdoc(String srcdoc);
     
     @JsProperty(name="name")
-    public String name;
+    public native String getName();
+    
+    @JsProperty(name="name")
+    public native void setName(String name);
     
     @JsProperty(name="sandbox")
-    public DOMTokenList sandbox;
+    public native DOMTokenList getSandbox();
     
     @JsProperty(name="allowFullscreen")
-    public boolean allowFullscreen;
+    public native boolean getAllowFullscreen();
+    
+    @JsProperty(name="allowFullscreen")
+    public native void setAllowFullscreen(boolean allowFullscreen);
     
     @JsProperty(name="width")
-    public String width;
+    public native String getWidth();
+    
+    @JsProperty(name="width")
+    public native void setWidth(String width);
     
     @JsProperty(name="height")
-    public String height;
+    public native String getHeight();
+    
+    @JsProperty(name="height")
+    public native void setHeight(String height);
     
     @JsProperty(name="contentDocument")
-    public Document contentDocument;
+    public native Document getContentDocument();
     
     @JsProperty(name="contentWindow")
-    public Window contentWindow;
+    public native Window getContentWindow();
     
     @JsProperty(name="referrerPolicy")
-    public String referrerPolicy;
+    public native String getReferrerPolicy();
+    
+    @JsProperty(name="referrerPolicy")
+    public native void setReferrerPolicy(String referrerPolicy);
     
     @JsProperty(name="csp")
-    public String csp;
+    public native String getCsp();
+    
+    @JsProperty(name="csp")
+    public native void setCsp(String csp);
     
     @JsProperty(name="allow")
-    public DOMTokenList allow;
+    public native DOMTokenList getAllow();
     
     @JsProperty(name="align")
-    public String align;
+    public native String getAlign();
+    
+    @JsProperty(name="align")
+    public native void setAlign(String align);
     
     @JsProperty(name="scrolling")
-    public String scrolling;
+    public native String getScrolling();
+    
+    @JsProperty(name="scrolling")
+    public native void setScrolling(String scrolling);
     
     @JsProperty(name="frameBorder")
-    public String frameBorder;
+    public native String getFrameBorder();
+    
+    @JsProperty(name="frameBorder")
+    public native void setFrameBorder(String frameBorder);
     
     @JsProperty(name="longDesc")
-    public String longDesc;
+    public native String getLongDesc();
+    
+    @JsProperty(name="longDesc")
+    public native void setLongDesc(String longDesc);
     
     @JsProperty(name="marginHeight")
-    public String marginHeight;
+    public native String getMarginHeight();
+    
+    @JsProperty(name="marginHeight")
+    public native void setMarginHeight(String marginHeight);
     
     @JsProperty(name="marginWidth")
-    public String marginWidth;
+    public native String getMarginWidth();
+    
+    @JsProperty(name="marginWidth")
+    public native void setMarginWidth(String marginWidth);
     
     @JsMethod(name = "getSVGDocument")
     public native Document getSVGDocument();
+    
     
 }

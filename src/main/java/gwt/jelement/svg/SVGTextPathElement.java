@@ -21,6 +21,7 @@ import gwt.jelement.svg.SVGAnimatedLength;
 import gwt.jelement.svg.SVGAnimatedString;
 import gwt.jelement.svg.SVGTextContentElement;
 import jsinterop.annotations.JsConstructor;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -41,16 +42,16 @@ public class SVGTextPathElement extends SVGTextContentElement{
     }
     
     @JsProperty(name="startOffset")
-    public SVGAnimatedLength startOffset;
+    public native SVGAnimatedLength getStartOffset();
     
     @JsProperty(name="method")
-    public SVGAnimatedEnumeration method;
+    public native SVGAnimatedEnumeration getMethod();
     
     @JsProperty(name="spacing")
-    public SVGAnimatedEnumeration spacing;
+    public native SVGAnimatedEnumeration getSpacing();
     
     @JsProperty(name="href")
-    public SVGAnimatedString href;
+    public native SVGAnimatedString getHref();
     
     
 }

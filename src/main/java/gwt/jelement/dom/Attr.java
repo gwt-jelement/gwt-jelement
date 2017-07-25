@@ -19,6 +19,7 @@ package gwt.jelement.dom;
 import gwt.jelement.dom.Element;
 import gwt.jelement.dom.Node;
 import jsinterop.annotations.JsConstructor;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -32,25 +33,28 @@ public class Attr extends Node{
     }
     
     @JsProperty(name="namespaceURI")
-    public String namespaceURI;
+    public native String getNamespaceURI();
     
     @JsProperty(name="prefix")
-    public String prefix;
+    public native String getPrefix();
     
     @JsProperty(name="localName")
-    public String localName;
+    public native String getLocalName();
     
     @JsProperty(name="name")
-    public String name;
+    public native String getName();
     
     @JsProperty(name="value")
-    public String value;
+    public native String getValue();
+    
+    @JsProperty(name="value")
+    public native void setValue(String value);
     
     @JsProperty(name="ownerElement")
-    public Element ownerElement;
+    public native Element getOwnerElement();
     
     @JsProperty(name="specified")
-    public boolean specified;
+    public native boolean getSpecified();
     
     
 }

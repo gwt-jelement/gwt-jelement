@@ -18,6 +18,7 @@ package gwt.jelement.dom;
 
 import elemental2.core.ArrayBufferView;
 import jsinterop.annotations.JsConstructor;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 

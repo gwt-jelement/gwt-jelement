@@ -18,6 +18,7 @@ package gwt.jelement.html;
 
 import gwt.jelement.html.HTMLElement;
 import jsinterop.annotations.JsConstructor;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -31,76 +32,145 @@ public class HTMLAnchorElement extends HTMLElement{
     }
     
     @JsProperty(name="target")
-    public String target;
+    public native String getTarget();
+    
+    @JsProperty(name="target")
+    public native void setTarget(String target);
     
     @JsProperty(name="download")
-    public String download;
+    public native String getDownload();
+    
+    @JsProperty(name="download")
+    public native void setDownload(String download);
     
     @JsProperty(name="ping")
-    public String ping;
+    public native String getPing();
+    
+    @JsProperty(name="ping")
+    public native void setPing(String ping);
     
     @JsProperty(name="rel")
-    public String rel;
+    public native String getRel();
+    
+    @JsProperty(name="rel")
+    public native void setRel(String rel);
     
     @JsProperty(name="hreflang")
-    public String hreflang;
+    public native String getHreflang();
+    
+    @JsProperty(name="hreflang")
+    public native void setHreflang(String hreflang);
     
     @JsProperty(name="type")
-    public String type;
+    public native String getType();
+    
+    @JsProperty(name="type")
+    public native void setType(String type);
     
     @JsProperty(name="referrerPolicy")
-    public String referrerPolicy;
+    public native String getReferrerPolicy();
+    
+    @JsProperty(name="referrerPolicy")
+    public native void setReferrerPolicy(String referrerPolicy);
     
     @JsProperty(name="text")
-    public String text;
+    public native String getText();
+    
+    @JsProperty(name="text")
+    public native void setText(String text);
     
     @JsProperty(name="coords")
-    public String coords;
+    public native String getCoords();
+    
+    @JsProperty(name="coords")
+    public native void setCoords(String coords);
     
     @JsProperty(name="charset")
-    public String charset;
+    public native String getCharset();
+    
+    @JsProperty(name="charset")
+    public native void setCharset(String charset);
     
     @JsProperty(name="name")
-    public String name;
+    public native String getName();
+    
+    @JsProperty(name="name")
+    public native void setName(String name);
     
     @JsProperty(name="rev")
-    public String rev;
+    public native String getRev();
+    
+    @JsProperty(name="rev")
+    public native void setRev(String rev);
     
     @JsProperty(name="shape")
-    public String shape;
+    public native String getShape();
+    
+    @JsProperty(name="shape")
+    public native void setShape(String shape);
     
     @JsProperty(name="href")
-    public String href;
+    public native String getHref();
+    
+    @JsProperty(name="href")
+    public native void setHref(String href);
     
     @JsProperty(name="origin")
-    public String origin;
+    public native String getOrigin();
     
     @JsProperty(name="protocol")
-    public String protocol;
+    public native String getProtocol();
+    
+    @JsProperty(name="protocol")
+    public native void setProtocol(String protocol);
     
     @JsProperty(name="username")
-    public String username;
+    public native String getUsername();
+    
+    @JsProperty(name="username")
+    public native void setUsername(String username);
     
     @JsProperty(name="password")
-    public String password;
+    public native String getPassword();
+    
+    @JsProperty(name="password")
+    public native void setPassword(String password);
     
     @JsProperty(name="host")
-    public String host;
+    public native String getHost();
+    
+    @JsProperty(name="host")
+    public native void setHost(String host);
     
     @JsProperty(name="hostname")
-    public String hostname;
+    public native String getHostname();
+    
+    @JsProperty(name="hostname")
+    public native void setHostname(String hostname);
     
     @JsProperty(name="port")
-    public String port;
+    public native String getPort();
+    
+    @JsProperty(name="port")
+    public native void setPort(String port);
     
     @JsProperty(name="pathname")
-    public String pathname;
+    public native String getPathname();
+    
+    @JsProperty(name="pathname")
+    public native void setPathname(String pathname);
     
     @JsProperty(name="search")
-    public String search;
+    public native String getSearch();
+    
+    @JsProperty(name="search")
+    public native void setSearch(String search);
     
     @JsProperty(name="hash")
-    public String hash;
+    public native String getHash();
+    
+    @JsProperty(name="hash")
+    public native void setHash(String hash);
     
     
 }

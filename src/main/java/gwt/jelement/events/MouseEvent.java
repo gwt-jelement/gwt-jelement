@@ -23,6 +23,7 @@ import gwt.jelement.events.UIEvent;
 import gwt.jelement.frame.Window;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -41,126 +42,143 @@ public class MouseEvent extends UIEvent{
     }
     
     @JsProperty(name="screenX")
-    public double screenX;
+    public native double getScreenX();
     
     @JsProperty(name="screenY")
-    public double screenY;
+    public native double getScreenY();
     
     @JsProperty(name="clientX")
-    public double clientX;
+    public native double getClientX();
     
     @JsProperty(name="clientY")
-    public double clientY;
+    public native double getClientY();
     
     @JsProperty(name="ctrlKey")
-    public boolean ctrlKey;
+    public native boolean getCtrlKey();
     
     @JsProperty(name="shiftKey")
-    public boolean shiftKey;
+    public native boolean getShiftKey();
     
     @JsProperty(name="altKey")
-    public boolean altKey;
+    public native boolean getAltKey();
     
     @JsProperty(name="metaKey")
-    public boolean metaKey;
+    public native boolean getMetaKey();
     
     @JsProperty(name="button")
-    public short button;
+    public native short getButton();
     
     @JsProperty(name="buttons")
-    public short buttons;
+    public native short getButtons();
     
     @JsProperty(name="relatedTarget")
-    public EventTarget relatedTarget;
+    public native EventTarget getRelatedTarget();
     
     @JsProperty(name="pageX")
-    public double pageX;
+    public native double getPageX();
     
     @JsProperty(name="pageY")
-    public double pageY;
+    public native double getPageY();
     
     @JsProperty(name="x")
-    public double x;
+    public native double getX();
     
     @JsProperty(name="y")
-    public double y;
+    public native double getY();
     
     @JsProperty(name="offsetX")
-    public double offsetX;
+    public native double getOffsetX();
     
     @JsProperty(name="offsetY")
-    public double offsetY;
+    public native double getOffsetY();
     
     @JsProperty(name="movementX")
-    public double movementX;
+    public native double getMovementX();
     
     @JsProperty(name="movementY")
-    public double movementY;
+    public native double getMovementY();
     
     @JsProperty(name="region")
-    public String region;
+    public native String getRegion();
     
     @JsProperty(name="fromElement")
-    public Node fromElement;
+    public native Node getFromElement();
     
     @JsProperty(name="toElement")
-    public Node toElement;
+    public native Node getToElement();
     
     @JsProperty(name="layerX")
-    public double layerX;
+    public native double getLayerX();
     
     @JsProperty(name="layerY")
-    public double layerY;
+    public native double getLayerY();
     
     @JsMethod(name = "getModifierState")
     public native boolean getModifierState(String keyArg);
     
+    
     @JsMethod(name = "initMouseEvent")
     public native void initMouseEvent();
+    
     
     @JsMethod(name = "initMouseEvent")
     public native void initMouseEvent(String type);
     
+    
     @JsMethod(name = "initMouseEvent")
     public native void initMouseEvent(String type, boolean bubbles);
+    
     
     @JsMethod(name = "initMouseEvent")
     public native void initMouseEvent(String type, boolean bubbles, boolean cancelable);
     
+    
     @JsMethod(name = "initMouseEvent")
     public native void initMouseEvent(String type, boolean bubbles, boolean cancelable, Window view);
+    
     
     @JsMethod(name = "initMouseEvent")
     public native void initMouseEvent(String type, boolean bubbles, boolean cancelable, Window view, double detail);
     
+    
     @JsMethod(name = "initMouseEvent")
     public native void initMouseEvent(String type, boolean bubbles, boolean cancelable, Window view, double detail, double screenX);
+    
     
     @JsMethod(name = "initMouseEvent")
     public native void initMouseEvent(String type, boolean bubbles, boolean cancelable, Window view, double detail, double screenX, double screenY);
     
+    
     @JsMethod(name = "initMouseEvent")
     public native void initMouseEvent(String type, boolean bubbles, boolean cancelable, Window view, double detail, double screenX, double screenY, double clientX);
+    
     
     @JsMethod(name = "initMouseEvent")
     public native void initMouseEvent(String type, boolean bubbles, boolean cancelable, Window view, double detail, double screenX, double screenY, double clientX, double clientY);
     
+    
     @JsMethod(name = "initMouseEvent")
     public native void initMouseEvent(String type, boolean bubbles, boolean cancelable, Window view, double detail, double screenX, double screenY, double clientX, double clientY, boolean ctrlKey);
+    
     
     @JsMethod(name = "initMouseEvent")
     public native void initMouseEvent(String type, boolean bubbles, boolean cancelable, Window view, double detail, double screenX, double screenY, double clientX, double clientY, boolean ctrlKey, boolean altKey);
     
+    
     @JsMethod(name = "initMouseEvent")
     public native void initMouseEvent(String type, boolean bubbles, boolean cancelable, Window view, double detail, double screenX, double screenY, double clientX, double clientY, boolean ctrlKey, boolean altKey, boolean shiftKey);
+    
     
     @JsMethod(name = "initMouseEvent")
     public native void initMouseEvent(String type, boolean bubbles, boolean cancelable, Window view, double detail, double screenX, double screenY, double clientX, double clientY, boolean ctrlKey, boolean altKey, boolean shiftKey, boolean metaKey);
     
+    
     @JsMethod(name = "initMouseEvent")
     public native void initMouseEvent(String type, boolean bubbles, boolean cancelable, Window view, double detail, double screenX, double screenY, double clientX, double clientY, boolean ctrlKey, boolean altKey, boolean shiftKey, boolean metaKey, short button);
     
+    
     @JsMethod(name = "initMouseEvent")
     public native void initMouseEvent(String type, boolean bubbles, boolean cancelable, Window view, double detail, double screenX, double screenY, double clientX, double clientY, boolean ctrlKey, boolean altKey, boolean shiftKey, boolean metaKey, short button, EventTarget relatedTarget);
+    
     
 }

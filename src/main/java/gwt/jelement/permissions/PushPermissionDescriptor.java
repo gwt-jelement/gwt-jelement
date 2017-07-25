@@ -25,11 +25,11 @@ import jsinterop.annotations.JsType;
 @JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class PushPermissionDescriptor extends PermissionDescriptor{
 
+    @JsProperty(name="userVisibleOnly")
+    private boolean userVisibleOnly;
+
     public PushPermissionDescriptor(){
     }
-
-    @JsProperty(name="userVisibleOnly")
-    public boolean userVisibleOnly;
 
     @JsOverlay
     public final boolean getUserVisibleOnly(){
@@ -40,6 +40,5 @@ public class PushPermissionDescriptor extends PermissionDescriptor{
     public final void setUserVisibleOnly(boolean userVisibleOnly){
         this.userVisibleOnly = userVisibleOnly;
     }
-
 
 }

@@ -28,16 +28,19 @@ import jsinterop.annotations.JsType;
 @JsType(namespace = JsPackage.GLOBAL, isNative = true)
 public class WaveShaperNode extends AudioNode{
     
+    @JsProperty(name="oversample")
+    private String oversample;
+    
     @JsConstructor
     public WaveShaperNode(){
         super();
     }
     
     @JsProperty(name="curve")
-    public Float32Array curve;
+    public native Float32Array getCurve();
     
-    @JsProperty(name="oversample")
-    public String oversample;
+    @JsProperty(name="curve")
+    public native void setCurve(Float32Array curve);
     
     @JsOverlay
     public final OverSampleType getOversample(){

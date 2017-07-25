@@ -26,11 +26,20 @@ import jsinterop.base.Js;
 @JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class RTCIceServer{
 
+    @JsProperty(name="urls")
+    private IDBObjectStoreParameters.KeyPathUnion urls;
+
+    @JsProperty(name="url")
+    private String url;
+
+    @JsProperty(name="username")
+    private String username;
+
+    @JsProperty(name="credential")
+    private String credential;
+
     public RTCIceServer(){
     }
-
-    @JsProperty(name="urls")
-    public IDBObjectStoreParameters.KeyPathUnion urls;
 
     @JsOverlay
     public final void setUrls(String urls){
@@ -42,9 +51,6 @@ public class RTCIceServer{
         this.urls = IDBObjectStoreParameters.KeyPathUnion.of(urls);
     }
 
-    @JsProperty(name="url")
-    public String url;
-
     @JsOverlay
     public final String getUrl(){
         return this.url;
@@ -54,9 +60,6 @@ public class RTCIceServer{
     public final void setUrl(String url){
         this.url = url;
     }
-
-    @JsProperty(name="username")
-    public String username;
 
     @JsOverlay
     public final String getUsername(){
@@ -68,9 +71,6 @@ public class RTCIceServer{
         this.username = username;
     }
 
-    @JsProperty(name="credential")
-    public String credential;
-
     @JsOverlay
     public final String getCredential(){
         return this.credential;
@@ -80,6 +80,5 @@ public class RTCIceServer{
     public final void setCredential(String credential){
         this.credential = credential;
     }
-
 
 }

@@ -18,6 +18,7 @@ package gwt.jelement.plugins;
 
 import gwt.jelement.plugins.Plugin;
 import jsinterop.annotations.JsMethod;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -26,15 +27,18 @@ import jsinterop.annotations.JsType;
 public class PluginArray{
     
     @JsProperty(name="length")
-    public double length;
+    public native double getLength();
     
     @JsMethod(name = "namedItem")
     public native Plugin namedItem(String name);
     
+    
     @JsMethod(name = "refresh")
     public native void refresh();
     
+    
     @JsMethod(name = "refresh")
     public native void refresh(boolean reload);
+    
     
 }

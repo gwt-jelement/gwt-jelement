@@ -26,11 +26,20 @@ import jsinterop.annotations.JsType;
 @JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class CanvasRenderingContext2DSettings{
 
+    @JsProperty(name="alpha")
+    private boolean alpha;
+
+    @JsProperty(name="colorSpace")
+    private String colorSpace;
+
+    @JsProperty(name="pixelFormat")
+    private String pixelFormat;
+
+    @JsProperty(name="linearPixelMath")
+    private boolean linearPixelMath;
+
     public CanvasRenderingContext2DSettings(){
     }
-
-    @JsProperty(name="alpha")
-    public boolean alpha;
 
     @JsOverlay
     public final boolean getAlpha(){
@@ -42,9 +51,6 @@ public class CanvasRenderingContext2DSettings{
         this.alpha = alpha;
     }
 
-    @JsProperty(name="colorSpace")
-    public String colorSpace;
-
     @JsOverlay
     public final CanvasColorSpace getColorSpace(){
         return CanvasColorSpace.of(this.colorSpace);
@@ -54,9 +60,6 @@ public class CanvasRenderingContext2DSettings{
     public final void setColorSpace(CanvasColorSpace colorSpace){
         this.colorSpace = colorSpace.getInternalValue();
     }
-
-    @JsProperty(name="pixelFormat")
-    public String pixelFormat;
 
     @JsOverlay
     public final CanvasPixelFormat getPixelFormat(){
@@ -68,9 +71,6 @@ public class CanvasRenderingContext2DSettings{
         this.pixelFormat = pixelFormat.getInternalValue();
     }
 
-    @JsProperty(name="linearPixelMath")
-    public boolean linearPixelMath;
-
     @JsOverlay
     public final boolean getLinearPixelMath(){
         return this.linearPixelMath;
@@ -80,6 +80,5 @@ public class CanvasRenderingContext2DSettings{
     public final void setLinearPixelMath(boolean linearPixelMath){
         this.linearPixelMath = linearPixelMath;
     }
-
 
 }

@@ -25,11 +25,38 @@ import jsinterop.annotations.JsType;
 @JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class EventModifierInit extends UIEventInit{
 
+    @JsProperty(name="ctrlKey")
+    private boolean ctrlKey;
+
+    @JsProperty(name="shiftKey")
+    private boolean shiftKey;
+
+    @JsProperty(name="altKey")
+    private boolean altKey;
+
+    @JsProperty(name="metaKey")
+    private boolean metaKey;
+
+    @JsProperty(name="modifierAltGraph")
+    private boolean modifierAltGraph;
+
+    @JsProperty(name="modifierCapsLock")
+    private boolean modifierCapsLock;
+
+    @JsProperty(name="modifierFn")
+    private boolean modifierFn;
+
+    @JsProperty(name="modifierNumLock")
+    private boolean modifierNumLock;
+
+    @JsProperty(name="modifierScrollLock")
+    private boolean modifierScrollLock;
+
+    @JsProperty(name="modifierSymbol")
+    private boolean modifierSymbol;
+
     public EventModifierInit(){
     }
-
-    @JsProperty(name="ctrlKey")
-    public boolean ctrlKey;
 
     @JsOverlay
     public final boolean getCtrlKey(){
@@ -41,9 +68,6 @@ public class EventModifierInit extends UIEventInit{
         this.ctrlKey = ctrlKey;
     }
 
-    @JsProperty(name="shiftKey")
-    public boolean shiftKey;
-
     @JsOverlay
     public final boolean getShiftKey(){
         return this.shiftKey;
@@ -53,9 +77,6 @@ public class EventModifierInit extends UIEventInit{
     public final void setShiftKey(boolean shiftKey){
         this.shiftKey = shiftKey;
     }
-
-    @JsProperty(name="altKey")
-    public boolean altKey;
 
     @JsOverlay
     public final boolean getAltKey(){
@@ -67,9 +88,6 @@ public class EventModifierInit extends UIEventInit{
         this.altKey = altKey;
     }
 
-    @JsProperty(name="metaKey")
-    public boolean metaKey;
-
     @JsOverlay
     public final boolean getMetaKey(){
         return this.metaKey;
@@ -79,9 +97,6 @@ public class EventModifierInit extends UIEventInit{
     public final void setMetaKey(boolean metaKey){
         this.metaKey = metaKey;
     }
-
-    @JsProperty(name="modifierAltGraph")
-    public boolean modifierAltGraph;
 
     @JsOverlay
     public final boolean getModifierAltGraph(){
@@ -93,9 +108,6 @@ public class EventModifierInit extends UIEventInit{
         this.modifierAltGraph = modifierAltGraph;
     }
 
-    @JsProperty(name="modifierCapsLock")
-    public boolean modifierCapsLock;
-
     @JsOverlay
     public final boolean getModifierCapsLock(){
         return this.modifierCapsLock;
@@ -105,9 +117,6 @@ public class EventModifierInit extends UIEventInit{
     public final void setModifierCapsLock(boolean modifierCapsLock){
         this.modifierCapsLock = modifierCapsLock;
     }
-
-    @JsProperty(name="modifierFn")
-    public boolean modifierFn;
 
     @JsOverlay
     public final boolean getModifierFn(){
@@ -119,9 +128,6 @@ public class EventModifierInit extends UIEventInit{
         this.modifierFn = modifierFn;
     }
 
-    @JsProperty(name="modifierNumLock")
-    public boolean modifierNumLock;
-
     @JsOverlay
     public final boolean getModifierNumLock(){
         return this.modifierNumLock;
@@ -131,9 +137,6 @@ public class EventModifierInit extends UIEventInit{
     public final void setModifierNumLock(boolean modifierNumLock){
         this.modifierNumLock = modifierNumLock;
     }
-
-    @JsProperty(name="modifierScrollLock")
-    public boolean modifierScrollLock;
 
     @JsOverlay
     public final boolean getModifierScrollLock(){
@@ -145,9 +148,6 @@ public class EventModifierInit extends UIEventInit{
         this.modifierScrollLock = modifierScrollLock;
     }
 
-    @JsProperty(name="modifierSymbol")
-    public boolean modifierSymbol;
-
     @JsOverlay
     public final boolean getModifierSymbol(){
         return this.modifierSymbol;
@@ -157,6 +157,5 @@ public class EventModifierInit extends UIEventInit{
     public final void setModifierSymbol(boolean modifierSymbol){
         this.modifierSymbol = modifierSymbol;
     }
-
 
 }

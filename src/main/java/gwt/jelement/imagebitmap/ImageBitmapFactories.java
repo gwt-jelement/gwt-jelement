@@ -27,6 +27,7 @@ import gwt.jelement.offscreencanvas.OffscreenCanvas;
 import gwt.jelement.svg.SVGImageElement;
 import elemental2.promise.Promise;
 import jsinterop.annotations.JsMethod;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
@@ -36,97 +37,129 @@ public class ImageBitmapFactories{
     @JsMethod(name = "createImageBitmap")
     public native Promise createImageBitmap(HTMLImageElement imageBitmap);
     
+    
     @JsMethod(name = "createImageBitmap")
     public native Promise createImageBitmap(SVGImageElement imageBitmap);
+    
     
     @JsMethod(name = "createImageBitmap")
     public native Promise createImageBitmap(HTMLVideoElement imageBitmap);
     
+    
     @JsMethod(name = "createImageBitmap")
     public native Promise createImageBitmap(HTMLCanvasElement imageBitmap);
+    
     
     @JsMethod(name = "createImageBitmap")
     public native Promise createImageBitmap(Blob imageBitmap);
     
+    
     @JsMethod(name = "createImageBitmap")
     public native Promise createImageBitmap(ImageData imageBitmap);
+    
     
     @JsMethod(name = "createImageBitmap")
     public native Promise createImageBitmap(ImageBitmap imageBitmap);
     
+    
     @JsMethod(name = "createImageBitmap")
     public native Promise createImageBitmap(OffscreenCanvas imageBitmap);
+    
     
     @JsMethod(name = "createImageBitmap")
     public native Promise createImageBitmap(HTMLImageElement imageBitmap, ImageBitmapOptions options);
     
+    
     @JsMethod(name = "createImageBitmap")
     public native Promise createImageBitmap(SVGImageElement imageBitmap, ImageBitmapOptions options);
+    
     
     @JsMethod(name = "createImageBitmap")
     public native Promise createImageBitmap(HTMLVideoElement imageBitmap, ImageBitmapOptions options);
     
+    
     @JsMethod(name = "createImageBitmap")
     public native Promise createImageBitmap(HTMLCanvasElement imageBitmap, ImageBitmapOptions options);
+    
     
     @JsMethod(name = "createImageBitmap")
     public native Promise createImageBitmap(Blob imageBitmap, ImageBitmapOptions options);
     
+    
     @JsMethod(name = "createImageBitmap")
     public native Promise createImageBitmap(ImageData imageBitmap, ImageBitmapOptions options);
+    
     
     @JsMethod(name = "createImageBitmap")
     public native Promise createImageBitmap(ImageBitmap imageBitmap, ImageBitmapOptions options);
     
+    
     @JsMethod(name = "createImageBitmap")
     public native Promise createImageBitmap(OffscreenCanvas imageBitmap, ImageBitmapOptions options);
+    
     
     @JsMethod(name = "createImageBitmap")
     public native Promise createImageBitmap(HTMLImageElement imageBitmap, double sx, double sy, double sw, double sh);
     
+    
     @JsMethod(name = "createImageBitmap")
     public native Promise createImageBitmap(SVGImageElement imageBitmap, double sx, double sy, double sw, double sh);
+    
     
     @JsMethod(name = "createImageBitmap")
     public native Promise createImageBitmap(HTMLVideoElement imageBitmap, double sx, double sy, double sw, double sh);
     
+    
     @JsMethod(name = "createImageBitmap")
     public native Promise createImageBitmap(HTMLCanvasElement imageBitmap, double sx, double sy, double sw, double sh);
+    
     
     @JsMethod(name = "createImageBitmap")
     public native Promise createImageBitmap(Blob imageBitmap, double sx, double sy, double sw, double sh);
     
+    
     @JsMethod(name = "createImageBitmap")
     public native Promise createImageBitmap(ImageData imageBitmap, double sx, double sy, double sw, double sh);
+    
     
     @JsMethod(name = "createImageBitmap")
     public native Promise createImageBitmap(ImageBitmap imageBitmap, double sx, double sy, double sw, double sh);
     
+    
     @JsMethod(name = "createImageBitmap")
     public native Promise createImageBitmap(OffscreenCanvas imageBitmap, double sx, double sy, double sw, double sh);
+    
     
     @JsMethod(name = "createImageBitmap")
     public native Promise createImageBitmap(HTMLImageElement imageBitmap, double sx, double sy, double sw, double sh, ImageBitmapOptions options);
     
+    
     @JsMethod(name = "createImageBitmap")
     public native Promise createImageBitmap(SVGImageElement imageBitmap, double sx, double sy, double sw, double sh, ImageBitmapOptions options);
+    
     
     @JsMethod(name = "createImageBitmap")
     public native Promise createImageBitmap(HTMLVideoElement imageBitmap, double sx, double sy, double sw, double sh, ImageBitmapOptions options);
     
+    
     @JsMethod(name = "createImageBitmap")
     public native Promise createImageBitmap(HTMLCanvasElement imageBitmap, double sx, double sy, double sw, double sh, ImageBitmapOptions options);
+    
     
     @JsMethod(name = "createImageBitmap")
     public native Promise createImageBitmap(Blob imageBitmap, double sx, double sy, double sw, double sh, ImageBitmapOptions options);
     
+    
     @JsMethod(name = "createImageBitmap")
     public native Promise createImageBitmap(ImageData imageBitmap, double sx, double sy, double sw, double sh, ImageBitmapOptions options);
+    
     
     @JsMethod(name = "createImageBitmap")
     public native Promise createImageBitmap(ImageBitmap imageBitmap, double sx, double sy, double sw, double sh, ImageBitmapOptions options);
     
+    
     @JsMethod(name = "createImageBitmap")
     public native Promise createImageBitmap(OffscreenCanvas imageBitmap, double sx, double sy, double sw, double sh, ImageBitmapOptions options);
+    
     
 }

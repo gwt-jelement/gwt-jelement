@@ -19,6 +19,7 @@ package gwt.jelement.svg;
 import gwt.jelement.svg.SVGAnimatedNumber;
 import gwt.jelement.svg.SVGElement;
 import jsinterop.annotations.JsConstructor;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -32,28 +33,28 @@ public class SVGFESpotLightElement extends SVGElement{
     }
     
     @JsProperty(name="x")
-    public SVGAnimatedNumber x;
+    public native SVGAnimatedNumber getX();
     
     @JsProperty(name="y")
-    public SVGAnimatedNumber y;
+    public native SVGAnimatedNumber getY();
     
     @JsProperty(name="z")
-    public SVGAnimatedNumber z;
+    public native SVGAnimatedNumber getZ();
     
     @JsProperty(name="pointsAtX")
-    public SVGAnimatedNumber pointsAtX;
+    public native SVGAnimatedNumber getPointsAtX();
     
     @JsProperty(name="pointsAtY")
-    public SVGAnimatedNumber pointsAtY;
+    public native SVGAnimatedNumber getPointsAtY();
     
     @JsProperty(name="pointsAtZ")
-    public SVGAnimatedNumber pointsAtZ;
+    public native SVGAnimatedNumber getPointsAtZ();
     
     @JsProperty(name="specularExponent")
-    public SVGAnimatedNumber specularExponent;
+    public native SVGAnimatedNumber getSpecularExponent();
     
     @JsProperty(name="limitingConeAngle")
-    public SVGAnimatedNumber limitingConeAngle;
+    public native SVGAnimatedNumber getLimitingConeAngle();
     
     
 }

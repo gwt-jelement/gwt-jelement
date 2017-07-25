@@ -20,6 +20,7 @@ import gwt.jelement.events.Event;
 import gwt.jelement.presentation.PresentationConnection;
 import gwt.jelement.presentation.PresentationConnectionAvailableEventInit;
 import jsinterop.annotations.JsConstructor;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -33,7 +34,7 @@ public class PresentationConnectionAvailableEvent extends Event{
     }
     
     @JsProperty(name="connection")
-    public PresentationConnection connection;
+    public native PresentationConnection getConnection();
     
     
 }

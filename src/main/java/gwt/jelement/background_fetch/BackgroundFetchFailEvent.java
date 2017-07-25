@@ -20,6 +20,7 @@ import gwt.jelement.background_fetch.BackgroundFetchEvent;
 import gwt.jelement.background_fetch.BackgroundFetchFailEventInit;
 import gwt.jelement.background_fetch.BackgroundFetchSettledFetch;
 import jsinterop.annotations.JsConstructor;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -33,7 +34,7 @@ public class BackgroundFetchFailEvent extends BackgroundFetchEvent{
     }
     
     @JsProperty(name="fetches")
-    public BackgroundFetchSettledFetch[] fetches;
+    public native BackgroundFetchSettledFetch[] getFetches();
     
     
 }

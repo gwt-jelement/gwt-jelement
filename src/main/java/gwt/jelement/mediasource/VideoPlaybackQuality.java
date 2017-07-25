@@ -16,6 +16,7 @@
  */
 package gwt.jelement.mediasource;
 
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -24,16 +25,16 @@ import jsinterop.annotations.JsType;
 public class VideoPlaybackQuality{
     
     @JsProperty(name="creationTime")
-    public double creationTime;
+    public native double getCreationTime();
     
     @JsProperty(name="totalVideoFrames")
-    public double totalVideoFrames;
+    public native double getTotalVideoFrames();
     
     @JsProperty(name="droppedVideoFrames")
-    public double droppedVideoFrames;
+    public native double getDroppedVideoFrames();
     
     @JsProperty(name="corruptedVideoFrames")
-    public double corruptedVideoFrames;
+    public native double getCorruptedVideoFrames();
     
     
 }

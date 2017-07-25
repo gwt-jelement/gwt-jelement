@@ -32,13 +32,25 @@ import jsinterop.annotations.JsType;
 @JsType(namespace = JsPackage.GLOBAL, isNative = true)
 public class Notification extends EventTarget{
     
+    @JsProperty(name="permission")
+    private static String permission;
+    
+    @JsProperty(name="onclick")
+    private EventHandlerNonNull onclick;
+    
+    @JsProperty(name="onshow")
+    private EventHandlerNonNull onshow;
+    
+    @JsProperty(name="onerror")
+    private EventHandlerNonNull onerror;
+    
+    @JsProperty(name="onclose")
+    private EventHandlerNonNull onclose;
+    
     @JsConstructor
     public Notification(){
         super();
     }
-    
-    @JsProperty(name="permission")
-    public static String permission;
     
     @JsOverlay
     public final static NotificationPermission getPermission(){
@@ -46,72 +58,103 @@ public class Notification extends EventTarget{
     }
     
     @JsProperty(name="maxActions")
-    public static double maxActions;
+    public static native double getMaxActions();
     
-    @JsProperty(name="onclick")
-    public EventHandlerNonNull onclick;
+    @JsOverlay
+    public final EventHandlerNonNull getOnClick(){
+        return this.onclick;
+    }
     
-    @JsProperty(name="onshow")
-    public EventHandlerNonNull onshow;
+    @JsOverlay
+    public final void setOnClick(EventHandlerNonNull onclick){
+        this.onclick = onclick;
+    }
     
-    @JsProperty(name="onerror")
-    public EventHandlerNonNull onerror;
+    @JsOverlay
+    public final EventHandlerNonNull getOnShow(){
+        return this.onshow;
+    }
     
-    @JsProperty(name="onclose")
-    public EventHandlerNonNull onclose;
+    @JsOverlay
+    public final void setOnShow(EventHandlerNonNull onshow){
+        this.onshow = onshow;
+    }
+    
+    @JsOverlay
+    public final EventHandlerNonNull getOnError(){
+        return this.onerror;
+    }
+    
+    @JsOverlay
+    public final void setOnError(EventHandlerNonNull onerror){
+        this.onerror = onerror;
+    }
+    
+    @JsOverlay
+    public final EventHandlerNonNull getOnClose(){
+        return this.onclose;
+    }
+    
+    @JsOverlay
+    public final void setOnClose(EventHandlerNonNull onclose){
+        this.onclose = onclose;
+    }
     
     @JsProperty(name="title")
-    public String title;
+    public native String getTitle();
     
     @JsProperty(name="dir")
-    public String dir;
+    public native String getDir();
     
     @JsProperty(name="lang")
-    public String lang;
+    public native String getLang();
     
     @JsProperty(name="body")
-    public String body;
+    public native String getBody();
     
     @JsProperty(name="tag")
-    public String tag;
+    public native String getTag();
     
     @JsProperty(name="image")
-    public String image;
+    public native String getImage();
     
     @JsProperty(name="icon")
-    public String icon;
+    public native String getIcon();
     
     @JsProperty(name="badge")
-    public String badge;
+    public native String getBadge();
     
     @JsProperty(name="vibrate")
-    public double[] vibrate;
+    public native double[] getVibrate();
     
     @JsProperty(name="timestamp")
-    public double timestamp;
+    public native double getTimestamp();
     
     @JsProperty(name="renotify")
-    public boolean renotify;
+    public native boolean getRenotify();
     
     @JsProperty(name="silent")
-    public boolean silent;
+    public native boolean getSilent();
     
     @JsProperty(name="requireInteraction")
-    public boolean requireInteraction;
+    public native boolean getRequireInteraction();
     
     @JsProperty(name="data")
-    public Object data;
+    public native Object getData();
     
     @JsProperty(name="actions")
-    public NotificationAction[] actions;
+    public native NotificationAction[] getActions();
     
     @JsMethod(name = "close")
     public native void close();
     
+    
     @JsMethod(name = "requestPermission")
     public native Promise<String> requestPermission();
     
+    
     @JsMethod(name = "requestPermission")
     public native Promise<String> requestPermission(NotificationPermissionCallback deprecatedCallback);
+    
     
 }

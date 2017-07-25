@@ -20,6 +20,7 @@ import gwt.jelement.svg.SVGAnimatedLengthList;
 import gwt.jelement.svg.SVGAnimatedNumberList;
 import gwt.jelement.svg.SVGTextContentElement;
 import jsinterop.annotations.JsConstructor;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -33,19 +34,19 @@ public class SVGTextPositioningElement extends SVGTextContentElement{
     }
     
     @JsProperty(name="x")
-    public SVGAnimatedLengthList x;
+    public native SVGAnimatedLengthList getX();
     
     @JsProperty(name="y")
-    public SVGAnimatedLengthList y;
+    public native SVGAnimatedLengthList getY();
     
     @JsProperty(name="dx")
-    public SVGAnimatedLengthList dx;
+    public native SVGAnimatedLengthList getDx();
     
     @JsProperty(name="dy")
-    public SVGAnimatedLengthList dy;
+    public native SVGAnimatedLengthList getDy();
     
     @JsProperty(name="rotate")
-    public SVGAnimatedNumberList rotate;
+    public native SVGAnimatedNumberList getRotate();
     
     
 }

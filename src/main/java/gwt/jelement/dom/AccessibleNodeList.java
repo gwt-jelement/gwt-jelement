@@ -19,6 +19,7 @@ package gwt.jelement.dom;
 import gwt.jelement.dom.AccessibleNode;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -35,15 +36,21 @@ public class AccessibleNodeList{
     }
     
     @JsProperty(name="length")
-    public double length;
+    public native double getLength();
+    
+    @JsProperty(name="length")
+    public native void setLength(double length);
     
     @JsMethod(name = "add")
     public native void add(AccessibleNode node);
     
+    
     @JsMethod(name = "add")
     public native void add(AccessibleNode node, AccessibleNode before);
     
+    
     @JsMethod(name = "remove")
     public native void remove(double index);
+    
     
 }

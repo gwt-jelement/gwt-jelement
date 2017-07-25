@@ -25,11 +25,11 @@ import jsinterop.annotations.JsType;
 @JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class KeyframeAnimationOptions extends KeyframeEffectOptions{
 
+    @JsProperty(name="id")
+    private String id;
+
     public KeyframeAnimationOptions(){
     }
-
-    @JsProperty(name="id")
-    public String id;
 
     @JsOverlay
     public final String getId(){
@@ -40,6 +40,5 @@ public class KeyframeAnimationOptions extends KeyframeEffectOptions{
     public final void setId(String id){
         this.id = id;
     }
-
 
 }

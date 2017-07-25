@@ -19,6 +19,7 @@ package gwt.jelement.svg;
 import gwt.jelement.svg.SVGMatrix;
 import gwt.jelement.svg.SVGTransform;
 import jsinterop.annotations.JsMethod;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -27,33 +28,41 @@ import jsinterop.annotations.JsType;
 public class SVGTransformList{
     
     @JsProperty(name="length")
-    public double length;
+    public native double getLength();
     
     @JsProperty(name="numberOfItems")
-    public double numberOfItems;
+    public native double getNumberOfItems();
     
     @JsMethod(name = "appendItem")
     public native SVGTransform appendItem(SVGTransform newItem);
     
+    
     @JsMethod(name = "clear")
     public native void clear();
+    
     
     @JsMethod(name = "consolidate")
     public native SVGTransform consolidate();
     
+    
     @JsMethod(name = "createSVGTransformFromMatrix")
     public native SVGTransform createSVGTransformFromMatrix(SVGMatrix matrix);
+    
     
     @JsMethod(name = "initialize")
     public native SVGTransform initialize(SVGTransform newItem);
     
+    
     @JsMethod(name = "insertItemBefore")
     public native SVGTransform insertItemBefore(SVGTransform newItem, double index);
+    
     
     @JsMethod(name = "removeItem")
     public native SVGTransform removeItem(double index);
     
+    
     @JsMethod(name = "replaceItem")
     public native SVGTransform replaceItem(SVGTransform newItem, double index);
+    
     
 }

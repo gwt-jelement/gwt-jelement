@@ -20,6 +20,7 @@ import gwt.jelement.geometry.DOMRectInit;
 import gwt.jelement.geometry.DOMRectReadOnly;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -48,36 +49,39 @@ public class DOMRectReadOnly{
     }
     
     @JsProperty(name="x")
-    public double x;
+    public native double getX();
     
     @JsProperty(name="y")
-    public double y;
+    public native double getY();
     
     @JsProperty(name="width")
-    public double width;
+    public native double getWidth();
     
     @JsProperty(name="height")
-    public double height;
+    public native double getHeight();
     
     @JsProperty(name="top")
-    public double top;
+    public native double getTop();
     
     @JsProperty(name="right")
-    public double right;
+    public native double getRight();
     
     @JsProperty(name="bottom")
-    public double bottom;
+    public native double getBottom();
     
     @JsProperty(name="left")
-    public double left;
+    public native double getLeft();
     
     @JsMethod(name = "fromRect")
     public native DOMRectReadOnly fromRect();
     
+    
     @JsMethod(name = "fromRect")
     public native DOMRectReadOnly fromRect(DOMRectInit other);
     
+    
     @JsMethod(name = "toJSON")
     public native Object toJSON();
+    
     
 }

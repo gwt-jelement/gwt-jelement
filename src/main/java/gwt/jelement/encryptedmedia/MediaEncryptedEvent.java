@@ -20,6 +20,7 @@ import gwt.jelement.encryptedmedia.MediaEncryptedEventInit;
 import gwt.jelement.events.Event;
 import elemental2.core.ArrayBuffer;
 import jsinterop.annotations.JsConstructor;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -38,10 +39,10 @@ public class MediaEncryptedEvent extends Event{
     }
     
     @JsProperty(name="initDataType")
-    public String initDataType;
+    public native String getInitDataType();
     
     @JsProperty(name="initData")
-    public ArrayBuffer initData;
+    public native ArrayBuffer getInitData();
     
     
 }

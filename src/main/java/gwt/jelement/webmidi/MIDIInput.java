@@ -19,6 +19,7 @@ package gwt.jelement.webmidi;
 import gwt.jelement.events.EventHandlerNonNull;
 import gwt.jelement.webmidi.MIDIPort;
 import jsinterop.annotations.JsConstructor;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -26,13 +27,23 @@ import jsinterop.annotations.JsType;
 @JsType(namespace = JsPackage.GLOBAL, isNative = true)
 public class MIDIInput extends MIDIPort{
     
+    @JsProperty(name="onmidimessage")
+    private EventHandlerNonNull onmidimessage;
+    
     @JsConstructor
     public MIDIInput(){
         super();
     }
     
-    @JsProperty(name="onmidimessage")
-    public EventHandlerNonNull onmidimessage;
+    @JsOverlay
+    public final EventHandlerNonNull getOnMidimessage(){
+        return this.onmidimessage;
+    }
+    
+    @JsOverlay
+    public final void setOnMidimessage(EventHandlerNonNull onmidimessage){
+        this.onmidimessage = onmidimessage;
+    }
     
     
 }

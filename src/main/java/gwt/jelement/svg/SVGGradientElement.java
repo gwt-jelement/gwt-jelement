@@ -21,6 +21,7 @@ import gwt.jelement.svg.SVGAnimatedString;
 import gwt.jelement.svg.SVGAnimatedTransformList;
 import gwt.jelement.svg.SVGElement;
 import jsinterop.annotations.JsConstructor;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -39,16 +40,16 @@ public class SVGGradientElement extends SVGElement{
     }
     
     @JsProperty(name="gradientUnits")
-    public SVGAnimatedEnumeration gradientUnits;
+    public native SVGAnimatedEnumeration getGradientUnits();
     
     @JsProperty(name="gradientTransform")
-    public SVGAnimatedTransformList gradientTransform;
+    public native SVGAnimatedTransformList getGradientTransform();
     
     @JsProperty(name="spreadMethod")
-    public SVGAnimatedEnumeration spreadMethod;
+    public native SVGAnimatedEnumeration getSpreadMethod();
     
     @JsProperty(name="href")
-    public SVGAnimatedString href;
+    public native SVGAnimatedString getHref();
     
     
 }

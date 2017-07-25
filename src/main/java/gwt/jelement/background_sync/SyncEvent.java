@@ -19,6 +19,7 @@ package gwt.jelement.background_sync;
 import gwt.jelement.background_sync.SyncEventInit;
 import gwt.jelement.serviceworkers.ExtendableEvent;
 import jsinterop.annotations.JsConstructor;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -32,10 +33,10 @@ public class SyncEvent extends ExtendableEvent{
     }
     
     @JsProperty(name="tag")
-    public String tag;
+    public native String getTag();
     
     @JsProperty(name="lastChance")
-    public boolean lastChance;
+    public native boolean getLastChance();
     
     
 }

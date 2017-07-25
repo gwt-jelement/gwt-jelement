@@ -16,6 +16,7 @@
  */
 package gwt.jelement.csspaint;
 
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -24,10 +25,10 @@ import jsinterop.annotations.JsType;
 public class PaintSize{
     
     @JsProperty(name="width")
-    public double width;
+    public native double getWidth();
     
     @JsProperty(name="height")
-    public double height;
+    public native double getHeight();
     
     
 }

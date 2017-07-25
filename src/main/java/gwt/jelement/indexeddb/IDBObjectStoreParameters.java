@@ -25,8 +25,11 @@ import jsinterop.base.Js;
 @JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class IDBObjectStoreParameters{
 
-    public IDBObjectStoreParameters(){
-    }
+    @JsProperty(name="keyPath")
+    private KeyPathUnion keyPath;
+
+    @JsProperty(name="autoIncrement")
+    private boolean autoIncrement;
 
     @JsType(isNative = true, name = "?", namespace = JsPackage.GLOBAL)
     public interface KeyPathUnion {
@@ -62,8 +65,8 @@ public class IDBObjectStoreParameters{
     
     }
     
-    @JsProperty(name="keyPath")
-    public KeyPathUnion keyPath;
+    public IDBObjectStoreParameters(){
+    }
 
     @JsOverlay
     public final void setKeyPath(String keyPath){
@@ -75,9 +78,6 @@ public class IDBObjectStoreParameters{
         this.keyPath = IDBObjectStoreParameters.KeyPathUnion.of(keyPath);
     }
 
-    @JsProperty(name="autoIncrement")
-    public boolean autoIncrement;
-
     @JsOverlay
     public final boolean getAutoIncrement(){
         return this.autoIncrement;
@@ -87,6 +87,5 @@ public class IDBObjectStoreParameters{
     public final void setAutoIncrement(boolean autoIncrement){
         this.autoIncrement = autoIncrement;
     }
-
 
 }

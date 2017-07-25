@@ -21,6 +21,7 @@ import gwt.jelement.bluetooth.BluetoothRemoteGATTServer;
 import gwt.jelement.bluetooth.BluetoothRemoteGATTService;
 import elemental2.promise.Promise;
 import jsinterop.annotations.JsMethod;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -29,30 +30,37 @@ import jsinterop.annotations.JsType;
 public class BluetoothRemoteGATTServer{
     
     @JsProperty(name="device")
-    public BluetoothDevice device;
+    public native BluetoothDevice getDevice();
     
     @JsProperty(name="connected")
-    public boolean connected;
+    public native boolean getConnected();
     
     @JsMethod(name = "connect")
     public native Promise<BluetoothRemoteGATTServer> connect();
     
+    
     @JsMethod(name = "disconnect")
     public native void disconnect();
+    
     
     @JsMethod(name = "getPrimaryService")
     public native Promise<BluetoothRemoteGATTService> getPrimaryService(String service);
     
+    
     @JsMethod(name = "getPrimaryService")
     public native Promise<BluetoothRemoteGATTService> getPrimaryService(double service);
+    
     
     @JsMethod(name = "getPrimaryServices")
     public native Promise<BluetoothRemoteGATTService[]> getPrimaryServices();
     
+    
     @JsMethod(name = "getPrimaryServices")
     public native Promise<BluetoothRemoteGATTService[]> getPrimaryServices(String service);
     
+    
     @JsMethod(name = "getPrimaryServices")
     public native Promise<BluetoothRemoteGATTService[]> getPrimaryServices(double service);
+    
     
 }

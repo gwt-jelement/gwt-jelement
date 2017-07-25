@@ -18,6 +18,7 @@ package gwt.jelement.webaudio;
 
 import gwt.jelement.webaudio.AudioParam;
 import jsinterop.annotations.JsMethod;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -26,36 +27,46 @@ import jsinterop.annotations.JsType;
 public class AudioParam{
     
     @JsProperty(name="value")
-    public float value;
+    public native float getValue();
+    
+    @JsProperty(name="value")
+    public native void setValue(float value);
     
     @JsProperty(name="defaultValue")
-    public float defaultValue;
+    public native float getDefaultValue();
     
     @JsProperty(name="minValue")
-    public float minValue;
+    public native float getMinValue();
     
     @JsProperty(name="maxValue")
-    public float maxValue;
+    public native float getMaxValue();
     
     @JsMethod(name = "cancelAndHoldAtTime")
     public native AudioParam cancelAndHoldAtTime(double startTime);
     
+    
     @JsMethod(name = "cancelScheduledValues")
     public native AudioParam cancelScheduledValues(double startTime);
+    
     
     @JsMethod(name = "exponentialRampToValueAtTime")
     public native AudioParam exponentialRampToValueAtTime(float value, double time);
     
+    
     @JsMethod(name = "linearRampToValueAtTime")
     public native AudioParam linearRampToValueAtTime(float value, double time);
+    
     
     @JsMethod(name = "setTargetAtTime")
     public native AudioParam setTargetAtTime(float target, double time, double timeConstant);
     
+    
     @JsMethod(name = "setValueAtTime")
     public native AudioParam setValueAtTime(float value, double time);
     
+    
     @JsMethod(name = "setValueCurveAtTime")
     public native AudioParam setValueCurveAtTime(float[] values, double time, double duration);
+    
     
 }

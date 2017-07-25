@@ -21,6 +21,7 @@ import gwt.jelement.serviceworkers.ClientQueryOptions;
 import gwt.jelement.serviceworkers.WindowClient;
 import elemental2.promise.Promise;
 import jsinterop.annotations.JsMethod;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
@@ -30,16 +31,21 @@ public class Clients{
     @JsMethod(name = "claim")
     public native Promise<Void> claim();
     
+    
     @JsMethod(name = "get")
     public native Promise<Object> get(String id);
+    
     
     @JsMethod(name = "matchAll")
     public native Promise<Client[]> matchAll();
     
+    
     @JsMethod(name = "matchAll")
     public native Promise<Client[]> matchAll(ClientQueryOptions options);
     
+    
     @JsMethod(name = "openWindow")
     public native Promise<WindowClient> openWindow(String url);
+    
     
 }

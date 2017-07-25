@@ -18,6 +18,7 @@ package gwt.jelement.events;
 
 import gwt.jelement.events.ProgressEvent;
 import jsinterop.annotations.JsConstructor;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -31,7 +32,7 @@ public class ResourceProgressEvent extends ProgressEvent{
     }
     
     @JsProperty(name="url")
-    public String url;
+    public native String getUrl();
     
     
 }

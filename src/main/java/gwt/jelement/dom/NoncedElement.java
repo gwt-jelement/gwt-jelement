@@ -16,6 +16,7 @@
  */
 package gwt.jelement.dom;
 
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -24,7 +25,10 @@ import jsinterop.annotations.JsType;
 public class NoncedElement{
     
     @JsProperty(name="nonce")
-    public String nonce;
+    public native String getNonce();
+    
+    @JsProperty(name="nonce")
+    public native void setNonce(String nonce);
     
     
 }

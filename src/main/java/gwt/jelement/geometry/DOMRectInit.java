@@ -24,11 +24,20 @@ import jsinterop.annotations.JsType;
 @JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class DOMRectInit{
 
+    @JsProperty(name="x")
+    private double x;
+
+    @JsProperty(name="y")
+    private double y;
+
+    @JsProperty(name="width")
+    private double width;
+
+    @JsProperty(name="height")
+    private double height;
+
     public DOMRectInit(){
     }
-
-    @JsProperty(name="x")
-    public double x;
 
     @JsOverlay
     public final double getX(){
@@ -40,9 +49,6 @@ public class DOMRectInit{
         this.x = x;
     }
 
-    @JsProperty(name="y")
-    public double y;
-
     @JsOverlay
     public final double getY(){
         return this.y;
@@ -52,9 +58,6 @@ public class DOMRectInit{
     public final void setY(double y){
         this.y = y;
     }
-
-    @JsProperty(name="width")
-    public double width;
 
     @JsOverlay
     public final double getWidth(){
@@ -66,9 +69,6 @@ public class DOMRectInit{
         this.width = width;
     }
 
-    @JsProperty(name="height")
-    public double height;
-
     @JsOverlay
     public final double getHeight(){
         return this.height;
@@ -78,6 +78,5 @@ public class DOMRectInit{
     public final void setHeight(double height){
         this.height = height;
     }
-
 
 }

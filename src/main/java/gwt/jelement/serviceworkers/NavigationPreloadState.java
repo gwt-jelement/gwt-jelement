@@ -24,11 +24,14 @@ import jsinterop.annotations.JsType;
 @JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class NavigationPreloadState{
 
+    @JsProperty(name="enabled")
+    private boolean enabled;
+
+    @JsProperty(name="headerValue")
+    private String headerValue;
+
     public NavigationPreloadState(){
     }
-
-    @JsProperty(name="enabled")
-    public boolean enabled;
 
     @JsOverlay
     public final boolean getEnabled(){
@@ -40,9 +43,6 @@ public class NavigationPreloadState{
         this.enabled = enabled;
     }
 
-    @JsProperty(name="headerValue")
-    public String headerValue;
-
     @JsOverlay
     public final String getHeaderValue(){
         return this.headerValue;
@@ -52,6 +52,5 @@ public class NavigationPreloadState{
     public final void setHeaderValue(String headerValue){
         this.headerValue = headerValue;
     }
-
 
 }

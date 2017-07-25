@@ -22,6 +22,7 @@ import elemental2.core.Float32Array;
 import elemental2.core.Float64Array;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -35,15 +36,18 @@ public class OrientationSensor extends Sensor{
     }
     
     @JsProperty(name="quaternion")
-    public double[] quaternion;
+    public native double[] getQuaternion();
     
     @JsMethod(name = "populateMatrix")
     public native void populateMatrix(Float32Array targetBuffer);
     
+    
     @JsMethod(name = "populateMatrix")
     public native void populateMatrix(Float64Array targetBuffer);
     
+    
     @JsMethod(name = "populateMatrix")
     public native void populateMatrix(DOMMatrix targetBuffer);
+    
     
 }

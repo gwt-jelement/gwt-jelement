@@ -17,6 +17,7 @@
 package gwt.jelement.dom;
 
 import jsinterop.annotations.JsMethod;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
@@ -26,7 +27,9 @@ public class Iterator{
     @JsMethod(name = "next")
     public native Object next();
     
+    
     @JsMethod(name = "next")
     public native Object next(Object value);
+    
     
 }

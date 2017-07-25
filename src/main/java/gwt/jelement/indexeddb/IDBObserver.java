@@ -20,6 +20,7 @@ import gwt.jelement.indexeddb.IDBDatabase;
 import gwt.jelement.indexeddb.IDBObserverInit;
 import gwt.jelement.indexeddb.IDBTransaction;
 import jsinterop.annotations.JsMethod;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
@@ -29,7 +30,9 @@ public class IDBObserver{
     @JsMethod(name = "observe")
     public native void observe(IDBDatabase db, IDBTransaction tx, IDBObserverInit options);
     
+    
     @JsMethod(name = "unobserve")
     public native void unobserve(IDBDatabase db);
+    
     
 }

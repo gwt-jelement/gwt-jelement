@@ -20,6 +20,7 @@ import gwt.jelement.css.cssom.CSSNumericValue;
 import gwt.jelement.css.cssom.CSSStyleValue;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
@@ -34,19 +35,25 @@ public class CSSNumericValue extends CSSStyleValue{
     @JsMethod(name = "add")
     public native CSSNumericValue add(CSSNumericValue value);
     
+    
     @JsMethod(name = "div")
     public native CSSNumericValue div(double value);
+    
     
     @JsMethod(name = "mul")
     public native CSSNumericValue mul(double value);
     
+    
     @JsMethod(name = "parse")
     public native CSSNumericValue parse(String cssText);
+    
     
     @JsMethod(name = "sub")
     public native CSSNumericValue sub(CSSNumericValue value);
     
+    
     @JsMethod(name = "to")
     public native CSSNumericValue to(String unit);
+    
     
 }

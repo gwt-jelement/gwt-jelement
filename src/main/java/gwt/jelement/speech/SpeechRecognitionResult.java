@@ -16,6 +16,7 @@
  */
 package gwt.jelement.speech;
 
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -24,10 +25,10 @@ import jsinterop.annotations.JsType;
 public class SpeechRecognitionResult{
     
     @JsProperty(name="length")
-    public double length;
+    public native double getLength();
     
     @JsProperty(name="isFinal")
-    public boolean isFinal;
+    public native boolean getIsFinal();
     
     
 }

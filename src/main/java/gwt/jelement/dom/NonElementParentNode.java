@@ -18,6 +18,7 @@ package gwt.jelement.dom;
 
 import gwt.jelement.dom.Element;
 import jsinterop.annotations.JsMethod;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
@@ -26,5 +27,6 @@ public class NonElementParentNode{
     
     @JsMethod(name = "getElementById")
     public native <T extends Element> T getElementById(String elementId);
+    
     
 }

@@ -18,6 +18,7 @@ package gwt.jelement.dom;
 
 import gwt.jelement.dom.ClientRect;
 import gwt.jelement.dom.Element;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -26,25 +27,25 @@ import jsinterop.annotations.JsType;
 public class IntersectionObserverEntry{
     
     @JsProperty(name="time")
-    public double time;
+    public native double getTime();
     
     @JsProperty(name="rootBounds")
-    public ClientRect rootBounds;
+    public native ClientRect getRootBounds();
     
     @JsProperty(name="boundingClientRect")
-    public ClientRect boundingClientRect;
+    public native ClientRect getBoundingClientRect();
     
     @JsProperty(name="intersectionRect")
-    public ClientRect intersectionRect;
+    public native ClientRect getIntersectionRect();
     
     @JsProperty(name="isIntersecting")
-    public boolean isIntersecting;
+    public native boolean getIsIntersecting();
     
     @JsProperty(name="intersectionRatio")
-    public double intersectionRatio;
+    public native double getIntersectionRatio();
     
     @JsProperty(name="target")
-    public Element target;
+    public native Element getTarget();
     
     
 }

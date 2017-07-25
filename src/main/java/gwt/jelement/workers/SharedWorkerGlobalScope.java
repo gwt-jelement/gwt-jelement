@@ -25,6 +25,7 @@ import gwt.jelement.filesystem.FileSystemCallback;
 import gwt.jelement.workers.WorkerGlobalScope;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -35,39 +36,57 @@ public class SharedWorkerGlobalScope extends WorkerGlobalScope{
     public static int PERSISTENT;
     
     
+    @JsProperty(name="onconnect")
+    private EventHandlerNonNull onconnect;
+    
     @JsConstructor
     public SharedWorkerGlobalScope(){
         super();
     }
     
     @JsProperty(name="name")
-    public String name;
+    public native String getName();
     
-    @JsProperty(name="onconnect")
-    public EventHandlerNonNull onconnect;
+    @JsOverlay
+    public final EventHandlerNonNull getOnConnect(){
+        return this.onconnect;
+    }
+    
+    @JsOverlay
+    public final void setOnConnect(EventHandlerNonNull onconnect){
+        this.onconnect = onconnect;
+    }
     
     @JsMethod(name = "close")
     public native void close();
     
+    
     @JsMethod(name = "webkitRequestFileSystem")
     public native void webkitRequestFileSystem(short type, double size);
+    
     
     @JsMethod(name = "webkitRequestFileSystem")
     public native void webkitRequestFileSystem(short type, double size, FileSystemCallback successCallback);
     
+    
     @JsMethod(name = "webkitRequestFileSystem")
     public native void webkitRequestFileSystem(short type, double size, FileSystemCallback successCallback, ErrorCallback errorCallback);
+    
     
     @JsMethod(name = "webkitRequestFileSystemSync")
     public native DOMFileSystemSync webkitRequestFileSystemSync(short type, double size);
     
+    
     @JsMethod(name = "webkitResolveLocalFileSystemSyncURL")
     public native EntrySync webkitResolveLocalFileSystemSyncURL(String url);
+    
     
     @JsMethod(name = "webkitResolveLocalFileSystemURL")
     public native void webkitResolveLocalFileSystemURL(String url, EntryCallback successCallback);
     
+    
     @JsMethod(name = "webkitResolveLocalFileSystemURL")
     public native void webkitResolveLocalFileSystemURL(String url, EntryCallback successCallback, ErrorCallback errorCallback);
+    
     
 }

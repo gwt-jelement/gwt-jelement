@@ -24,11 +24,14 @@ import jsinterop.annotations.JsType;
 @JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class FaceDetectorOptions{
 
+    @JsProperty(name="maxDetectedFaces")
+    private short maxDetectedFaces;
+
+    @JsProperty(name="fastMode")
+    private boolean fastMode;
+
     public FaceDetectorOptions(){
     }
-
-    @JsProperty(name="maxDetectedFaces")
-    public short maxDetectedFaces;
 
     @JsOverlay
     public final short getMaxDetectedFaces(){
@@ -40,9 +43,6 @@ public class FaceDetectorOptions{
         this.maxDetectedFaces = maxDetectedFaces;
     }
 
-    @JsProperty(name="fastMode")
-    public boolean fastMode;
-
     @JsOverlay
     public final boolean getFastMode(){
         return this.fastMode;
@@ -52,6 +52,5 @@ public class FaceDetectorOptions{
     public final void setFastMode(boolean fastMode){
         this.fastMode = fastMode;
     }
-
 
 }

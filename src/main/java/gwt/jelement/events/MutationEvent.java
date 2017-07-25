@@ -20,6 +20,7 @@ import gwt.jelement.dom.Node;
 import gwt.jelement.events.Event;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -37,45 +38,54 @@ public class MutationEvent extends Event{
     }
     
     @JsProperty(name="relatedNode")
-    public Node relatedNode;
+    public native Node getRelatedNode();
     
     @JsProperty(name="prevValue")
-    public String prevValue;
+    public native String getPrevValue();
     
     @JsProperty(name="newValue")
-    public String newValue;
+    public native String getNewValue();
     
     @JsProperty(name="attrName")
-    public String attrName;
+    public native String getAttrName();
     
     @JsProperty(name="attrChange")
-    public short attrChange;
+    public native short getAttrChange();
     
     @JsMethod(name = "initMutationEvent")
     public native void initMutationEvent();
     
+    
     @JsMethod(name = "initMutationEvent")
     public native void initMutationEvent(String type);
+    
     
     @JsMethod(name = "initMutationEvent")
     public native void initMutationEvent(String type, boolean bubbles);
     
+    
     @JsMethod(name = "initMutationEvent")
     public native void initMutationEvent(String type, boolean bubbles, boolean cancelable);
+    
     
     @JsMethod(name = "initMutationEvent")
     public native void initMutationEvent(String type, boolean bubbles, boolean cancelable, Node relatedNode);
     
+    
     @JsMethod(name = "initMutationEvent")
     public native void initMutationEvent(String type, boolean bubbles, boolean cancelable, Node relatedNode, String prevValue);
+    
     
     @JsMethod(name = "initMutationEvent")
     public native void initMutationEvent(String type, boolean bubbles, boolean cancelable, Node relatedNode, String prevValue, String newValue);
     
+    
     @JsMethod(name = "initMutationEvent")
     public native void initMutationEvent(String type, boolean bubbles, boolean cancelable, Node relatedNode, String prevValue, String newValue, String attrName);
     
+    
     @JsMethod(name = "initMutationEvent")
     public native void initMutationEvent(String type, boolean bubbles, boolean cancelable, Node relatedNode, String prevValue, String newValue, String attrName, short attrChange);
+    
     
 }

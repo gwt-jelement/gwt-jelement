@@ -16,6 +16,7 @@
  */
 package gwt.jelement.html.media;
 
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -29,10 +30,10 @@ public class MediaError{
     
     
     @JsProperty(name="code")
-    public short code;
+    public native short getCode();
     
     @JsProperty(name="message")
-    public String message;
+    public native String getMessage();
     
     
 }

@@ -17,6 +17,7 @@
 package gwt.jelement.svg;
 
 import gwt.jelement.svg.SVGPreserveAspectRatio;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -25,10 +26,10 @@ import jsinterop.annotations.JsType;
 public class SVGAnimatedPreserveAspectRatio{
     
     @JsProperty(name="baseVal")
-    public SVGPreserveAspectRatio baseVal;
+    public native SVGPreserveAspectRatio getBaseVal();
     
     @JsProperty(name="animVal")
-    public SVGPreserveAspectRatio animVal;
+    public native SVGPreserveAspectRatio getAnimVal();
     
     
 }

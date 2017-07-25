@@ -27,13 +27,13 @@ import jsinterop.annotations.JsType;
 @JsType(namespace = JsPackage.GLOBAL, isNative = true)
 public class PresentationConnectionCloseEvent extends Event{
     
+    @JsProperty(name="reason")
+    private String reason;
+    
     @JsConstructor
     public PresentationConnectionCloseEvent(){
         super((String) null);
     }
-    
-    @JsProperty(name="reason")
-    public String reason;
     
     @JsOverlay
     public final PresentationConnectionCloseReason getReason(){
@@ -41,7 +41,7 @@ public class PresentationConnectionCloseEvent extends Event{
     }
     
     @JsProperty(name="message")
-    public String message;
+    public native String getMessage();
     
     
 }

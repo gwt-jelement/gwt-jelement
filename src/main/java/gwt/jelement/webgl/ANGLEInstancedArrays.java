@@ -17,6 +17,7 @@
 package gwt.jelement.webgl;
 
 import jsinterop.annotations.JsMethod;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
@@ -28,10 +29,13 @@ public class ANGLEInstancedArrays{
     @JsMethod(name = "drawArraysInstancedANGLE")
     public native void drawArraysInstancedANGLE(double mode, double first, double count, double primcount);
     
+    
     @JsMethod(name = "drawElementsInstancedANGLE")
     public native void drawElementsInstancedANGLE(double mode, double count, double type, double offset, double primcount);
     
+    
     @JsMethod(name = "vertexAttribDivisorANGLE")
     public native void vertexAttribDivisorANGLE(double index, double divisor);
+    
     
 }

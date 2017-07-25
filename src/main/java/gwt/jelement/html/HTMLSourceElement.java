@@ -18,6 +18,7 @@ package gwt.jelement.html;
 
 import gwt.jelement.html.HTMLElement;
 import jsinterop.annotations.JsConstructor;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -31,19 +32,34 @@ public class HTMLSourceElement extends HTMLElement{
     }
     
     @JsProperty(name="src")
-    public String src;
+    public native String getSrc();
+    
+    @JsProperty(name="src")
+    public native void setSrc(String src);
     
     @JsProperty(name="type")
-    public String type;
+    public native String getType();
+    
+    @JsProperty(name="type")
+    public native void setType(String type);
     
     @JsProperty(name="srcset")
-    public String srcset;
+    public native String getSrcset();
+    
+    @JsProperty(name="srcset")
+    public native void setSrcset(String srcset);
     
     @JsProperty(name="sizes")
-    public String sizes;
+    public native String getSizes();
+    
+    @JsProperty(name="sizes")
+    public native void setSizes(String sizes);
     
     @JsProperty(name="media")
-    public String media;
+    public native String getMedia();
+    
+    @JsProperty(name="media")
+    public native void setMedia(String media);
     
     
 }

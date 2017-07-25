@@ -16,6 +16,7 @@
  */
 package gwt.jelement.frame;
 
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -24,7 +25,7 @@ import jsinterop.annotations.JsType;
 public class NavigatorCookies{
     
     @JsProperty(name="cookieEnabled")
-    public boolean cookieEnabled;
+    public native boolean getCookieEnabled();
     
     
 }

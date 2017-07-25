@@ -25,11 +25,23 @@ import jsinterop.annotations.JsType;
 @JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class NotificationAction{
 
+    @JsProperty(name="type")
+    private String type;
+
+    @JsProperty(name="action")
+    private String action;
+
+    @JsProperty(name="title")
+    private String title;
+
+    @JsProperty(name="icon")
+    private String icon;
+
+    @JsProperty(name="placeholder")
+    private String placeholder;
+
     public NotificationAction(){
     }
-
-    @JsProperty(name="type")
-    public String type;
 
     @JsOverlay
     public final NotificationActionType getType(){
@@ -41,9 +53,6 @@ public class NotificationAction{
         this.type = type.getInternalValue();
     }
 
-    @JsProperty(name="action")
-    public String action;
-
     @JsOverlay
     public final String getAction(){
         return this.action;
@@ -53,9 +62,6 @@ public class NotificationAction{
     public final void setAction(String action){
         this.action = action;
     }
-
-    @JsProperty(name="title")
-    public String title;
 
     @JsOverlay
     public final String getTitle(){
@@ -67,9 +73,6 @@ public class NotificationAction{
         this.title = title;
     }
 
-    @JsProperty(name="icon")
-    public String icon;
-
     @JsOverlay
     public final String getIcon(){
         return this.icon;
@@ -80,9 +83,6 @@ public class NotificationAction{
         this.icon = icon;
     }
 
-    @JsProperty(name="placeholder")
-    public String placeholder;
-
     @JsOverlay
     public final String getPlaceholder(){
         return this.placeholder;
@@ -92,6 +92,5 @@ public class NotificationAction{
     public final void setPlaceholder(String placeholder){
         this.placeholder = placeholder;
     }
-
 
 }

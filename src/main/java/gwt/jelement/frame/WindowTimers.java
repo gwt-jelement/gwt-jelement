@@ -18,6 +18,7 @@ package gwt.jelement.frame;
 
 import gwt.jelement.jelement.Function;
 import jsinterop.annotations.JsMethod;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
@@ -27,49 +28,65 @@ public class WindowTimers{
     @JsMethod(name = "clearInterval")
     public native void clearInterval();
     
+    
     @JsMethod(name = "clearInterval")
     public native void clearInterval(double handle);
+    
     
     @JsMethod(name = "clearTimeout")
     public native void clearTimeout();
     
+    
     @JsMethod(name = "clearTimeout")
     public native void clearTimeout(double handle);
+    
     
     @JsMethod(name = "setInterval")
     public native double setInterval(Function handler);
     
+    
     @JsMethod(name = "setInterval")
     public native double setInterval(String handler);
+    
     
     @JsMethod(name = "setInterval")
     public native double setInterval(Function handler, double timeout);
     
+    
     @JsMethod(name = "setInterval")
     public native double setInterval(String handler, double timeout);
+    
     
     @JsMethod(name = "setInterval")
     public native double setInterval(Function handler, double timeout, Object... arguments);
     
+    
     @JsMethod(name = "setInterval")
     public native double setInterval(String handler, double timeout, Object... arguments);
+    
     
     @JsMethod(name = "setTimeout")
     public native double setTimeout(Function handler);
     
+    
     @JsMethod(name = "setTimeout")
     public native double setTimeout(String handler);
+    
     
     @JsMethod(name = "setTimeout")
     public native double setTimeout(Function handler, double timeout);
     
+    
     @JsMethod(name = "setTimeout")
     public native double setTimeout(String handler, double timeout);
+    
     
     @JsMethod(name = "setTimeout")
     public native double setTimeout(Function handler, double timeout, Object... arguments);
     
+    
     @JsMethod(name = "setTimeout")
     public native double setTimeout(String handler, double timeout, Object... arguments);
+    
     
 }

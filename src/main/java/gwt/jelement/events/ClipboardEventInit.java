@@ -26,11 +26,11 @@ import jsinterop.annotations.JsType;
 @JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class ClipboardEventInit extends EventInit{
 
+    @JsProperty(name="clipboardData")
+    private DataTransfer clipboardData;
+
     public ClipboardEventInit(){
     }
-
-    @JsProperty(name="clipboardData")
-    public DataTransfer clipboardData;
 
     @JsOverlay
     public final DataTransfer getClipboardData(){
@@ -41,6 +41,5 @@ public class ClipboardEventInit extends EventInit{
     public final void setClipboardData(DataTransfer clipboardData){
         this.clipboardData = clipboardData;
     }
-
 
 }

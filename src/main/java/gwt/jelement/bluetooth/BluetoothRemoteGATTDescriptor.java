@@ -22,6 +22,7 @@ import elemental2.core.ArrayBuffer;
 import elemental2.core.ArrayBufferView;
 import elemental2.promise.Promise;
 import jsinterop.annotations.JsMethod;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -30,21 +31,24 @@ import jsinterop.annotations.JsType;
 public class BluetoothRemoteGATTDescriptor{
     
     @JsProperty(name="characteristic")
-    public BluetoothRemoteGATTCharacteristic characteristic;
+    public native BluetoothRemoteGATTCharacteristic getCharacteristic();
     
     @JsProperty(name="uuid")
-    public String uuid;
+    public native String getUuid();
     
     @JsProperty(name="value")
-    public DataView value;
+    public native DataView getValue();
     
     @JsMethod(name = "readValue")
     public native Promise<DataView> readValue();
     
+    
     @JsMethod(name = "writeValue")
     public native Promise<Void> writeValue(ArrayBuffer value);
     
+    
     @JsMethod(name = "writeValue")
     public native Promise<Void> writeValue(ArrayBufferView value);
+    
     
 }

@@ -26,11 +26,17 @@ import jsinterop.annotations.JsType;
 @JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class FetchEventInit extends ExtendableEventInit{
 
+    @JsProperty(name="request")
+    private Request request;
+
+    @JsProperty(name="clientId")
+    private String clientId;
+
+    @JsProperty(name="isReload")
+    private boolean isReload;
+
     public FetchEventInit(){
     }
-
-    @JsProperty(name="request")
-    public Request request;
 
     @JsOverlay
     public final Request getRequest(){
@@ -42,9 +48,6 @@ public class FetchEventInit extends ExtendableEventInit{
         this.request = request;
     }
 
-    @JsProperty(name="clientId")
-    public String clientId;
-
     @JsOverlay
     public final String getClientId(){
         return this.clientId;
@@ -55,9 +58,6 @@ public class FetchEventInit extends ExtendableEventInit{
         this.clientId = clientId;
     }
 
-    @JsProperty(name="isReload")
-    public boolean isReload;
-
     @JsOverlay
     public final boolean getIsReload(){
         return this.isReload;
@@ -67,6 +67,5 @@ public class FetchEventInit extends ExtendableEventInit{
     public final void setIsReload(boolean isReload){
         this.isReload = isReload;
     }
-
 
 }

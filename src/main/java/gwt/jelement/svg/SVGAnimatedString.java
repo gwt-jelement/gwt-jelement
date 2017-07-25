@@ -16,6 +16,7 @@
  */
 package gwt.jelement.svg;
 
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -24,10 +25,13 @@ import jsinterop.annotations.JsType;
 public class SVGAnimatedString{
     
     @JsProperty(name="baseVal")
-    public String baseVal;
+    public native String getBaseVal();
+    
+    @JsProperty(name="baseVal")
+    public native void setBaseVal(String baseVal);
     
     @JsProperty(name="animVal")
-    public String animVal;
+    public native String getAnimVal();
     
     
 }

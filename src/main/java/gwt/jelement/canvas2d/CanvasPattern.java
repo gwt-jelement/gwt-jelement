@@ -18,6 +18,7 @@ package gwt.jelement.canvas2d;
 
 import gwt.jelement.svg.SVGMatrix;
 import jsinterop.annotations.JsMethod;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
@@ -26,5 +27,6 @@ public class CanvasPattern{
     
     @JsMethod(name = "setTransform")
     public native void setTransform(SVGMatrix transform);
+    
     
 }

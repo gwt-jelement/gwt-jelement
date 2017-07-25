@@ -18,6 +18,7 @@ package gwt.jelement.css.cssom;
 
 import gwt.jelement.css.cssom.CSSTransformComponent;
 import jsinterop.annotations.JsConstructor;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -36,13 +37,22 @@ public class CSSScale extends CSSTransformComponent{
     }
     
     @JsProperty(name="x")
-    public double x;
+    public native double getX();
+    
+    @JsProperty(name="x")
+    public native void setX(double x);
     
     @JsProperty(name="y")
-    public double y;
+    public native double getY();
+    
+    @JsProperty(name="y")
+    public native void setY(double y);
     
     @JsProperty(name="z")
-    public double z;
+    public native double getZ();
+    
+    @JsProperty(name="z")
+    public native void setZ(double z);
     
     
 }

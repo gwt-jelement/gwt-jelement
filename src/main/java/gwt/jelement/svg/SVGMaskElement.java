@@ -21,6 +21,7 @@ import gwt.jelement.svg.SVGAnimatedLength;
 import gwt.jelement.svg.SVGElement;
 import gwt.jelement.svg.SVGStringList;
 import jsinterop.annotations.JsConstructor;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -34,28 +35,28 @@ public class SVGMaskElement extends SVGElement{
     }
     
     @JsProperty(name="maskUnits")
-    public SVGAnimatedEnumeration maskUnits;
+    public native SVGAnimatedEnumeration getMaskUnits();
     
     @JsProperty(name="maskContentUnits")
-    public SVGAnimatedEnumeration maskContentUnits;
+    public native SVGAnimatedEnumeration getMaskContentUnits();
     
     @JsProperty(name="x")
-    public SVGAnimatedLength x;
+    public native SVGAnimatedLength getX();
     
     @JsProperty(name="y")
-    public SVGAnimatedLength y;
+    public native SVGAnimatedLength getY();
     
     @JsProperty(name="width")
-    public SVGAnimatedLength width;
+    public native SVGAnimatedLength getWidth();
     
     @JsProperty(name="height")
-    public SVGAnimatedLength height;
+    public native SVGAnimatedLength getHeight();
     
     @JsProperty(name="requiredExtensions")
-    public SVGStringList requiredExtensions;
+    public native SVGStringList getRequiredExtensions();
     
     @JsProperty(name="systemLanguage")
-    public SVGStringList systemLanguage;
+    public native SVGStringList getSystemLanguage();
     
     
 }

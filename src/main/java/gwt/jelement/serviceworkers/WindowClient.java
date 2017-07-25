@@ -30,13 +30,13 @@ import jsinterop.annotations.JsType;
 @JsType(namespace = JsPackage.GLOBAL, isNative = true)
 public class WindowClient extends Client{
     
+    @JsProperty(name="visibilityState")
+    private String visibilityState;
+    
     @JsConstructor
     public WindowClient(){
         super();
     }
-    
-    @JsProperty(name="visibilityState")
-    public String visibilityState;
     
     @JsOverlay
     public final VisibilityState getVisibilityState(){
@@ -44,12 +44,14 @@ public class WindowClient extends Client{
     }
     
     @JsProperty(name="focused")
-    public boolean focused;
+    public native boolean getFocused();
     
     @JsMethod(name = "focus")
     public native Promise<WindowClient> focus();
     
+    
     @JsMethod(name = "navigate")
     public native Promise<WindowClient> navigate(String url);
+    
     
 }

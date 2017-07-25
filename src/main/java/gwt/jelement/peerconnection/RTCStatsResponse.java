@@ -18,6 +18,7 @@ package gwt.jelement.peerconnection;
 
 import gwt.jelement.peerconnection.RTCLegacyStatsReport;
 import jsinterop.annotations.JsMethod;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
@@ -27,10 +28,13 @@ public class RTCStatsResponse{
     @JsMethod(name = "namedItem")
     public native RTCLegacyStatsReport namedItem();
     
+    
     @JsMethod(name = "namedItem")
     public native RTCLegacyStatsReport namedItem(String name);
     
+    
     @JsMethod(name = "result")
     public native RTCLegacyStatsReport[] result();
+    
     
 }

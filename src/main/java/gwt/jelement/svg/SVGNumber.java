@@ -16,6 +16,7 @@
  */
 package gwt.jelement.svg;
 
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -24,7 +25,10 @@ import jsinterop.annotations.JsType;
 public class SVGNumber{
     
     @JsProperty(name="value")
-    public float value;
+    public native float getValue();
+    
+    @JsProperty(name="value")
+    public native void setValue(float value);
     
     
 }

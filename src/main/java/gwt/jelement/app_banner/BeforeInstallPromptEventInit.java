@@ -25,11 +25,11 @@ import jsinterop.annotations.JsType;
 @JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class BeforeInstallPromptEventInit extends EventInit{
 
+    @JsProperty(name="platforms")
+    private String[] platforms;
+
     public BeforeInstallPromptEventInit(){
     }
-
-    @JsProperty(name="platforms")
-    public String[] platforms;
 
     @JsOverlay
     public final String[] getPlatforms(){
@@ -40,6 +40,5 @@ public class BeforeInstallPromptEventInit extends EventInit{
     public final void setPlatforms(String[] platforms){
         this.platforms = platforms;
     }
-
 
 }

@@ -20,6 +20,7 @@ import gwt.jelement.bluetooth.BluetoothDevice;
 import gwt.jelement.bluetooth.RequestDeviceOptions;
 import elemental2.promise.Promise;
 import jsinterop.annotations.JsMethod;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
@@ -29,7 +30,9 @@ public class Bluetooth{
     @JsMethod(name = "requestDevice")
     public native Promise<BluetoothDevice> requestDevice();
     
+    
     @JsMethod(name = "requestDevice")
     public native Promise<BluetoothDevice> requestDevice(RequestDeviceOptions options);
+    
     
 }

@@ -16,6 +16,7 @@
  */
 package gwt.jelement.timing;
 
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -24,13 +25,13 @@ import jsinterop.annotations.JsType;
 public class PerformanceServerTiming{
     
     @JsProperty(name="metric")
-    public String metric;
+    public native String getMetric();
     
     @JsProperty(name="value")
-    public double value;
+    public native double getValue();
     
     @JsProperty(name="description")
-    public String description;
+    public native String getDescription();
     
     
 }

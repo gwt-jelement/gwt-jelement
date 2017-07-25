@@ -24,11 +24,11 @@ import jsinterop.annotations.JsType;
 @JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class InputDeviceCapabilitiesInit{
 
+    @JsProperty(name="firesTouchEvents")
+    private boolean firesTouchEvents;
+
     public InputDeviceCapabilitiesInit(){
     }
-
-    @JsProperty(name="firesTouchEvents")
-    public boolean firesTouchEvents;
 
     @JsOverlay
     public final boolean getFiresTouchEvents(){
@@ -39,6 +39,5 @@ public class InputDeviceCapabilitiesInit{
     public final void setFiresTouchEvents(boolean firesTouchEvents){
         this.firesTouchEvents = firesTouchEvents;
     }
-
 
 }

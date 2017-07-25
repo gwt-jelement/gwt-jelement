@@ -19,6 +19,7 @@ package gwt.jelement.webdatabase;
 import gwt.jelement.webdatabase.SQLStatementCallback;
 import gwt.jelement.webdatabase.SQLStatementErrorCallback;
 import jsinterop.annotations.JsMethod;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
@@ -28,13 +29,17 @@ public class SQLTransaction{
     @JsMethod(name = "executeSql")
     public native void executeSql(String sqlStatement);
     
+    
     @JsMethod(name = "executeSql")
     public native void executeSql(String sqlStatement, Object[] arguments);
+    
     
     @JsMethod(name = "executeSql")
     public native void executeSql(String sqlStatement, Object[] arguments, SQLStatementCallback callback);
     
+    
     @JsMethod(name = "executeSql")
     public native void executeSql(String sqlStatement, Object[] arguments, SQLStatementCallback callback, SQLStatementErrorCallback errorCallback);
+    
     
 }

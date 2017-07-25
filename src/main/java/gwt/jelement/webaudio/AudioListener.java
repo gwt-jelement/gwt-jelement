@@ -18,6 +18,7 @@ package gwt.jelement.webaudio;
 
 import gwt.jelement.webaudio.AudioParam;
 import jsinterop.annotations.JsMethod;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -26,36 +27,38 @@ import jsinterop.annotations.JsType;
 public class AudioListener{
     
     @JsProperty(name="positionX")
-    public AudioParam positionX;
+    public native AudioParam getPositionX();
     
     @JsProperty(name="positionY")
-    public AudioParam positionY;
+    public native AudioParam getPositionY();
     
     @JsProperty(name="positionZ")
-    public AudioParam positionZ;
+    public native AudioParam getPositionZ();
     
     @JsProperty(name="forwardX")
-    public AudioParam forwardX;
+    public native AudioParam getForwardX();
     
     @JsProperty(name="forwardY")
-    public AudioParam forwardY;
+    public native AudioParam getForwardY();
     
     @JsProperty(name="forwardZ")
-    public AudioParam forwardZ;
+    public native AudioParam getForwardZ();
     
     @JsProperty(name="upX")
-    public AudioParam upX;
+    public native AudioParam getUpX();
     
     @JsProperty(name="upY")
-    public AudioParam upY;
+    public native AudioParam getUpY();
     
     @JsProperty(name="upZ")
-    public AudioParam upZ;
+    public native AudioParam getUpZ();
     
     @JsMethod(name = "setOrientation")
     public native void setOrientation(float x, float y, float z, float xUp, float yUp, float zUp);
     
+    
     @JsMethod(name = "setPosition")
     public native void setPosition(float x, float y, float z);
+    
     
 }

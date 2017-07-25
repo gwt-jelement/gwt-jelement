@@ -24,11 +24,26 @@ import jsinterop.annotations.JsType;
 @JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class RTCDataChannelInit{
 
+    @JsProperty(name="ordered")
+    private boolean ordered;
+
+    @JsProperty(name="maxRetransmitTime")
+    private short maxRetransmitTime;
+
+    @JsProperty(name="maxRetransmits")
+    private short maxRetransmits;
+
+    @JsProperty(name="protocol")
+    private String protocol;
+
+    @JsProperty(name="negotiated")
+    private boolean negotiated;
+
+    @JsProperty(name="id")
+    private short id;
+
     public RTCDataChannelInit(){
     }
-
-    @JsProperty(name="ordered")
-    public boolean ordered;
 
     @JsOverlay
     public final boolean getOrdered(){
@@ -40,9 +55,6 @@ public class RTCDataChannelInit{
         this.ordered = ordered;
     }
 
-    @JsProperty(name="maxRetransmitTime")
-    public short maxRetransmitTime;
-
     @JsOverlay
     public final short getMaxRetransmitTime(){
         return this.maxRetransmitTime;
@@ -52,9 +64,6 @@ public class RTCDataChannelInit{
     public final void setMaxRetransmitTime(short maxRetransmitTime){
         this.maxRetransmitTime = maxRetransmitTime;
     }
-
-    @JsProperty(name="maxRetransmits")
-    public short maxRetransmits;
 
     @JsOverlay
     public final short getMaxRetransmits(){
@@ -66,9 +75,6 @@ public class RTCDataChannelInit{
         this.maxRetransmits = maxRetransmits;
     }
 
-    @JsProperty(name="protocol")
-    public String protocol;
-
     @JsOverlay
     public final String getProtocol(){
         return this.protocol;
@@ -78,9 +84,6 @@ public class RTCDataChannelInit{
     public final void setProtocol(String protocol){
         this.protocol = protocol;
     }
-
-    @JsProperty(name="negotiated")
-    public boolean negotiated;
 
     @JsOverlay
     public final boolean getNegotiated(){
@@ -92,9 +95,6 @@ public class RTCDataChannelInit{
         this.negotiated = negotiated;
     }
 
-    @JsProperty(name="id")
-    public short id;
-
     @JsOverlay
     public final short getId(){
         return this.id;
@@ -104,6 +104,5 @@ public class RTCDataChannelInit{
     public final void setId(short id){
         this.id = id;
     }
-
 
 }

@@ -30,36 +30,56 @@ import jsinterop.annotations.JsType;
 @JsType(namespace = JsPackage.GLOBAL, isNative = true)
 public class IDBRequest extends EventTarget{
     
+    @JsProperty(name="readyState")
+    private String readyState;
+    
+    @JsProperty(name="onsuccess")
+    private EventHandlerNonNull onsuccess;
+    
+    @JsProperty(name="onerror")
+    private EventHandlerNonNull onerror;
+    
     @JsConstructor
     public IDBRequest(){
         super();
     }
     
     @JsProperty(name="result")
-    public Object result;
+    public native Object getResult();
     
     @JsProperty(name="error")
-    public DOMException error;
+    public native DOMException getError();
     
     @JsProperty(name="source")
-    public Object source;
+    public native Object getSource();
     
     @JsProperty(name="transaction")
-    public IDBTransaction transaction;
-    
-    @JsProperty(name="readyState")
-    public String readyState;
+    public native IDBTransaction getTransaction();
     
     @JsOverlay
     public final IDBRequestReadyState getReadyState(){
        return IDBRequestReadyState.of(readyState);
     }
     
-    @JsProperty(name="onsuccess")
-    public EventHandlerNonNull onsuccess;
+    @JsOverlay
+    public final EventHandlerNonNull getOnSuccess(){
+        return this.onsuccess;
+    }
     
-    @JsProperty(name="onerror")
-    public EventHandlerNonNull onerror;
+    @JsOverlay
+    public final void setOnSuccess(EventHandlerNonNull onsuccess){
+        this.onsuccess = onsuccess;
+    }
+    
+    @JsOverlay
+    public final EventHandlerNonNull getOnError(){
+        return this.onerror;
+    }
+    
+    @JsOverlay
+    public final void setOnError(EventHandlerNonNull onerror){
+        this.onerror = onerror;
+    }
     
     
 }

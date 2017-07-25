@@ -18,6 +18,7 @@ package gwt.jelement.html;
 
 import gwt.jelement.html.HTMLElement;
 import jsinterop.annotations.JsConstructor;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -31,7 +32,10 @@ public class HTMLBRElement extends HTMLElement{
     }
     
     @JsProperty(name="clear")
-    public String clear;
+    public native String getClear();
+    
+    @JsProperty(name="clear")
+    public native void setClear(String clear);
     
     
 }

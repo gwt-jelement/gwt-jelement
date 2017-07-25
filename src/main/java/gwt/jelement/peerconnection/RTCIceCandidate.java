@@ -19,6 +19,7 @@ package gwt.jelement.peerconnection;
 import gwt.jelement.peerconnection.RTCIceCandidateInit;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -31,15 +32,25 @@ public class RTCIceCandidate{
     }
     
     @JsProperty(name="candidate")
-    public String candidate;
+    public native String getCandidate();
+    
+    @JsProperty(name="candidate")
+    public native void setCandidate(String candidate);
     
     @JsProperty(name="sdpMid")
-    public String sdpMid;
+    public native String getSdpMid();
+    
+    @JsProperty(name="sdpMid")
+    public native void setSdpMid(String sdpMid);
     
     @JsProperty(name="sdpMLineIndex")
-    public short sdpMLineIndex;
+    public native short getSdpMLineIndex();
+    
+    @JsProperty(name="sdpMLineIndex")
+    public native void setSdpMLineIndex(short sdpMLineIndex);
     
     @JsMethod(name = "toJSON")
     public native Object toJSON();
+    
     
 }

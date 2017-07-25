@@ -30,13 +30,13 @@ import jsinterop.annotations.JsType;
 @JsType(namespace = JsPackage.GLOBAL, isNative = true)
 public class BiquadFilterNode extends AudioNode{
     
+    @JsProperty(name="type")
+    private String type;
+    
     @JsConstructor
     public BiquadFilterNode(){
         super();
     }
-    
-    @JsProperty(name="type")
-    public String type;
     
     @JsOverlay
     public final BiquadFilterType getType(){
@@ -49,18 +49,19 @@ public class BiquadFilterNode extends AudioNode{
     }
     
     @JsProperty(name="frequency")
-    public AudioParam frequency;
+    public native AudioParam getFrequency();
     
     @JsProperty(name="detune")
-    public AudioParam detune;
+    public native AudioParam getDetune();
     
     @JsProperty(name="Q")
-    public AudioParam Q;
+    public native AudioParam getQ();
     
     @JsProperty(name="gain")
-    public AudioParam gain;
+    public native AudioParam getGain();
     
     @JsMethod(name = "getFrequencyResponse")
     public native void getFrequencyResponse(Float32Array frequencyHz, Float32Array magResponse, Float32Array phaseResponse);
+    
     
 }

@@ -16,6 +16,7 @@
  */
 package gwt.jelement.peerconnection;
 
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -24,10 +25,10 @@ import jsinterop.annotations.JsType;
 public class RTCRtpContributingSource{
     
     @JsProperty(name="timestamp")
-    public double timestamp;
+    public native double getTimestamp();
     
     @JsProperty(name="source")
-    public double source;
+    public native double getSource();
     
     
 }

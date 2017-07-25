@@ -25,11 +25,14 @@ import jsinterop.annotations.JsType;
 @JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class AnimationEventInit extends EventInit{
 
+    @JsProperty(name="animationName")
+    private String animationName;
+
+    @JsProperty(name="elapsedTime")
+    private double elapsedTime;
+
     public AnimationEventInit(){
     }
-
-    @JsProperty(name="animationName")
-    public String animationName;
 
     @JsOverlay
     public final String getAnimationName(){
@@ -41,9 +44,6 @@ public class AnimationEventInit extends EventInit{
         this.animationName = animationName;
     }
 
-    @JsProperty(name="elapsedTime")
-    public double elapsedTime;
-
     @JsOverlay
     public final double getElapsedTime(){
         return this.elapsedTime;
@@ -53,6 +53,5 @@ public class AnimationEventInit extends EventInit{
     public final void setElapsedTime(double elapsedTime){
         this.elapsedTime = elapsedTime;
     }
-
 
 }

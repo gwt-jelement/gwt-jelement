@@ -25,6 +25,7 @@ import gwt.jelement.mediastream.MediaTrackSupportedConstraints;
 import elemental2.promise.Promise;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -32,24 +33,38 @@ import jsinterop.annotations.JsType;
 @JsType(namespace = JsPackage.GLOBAL, isNative = true)
 public class MediaDevices extends EventTarget{
     
+    @JsProperty(name="ondevicechange")
+    private EventHandlerNonNull ondevicechange;
+    
     @JsConstructor
     public MediaDevices(){
         super();
     }
     
-    @JsProperty(name="ondevicechange")
-    public EventHandlerNonNull ondevicechange;
+    @JsOverlay
+    public final EventHandlerNonNull getOnDevicechange(){
+        return this.ondevicechange;
+    }
+    
+    @JsOverlay
+    public final void setOnDevicechange(EventHandlerNonNull ondevicechange){
+        this.ondevicechange = ondevicechange;
+    }
     
     @JsMethod(name = "enumerateDevices")
     public native Promise<MediaDeviceInfo[]> enumerateDevices();
     
+    
     @JsMethod(name = "getSupportedConstraints")
     public native MediaTrackSupportedConstraints getSupportedConstraints();
+    
     
     @JsMethod(name = "getUserMedia")
     public native Promise<MediaStream> getUserMedia();
     
+    
     @JsMethod(name = "getUserMedia")
     public native Promise<MediaStream> getUserMedia(MediaStreamConstraints constraints);
+    
     
 }

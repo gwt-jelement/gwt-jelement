@@ -19,6 +19,7 @@ package gwt.jelement.workers;
 import gwt.jelement.workers.WorkletOptions;
 import elemental2.promise.Promise;
 import jsinterop.annotations.JsMethod;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
@@ -28,7 +29,9 @@ public class Worklet{
     @JsMethod(name = "addModule")
     public native Promise<Void> addModule(String url);
     
+    
     @JsMethod(name = "addModule")
     public native Promise<Void> addModule(String url, WorkletOptions options);
+    
     
 }

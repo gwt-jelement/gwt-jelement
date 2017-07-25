@@ -22,6 +22,7 @@ import gwt.jelement.geometry.DOMPointInit;
 import gwt.jelement.geometry.DOMPointReadOnly;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -50,30 +51,35 @@ public class DOMPointReadOnly{
     }
     
     @JsProperty(name="x")
-    public double x;
+    public native double getX();
     
     @JsProperty(name="y")
-    public double y;
+    public native double getY();
     
     @JsProperty(name="z")
-    public double z;
+    public native double getZ();
     
     @JsProperty(name="w")
-    public double w;
+    public native double getW();
     
     @JsMethod(name = "fromPoint")
     public native DOMPointReadOnly fromPoint();
     
+    
     @JsMethod(name = "fromPoint")
     public native DOMPointReadOnly fromPoint(DOMPointInit other);
+    
     
     @JsMethod(name = "matrixTransform")
     public native DOMPoint matrixTransform();
     
+    
     @JsMethod(name = "matrixTransform")
     public native DOMPoint matrixTransform(DOMMatrixInit matrix);
     
+    
     @JsMethod(name = "toJSON")
     public native Object toJSON();
+    
     
 }

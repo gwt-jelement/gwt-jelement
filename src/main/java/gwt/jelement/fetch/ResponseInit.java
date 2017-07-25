@@ -26,8 +26,14 @@ import jsinterop.base.JsPropertyMap;
 @JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class ResponseInit{
 
-    public ResponseInit(){
-    }
+    @JsProperty(name="status")
+    private short status;
+
+    @JsProperty(name="statusText")
+    private String statusText;
+
+    @JsProperty(name="headers")
+    private HeadersInit headers;
 
     @JsType(isNative = true, name = "?", namespace = JsPackage.GLOBAL)
     public interface HeadersInit {
@@ -63,8 +69,8 @@ public class ResponseInit{
     
     }
     
-    @JsProperty(name="status")
-    public short status;
+    public ResponseInit(){
+    }
 
     @JsOverlay
     public final short getStatus(){
@@ -76,9 +82,6 @@ public class ResponseInit{
         this.status = status;
     }
 
-    @JsProperty(name="statusText")
-    public String statusText;
-
     @JsOverlay
     public final String getStatusText(){
         return this.statusText;
@@ -89,9 +92,6 @@ public class ResponseInit{
         this.statusText = statusText;
     }
 
-    @JsProperty(name="headers")
-    public HeadersInit headers;
-
     @JsOverlay
     public final void setHeaders(String[][] headers){
         this.headers = ResponseInit.HeadersInit.of(headers);
@@ -101,6 +101,5 @@ public class ResponseInit{
     public final void setHeaders(JsPropertyMap<String> headers){
         this.headers = ResponseInit.HeadersInit.of(headers);
     }
-
 
 }

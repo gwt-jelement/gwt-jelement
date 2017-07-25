@@ -21,6 +21,7 @@ import gwt.jelement.css.CSSRuleList;
 import gwt.jelement.css.StyleSheet;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -34,39 +35,48 @@ public class CSSStyleSheet extends StyleSheet{
     }
     
     @JsProperty(name="ownerRule")
-    public CSSRule ownerRule;
+    public native CSSRule getOwnerRule();
     
     @JsProperty(name="cssRules")
-    public CSSRuleList cssRules;
+    public native CSSRuleList getCssRules();
     
     @JsProperty(name="rules")
-    public CSSRuleList rules;
+    public native CSSRuleList getRules();
     
     @JsMethod(name = "addRule")
     public native double addRule();
     
+    
     @JsMethod(name = "addRule")
     public native double addRule(String selector);
+    
     
     @JsMethod(name = "addRule")
     public native double addRule(String selector, String style);
     
+    
     @JsMethod(name = "addRule")
     public native double addRule(String selector, String style, double index);
+    
     
     @JsMethod(name = "deleteRule")
     public native void deleteRule(double index);
     
+    
     @JsMethod(name = "insertRule")
     public native double insertRule(String rule);
+    
     
     @JsMethod(name = "insertRule")
     public native double insertRule(String rule, double index);
     
+    
     @JsMethod(name = "removeRule")
     public native void removeRule();
     
+    
     @JsMethod(name = "removeRule")
     public native void removeRule(double index);
+    
     
 }

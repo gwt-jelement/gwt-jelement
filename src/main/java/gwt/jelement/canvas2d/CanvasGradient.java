@@ -17,6 +17,7 @@
 package gwt.jelement.canvas2d;
 
 import jsinterop.annotations.JsMethod;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
@@ -25,5 +26,6 @@ public class CanvasGradient{
     
     @JsMethod(name = "addColorStop")
     public native void addColorStop(float offset, String color);
+    
     
 }

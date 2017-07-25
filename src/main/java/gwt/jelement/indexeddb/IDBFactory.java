@@ -18,6 +18,7 @@ package gwt.jelement.indexeddb;
 
 import gwt.jelement.indexeddb.IDBOpenDBRequest;
 import jsinterop.annotations.JsMethod;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
@@ -27,13 +28,17 @@ public class IDBFactory{
     @JsMethod(name = "cmp")
     public native short cmp(Object first, Object second);
     
+    
     @JsMethod(name = "deleteDatabase")
     public native IDBOpenDBRequest deleteDatabase(String name);
+    
     
     @JsMethod(name = "open")
     public native IDBOpenDBRequest open(String name);
     
+    
     @JsMethod(name = "open")
     public native IDBOpenDBRequest open(String name, double version);
+    
     
 }

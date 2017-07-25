@@ -22,6 +22,7 @@ import gwt.jelement.events.Event;
 import elemental2.promise.Promise;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -40,12 +41,13 @@ public class BeforeInstallPromptEvent extends Event{
     }
     
     @JsProperty(name="platforms")
-    public String[] platforms;
+    public native String[] getPlatforms();
     
     @JsProperty(name="userChoice")
-    public Promise<AppBannerPromptResult> userChoice;
+    public native Promise<AppBannerPromptResult> getUserChoice();
     
     @JsMethod(name = "prompt")
     public native Promise<Void> prompt();
+    
     
 }

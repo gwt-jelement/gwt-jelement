@@ -28,37 +28,37 @@ import jsinterop.annotations.JsType;
 @JsType(namespace = JsPackage.GLOBAL, isNative = true)
 public class PerformanceNavigationTiming extends PerformanceResourceTiming{
     
+    @JsProperty(name="type")
+    private String type;
+    
     @JsConstructor
     public PerformanceNavigationTiming(){
         super();
     }
     
     @JsProperty(name="unloadEventStart")
-    public double unloadEventStart;
+    public native double getUnloadEventStart();
     
     @JsProperty(name="unloadEventEnd")
-    public double unloadEventEnd;
+    public native double getUnloadEventEnd();
     
     @JsProperty(name="domInteractive")
-    public double domInteractive;
+    public native double getDomInteractive();
     
     @JsProperty(name="domContentLoadedEventStart")
-    public double domContentLoadedEventStart;
+    public native double getDomContentLoadedEventStart();
     
     @JsProperty(name="domContentLoadedEventEnd")
-    public double domContentLoadedEventEnd;
+    public native double getDomContentLoadedEventEnd();
     
     @JsProperty(name="domComplete")
-    public double domComplete;
+    public native double getDomComplete();
     
     @JsProperty(name="loadEventStart")
-    public double loadEventStart;
+    public native double getLoadEventStart();
     
     @JsProperty(name="loadEventEnd")
-    public double loadEventEnd;
-    
-    @JsProperty(name="type")
-    public String type;
+    public native double getLoadEventEnd();
     
     @JsOverlay
     public final NavigationType getType(){
@@ -66,9 +66,10 @@ public class PerformanceNavigationTiming extends PerformanceResourceTiming{
     }
     
     @JsProperty(name="redirectCount")
-    public short redirectCount;
+    public native short getRedirectCount();
     
     @JsMethod(name = "toJSON")
     public native Object toJSON();
+    
     
 }

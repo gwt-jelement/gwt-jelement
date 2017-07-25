@@ -24,11 +24,20 @@ import jsinterop.annotations.JsType;
 @JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class AudioParamDescriptor{
 
+    @JsProperty(name="name")
+    private String name;
+
+    @JsProperty(name="defaultValue")
+    private float defaultValue;
+
+    @JsProperty(name="minValue")
+    private float minValue;
+
+    @JsProperty(name="maxValue")
+    private float maxValue;
+
     public AudioParamDescriptor(){
     }
-
-    @JsProperty(name="name")
-    public String name;
 
     @JsOverlay
     public final String getName(){
@@ -40,9 +49,6 @@ public class AudioParamDescriptor{
         this.name = name;
     }
 
-    @JsProperty(name="defaultValue")
-    public float defaultValue;
-
     @JsOverlay
     public final float getDefaultValue(){
         return this.defaultValue;
@@ -52,9 +58,6 @@ public class AudioParamDescriptor{
     public final void setDefaultValue(float defaultValue){
         this.defaultValue = defaultValue;
     }
-
-    @JsProperty(name="minValue")
-    public float minValue;
 
     @JsOverlay
     public final float getMinValue(){
@@ -66,9 +69,6 @@ public class AudioParamDescriptor{
         this.minValue = minValue;
     }
 
-    @JsProperty(name="maxValue")
-    public float maxValue;
-
     @JsOverlay
     public final float getMaxValue(){
         return this.maxValue;
@@ -78,6 +78,5 @@ public class AudioParamDescriptor{
     public final void setMaxValue(float maxValue){
         this.maxValue = maxValue;
     }
-
 
 }

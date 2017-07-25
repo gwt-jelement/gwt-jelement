@@ -19,6 +19,7 @@ package gwt.jelement.crypto;
 import gwt.jelement.crypto.SubtleCrypto;
 import elemental2.core.ArrayBufferView;
 import jsinterop.annotations.JsMethod;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -27,9 +28,10 @@ import jsinterop.annotations.JsType;
 public class Crypto{
     
     @JsProperty(name="subtle")
-    public SubtleCrypto subtle;
+    public native SubtleCrypto getSubtle();
     
     @JsMethod(name = "getRandomValues")
     public native ArrayBufferView getRandomValues(ArrayBufferView array);
+    
     
 }

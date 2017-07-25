@@ -21,6 +21,7 @@ import gwt.jelement.css.CSSRule;
 import gwt.jelement.css.CSSRuleList;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -34,18 +35,24 @@ public class CSSKeyframesRule extends CSSRule{
     }
     
     @JsProperty(name="name")
-    public String name;
+    public native String getName();
+    
+    @JsProperty(name="name")
+    public native void setName(String name);
     
     @JsProperty(name="cssRules")
-    public CSSRuleList cssRules;
+    public native CSSRuleList getCssRules();
     
     @JsMethod(name = "appendRule")
     public native void appendRule(String rule);
     
+    
     @JsMethod(name = "deleteRule")
     public native void deleteRule(String select);
     
+    
     @JsMethod(name = "findRule")
     public native CSSKeyframeRule findRule(String select);
+    
     
 }

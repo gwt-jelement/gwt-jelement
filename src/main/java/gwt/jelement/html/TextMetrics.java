@@ -16,6 +16,7 @@
  */
 package gwt.jelement.html;
 
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -24,40 +25,40 @@ import jsinterop.annotations.JsType;
 public class TextMetrics{
     
     @JsProperty(name="width")
-    public float width;
+    public native float getWidth();
     
     @JsProperty(name="actualBoundingBoxLeft")
-    public float actualBoundingBoxLeft;
+    public native float getActualBoundingBoxLeft();
     
     @JsProperty(name="actualBoundingBoxRight")
-    public float actualBoundingBoxRight;
+    public native float getActualBoundingBoxRight();
     
     @JsProperty(name="fontBoundingBoxAscent")
-    public float fontBoundingBoxAscent;
+    public native float getFontBoundingBoxAscent();
     
     @JsProperty(name="fontBoundingBoxDescent")
-    public float fontBoundingBoxDescent;
+    public native float getFontBoundingBoxDescent();
     
     @JsProperty(name="actualBoundingBoxAscent")
-    public float actualBoundingBoxAscent;
+    public native float getActualBoundingBoxAscent();
     
     @JsProperty(name="actualBoundingBoxDescent")
-    public float actualBoundingBoxDescent;
+    public native float getActualBoundingBoxDescent();
     
     @JsProperty(name="emHeightAscent")
-    public float emHeightAscent;
+    public native float getEmHeightAscent();
     
     @JsProperty(name="emHeightDescent")
-    public float emHeightDescent;
+    public native float getEmHeightDescent();
     
     @JsProperty(name="hangingBaseline")
-    public float hangingBaseline;
+    public native float getHangingBaseline();
     
     @JsProperty(name="alphabeticBaseline")
-    public float alphabeticBaseline;
+    public native float getAlphabeticBaseline();
     
     @JsProperty(name="ideographicBaseline")
-    public float ideographicBaseline;
+    public native float getIdeographicBaseline();
     
     
 }

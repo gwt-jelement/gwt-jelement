@@ -25,11 +25,14 @@ import jsinterop.annotations.JsType;
 @JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class PeriodicWaveOptions extends PeriodicWaveConstraints{
 
+    @JsProperty(name="real")
+    private float[] real;
+
+    @JsProperty(name="imag")
+    private float[] imag;
+
     public PeriodicWaveOptions(){
     }
-
-    @JsProperty(name="real")
-    public float[] real;
 
     @JsOverlay
     public final float[] getReal(){
@@ -41,9 +44,6 @@ public class PeriodicWaveOptions extends PeriodicWaveConstraints{
         this.real = real;
     }
 
-    @JsProperty(name="imag")
-    public float[] imag;
-
     @JsOverlay
     public final float[] getImag(){
         return this.imag;
@@ -53,6 +53,5 @@ public class PeriodicWaveOptions extends PeriodicWaveConstraints{
     public final void setImag(float[] imag){
         this.imag = imag;
     }
-
 
 }

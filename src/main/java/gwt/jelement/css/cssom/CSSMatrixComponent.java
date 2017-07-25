@@ -21,6 +21,7 @@ import gwt.jelement.css.cssom.CSSTransformComponent;
 import gwt.jelement.geometry.DOMMatrix;
 import gwt.jelement.geometry.DOMMatrixReadOnly;
 import jsinterop.annotations.JsConstructor;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -39,7 +40,10 @@ public class CSSMatrixComponent extends CSSTransformComponent{
     }
     
     @JsProperty(name="matrix")
-    public DOMMatrix matrix;
+    public native DOMMatrix getMatrix();
+    
+    @JsProperty(name="matrix")
+    public native void setMatrix(DOMMatrix matrix);
     
     
 }

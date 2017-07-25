@@ -60,26 +60,31 @@ public class AnimationEffectTimingReadOnly{
     
     }
     
-    @JsProperty(name="delay")
-    public double delay;
-    
-    @JsProperty(name="endDelay")
-    public double endDelay;
-    
-    @JsProperty(name="fill")
-    public String fill;
-    
-    @JsProperty(name="iterationStart")
-    public double iterationStart;
-    
-    @JsProperty(name="iterations")
-    public double iterations;
-    
     @JsProperty(name="duration")
-    public DurationUnion duration;
+    private DurationUnion duration;
     
     @JsProperty(name="direction")
-    public String direction;
+    private String direction;
+    
+    @JsProperty(name="delay")
+    public native double getDelay();
+    
+    @JsProperty(name="endDelay")
+    public native double getEndDelay();
+    
+    @JsProperty(name="fill")
+    public native String getFill();
+    
+    @JsProperty(name="iterationStart")
+    public native double getIterationStart();
+    
+    @JsProperty(name="iterations")
+    public native double getIterations();
+    
+    @JsOverlay
+    public final DurationUnion getDuration(){
+        return this.duration;
+    }
     
     @JsOverlay
     public final PlaybackDirection getDirection(){
@@ -87,7 +92,7 @@ public class AnimationEffectTimingReadOnly{
     }
     
     @JsProperty(name="easing")
-    public String easing;
+    public native String getEasing();
     
     
 }

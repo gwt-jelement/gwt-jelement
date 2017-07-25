@@ -21,6 +21,7 @@ import gwt.jelement.events.EventTarget;
 import gwt.jelement.eventsource.EventSourceInit;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -31,6 +32,15 @@ public class EventSource extends EventTarget{
     public static int OPEN;
     public static int CLOSED;
     
+    
+    @JsProperty(name="onopen")
+    private EventHandlerNonNull onopen;
+    
+    @JsProperty(name="onmessage")
+    private EventHandlerNonNull onmessage;
+    
+    @JsProperty(name="onerror")
+    private EventHandlerNonNull onerror;
     
     @JsConstructor
     public EventSource(String url){
@@ -43,24 +53,46 @@ public class EventSource extends EventTarget{
     }
     
     @JsProperty(name="url")
-    public String url;
+    public native String getUrl();
     
     @JsProperty(name="withCredentials")
-    public boolean withCredentials;
+    public native boolean getWithCredentials();
     
     @JsProperty(name="readyState")
-    public short readyState;
+    public native short getReadyState();
     
-    @JsProperty(name="onopen")
-    public EventHandlerNonNull onopen;
+    @JsOverlay
+    public final EventHandlerNonNull getOnOpen(){
+        return this.onopen;
+    }
     
-    @JsProperty(name="onmessage")
-    public EventHandlerNonNull onmessage;
+    @JsOverlay
+    public final void setOnOpen(EventHandlerNonNull onopen){
+        this.onopen = onopen;
+    }
     
-    @JsProperty(name="onerror")
-    public EventHandlerNonNull onerror;
+    @JsOverlay
+    public final EventHandlerNonNull getOnMessage(){
+        return this.onmessage;
+    }
+    
+    @JsOverlay
+    public final void setOnMessage(EventHandlerNonNull onmessage){
+        this.onmessage = onmessage;
+    }
+    
+    @JsOverlay
+    public final EventHandlerNonNull getOnError(){
+        return this.onerror;
+    }
+    
+    @JsOverlay
+    public final void setOnError(EventHandlerNonNull onerror){
+        this.onerror = onerror;
+    }
     
     @JsMethod(name = "close")
     public native void close();
+    
     
 }

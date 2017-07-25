@@ -33,36 +33,69 @@ import jsinterop.annotations.JsType;
 @JsType(namespace = JsPackage.GLOBAL, isNative = true)
 public class PresentationConnection extends EventTarget{
     
+    @JsProperty(name="state")
+    private String state;
+    
+    @JsProperty(name="onconnect")
+    private EventHandlerNonNull onconnect;
+    
+    @JsProperty(name="onclose")
+    private EventHandlerNonNull onclose;
+    
+    @JsProperty(name="onterminate")
+    private EventHandlerNonNull onterminate;
+    
+    @JsProperty(name="binaryType")
+    private String binaryType;
+    
+    @JsProperty(name="onmessage")
+    private EventHandlerNonNull onmessage;
+    
     @JsConstructor
     public PresentationConnection(){
         super();
     }
     
     @JsProperty(name="id")
-    public String id;
+    public native String getId();
     
     @JsProperty(name="url")
-    public String url;
-    
-    @JsProperty(name="state")
-    public String state;
+    public native String getUrl();
     
     @JsOverlay
     public final PresentationConnectionState getState(){
        return PresentationConnectionState.of(state);
     }
     
-    @JsProperty(name="onconnect")
-    public EventHandlerNonNull onconnect;
+    @JsOverlay
+    public final EventHandlerNonNull getOnConnect(){
+        return this.onconnect;
+    }
     
-    @JsProperty(name="onclose")
-    public EventHandlerNonNull onclose;
+    @JsOverlay
+    public final void setOnConnect(EventHandlerNonNull onconnect){
+        this.onconnect = onconnect;
+    }
     
-    @JsProperty(name="onterminate")
-    public EventHandlerNonNull onterminate;
+    @JsOverlay
+    public final EventHandlerNonNull getOnClose(){
+        return this.onclose;
+    }
     
-    @JsProperty(name="binaryType")
-    public String binaryType;
+    @JsOverlay
+    public final void setOnClose(EventHandlerNonNull onclose){
+        this.onclose = onclose;
+    }
+    
+    @JsOverlay
+    public final EventHandlerNonNull getOnTerminate(){
+        return this.onterminate;
+    }
+    
+    @JsOverlay
+    public final void setOnTerminate(EventHandlerNonNull onterminate){
+        this.onterminate = onterminate;
+    }
     
     @JsOverlay
     public final BinaryType getBinaryType(){
@@ -74,25 +107,38 @@ public class PresentationConnection extends EventTarget{
        this.binaryType = binaryType.getInternalValue();
     }
     
-    @JsProperty(name="onmessage")
-    public EventHandlerNonNull onmessage;
+    @JsOverlay
+    public final EventHandlerNonNull getOnMessage(){
+        return this.onmessage;
+    }
+    
+    @JsOverlay
+    public final void setOnMessage(EventHandlerNonNull onmessage){
+        this.onmessage = onmessage;
+    }
     
     @JsMethod(name = "close")
     public native void close();
     
+    
     @JsMethod(name = "send")
     public native void send(String message);
+    
     
     @JsMethod(name = "send")
     public native void send(Blob data);
     
+    
     @JsMethod(name = "send")
     public native void send(ArrayBuffer data);
+    
     
     @JsMethod(name = "send")
     public native void send(ArrayBufferView data);
     
+    
     @JsMethod(name = "terminate")
     public native void terminate();
+    
     
 }

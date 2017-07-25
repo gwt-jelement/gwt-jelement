@@ -22,6 +22,7 @@ import gwt.jelement.frame.Window;
 import gwt.jelement.input.InputDeviceCapabilities;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -40,33 +41,39 @@ public class UIEvent extends Event{
     }
     
     @JsProperty(name="view")
-    public Window view;
+    public native Window getView();
     
     @JsProperty(name="detail")
-    public double detail;
+    public native double getDetail();
     
     @JsProperty(name="sourceCapabilities")
-    public InputDeviceCapabilities sourceCapabilities;
+    public native InputDeviceCapabilities getSourceCapabilities();
     
     @JsProperty(name="which")
-    public double which;
+    public native double getWhich();
     
     @JsMethod(name = "initUIEvent")
     public native void initUIEvent();
     
+    
     @JsMethod(name = "initUIEvent")
     public native void initUIEvent(String type);
+    
     
     @JsMethod(name = "initUIEvent")
     public native void initUIEvent(String type, boolean bubbles);
     
+    
     @JsMethod(name = "initUIEvent")
     public native void initUIEvent(String type, boolean bubbles, boolean cancelable);
+    
     
     @JsMethod(name = "initUIEvent")
     public native void initUIEvent(String type, boolean bubbles, boolean cancelable, Window view);
     
+    
     @JsMethod(name = "initUIEvent")
     public native void initUIEvent(String type, boolean bubbles, boolean cancelable, Window view, double detail);
+    
     
 }

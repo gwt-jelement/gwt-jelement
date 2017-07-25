@@ -18,6 +18,7 @@ package gwt.jelement.xmlhttprequest;
 
 import gwt.jelement.xmlhttprequest.XMLHttpRequestEventTarget;
 import jsinterop.annotations.JsConstructor;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 

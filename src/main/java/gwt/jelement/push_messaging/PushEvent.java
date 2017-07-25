@@ -20,6 +20,7 @@ import gwt.jelement.push_messaging.PushEventInit;
 import gwt.jelement.push_messaging.PushMessageData;
 import gwt.jelement.serviceworkers.ExtendableEvent;
 import jsinterop.annotations.JsConstructor;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -38,7 +39,7 @@ public class PushEvent extends ExtendableEvent{
     }
     
     @JsProperty(name="data")
-    public PushMessageData data;
+    public native PushMessageData getData();
     
     
 }

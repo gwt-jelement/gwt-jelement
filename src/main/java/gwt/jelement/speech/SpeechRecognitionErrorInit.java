@@ -25,11 +25,14 @@ import jsinterop.annotations.JsType;
 @JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class SpeechRecognitionErrorInit extends EventInit{
 
+    @JsProperty(name="error")
+    private String error;
+
+    @JsProperty(name="message")
+    private String message;
+
     public SpeechRecognitionErrorInit(){
     }
-
-    @JsProperty(name="error")
-    public String error;
 
     @JsOverlay
     public final String getError(){
@@ -41,9 +44,6 @@ public class SpeechRecognitionErrorInit extends EventInit{
         this.error = error;
     }
 
-    @JsProperty(name="message")
-    public String message;
-
     @JsOverlay
     public final String getMessage(){
         return this.message;
@@ -53,6 +53,5 @@ public class SpeechRecognitionErrorInit extends EventInit{
     public final void setMessage(String message){
         this.message = message;
     }
-
 
 }

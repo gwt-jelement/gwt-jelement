@@ -37,30 +37,40 @@ public class HTMLOptionsCollection extends HTMLCollection{
     }
     
     @JsProperty(name="length")
-    public double length;
+    public native void setLength(double length);
     
     @JsProperty(name="selectedIndex")
-    public double selectedIndex;
+    public native double getSelectedIndex();
+    
+    @JsProperty(name="selectedIndex")
+    public native void setSelectedIndex(double selectedIndex);
     
     @JsMethod(name = "add")
     public native void add(HTMLOptionElement element);
     
+    
     @JsMethod(name = "add")
     public native void add(HTMLOptGroupElement element);
+    
     
     @JsMethod(name = "add")
     public native void add(HTMLOptionElement element, HTMLElement before);
     
+    
     @JsMethod(name = "add")
     public native void add(HTMLOptionElement element, double before);
+    
     
     @JsMethod(name = "add")
     public native void add(HTMLOptGroupElement element, HTMLElement before);
     
+    
     @JsMethod(name = "add")
     public native void add(HTMLOptGroupElement element, double before);
     
+    
     @JsMethod(name = "remove")
     public native void remove(double index);
+    
     
 }

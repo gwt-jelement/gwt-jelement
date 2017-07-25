@@ -42,37 +42,53 @@ public class XMLHttpRequest extends XMLHttpRequestEventTarget{
     public static int DONE;
     
     
+    @JsProperty(name="onreadystatechange")
+    private EventHandlerNonNull onreadystatechange;
+    
+    @JsProperty(name="responseType")
+    private String responseType;
+    
     @JsConstructor
     public XMLHttpRequest(){
         super();
     }
     
-    @JsProperty(name="onreadystatechange")
-    public EventHandlerNonNull onreadystatechange;
+    @JsOverlay
+    public final EventHandlerNonNull getOnReadystatechange(){
+        return this.onreadystatechange;
+    }
+    
+    @JsOverlay
+    public final void setOnReadystatechange(EventHandlerNonNull onreadystatechange){
+        this.onreadystatechange = onreadystatechange;
+    }
     
     @JsProperty(name="readyState")
-    public short readyState;
+    public native short getReadyState();
     
     @JsProperty(name="timeout")
-    public double timeout;
+    public native double getTimeout();
+    
+    @JsProperty(name="timeout")
+    public native void setTimeout(double timeout);
     
     @JsProperty(name="withCredentials")
-    public boolean withCredentials;
+    public native boolean getWithCredentials();
+    
+    @JsProperty(name="withCredentials")
+    public native void setWithCredentials(boolean withCredentials);
     
     @JsProperty(name="upload")
-    public XMLHttpRequestUpload upload;
+    public native XMLHttpRequestUpload getUpload();
     
     @JsProperty(name="responseURL")
-    public String responseURL;
+    public native String getResponseURL();
     
     @JsProperty(name="status")
-    public short status;
+    public native short getStatus();
     
     @JsProperty(name="statusText")
-    public String statusText;
-    
-    @JsProperty(name="responseType")
-    public String responseType;
+    public native String getStatusText();
     
     @JsOverlay
     public final XMLHttpRequestResponseType getResponseType(){
@@ -85,63 +101,80 @@ public class XMLHttpRequest extends XMLHttpRequestEventTarget{
     }
     
     @JsProperty(name="response")
-    public Object response;
+    public native Object getResponse();
     
     @JsProperty(name="responseText")
-    public String responseText;
+    public native String getResponseText();
     
     @JsProperty(name="responseXML")
-    public Document responseXML;
+    public native Document getResponseXML();
     
     @JsMethod(name = "abort")
     public native void abort();
     
+    
     @JsMethod(name = "getAllResponseHeaders")
     public native String getAllResponseHeaders();
+    
     
     @JsMethod(name = "getResponseHeader")
     public native String getResponseHeader(String name);
     
+    
     @JsMethod(name = "open")
     public native void open(String method, String url);
+    
     
     @JsMethod(name = "open")
     public native void open(String method, String url, boolean async);
     
+    
     @JsMethod(name = "open")
     public native void open(String method, String url, boolean async, String username);
+    
     
     @JsMethod(name = "open")
     public native void open(String method, String url, boolean async, String username, String password);
     
+    
     @JsMethod(name = "overrideMimeType")
     public native void overrideMimeType(String mime);
+    
     
     @JsMethod(name = "send")
     public native void send();
     
+    
     @JsMethod(name = "send")
     public native void send(ArrayBuffer body);
+    
     
     @JsMethod(name = "send")
     public native void send(ArrayBufferView body);
     
+    
     @JsMethod(name = "send")
     public native void send(Blob body);
+    
     
     @JsMethod(name = "send")
     public native void send(Document body);
     
+    
     @JsMethod(name = "send")
     public native void send(String body);
+    
     
     @JsMethod(name = "send")
     public native void send(FormData body);
     
+    
     @JsMethod(name = "send")
     public native void send(URLSearchParams body);
     
+    
     @JsMethod(name = "setRequestHeader")
     public native void setRequestHeader(String name, String value);
+    
     
 }

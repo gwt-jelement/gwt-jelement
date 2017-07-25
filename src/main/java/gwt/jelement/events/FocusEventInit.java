@@ -26,11 +26,11 @@ import jsinterop.annotations.JsType;
 @JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class FocusEventInit extends UIEventInit{
 
+    @JsProperty(name="relatedTarget")
+    private EventTarget relatedTarget;
+
     public FocusEventInit(){
     }
-
-    @JsProperty(name="relatedTarget")
-    public EventTarget relatedTarget;
 
     @JsOverlay
     public final EventTarget getRelatedTarget(){
@@ -41,6 +41,5 @@ public class FocusEventInit extends UIEventInit{
     public final void setRelatedTarget(EventTarget relatedTarget){
         this.relatedTarget = relatedTarget;
     }
-
 
 }

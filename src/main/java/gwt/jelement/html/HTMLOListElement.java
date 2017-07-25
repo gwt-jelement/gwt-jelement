@@ -18,6 +18,7 @@ package gwt.jelement.html;
 
 import gwt.jelement.html.HTMLElement;
 import jsinterop.annotations.JsConstructor;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -31,16 +32,28 @@ public class HTMLOListElement extends HTMLElement{
     }
     
     @JsProperty(name="reversed")
-    public boolean reversed;
+    public native boolean getReversed();
+    
+    @JsProperty(name="reversed")
+    public native void setReversed(boolean reversed);
     
     @JsProperty(name="start")
-    public double start;
+    public native double getStart();
+    
+    @JsProperty(name="start")
+    public native void setStart(double start);
     
     @JsProperty(name="type")
-    public String type;
+    public native String getType();
+    
+    @JsProperty(name="type")
+    public native void setType(String type);
     
     @JsProperty(name="compact")
-    public boolean compact;
+    public native boolean getCompact();
+    
+    @JsProperty(name="compact")
+    public native void setCompact(boolean compact);
     
     
 }

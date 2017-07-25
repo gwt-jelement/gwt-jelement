@@ -18,6 +18,7 @@ package gwt.jelement.svg;
 
 import gwt.jelement.svg.SVGMatrix;
 import jsinterop.annotations.JsMethod;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -26,54 +27,83 @@ import jsinterop.annotations.JsType;
 public class SVGMatrix{
     
     @JsProperty(name="a")
-    public double a;
+    public native double getA();
+    
+    @JsProperty(name="a")
+    public native void setA(double a);
     
     @JsProperty(name="b")
-    public double b;
+    public native double getB();
+    
+    @JsProperty(name="b")
+    public native void setB(double b);
     
     @JsProperty(name="c")
-    public double c;
+    public native double getC();
+    
+    @JsProperty(name="c")
+    public native void setC(double c);
     
     @JsProperty(name="d")
-    public double d;
+    public native double getD();
+    
+    @JsProperty(name="d")
+    public native void setD(double d);
     
     @JsProperty(name="e")
-    public double e;
+    public native double getE();
+    
+    @JsProperty(name="e")
+    public native void setE(double e);
     
     @JsProperty(name="f")
-    public double f;
+    public native double getF();
+    
+    @JsProperty(name="f")
+    public native void setF(double f);
     
     @JsMethod(name = "flipX")
     public native SVGMatrix flipX();
     
+    
     @JsMethod(name = "flipY")
     public native SVGMatrix flipY();
+    
     
     @JsMethod(name = "inverse")
     public native SVGMatrix inverse();
     
+    
     @JsMethod(name = "multiply")
     public native SVGMatrix multiply(SVGMatrix secondMatrix);
+    
     
     @JsMethod(name = "rotate")
     public native SVGMatrix rotate(float angle);
     
+    
     @JsMethod(name = "rotateFromVector")
     public native SVGMatrix rotateFromVector(float x, float y);
+    
     
     @JsMethod(name = "scale")
     public native SVGMatrix scale(float scaleFactor);
     
+    
     @JsMethod(name = "scaleNonUniform")
     public native SVGMatrix scaleNonUniform(float scaleFactorX, float scaleFactorY);
+    
     
     @JsMethod(name = "skewX")
     public native SVGMatrix skewX(float angle);
     
+    
     @JsMethod(name = "skewY")
     public native SVGMatrix skewY(float angle);
     
+    
     @JsMethod(name = "translate")
     public native SVGMatrix translate(float x, float y);
+    
     
 }

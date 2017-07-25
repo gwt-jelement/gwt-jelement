@@ -24,6 +24,7 @@ import gwt.jelement.serviceworkers.ServiceWorkerRegistration;
 import elemental2.promise.Promise;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -31,36 +32,61 @@ import jsinterop.annotations.JsType;
 @JsType(namespace = JsPackage.GLOBAL, isNative = true)
 public class ServiceWorkerContainer extends EventTarget{
     
+    @JsProperty(name="oncontrollerchange")
+    private EventHandlerNonNull oncontrollerchange;
+    
+    @JsProperty(name="onmessage")
+    private EventHandlerNonNull onmessage;
+    
     @JsConstructor
     public ServiceWorkerContainer(){
         super();
     }
     
     @JsProperty(name="controller")
-    public ServiceWorker controller;
+    public native ServiceWorker getController();
     
     @JsProperty(name="ready")
-    public Promise<ServiceWorkerRegistration> ready;
+    public native Promise<ServiceWorkerRegistration> getReady();
     
-    @JsProperty(name="oncontrollerchange")
-    public EventHandlerNonNull oncontrollerchange;
+    @JsOverlay
+    public final EventHandlerNonNull getOnControllerchange(){
+        return this.oncontrollerchange;
+    }
     
-    @JsProperty(name="onmessage")
-    public EventHandlerNonNull onmessage;
+    @JsOverlay
+    public final void setOnControllerchange(EventHandlerNonNull oncontrollerchange){
+        this.oncontrollerchange = oncontrollerchange;
+    }
+    
+    @JsOverlay
+    public final EventHandlerNonNull getOnMessage(){
+        return this.onmessage;
+    }
+    
+    @JsOverlay
+    public final void setOnMessage(EventHandlerNonNull onmessage){
+        this.onmessage = onmessage;
+    }
     
     @JsMethod(name = "getRegistration")
     public native Promise<ServiceWorkerRegistration> getRegistration();
     
+    
     @JsMethod(name = "getRegistration")
     public native Promise<ServiceWorkerRegistration> getRegistration(String documentURL);
+    
     
     @JsMethod(name = "getRegistrations")
     public native Promise<ServiceWorkerRegistration[]> getRegistrations();
     
+    
     @JsMethod(name = "register")
     public native Promise<ServiceWorkerRegistration> register(String url);
     
+    
     @JsMethod(name = "register")
     public native Promise<ServiceWorkerRegistration> register(String url, RegistrationOptions options);
+    
     
 }

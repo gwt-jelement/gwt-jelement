@@ -23,6 +23,7 @@ import gwt.jelement.webusb.USBDeviceRequestOptions;
 import elemental2.promise.Promise;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -30,21 +31,43 @@ import jsinterop.annotations.JsType;
 @JsType(namespace = JsPackage.GLOBAL, isNative = true)
 public class USB extends EventTarget{
     
+    @JsProperty(name="onconnect")
+    private EventHandlerNonNull onconnect;
+    
+    @JsProperty(name="ondisconnect")
+    private EventHandlerNonNull ondisconnect;
+    
     @JsConstructor
     public USB(){
         super();
     }
     
-    @JsProperty(name="onconnect")
-    public EventHandlerNonNull onconnect;
+    @JsOverlay
+    public final EventHandlerNonNull getOnConnect(){
+        return this.onconnect;
+    }
     
-    @JsProperty(name="ondisconnect")
-    public EventHandlerNonNull ondisconnect;
+    @JsOverlay
+    public final void setOnConnect(EventHandlerNonNull onconnect){
+        this.onconnect = onconnect;
+    }
+    
+    @JsOverlay
+    public final EventHandlerNonNull getOnDisconnect(){
+        return this.ondisconnect;
+    }
+    
+    @JsOverlay
+    public final void setOnDisconnect(EventHandlerNonNull ondisconnect){
+        this.ondisconnect = ondisconnect;
+    }
     
     @JsMethod(name = "getDevices")
     public native Promise<USBDevice[]> getDevices();
     
+    
     @JsMethod(name = "requestDevice")
     public native Promise<USBDevice[]> requestDevice(USBDeviceRequestOptions options);
+    
     
 }

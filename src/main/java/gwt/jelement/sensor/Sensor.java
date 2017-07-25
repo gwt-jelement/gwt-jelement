@@ -20,6 +20,7 @@ import gwt.jelement.events.EventHandlerNonNull;
 import gwt.jelement.events.EventTarget;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -27,30 +28,62 @@ import jsinterop.annotations.JsType;
 @JsType(namespace = JsPackage.GLOBAL, isNative = true)
 public class Sensor extends EventTarget{
     
+    @JsProperty(name="onerror")
+    private EventHandlerNonNull onerror;
+    
+    @JsProperty(name="onreading")
+    private EventHandlerNonNull onreading;
+    
+    @JsProperty(name="onactivate")
+    private EventHandlerNonNull onactivate;
+    
     @JsConstructor
     public Sensor(){
         super();
     }
     
     @JsProperty(name="activated")
-    public boolean activated;
+    public native boolean getActivated();
     
     @JsProperty(name="timestamp")
-    public double timestamp;
+    public native double getTimestamp();
     
-    @JsProperty(name="onerror")
-    public EventHandlerNonNull onerror;
+    @JsOverlay
+    public final EventHandlerNonNull getOnError(){
+        return this.onerror;
+    }
     
-    @JsProperty(name="onreading")
-    public EventHandlerNonNull onreading;
+    @JsOverlay
+    public final void setOnError(EventHandlerNonNull onerror){
+        this.onerror = onerror;
+    }
     
-    @JsProperty(name="onactivate")
-    public EventHandlerNonNull onactivate;
+    @JsOverlay
+    public final EventHandlerNonNull getOnReading(){
+        return this.onreading;
+    }
+    
+    @JsOverlay
+    public final void setOnReading(EventHandlerNonNull onreading){
+        this.onreading = onreading;
+    }
+    
+    @JsOverlay
+    public final EventHandlerNonNull getOnActivate(){
+        return this.onactivate;
+    }
+    
+    @JsOverlay
+    public final void setOnActivate(EventHandlerNonNull onactivate){
+        this.onactivate = onactivate;
+    }
     
     @JsMethod(name = "start")
     public native void start();
     
+    
     @JsMethod(name = "stop")
     public native void stop();
+    
     
 }

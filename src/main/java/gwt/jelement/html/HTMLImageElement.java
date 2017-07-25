@@ -20,6 +20,7 @@ import gwt.jelement.html.HTMLElement;
 import elemental2.promise.Promise;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -33,75 +34,127 @@ public class HTMLImageElement extends HTMLElement{
     }
     
     @JsProperty(name="alt")
-    public String alt;
+    public native String getAlt();
+    
+    @JsProperty(name="alt")
+    public native void setAlt(String alt);
     
     @JsProperty(name="src")
-    public String src;
+    public native String getSrc();
+    
+    @JsProperty(name="src")
+    public native void setSrc(String src);
     
     @JsProperty(name="srcset")
-    public String srcset;
+    public native String getSrcset();
+    
+    @JsProperty(name="srcset")
+    public native void setSrcset(String srcset);
     
     @JsProperty(name="sizes")
-    public String sizes;
+    public native String getSizes();
+    
+    @JsProperty(name="sizes")
+    public native void setSizes(String sizes);
     
     @JsProperty(name="crossOrigin")
-    public String crossOrigin;
+    public native String getCrossOrigin();
+    
+    @JsProperty(name="crossOrigin")
+    public native void setCrossOrigin(String crossOrigin);
     
     @JsProperty(name="useMap")
-    public String useMap;
+    public native String getUseMap();
+    
+    @JsProperty(name="useMap")
+    public native void setUseMap(String useMap);
     
     @JsProperty(name="isMap")
-    public boolean isMap;
+    public native boolean getIsMap();
+    
+    @JsProperty(name="isMap")
+    public native void setIsMap(boolean isMap);
     
     @JsProperty(name="width")
-    public double width;
+    public native double getWidth();
+    
+    @JsProperty(name="width")
+    public native void setWidth(double width);
     
     @JsProperty(name="height")
-    public double height;
+    public native double getHeight();
+    
+    @JsProperty(name="height")
+    public native void setHeight(double height);
     
     @JsProperty(name="naturalWidth")
-    public double naturalWidth;
+    public native double getNaturalWidth();
     
     @JsProperty(name="naturalHeight")
-    public double naturalHeight;
+    public native double getNaturalHeight();
     
     @JsProperty(name="complete")
-    public boolean complete;
+    public native boolean getComplete();
     
     @JsProperty(name="currentSrc")
-    public String currentSrc;
+    public native String getCurrentSrc();
     
     @JsProperty(name="referrerPolicy")
-    public String referrerPolicy;
+    public native String getReferrerPolicy();
+    
+    @JsProperty(name="referrerPolicy")
+    public native void setReferrerPolicy(String referrerPolicy);
     
     @JsProperty(name="name")
-    public String name;
+    public native String getName();
+    
+    @JsProperty(name="name")
+    public native void setName(String name);
     
     @JsProperty(name="lowsrc")
-    public String lowsrc;
+    public native String getLowsrc();
+    
+    @JsProperty(name="lowsrc")
+    public native void setLowsrc(String lowsrc);
     
     @JsProperty(name="align")
-    public String align;
+    public native String getAlign();
+    
+    @JsProperty(name="align")
+    public native void setAlign(String align);
     
     @JsProperty(name="hspace")
-    public double hspace;
+    public native double getHspace();
+    
+    @JsProperty(name="hspace")
+    public native void setHspace(double hspace);
     
     @JsProperty(name="vspace")
-    public double vspace;
+    public native double getVspace();
+    
+    @JsProperty(name="vspace")
+    public native void setVspace(double vspace);
     
     @JsProperty(name="longDesc")
-    public String longDesc;
+    public native String getLongDesc();
+    
+    @JsProperty(name="longDesc")
+    public native void setLongDesc(String longDesc);
     
     @JsProperty(name="border")
-    public String border;
+    public native String getBorder();
+    
+    @JsProperty(name="border")
+    public native void setBorder(String border);
     
     @JsProperty(name="x")
-    public double x;
+    public native double getX();
     
     @JsProperty(name="y")
-    public double y;
+    public native double getY();
     
     @JsMethod(name = "decode")
     public native Promise decode();
+    
     
 }

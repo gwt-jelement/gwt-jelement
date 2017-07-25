@@ -19,6 +19,7 @@ package gwt.jelement.credentialmanager;
 import gwt.jelement.credentialmanager.Credential;
 import gwt.jelement.credentialmanager.FederatedCredentialInit;
 import jsinterop.annotations.JsConstructor;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -32,16 +33,16 @@ public class FederatedCredential extends Credential{
     }
     
     @JsProperty(name="provider")
-    public String provider;
+    public native String getProvider();
     
     @JsProperty(name="protocol")
-    public String protocol;
+    public native String getProtocol();
     
     @JsProperty(name="name")
-    public String name;
+    public native String getName();
     
     @JsProperty(name="iconURL")
-    public String iconURL;
+    public native String getIconURL();
     
     
 }

@@ -26,11 +26,38 @@ import jsinterop.annotations.JsType;
 @JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class MouseEventInit extends EventModifierInit{
 
+    @JsProperty(name="screenX")
+    private double screenX;
+
+    @JsProperty(name="screenY")
+    private double screenY;
+
+    @JsProperty(name="clientX")
+    private double clientX;
+
+    @JsProperty(name="clientY")
+    private double clientY;
+
+    @JsProperty(name="button")
+    private short button;
+
+    @JsProperty(name="buttons")
+    private short buttons;
+
+    @JsProperty(name="relatedTarget")
+    private EventTarget relatedTarget;
+
+    @JsProperty(name="movementX")
+    private double movementX;
+
+    @JsProperty(name="movementY")
+    private double movementY;
+
+    @JsProperty(name="region")
+    private String region;
+
     public MouseEventInit(){
     }
-
-    @JsProperty(name="screenX")
-    public double screenX;
 
     @JsOverlay
     public final double getScreenX(){
@@ -42,9 +69,6 @@ public class MouseEventInit extends EventModifierInit{
         this.screenX = screenX;
     }
 
-    @JsProperty(name="screenY")
-    public double screenY;
-
     @JsOverlay
     public final double getScreenY(){
         return this.screenY;
@@ -54,9 +78,6 @@ public class MouseEventInit extends EventModifierInit{
     public final void setScreenY(double screenY){
         this.screenY = screenY;
     }
-
-    @JsProperty(name="clientX")
-    public double clientX;
 
     @JsOverlay
     public final double getClientX(){
@@ -68,9 +89,6 @@ public class MouseEventInit extends EventModifierInit{
         this.clientX = clientX;
     }
 
-    @JsProperty(name="clientY")
-    public double clientY;
-
     @JsOverlay
     public final double getClientY(){
         return this.clientY;
@@ -80,9 +98,6 @@ public class MouseEventInit extends EventModifierInit{
     public final void setClientY(double clientY){
         this.clientY = clientY;
     }
-
-    @JsProperty(name="button")
-    public short button;
 
     @JsOverlay
     public final short getButton(){
@@ -94,9 +109,6 @@ public class MouseEventInit extends EventModifierInit{
         this.button = button;
     }
 
-    @JsProperty(name="buttons")
-    public short buttons;
-
     @JsOverlay
     public final short getButtons(){
         return this.buttons;
@@ -106,9 +118,6 @@ public class MouseEventInit extends EventModifierInit{
     public final void setButtons(short buttons){
         this.buttons = buttons;
     }
-
-    @JsProperty(name="relatedTarget")
-    public EventTarget relatedTarget;
 
     @JsOverlay
     public final EventTarget getRelatedTarget(){
@@ -120,9 +129,6 @@ public class MouseEventInit extends EventModifierInit{
         this.relatedTarget = relatedTarget;
     }
 
-    @JsProperty(name="movementX")
-    public double movementX;
-
     @JsOverlay
     public final double getMovementX(){
         return this.movementX;
@@ -132,9 +138,6 @@ public class MouseEventInit extends EventModifierInit{
     public final void setMovementX(double movementX){
         this.movementX = movementX;
     }
-
-    @JsProperty(name="movementY")
-    public double movementY;
 
     @JsOverlay
     public final double getMovementY(){
@@ -146,9 +149,6 @@ public class MouseEventInit extends EventModifierInit{
         this.movementY = movementY;
     }
 
-    @JsProperty(name="region")
-    public String region;
-
     @JsOverlay
     public final String getRegion(){
         return this.region;
@@ -158,6 +158,5 @@ public class MouseEventInit extends EventModifierInit{
     public final void setRegion(String region){
         this.region = region;
     }
-
 
 }

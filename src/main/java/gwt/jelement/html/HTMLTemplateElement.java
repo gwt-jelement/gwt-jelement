@@ -19,6 +19,7 @@ package gwt.jelement.html;
 import gwt.jelement.dom.DocumentFragment;
 import gwt.jelement.html.HTMLElement;
 import jsinterop.annotations.JsConstructor;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -32,7 +33,7 @@ public class HTMLTemplateElement extends HTMLElement{
     }
     
     @JsProperty(name="content")
-    public DocumentFragment content;
+    public native DocumentFragment getContent();
     
     
 }

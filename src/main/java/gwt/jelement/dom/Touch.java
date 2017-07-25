@@ -19,6 +19,7 @@ package gwt.jelement.dom;
 import gwt.jelement.dom.TouchInit;
 import gwt.jelement.events.EventTarget;
 import jsinterop.annotations.JsConstructor;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -31,43 +32,43 @@ public class Touch{
     }
     
     @JsProperty(name="identifier")
-    public double identifier;
+    public native double getIdentifier();
     
     @JsProperty(name="target")
-    public EventTarget target;
+    public native EventTarget getTarget();
     
     @JsProperty(name="screenX")
-    public double screenX;
+    public native double getScreenX();
     
     @JsProperty(name="screenY")
-    public double screenY;
+    public native double getScreenY();
     
     @JsProperty(name="clientX")
-    public double clientX;
+    public native double getClientX();
     
     @JsProperty(name="clientY")
-    public double clientY;
+    public native double getClientY();
     
     @JsProperty(name="pageX")
-    public double pageX;
+    public native double getPageX();
     
     @JsProperty(name="pageY")
-    public double pageY;
+    public native double getPageY();
     
     @JsProperty(name="radiusX")
-    public float radiusX;
+    public native float getRadiusX();
     
     @JsProperty(name="radiusY")
-    public float radiusY;
+    public native float getRadiusY();
     
     @JsProperty(name="rotationAngle")
-    public float rotationAngle;
+    public native float getRotationAngle();
     
     @JsProperty(name="force")
-    public float force;
+    public native float getForce();
     
     @JsProperty(name="region")
-    public String region;
+    public native String getRegion();
     
     
 }

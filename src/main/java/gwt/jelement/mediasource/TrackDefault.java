@@ -26,7 +26,7 @@ import jsinterop.annotations.JsType;
 public class TrackDefault{
     
     @JsProperty(name="type")
-    public String type;
+    private String type;
     
     @JsOverlay
     public final TrackDefaultType getType(){
@@ -34,16 +34,16 @@ public class TrackDefault{
     }
     
     @JsProperty(name="byteStreamTrackID")
-    public String byteStreamTrackID;
+    public native String getByteStreamTrackID();
     
     @JsProperty(name="language")
-    public String language;
+    public native String getLanguage();
     
     @JsProperty(name="label")
-    public String label;
+    public native String getLabel();
     
     @JsProperty(name="kinds")
-    public String[] kinds;
+    public native String[] getKinds();
     
     
 }

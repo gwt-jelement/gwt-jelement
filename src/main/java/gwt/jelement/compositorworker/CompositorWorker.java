@@ -21,6 +21,7 @@ import gwt.jelement.events.EventHandlerNonNull;
 import gwt.jelement.events.EventTarget;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -28,24 +29,47 @@ import jsinterop.annotations.JsType;
 @JsType(namespace = JsPackage.GLOBAL, isNative = true)
 public class CompositorWorker extends EventTarget{
     
+    @JsProperty(name="onmessage")
+    private EventHandlerNonNull onmessage;
+    
+    @JsProperty(name="onerror")
+    private EventHandlerNonNull onerror;
+    
     @JsConstructor
     public CompositorWorker(String scriptUrl){
         super();
     }
     
-    @JsProperty(name="onmessage")
-    public EventHandlerNonNull onmessage;
+    @JsOverlay
+    public final EventHandlerNonNull getOnMessage(){
+        return this.onmessage;
+    }
     
-    @JsProperty(name="onerror")
-    public EventHandlerNonNull onerror;
+    @JsOverlay
+    public final void setOnMessage(EventHandlerNonNull onmessage){
+        this.onmessage = onmessage;
+    }
+    
+    @JsOverlay
+    public final EventHandlerNonNull getOnError(){
+        return this.onerror;
+    }
+    
+    @JsOverlay
+    public final void setOnError(EventHandlerNonNull onerror){
+        this.onerror = onerror;
+    }
     
     @JsMethod(name = "postMessage")
     public native void postMessage(Object message);
     
+    
     @JsMethod(name = "postMessage")
     public native void postMessage(Object message, MessagePort[] transfer);
     
+    
     @JsMethod(name = "terminate")
     public native void terminate();
+    
     
 }

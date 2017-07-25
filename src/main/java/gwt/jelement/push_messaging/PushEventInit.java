@@ -28,8 +28,8 @@ import jsinterop.base.Js;
 @JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class PushEventInit extends ExtendableEventInit{
 
-    public PushEventInit(){
-    }
+    @JsProperty(name="data")
+    private PushMessageDataInit data;
 
     @JsType(isNative = true, name = "?", namespace = JsPackage.GLOBAL)
     public interface PushMessageDataInit {
@@ -80,8 +80,8 @@ public class PushEventInit extends ExtendableEventInit{
     
     }
     
-    @JsProperty(name="data")
-    public PushMessageDataInit data;
+    public PushEventInit(){
+    }
 
     @JsOverlay
     public final void setData(ArrayBuffer data){
@@ -97,6 +97,5 @@ public class PushEventInit extends ExtendableEventInit{
     public final void setData(String data){
         this.data = PushEventInit.PushMessageDataInit.of(data);
     }
-
 
 }

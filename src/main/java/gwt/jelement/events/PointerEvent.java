@@ -21,6 +21,7 @@ import gwt.jelement.events.PointerEvent;
 import gwt.jelement.events.PointerEventInit;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -39,36 +40,37 @@ public class PointerEvent extends MouseEvent{
     }
     
     @JsProperty(name="pointerId")
-    public double pointerId;
+    public native double getPointerId();
     
     @JsProperty(name="width")
-    public double width;
+    public native double getWidth();
     
     @JsProperty(name="height")
-    public double height;
+    public native double getHeight();
     
     @JsProperty(name="pressure")
-    public float pressure;
+    public native float getPressure();
     
     @JsProperty(name="tiltX")
-    public double tiltX;
+    public native double getTiltX();
     
     @JsProperty(name="tiltY")
-    public double tiltY;
+    public native double getTiltY();
     
     @JsProperty(name="tangentialPressure")
-    public float tangentialPressure;
+    public native float getTangentialPressure();
     
     @JsProperty(name="twist")
-    public double twist;
+    public native double getTwist();
     
     @JsProperty(name="pointerType")
-    public String pointerType;
+    public native String getPointerType();
     
     @JsProperty(name="isPrimary")
-    public boolean isPrimary;
+    public native boolean getIsPrimary();
     
     @JsMethod(name = "getCoalescedEvents")
     public native PointerEvent[] getCoalescedEvents();
+    
     
 }

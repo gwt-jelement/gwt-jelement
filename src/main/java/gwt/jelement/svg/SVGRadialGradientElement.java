@@ -19,6 +19,7 @@ package gwt.jelement.svg;
 import gwt.jelement.svg.SVGAnimatedLength;
 import gwt.jelement.svg.SVGGradientElement;
 import jsinterop.annotations.JsConstructor;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -32,22 +33,22 @@ public class SVGRadialGradientElement extends SVGGradientElement{
     }
     
     @JsProperty(name="cx")
-    public SVGAnimatedLength cx;
+    public native SVGAnimatedLength getCx();
     
     @JsProperty(name="cy")
-    public SVGAnimatedLength cy;
+    public native SVGAnimatedLength getCy();
     
     @JsProperty(name="r")
-    public SVGAnimatedLength r;
+    public native SVGAnimatedLength getR();
     
     @JsProperty(name="fx")
-    public SVGAnimatedLength fx;
+    public native SVGAnimatedLength getFx();
     
     @JsProperty(name="fy")
-    public SVGAnimatedLength fy;
+    public native SVGAnimatedLength getFy();
     
     @JsProperty(name="fr")
-    public SVGAnimatedLength fr;
+    public native SVGAnimatedLength getFr();
     
     
 }

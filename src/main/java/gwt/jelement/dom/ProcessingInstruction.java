@@ -19,6 +19,7 @@ package gwt.jelement.dom;
 import gwt.jelement.css.StyleSheet;
 import gwt.jelement.dom.CharacterData;
 import jsinterop.annotations.JsConstructor;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -32,10 +33,10 @@ public class ProcessingInstruction extends CharacterData{
     }
     
     @JsProperty(name="target")
-    public String target;
+    public native String getTarget();
     
     @JsProperty(name="sheet")
-    public StyleSheet sheet;
+    public native StyleSheet getSheet();
     
     
 }

@@ -25,11 +25,23 @@ import jsinterop.annotations.JsType;
 @JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class DynamicsCompressorOptions extends AudioNodeOptions{
 
+    @JsProperty(name="attack")
+    private float attack;
+
+    @JsProperty(name="knee")
+    private float knee;
+
+    @JsProperty(name="ratio")
+    private float ratio;
+
+    @JsProperty(name="release")
+    private float release;
+
+    @JsProperty(name="threshold")
+    private float threshold;
+
     public DynamicsCompressorOptions(){
     }
-
-    @JsProperty(name="attack")
-    public float attack;
 
     @JsOverlay
     public final float getAttack(){
@@ -41,9 +53,6 @@ public class DynamicsCompressorOptions extends AudioNodeOptions{
         this.attack = attack;
     }
 
-    @JsProperty(name="knee")
-    public float knee;
-
     @JsOverlay
     public final float getKnee(){
         return this.knee;
@@ -53,9 +62,6 @@ public class DynamicsCompressorOptions extends AudioNodeOptions{
     public final void setKnee(float knee){
         this.knee = knee;
     }
-
-    @JsProperty(name="ratio")
-    public float ratio;
 
     @JsOverlay
     public final float getRatio(){
@@ -67,9 +73,6 @@ public class DynamicsCompressorOptions extends AudioNodeOptions{
         this.ratio = ratio;
     }
 
-    @JsProperty(name="release")
-    public float release;
-
     @JsOverlay
     public final float getRelease(){
         return this.release;
@@ -80,9 +83,6 @@ public class DynamicsCompressorOptions extends AudioNodeOptions{
         this.release = release;
     }
 
-    @JsProperty(name="threshold")
-    public float threshold;
-
     @JsOverlay
     public final float getThreshold(){
         return this.threshold;
@@ -92,6 +92,5 @@ public class DynamicsCompressorOptions extends AudioNodeOptions{
     public final void setThreshold(float threshold){
         this.threshold = threshold;
     }
-
 
 }

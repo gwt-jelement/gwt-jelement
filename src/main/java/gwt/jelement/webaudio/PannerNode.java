@@ -30,13 +30,16 @@ import jsinterop.annotations.JsType;
 @JsType(namespace = JsPackage.GLOBAL, isNative = true)
 public class PannerNode extends AudioNode{
     
+    @JsProperty(name="panningModel")
+    private String panningModel;
+    
+    @JsProperty(name="distanceModel")
+    private String distanceModel;
+    
     @JsConstructor
     public PannerNode(){
         super();
     }
-    
-    @JsProperty(name="panningModel")
-    public String panningModel;
     
     @JsOverlay
     public final PanningModelType getPanningModel(){
@@ -49,25 +52,22 @@ public class PannerNode extends AudioNode{
     }
     
     @JsProperty(name="positionX")
-    public AudioParam positionX;
+    public native AudioParam getPositionX();
     
     @JsProperty(name="positionY")
-    public AudioParam positionY;
+    public native AudioParam getPositionY();
     
     @JsProperty(name="positionZ")
-    public AudioParam positionZ;
+    public native AudioParam getPositionZ();
     
     @JsProperty(name="orientationX")
-    public AudioParam orientationX;
+    public native AudioParam getOrientationX();
     
     @JsProperty(name="orientationY")
-    public AudioParam orientationY;
+    public native AudioParam getOrientationY();
     
     @JsProperty(name="orientationZ")
-    public AudioParam orientationZ;
-    
-    @JsProperty(name="distanceModel")
-    public String distanceModel;
+    public native AudioParam getOrientationZ();
     
     @JsOverlay
     public final DistanceModelType getDistanceModel(){
@@ -80,27 +80,47 @@ public class PannerNode extends AudioNode{
     }
     
     @JsProperty(name="refDistance")
-    public double refDistance;
+    public native double getRefDistance();
+    
+    @JsProperty(name="refDistance")
+    public native void setRefDistance(double refDistance);
     
     @JsProperty(name="maxDistance")
-    public double maxDistance;
+    public native double getMaxDistance();
+    
+    @JsProperty(name="maxDistance")
+    public native void setMaxDistance(double maxDistance);
     
     @JsProperty(name="rolloffFactor")
-    public double rolloffFactor;
+    public native double getRolloffFactor();
+    
+    @JsProperty(name="rolloffFactor")
+    public native void setRolloffFactor(double rolloffFactor);
     
     @JsProperty(name="coneInnerAngle")
-    public double coneInnerAngle;
+    public native double getConeInnerAngle();
+    
+    @JsProperty(name="coneInnerAngle")
+    public native void setConeInnerAngle(double coneInnerAngle);
     
     @JsProperty(name="coneOuterAngle")
-    public double coneOuterAngle;
+    public native double getConeOuterAngle();
+    
+    @JsProperty(name="coneOuterAngle")
+    public native void setConeOuterAngle(double coneOuterAngle);
     
     @JsProperty(name="coneOuterGain")
-    public double coneOuterGain;
+    public native double getConeOuterGain();
+    
+    @JsProperty(name="coneOuterGain")
+    public native void setConeOuterGain(double coneOuterGain);
     
     @JsMethod(name = "setOrientation")
     public native void setOrientation(float x, float y, float z);
     
+    
     @JsMethod(name = "setPosition")
     public native void setPosition(float x, float y, float z);
+    
     
 }

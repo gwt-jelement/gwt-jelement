@@ -20,6 +20,7 @@ import gwt.jelement.dom.Document;
 import gwt.jelement.html.HTMLElement;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -33,24 +34,43 @@ public class HTMLEmbedElement extends HTMLElement{
     }
     
     @JsProperty(name="src")
-    public String src;
+    public native String getSrc();
+    
+    @JsProperty(name="src")
+    public native void setSrc(String src);
     
     @JsProperty(name="type")
-    public String type;
+    public native String getType();
+    
+    @JsProperty(name="type")
+    public native void setType(String type);
     
     @JsProperty(name="width")
-    public String width;
+    public native String getWidth();
+    
+    @JsProperty(name="width")
+    public native void setWidth(String width);
     
     @JsProperty(name="height")
-    public String height;
+    public native String getHeight();
+    
+    @JsProperty(name="height")
+    public native void setHeight(String height);
     
     @JsProperty(name="align")
-    public String align;
+    public native String getAlign();
+    
+    @JsProperty(name="align")
+    public native void setAlign(String align);
     
     @JsProperty(name="name")
-    public String name;
+    public native String getName();
+    
+    @JsProperty(name="name")
+    public native void setName(String name);
     
     @JsMethod(name = "getSVGDocument")
     public native Document getSVGDocument();
+    
     
 }

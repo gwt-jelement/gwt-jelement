@@ -27,7 +27,7 @@ import jsinterop.annotations.JsType;
 public class RTCSessionDescription{
     
     @JsProperty(name="type")
-    public String type;
+    private String type;
     
     @JsOverlay
     public final RTCSdpType getType(){
@@ -40,9 +40,13 @@ public class RTCSessionDescription{
     }
     
     @JsProperty(name="sdp")
-    public String sdp;
+    public native String getSdp();
+    
+    @JsProperty(name="sdp")
+    public native void setSdp(String sdp);
     
     @JsMethod(name = "toJSON")
     public native Object toJSON();
+    
     
 }

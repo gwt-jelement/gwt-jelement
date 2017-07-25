@@ -19,6 +19,7 @@ package gwt.jelement.mediasource;
 import gwt.jelement.events.EventHandlerNonNull;
 import gwt.jelement.events.EventTarget;
 import jsinterop.annotations.JsConstructor;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -26,19 +27,39 @@ import jsinterop.annotations.JsType;
 @JsType(namespace = JsPackage.GLOBAL, isNative = true)
 public class SourceBufferList extends EventTarget{
     
+    @JsProperty(name="onaddsourcebuffer")
+    private EventHandlerNonNull onaddsourcebuffer;
+    
+    @JsProperty(name="onremovesourcebuffer")
+    private EventHandlerNonNull onremovesourcebuffer;
+    
     @JsConstructor
     public SourceBufferList(){
         super();
     }
     
     @JsProperty(name="length")
-    public double length;
+    public native double getLength();
     
-    @JsProperty(name="onaddsourcebuffer")
-    public EventHandlerNonNull onaddsourcebuffer;
+    @JsOverlay
+    public final EventHandlerNonNull getOnAddsourcebuffer(){
+        return this.onaddsourcebuffer;
+    }
     
-    @JsProperty(name="onremovesourcebuffer")
-    public EventHandlerNonNull onremovesourcebuffer;
+    @JsOverlay
+    public final void setOnAddsourcebuffer(EventHandlerNonNull onaddsourcebuffer){
+        this.onaddsourcebuffer = onaddsourcebuffer;
+    }
+    
+    @JsOverlay
+    public final EventHandlerNonNull getOnRemovesourcebuffer(){
+        return this.onremovesourcebuffer;
+    }
+    
+    @JsOverlay
+    public final void setOnRemovesourcebuffer(EventHandlerNonNull onremovesourcebuffer){
+        this.onremovesourcebuffer = onremovesourcebuffer;
+    }
     
     
 }

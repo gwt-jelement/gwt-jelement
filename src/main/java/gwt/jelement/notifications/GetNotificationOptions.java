@@ -24,11 +24,11 @@ import jsinterop.annotations.JsType;
 @JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class GetNotificationOptions{
 
+    @JsProperty(name="tag")
+    private String tag;
+
     public GetNotificationOptions(){
     }
-
-    @JsProperty(name="tag")
-    public String tag;
 
     @JsOverlay
     public final String getTag(){
@@ -39,6 +39,5 @@ public class GetNotificationOptions{
     public final void setTag(String tag){
         this.tag = tag;
     }
-
 
 }

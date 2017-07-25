@@ -18,6 +18,7 @@ package gwt.jelement.page;
 
 import gwt.jelement.dom.Document;
 import jsinterop.annotations.JsMethod;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
@@ -27,28 +28,37 @@ public class PagePopupController{
     @JsMethod(name = "closePopup")
     public native void closePopup();
     
+    
     @JsMethod(name = "formatMonth")
     public native String formatMonth(double year, double zeroBaseMonth);
+    
     
     @JsMethod(name = "formatShortMonth")
     public native String formatShortMonth(double year, double zeroBaseMonth);
     
+    
     @JsMethod(name = "formatWeek")
     public native String formatWeek(double year, double weekNumber, String localizedStartDate);
+    
     
     @JsMethod(name = "localizeNumberString")
     public native String localizeNumberString(String numberString);
     
+    
     @JsMethod(name = "selectFontsFromOwnerDocument")
     public native void selectFontsFromOwnerDocument(Document targetDocument);
+    
     
     @JsMethod(name = "setValue")
     public native void setValue(String value);
     
+    
     @JsMethod(name = "setValueAndClosePopup")
     public native void setValueAndClosePopup(double numberValue, String stringValue);
     
+    
     @JsMethod(name = "setWindowRect")
     public native void setWindowRect(double x, double y, double width, double height);
+    
     
 }

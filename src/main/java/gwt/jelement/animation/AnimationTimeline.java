@@ -16,6 +16,7 @@
  */
 package gwt.jelement.animation;
 
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -24,7 +25,7 @@ import jsinterop.annotations.JsType;
 public class AnimationTimeline{
     
     @JsProperty(name="currentTime")
-    public double currentTime;
+    public native double getCurrentTime();
     
     
 }

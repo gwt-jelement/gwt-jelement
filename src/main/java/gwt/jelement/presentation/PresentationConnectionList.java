@@ -20,6 +20,7 @@ import gwt.jelement.events.EventHandlerNonNull;
 import gwt.jelement.events.EventTarget;
 import gwt.jelement.presentation.PresentationConnection;
 import jsinterop.annotations.JsConstructor;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -27,16 +28,26 @@ import jsinterop.annotations.JsType;
 @JsType(namespace = JsPackage.GLOBAL, isNative = true)
 public class PresentationConnectionList extends EventTarget{
     
+    @JsProperty(name="onconnectionavailable")
+    private EventHandlerNonNull onconnectionavailable;
+    
     @JsConstructor
     public PresentationConnectionList(){
         super();
     }
     
     @JsProperty(name="connections")
-    public PresentationConnection[] connections;
+    public native PresentationConnection[] getConnections();
     
-    @JsProperty(name="onconnectionavailable")
-    public EventHandlerNonNull onconnectionavailable;
+    @JsOverlay
+    public final EventHandlerNonNull getOnConnectionavailable(){
+        return this.onconnectionavailable;
+    }
+    
+    @JsOverlay
+    public final void setOnConnectionavailable(EventHandlerNonNull onconnectionavailable){
+        this.onconnectionavailable = onconnectionavailable;
+    }
     
     
 }

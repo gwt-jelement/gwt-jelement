@@ -18,6 +18,7 @@ package gwt.jelement.svg;
 
 import gwt.jelement.svg.SVGAnimatedPreserveAspectRatio;
 import gwt.jelement.svg.SVGAnimatedRect;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -26,10 +27,10 @@ import jsinterop.annotations.JsType;
 public class SVGFitToViewBox{
     
     @JsProperty(name="viewBox")
-    public SVGAnimatedRect viewBox;
+    public native SVGAnimatedRect getViewBox();
     
     @JsProperty(name="preserveAspectRatio")
-    public SVGAnimatedPreserveAspectRatio preserveAspectRatio;
+    public native SVGAnimatedPreserveAspectRatio getPreserveAspectRatio();
     
     
 }

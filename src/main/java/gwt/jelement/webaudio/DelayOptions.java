@@ -25,11 +25,14 @@ import jsinterop.annotations.JsType;
 @JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class DelayOptions extends AudioNodeOptions{
 
+    @JsProperty(name="maxDelayTime")
+    private double maxDelayTime;
+
+    @JsProperty(name="delayTime")
+    private double delayTime;
+
     public DelayOptions(){
     }
-
-    @JsProperty(name="maxDelayTime")
-    public double maxDelayTime;
 
     @JsOverlay
     public final double getMaxDelayTime(){
@@ -41,9 +44,6 @@ public class DelayOptions extends AudioNodeOptions{
         this.maxDelayTime = maxDelayTime;
     }
 
-    @JsProperty(name="delayTime")
-    public double delayTime;
-
     @JsOverlay
     public final double getDelayTime(){
         return this.delayTime;
@@ -53,6 +53,5 @@ public class DelayOptions extends AudioNodeOptions{
     public final void setDelayTime(double delayTime){
         this.delayTime = delayTime;
     }
-
 
 }

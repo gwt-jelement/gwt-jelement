@@ -20,6 +20,7 @@ import gwt.jelement.background_fetch.BackgroundFetchFetch;
 import gwt.jelement.fetch.Request;
 import gwt.jelement.fetch.Response;
 import jsinterop.annotations.JsConstructor;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -33,7 +34,7 @@ public class BackgroundFetchSettledFetch extends BackgroundFetchFetch{
     }
     
     @JsProperty(name="response")
-    public Response response;
+    public native Response getResponse();
     
     
 }

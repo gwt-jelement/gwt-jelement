@@ -24,11 +24,11 @@ import jsinterop.annotations.JsType;
 @JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class RTCOfferAnswerOptions{
 
+    @JsProperty(name="voiceActivityDetection")
+    private boolean voiceActivityDetection;
+
     public RTCOfferAnswerOptions(){
     }
-
-    @JsProperty(name="voiceActivityDetection")
-    public boolean voiceActivityDetection;
 
     @JsOverlay
     public final boolean getVoiceActivityDetection(){
@@ -39,6 +39,5 @@ public class RTCOfferAnswerOptions{
     public final void setVoiceActivityDetection(boolean voiceActivityDetection){
         this.voiceActivityDetection = voiceActivityDetection;
     }
-
 
 }

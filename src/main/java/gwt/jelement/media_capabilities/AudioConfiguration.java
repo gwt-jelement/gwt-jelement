@@ -24,11 +24,20 @@ import jsinterop.annotations.JsType;
 @JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class AudioConfiguration{
 
+    @JsProperty(name="contentType")
+    private String contentType;
+
+    @JsProperty(name="channels")
+    private String channels;
+
+    @JsProperty(name="bitrate")
+    private double bitrate;
+
+    @JsProperty(name="samplerate")
+    private double samplerate;
+
     public AudioConfiguration(){
     }
-
-    @JsProperty(name="contentType")
-    public String contentType;
 
     @JsOverlay
     public final String getContentType(){
@@ -40,9 +49,6 @@ public class AudioConfiguration{
         this.contentType = contentType;
     }
 
-    @JsProperty(name="channels")
-    public String channels;
-
     @JsOverlay
     public final String getChannels(){
         return this.channels;
@@ -52,9 +58,6 @@ public class AudioConfiguration{
     public final void setChannels(String channels){
         this.channels = channels;
     }
-
-    @JsProperty(name="bitrate")
-    public double bitrate;
 
     @JsOverlay
     public final double getBitrate(){
@@ -66,9 +69,6 @@ public class AudioConfiguration{
         this.bitrate = bitrate;
     }
 
-    @JsProperty(name="samplerate")
-    public double samplerate;
-
     @JsOverlay
     public final double getSamplerate(){
         return this.samplerate;
@@ -78,6 +78,5 @@ public class AudioConfiguration{
     public final void setSamplerate(double samplerate){
         this.samplerate = samplerate;
     }
-
 
 }

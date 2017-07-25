@@ -25,11 +25,17 @@ import jsinterop.annotations.JsType;
 @JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class RTCOfferOptions extends RTCOfferAnswerOptions{
 
+    @JsProperty(name="iceRestart")
+    private boolean iceRestart;
+
+    @JsProperty(name="offerToReceiveVideo")
+    private double offerToReceiveVideo;
+
+    @JsProperty(name="offerToReceiveAudio")
+    private double offerToReceiveAudio;
+
     public RTCOfferOptions(){
     }
-
-    @JsProperty(name="iceRestart")
-    public boolean iceRestart;
 
     @JsOverlay
     public final boolean getIceRestart(){
@@ -41,9 +47,6 @@ public class RTCOfferOptions extends RTCOfferAnswerOptions{
         this.iceRestart = iceRestart;
     }
 
-    @JsProperty(name="offerToReceiveVideo")
-    public double offerToReceiveVideo;
-
     @JsOverlay
     public final double getOfferToReceiveVideo(){
         return this.offerToReceiveVideo;
@@ -54,9 +57,6 @@ public class RTCOfferOptions extends RTCOfferAnswerOptions{
         this.offerToReceiveVideo = offerToReceiveVideo;
     }
 
-    @JsProperty(name="offerToReceiveAudio")
-    public double offerToReceiveAudio;
-
     @JsOverlay
     public final double getOfferToReceiveAudio(){
         return this.offerToReceiveAudio;
@@ -66,6 +66,5 @@ public class RTCOfferOptions extends RTCOfferAnswerOptions{
     public final void setOfferToReceiveAudio(double offerToReceiveAudio){
         this.offerToReceiveAudio = offerToReceiveAudio;
     }
-
 
 }

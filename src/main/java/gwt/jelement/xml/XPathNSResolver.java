@@ -17,6 +17,7 @@
 package gwt.jelement.xml;
 
 import jsinterop.annotations.JsMethod;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
@@ -26,7 +27,9 @@ public class XPathNSResolver{
     @JsMethod(name = "lookupNamespaceURI")
     public native String lookupNamespaceURI();
     
+    
     @JsMethod(name = "lookupNamespaceURI")
     public native String lookupNamespaceURI(String prefix);
+    
     
 }

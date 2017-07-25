@@ -19,6 +19,7 @@ package gwt.jelement.html;
 import gwt.jelement.html.HTMLElement;
 import gwt.jelement.html.HTMLFormElement;
 import jsinterop.annotations.JsConstructor;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -32,13 +33,16 @@ public class HTMLLabelElement extends HTMLElement{
     }
     
     @JsProperty(name="form")
-    public HTMLFormElement form;
+    public native HTMLFormElement getForm();
     
     @JsProperty(name="htmlFor")
-    public String htmlFor;
+    public native String getHtmlFor();
+    
+    @JsProperty(name="htmlFor")
+    public native void setHtmlFor(String htmlFor);
     
     @JsProperty(name="control")
-    public HTMLElement control;
+    public native HTMLElement getControl();
     
     
 }

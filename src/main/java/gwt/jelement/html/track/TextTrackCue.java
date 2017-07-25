@@ -20,6 +20,7 @@ import gwt.jelement.events.EventHandlerNonNull;
 import gwt.jelement.events.EventTarget;
 import gwt.jelement.html.track.TextTrack;
 import jsinterop.annotations.JsConstructor;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -27,31 +28,63 @@ import jsinterop.annotations.JsType;
 @JsType(namespace = JsPackage.GLOBAL, isNative = true)
 public class TextTrackCue extends EventTarget{
     
+    @JsProperty(name="onenter")
+    private EventHandlerNonNull onenter;
+    
+    @JsProperty(name="onexit")
+    private EventHandlerNonNull onexit;
+    
     @JsConstructor
     public TextTrackCue(){
         super();
     }
     
     @JsProperty(name="track")
-    public TextTrack track;
+    public native TextTrack getTrack();
     
     @JsProperty(name="id")
-    public String id;
+    public native String getId();
+    
+    @JsProperty(name="id")
+    public native void setId(String id);
     
     @JsProperty(name="startTime")
-    public double startTime;
+    public native double getStartTime();
+    
+    @JsProperty(name="startTime")
+    public native void setStartTime(double startTime);
     
     @JsProperty(name="endTime")
-    public double endTime;
+    public native double getEndTime();
+    
+    @JsProperty(name="endTime")
+    public native void setEndTime(double endTime);
     
     @JsProperty(name="pauseOnExit")
-    public boolean pauseOnExit;
+    public native boolean getPauseOnExit();
     
-    @JsProperty(name="onenter")
-    public EventHandlerNonNull onenter;
+    @JsProperty(name="pauseOnExit")
+    public native void setPauseOnExit(boolean pauseOnExit);
     
-    @JsProperty(name="onexit")
-    public EventHandlerNonNull onexit;
+    @JsOverlay
+    public final EventHandlerNonNull getOnEnter(){
+        return this.onenter;
+    }
+    
+    @JsOverlay
+    public final void setOnEnter(EventHandlerNonNull onenter){
+        this.onenter = onenter;
+    }
+    
+    @JsOverlay
+    public final EventHandlerNonNull getOnExit(){
+        return this.onexit;
+    }
+    
+    @JsOverlay
+    public final void setOnExit(EventHandlerNonNull onexit){
+        this.onexit = onexit;
+    }
     
     
 }

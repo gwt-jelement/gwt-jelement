@@ -28,11 +28,17 @@ import jsinterop.base.Js;
 @JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class ScrollTimelineOptions{
 
+    @JsProperty(name="scrollSource")
+    private Element scrollSource;
+
+    @JsProperty(name="orientation")
+    private String orientation;
+
+    @JsProperty(name="timeRange")
+    private ScrollTimeline.TimeRangeUnion timeRange;
+
     public ScrollTimelineOptions(){
     }
-
-    @JsProperty(name="scrollSource")
-    public Element scrollSource;
 
     @JsOverlay
     public final Element getScrollSource(){
@@ -44,9 +50,6 @@ public class ScrollTimelineOptions{
         this.scrollSource = scrollSource;
     }
 
-    @JsProperty(name="orientation")
-    public String orientation;
-
     @JsOverlay
     public final ScrollDirection getOrientation(){
         return ScrollDirection.of(this.orientation);
@@ -57,9 +60,6 @@ public class ScrollTimelineOptions{
         this.orientation = orientation.getInternalValue();
     }
 
-    @JsProperty(name="timeRange")
-    public ScrollTimeline.TimeRangeUnion timeRange;
-
     @JsOverlay
     public final void setTimeRange(double timeRange){
         this.timeRange = ScrollTimeline.TimeRangeUnion.of(timeRange);
@@ -69,6 +69,5 @@ public class ScrollTimelineOptions{
     public final void setTimeRange(String timeRange){
         this.timeRange = ScrollTimeline.TimeRangeUnion.of(timeRange);
     }
-
 
 }

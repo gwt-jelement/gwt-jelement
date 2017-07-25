@@ -24,11 +24,14 @@ import jsinterop.annotations.JsType;
 @JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class RTCDtlsFingerprint{
 
+    @JsProperty(name="algorithm")
+    private String algorithm;
+
+    @JsProperty(name="value")
+    private String value;
+
     public RTCDtlsFingerprint(){
     }
-
-    @JsProperty(name="algorithm")
-    public String algorithm;
 
     @JsOverlay
     public final String getAlgorithm(){
@@ -40,9 +43,6 @@ public class RTCDtlsFingerprint{
         this.algorithm = algorithm;
     }
 
-    @JsProperty(name="value")
-    public String value;
-
     @JsOverlay
     public final String getValue(){
         return this.value;
@@ -52,6 +52,5 @@ public class RTCDtlsFingerprint{
     public final void setValue(String value){
         this.value = value;
     }
-
 
 }

@@ -20,12 +20,34 @@ import gwt.jelement.events.EventHandlerNonNull;
 import gwt.jelement.events.EventTarget;
 import gwt.jelement.speech.SpeechSynthesisVoice;
 import jsinterop.annotations.JsConstructor;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, isNative = true)
 public class SpeechSynthesisUtterance extends EventTarget{
+    
+    @JsProperty(name="onstart")
+    private EventHandlerNonNull onstart;
+    
+    @JsProperty(name="onend")
+    private EventHandlerNonNull onend;
+    
+    @JsProperty(name="onerror")
+    private EventHandlerNonNull onerror;
+    
+    @JsProperty(name="onpause")
+    private EventHandlerNonNull onpause;
+    
+    @JsProperty(name="onresume")
+    private EventHandlerNonNull onresume;
+    
+    @JsProperty(name="onmark")
+    private EventHandlerNonNull onmark;
+    
+    @JsProperty(name="onboundary")
+    private EventHandlerNonNull onboundary;
     
     @JsConstructor
     public SpeechSynthesisUtterance(){
@@ -38,43 +60,110 @@ public class SpeechSynthesisUtterance extends EventTarget{
     }
     
     @JsProperty(name="text")
-    public String text;
+    public native String getText();
+    
+    @JsProperty(name="text")
+    public native void setText(String text);
     
     @JsProperty(name="lang")
-    public String lang;
+    public native String getLang();
+    
+    @JsProperty(name="lang")
+    public native void setLang(String lang);
     
     @JsProperty(name="voice")
-    public SpeechSynthesisVoice voice;
+    public native SpeechSynthesisVoice getVoice();
+    
+    @JsProperty(name="voice")
+    public native void setVoice(SpeechSynthesisVoice voice);
     
     @JsProperty(name="volume")
-    public float volume;
+    public native float getVolume();
+    
+    @JsProperty(name="volume")
+    public native void setVolume(float volume);
     
     @JsProperty(name="rate")
-    public float rate;
+    public native float getRate();
+    
+    @JsProperty(name="rate")
+    public native void setRate(float rate);
     
     @JsProperty(name="pitch")
-    public float pitch;
+    public native float getPitch();
     
-    @JsProperty(name="onstart")
-    public EventHandlerNonNull onstart;
+    @JsProperty(name="pitch")
+    public native void setPitch(float pitch);
     
-    @JsProperty(name="onend")
-    public EventHandlerNonNull onend;
+    @JsOverlay
+    public final EventHandlerNonNull getOnStart(){
+        return this.onstart;
+    }
     
-    @JsProperty(name="onerror")
-    public EventHandlerNonNull onerror;
+    @JsOverlay
+    public final void setOnStart(EventHandlerNonNull onstart){
+        this.onstart = onstart;
+    }
     
-    @JsProperty(name="onpause")
-    public EventHandlerNonNull onpause;
+    @JsOverlay
+    public final EventHandlerNonNull getOnEnd(){
+        return this.onend;
+    }
     
-    @JsProperty(name="onresume")
-    public EventHandlerNonNull onresume;
+    @JsOverlay
+    public final void setOnEnd(EventHandlerNonNull onend){
+        this.onend = onend;
+    }
     
-    @JsProperty(name="onmark")
-    public EventHandlerNonNull onmark;
+    @JsOverlay
+    public final EventHandlerNonNull getOnError(){
+        return this.onerror;
+    }
     
-    @JsProperty(name="onboundary")
-    public EventHandlerNonNull onboundary;
+    @JsOverlay
+    public final void setOnError(EventHandlerNonNull onerror){
+        this.onerror = onerror;
+    }
+    
+    @JsOverlay
+    public final EventHandlerNonNull getOnPause(){
+        return this.onpause;
+    }
+    
+    @JsOverlay
+    public final void setOnPause(EventHandlerNonNull onpause){
+        this.onpause = onpause;
+    }
+    
+    @JsOverlay
+    public final EventHandlerNonNull getOnResume(){
+        return this.onresume;
+    }
+    
+    @JsOverlay
+    public final void setOnResume(EventHandlerNonNull onresume){
+        this.onresume = onresume;
+    }
+    
+    @JsOverlay
+    public final EventHandlerNonNull getOnMark(){
+        return this.onmark;
+    }
+    
+    @JsOverlay
+    public final void setOnMark(EventHandlerNonNull onmark){
+        this.onmark = onmark;
+    }
+    
+    @JsOverlay
+    public final EventHandlerNonNull getOnBoundary(){
+        return this.onboundary;
+    }
+    
+    @JsOverlay
+    public final void setOnBoundary(EventHandlerNonNull onboundary){
+        this.onboundary = onboundary;
+    }
     
     
 }

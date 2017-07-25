@@ -22,6 +22,7 @@ import gwt.jelement.events.EventTarget;
 import gwt.jelement.events.MessageEventInit;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -40,48 +41,57 @@ public class MessageEvent extends Event{
     }
     
     @JsProperty(name="data")
-    public Object data;
+    public native Object getData();
     
     @JsProperty(name="origin")
-    public String origin;
+    public native String getOrigin();
     
     @JsProperty(name="lastEventId")
-    public String lastEventId;
+    public native String getLastEventId();
     
     @JsProperty(name="source")
-    public EventTarget source;
+    public native EventTarget getSource();
     
     @JsProperty(name="ports")
-    public MessagePort[] ports;
+    public native MessagePort[] getPorts();
     
     @JsProperty(name="suborigin")
-    public String suborigin;
+    public native String getSuborigin();
     
     @JsMethod(name = "initMessageEvent")
     public native void initMessageEvent();
     
+    
     @JsMethod(name = "initMessageEvent")
     public native void initMessageEvent(String typeArg);
+    
     
     @JsMethod(name = "initMessageEvent")
     public native void initMessageEvent(String typeArg, boolean canBubbleArg);
     
+    
     @JsMethod(name = "initMessageEvent")
     public native void initMessageEvent(String typeArg, boolean canBubbleArg, boolean cancelableArg);
+    
     
     @JsMethod(name = "initMessageEvent")
     public native void initMessageEvent(String typeArg, boolean canBubbleArg, boolean cancelableArg, Object dataArg);
     
+    
     @JsMethod(name = "initMessageEvent")
     public native void initMessageEvent(String typeArg, boolean canBubbleArg, boolean cancelableArg, Object dataArg, String originArg);
+    
     
     @JsMethod(name = "initMessageEvent")
     public native void initMessageEvent(String typeArg, boolean canBubbleArg, boolean cancelableArg, Object dataArg, String originArg, String lastEventIdArg);
     
+    
     @JsMethod(name = "initMessageEvent")
     public native void initMessageEvent(String typeArg, boolean canBubbleArg, boolean cancelableArg, Object dataArg, String originArg, String lastEventIdArg, EventTarget sourceArg);
     
+    
     @JsMethod(name = "initMessageEvent")
     public native void initMessageEvent(String typeArg, boolean canBubbleArg, boolean cancelableArg, Object dataArg, String originArg, String lastEventIdArg, EventTarget sourceArg, MessagePort[] portsArg);
+    
     
 }

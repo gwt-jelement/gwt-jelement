@@ -25,11 +25,20 @@ import jsinterop.annotations.JsType;
 @JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class PhotoSettings{
 
+    @JsProperty(name="redEyeReduction")
+    private boolean redEyeReduction;
+
+    @JsProperty(name="imageHeight")
+    private double imageHeight;
+
+    @JsProperty(name="imageWidth")
+    private double imageWidth;
+
+    @JsProperty(name="fillLightMode")
+    private String fillLightMode;
+
     public PhotoSettings(){
     }
-
-    @JsProperty(name="redEyeReduction")
-    public boolean redEyeReduction;
 
     @JsOverlay
     public final boolean getRedEyeReduction(){
@@ -41,9 +50,6 @@ public class PhotoSettings{
         this.redEyeReduction = redEyeReduction;
     }
 
-    @JsProperty(name="imageHeight")
-    public double imageHeight;
-
     @JsOverlay
     public final double getImageHeight(){
         return this.imageHeight;
@@ -53,9 +59,6 @@ public class PhotoSettings{
     public final void setImageHeight(double imageHeight){
         this.imageHeight = imageHeight;
     }
-
-    @JsProperty(name="imageWidth")
-    public double imageWidth;
 
     @JsOverlay
     public final double getImageWidth(){
@@ -67,9 +70,6 @@ public class PhotoSettings{
         this.imageWidth = imageWidth;
     }
 
-    @JsProperty(name="fillLightMode")
-    public String fillLightMode;
-
     @JsOverlay
     public final FillLightMode getFillLightMode(){
         return FillLightMode.of(this.fillLightMode);
@@ -79,6 +79,5 @@ public class PhotoSettings{
     public final void setFillLightMode(FillLightMode fillLightMode){
         this.fillLightMode = fillLightMode.getInternalValue();
     }
-
 
 }

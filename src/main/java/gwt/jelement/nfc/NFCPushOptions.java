@@ -25,11 +25,17 @@ import jsinterop.annotations.JsType;
 @JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class NFCPushOptions{
 
+    @JsProperty(name="target")
+    private String target;
+
+    @JsProperty(name="timeout")
+    private double timeout;
+
+    @JsProperty(name="ignoreRead")
+    private boolean ignoreRead;
+
     public NFCPushOptions(){
     }
-
-    @JsProperty(name="target")
-    public String target;
 
     @JsOverlay
     public final NFCPushTarget getTarget(){
@@ -41,9 +47,6 @@ public class NFCPushOptions{
         this.target = target.getInternalValue();
     }
 
-    @JsProperty(name="timeout")
-    public double timeout;
-
     @JsOverlay
     public final double getTimeout(){
         return this.timeout;
@@ -54,9 +57,6 @@ public class NFCPushOptions{
         this.timeout = timeout;
     }
 
-    @JsProperty(name="ignoreRead")
-    public boolean ignoreRead;
-
     @JsOverlay
     public final boolean getIgnoreRead(){
         return this.ignoreRead;
@@ -66,6 +66,5 @@ public class NFCPushOptions{
     public final void setIgnoreRead(boolean ignoreRead){
         this.ignoreRead = ignoreRead;
     }
-
 
 }

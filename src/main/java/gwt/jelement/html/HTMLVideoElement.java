@@ -20,6 +20,7 @@ import gwt.jelement.html.HTMLMediaElement;
 import gwt.jelement.mediasource.VideoPlaybackQuality;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -33,45 +34,59 @@ public class HTMLVideoElement extends HTMLMediaElement{
     }
     
     @JsProperty(name="width")
-    public double width;
+    public native double getWidth();
+    
+    @JsProperty(name="width")
+    public native void setWidth(double width);
     
     @JsProperty(name="height")
-    public double height;
+    public native double getHeight();
+    
+    @JsProperty(name="height")
+    public native void setHeight(double height);
     
     @JsProperty(name="videoWidth")
-    public double videoWidth;
+    public native double getVideoWidth();
     
     @JsProperty(name="videoHeight")
-    public double videoHeight;
+    public native double getVideoHeight();
     
     @JsProperty(name="poster")
-    public String poster;
+    public native String getPoster();
+    
+    @JsProperty(name="poster")
+    public native void setPoster(String poster);
     
     @JsProperty(name="webkitSupportsFullscreen")
-    public boolean webkitSupportsFullscreen;
+    public native boolean getWebkitSupportsFullscreen();
     
     @JsProperty(name="webkitDisplayingFullscreen")
-    public boolean webkitDisplayingFullscreen;
+    public native boolean getWebkitDisplayingFullscreen();
     
     @JsProperty(name="webkitDecodedFrameCount")
-    public double webkitDecodedFrameCount;
+    public native double getWebkitDecodedFrameCount();
     
     @JsProperty(name="webkitDroppedFrameCount")
-    public double webkitDroppedFrameCount;
+    public native double getWebkitDroppedFrameCount();
     
     @JsMethod(name = "getVideoPlaybackQuality")
     public native VideoPlaybackQuality getVideoPlaybackQuality();
     
+    
     @JsMethod(name = "webkitEnterFullScreen")
     public native void webkitEnterFullScreen();
+    
     
     @JsMethod(name = "webkitEnterFullscreen")
     public native void webkitEnterFullscreen();
     
+    
     @JsMethod(name = "webkitExitFullScreen")
     public native void webkitExitFullScreen();
     
+    
     @JsMethod(name = "webkitExitFullscreen")
     public native void webkitExitFullscreen();
+    
     
 }

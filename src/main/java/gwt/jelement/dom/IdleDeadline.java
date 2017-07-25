@@ -17,6 +17,7 @@
 package gwt.jelement.dom;
 
 import jsinterop.annotations.JsMethod;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -25,9 +26,10 @@ import jsinterop.annotations.JsType;
 public class IdleDeadline{
     
     @JsProperty(name="didTimeout")
-    public boolean didTimeout;
+    public native boolean getDidTimeout();
     
     @JsMethod(name = "timeRemaining")
     public native double timeRemaining();
+    
     
 }

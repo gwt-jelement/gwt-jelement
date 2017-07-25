@@ -19,6 +19,7 @@ package gwt.jelement.css.cssom;
 import gwt.jelement.css.cssom.CSSNumericValue;
 import gwt.jelement.css.cssom.CSSTransformComponent;
 import jsinterop.annotations.JsConstructor;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -32,10 +33,16 @@ public class CSSSkew extends CSSTransformComponent{
     }
     
     @JsProperty(name="ax")
-    public CSSNumericValue ax;
+    public native CSSNumericValue getAx();
+    
+    @JsProperty(name="ax")
+    public native void setAx(CSSNumericValue ax);
     
     @JsProperty(name="ay")
-    public CSSNumericValue ay;
+    public native CSSNumericValue getAy();
+    
+    @JsProperty(name="ay")
+    public native void setAy(CSSNumericValue ay);
     
     
 }

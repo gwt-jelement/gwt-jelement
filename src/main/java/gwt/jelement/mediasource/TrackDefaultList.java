@@ -18,6 +18,7 @@ package gwt.jelement.mediasource;
 
 import gwt.jelement.mediasource.TrackDefault;
 import jsinterop.annotations.JsConstructor;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -34,7 +35,7 @@ public class TrackDefaultList{
     }
     
     @JsProperty(name="length")
-    public double length;
+    public native double getLength();
     
     
 }

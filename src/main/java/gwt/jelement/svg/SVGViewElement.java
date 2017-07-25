@@ -20,6 +20,7 @@ import gwt.jelement.svg.SVGAnimatedPreserveAspectRatio;
 import gwt.jelement.svg.SVGAnimatedRect;
 import gwt.jelement.svg.SVGElement;
 import jsinterop.annotations.JsConstructor;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -37,13 +38,16 @@ public class SVGViewElement extends SVGElement{
     }
     
     @JsProperty(name="viewBox")
-    public SVGAnimatedRect viewBox;
+    public native SVGAnimatedRect getViewBox();
     
     @JsProperty(name="preserveAspectRatio")
-    public SVGAnimatedPreserveAspectRatio preserveAspectRatio;
+    public native SVGAnimatedPreserveAspectRatio getPreserveAspectRatio();
     
     @JsProperty(name="zoomAndPan")
-    public short zoomAndPan;
+    public native short getZoomAndPan();
+    
+    @JsProperty(name="zoomAndPan")
+    public native void setZoomAndPan(short zoomAndPan);
     
     
 }

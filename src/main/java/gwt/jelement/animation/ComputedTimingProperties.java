@@ -25,11 +25,23 @@ import jsinterop.annotations.JsType;
 @JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class ComputedTimingProperties extends AnimationEffectTimingProperties{
 
+    @JsProperty(name="endTime")
+    private double endTime;
+
+    @JsProperty(name="activeDuration")
+    private double activeDuration;
+
+    @JsProperty(name="localTime")
+    private double localTime;
+
+    @JsProperty(name="progress")
+    private double progress;
+
+    @JsProperty(name="currentIteration")
+    private double currentIteration;
+
     public ComputedTimingProperties(){
     }
-
-    @JsProperty(name="endTime")
-    public double endTime;
 
     @JsOverlay
     public final double getEndTime(){
@@ -41,9 +53,6 @@ public class ComputedTimingProperties extends AnimationEffectTimingProperties{
         this.endTime = endTime;
     }
 
-    @JsProperty(name="activeDuration")
-    public double activeDuration;
-
     @JsOverlay
     public final double getActiveDuration(){
         return this.activeDuration;
@@ -53,9 +62,6 @@ public class ComputedTimingProperties extends AnimationEffectTimingProperties{
     public final void setActiveDuration(double activeDuration){
         this.activeDuration = activeDuration;
     }
-
-    @JsProperty(name="localTime")
-    public double localTime;
 
     @JsOverlay
     public final double getLocalTime(){
@@ -67,9 +73,6 @@ public class ComputedTimingProperties extends AnimationEffectTimingProperties{
         this.localTime = localTime;
     }
 
-    @JsProperty(name="progress")
-    public double progress;
-
     @JsOverlay
     public final double getProgress(){
         return this.progress;
@@ -80,9 +83,6 @@ public class ComputedTimingProperties extends AnimationEffectTimingProperties{
         this.progress = progress;
     }
 
-    @JsProperty(name="currentIteration")
-    public double currentIteration;
-
     @JsOverlay
     public final double getCurrentIteration(){
         return this.currentIteration;
@@ -92,6 +92,5 @@ public class ComputedTimingProperties extends AnimationEffectTimingProperties{
     public final void setCurrentIteration(double currentIteration){
         this.currentIteration = currentIteration;
     }
-
 
 }

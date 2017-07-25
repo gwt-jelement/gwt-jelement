@@ -48,6 +48,7 @@ import gwt.jelement.webusb.USB;
 import elemental2.core.ArrayBufferView;
 import elemental2.promise.Promise;
 import jsinterop.annotations.JsMethod;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -56,180 +57,204 @@ import jsinterop.annotations.JsType;
 public class Navigator{
     
     @JsProperty(name="vendorSub")
-    public String vendorSub;
+    public native String getVendorSub();
     
     @JsProperty(name="productSub")
-    public String productSub;
+    public native String getProductSub();
     
     @JsProperty(name="vendor")
-    public String vendor;
+    public native String getVendor();
     
     @JsProperty(name="bluetooth")
-    public Bluetooth bluetooth;
+    public native Bluetooth getBluetooth();
     
     @JsProperty(name="budget")
-    public BudgetService budget;
+    public native BudgetService getBudget();
     
     @JsProperty(name="credentials")
-    public CredentialsContainer credentials;
+    public native CredentialsContainer getCredentials();
     
     @JsProperty(name="doNotTrack")
-    public String doNotTrack;
+    public native String getDoNotTrack();
     
     @JsProperty(name="maxTouchPoints")
-    public double maxTouchPoints;
+    public native double getMaxTouchPoints();
     
     @JsProperty(name="clipboard")
-    public Clipboard clipboard;
+    public native Clipboard getClipboard();
     
     @JsProperty(name="geolocation")
-    public Geolocation geolocation;
+    public native Geolocation getGeolocation();
     
     @JsProperty(name="mediaSession")
-    public MediaSession mediaSession;
+    public native MediaSession getMediaSession();
     
     @JsProperty(name="mediaDevices")
-    public MediaDevices mediaDevices;
+    public native MediaDevices getMediaDevices();
     
     @JsProperty(name="mediaCapabilities")
-    public MediaCapabilities mediaCapabilities;
+    public native MediaCapabilities getMediaCapabilities();
     
     @JsProperty(name="connection")
-    public NetworkInformation connection;
+    public native NetworkInformation getConnection();
     
     @JsProperty(name="nfc")
-    public NFC nfc;
+    public native NFC getNfc();
     
     @JsProperty(name="permissions")
-    public Permissions permissions;
+    public native Permissions getPermissions();
     
     @JsProperty(name="plugins")
-    public PluginArray plugins;
+    public native PluginArray getPlugins();
     
     @JsProperty(name="mimeTypes")
-    public MimeTypeArray mimeTypes;
+    public native MimeTypeArray getMimeTypes();
     
     @JsProperty(name="presentation")
-    public Presentation presentation;
+    public native Presentation getPresentation();
     
     @JsProperty(name="webkitTemporaryStorage")
-    public DeprecatedStorageQuota webkitTemporaryStorage;
+    public native DeprecatedStorageQuota getWebkitTemporaryStorage();
     
     @JsProperty(name="webkitPersistentStorage")
-    public DeprecatedStorageQuota webkitPersistentStorage;
+    public native DeprecatedStorageQuota getWebkitPersistentStorage();
     
     @JsProperty(name="storage")
-    public StorageManager storage;
+    public native StorageManager getStorage();
     
     @JsProperty(name="serviceWorker")
-    public ServiceWorkerContainer serviceWorker;
+    public native ServiceWorkerContainer getServiceWorker();
     
     @JsProperty(name="usb")
-    public USB usb;
+    public native USB getUsb();
     
     @JsProperty(name="hardwareConcurrency")
-    public double hardwareConcurrency;
+    public native double getHardwareConcurrency();
     
     @JsProperty(name="cookieEnabled")
-    public boolean cookieEnabled;
+    public native boolean getCookieEnabled();
     
     @JsProperty(name="appCodeName")
-    public String appCodeName;
+    public native String getAppCodeName();
     
     @JsProperty(name="appName")
-    public String appName;
+    public native String getAppName();
     
     @JsProperty(name="appVersion")
-    public String appVersion;
+    public native String getAppVersion();
     
     @JsProperty(name="platform")
-    public String platform;
+    public native String getPlatform();
     
     @JsProperty(name="product")
-    public String product;
+    public native String getProduct();
     
     @JsProperty(name="userAgent")
-    public String userAgent;
+    public native String getUserAgent();
     
     @JsProperty(name="language")
-    public String language;
+    public native String getLanguage();
     
     @JsProperty(name="languages")
-    public String[] languages;
+    public native String[] getLanguages();
     
     @JsProperty(name="onLine")
-    public boolean onLine;
+    public native boolean getOnLine();
     
     @JsMethod(name = "cancelKeyboardLock")
     public native void cancelKeyboardLock();
     
+    
     @JsMethod(name = "getBattery")
     public native Promise getBattery();
+    
     
     @JsMethod(name = "getGamepads")
     public native GamepadList getGamepads();
     
+    
     @JsMethod(name = "getInstalledRelatedApps")
     public native Promise<RelatedApplication> getInstalledRelatedApps();
+    
     
     @JsMethod(name = "getUserMedia")
     public native void getUserMedia(MediaStreamConstraints constraints, NavigatorUserMediaSuccessCallback successCallback, NavigatorUserMediaErrorCallback errorCallback);
     
+    
     @JsMethod(name = "getVRDisplays")
     public native Promise getVRDisplays();
+    
     
     @JsMethod(name = "isProtocolHandlerRegistered")
     public native String isProtocolHandlerRegistered(String scheme, String url);
     
+    
     @JsMethod(name = "javaEnabled")
     public native boolean javaEnabled();
+    
     
     @JsMethod(name = "registerProtocolHandler")
     public native void registerProtocolHandler(String scheme, String url, String title);
     
+    
     @JsMethod(name = "requestKeyboardLock")
     public native Promise<Void> requestKeyboardLock();
+    
     
     @JsMethod(name = "requestKeyboardLock")
     public native Promise<Void> requestKeyboardLock(String[] keyCodes);
     
+    
     @JsMethod(name = "requestMIDIAccess")
     public native Promise requestMIDIAccess();
+    
     
     @JsMethod(name = "requestMIDIAccess")
     public native Promise requestMIDIAccess(MIDIOptions options);
     
+    
     @JsMethod(name = "requestMediaKeySystemAccess")
     public native Promise<MediaKeySystemAccess> requestMediaKeySystemAccess(String keySystem, MediaKeySystemConfiguration[] supportedConfigurations);
+    
     
     @JsMethod(name = "sendBeacon")
     public native boolean sendBeacon(String url);
     
+    
     @JsMethod(name = "sendBeacon")
     public native boolean sendBeacon(String url, ArrayBufferView data);
+    
     
     @JsMethod(name = "sendBeacon")
     public native boolean sendBeacon(String url, Blob data);
     
+    
     @JsMethod(name = "sendBeacon")
     public native boolean sendBeacon(String url, String data);
+    
     
     @JsMethod(name = "sendBeacon")
     public native boolean sendBeacon(String url, FormData data);
     
+    
     @JsMethod(name = "share")
     public native Promise<Void> share(ShareData data);
+    
     
     @JsMethod(name = "unregisterProtocolHandler")
     public native void unregisterProtocolHandler(String scheme, String url);
     
+    
     @JsMethod(name = "vibrate")
     public native boolean vibrate(double pattern);
+    
     
     @JsMethod(name = "vibrate")
     public native boolean vibrate(double[] pattern);
     
+    
     @JsMethod(name = "webkitGetUserMedia")
     public native void webkitGetUserMedia(MediaStreamConstraints constraints, NavigatorUserMediaSuccessCallback successCallback, NavigatorUserMediaErrorCallback errorCallback);
+    
     
 }

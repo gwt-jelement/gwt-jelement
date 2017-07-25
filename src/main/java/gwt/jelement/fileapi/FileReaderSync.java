@@ -20,6 +20,7 @@ import gwt.jelement.fileapi.Blob;
 import elemental2.core.ArrayBuffer;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
@@ -33,16 +34,21 @@ public class FileReaderSync{
     @JsMethod(name = "readAsArrayBuffer")
     public native ArrayBuffer readAsArrayBuffer(Blob blob);
     
+    
     @JsMethod(name = "readAsBinaryString")
     public native String readAsBinaryString(Blob blob);
+    
     
     @JsMethod(name = "readAsDataURL")
     public native String readAsDataURL(Blob blob);
     
+    
     @JsMethod(name = "readAsText")
     public native String readAsText(Blob blob);
     
+    
     @JsMethod(name = "readAsText")
     public native String readAsText(Blob blob, String label);
+    
     
 }

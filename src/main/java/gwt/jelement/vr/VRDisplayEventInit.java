@@ -27,11 +27,14 @@ import jsinterop.annotations.JsType;
 @JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class VRDisplayEventInit extends EventInit{
 
+    @JsProperty(name="display")
+    private VRDisplay display;
+
+    @JsProperty(name="reason")
+    private String reason;
+
     public VRDisplayEventInit(){
     }
-
-    @JsProperty(name="display")
-    public VRDisplay display;
 
     @JsOverlay
     public final VRDisplay getDisplay(){
@@ -43,9 +46,6 @@ public class VRDisplayEventInit extends EventInit{
         this.display = display;
     }
 
-    @JsProperty(name="reason")
-    public String reason;
-
     @JsOverlay
     public final VRDisplayEventReason getReason(){
         return VRDisplayEventReason.of(this.reason);
@@ -55,6 +55,5 @@ public class VRDisplayEventInit extends EventInit{
     public final void setReason(VRDisplayEventReason reason){
         this.reason = reason.getInternalValue();
     }
-
 
 }

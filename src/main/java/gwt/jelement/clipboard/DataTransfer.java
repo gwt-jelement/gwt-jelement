@@ -21,6 +21,7 @@ import gwt.jelement.dom.Element;
 import gwt.jelement.fileapi.FileList;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -33,33 +34,44 @@ public class DataTransfer{
     }
     
     @JsProperty(name="dropEffect")
-    public String dropEffect;
+    public native String getDropEffect();
+    
+    @JsProperty(name="dropEffect")
+    public native void setDropEffect(String dropEffect);
     
     @JsProperty(name="effectAllowed")
-    public String effectAllowed;
+    public native String getEffectAllowed();
+    
+    @JsProperty(name="effectAllowed")
+    public native void setEffectAllowed(String effectAllowed);
     
     @JsProperty(name="items")
-    public DataTransferItemList items;
+    public native DataTransferItemList getItems();
     
     @JsProperty(name="types")
-    public String[] types;
+    public native String[] getTypes();
     
     @JsProperty(name="files")
-    public FileList files;
+    public native FileList getFiles();
     
     @JsMethod(name = "clearData")
     public native void clearData();
     
+    
     @JsMethod(name = "clearData")
     public native void clearData(String format);
+    
     
     @JsMethod(name = "getData")
     public native String getData(String format);
     
+    
     @JsMethod(name = "setData")
     public native void setData(String format, String data);
     
+    
     @JsMethod(name = "setDragImage")
     public native void setDragImage(Element image, double x, double y);
+    
     
 }

@@ -27,11 +27,20 @@ import jsinterop.annotations.JsType;
 @JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class DeviceMotionEventInit extends EventInit{
 
+    @JsProperty(name="acceleration")
+    private DeviceAccelerationInit acceleration;
+
+    @JsProperty(name="accelerationIncludingGravity")
+    private DeviceAccelerationInit accelerationIncludingGravity;
+
+    @JsProperty(name="rotationRate")
+    private DeviceRotationRateInit rotationRate;
+
+    @JsProperty(name="interval")
+    private double interval;
+
     public DeviceMotionEventInit(){
     }
-
-    @JsProperty(name="acceleration")
-    public DeviceAccelerationInit acceleration;
 
     @JsOverlay
     public final DeviceAccelerationInit getAcceleration(){
@@ -43,9 +52,6 @@ public class DeviceMotionEventInit extends EventInit{
         this.acceleration = acceleration;
     }
 
-    @JsProperty(name="accelerationIncludingGravity")
-    public DeviceAccelerationInit accelerationIncludingGravity;
-
     @JsOverlay
     public final DeviceAccelerationInit getAccelerationIncludingGravity(){
         return this.accelerationIncludingGravity;
@@ -55,9 +61,6 @@ public class DeviceMotionEventInit extends EventInit{
     public final void setAccelerationIncludingGravity(DeviceAccelerationInit accelerationIncludingGravity){
         this.accelerationIncludingGravity = accelerationIncludingGravity;
     }
-
-    @JsProperty(name="rotationRate")
-    public DeviceRotationRateInit rotationRate;
 
     @JsOverlay
     public final DeviceRotationRateInit getRotationRate(){
@@ -69,9 +72,6 @@ public class DeviceMotionEventInit extends EventInit{
         this.rotationRate = rotationRate;
     }
 
-    @JsProperty(name="interval")
-    public double interval;
-
     @JsOverlay
     public final double getInterval(){
         return this.interval;
@@ -81,6 +81,5 @@ public class DeviceMotionEventInit extends EventInit{
     public final void setInterval(double interval){
         this.interval = interval;
     }
-
 
 }

@@ -20,6 +20,7 @@ import gwt.jelement.events.Event;
 import gwt.jelement.gamepad.Gamepad;
 import gwt.jelement.gamepad.GamepadEventInit;
 import jsinterop.annotations.JsConstructor;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -38,7 +39,7 @@ public class GamepadEvent extends Event{
     }
     
     @JsProperty(name="gamepad")
-    public Gamepad gamepad;
+    public native Gamepad getGamepad();
     
     
 }

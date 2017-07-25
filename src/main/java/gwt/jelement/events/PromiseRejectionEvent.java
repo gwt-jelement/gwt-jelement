@@ -20,6 +20,7 @@ import gwt.jelement.events.Event;
 import gwt.jelement.events.PromiseRejectionEventInit;
 import elemental2.promise.Promise;
 import jsinterop.annotations.JsConstructor;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -33,10 +34,10 @@ public class PromiseRejectionEvent extends Event{
     }
     
     @JsProperty(name="promise")
-    public Promise<Object> promise;
+    public native Promise<Object> getPromise();
     
     @JsProperty(name="reason")
-    public Object reason;
+    public native Object getReason();
     
     
 }

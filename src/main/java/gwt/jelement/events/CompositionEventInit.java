@@ -25,11 +25,11 @@ import jsinterop.annotations.JsType;
 @JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class CompositionEventInit extends UIEventInit{
 
+    @JsProperty(name="data")
+    private String data;
+
     public CompositionEventInit(){
     }
-
-    @JsProperty(name="data")
-    public String data;
 
     @JsOverlay
     public final String getData(){
@@ -40,6 +40,5 @@ public class CompositionEventInit extends UIEventInit{
     public final void setData(String data){
         this.data = data;
     }
-
 
 }

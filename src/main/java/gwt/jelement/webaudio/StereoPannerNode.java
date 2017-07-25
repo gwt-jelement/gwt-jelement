@@ -21,6 +21,7 @@ import gwt.jelement.webaudio.AudioParam;
 import gwt.jelement.webaudio.BaseAudioContext;
 import gwt.jelement.webaudio.StereoPannerOptions;
 import jsinterop.annotations.JsConstructor;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -39,7 +40,7 @@ public class StereoPannerNode extends AudioNode{
     }
     
     @JsProperty(name="pan")
-    public AudioParam pan;
+    public native AudioParam getPan();
     
     
 }

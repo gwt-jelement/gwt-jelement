@@ -64,6 +64,12 @@ public class ScrollTimeline extends AnimationTimeline{
     
     }
     
+    @JsProperty(name="orientation")
+    private String orientation;
+    
+    @JsProperty(name="timeRange")
+    private TimeRangeUnion timeRange;
+    
     @JsConstructor
     public ScrollTimeline(){
         super();
@@ -75,18 +81,17 @@ public class ScrollTimeline extends AnimationTimeline{
     }
     
     @JsProperty(name="scrollSource")
-    public Element scrollSource;
-    
-    @JsProperty(name="orientation")
-    public String orientation;
+    public native Element getScrollSource();
     
     @JsOverlay
     public final ScrollDirection getOrientation(){
        return ScrollDirection.of(orientation);
     }
     
-    @JsProperty(name="timeRange")
-    public TimeRangeUnion timeRange;
+    @JsOverlay
+    public final TimeRangeUnion getTimeRange(){
+        return this.timeRange;
+    }
     
     
 }

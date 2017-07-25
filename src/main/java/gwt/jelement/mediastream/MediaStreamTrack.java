@@ -34,65 +34,108 @@ import jsinterop.annotations.JsType;
 @JsType(namespace = JsPackage.GLOBAL, isNative = true)
 public class MediaStreamTrack extends EventTarget{
     
+    @JsProperty(name="onmute")
+    private EventHandlerNonNull onmute;
+    
+    @JsProperty(name="onunmute")
+    private EventHandlerNonNull onunmute;
+    
+    @JsProperty(name="readyState")
+    private String readyState;
+    
+    @JsProperty(name="onended")
+    private EventHandlerNonNull onended;
+    
     @JsConstructor
     public MediaStreamTrack(){
         super();
     }
     
     @JsProperty(name="kind")
-    public String kind;
+    public native String getKind();
     
     @JsProperty(name="id")
-    public String id;
+    public native String getId();
     
     @JsProperty(name="label")
-    public String label;
+    public native String getLabel();
     
     @JsProperty(name="enabled")
-    public boolean enabled;
+    public native boolean getEnabled();
+    
+    @JsProperty(name="enabled")
+    public native void setEnabled(boolean enabled);
     
     @JsProperty(name="muted")
-    public boolean muted;
+    public native boolean getMuted();
     
-    @JsProperty(name="onmute")
-    public EventHandlerNonNull onmute;
+    @JsOverlay
+    public final EventHandlerNonNull getOnMute(){
+        return this.onmute;
+    }
     
-    @JsProperty(name="onunmute")
-    public EventHandlerNonNull onunmute;
+    @JsOverlay
+    public final void setOnMute(EventHandlerNonNull onmute){
+        this.onmute = onmute;
+    }
     
-    @JsProperty(name="readyState")
-    public String readyState;
+    @JsOverlay
+    public final EventHandlerNonNull getOnUnmute(){
+        return this.onunmute;
+    }
+    
+    @JsOverlay
+    public final void setOnUnmute(EventHandlerNonNull onunmute){
+        this.onunmute = onunmute;
+    }
     
     @JsOverlay
     public final MediaStreamTrackState getReadyState(){
        return MediaStreamTrackState.of(readyState);
     }
     
-    @JsProperty(name="onended")
-    public EventHandlerNonNull onended;
+    @JsOverlay
+    public final EventHandlerNonNull getOnEnded(){
+        return this.onended;
+    }
+    
+    @JsOverlay
+    public final void setOnEnded(EventHandlerNonNull onended){
+        this.onended = onended;
+    }
     
     @JsProperty(name="contentHint")
-    public String contentHint;
+    public native String getContentHint();
+    
+    @JsProperty(name="contentHint")
+    public native void setContentHint(String contentHint);
     
     @JsMethod(name = "applyConstraints")
     public native Promise<MediaTrackConstraints> applyConstraints();
     
+    
     @JsMethod(name = "applyConstraints")
     public native Promise<MediaTrackConstraints> applyConstraints(MediaTrackConstraints constraints);
+    
     
     @JsMethod(name = "clone")
     public native MediaStreamTrack clone();
     
+    
     @JsMethod(name = "getCapabilities")
     public native MediaTrackCapabilities getCapabilities();
+    
     
     @JsMethod(name = "getConstraints")
     public native MediaTrackConstraints getConstraints();
     
+    
     @JsMethod(name = "getSettings")
     public native MediaTrackSettings getSettings();
     
+    
     @JsMethod(name = "stop")
     public native void stop();
+    
     
 }

@@ -20,6 +20,7 @@ import gwt.jelement.events.UIEvent;
 import gwt.jelement.frame.Window;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -33,24 +34,30 @@ public class TextEvent extends UIEvent{
     }
     
     @JsProperty(name="data")
-    public String data;
+    public native String getData();
     
     @JsMethod(name = "initTextEvent")
     public native void initTextEvent();
     
+    
     @JsMethod(name = "initTextEvent")
     public native void initTextEvent(String type);
+    
     
     @JsMethod(name = "initTextEvent")
     public native void initTextEvent(String type, boolean bubbles);
     
+    
     @JsMethod(name = "initTextEvent")
     public native void initTextEvent(String type, boolean bubbles, boolean cancelable);
+    
     
     @JsMethod(name = "initTextEvent")
     public native void initTextEvent(String type, boolean bubbles, boolean cancelable, Window view);
     
+    
     @JsMethod(name = "initTextEvent")
     public native void initTextEvent(String type, boolean bubbles, boolean cancelable, Window view, String data);
+    
     
 }

@@ -25,11 +25,14 @@ import jsinterop.annotations.JsType;
 @JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class ConstrainDoubleRange extends DoubleRange{
 
+    @JsProperty(name="exact")
+    private double exact;
+
+    @JsProperty(name="ideal")
+    private double ideal;
+
     public ConstrainDoubleRange(){
     }
-
-    @JsProperty(name="exact")
-    public double exact;
 
     @JsOverlay
     public final double getExact(){
@@ -41,9 +44,6 @@ public class ConstrainDoubleRange extends DoubleRange{
         this.exact = exact;
     }
 
-    @JsProperty(name="ideal")
-    public double ideal;
-
     @JsOverlay
     public final double getIdeal(){
         return this.ideal;
@@ -53,6 +53,5 @@ public class ConstrainDoubleRange extends DoubleRange{
     public final void setIdeal(double ideal){
         this.ideal = ideal;
     }
-
 
 }

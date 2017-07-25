@@ -16,6 +16,7 @@
  */
 package gwt.jelement.device_orientation;
 
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -24,13 +25,13 @@ import jsinterop.annotations.JsType;
 public class DeviceAcceleration{
     
     @JsProperty(name="x")
-    public double x;
+    public native double getX();
     
     @JsProperty(name="y")
-    public double y;
+    public native double getY();
     
     @JsProperty(name="z")
-    public double z;
+    public native double getZ();
     
     
 }

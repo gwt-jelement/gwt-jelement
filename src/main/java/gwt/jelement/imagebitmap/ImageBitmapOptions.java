@@ -28,11 +28,26 @@ import jsinterop.annotations.JsType;
 @JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class ImageBitmapOptions{
 
+    @JsProperty(name="imageOrientation")
+    private String imageOrientation;
+
+    @JsProperty(name="premultiplyAlpha")
+    private String premultiplyAlpha;
+
+    @JsProperty(name="colorSpaceConversion")
+    private String colorSpaceConversion;
+
+    @JsProperty(name="resizeWidth")
+    private double resizeWidth;
+
+    @JsProperty(name="resizeHeight")
+    private double resizeHeight;
+
+    @JsProperty(name="resizeQuality")
+    private String resizeQuality;
+
     public ImageBitmapOptions(){
     }
-
-    @JsProperty(name="imageOrientation")
-    public String imageOrientation;
 
     @JsOverlay
     public final ImageOrientation getImageOrientation(){
@@ -44,9 +59,6 @@ public class ImageBitmapOptions{
         this.imageOrientation = imageOrientation.getInternalValue();
     }
 
-    @JsProperty(name="premultiplyAlpha")
-    public String premultiplyAlpha;
-
     @JsOverlay
     public final PremultiplyAlpha getPremultiplyAlpha(){
         return PremultiplyAlpha.of(this.premultiplyAlpha);
@@ -56,9 +68,6 @@ public class ImageBitmapOptions{
     public final void setPremultiplyAlpha(PremultiplyAlpha premultiplyAlpha){
         this.premultiplyAlpha = premultiplyAlpha.getInternalValue();
     }
-
-    @JsProperty(name="colorSpaceConversion")
-    public String colorSpaceConversion;
 
     @JsOverlay
     public final ColorSpaceConversion getColorSpaceConversion(){
@@ -70,9 +79,6 @@ public class ImageBitmapOptions{
         this.colorSpaceConversion = colorSpaceConversion.getInternalValue();
     }
 
-    @JsProperty(name="resizeWidth")
-    public double resizeWidth;
-
     @JsOverlay
     public final double getResizeWidth(){
         return this.resizeWidth;
@@ -82,9 +88,6 @@ public class ImageBitmapOptions{
     public final void setResizeWidth(double resizeWidth){
         this.resizeWidth = resizeWidth;
     }
-
-    @JsProperty(name="resizeHeight")
-    public double resizeHeight;
 
     @JsOverlay
     public final double getResizeHeight(){
@@ -96,9 +99,6 @@ public class ImageBitmapOptions{
         this.resizeHeight = resizeHeight;
     }
 
-    @JsProperty(name="resizeQuality")
-    public String resizeQuality;
-
     @JsOverlay
     public final ResizeQuality getResizeQuality(){
         return ResizeQuality.of(this.resizeQuality);
@@ -108,6 +108,5 @@ public class ImageBitmapOptions{
     public final void setResizeQuality(ResizeQuality resizeQuality){
         this.resizeQuality = resizeQuality.getInternalValue();
     }
-
 
 }

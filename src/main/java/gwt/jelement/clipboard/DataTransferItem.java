@@ -20,6 +20,7 @@ import gwt.jelement.dom.FunctionStringCallback;
 import gwt.jelement.fileapi.File;
 import gwt.jelement.filesystem.Entry;
 import jsinterop.annotations.JsMethod;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -28,18 +29,21 @@ import jsinterop.annotations.JsType;
 public class DataTransferItem{
     
     @JsProperty(name="kind")
-    public String kind;
+    public native String getKind();
     
     @JsProperty(name="type")
-    public String type;
+    public native String getType();
     
     @JsMethod(name = "getAsFile")
     public native File getAsFile();
     
+    
     @JsMethod(name = "getAsString")
     public native void getAsString(FunctionStringCallback callback);
     
+    
     @JsMethod(name = "webkitGetAsEntry")
     public native Entry webkitGetAsEntry();
+    
     
 }

@@ -26,11 +26,14 @@ import jsinterop.annotations.JsType;
 @JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class BlobEventInit extends EventInit{
 
+    @JsProperty(name="data")
+    private Blob data;
+
+    @JsProperty(name="timecode")
+    private double timecode;
+
     public BlobEventInit(){
     }
-
-    @JsProperty(name="data")
-    public Blob data;
 
     @JsOverlay
     public final Blob getData(){
@@ -42,9 +45,6 @@ public class BlobEventInit extends EventInit{
         this.data = data;
     }
 
-    @JsProperty(name="timecode")
-    public double timecode;
-
     @JsOverlay
     public final double getTimecode(){
         return this.timecode;
@@ -54,6 +54,5 @@ public class BlobEventInit extends EventInit{
     public final void setTimecode(double timecode){
         this.timecode = timecode;
     }
-
 
 }

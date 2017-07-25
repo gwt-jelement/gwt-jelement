@@ -28,21 +28,31 @@ import jsinterop.annotations.JsType;
 @JsType(namespace = JsPackage.GLOBAL, isNative = true)
 public class PermissionStatus extends EventTarget{
     
+    @JsProperty(name="state")
+    private String state;
+    
+    @JsProperty(name="onchange")
+    private EventHandlerNonNull onchange;
+    
     @JsConstructor
     public PermissionStatus(){
         super();
     }
-    
-    @JsProperty(name="state")
-    public String state;
     
     @JsOverlay
     public final PermissionState getState(){
        return PermissionState.of(state);
     }
     
-    @JsProperty(name="onchange")
-    public EventHandlerNonNull onchange;
+    @JsOverlay
+    public final EventHandlerNonNull getOnChange(){
+        return this.onchange;
+    }
+    
+    @JsOverlay
+    public final void setOnChange(EventHandlerNonNull onchange){
+        this.onchange = onchange;
+    }
     
     
 }

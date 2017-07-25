@@ -20,6 +20,7 @@ import gwt.jelement.events.EventTarget;
 import gwt.jelement.events.FocusEventInit;
 import gwt.jelement.events.UIEvent;
 import jsinterop.annotations.JsConstructor;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -38,7 +39,7 @@ public class FocusEvent extends UIEvent{
     }
     
     @JsProperty(name="relatedTarget")
-    public EventTarget relatedTarget;
+    public native EventTarget getRelatedTarget();
     
     
 }

@@ -17,6 +17,7 @@
 package gwt.jelement.dom;
 
 import gwt.jelement.dom.Element;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -25,10 +26,10 @@ import jsinterop.annotations.JsType;
 public class NonDocumentTypeChildNode{
     
     @JsProperty(name="previousElementSibling")
-    public Element previousElementSibling;
+    public native Element getPreviousElementSibling();
     
     @JsProperty(name="nextElementSibling")
-    public Element nextElementSibling;
+    public native Element getNextElementSibling();
     
     
 }

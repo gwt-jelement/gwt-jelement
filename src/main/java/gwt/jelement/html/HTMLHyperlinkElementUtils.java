@@ -16,6 +16,7 @@
  */
 package gwt.jelement.html;
 
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -24,37 +25,67 @@ import jsinterop.annotations.JsType;
 public class HTMLHyperlinkElementUtils{
     
     @JsProperty(name="href")
-    public String href;
+    public native String getHref();
+    
+    @JsProperty(name="href")
+    public native void setHref(String href);
     
     @JsProperty(name="origin")
-    public String origin;
+    public native String getOrigin();
     
     @JsProperty(name="protocol")
-    public String protocol;
+    public native String getProtocol();
+    
+    @JsProperty(name="protocol")
+    public native void setProtocol(String protocol);
     
     @JsProperty(name="username")
-    public String username;
+    public native String getUsername();
+    
+    @JsProperty(name="username")
+    public native void setUsername(String username);
     
     @JsProperty(name="password")
-    public String password;
+    public native String getPassword();
+    
+    @JsProperty(name="password")
+    public native void setPassword(String password);
     
     @JsProperty(name="host")
-    public String host;
+    public native String getHost();
+    
+    @JsProperty(name="host")
+    public native void setHost(String host);
     
     @JsProperty(name="hostname")
-    public String hostname;
+    public native String getHostname();
+    
+    @JsProperty(name="hostname")
+    public native void setHostname(String hostname);
     
     @JsProperty(name="port")
-    public String port;
+    public native String getPort();
+    
+    @JsProperty(name="port")
+    public native void setPort(String port);
     
     @JsProperty(name="pathname")
-    public String pathname;
+    public native String getPathname();
+    
+    @JsProperty(name="pathname")
+    public native void setPathname(String pathname);
     
     @JsProperty(name="search")
-    public String search;
+    public native String getSearch();
+    
+    @JsProperty(name="search")
+    public native void setSearch(String search);
     
     @JsProperty(name="hash")
-    public String hash;
+    public native String getHash();
+    
+    @JsProperty(name="hash")
+    public native void setHash(String hash);
     
     
 }

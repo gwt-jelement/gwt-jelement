@@ -18,6 +18,7 @@ package gwt.jelement.peerconnection;
 
 import elemental2.core.Date;
 import jsinterop.annotations.JsMethod;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -26,18 +27,20 @@ import jsinterop.annotations.JsType;
 public class RTCLegacyStatsReport{
     
     @JsProperty(name="timestamp")
-    public Date timestamp;
+    public native Date getTimestamp();
     
     @JsProperty(name="id")
-    public String id;
+    public native String getId();
     
     @JsProperty(name="type")
-    public String type;
+    public native String getType();
     
     @JsMethod(name = "names")
     public native String[] names();
     
+    
     @JsMethod(name = "stat")
     public native String stat(String name);
+    
     
 }

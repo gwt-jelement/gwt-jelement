@@ -24,11 +24,11 @@ import jsinterop.annotations.JsType;
 @JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class PeriodicWaveConstraints{
 
+    @JsProperty(name="disableNormalization")
+    private boolean disableNormalization;
+
     public PeriodicWaveConstraints(){
     }
-
-    @JsProperty(name="disableNormalization")
-    public boolean disableNormalization;
 
     @JsOverlay
     public final boolean getDisableNormalization(){
@@ -39,6 +39,5 @@ public class PeriodicWaveConstraints{
     public final void setDisableNormalization(boolean disableNormalization){
         this.disableNormalization = disableNormalization;
     }
-
 
 }

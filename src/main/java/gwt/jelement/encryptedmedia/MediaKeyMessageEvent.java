@@ -28,13 +28,13 @@ import jsinterop.annotations.JsType;
 @JsType(namespace = JsPackage.GLOBAL, isNative = true)
 public class MediaKeyMessageEvent extends Event{
     
+    @JsProperty(name="messageType")
+    private String messageType;
+    
     @JsConstructor
     public MediaKeyMessageEvent(){
         super((String) null);
     }
-    
-    @JsProperty(name="messageType")
-    public String messageType;
     
     @JsOverlay
     public final MediaKeyMessageType getMessageType(){
@@ -42,7 +42,7 @@ public class MediaKeyMessageEvent extends Event{
     }
     
     @JsProperty(name="message")
-    public ArrayBuffer message;
+    public native ArrayBuffer getMessage();
     
     
 }

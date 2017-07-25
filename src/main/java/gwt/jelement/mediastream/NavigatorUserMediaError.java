@@ -16,6 +16,7 @@
  */
 package gwt.jelement.mediastream;
 
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -24,13 +25,13 @@ import jsinterop.annotations.JsType;
 public class NavigatorUserMediaError{
     
     @JsProperty(name="name")
-    public String name;
+    public native String getName();
     
     @JsProperty(name="message")
-    public String message;
+    public native String getMessage();
     
     @JsProperty(name="constraintName")
-    public String constraintName;
+    public native String getConstraintName();
     
     
 }

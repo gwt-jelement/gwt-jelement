@@ -25,11 +25,11 @@ import jsinterop.annotations.JsType;
 @JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class ChannelMergerOptions extends AudioNodeOptions{
 
+    @JsProperty(name="numberOfInputs")
+    private double numberOfInputs;
+
     public ChannelMergerOptions(){
     }
-
-    @JsProperty(name="numberOfInputs")
-    public double numberOfInputs;
 
     @JsOverlay
     public final double getNumberOfInputs(){
@@ -40,6 +40,5 @@ public class ChannelMergerOptions extends AudioNodeOptions{
     public final void setNumberOfInputs(double numberOfInputs){
         this.numberOfInputs = numberOfInputs;
     }
-
 
 }

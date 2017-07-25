@@ -19,6 +19,7 @@ package gwt.jelement.timing;
 import gwt.jelement.timing.PerformanceEntry;
 import gwt.jelement.timing.PerformanceServerTiming;
 import jsinterop.annotations.JsConstructor;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -32,58 +33,58 @@ public class PerformanceResourceTiming extends PerformanceEntry{
     }
     
     @JsProperty(name="initiatorType")
-    public String initiatorType;
+    public native String getInitiatorType();
     
     @JsProperty(name="nextHopProtocol")
-    public String nextHopProtocol;
+    public native String getNextHopProtocol();
     
     @JsProperty(name="workerStart")
-    public double workerStart;
+    public native double getWorkerStart();
     
     @JsProperty(name="redirectStart")
-    public double redirectStart;
+    public native double getRedirectStart();
     
     @JsProperty(name="redirectEnd")
-    public double redirectEnd;
+    public native double getRedirectEnd();
     
     @JsProperty(name="fetchStart")
-    public double fetchStart;
+    public native double getFetchStart();
     
     @JsProperty(name="domainLookupStart")
-    public double domainLookupStart;
+    public native double getDomainLookupStart();
     
     @JsProperty(name="domainLookupEnd")
-    public double domainLookupEnd;
+    public native double getDomainLookupEnd();
     
     @JsProperty(name="connectStart")
-    public double connectStart;
+    public native double getConnectStart();
     
     @JsProperty(name="connectEnd")
-    public double connectEnd;
+    public native double getConnectEnd();
     
     @JsProperty(name="secureConnectionStart")
-    public double secureConnectionStart;
+    public native double getSecureConnectionStart();
     
     @JsProperty(name="requestStart")
-    public double requestStart;
+    public native double getRequestStart();
     
     @JsProperty(name="responseStart")
-    public double responseStart;
+    public native double getResponseStart();
     
     @JsProperty(name="responseEnd")
-    public double responseEnd;
+    public native double getResponseEnd();
     
     @JsProperty(name="transferSize")
-    public double transferSize;
+    public native double getTransferSize();
     
     @JsProperty(name="encodedBodySize")
-    public double encodedBodySize;
+    public native double getEncodedBodySize();
     
     @JsProperty(name="decodedBodySize")
-    public double decodedBodySize;
+    public native double getDecodedBodySize();
     
     @JsProperty(name="serverTiming")
-    public PerformanceServerTiming[] serverTiming;
+    public native PerformanceServerTiming[] getServerTiming();
     
     
 }

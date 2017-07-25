@@ -37,58 +37,59 @@ import jsinterop.base.Any;
 public class USBDevice{
     
     @JsProperty(name="usbVersionMajor")
-    public byte usbVersionMajor;
+    public native byte getUsbVersionMajor();
     
     @JsProperty(name="usbVersionMinor")
-    public byte usbVersionMinor;
+    public native byte getUsbVersionMinor();
     
     @JsProperty(name="usbVersionSubminor")
-    public byte usbVersionSubminor;
+    public native byte getUsbVersionSubminor();
     
     @JsProperty(name="deviceClass")
-    public byte deviceClass;
+    public native byte getDeviceClass();
     
     @JsProperty(name="deviceSubclass")
-    public byte deviceSubclass;
+    public native byte getDeviceSubclass();
     
     @JsProperty(name="deviceProtocol")
-    public byte deviceProtocol;
+    public native byte getDeviceProtocol();
     
     @JsProperty(name="vendorId")
-    public short vendorId;
+    public native short getVendorId();
     
     @JsProperty(name="productId")
-    public short productId;
+    public native short getProductId();
     
     @JsProperty(name="deviceVersionMajor")
-    public byte deviceVersionMajor;
+    public native byte getDeviceVersionMajor();
     
     @JsProperty(name="deviceVersionMinor")
-    public byte deviceVersionMinor;
+    public native byte getDeviceVersionMinor();
     
     @JsProperty(name="deviceVersionSubminor")
-    public byte deviceVersionSubminor;
+    public native byte getDeviceVersionSubminor();
     
     @JsProperty(name="manufacturerName")
-    public String manufacturerName;
+    public native String getManufacturerName();
     
     @JsProperty(name="productName")
-    public String productName;
+    public native String getProductName();
     
     @JsProperty(name="serialNumber")
-    public String serialNumber;
+    public native String getSerialNumber();
     
     @JsProperty(name="configuration")
-    public USBConfiguration configuration;
+    public native USBConfiguration getConfiguration();
     
     @JsProperty(name="configurations")
-    public USBConfiguration[] configurations;
+    public native USBConfiguration[] getConfigurations();
     
     @JsProperty(name="opened")
-    public boolean opened;
+    public native boolean getOpened();
     
     @JsMethod(name = "claimInterface")
     public native Promise<Void> claimInterface(byte interfaceNumber);
+    
     
     @JsOverlay
     public final Promise<Void> clearHalt(USBDirection direction, byte endpointNumber){
@@ -98,52 +99,69 @@ public class USBDevice{
     @JsMethod(name = "clearHalt")
     public native Promise<Void> clearHalt(String direction, byte endpointNumber);
     
+    
     @JsMethod(name = "close")
     public native Promise<Void> close();
+    
     
     @JsMethod(name = "controlTransferIn")
     public native Promise<USBInTransferResult> controlTransferIn(USBControlTransferParameters setup, short length);
     
+    
     @JsMethod(name = "controlTransferOut")
     public native Promise<USBOutTransferResult> controlTransferOut(USBControlTransferParameters setup);
+    
     
     @JsMethod(name = "controlTransferOut")
     public native Promise<USBOutTransferResult> controlTransferOut(USBControlTransferParameters setup, ArrayBuffer data);
     
+    
     @JsMethod(name = "controlTransferOut")
     public native Promise<USBOutTransferResult> controlTransferOut(USBControlTransferParameters setup, ArrayBufferView data);
+    
     
     @JsMethod(name = "isochronousTransferIn")
     public native Promise<USBIsochronousInTransferResult> isochronousTransferIn(byte endpointNumber, double[] packetLengths);
     
+    
     @JsMethod(name = "isochronousTransferOut")
     public native Promise<USBIsochronousOutTransferResult> isochronousTransferOut(byte endpointNumber, ArrayBuffer data, double[] packetLengths);
+    
     
     @JsMethod(name = "isochronousTransferOut")
     public native Promise<USBIsochronousOutTransferResult> isochronousTransferOut(byte endpointNumber, ArrayBufferView data, double[] packetLengths);
     
+    
     @JsMethod(name = "open")
     public native Promise<Void> open();
+    
     
     @JsMethod(name = "releaseInterface")
     public native Promise<Void> releaseInterface(byte interfaceNumber);
     
+    
     @JsMethod(name = "reset")
     public native Promise<Void> reset();
+    
     
     @JsMethod(name = "selectAlternateInterface")
     public native Promise<Void> selectAlternateInterface(byte interfaceNumber, byte alternateSetting);
     
+    
     @JsMethod(name = "selectConfiguration")
     public native Promise<Void> selectConfiguration(byte configurationValue);
+    
     
     @JsMethod(name = "transferIn")
     public native Promise<USBInTransferResult> transferIn(byte endpointNumber, double length);
     
+    
     @JsMethod(name = "transferOut")
     public native Promise<USBOutTransferResult> transferOut(byte endpointNumber, ArrayBuffer data);
     
+    
     @JsMethod(name = "transferOut")
     public native Promise<USBOutTransferResult> transferOut(byte endpointNumber, ArrayBufferView data);
+    
     
 }

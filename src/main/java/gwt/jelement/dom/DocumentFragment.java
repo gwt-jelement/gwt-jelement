@@ -22,6 +22,7 @@ import gwt.jelement.dom.NodeList;
 import gwt.jelement.html.HTMLCollection;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -35,42 +36,51 @@ public class DocumentFragment extends Node{
     }
     
     @JsProperty(name="children")
-    public HTMLCollection children;
+    public native HTMLCollection getChildren();
     
     @JsProperty(name="firstElementChild")
-    public Element firstElementChild;
+    public native Element getFirstElementChild();
     
     @JsProperty(name="lastElementChild")
-    public Element lastElementChild;
+    public native Element getLastElementChild();
     
     @JsProperty(name="childElementCount")
-    public double childElementCount;
+    public native double getChildElementCount();
     
     @JsMethod(name = "append")
     public native void append();
     
+    
     @JsMethod(name = "append")
     public native void append(Node... nodes);
+    
     
     @JsMethod(name = "append")
     public native void append(String... nodes);
     
+    
     @JsMethod(name = "getElementById")
     public native <T extends Element> T getElementById(String elementId);
+    
     
     @JsMethod(name = "prepend")
     public native void prepend();
     
+    
     @JsMethod(name = "prepend")
     public native void prepend(Node... nodes);
+    
     
     @JsMethod(name = "prepend")
     public native void prepend(String... nodes);
     
+    
     @JsMethod(name = "querySelector")
-    public native Element querySelector(String selectors);
+    public native <T extends Element> T querySelector(String selectors);
+    
     
     @JsMethod(name = "querySelectorAll")
     public native NodeList querySelectorAll(String selectors);
+    
     
 }

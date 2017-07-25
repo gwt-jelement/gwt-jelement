@@ -26,11 +26,11 @@ import jsinterop.annotations.JsType;
 @JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class MediaStreamTrackEventInit extends EventInit{
 
+    @JsProperty(name="track")
+    private MediaStreamTrack track;
+
     public MediaStreamTrackEventInit(){
     }
-
-    @JsProperty(name="track")
-    public MediaStreamTrack track;
 
     @JsOverlay
     public final MediaStreamTrack getTrack(){
@@ -41,6 +41,5 @@ public class MediaStreamTrackEventInit extends EventInit{
     public final void setTrack(MediaStreamTrack track){
         this.track = track;
     }
-
 
 }

@@ -19,6 +19,7 @@ package gwt.jelement.imagebitmap;
 import gwt.jelement.html.HTMLCanvasElement;
 import gwt.jelement.imagebitmap.ImageBitmap;
 import jsinterop.annotations.JsMethod;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -27,9 +28,10 @@ import jsinterop.annotations.JsType;
 public class ImageBitmapRenderingContext{
     
     @JsProperty(name="canvas")
-    public HTMLCanvasElement canvas;
+    public native HTMLCanvasElement getCanvas();
     
     @JsMethod(name = "transferFromImageBitmap")
     public native void transferFromImageBitmap(ImageBitmap bitmap);
+    
     
 }

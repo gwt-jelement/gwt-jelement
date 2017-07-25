@@ -25,11 +25,11 @@ import jsinterop.annotations.JsType;
 @JsType(namespace = JsPackage.GLOBAL, isNative = true)
 public class AppBannerPromptResult{
     
-    @JsProperty(name="platform")
-    public String platform;
-    
     @JsProperty(name="outcome")
-    public String outcome;
+    private String outcome;
+    
+    @JsProperty(name="platform")
+    public native String getPlatform();
     
     @JsOverlay
     public final AppBannerPromptOutcome getOutcome(){

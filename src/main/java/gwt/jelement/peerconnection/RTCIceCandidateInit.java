@@ -24,11 +24,17 @@ import jsinterop.annotations.JsType;
 @JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class RTCIceCandidateInit{
 
+    @JsProperty(name="candidate")
+    private String candidate;
+
+    @JsProperty(name="sdpMid")
+    private String sdpMid;
+
+    @JsProperty(name="sdpMLineIndex")
+    private short sdpMLineIndex;
+
     public RTCIceCandidateInit(){
     }
-
-    @JsProperty(name="candidate")
-    public String candidate;
 
     @JsOverlay
     public final String getCandidate(){
@@ -40,9 +46,6 @@ public class RTCIceCandidateInit{
         this.candidate = candidate;
     }
 
-    @JsProperty(name="sdpMid")
-    public String sdpMid;
-
     @JsOverlay
     public final String getSdpMid(){
         return this.sdpMid;
@@ -53,9 +56,6 @@ public class RTCIceCandidateInit{
         this.sdpMid = sdpMid;
     }
 
-    @JsProperty(name="sdpMLineIndex")
-    public short sdpMLineIndex;
-
     @JsOverlay
     public final short getSdpMLineIndex(){
         return this.sdpMLineIndex;
@@ -65,6 +65,5 @@ public class RTCIceCandidateInit{
     public final void setSdpMLineIndex(short sdpMLineIndex){
         this.sdpMLineIndex = sdpMLineIndex;
     }
-
 
 }

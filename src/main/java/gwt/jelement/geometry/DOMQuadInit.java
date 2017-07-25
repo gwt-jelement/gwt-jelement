@@ -25,11 +25,20 @@ import jsinterop.annotations.JsType;
 @JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class DOMQuadInit{
 
+    @JsProperty(name="p1")
+    private DOMPointInit p1;
+
+    @JsProperty(name="p2")
+    private DOMPointInit p2;
+
+    @JsProperty(name="p3")
+    private DOMPointInit p3;
+
+    @JsProperty(name="p4")
+    private DOMPointInit p4;
+
     public DOMQuadInit(){
     }
-
-    @JsProperty(name="p1")
-    public DOMPointInit p1;
 
     @JsOverlay
     public final DOMPointInit getP1(){
@@ -41,9 +50,6 @@ public class DOMQuadInit{
         this.p1 = p1;
     }
 
-    @JsProperty(name="p2")
-    public DOMPointInit p2;
-
     @JsOverlay
     public final DOMPointInit getP2(){
         return this.p2;
@@ -53,9 +59,6 @@ public class DOMQuadInit{
     public final void setP2(DOMPointInit p2){
         this.p2 = p2;
     }
-
-    @JsProperty(name="p3")
-    public DOMPointInit p3;
 
     @JsOverlay
     public final DOMPointInit getP3(){
@@ -67,9 +70,6 @@ public class DOMQuadInit{
         this.p3 = p3;
     }
 
-    @JsProperty(name="p4")
-    public DOMPointInit p4;
-
     @JsOverlay
     public final DOMPointInit getP4(){
         return this.p4;
@@ -79,6 +79,5 @@ public class DOMQuadInit{
     public final void setP4(DOMPointInit p4){
         this.p4 = p4;
     }
-
 
 }

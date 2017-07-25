@@ -26,8 +26,14 @@ import jsinterop.base.Js;
 @JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class IntersectionObserverInit{
 
-    public IntersectionObserverInit(){
-    }
+    @JsProperty(name="root")
+    private Element root;
+
+    @JsProperty(name="rootMargin")
+    private String rootMargin;
+
+    @JsProperty(name="threshold")
+    private ThresholdUnion threshold;
 
     @JsType(isNative = true, name = "?", namespace = JsPackage.GLOBAL)
     public interface ThresholdUnion {
@@ -63,8 +69,8 @@ public class IntersectionObserverInit{
     
     }
     
-    @JsProperty(name="root")
-    public Element root;
+    public IntersectionObserverInit(){
+    }
 
     @JsOverlay
     public final Element getRoot(){
@@ -76,9 +82,6 @@ public class IntersectionObserverInit{
         this.root = root;
     }
 
-    @JsProperty(name="rootMargin")
-    public String rootMargin;
-
     @JsOverlay
     public final String getRootMargin(){
         return this.rootMargin;
@@ -89,9 +92,6 @@ public class IntersectionObserverInit{
         this.rootMargin = rootMargin;
     }
 
-    @JsProperty(name="threshold")
-    public ThresholdUnion threshold;
-
     @JsOverlay
     public final void setThreshold(double threshold){
         this.threshold = IntersectionObserverInit.ThresholdUnion.of(threshold);
@@ -101,6 +101,5 @@ public class IntersectionObserverInit{
     public final void setThreshold(double[] threshold){
         this.threshold = IntersectionObserverInit.ThresholdUnion.of(threshold);
     }
-
 
 }

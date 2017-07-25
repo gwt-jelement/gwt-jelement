@@ -22,6 +22,7 @@ import gwt.jelement.webaudio.IIRFilterOptions;
 import elemental2.core.Float32Array;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
@@ -35,5 +36,6 @@ public class IIRFilterNode extends AudioNode{
     
     @JsMethod(name = "getFrequencyResponse")
     public native void getFrequencyResponse(Float32Array frequencyHz, Float32Array magResponse, Float32Array phaseResponse);
+    
     
 }

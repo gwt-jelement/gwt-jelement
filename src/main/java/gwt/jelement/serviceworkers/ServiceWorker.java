@@ -30,32 +30,54 @@ import jsinterop.annotations.JsType;
 @JsType(namespace = JsPackage.GLOBAL, isNative = true)
 public class ServiceWorker extends EventTarget{
     
+    @JsProperty(name="state")
+    private String state;
+    
+    @JsProperty(name="onstatechange")
+    private EventHandlerNonNull onstatechange;
+    
+    @JsProperty(name="onerror")
+    private EventHandlerNonNull onerror;
+    
     @JsConstructor
     public ServiceWorker(){
         super();
     }
     
     @JsProperty(name="scriptURL")
-    public String scriptURL;
-    
-    @JsProperty(name="state")
-    public String state;
+    public native String getScriptURL();
     
     @JsOverlay
     public final ServiceWorkerState getState(){
        return ServiceWorkerState.of(state);
     }
     
-    @JsProperty(name="onstatechange")
-    public EventHandlerNonNull onstatechange;
+    @JsOverlay
+    public final EventHandlerNonNull getOnStatechange(){
+        return this.onstatechange;
+    }
     
-    @JsProperty(name="onerror")
-    public EventHandlerNonNull onerror;
+    @JsOverlay
+    public final void setOnStatechange(EventHandlerNonNull onstatechange){
+        this.onstatechange = onstatechange;
+    }
+    
+    @JsOverlay
+    public final EventHandlerNonNull getOnError(){
+        return this.onerror;
+    }
+    
+    @JsOverlay
+    public final void setOnError(EventHandlerNonNull onerror){
+        this.onerror = onerror;
+    }
     
     @JsMethod(name = "postMessage")
     public native void postMessage(Object message);
     
+    
     @JsMethod(name = "postMessage")
     public native void postMessage(Object message, MessagePort[] transfer);
+    
     
 }

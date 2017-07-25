@@ -18,6 +18,7 @@ package gwt.jelement.css.cssom;
 
 import gwt.jelement.css.cssom.CSSStyleValue;
 import jsinterop.annotations.JsConstructor;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -31,7 +32,7 @@ public class CSSUnparsedValue extends CSSStyleValue{
     }
     
     @JsProperty(name="length")
-    public double length;
+    public native double getLength();
     
     
 }

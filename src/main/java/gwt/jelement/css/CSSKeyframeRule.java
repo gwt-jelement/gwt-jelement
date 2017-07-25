@@ -19,6 +19,7 @@ package gwt.jelement.css;
 import gwt.jelement.css.CSSRule;
 import gwt.jelement.css.CSSStyleDeclaration;
 import jsinterop.annotations.JsConstructor;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -32,10 +33,13 @@ public class CSSKeyframeRule extends CSSRule{
     }
     
     @JsProperty(name="keyText")
-    public String keyText;
+    public native String getKeyText();
+    
+    @JsProperty(name="keyText")
+    public native void setKeyText(String keyText);
     
     @JsProperty(name="style")
-    public CSSStyleDeclaration style;
+    public native CSSStyleDeclaration getStyle();
     
     
 }

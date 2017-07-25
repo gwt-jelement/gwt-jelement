@@ -24,11 +24,14 @@ import jsinterop.annotations.JsType;
 @JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class Point2D{
 
+    @JsProperty(name="x")
+    private float x;
+
+    @JsProperty(name="y")
+    private float y;
+
     public Point2D(){
     }
-
-    @JsProperty(name="x")
-    public float x;
 
     @JsOverlay
     public final float getX(){
@@ -40,9 +43,6 @@ public class Point2D{
         this.x = x;
     }
 
-    @JsProperty(name="y")
-    public float y;
-
     @JsOverlay
     public final float getY(){
         return this.y;
@@ -52,6 +52,5 @@ public class Point2D{
     public final void setY(float y){
         this.y = y;
     }
-
 
 }

@@ -25,11 +25,44 @@ import jsinterop.annotations.JsType;
 @JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class MediaTrackCapabilities{
 
+    @JsProperty(name="whiteBalanceMode")
+    private String[] whiteBalanceMode;
+
+    @JsProperty(name="exposureMode")
+    private String[] exposureMode;
+
+    @JsProperty(name="focusMode")
+    private String[] focusMode;
+
+    @JsProperty(name="exposureCompensation")
+    private MediaSettingsRange exposureCompensation;
+
+    @JsProperty(name="colorTemperature")
+    private MediaSettingsRange colorTemperature;
+
+    @JsProperty(name="iso")
+    private MediaSettingsRange iso;
+
+    @JsProperty(name="brightness")
+    private MediaSettingsRange brightness;
+
+    @JsProperty(name="contrast")
+    private MediaSettingsRange contrast;
+
+    @JsProperty(name="saturation")
+    private MediaSettingsRange saturation;
+
+    @JsProperty(name="sharpness")
+    private MediaSettingsRange sharpness;
+
+    @JsProperty(name="zoom")
+    private MediaSettingsRange zoom;
+
+    @JsProperty(name="torch")
+    private boolean torch;
+
     public MediaTrackCapabilities(){
     }
-
-    @JsProperty(name="whiteBalanceMode")
-    public String[] whiteBalanceMode;
 
     @JsOverlay
     public final String[] getWhiteBalanceMode(){
@@ -41,9 +74,6 @@ public class MediaTrackCapabilities{
         this.whiteBalanceMode = whiteBalanceMode;
     }
 
-    @JsProperty(name="exposureMode")
-    public String[] exposureMode;
-
     @JsOverlay
     public final String[] getExposureMode(){
         return this.exposureMode;
@@ -53,9 +83,6 @@ public class MediaTrackCapabilities{
     public final void setExposureMode(String[] exposureMode){
         this.exposureMode = exposureMode;
     }
-
-    @JsProperty(name="focusMode")
-    public String[] focusMode;
 
     @JsOverlay
     public final String[] getFocusMode(){
@@ -67,9 +94,6 @@ public class MediaTrackCapabilities{
         this.focusMode = focusMode;
     }
 
-    @JsProperty(name="exposureCompensation")
-    public MediaSettingsRange exposureCompensation;
-
     @JsOverlay
     public final MediaSettingsRange getExposureCompensation(){
         return this.exposureCompensation;
@@ -79,9 +103,6 @@ public class MediaTrackCapabilities{
     public final void setExposureCompensation(MediaSettingsRange exposureCompensation){
         this.exposureCompensation = exposureCompensation;
     }
-
-    @JsProperty(name="colorTemperature")
-    public MediaSettingsRange colorTemperature;
 
     @JsOverlay
     public final MediaSettingsRange getColorTemperature(){
@@ -93,9 +114,6 @@ public class MediaTrackCapabilities{
         this.colorTemperature = colorTemperature;
     }
 
-    @JsProperty(name="iso")
-    public MediaSettingsRange iso;
-
     @JsOverlay
     public final MediaSettingsRange getIso(){
         return this.iso;
@@ -105,9 +123,6 @@ public class MediaTrackCapabilities{
     public final void setIso(MediaSettingsRange iso){
         this.iso = iso;
     }
-
-    @JsProperty(name="brightness")
-    public MediaSettingsRange brightness;
 
     @JsOverlay
     public final MediaSettingsRange getBrightness(){
@@ -119,9 +134,6 @@ public class MediaTrackCapabilities{
         this.brightness = brightness;
     }
 
-    @JsProperty(name="contrast")
-    public MediaSettingsRange contrast;
-
     @JsOverlay
     public final MediaSettingsRange getContrast(){
         return this.contrast;
@@ -131,9 +143,6 @@ public class MediaTrackCapabilities{
     public final void setContrast(MediaSettingsRange contrast){
         this.contrast = contrast;
     }
-
-    @JsProperty(name="saturation")
-    public MediaSettingsRange saturation;
 
     @JsOverlay
     public final MediaSettingsRange getSaturation(){
@@ -145,9 +154,6 @@ public class MediaTrackCapabilities{
         this.saturation = saturation;
     }
 
-    @JsProperty(name="sharpness")
-    public MediaSettingsRange sharpness;
-
     @JsOverlay
     public final MediaSettingsRange getSharpness(){
         return this.sharpness;
@@ -157,9 +163,6 @@ public class MediaTrackCapabilities{
     public final void setSharpness(MediaSettingsRange sharpness){
         this.sharpness = sharpness;
     }
-
-    @JsProperty(name="zoom")
-    public MediaSettingsRange zoom;
 
     @JsOverlay
     public final MediaSettingsRange getZoom(){
@@ -171,9 +174,6 @@ public class MediaTrackCapabilities{
         this.zoom = zoom;
     }
 
-    @JsProperty(name="torch")
-    public boolean torch;
-
     @JsOverlay
     public final boolean getTorch(){
         return this.torch;
@@ -183,6 +183,5 @@ public class MediaTrackCapabilities{
     public final void setTorch(boolean torch){
         this.torch = torch;
     }
-
 
 }

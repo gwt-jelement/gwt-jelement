@@ -17,6 +17,7 @@
 package gwt.jelement.workers;
 
 import gwt.jelement.events.EventHandlerNonNull;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -25,7 +26,17 @@ import jsinterop.annotations.JsType;
 public class AbstractWorker{
     
     @JsProperty(name="onerror")
-    public EventHandlerNonNull onerror;
+    private EventHandlerNonNull onerror;
+    
+    @JsOverlay
+    public final EventHandlerNonNull getOnError(){
+        return this.onerror;
+    }
+    
+    @JsOverlay
+    public final void setOnError(EventHandlerNonNull onerror){
+        this.onerror = onerror;
+    }
     
     
 }

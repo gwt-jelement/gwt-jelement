@@ -21,6 +21,7 @@ import gwt.jelement.serviceworkers.ExtendableEventInit;
 import elemental2.promise.Promise;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
@@ -39,5 +40,6 @@ public class ExtendableEvent extends Event{
     
     @JsMethod(name = "waitUntil")
     public native void waitUntil(Promise<Object> f);
+    
     
 }

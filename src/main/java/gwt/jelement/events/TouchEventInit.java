@@ -26,11 +26,17 @@ import jsinterop.annotations.JsType;
 @JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class TouchEventInit extends EventModifierInit{
 
+    @JsProperty(name="touches")
+    private Touch[] touches;
+
+    @JsProperty(name="targetTouches")
+    private Touch[] targetTouches;
+
+    @JsProperty(name="changedTouches")
+    private Touch[] changedTouches;
+
     public TouchEventInit(){
     }
-
-    @JsProperty(name="touches")
-    public Touch[] touches;
 
     @JsOverlay
     public final Touch[] getTouches(){
@@ -42,9 +48,6 @@ public class TouchEventInit extends EventModifierInit{
         this.touches = touches;
     }
 
-    @JsProperty(name="targetTouches")
-    public Touch[] targetTouches;
-
     @JsOverlay
     public final Touch[] getTargetTouches(){
         return this.targetTouches;
@@ -55,9 +58,6 @@ public class TouchEventInit extends EventModifierInit{
         this.targetTouches = targetTouches;
     }
 
-    @JsProperty(name="changedTouches")
-    public Touch[] changedTouches;
-
     @JsOverlay
     public final Touch[] getChangedTouches(){
         return this.changedTouches;
@@ -67,6 +67,5 @@ public class TouchEventInit extends EventModifierInit{
     public final void setChangedTouches(Touch[] changedTouches){
         this.changedTouches = changedTouches;
     }
-
 
 }

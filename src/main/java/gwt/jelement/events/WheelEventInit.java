@@ -25,11 +25,26 @@ import jsinterop.annotations.JsType;
 @JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class WheelEventInit extends MouseEventInit{
 
+    @JsProperty(name="deltaX")
+    private double deltaX;
+
+    @JsProperty(name="deltaY")
+    private double deltaY;
+
+    @JsProperty(name="deltaZ")
+    private double deltaZ;
+
+    @JsProperty(name="deltaMode")
+    private double deltaMode;
+
+    @JsProperty(name="wheelDeltaX")
+    private double wheelDeltaX;
+
+    @JsProperty(name="wheelDeltaY")
+    private double wheelDeltaY;
+
     public WheelEventInit(){
     }
-
-    @JsProperty(name="deltaX")
-    public double deltaX;
 
     @JsOverlay
     public final double getDeltaX(){
@@ -41,9 +56,6 @@ public class WheelEventInit extends MouseEventInit{
         this.deltaX = deltaX;
     }
 
-    @JsProperty(name="deltaY")
-    public double deltaY;
-
     @JsOverlay
     public final double getDeltaY(){
         return this.deltaY;
@@ -53,9 +65,6 @@ public class WheelEventInit extends MouseEventInit{
     public final void setDeltaY(double deltaY){
         this.deltaY = deltaY;
     }
-
-    @JsProperty(name="deltaZ")
-    public double deltaZ;
 
     @JsOverlay
     public final double getDeltaZ(){
@@ -67,9 +76,6 @@ public class WheelEventInit extends MouseEventInit{
         this.deltaZ = deltaZ;
     }
 
-    @JsProperty(name="deltaMode")
-    public double deltaMode;
-
     @JsOverlay
     public final double getDeltaMode(){
         return this.deltaMode;
@@ -79,9 +85,6 @@ public class WheelEventInit extends MouseEventInit{
     public final void setDeltaMode(double deltaMode){
         this.deltaMode = deltaMode;
     }
-
-    @JsProperty(name="wheelDeltaX")
-    public double wheelDeltaX;
 
     @JsOverlay
     public final double getWheelDeltaX(){
@@ -93,9 +96,6 @@ public class WheelEventInit extends MouseEventInit{
         this.wheelDeltaX = wheelDeltaX;
     }
 
-    @JsProperty(name="wheelDeltaY")
-    public double wheelDeltaY;
-
     @JsOverlay
     public final double getWheelDeltaY(){
         return this.wheelDeltaY;
@@ -105,6 +105,5 @@ public class WheelEventInit extends MouseEventInit{
     public final void setWheelDeltaY(double wheelDeltaY){
         this.wheelDeltaY = wheelDeltaY;
     }
-
 
 }

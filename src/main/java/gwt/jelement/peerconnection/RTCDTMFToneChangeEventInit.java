@@ -25,11 +25,11 @@ import jsinterop.annotations.JsType;
 @JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class RTCDTMFToneChangeEventInit extends EventInit{
 
+    @JsProperty(name="tone")
+    private String tone;
+
     public RTCDTMFToneChangeEventInit(){
     }
-
-    @JsProperty(name="tone")
-    public String tone;
 
     @JsOverlay
     public final String getTone(){
@@ -40,6 +40,5 @@ public class RTCDTMFToneChangeEventInit extends EventInit{
     public final void setTone(String tone){
         this.tone = tone;
     }
-
 
 }

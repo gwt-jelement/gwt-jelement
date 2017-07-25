@@ -20,6 +20,7 @@ import gwt.jelement.events.Event;
 import gwt.jelement.webaudio.AudioBuffer;
 import gwt.jelement.webaudio.AudioProcessingEventInit;
 import jsinterop.annotations.JsConstructor;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -33,13 +34,13 @@ public class AudioProcessingEvent extends Event{
     }
     
     @JsProperty(name="playbackTime")
-    public double playbackTime;
+    public native double getPlaybackTime();
     
     @JsProperty(name="inputBuffer")
-    public AudioBuffer inputBuffer;
+    public native AudioBuffer getInputBuffer();
     
     @JsProperty(name="outputBuffer")
-    public AudioBuffer outputBuffer;
+    public native AudioBuffer getOutputBuffer();
     
     
 }

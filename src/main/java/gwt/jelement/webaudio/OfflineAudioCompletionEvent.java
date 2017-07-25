@@ -20,6 +20,7 @@ import gwt.jelement.events.Event;
 import gwt.jelement.webaudio.AudioBuffer;
 import gwt.jelement.webaudio.OfflineAudioCompletionEventInit;
 import jsinterop.annotations.JsConstructor;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -33,7 +34,7 @@ public class OfflineAudioCompletionEvent extends Event{
     }
     
     @JsProperty(name="renderedBuffer")
-    public AudioBuffer renderedBuffer;
+    public native AudioBuffer getRenderedBuffer();
     
     
 }

@@ -20,6 +20,7 @@ import gwt.jelement.clipboard.DataTransfer;
 import gwt.jelement.events.DragEventInit;
 import gwt.jelement.events.MouseEvent;
 import jsinterop.annotations.JsConstructor;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -38,7 +39,7 @@ public class DragEvent extends MouseEvent{
     }
     
     @JsProperty(name="dataTransfer")
-    public DataTransfer dataTransfer;
+    public native DataTransfer getDataTransfer();
     
     
 }

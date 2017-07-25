@@ -16,6 +16,7 @@
  */
 package gwt.jelement.credentialmanager;
 
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -24,10 +25,10 @@ import jsinterop.annotations.JsType;
 public class Credential{
     
     @JsProperty(name="id")
-    public String id;
+    public native String getId();
     
     @JsProperty(name="type")
-    public String type;
+    public native String getType();
     
     
 }

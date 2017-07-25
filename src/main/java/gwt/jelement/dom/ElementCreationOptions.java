@@ -24,11 +24,11 @@ import jsinterop.annotations.JsType;
 @JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class ElementCreationOptions{
 
+    @JsProperty(name="is")
+    private String is;
+
     public ElementCreationOptions(){
     }
-
-    @JsProperty(name="is")
-    public String is;
 
     @JsOverlay
     public final String getIs(){
@@ -39,6 +39,5 @@ public class ElementCreationOptions{
     public final void setIs(String is){
         this.is = is;
     }
-
 
 }

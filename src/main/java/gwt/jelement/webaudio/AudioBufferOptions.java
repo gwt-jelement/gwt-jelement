@@ -24,11 +24,17 @@ import jsinterop.annotations.JsType;
 @JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class AudioBufferOptions{
 
+    @JsProperty(name="numberOfChannels")
+    private double numberOfChannels;
+
+    @JsProperty(name="length")
+    private double length;
+
+    @JsProperty(name="sampleRate")
+    private float sampleRate;
+
     public AudioBufferOptions(){
     }
-
-    @JsProperty(name="numberOfChannels")
-    public double numberOfChannels;
 
     @JsOverlay
     public final double getNumberOfChannels(){
@@ -40,9 +46,6 @@ public class AudioBufferOptions{
         this.numberOfChannels = numberOfChannels;
     }
 
-    @JsProperty(name="length")
-    public double length;
-
     @JsOverlay
     public final double getLength(){
         return this.length;
@@ -53,9 +56,6 @@ public class AudioBufferOptions{
         this.length = length;
     }
 
-    @JsProperty(name="sampleRate")
-    public float sampleRate;
-
     @JsOverlay
     public final float getSampleRate(){
         return this.sampleRate;
@@ -65,6 +65,5 @@ public class AudioBufferOptions{
     public final void setSampleRate(float sampleRate){
         this.sampleRate = sampleRate;
     }
-
 
 }

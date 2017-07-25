@@ -19,6 +19,7 @@ package gwt.jelement.css;
 import gwt.jelement.css.CSSRule;
 import gwt.jelement.css.CSSStyleDeclaration;
 import jsinterop.annotations.JsConstructor;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -32,10 +33,13 @@ public class CSSStyleRule extends CSSRule{
     }
     
     @JsProperty(name="selectorText")
-    public String selectorText;
+    public native String getSelectorText();
+    
+    @JsProperty(name="selectorText")
+    public native void setSelectorText(String selectorText);
     
     @JsProperty(name="style")
-    public CSSStyleDeclaration style;
+    public native CSSStyleDeclaration getStyle();
     
     
 }

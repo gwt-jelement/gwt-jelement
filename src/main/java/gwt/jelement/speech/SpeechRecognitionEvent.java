@@ -21,6 +21,7 @@ import gwt.jelement.events.Event;
 import gwt.jelement.speech.SpeechRecognitionEventInit;
 import gwt.jelement.speech.SpeechRecognitionResultList;
 import jsinterop.annotations.JsConstructor;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -39,16 +40,16 @@ public class SpeechRecognitionEvent extends Event{
     }
     
     @JsProperty(name="resultIndex")
-    public double resultIndex;
+    public native double getResultIndex();
     
     @JsProperty(name="results")
-    public SpeechRecognitionResultList results;
+    public native SpeechRecognitionResultList getResults();
     
     @JsProperty(name="interpretation")
-    public Document interpretation;
+    public native Document getInterpretation();
     
     @JsProperty(name="emma")
-    public Document emma;
+    public native Document getEmma();
     
     
 }

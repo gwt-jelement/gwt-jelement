@@ -21,6 +21,7 @@ import gwt.jelement.webaudio.AudioParam;
 import gwt.jelement.webaudio.BaseAudioContext;
 import gwt.jelement.webaudio.GainOptions;
 import jsinterop.annotations.JsConstructor;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -39,7 +40,7 @@ public class GainNode extends AudioNode{
     }
     
     @JsProperty(name="gain")
-    public AudioParam gain;
+    public native AudioParam getGain();
     
     
 }

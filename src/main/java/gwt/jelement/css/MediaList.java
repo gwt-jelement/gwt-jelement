@@ -17,6 +17,7 @@
 package gwt.jelement.css;
 
 import jsinterop.annotations.JsMethod;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -25,15 +26,20 @@ import jsinterop.annotations.JsType;
 public class MediaList{
     
     @JsProperty(name="mediaText")
-    public String mediaText;
+    public native String getMediaText();
+    
+    @JsProperty(name="mediaText")
+    public native void setMediaText(String mediaText);
     
     @JsProperty(name="length")
-    public double length;
+    public native double getLength();
     
     @JsMethod(name = "appendMedium")
     public native void appendMedium(String medium);
     
+    
     @JsMethod(name = "deleteMedium")
     public native void deleteMedium(String medium);
+    
     
 }

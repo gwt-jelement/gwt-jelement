@@ -17,6 +17,7 @@
 package gwt.jelement.dom;
 
 import jsinterop.annotations.JsMethod;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -25,39 +26,52 @@ import jsinterop.annotations.JsType;
 public class DOMTokenList{
     
     @JsProperty(name="length")
-    public double length;
+    public native double getLength();
     
     @JsProperty(name="value")
-    public String value;
+    public native String getValue();
+    
+    @JsProperty(name="value")
+    public native void setValue(String value);
     
     @JsMethod(name = "add")
     public native void add();
     
+    
     @JsMethod(name = "add")
     public native void add(String... tokens);
+    
     
     @JsMethod(name = "contains")
     public native boolean contains(String token);
     
+    
     @JsMethod(name = "remove")
     public native void remove();
+    
     
     @JsMethod(name = "remove")
     public native void remove(String... tokens);
     
+    
     @JsMethod(name = "replace")
     public native void replace(String token, String newToken);
+    
     
     @JsMethod(name = "supports")
     public native boolean supports(String token);
     
+    
     @JsMethod(name = "toString")
     public native String toString();
+    
     
     @JsMethod(name = "toggle")
     public native boolean toggle(String token);
     
+    
     @JsMethod(name = "toggle")
     public native boolean toggle(String token, boolean force);
+    
     
 }

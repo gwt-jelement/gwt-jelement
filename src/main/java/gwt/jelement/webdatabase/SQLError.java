@@ -16,6 +16,7 @@
  */
 package gwt.jelement.webdatabase;
 
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -33,10 +34,10 @@ public class SQLError{
     
     
     @JsProperty(name="code")
-    public double code;
+    public native double getCode();
     
     @JsProperty(name="message")
-    public String message;
+    public native String getMessage();
     
     
 }

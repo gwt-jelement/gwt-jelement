@@ -38,97 +38,157 @@ public class HTMLTextAreaElement extends HTMLElement{
     }
     
     @JsProperty(name="autofocus")
-    public boolean autofocus;
+    public native boolean getAutofocus();
+    
+    @JsProperty(name="autofocus")
+    public native void setAutofocus(boolean autofocus);
     
     @JsProperty(name="cols")
-    public double cols;
+    public native double getCols();
+    
+    @JsProperty(name="cols")
+    public native void setCols(double cols);
     
     @JsProperty(name="dirName")
-    public String dirName;
+    public native String getDirName();
+    
+    @JsProperty(name="dirName")
+    public native void setDirName(String dirName);
     
     @JsProperty(name="disabled")
-    public boolean disabled;
+    public native boolean getDisabled();
+    
+    @JsProperty(name="disabled")
+    public native void setDisabled(boolean disabled);
     
     @JsProperty(name="form")
-    public HTMLFormElement form;
+    public native HTMLFormElement getForm();
     
     @JsProperty(name="maxLength")
-    public double maxLength;
+    public native double getMaxLength();
+    
+    @JsProperty(name="maxLength")
+    public native void setMaxLength(double maxLength);
     
     @JsProperty(name="minLength")
-    public double minLength;
+    public native double getMinLength();
+    
+    @JsProperty(name="minLength")
+    public native void setMinLength(double minLength);
     
     @JsProperty(name="name")
-    public String name;
+    public native String getName();
+    
+    @JsProperty(name="name")
+    public native void setName(String name);
     
     @JsProperty(name="placeholder")
-    public String placeholder;
+    public native String getPlaceholder();
+    
+    @JsProperty(name="placeholder")
+    public native void setPlaceholder(String placeholder);
     
     @JsProperty(name="readOnly")
-    public boolean readOnly;
+    public native boolean getReadOnly();
+    
+    @JsProperty(name="readOnly")
+    public native void setReadOnly(boolean readOnly);
     
     @JsProperty(name="required")
-    public boolean required;
+    public native boolean getRequired();
+    
+    @JsProperty(name="required")
+    public native void setRequired(boolean required);
     
     @JsProperty(name="rows")
-    public double rows;
+    public native double getRows();
+    
+    @JsProperty(name="rows")
+    public native void setRows(double rows);
     
     @JsProperty(name="wrap")
-    public String wrap;
+    public native String getWrap();
+    
+    @JsProperty(name="wrap")
+    public native void setWrap(String wrap);
     
     @JsProperty(name="type")
-    public String type;
+    public native String getType();
     
     @JsProperty(name="defaultValue")
-    public String defaultValue;
+    public native String getDefaultValue();
+    
+    @JsProperty(name="defaultValue")
+    public native void setDefaultValue(String defaultValue);
     
     @JsProperty(name="value")
-    public String value;
+    public native String getValue();
+    
+    @JsProperty(name="value")
+    public native void setValue(String value);
     
     @JsProperty(name="textLength")
-    public double textLength;
+    public native double getTextLength();
     
     @JsProperty(name="willValidate")
-    public boolean willValidate;
+    public native boolean getWillValidate();
     
     @JsProperty(name="validity")
-    public ValidityState validity;
+    public native ValidityState getValidity();
     
     @JsProperty(name="validationMessage")
-    public String validationMessage;
+    public native String getValidationMessage();
     
     @JsProperty(name="labels")
-    public NodeList labels;
+    public native NodeList getLabels();
     
     @JsProperty(name="selectionStart")
-    public double selectionStart;
+    public native double getSelectionStart();
+    
+    @JsProperty(name="selectionStart")
+    public native void setSelectionStart(double selectionStart);
     
     @JsProperty(name="selectionEnd")
-    public double selectionEnd;
+    public native double getSelectionEnd();
+    
+    @JsProperty(name="selectionEnd")
+    public native void setSelectionEnd(double selectionEnd);
     
     @JsProperty(name="selectionDirection")
-    public String selectionDirection;
+    public native String getSelectionDirection();
+    
+    @JsProperty(name="selectionDirection")
+    public native void setSelectionDirection(String selectionDirection);
     
     @JsProperty(name="autocapitalize")
-    public String autocapitalize;
+    public native String getAutocapitalize();
+    
+    @JsProperty(name="autocapitalize")
+    public native void setAutocapitalize(String autocapitalize);
     
     @JsMethod(name = "checkValidity")
     public native boolean checkValidity();
     
+    
     @JsMethod(name = "reportValidity")
     public native boolean reportValidity();
+    
     
     @JsMethod(name = "select")
     public native void select();
     
+    
     @JsMethod(name = "setCustomValidity")
     public native void setCustomValidity(String error);
+    
     
     @JsMethod(name = "setRangeText")
     public native void setRangeText(String replacement);
     
+    
     @JsMethod(name = "setRangeText")
     public native void setRangeText(String replacement, double start, double end);
+    
     
     @JsOverlay
     public final void setRangeText(String replacement, double start, double end, SelectionMode selectionMode){
@@ -138,10 +198,13 @@ public class HTMLTextAreaElement extends HTMLElement{
     @JsMethod(name = "setRangeText")
     public native void setRangeText(String replacement, double start, double end, String selectionMode);
     
+    
     @JsMethod(name = "setSelectionRange")
     public native void setSelectionRange(double start, double end);
     
+    
     @JsMethod(name = "setSelectionRange")
     public native void setSelectionRange(double start, double end, String direction);
+    
     
 }

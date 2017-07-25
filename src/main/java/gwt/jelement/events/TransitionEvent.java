@@ -19,6 +19,7 @@ package gwt.jelement.events;
 import gwt.jelement.events.Event;
 import gwt.jelement.events.TransitionEventInit;
 import jsinterop.annotations.JsConstructor;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -37,13 +38,13 @@ public class TransitionEvent extends Event{
     }
     
     @JsProperty(name="propertyName")
-    public String propertyName;
+    public native String getPropertyName();
     
     @JsProperty(name="elapsedTime")
-    public double elapsedTime;
+    public native double getElapsedTime();
     
     @JsProperty(name="pseudoElement")
-    public String pseudoElement;
+    public native String getPseudoElement();
     
     
 }

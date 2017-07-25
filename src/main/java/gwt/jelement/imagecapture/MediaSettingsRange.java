@@ -16,6 +16,7 @@
  */
 package gwt.jelement.imagecapture;
 
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -24,13 +25,13 @@ import jsinterop.annotations.JsType;
 public class MediaSettingsRange{
     
     @JsProperty(name="max")
-    public double max;
+    public native double getMax();
     
     @JsProperty(name="min")
-    public double min;
+    public native double getMin();
     
     @JsProperty(name="step")
-    public double step;
+    public native double getStep();
     
     
 }

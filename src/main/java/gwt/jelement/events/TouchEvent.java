@@ -20,6 +20,7 @@ import gwt.jelement.dom.TouchList;
 import gwt.jelement.events.TouchEventInit;
 import gwt.jelement.events.UIEvent;
 import jsinterop.annotations.JsConstructor;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -38,25 +39,25 @@ public class TouchEvent extends UIEvent{
     }
     
     @JsProperty(name="touches")
-    public TouchList touches;
+    public native TouchList getTouches();
     
     @JsProperty(name="targetTouches")
-    public TouchList targetTouches;
+    public native TouchList getTargetTouches();
     
     @JsProperty(name="changedTouches")
-    public TouchList changedTouches;
+    public native TouchList getChangedTouches();
     
     @JsProperty(name="altKey")
-    public boolean altKey;
+    public native boolean getAltKey();
     
     @JsProperty(name="metaKey")
-    public boolean metaKey;
+    public native boolean getMetaKey();
     
     @JsProperty(name="ctrlKey")
-    public boolean ctrlKey;
+    public native boolean getCtrlKey();
     
     @JsProperty(name="shiftKey")
-    public boolean shiftKey;
+    public native boolean getShiftKey();
     
     
 }

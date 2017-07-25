@@ -26,11 +26,14 @@ import jsinterop.annotations.JsType;
 @JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class SpeechRecognitionEventInit extends EventInit{
 
+    @JsProperty(name="resultIndex")
+    private double resultIndex;
+
+    @JsProperty(name="results")
+    private SpeechRecognitionResultList results;
+
     public SpeechRecognitionEventInit(){
     }
-
-    @JsProperty(name="resultIndex")
-    public double resultIndex;
 
     @JsOverlay
     public final double getResultIndex(){
@@ -42,9 +45,6 @@ public class SpeechRecognitionEventInit extends EventInit{
         this.resultIndex = resultIndex;
     }
 
-    @JsProperty(name="results")
-    public SpeechRecognitionResultList results;
-
     @JsOverlay
     public final SpeechRecognitionResultList getResults(){
         return this.results;
@@ -54,6 +54,5 @@ public class SpeechRecognitionEventInit extends EventInit{
     public final void setResults(SpeechRecognitionResultList results){
         this.results = results;
     }
-
 
 }

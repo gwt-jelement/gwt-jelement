@@ -17,6 +17,7 @@
 package gwt.jelement.svg;
 
 import gwt.jelement.svg.SVGStringList;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -25,10 +26,10 @@ import jsinterop.annotations.JsType;
 public class SVGTests{
     
     @JsProperty(name="requiredExtensions")
-    public SVGStringList requiredExtensions;
+    public native SVGStringList getRequiredExtensions();
     
     @JsProperty(name="systemLanguage")
-    public SVGStringList systemLanguage;
+    public native SVGStringList getSystemLanguage();
     
     
 }

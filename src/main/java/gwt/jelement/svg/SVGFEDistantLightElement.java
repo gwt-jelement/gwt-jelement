@@ -19,6 +19,7 @@ package gwt.jelement.svg;
 import gwt.jelement.svg.SVGAnimatedNumber;
 import gwt.jelement.svg.SVGElement;
 import jsinterop.annotations.JsConstructor;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -32,10 +33,10 @@ public class SVGFEDistantLightElement extends SVGElement{
     }
     
     @JsProperty(name="azimuth")
-    public SVGAnimatedNumber azimuth;
+    public native SVGAnimatedNumber getAzimuth();
     
     @JsProperty(name="elevation")
-    public SVGAnimatedNumber elevation;
+    public native SVGAnimatedNumber getElevation();
     
     
 }

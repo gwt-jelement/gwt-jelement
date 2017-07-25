@@ -18,6 +18,7 @@ package gwt.jelement.svg;
 
 import gwt.jelement.svg.SVGNumber;
 import jsinterop.annotations.JsMethod;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -26,27 +27,33 @@ import jsinterop.annotations.JsType;
 public class SVGNumberList{
     
     @JsProperty(name="length")
-    public double length;
+    public native double getLength();
     
     @JsProperty(name="numberOfItems")
-    public double numberOfItems;
+    public native double getNumberOfItems();
     
     @JsMethod(name = "appendItem")
     public native SVGNumber appendItem(SVGNumber newItem);
     
+    
     @JsMethod(name = "clear")
     public native void clear();
+    
     
     @JsMethod(name = "initialize")
     public native SVGNumber initialize(SVGNumber newItem);
     
+    
     @JsMethod(name = "insertItemBefore")
     public native SVGNumber insertItemBefore(SVGNumber newItem, double index);
+    
     
     @JsMethod(name = "removeItem")
     public native SVGNumber removeItem(double index);
     
+    
     @JsMethod(name = "replaceItem")
     public native SVGNumber replaceItem(SVGNumber newItem, double index);
+    
     
 }

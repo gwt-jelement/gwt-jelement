@@ -19,6 +19,7 @@ package gwt.jelement.dom;
 import gwt.jelement.dom.Node;
 import gwt.jelement.dom.NodeFilter;
 import jsinterop.annotations.JsMethod;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -27,36 +28,46 @@ import jsinterop.annotations.JsType;
 public class TreeWalker{
     
     @JsProperty(name="root")
-    public Node root;
+    public native Node getRoot();
     
     @JsProperty(name="whatToShow")
-    public double whatToShow;
+    public native double getWhatToShow();
     
     @JsProperty(name="filter")
-    public NodeFilter filter;
+    public native NodeFilter getFilter();
     
     @JsProperty(name="currentNode")
-    public Node currentNode;
+    public native Node getCurrentNode();
+    
+    @JsProperty(name="currentNode")
+    public native void setCurrentNode(Node currentNode);
     
     @JsMethod(name = "firstChild")
     public native Node firstChild();
     
+    
     @JsMethod(name = "lastChild")
     public native Node lastChild();
+    
     
     @JsMethod(name = "nextNode")
     public native Node nextNode();
     
+    
     @JsMethod(name = "nextSibling")
     public native Node nextSibling();
+    
     
     @JsMethod(name = "parentNode")
     public native Node parentNode();
     
+    
     @JsMethod(name = "previousNode")
     public native Node previousNode();
     
+    
     @JsMethod(name = "previousSibling")
     public native Node previousSibling();
+    
     
 }

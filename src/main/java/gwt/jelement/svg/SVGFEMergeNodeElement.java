@@ -19,6 +19,7 @@ package gwt.jelement.svg;
 import gwt.jelement.svg.SVGAnimatedString;
 import gwt.jelement.svg.SVGElement;
 import jsinterop.annotations.JsConstructor;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -32,7 +33,7 @@ public class SVGFEMergeNodeElement extends SVGElement{
     }
     
     @JsProperty(name="in1")
-    public SVGAnimatedString in1;
+    public native SVGAnimatedString getIn1();
     
     
 }

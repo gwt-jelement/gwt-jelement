@@ -24,11 +24,11 @@ import jsinterop.annotations.JsType;
 @JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class PerformanceObserverInit{
 
+    @JsProperty(name="entryTypes")
+    private String[] entryTypes;
+
     public PerformanceObserverInit(){
     }
-
-    @JsProperty(name="entryTypes")
-    public String[] entryTypes;
 
     @JsOverlay
     public final String[] getEntryTypes(){
@@ -39,6 +39,5 @@ public class PerformanceObserverInit{
     public final void setEntryTypes(String[] entryTypes){
         this.entryTypes = entryTypes;
     }
-
 
 }

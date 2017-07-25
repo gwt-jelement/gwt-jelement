@@ -27,6 +27,9 @@ import jsinterop.annotations.JsType;
 @JsType(namespace = JsPackage.GLOBAL, isNative = true)
 public class USBInTransferResult{
     
+    @JsProperty(name="status")
+    private String status;
+    
     @JsConstructor
     public USBInTransferResult(USBTransferStatus status){
     }
@@ -36,10 +39,7 @@ public class USBInTransferResult{
     }
     
     @JsProperty(name="data")
-    public DataView data;
-    
-    @JsProperty(name="status")
-    public String status;
+    public native DataView getData();
     
     @JsOverlay
     public final USBTransferStatus getStatus(){

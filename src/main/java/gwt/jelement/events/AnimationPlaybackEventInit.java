@@ -25,11 +25,14 @@ import jsinterop.annotations.JsType;
 @JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class AnimationPlaybackEventInit extends EventInit{
 
+    @JsProperty(name="currentTime")
+    private double currentTime;
+
+    @JsProperty(name="timelineTime")
+    private double timelineTime;
+
     public AnimationPlaybackEventInit(){
     }
-
-    @JsProperty(name="currentTime")
-    public double currentTime;
 
     @JsOverlay
     public final double getCurrentTime(){
@@ -41,9 +44,6 @@ public class AnimationPlaybackEventInit extends EventInit{
         this.currentTime = currentTime;
     }
 
-    @JsProperty(name="timelineTime")
-    public double timelineTime;
-
     @JsOverlay
     public final double getTimelineTime(){
         return this.timelineTime;
@@ -53,6 +53,5 @@ public class AnimationPlaybackEventInit extends EventInit{
     public final void setTimelineTime(double timelineTime){
         this.timelineTime = timelineTime;
     }
-
 
 }

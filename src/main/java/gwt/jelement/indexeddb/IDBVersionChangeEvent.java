@@ -27,19 +27,19 @@ import jsinterop.annotations.JsType;
 @JsType(namespace = JsPackage.GLOBAL, isNative = true)
 public class IDBVersionChangeEvent extends Event{
     
+    @JsProperty(name="dataLoss")
+    private String dataLoss;
+    
     @JsConstructor
     public IDBVersionChangeEvent(){
         super((String) null);
     }
     
     @JsProperty(name="oldVersion")
-    public double oldVersion;
+    public native double getOldVersion();
     
     @JsProperty(name="newVersion")
-    public double newVersion;
-    
-    @JsProperty(name="dataLoss")
-    public String dataLoss;
+    public native double getNewVersion();
     
     @JsOverlay
     public final IDBDataLossAmount getDataLoss(){
@@ -47,7 +47,7 @@ public class IDBVersionChangeEvent extends Event{
     }
     
     @JsProperty(name="dataLossMessage")
-    public String dataLossMessage;
+    public native String getDataLossMessage();
     
     
 }

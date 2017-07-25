@@ -17,6 +17,7 @@
 package gwt.jelement.css;
 
 import gwt.jelement.css.FontFaceSet;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -25,7 +26,7 @@ import jsinterop.annotations.JsType;
 public class FontFaceSource{
     
     @JsProperty(name="fonts")
-    public FontFaceSet fonts;
+    public native FontFaceSet getFonts();
     
     
 }

@@ -19,6 +19,7 @@ package gwt.jelement.indexeddb;
 import gwt.jelement.events.EventHandlerNonNull;
 import gwt.jelement.indexeddb.IDBRequest;
 import jsinterop.annotations.JsConstructor;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -26,16 +27,36 @@ import jsinterop.annotations.JsType;
 @JsType(namespace = JsPackage.GLOBAL, isNative = true)
 public class IDBOpenDBRequest extends IDBRequest{
     
+    @JsProperty(name="onblocked")
+    private EventHandlerNonNull onblocked;
+    
+    @JsProperty(name="onupgradeneeded")
+    private EventHandlerNonNull onupgradeneeded;
+    
     @JsConstructor
     public IDBOpenDBRequest(){
         super();
     }
     
-    @JsProperty(name="onblocked")
-    public EventHandlerNonNull onblocked;
+    @JsOverlay
+    public final EventHandlerNonNull getOnBlocked(){
+        return this.onblocked;
+    }
     
-    @JsProperty(name="onupgradeneeded")
-    public EventHandlerNonNull onupgradeneeded;
+    @JsOverlay
+    public final void setOnBlocked(EventHandlerNonNull onblocked){
+        this.onblocked = onblocked;
+    }
+    
+    @JsOverlay
+    public final EventHandlerNonNull getOnUpgradeneeded(){
+        return this.onupgradeneeded;
+    }
+    
+    @JsOverlay
+    public final void setOnUpgradeneeded(EventHandlerNonNull onupgradeneeded){
+        this.onupgradeneeded = onupgradeneeded;
+    }
     
     
 }

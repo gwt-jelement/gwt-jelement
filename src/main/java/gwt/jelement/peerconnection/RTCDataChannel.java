@@ -32,34 +32,49 @@ import jsinterop.annotations.JsType;
 @JsType(namespace = JsPackage.GLOBAL, isNative = true)
 public class RTCDataChannel extends EventTarget{
     
+    @JsProperty(name="readyState")
+    private String readyState;
+    
+    @JsProperty(name="onopen")
+    private EventHandlerNonNull onopen;
+    
+    @JsProperty(name="onbufferedamountlow")
+    private EventHandlerNonNull onbufferedamountlow;
+    
+    @JsProperty(name="onerror")
+    private EventHandlerNonNull onerror;
+    
+    @JsProperty(name="onclose")
+    private EventHandlerNonNull onclose;
+    
+    @JsProperty(name="onmessage")
+    private EventHandlerNonNull onmessage;
+    
     @JsConstructor
     public RTCDataChannel(){
         super();
     }
     
     @JsProperty(name="label")
-    public String label;
+    public native String getLabel();
     
     @JsProperty(name="ordered")
-    public boolean ordered;
+    public native boolean getOrdered();
     
     @JsProperty(name="maxRetransmitTime")
-    public short maxRetransmitTime;
+    public native short getMaxRetransmitTime();
     
     @JsProperty(name="maxRetransmits")
-    public short maxRetransmits;
+    public native short getMaxRetransmits();
     
     @JsProperty(name="protocol")
-    public String protocol;
+    public native String getProtocol();
     
     @JsProperty(name="negotiated")
-    public boolean negotiated;
+    public native boolean getNegotiated();
     
     @JsProperty(name="id")
-    public short id;
-    
-    @JsProperty(name="readyState")
-    public String readyState;
+    public native short getId();
     
     @JsOverlay
     public final RTCDataChannelState getReadyState(){
@@ -67,45 +82,91 @@ public class RTCDataChannel extends EventTarget{
     }
     
     @JsProperty(name="bufferedAmount")
-    public double bufferedAmount;
+    public native double getBufferedAmount();
     
     @JsProperty(name="bufferedAmountLowThreshold")
-    public double bufferedAmountLowThreshold;
+    public native double getBufferedAmountLowThreshold();
     
-    @JsProperty(name="onopen")
-    public EventHandlerNonNull onopen;
+    @JsProperty(name="bufferedAmountLowThreshold")
+    public native void setBufferedAmountLowThreshold(double bufferedAmountLowThreshold);
     
-    @JsProperty(name="onbufferedamountlow")
-    public EventHandlerNonNull onbufferedamountlow;
+    @JsOverlay
+    public final EventHandlerNonNull getOnOpen(){
+        return this.onopen;
+    }
     
-    @JsProperty(name="onerror")
-    public EventHandlerNonNull onerror;
+    @JsOverlay
+    public final void setOnOpen(EventHandlerNonNull onopen){
+        this.onopen = onopen;
+    }
     
-    @JsProperty(name="onclose")
-    public EventHandlerNonNull onclose;
+    @JsOverlay
+    public final EventHandlerNonNull getOnBufferedamountlow(){
+        return this.onbufferedamountlow;
+    }
     
-    @JsProperty(name="onmessage")
-    public EventHandlerNonNull onmessage;
+    @JsOverlay
+    public final void setOnBufferedamountlow(EventHandlerNonNull onbufferedamountlow){
+        this.onbufferedamountlow = onbufferedamountlow;
+    }
+    
+    @JsOverlay
+    public final EventHandlerNonNull getOnError(){
+        return this.onerror;
+    }
+    
+    @JsOverlay
+    public final void setOnError(EventHandlerNonNull onerror){
+        this.onerror = onerror;
+    }
+    
+    @JsOverlay
+    public final EventHandlerNonNull getOnClose(){
+        return this.onclose;
+    }
+    
+    @JsOverlay
+    public final void setOnClose(EventHandlerNonNull onclose){
+        this.onclose = onclose;
+    }
+    
+    @JsOverlay
+    public final EventHandlerNonNull getOnMessage(){
+        return this.onmessage;
+    }
+    
+    @JsOverlay
+    public final void setOnMessage(EventHandlerNonNull onmessage){
+        this.onmessage = onmessage;
+    }
     
     @JsProperty(name="binaryType")
-    public String binaryType;
+    public native String getBinaryType();
+    
+    @JsProperty(name="binaryType")
+    public native void setBinaryType(String binaryType);
     
     @JsProperty(name="reliable")
-    public boolean reliable;
+    public native boolean getReliable();
     
     @JsMethod(name = "close")
     public native void close();
     
+    
     @JsMethod(name = "send")
     public native void send(String data);
+    
     
     @JsMethod(name = "send")
     public native void send(Blob data);
     
+    
     @JsMethod(name = "send")
     public native void send(ArrayBuffer data);
     
+    
     @JsMethod(name = "send")
     public native void send(ArrayBufferView data);
+    
     
 }

@@ -20,6 +20,7 @@ import gwt.jelement.clipboard.DataTransfer;
 import gwt.jelement.events.ClipboardEventInit;
 import gwt.jelement.events.Event;
 import jsinterop.annotations.JsConstructor;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -38,7 +39,7 @@ public class ClipboardEvent extends Event{
     }
     
     @JsProperty(name="clipboardData")
-    public DataTransfer clipboardData;
+    public native DataTransfer getClipboardData();
     
     
 }

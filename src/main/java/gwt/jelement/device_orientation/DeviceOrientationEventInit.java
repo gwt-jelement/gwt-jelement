@@ -25,11 +25,20 @@ import jsinterop.annotations.JsType;
 @JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class DeviceOrientationEventInit extends EventInit{
 
+    @JsProperty(name="alpha")
+    private double alpha;
+
+    @JsProperty(name="beta")
+    private double beta;
+
+    @JsProperty(name="gamma")
+    private double gamma;
+
+    @JsProperty(name="absolute")
+    private boolean absolute;
+
     public DeviceOrientationEventInit(){
     }
-
-    @JsProperty(name="alpha")
-    public double alpha;
 
     @JsOverlay
     public final double getAlpha(){
@@ -41,9 +50,6 @@ public class DeviceOrientationEventInit extends EventInit{
         this.alpha = alpha;
     }
 
-    @JsProperty(name="beta")
-    public double beta;
-
     @JsOverlay
     public final double getBeta(){
         return this.beta;
@@ -53,9 +59,6 @@ public class DeviceOrientationEventInit extends EventInit{
     public final void setBeta(double beta){
         this.beta = beta;
     }
-
-    @JsProperty(name="gamma")
-    public double gamma;
 
     @JsOverlay
     public final double getGamma(){
@@ -67,9 +70,6 @@ public class DeviceOrientationEventInit extends EventInit{
         this.gamma = gamma;
     }
 
-    @JsProperty(name="absolute")
-    public boolean absolute;
-
     @JsOverlay
     public final boolean getAbsolute(){
         return this.absolute;
@@ -79,6 +79,5 @@ public class DeviceOrientationEventInit extends EventInit{
     public final void setAbsolute(boolean absolute){
         this.absolute = absolute;
     }
-
 
 }

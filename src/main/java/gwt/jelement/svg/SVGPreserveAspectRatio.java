@@ -16,6 +16,7 @@
  */
 package gwt.jelement.svg;
 
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -39,10 +40,16 @@ public class SVGPreserveAspectRatio{
     
     
     @JsProperty(name="align")
-    public short align;
+    public native short getAlign();
+    
+    @JsProperty(name="align")
+    public native void setAlign(short align);
     
     @JsProperty(name="meetOrSlice")
-    public short meetOrSlice;
+    public native short getMeetOrSlice();
+    
+    @JsProperty(name="meetOrSlice")
+    public native void setMeetOrSlice(short meetOrSlice);
     
     
 }

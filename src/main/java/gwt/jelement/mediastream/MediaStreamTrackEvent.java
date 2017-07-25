@@ -20,6 +20,7 @@ import gwt.jelement.events.Event;
 import gwt.jelement.mediastream.MediaStreamTrack;
 import gwt.jelement.mediastream.MediaStreamTrackEventInit;
 import jsinterop.annotations.JsConstructor;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -33,7 +34,7 @@ public class MediaStreamTrackEvent extends Event{
     }
     
     @JsProperty(name="track")
-    public MediaStreamTrack track;
+    public native MediaStreamTrack getTrack();
     
     
 }

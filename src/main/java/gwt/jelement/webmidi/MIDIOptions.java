@@ -24,11 +24,11 @@ import jsinterop.annotations.JsType;
 @JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class MIDIOptions{
 
+    @JsProperty(name="sysex")
+    private boolean sysex;
+
     public MIDIOptions(){
     }
-
-    @JsProperty(name="sysex")
-    public boolean sysex;
 
     @JsOverlay
     public final boolean getSysex(){
@@ -39,6 +39,5 @@ public class MIDIOptions{
     public final void setSysex(boolean sysex){
         this.sysex = sysex;
     }
-
 
 }

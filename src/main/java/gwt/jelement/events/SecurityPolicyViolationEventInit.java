@@ -26,11 +26,44 @@ import jsinterop.annotations.JsType;
 @JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class SecurityPolicyViolationEventInit extends EventInit{
 
+    @JsProperty(name="documentURI")
+    private String documentURI;
+
+    @JsProperty(name="referrer")
+    private String referrer;
+
+    @JsProperty(name="blockedURI")
+    private String blockedURI;
+
+    @JsProperty(name="violatedDirective")
+    private String violatedDirective;
+
+    @JsProperty(name="effectiveDirective")
+    private String effectiveDirective;
+
+    @JsProperty(name="originalPolicy")
+    private String originalPolicy;
+
+    @JsProperty(name="disposition")
+    private String disposition;
+
+    @JsProperty(name="sourceFile")
+    private String sourceFile;
+
+    @JsProperty(name="statusCode")
+    private short statusCode;
+
+    @JsProperty(name="lineNumber")
+    private double lineNumber;
+
+    @JsProperty(name="columnNumber")
+    private double columnNumber;
+
+    @JsProperty(name="sample")
+    private String sample;
+
     public SecurityPolicyViolationEventInit(){
     }
-
-    @JsProperty(name="documentURI")
-    public String documentURI;
 
     @JsOverlay
     public final String getDocumentURI(){
@@ -42,9 +75,6 @@ public class SecurityPolicyViolationEventInit extends EventInit{
         this.documentURI = documentURI;
     }
 
-    @JsProperty(name="referrer")
-    public String referrer;
-
     @JsOverlay
     public final String getReferrer(){
         return this.referrer;
@@ -54,9 +84,6 @@ public class SecurityPolicyViolationEventInit extends EventInit{
     public final void setReferrer(String referrer){
         this.referrer = referrer;
     }
-
-    @JsProperty(name="blockedURI")
-    public String blockedURI;
 
     @JsOverlay
     public final String getBlockedURI(){
@@ -68,9 +95,6 @@ public class SecurityPolicyViolationEventInit extends EventInit{
         this.blockedURI = blockedURI;
     }
 
-    @JsProperty(name="violatedDirective")
-    public String violatedDirective;
-
     @JsOverlay
     public final String getViolatedDirective(){
         return this.violatedDirective;
@@ -80,9 +104,6 @@ public class SecurityPolicyViolationEventInit extends EventInit{
     public final void setViolatedDirective(String violatedDirective){
         this.violatedDirective = violatedDirective;
     }
-
-    @JsProperty(name="effectiveDirective")
-    public String effectiveDirective;
 
     @JsOverlay
     public final String getEffectiveDirective(){
@@ -94,9 +115,6 @@ public class SecurityPolicyViolationEventInit extends EventInit{
         this.effectiveDirective = effectiveDirective;
     }
 
-    @JsProperty(name="originalPolicy")
-    public String originalPolicy;
-
     @JsOverlay
     public final String getOriginalPolicy(){
         return this.originalPolicy;
@@ -106,9 +124,6 @@ public class SecurityPolicyViolationEventInit extends EventInit{
     public final void setOriginalPolicy(String originalPolicy){
         this.originalPolicy = originalPolicy;
     }
-
-    @JsProperty(name="disposition")
-    public String disposition;
 
     @JsOverlay
     public final SecurityPolicyViolationEventDisposition getDisposition(){
@@ -120,9 +135,6 @@ public class SecurityPolicyViolationEventInit extends EventInit{
         this.disposition = disposition.getInternalValue();
     }
 
-    @JsProperty(name="sourceFile")
-    public String sourceFile;
-
     @JsOverlay
     public final String getSourceFile(){
         return this.sourceFile;
@@ -132,9 +144,6 @@ public class SecurityPolicyViolationEventInit extends EventInit{
     public final void setSourceFile(String sourceFile){
         this.sourceFile = sourceFile;
     }
-
-    @JsProperty(name="statusCode")
-    public short statusCode;
 
     @JsOverlay
     public final short getStatusCode(){
@@ -146,9 +155,6 @@ public class SecurityPolicyViolationEventInit extends EventInit{
         this.statusCode = statusCode;
     }
 
-    @JsProperty(name="lineNumber")
-    public double lineNumber;
-
     @JsOverlay
     public final double getLineNumber(){
         return this.lineNumber;
@@ -158,9 +164,6 @@ public class SecurityPolicyViolationEventInit extends EventInit{
     public final void setLineNumber(double lineNumber){
         this.lineNumber = lineNumber;
     }
-
-    @JsProperty(name="columnNumber")
-    public double columnNumber;
 
     @JsOverlay
     public final double getColumnNumber(){
@@ -172,9 +175,6 @@ public class SecurityPolicyViolationEventInit extends EventInit{
         this.columnNumber = columnNumber;
     }
 
-    @JsProperty(name="sample")
-    public String sample;
-
     @JsOverlay
     public final String getSample(){
         return this.sample;
@@ -184,6 +184,5 @@ public class SecurityPolicyViolationEventInit extends EventInit{
     public final void setSample(String sample){
         this.sample = sample;
     }
-
 
 }

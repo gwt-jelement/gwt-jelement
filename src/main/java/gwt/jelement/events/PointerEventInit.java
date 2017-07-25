@@ -26,11 +26,41 @@ import jsinterop.annotations.JsType;
 @JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class PointerEventInit extends MouseEventInit{
 
+    @JsProperty(name="pointerId")
+    private double pointerId;
+
+    @JsProperty(name="width")
+    private double width;
+
+    @JsProperty(name="height")
+    private double height;
+
+    @JsProperty(name="pressure")
+    private float pressure;
+
+    @JsProperty(name="tiltX")
+    private double tiltX;
+
+    @JsProperty(name="tiltY")
+    private double tiltY;
+
+    @JsProperty(name="tangentialPressure")
+    private float tangentialPressure;
+
+    @JsProperty(name="twist")
+    private double twist;
+
+    @JsProperty(name="pointerType")
+    private String pointerType;
+
+    @JsProperty(name="isPrimary")
+    private boolean isPrimary;
+
+    @JsProperty(name="coalescedEvents")
+    private PointerEvent[] coalescedEvents;
+
     public PointerEventInit(){
     }
-
-    @JsProperty(name="pointerId")
-    public double pointerId;
 
     @JsOverlay
     public final double getPointerId(){
@@ -42,9 +72,6 @@ public class PointerEventInit extends MouseEventInit{
         this.pointerId = pointerId;
     }
 
-    @JsProperty(name="width")
-    public double width;
-
     @JsOverlay
     public final double getWidth(){
         return this.width;
@@ -54,9 +81,6 @@ public class PointerEventInit extends MouseEventInit{
     public final void setWidth(double width){
         this.width = width;
     }
-
-    @JsProperty(name="height")
-    public double height;
 
     @JsOverlay
     public final double getHeight(){
@@ -68,9 +92,6 @@ public class PointerEventInit extends MouseEventInit{
         this.height = height;
     }
 
-    @JsProperty(name="pressure")
-    public float pressure;
-
     @JsOverlay
     public final float getPressure(){
         return this.pressure;
@@ -80,9 +101,6 @@ public class PointerEventInit extends MouseEventInit{
     public final void setPressure(float pressure){
         this.pressure = pressure;
     }
-
-    @JsProperty(name="tiltX")
-    public double tiltX;
 
     @JsOverlay
     public final double getTiltX(){
@@ -94,9 +112,6 @@ public class PointerEventInit extends MouseEventInit{
         this.tiltX = tiltX;
     }
 
-    @JsProperty(name="tiltY")
-    public double tiltY;
-
     @JsOverlay
     public final double getTiltY(){
         return this.tiltY;
@@ -106,9 +121,6 @@ public class PointerEventInit extends MouseEventInit{
     public final void setTiltY(double tiltY){
         this.tiltY = tiltY;
     }
-
-    @JsProperty(name="tangentialPressure")
-    public float tangentialPressure;
 
     @JsOverlay
     public final float getTangentialPressure(){
@@ -120,9 +132,6 @@ public class PointerEventInit extends MouseEventInit{
         this.tangentialPressure = tangentialPressure;
     }
 
-    @JsProperty(name="twist")
-    public double twist;
-
     @JsOverlay
     public final double getTwist(){
         return this.twist;
@@ -132,9 +141,6 @@ public class PointerEventInit extends MouseEventInit{
     public final void setTwist(double twist){
         this.twist = twist;
     }
-
-    @JsProperty(name="pointerType")
-    public String pointerType;
 
     @JsOverlay
     public final String getPointerType(){
@@ -146,9 +152,6 @@ public class PointerEventInit extends MouseEventInit{
         this.pointerType = pointerType;
     }
 
-    @JsProperty(name="isPrimary")
-    public boolean isPrimary;
-
     @JsOverlay
     public final boolean getIsPrimary(){
         return this.isPrimary;
@@ -159,9 +162,6 @@ public class PointerEventInit extends MouseEventInit{
         this.isPrimary = isPrimary;
     }
 
-    @JsProperty(name="coalescedEvents")
-    public PointerEvent[] coalescedEvents;
-
     @JsOverlay
     public final PointerEvent[] getCoalescedEvents(){
         return this.coalescedEvents;
@@ -171,6 +171,5 @@ public class PointerEventInit extends MouseEventInit{
     public final void setCoalescedEvents(PointerEvent[] coalescedEvents){
         this.coalescedEvents = coalescedEvents;
     }
-
 
 }

@@ -24,11 +24,11 @@ import jsinterop.annotations.JsType;
 @JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class GetRootNodeOptions{
 
+    @JsProperty(name="composed")
+    private boolean composed;
+
     public GetRootNodeOptions(){
     }
-
-    @JsProperty(name="composed")
-    public boolean composed;
 
     @JsOverlay
     public final boolean getComposed(){
@@ -39,6 +39,5 @@ public class GetRootNodeOptions{
     public final void setComposed(boolean composed){
         this.composed = composed;
     }
-
 
 }

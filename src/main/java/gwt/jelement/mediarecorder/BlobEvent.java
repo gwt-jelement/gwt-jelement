@@ -20,6 +20,7 @@ import gwt.jelement.events.Event;
 import gwt.jelement.fileapi.Blob;
 import gwt.jelement.mediarecorder.BlobEventInit;
 import jsinterop.annotations.JsConstructor;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -33,10 +34,10 @@ public class BlobEvent extends Event{
     }
     
     @JsProperty(name="data")
-    public Blob data;
+    public native Blob getData();
     
     @JsProperty(name="timecode")
-    public double timecode;
+    public native double getTimecode();
     
     
 }

@@ -27,31 +27,31 @@ import jsinterop.annotations.JsType;
 @JsType(namespace = JsPackage.GLOBAL, isNative = true)
 public class SecurityPolicyViolationEvent extends Event{
     
+    @JsProperty(name="disposition")
+    private String disposition;
+    
     @JsConstructor
     public SecurityPolicyViolationEvent(){
         super((String) null);
     }
     
     @JsProperty(name="documentURI")
-    public String documentURI;
+    public native String getDocumentURI();
     
     @JsProperty(name="referrer")
-    public String referrer;
+    public native String getReferrer();
     
     @JsProperty(name="blockedURI")
-    public String blockedURI;
+    public native String getBlockedURI();
     
     @JsProperty(name="violatedDirective")
-    public String violatedDirective;
+    public native String getViolatedDirective();
     
     @JsProperty(name="effectiveDirective")
-    public String effectiveDirective;
+    public native String getEffectiveDirective();
     
     @JsProperty(name="originalPolicy")
-    public String originalPolicy;
-    
-    @JsProperty(name="disposition")
-    public String disposition;
+    public native String getOriginalPolicy();
     
     @JsOverlay
     public final SecurityPolicyViolationEventDisposition getDisposition(){
@@ -59,19 +59,19 @@ public class SecurityPolicyViolationEvent extends Event{
     }
     
     @JsProperty(name="sourceFile")
-    public String sourceFile;
+    public native String getSourceFile();
     
     @JsProperty(name="statusCode")
-    public short statusCode;
+    public native short getStatusCode();
     
     @JsProperty(name="lineNumber")
-    public double lineNumber;
+    public native double getLineNumber();
     
     @JsProperty(name="columnNumber")
-    public double columnNumber;
+    public native double getColumnNumber();
     
     @JsProperty(name="sample")
-    public String sample;
+    public native String getSample();
     
     
 }

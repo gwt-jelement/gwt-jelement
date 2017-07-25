@@ -23,6 +23,7 @@ import gwt.jelement.serviceworkers.FetchEventInit;
 import elemental2.promise.Promise;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -36,18 +37,19 @@ public class FetchEvent extends ExtendableEvent{
     }
     
     @JsProperty(name="request")
-    public Request request;
+    public native Request getRequest();
     
     @JsProperty(name="clientId")
-    public String clientId;
+    public native String getClientId();
     
     @JsProperty(name="isReload")
-    public boolean isReload;
+    public native boolean getIsReload();
     
     @JsProperty(name="preloadResponse")
-    public Promise<Object> preloadResponse;
+    public native Promise<Object> getPreloadResponse();
     
     @JsMethod(name = "respondWith")
     public native void respondWith(Promise<Response> r);
+    
     
 }

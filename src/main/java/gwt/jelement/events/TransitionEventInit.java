@@ -25,11 +25,17 @@ import jsinterop.annotations.JsType;
 @JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class TransitionEventInit extends EventInit{
 
+    @JsProperty(name="propertyName")
+    private String propertyName;
+
+    @JsProperty(name="elapsedTime")
+    private double elapsedTime;
+
+    @JsProperty(name="pseudoElement")
+    private String pseudoElement;
+
     public TransitionEventInit(){
     }
-
-    @JsProperty(name="propertyName")
-    public String propertyName;
 
     @JsOverlay
     public final String getPropertyName(){
@@ -41,9 +47,6 @@ public class TransitionEventInit extends EventInit{
         this.propertyName = propertyName;
     }
 
-    @JsProperty(name="elapsedTime")
-    public double elapsedTime;
-
     @JsOverlay
     public final double getElapsedTime(){
         return this.elapsedTime;
@@ -54,9 +57,6 @@ public class TransitionEventInit extends EventInit{
         this.elapsedTime = elapsedTime;
     }
 
-    @JsProperty(name="pseudoElement")
-    public String pseudoElement;
-
     @JsOverlay
     public final String getPseudoElement(){
         return this.pseudoElement;
@@ -66,6 +66,5 @@ public class TransitionEventInit extends EventInit{
     public final void setPseudoElement(String pseudoElement){
         this.pseudoElement = pseudoElement;
     }
-
 
 }

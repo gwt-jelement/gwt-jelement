@@ -56,21 +56,23 @@ public class DOMPoint extends DOMPointReadOnly{
     }
     
     @JsProperty(name="x")
-    public double x;
+    public native void setX(double x);
     
     @JsProperty(name="y")
-    public double y;
+    public native void setY(double y);
     
     @JsProperty(name="z")
-    public double z;
+    public native void setZ(double z);
     
     @JsProperty(name="w")
-    public double w;
+    public native void setW(double w);
     
     @JsMethod(name = "fromPoint")
     public native DOMPoint fromPoint();
     
+    
     @JsMethod(name = "fromPoint")
     public native DOMPoint fromPoint(DOMPointInit other);
+    
     
 }

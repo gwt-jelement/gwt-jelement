@@ -22,6 +22,7 @@ import gwt.jelement.svg.SVGAnimatedNumber;
 import gwt.jelement.svg.SVGAnimatedString;
 import gwt.jelement.svg.SVGElement;
 import jsinterop.annotations.JsConstructor;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -43,40 +44,40 @@ public class SVGFECompositeElement extends SVGElement{
     }
     
     @JsProperty(name="in2")
-    public SVGAnimatedString in2;
+    public native SVGAnimatedString getIn2();
     
     @JsProperty(name="in1")
-    public SVGAnimatedString in1;
+    public native SVGAnimatedString getIn1();
     
     @JsProperty(name="operator")
-    public SVGAnimatedEnumeration operator;
+    public native SVGAnimatedEnumeration getOperator();
     
     @JsProperty(name="k1")
-    public SVGAnimatedNumber k1;
+    public native SVGAnimatedNumber getK1();
     
     @JsProperty(name="k2")
-    public SVGAnimatedNumber k2;
+    public native SVGAnimatedNumber getK2();
     
     @JsProperty(name="k3")
-    public SVGAnimatedNumber k3;
+    public native SVGAnimatedNumber getK3();
     
     @JsProperty(name="k4")
-    public SVGAnimatedNumber k4;
+    public native SVGAnimatedNumber getK4();
     
     @JsProperty(name="x")
-    public SVGAnimatedLength x;
+    public native SVGAnimatedLength getX();
     
     @JsProperty(name="y")
-    public SVGAnimatedLength y;
+    public native SVGAnimatedLength getY();
     
     @JsProperty(name="width")
-    public SVGAnimatedLength width;
+    public native SVGAnimatedLength getWidth();
     
     @JsProperty(name="height")
-    public SVGAnimatedLength height;
+    public native SVGAnimatedLength getHeight();
     
     @JsProperty(name="result")
-    public SVGAnimatedString result;
+    public native SVGAnimatedString getResult();
     
     
 }

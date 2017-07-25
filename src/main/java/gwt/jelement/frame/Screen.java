@@ -17,6 +17,7 @@
 package gwt.jelement.frame;
 
 import gwt.jelement.screen_orientation.ScreenOrientation;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -25,34 +26,37 @@ import jsinterop.annotations.JsType;
 public class Screen{
     
     @JsProperty(name="availWidth")
-    public double availWidth;
+    public native double getAvailWidth();
     
     @JsProperty(name="availHeight")
-    public double availHeight;
+    public native double getAvailHeight();
     
     @JsProperty(name="width")
-    public double width;
+    public native double getWidth();
     
     @JsProperty(name="height")
-    public double height;
+    public native double getHeight();
     
     @JsProperty(name="colorDepth")
-    public double colorDepth;
+    public native double getColorDepth();
     
     @JsProperty(name="pixelDepth")
-    public double pixelDepth;
+    public native double getPixelDepth();
     
     @JsProperty(name="availLeft")
-    public double availLeft;
+    public native double getAvailLeft();
     
     @JsProperty(name="availTop")
-    public double availTop;
+    public native double getAvailTop();
     
     @JsProperty(name="orientation")
-    public ScreenOrientation orientation;
+    public native ScreenOrientation getOrientation();
     
     @JsProperty(name="keepAwake")
-    public boolean keepAwake;
+    public native boolean getKeepAwake();
+    
+    @JsProperty(name="keepAwake")
+    public native void setKeepAwake(boolean keepAwake);
     
     
 }

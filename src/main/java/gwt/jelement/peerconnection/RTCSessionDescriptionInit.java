@@ -25,11 +25,14 @@ import jsinterop.annotations.JsType;
 @JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class RTCSessionDescriptionInit{
 
+    @JsProperty(name="type")
+    private String type;
+
+    @JsProperty(name="sdp")
+    private String sdp;
+
     public RTCSessionDescriptionInit(){
     }
-
-    @JsProperty(name="type")
-    public String type;
 
     @JsOverlay
     public final RTCSdpType getType(){
@@ -41,9 +44,6 @@ public class RTCSessionDescriptionInit{
         this.type = type.getInternalValue();
     }
 
-    @JsProperty(name="sdp")
-    public String sdp;
-
     @JsOverlay
     public final String getSdp(){
         return this.sdp;
@@ -53,6 +53,5 @@ public class RTCSessionDescriptionInit{
     public final void setSdp(String sdp){
         this.sdp = sdp;
     }
-
 
 }

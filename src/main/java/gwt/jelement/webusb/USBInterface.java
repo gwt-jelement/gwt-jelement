@@ -19,6 +19,7 @@ package gwt.jelement.webusb;
 import gwt.jelement.webusb.USBAlternateInterface;
 import gwt.jelement.webusb.USBConfiguration;
 import jsinterop.annotations.JsConstructor;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -31,16 +32,16 @@ public class USBInterface{
     }
     
     @JsProperty(name="interfaceNumber")
-    public byte interfaceNumber;
+    public native byte getInterfaceNumber();
     
     @JsProperty(name="alternate")
-    public USBAlternateInterface alternate;
+    public native USBAlternateInterface getAlternate();
     
     @JsProperty(name="alternates")
-    public USBAlternateInterface[] alternates;
+    public native USBAlternateInterface[] getAlternates();
     
     @JsProperty(name="claimed")
-    public boolean claimed;
+    public native boolean getClaimed();
     
     
 }

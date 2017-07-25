@@ -28,22 +28,22 @@ import jsinterop.annotations.JsType;
 @JsType(namespace = JsPackage.GLOBAL, isNative = true)
 public class Client{
     
+    @JsProperty(name="type")
+    private String type;
+    
+    @JsProperty(name="frameType")
+    private String frameType;
+    
     @JsProperty(name="url")
-    public String url;
+    public native String getUrl();
     
     @JsProperty(name="id")
-    public String id;
-    
-    @JsProperty(name="type")
-    public String type;
+    public native String getId();
     
     @JsOverlay
     public final ClientType getType(){
        return ClientType.of(type);
     }
-    
-    @JsProperty(name="frameType")
-    public String frameType;
     
     @JsOverlay
     public final ContextFrameType getFrameType(){
@@ -53,7 +53,9 @@ public class Client{
     @JsMethod(name = "postMessage")
     public native void postMessage(Object message);
     
+    
     @JsMethod(name = "postMessage")
     public native void postMessage(Object message, MessagePort[] transfer);
+    
     
 }

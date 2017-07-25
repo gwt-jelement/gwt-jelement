@@ -20,6 +20,7 @@ import gwt.jelement.dom.NodeList;
 import gwt.jelement.html.HTMLElement;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -33,9 +34,13 @@ public class HTMLContentElement extends HTMLElement{
     }
     
     @JsProperty(name="select")
-    public String select;
+    public native String getSelect();
+    
+    @JsProperty(name="select")
+    public native void setSelect(String select);
     
     @JsMethod(name = "getDistributedNodes")
     public native NodeList getDistributedNodes();
+    
     
 }

@@ -26,11 +26,14 @@ import jsinterop.annotations.JsType;
 @JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class MediaEncryptedEventInit extends EventInit{
 
+    @JsProperty(name="initDataType")
+    private String initDataType;
+
+    @JsProperty(name="initData")
+    private ArrayBuffer initData;
+
     public MediaEncryptedEventInit(){
     }
-
-    @JsProperty(name="initDataType")
-    public String initDataType;
 
     @JsOverlay
     public final String getInitDataType(){
@@ -42,9 +45,6 @@ public class MediaEncryptedEventInit extends EventInit{
         this.initDataType = initDataType;
     }
 
-    @JsProperty(name="initData")
-    public ArrayBuffer initData;
-
     @JsOverlay
     public final ArrayBuffer getInitData(){
         return this.initData;
@@ -54,6 +54,5 @@ public class MediaEncryptedEventInit extends EventInit{
     public final void setInitData(ArrayBuffer initData){
         this.initData = initData;
     }
-
 
 }

@@ -25,11 +25,14 @@ import jsinterop.annotations.JsType;
 @JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class ScrollToOptions extends ScrollOptions{
 
+    @JsProperty(name="left")
+    private double left;
+
+    @JsProperty(name="top")
+    private double top;
+
     public ScrollToOptions(){
     }
-
-    @JsProperty(name="left")
-    public double left;
 
     @JsOverlay
     public final double getLeft(){
@@ -41,9 +44,6 @@ public class ScrollToOptions extends ScrollOptions{
         this.left = left;
     }
 
-    @JsProperty(name="top")
-    public double top;
-
     @JsOverlay
     public final double getTop(){
         return this.top;
@@ -53,6 +53,5 @@ public class ScrollToOptions extends ScrollOptions{
     public final void setTop(double top){
         this.top = top;
     }
-
 
 }

@@ -31,19 +31,29 @@ import jsinterop.base.Any;
 @JsType(namespace = JsPackage.GLOBAL, isNative = true)
 public class ScreenOrientation extends EventTarget{
     
+    @JsProperty(name="onchange")
+    private EventHandlerNonNull onchange;
+    
     @JsConstructor
     public ScreenOrientation(){
         super();
     }
     
     @JsProperty(name="angle")
-    public short angle;
+    public native short getAngle();
     
     @JsProperty(name="type")
-    public String type;
+    public native String getType();
     
-    @JsProperty(name="onchange")
-    public EventHandlerNonNull onchange;
+    @JsOverlay
+    public final EventHandlerNonNull getOnChange(){
+        return this.onchange;
+    }
+    
+    @JsOverlay
+    public final void setOnChange(EventHandlerNonNull onchange){
+        this.onchange = onchange;
+    }
     
     @JsOverlay
     public final Promise lock(OrientationLockType orientation){
@@ -53,7 +63,9 @@ public class ScreenOrientation extends EventTarget{
     @JsMethod(name = "lock")
     public native Promise lock(String orientation);
     
+    
     @JsMethod(name = "unlock")
     public native void unlock();
+    
     
 }

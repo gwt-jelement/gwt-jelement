@@ -20,6 +20,7 @@ import gwt.jelement.geolocation.PositionCallback;
 import gwt.jelement.geolocation.PositionErrorCallback;
 import gwt.jelement.geolocation.PositionOptions;
 import jsinterop.annotations.JsMethod;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
@@ -29,22 +30,29 @@ public class Geolocation{
     @JsMethod(name = "clearWatch")
     public native void clearWatch(double watchID);
     
+    
     @JsMethod(name = "getCurrentPosition")
     public native void getCurrentPosition(PositionCallback successCallback);
+    
     
     @JsMethod(name = "getCurrentPosition")
     public native void getCurrentPosition(PositionCallback successCallback, PositionErrorCallback errorCallback);
     
+    
     @JsMethod(name = "getCurrentPosition")
     public native void getCurrentPosition(PositionCallback successCallback, PositionErrorCallback errorCallback, PositionOptions options);
+    
     
     @JsMethod(name = "watchPosition")
     public native double watchPosition(PositionCallback successCallback);
     
+    
     @JsMethod(name = "watchPosition")
     public native double watchPosition(PositionCallback successCallback, PositionErrorCallback errorCallback);
     
+    
     @JsMethod(name = "watchPosition")
     public native double watchPosition(PositionCallback successCallback, PositionErrorCallback errorCallback, PositionOptions options);
+    
     
 }

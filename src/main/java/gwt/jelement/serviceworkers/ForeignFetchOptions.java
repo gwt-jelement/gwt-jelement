@@ -24,11 +24,14 @@ import jsinterop.annotations.JsType;
 @JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class ForeignFetchOptions{
 
+    @JsProperty(name="scopes")
+    private String[] scopes;
+
+    @JsProperty(name="origins")
+    private String[] origins;
+
     public ForeignFetchOptions(){
     }
-
-    @JsProperty(name="scopes")
-    public String[] scopes;
 
     @JsOverlay
     public final String[] getScopes(){
@@ -40,9 +43,6 @@ public class ForeignFetchOptions{
         this.scopes = scopes;
     }
 
-    @JsProperty(name="origins")
-    public String[] origins;
-
     @JsOverlay
     public final String[] getOrigins(){
         return this.origins;
@@ -52,6 +52,5 @@ public class ForeignFetchOptions{
     public final void setOrigins(String[] origins){
         this.origins = origins;
     }
-
 
 }

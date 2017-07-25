@@ -16,6 +16,7 @@
  */
 package gwt.jelement.speech;
 
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -24,19 +25,19 @@ import jsinterop.annotations.JsType;
 public class SpeechSynthesisVoice{
     
     @JsProperty(name="voiceURI")
-    public String voiceURI;
+    public native String getVoiceURI();
     
     @JsProperty(name="name")
-    public String name;
+    public native String getName();
     
     @JsProperty(name="lang")
-    public String lang;
+    public native String getLang();
     
     @JsProperty(name="localService")
-    public boolean localService;
+    public native boolean getLocalService();
     
     @JsProperty(name="default")
-    public boolean default_;
+    public native boolean getDefault();
     
     
 }

@@ -19,6 +19,7 @@ package gwt.jelement.shapedetection;
 import gwt.jelement.geometry.DOMRect;
 import gwt.jelement.imagecapture.Point2D;
 import jsinterop.annotations.JsConstructor;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -31,13 +32,13 @@ public class DetectedBarcode{
     }
     
     @JsProperty(name="rawValue")
-    public String rawValue;
+    public native String getRawValue();
     
     @JsProperty(name="boundingBox")
-    public DOMRect boundingBox;
+    public native DOMRect getBoundingBox();
     
     @JsProperty(name="cornerPoints")
-    public Point2D[] cornerPoints;
+    public native Point2D[] getCornerPoints();
     
     
 }

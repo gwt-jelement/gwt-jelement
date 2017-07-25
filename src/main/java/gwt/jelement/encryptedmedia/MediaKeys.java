@@ -34,6 +34,7 @@ public class MediaKeys{
     @JsMethod(name = "createSession")
     public native MediaKeySession createSession();
     
+    
     @JsOverlay
     public final MediaKeySession createSession(MediaKeySessionType sessionType){
         return createSession(sessionType.getInternalValue());
@@ -42,13 +43,17 @@ public class MediaKeys{
     @JsMethod(name = "createSession")
     public native MediaKeySession createSession(String sessionType);
     
+    
     @JsMethod(name = "getStatusForPolicy")
     public native Promise<String> getStatusForPolicy(MediaKeysPolicy policy);
+    
     
     @JsMethod(name = "setServerCertificate")
     public native Promise<Boolean> setServerCertificate(ArrayBuffer serverCertificate);
     
+    
     @JsMethod(name = "setServerCertificate")
     public native Promise<Boolean> setServerCertificate(ArrayBufferView serverCertificate);
+    
     
 }

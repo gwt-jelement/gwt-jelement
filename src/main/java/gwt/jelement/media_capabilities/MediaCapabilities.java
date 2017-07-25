@@ -21,6 +21,7 @@ import gwt.jelement.media_capabilities.MediaDecodingConfiguration;
 import gwt.jelement.media_capabilities.MediaEncodingConfiguration;
 import elemental2.promise.Promise;
 import jsinterop.annotations.JsMethod;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
@@ -30,7 +31,9 @@ public class MediaCapabilities{
     @JsMethod(name = "decodingInfo")
     public native Promise<MediaCapabilitiesInfo> decodingInfo(MediaDecodingConfiguration configuration);
     
+    
     @JsMethod(name = "encodingInfo")
     public native Promise<MediaCapabilitiesInfo> encodingInfo(MediaEncodingConfiguration configuration);
+    
     
 }

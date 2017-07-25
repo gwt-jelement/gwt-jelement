@@ -21,6 +21,7 @@ import gwt.jelement.storage.Storage;
 import gwt.jelement.storage.StorageEventInit;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -39,45 +40,54 @@ public class StorageEvent extends Event{
     }
     
     @JsProperty(name="key")
-    public String key;
+    public native String getKey();
     
     @JsProperty(name="oldValue")
-    public String oldValue;
+    public native String getOldValue();
     
     @JsProperty(name="newValue")
-    public String newValue;
+    public native String getNewValue();
     
     @JsProperty(name="url")
-    public String url;
+    public native String getUrl();
     
     @JsProperty(name="storageArea")
-    public Storage storageArea;
+    public native Storage getStorageArea();
     
     @JsMethod(name = "initStorageEvent")
     public native void initStorageEvent();
     
+    
     @JsMethod(name = "initStorageEvent")
     public native void initStorageEvent(String typeArg);
+    
     
     @JsMethod(name = "initStorageEvent")
     public native void initStorageEvent(String typeArg, boolean canBubbleArg);
     
+    
     @JsMethod(name = "initStorageEvent")
     public native void initStorageEvent(String typeArg, boolean canBubbleArg, boolean cancelableArg);
+    
     
     @JsMethod(name = "initStorageEvent")
     public native void initStorageEvent(String typeArg, boolean canBubbleArg, boolean cancelableArg, String keyArg);
     
+    
     @JsMethod(name = "initStorageEvent")
     public native void initStorageEvent(String typeArg, boolean canBubbleArg, boolean cancelableArg, String keyArg, String oldValueArg);
+    
     
     @JsMethod(name = "initStorageEvent")
     public native void initStorageEvent(String typeArg, boolean canBubbleArg, boolean cancelableArg, String keyArg, String oldValueArg, String newValueArg);
     
+    
     @JsMethod(name = "initStorageEvent")
     public native void initStorageEvent(String typeArg, boolean canBubbleArg, boolean cancelableArg, String keyArg, String oldValueArg, String newValueArg, String urlArg);
     
+    
     @JsMethod(name = "initStorageEvent")
     public native void initStorageEvent(String typeArg, boolean canBubbleArg, boolean cancelableArg, String keyArg, String oldValueArg, String newValueArg, String urlArg, Storage storageAreaArg);
+    
     
 }

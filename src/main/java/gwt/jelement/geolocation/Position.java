@@ -17,6 +17,7 @@
 package gwt.jelement.geolocation;
 
 import gwt.jelement.geolocation.Coordinates;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -25,10 +26,10 @@ import jsinterop.annotations.JsType;
 public class Position{
     
     @JsProperty(name="coords")
-    public Coordinates coords;
+    public native Coordinates getCoords();
     
     @JsProperty(name="timestamp")
-    public double timestamp;
+    public native double getTimestamp();
     
     
 }

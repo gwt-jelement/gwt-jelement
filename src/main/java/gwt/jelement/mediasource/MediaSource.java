@@ -32,40 +32,76 @@ import jsinterop.base.Any;
 @JsType(namespace = JsPackage.GLOBAL, isNative = true)
 public class MediaSource extends EventTarget{
     
+    @JsProperty(name="onsourceopen")
+    private EventHandlerNonNull onsourceopen;
+    
+    @JsProperty(name="onsourceended")
+    private EventHandlerNonNull onsourceended;
+    
+    @JsProperty(name="onsourceclose")
+    private EventHandlerNonNull onsourceclose;
+    
     @JsConstructor
     public MediaSource(){
         super();
     }
     
     @JsProperty(name="sourceBuffers")
-    public SourceBufferList sourceBuffers;
+    public native SourceBufferList getSourceBuffers();
     
     @JsProperty(name="activeSourceBuffers")
-    public SourceBufferList activeSourceBuffers;
+    public native SourceBufferList getActiveSourceBuffers();
     
     @JsProperty(name="duration")
-    public double duration;
+    public native double getDuration();
     
-    @JsProperty(name="onsourceopen")
-    public EventHandlerNonNull onsourceopen;
+    @JsProperty(name="duration")
+    public native void setDuration(double duration);
     
-    @JsProperty(name="onsourceended")
-    public EventHandlerNonNull onsourceended;
+    @JsOverlay
+    public final EventHandlerNonNull getOnSourceopen(){
+        return this.onsourceopen;
+    }
     
-    @JsProperty(name="onsourceclose")
-    public EventHandlerNonNull onsourceclose;
+    @JsOverlay
+    public final void setOnSourceopen(EventHandlerNonNull onsourceopen){
+        this.onsourceopen = onsourceopen;
+    }
+    
+    @JsOverlay
+    public final EventHandlerNonNull getOnSourceended(){
+        return this.onsourceended;
+    }
+    
+    @JsOverlay
+    public final void setOnSourceended(EventHandlerNonNull onsourceended){
+        this.onsourceended = onsourceended;
+    }
+    
+    @JsOverlay
+    public final EventHandlerNonNull getOnSourceclose(){
+        return this.onsourceclose;
+    }
+    
+    @JsOverlay
+    public final void setOnSourceclose(EventHandlerNonNull onsourceclose){
+        this.onsourceclose = onsourceclose;
+    }
     
     @JsProperty(name="readyState")
-    public String readyState;
+    public native String getReadyState();
     
     @JsMethod(name = "addSourceBuffer")
     public native SourceBuffer addSourceBuffer(String type);
     
+    
     @JsMethod(name = "clearLiveSeekableRange")
     public native void clearLiveSeekableRange();
     
+    
     @JsMethod(name = "endOfStream")
     public native void endOfStream();
+    
     
     @JsOverlay
     public final void endOfStream(EndOfStreamError error){
@@ -75,13 +111,17 @@ public class MediaSource extends EventTarget{
     @JsMethod(name = "endOfStream")
     public native void endOfStream(String error);
     
+    
     @JsMethod(name = "isTypeSupported")
     public native boolean isTypeSupported(String type);
+    
     
     @JsMethod(name = "removeSourceBuffer")
     public native void removeSourceBuffer(SourceBuffer buffer);
     
+    
     @JsMethod(name = "setLiveSeekableRange")
     public native void setLiveSeekableRange(double start, double end);
+    
     
 }

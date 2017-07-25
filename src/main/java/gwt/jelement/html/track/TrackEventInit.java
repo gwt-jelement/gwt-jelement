@@ -30,11 +30,11 @@ import jsinterop.base.Js;
 @JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class TrackEventInit extends EventInit{
 
+    @JsProperty(name="track")
+    private TrackEvent.TrackUnion track;
+
     public TrackEventInit(){
     }
-
-    @JsProperty(name="track")
-    public TrackEvent.TrackUnion track;
 
     @JsOverlay
     public final void setTrack(VideoTrack track){
@@ -50,6 +50,5 @@ public class TrackEventInit extends EventInit{
     public final void setTrack(TextTrack track){
         this.track = TrackEvent.TrackUnion.of(track);
     }
-
 
 }

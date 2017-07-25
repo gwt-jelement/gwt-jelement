@@ -21,6 +21,7 @@ import gwt.jelement.webaudio.BaseAudioContext;
 import elemental2.promise.Promise;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -34,15 +35,18 @@ public class AudioContext extends BaseAudioContext{
     }
     
     @JsProperty(name="baseLatency")
-    public double baseLatency;
+    public native double getBaseLatency();
     
     @JsMethod(name = "close")
     public native Promise<Void> close();
     
+    
     @JsMethod(name = "getOutputTimestamp")
     public native AudioTimestamp getOutputTimestamp();
     
+    
     @JsMethod(name = "suspend")
     public native Promise<Void> suspend();
+    
     
 }

@@ -17,6 +17,7 @@
 package gwt.jelement.svg;
 
 import gwt.jelement.svg.SVGAngle;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -25,10 +26,10 @@ import jsinterop.annotations.JsType;
 public class SVGAnimatedAngle{
     
     @JsProperty(name="baseVal")
-    public SVGAngle baseVal;
+    public native SVGAngle getBaseVal();
     
     @JsProperty(name="animVal")
-    public SVGAngle animVal;
+    public native SVGAngle getAnimVal();
     
     
 }

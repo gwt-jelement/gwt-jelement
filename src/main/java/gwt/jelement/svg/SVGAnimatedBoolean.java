@@ -16,6 +16,7 @@
  */
 package gwt.jelement.svg;
 
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -24,10 +25,13 @@ import jsinterop.annotations.JsType;
 public class SVGAnimatedBoolean{
     
     @JsProperty(name="baseVal")
-    public boolean baseVal;
+    public native boolean getBaseVal();
+    
+    @JsProperty(name="baseVal")
+    public native void setBaseVal(boolean baseVal);
     
     @JsProperty(name="animVal")
-    public boolean animVal;
+    public native boolean getAnimVal();
     
     
 }

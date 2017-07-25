@@ -24,11 +24,17 @@ import jsinterop.annotations.JsType;
 @JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class ShareData{
 
+    @JsProperty(name="title")
+    private String title;
+
+    @JsProperty(name="text")
+    private String text;
+
+    @JsProperty(name="url")
+    private String url;
+
     public ShareData(){
     }
-
-    @JsProperty(name="title")
-    public String title;
 
     @JsOverlay
     public final String getTitle(){
@@ -40,9 +46,6 @@ public class ShareData{
         this.title = title;
     }
 
-    @JsProperty(name="text")
-    public String text;
-
     @JsOverlay
     public final String getText(){
         return this.text;
@@ -53,9 +56,6 @@ public class ShareData{
         this.text = text;
     }
 
-    @JsProperty(name="url")
-    public String url;
-
     @JsOverlay
     public final String getUrl(){
         return this.url;
@@ -65,6 +65,5 @@ public class ShareData{
     public final void setUrl(String url){
         this.url = url;
     }
-
 
 }

@@ -26,11 +26,14 @@ import jsinterop.annotations.JsType;
 @JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class PresentationConnectionCloseEventInit extends EventInit{
 
+    @JsProperty(name="reason")
+    private String reason;
+
+    @JsProperty(name="message")
+    private String message;
+
     public PresentationConnectionCloseEventInit(){
     }
-
-    @JsProperty(name="reason")
-    public String reason;
 
     @JsOverlay
     public final PresentationConnectionCloseReason getReason(){
@@ -42,9 +45,6 @@ public class PresentationConnectionCloseEventInit extends EventInit{
         this.reason = reason.getInternalValue();
     }
 
-    @JsProperty(name="message")
-    public String message;
-
     @JsOverlay
     public final String getMessage(){
         return this.message;
@@ -54,6 +54,5 @@ public class PresentationConnectionCloseEventInit extends EventInit{
     public final void setMessage(String message){
         this.message = message;
     }
-
 
 }

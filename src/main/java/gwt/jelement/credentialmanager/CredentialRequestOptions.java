@@ -26,11 +26,20 @@ import jsinterop.annotations.JsType;
 @JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class CredentialRequestOptions{
 
+    @JsProperty(name="federated")
+    private FederatedCredentialRequestOptions federated;
+
+    @JsProperty(name="password")
+    private boolean password;
+
+    @JsProperty(name="unmediated")
+    private boolean unmediated;
+
+    @JsProperty(name="mediation")
+    private String mediation;
+
     public CredentialRequestOptions(){
     }
-
-    @JsProperty(name="federated")
-    public FederatedCredentialRequestOptions federated;
 
     @JsOverlay
     public final FederatedCredentialRequestOptions getFederated(){
@@ -42,9 +51,6 @@ public class CredentialRequestOptions{
         this.federated = federated;
     }
 
-    @JsProperty(name="password")
-    public boolean password;
-
     @JsOverlay
     public final boolean getPassword(){
         return this.password;
@@ -54,9 +60,6 @@ public class CredentialRequestOptions{
     public final void setPassword(boolean password){
         this.password = password;
     }
-
-    @JsProperty(name="unmediated")
-    public boolean unmediated;
 
     @JsOverlay
     public final boolean getUnmediated(){
@@ -68,9 +71,6 @@ public class CredentialRequestOptions{
         this.unmediated = unmediated;
     }
 
-    @JsProperty(name="mediation")
-    public String mediation;
-
     @JsOverlay
     public final CredentialMediationRequirement getMediation(){
         return CredentialMediationRequirement.of(this.mediation);
@@ -80,6 +80,5 @@ public class CredentialRequestOptions{
     public final void setMediation(CredentialMediationRequirement mediation){
         this.mediation = mediation.getInternalValue();
     }
-
 
 }

@@ -27,8 +27,11 @@ import jsinterop.base.Js;
 @JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class PushSubscriptionOptionsInit{
 
-    public PushSubscriptionOptionsInit(){
-    }
+    @JsProperty(name="userVisibleOnly")
+    private boolean userVisibleOnly;
+
+    @JsProperty(name="applicationServerKey")
+    private BufferSource applicationServerKey;
 
     @JsType(isNative = true, name = "?", namespace = JsPackage.GLOBAL)
     public interface BufferSource {
@@ -64,8 +67,8 @@ public class PushSubscriptionOptionsInit{
     
     }
     
-    @JsProperty(name="userVisibleOnly")
-    public boolean userVisibleOnly;
+    public PushSubscriptionOptionsInit(){
+    }
 
     @JsOverlay
     public final boolean getUserVisibleOnly(){
@@ -77,9 +80,6 @@ public class PushSubscriptionOptionsInit{
         this.userVisibleOnly = userVisibleOnly;
     }
 
-    @JsProperty(name="applicationServerKey")
-    public BufferSource applicationServerKey;
-
     @JsOverlay
     public final void setApplicationServerKey(ArrayBuffer applicationServerKey){
         this.applicationServerKey = PushSubscriptionOptionsInit.BufferSource.of(applicationServerKey);
@@ -89,6 +89,5 @@ public class PushSubscriptionOptionsInit{
     public final void setApplicationServerKey(ArrayBufferView applicationServerKey){
         this.applicationServerKey = PushSubscriptionOptionsInit.BufferSource.of(applicationServerKey);
     }
-
 
 }

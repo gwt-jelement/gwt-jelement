@@ -19,6 +19,7 @@ package gwt.jelement.animation;
 import gwt.jelement.animation.AnimationEffectTimingReadOnly;
 import gwt.jelement.animation.ComputedTimingProperties;
 import jsinterop.annotations.JsMethod;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -27,9 +28,10 @@ import jsinterop.annotations.JsType;
 public class AnimationEffectReadOnly{
     
     @JsProperty(name="timing")
-    public AnimationEffectTimingReadOnly timing;
+    public native AnimationEffectTimingReadOnly getTiming();
     
     @JsMethod(name = "getComputedTiming")
     public native ComputedTimingProperties getComputedTiming();
+    
     
 }

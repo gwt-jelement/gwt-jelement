@@ -19,6 +19,7 @@ package gwt.jelement.svg;
 import gwt.jelement.svg.SVGGeometryElement;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
@@ -32,5 +33,6 @@ public class SVGPathElement extends SVGGeometryElement{
     
     @JsMethod(name = "getPathSegAtLength")
     public native double getPathSegAtLength(float distance);
+    
     
 }

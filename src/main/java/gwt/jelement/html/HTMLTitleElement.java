@@ -18,6 +18,7 @@ package gwt.jelement.html;
 
 import gwt.jelement.html.HTMLElement;
 import jsinterop.annotations.JsConstructor;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -31,7 +32,10 @@ public class HTMLTitleElement extends HTMLElement{
     }
     
     @JsProperty(name="text")
-    public String text;
+    public native String getText();
+    
+    @JsProperty(name="text")
+    public native void setText(String text);
     
     
 }

@@ -27,11 +27,14 @@ import jsinterop.annotations.JsType;
 @JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class MediaKeyMessageEventInit extends EventInit{
 
+    @JsProperty(name="messageType")
+    private String messageType;
+
+    @JsProperty(name="message")
+    private ArrayBuffer message;
+
     public MediaKeyMessageEventInit(){
     }
-
-    @JsProperty(name="messageType")
-    public String messageType;
 
     @JsOverlay
     public final MediaKeyMessageType getMessageType(){
@@ -43,9 +46,6 @@ public class MediaKeyMessageEventInit extends EventInit{
         this.messageType = messageType.getInternalValue();
     }
 
-    @JsProperty(name="message")
-    public ArrayBuffer message;
-
     @JsOverlay
     public final ArrayBuffer getMessage(){
         return this.message;
@@ -55,6 +55,5 @@ public class MediaKeyMessageEventInit extends EventInit{
     public final void setMessage(ArrayBuffer message){
         this.message = message;
     }
-
 
 }

@@ -23,6 +23,7 @@ import gwt.jelement.serviceworkers.ForeignFetchResponse;
 import elemental2.promise.Promise;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -36,12 +37,13 @@ public class ForeignFetchEvent extends ExtendableEvent{
     }
     
     @JsProperty(name="request")
-    public Request request;
+    public native Request getRequest();
     
     @JsProperty(name="origin")
-    public String origin;
+    public native String getOrigin();
     
     @JsMethod(name = "respondWith")
     public native void respondWith(Promise<ForeignFetchResponse> r);
+    
     
 }

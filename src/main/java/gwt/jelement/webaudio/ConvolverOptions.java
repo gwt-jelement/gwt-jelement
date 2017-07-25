@@ -26,11 +26,14 @@ import jsinterop.annotations.JsType;
 @JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class ConvolverOptions extends AudioNodeOptions{
 
+    @JsProperty(name="buffer")
+    private AudioBuffer buffer;
+
+    @JsProperty(name="disableNormalization")
+    private boolean disableNormalization;
+
     public ConvolverOptions(){
     }
-
-    @JsProperty(name="buffer")
-    public AudioBuffer buffer;
 
     @JsOverlay
     public final AudioBuffer getBuffer(){
@@ -42,9 +45,6 @@ public class ConvolverOptions extends AudioNodeOptions{
         this.buffer = buffer;
     }
 
-    @JsProperty(name="disableNormalization")
-    public boolean disableNormalization;
-
     @JsOverlay
     public final boolean getDisableNormalization(){
         return this.disableNormalization;
@@ -54,6 +54,5 @@ public class ConvolverOptions extends AudioNodeOptions{
     public final void setDisableNormalization(boolean disableNormalization){
         this.disableNormalization = disableNormalization;
     }
-
 
 }

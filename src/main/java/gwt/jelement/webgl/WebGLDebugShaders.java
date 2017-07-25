@@ -18,6 +18,7 @@ package gwt.jelement.webgl;
 
 import gwt.jelement.webgl.WebGLShader;
 import jsinterop.annotations.JsMethod;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
@@ -26,5 +27,6 @@ public class WebGLDebugShaders{
     
     @JsMethod(name = "getTranslatedShaderSource")
     public native String getTranslatedShaderSource(WebGLShader shader);
+    
     
 }

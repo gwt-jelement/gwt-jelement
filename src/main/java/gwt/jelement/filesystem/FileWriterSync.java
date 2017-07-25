@@ -18,6 +18,7 @@ package gwt.jelement.filesystem;
 
 import gwt.jelement.fileapi.Blob;
 import jsinterop.annotations.JsMethod;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -26,18 +27,21 @@ import jsinterop.annotations.JsType;
 public class FileWriterSync{
     
     @JsProperty(name="position")
-    public double position;
+    public native double getPosition();
     
     @JsProperty(name="length")
-    public double length;
+    public native double getLength();
     
     @JsMethod(name = "seek")
     public native void seek(double position);
     
+    
     @JsMethod(name = "truncate")
     public native void truncate(double size);
     
+    
     @JsMethod(name = "write")
     public native void write(Blob data);
+    
     
 }

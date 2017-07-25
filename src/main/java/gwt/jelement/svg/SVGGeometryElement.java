@@ -21,6 +21,7 @@ import gwt.jelement.svg.SVGGraphicsElement;
 import gwt.jelement.svg.SVGPoint;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -34,18 +35,22 @@ public class SVGGeometryElement extends SVGGraphicsElement{
     }
     
     @JsProperty(name="pathLength")
-    public SVGAnimatedNumber pathLength;
+    public native SVGAnimatedNumber getPathLength();
     
     @JsMethod(name = "getPointAtLength")
     public native SVGPoint getPointAtLength(float distance);
     
+    
     @JsMethod(name = "getTotalLength")
     public native float getTotalLength();
+    
     
     @JsMethod(name = "isPointInFill")
     public native boolean isPointInFill(SVGPoint point);
     
+    
     @JsMethod(name = "isPointInStroke")
     public native boolean isPointInStroke(SVGPoint point);
+    
     
 }

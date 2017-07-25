@@ -19,6 +19,7 @@ package gwt.jelement.device_orientation;
 import gwt.jelement.device_orientation.DeviceOrientationEventInit;
 import gwt.jelement.events.Event;
 import jsinterop.annotations.JsConstructor;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -37,16 +38,16 @@ public class DeviceOrientationEvent extends Event{
     }
     
     @JsProperty(name="alpha")
-    public double alpha;
+    public native double getAlpha();
     
     @JsProperty(name="beta")
-    public double beta;
+    public native double getBeta();
     
     @JsProperty(name="gamma")
-    public double gamma;
+    public native double getGamma();
     
     @JsProperty(name="absolute")
-    public boolean absolute;
+    public native boolean getAbsolute();
     
     
 }

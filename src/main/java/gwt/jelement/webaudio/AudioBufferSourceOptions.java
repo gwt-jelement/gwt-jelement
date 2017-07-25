@@ -25,11 +25,26 @@ import jsinterop.annotations.JsType;
 @JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class AudioBufferSourceOptions{
 
+    @JsProperty(name="buffer")
+    private AudioBuffer buffer;
+
+    @JsProperty(name="detune")
+    private float detune;
+
+    @JsProperty(name="loop")
+    private boolean loop;
+
+    @JsProperty(name="loopEnd")
+    private double loopEnd;
+
+    @JsProperty(name="loopStart")
+    private double loopStart;
+
+    @JsProperty(name="playbackRate")
+    private float playbackRate;
+
     public AudioBufferSourceOptions(){
     }
-
-    @JsProperty(name="buffer")
-    public AudioBuffer buffer;
 
     @JsOverlay
     public final AudioBuffer getBuffer(){
@@ -41,9 +56,6 @@ public class AudioBufferSourceOptions{
         this.buffer = buffer;
     }
 
-    @JsProperty(name="detune")
-    public float detune;
-
     @JsOverlay
     public final float getDetune(){
         return this.detune;
@@ -53,9 +65,6 @@ public class AudioBufferSourceOptions{
     public final void setDetune(float detune){
         this.detune = detune;
     }
-
-    @JsProperty(name="loop")
-    public boolean loop;
 
     @JsOverlay
     public final boolean getLoop(){
@@ -67,9 +76,6 @@ public class AudioBufferSourceOptions{
         this.loop = loop;
     }
 
-    @JsProperty(name="loopEnd")
-    public double loopEnd;
-
     @JsOverlay
     public final double getLoopEnd(){
         return this.loopEnd;
@@ -79,9 +85,6 @@ public class AudioBufferSourceOptions{
     public final void setLoopEnd(double loopEnd){
         this.loopEnd = loopEnd;
     }
-
-    @JsProperty(name="loopStart")
-    public double loopStart;
 
     @JsOverlay
     public final double getLoopStart(){
@@ -93,9 +96,6 @@ public class AudioBufferSourceOptions{
         this.loopStart = loopStart;
     }
 
-    @JsProperty(name="playbackRate")
-    public float playbackRate;
-
     @JsOverlay
     public final float getPlaybackRate(){
         return this.playbackRate;
@@ -105,6 +105,5 @@ public class AudioBufferSourceOptions{
     public final void setPlaybackRate(float playbackRate){
         this.playbackRate = playbackRate;
     }
-
 
 }

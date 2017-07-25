@@ -16,6 +16,7 @@
  */
 package gwt.jelement.svg;
 
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -24,10 +25,13 @@ import jsinterop.annotations.JsType;
 public class SVGAnimatedEnumeration{
     
     @JsProperty(name="baseVal")
-    public short baseVal;
+    public native short getBaseVal();
+    
+    @JsProperty(name="baseVal")
+    public native void setBaseVal(short baseVal);
     
     @JsProperty(name="animVal")
-    public short animVal;
+    public native short getAnimVal();
     
     
 }

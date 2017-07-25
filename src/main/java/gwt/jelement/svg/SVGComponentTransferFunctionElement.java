@@ -21,6 +21,7 @@ import gwt.jelement.svg.SVGAnimatedNumber;
 import gwt.jelement.svg.SVGAnimatedNumberList;
 import gwt.jelement.svg.SVGElement;
 import jsinterop.annotations.JsConstructor;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -41,25 +42,25 @@ public class SVGComponentTransferFunctionElement extends SVGElement{
     }
     
     @JsProperty(name="type")
-    public SVGAnimatedEnumeration type;
+    public native SVGAnimatedEnumeration getType();
     
     @JsProperty(name="tableValues")
-    public SVGAnimatedNumberList tableValues;
+    public native SVGAnimatedNumberList getTableValues();
     
     @JsProperty(name="slope")
-    public SVGAnimatedNumber slope;
+    public native SVGAnimatedNumber getSlope();
     
     @JsProperty(name="intercept")
-    public SVGAnimatedNumber intercept;
+    public native SVGAnimatedNumber getIntercept();
     
     @JsProperty(name="amplitude")
-    public SVGAnimatedNumber amplitude;
+    public native SVGAnimatedNumber getAmplitude();
     
     @JsProperty(name="exponent")
-    public SVGAnimatedNumber exponent;
+    public native SVGAnimatedNumber getExponent();
     
     @JsProperty(name="offset")
-    public SVGAnimatedNumber offset;
+    public native SVGAnimatedNumber getOffset();
     
     
 }

@@ -18,6 +18,7 @@ package gwt.jelement.css.cssom;
 
 import gwt.jelement.css.cssom.CSSImageValue;
 import jsinterop.annotations.JsConstructor;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -31,7 +32,7 @@ public class CSSURLImageValue extends CSSImageValue{
     }
     
     @JsProperty(name="url")
-    public String url;
+    public native String getUrl();
     
     
 }

@@ -22,6 +22,7 @@ import gwt.jelement.html.HTMLFormElement;
 import gwt.jelement.html.ValidityState;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -35,57 +36,90 @@ public class HTMLButtonElement extends HTMLElement{
     }
     
     @JsProperty(name="autofocus")
-    public boolean autofocus;
+    public native boolean getAutofocus();
+    
+    @JsProperty(name="autofocus")
+    public native void setAutofocus(boolean autofocus);
     
     @JsProperty(name="disabled")
-    public boolean disabled;
+    public native boolean getDisabled();
+    
+    @JsProperty(name="disabled")
+    public native void setDisabled(boolean disabled);
     
     @JsProperty(name="form")
-    public HTMLFormElement form;
+    public native HTMLFormElement getForm();
     
     @JsProperty(name="formAction")
-    public String formAction;
+    public native String getFormAction();
+    
+    @JsProperty(name="formAction")
+    public native void setFormAction(String formAction);
     
     @JsProperty(name="formEnctype")
-    public String formEnctype;
+    public native String getFormEnctype();
+    
+    @JsProperty(name="formEnctype")
+    public native void setFormEnctype(String formEnctype);
     
     @JsProperty(name="formMethod")
-    public String formMethod;
+    public native String getFormMethod();
+    
+    @JsProperty(name="formMethod")
+    public native void setFormMethod(String formMethod);
     
     @JsProperty(name="formNoValidate")
-    public boolean formNoValidate;
+    public native boolean getFormNoValidate();
+    
+    @JsProperty(name="formNoValidate")
+    public native void setFormNoValidate(boolean formNoValidate);
     
     @JsProperty(name="formTarget")
-    public String formTarget;
+    public native String getFormTarget();
+    
+    @JsProperty(name="formTarget")
+    public native void setFormTarget(String formTarget);
     
     @JsProperty(name="name")
-    public String name;
+    public native String getName();
+    
+    @JsProperty(name="name")
+    public native void setName(String name);
     
     @JsProperty(name="type")
-    public String type;
+    public native String getType();
+    
+    @JsProperty(name="type")
+    public native void setType(String type);
     
     @JsProperty(name="value")
-    public String value;
+    public native String getValue();
+    
+    @JsProperty(name="value")
+    public native void setValue(String value);
     
     @JsProperty(name="willValidate")
-    public boolean willValidate;
+    public native boolean getWillValidate();
     
     @JsProperty(name="validity")
-    public ValidityState validity;
+    public native ValidityState getValidity();
     
     @JsProperty(name="validationMessage")
-    public String validationMessage;
+    public native String getValidationMessage();
     
     @JsProperty(name="labels")
-    public NodeList labels;
+    public native NodeList getLabels();
     
     @JsMethod(name = "checkValidity")
     public native boolean checkValidity();
     
+    
     @JsMethod(name = "reportValidity")
     public native boolean reportValidity();
     
+    
     @JsMethod(name = "setCustomValidity")
     public native void setCustomValidity(String error);
+    
     
 }

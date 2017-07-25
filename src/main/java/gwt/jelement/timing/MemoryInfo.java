@@ -16,6 +16,7 @@
  */
 package gwt.jelement.timing;
 
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -24,13 +25,13 @@ import jsinterop.annotations.JsType;
 public class MemoryInfo{
     
     @JsProperty(name="totalJSHeapSize")
-    public double totalJSHeapSize;
+    public native double getTotalJSHeapSize();
     
     @JsProperty(name="usedJSHeapSize")
-    public double usedJSHeapSize;
+    public native double getUsedJSHeapSize();
     
     @JsProperty(name="jsHeapSizeLimit")
-    public double jsHeapSizeLimit;
+    public native double getJsHeapSizeLimit();
     
     
 }

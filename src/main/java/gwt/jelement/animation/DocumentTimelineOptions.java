@@ -24,11 +24,11 @@ import jsinterop.annotations.JsType;
 @JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class DocumentTimelineOptions{
 
+    @JsProperty(name="originTime")
+    private double originTime;
+
     public DocumentTimelineOptions(){
     }
-
-    @JsProperty(name="originTime")
-    public double originTime;
 
     @JsOverlay
     public final double getOriginTime(){
@@ -39,6 +39,5 @@ public class DocumentTimelineOptions{
     public final void setOriginTime(double originTime){
         this.originTime = originTime;
     }
-
 
 }

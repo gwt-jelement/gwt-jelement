@@ -24,11 +24,53 @@ import jsinterop.annotations.JsType;
 @JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class ScrollStateInit{
 
+    @JsProperty(name="deltaX")
+    private double deltaX;
+
+    @JsProperty(name="deltaY")
+    private double deltaY;
+
+    @JsProperty(name="deltaXHint")
+    private double deltaXHint;
+
+    @JsProperty(name="deltaYHint")
+    private double deltaYHint;
+
+    @JsProperty(name="positionX")
+    private double positionX;
+
+    @JsProperty(name="positionY")
+    private double positionY;
+
+    @JsProperty(name="velocityX")
+    private double velocityX;
+
+    @JsProperty(name="velocityY")
+    private double velocityY;
+
+    @JsProperty(name="isBeginning")
+    private boolean isBeginning;
+
+    @JsProperty(name="isInInertialPhase")
+    private boolean isInInertialPhase;
+
+    @JsProperty(name="isEnding")
+    private boolean isEnding;
+
+    @JsProperty(name="shouldPropagate")
+    private boolean shouldPropagate;
+
+    @JsProperty(name="fromUserInput")
+    private boolean fromUserInput;
+
+    @JsProperty(name="isDirectManipulation")
+    private boolean isDirectManipulation;
+
+    @JsProperty(name="deltaGranularity")
+    private double deltaGranularity;
+
     public ScrollStateInit(){
     }
-
-    @JsProperty(name="deltaX")
-    public double deltaX;
 
     @JsOverlay
     public final double getDeltaX(){
@@ -40,9 +82,6 @@ public class ScrollStateInit{
         this.deltaX = deltaX;
     }
 
-    @JsProperty(name="deltaY")
-    public double deltaY;
-
     @JsOverlay
     public final double getDeltaY(){
         return this.deltaY;
@@ -52,9 +91,6 @@ public class ScrollStateInit{
     public final void setDeltaY(double deltaY){
         this.deltaY = deltaY;
     }
-
-    @JsProperty(name="deltaXHint")
-    public double deltaXHint;
 
     @JsOverlay
     public final double getDeltaXHint(){
@@ -66,9 +102,6 @@ public class ScrollStateInit{
         this.deltaXHint = deltaXHint;
     }
 
-    @JsProperty(name="deltaYHint")
-    public double deltaYHint;
-
     @JsOverlay
     public final double getDeltaYHint(){
         return this.deltaYHint;
@@ -78,9 +111,6 @@ public class ScrollStateInit{
     public final void setDeltaYHint(double deltaYHint){
         this.deltaYHint = deltaYHint;
     }
-
-    @JsProperty(name="positionX")
-    public double positionX;
 
     @JsOverlay
     public final double getPositionX(){
@@ -92,9 +122,6 @@ public class ScrollStateInit{
         this.positionX = positionX;
     }
 
-    @JsProperty(name="positionY")
-    public double positionY;
-
     @JsOverlay
     public final double getPositionY(){
         return this.positionY;
@@ -104,9 +131,6 @@ public class ScrollStateInit{
     public final void setPositionY(double positionY){
         this.positionY = positionY;
     }
-
-    @JsProperty(name="velocityX")
-    public double velocityX;
 
     @JsOverlay
     public final double getVelocityX(){
@@ -118,9 +142,6 @@ public class ScrollStateInit{
         this.velocityX = velocityX;
     }
 
-    @JsProperty(name="velocityY")
-    public double velocityY;
-
     @JsOverlay
     public final double getVelocityY(){
         return this.velocityY;
@@ -130,9 +151,6 @@ public class ScrollStateInit{
     public final void setVelocityY(double velocityY){
         this.velocityY = velocityY;
     }
-
-    @JsProperty(name="isBeginning")
-    public boolean isBeginning;
 
     @JsOverlay
     public final boolean getIsBeginning(){
@@ -144,9 +162,6 @@ public class ScrollStateInit{
         this.isBeginning = isBeginning;
     }
 
-    @JsProperty(name="isInInertialPhase")
-    public boolean isInInertialPhase;
-
     @JsOverlay
     public final boolean getIsInInertialPhase(){
         return this.isInInertialPhase;
@@ -156,9 +171,6 @@ public class ScrollStateInit{
     public final void setIsInInertialPhase(boolean isInInertialPhase){
         this.isInInertialPhase = isInInertialPhase;
     }
-
-    @JsProperty(name="isEnding")
-    public boolean isEnding;
 
     @JsOverlay
     public final boolean getIsEnding(){
@@ -170,9 +182,6 @@ public class ScrollStateInit{
         this.isEnding = isEnding;
     }
 
-    @JsProperty(name="shouldPropagate")
-    public boolean shouldPropagate;
-
     @JsOverlay
     public final boolean getShouldPropagate(){
         return this.shouldPropagate;
@@ -182,9 +191,6 @@ public class ScrollStateInit{
     public final void setShouldPropagate(boolean shouldPropagate){
         this.shouldPropagate = shouldPropagate;
     }
-
-    @JsProperty(name="fromUserInput")
-    public boolean fromUserInput;
 
     @JsOverlay
     public final boolean getFromUserInput(){
@@ -196,9 +202,6 @@ public class ScrollStateInit{
         this.fromUserInput = fromUserInput;
     }
 
-    @JsProperty(name="isDirectManipulation")
-    public boolean isDirectManipulation;
-
     @JsOverlay
     public final boolean getIsDirectManipulation(){
         return this.isDirectManipulation;
@@ -209,9 +212,6 @@ public class ScrollStateInit{
         this.isDirectManipulation = isDirectManipulation;
     }
 
-    @JsProperty(name="deltaGranularity")
-    public double deltaGranularity;
-
     @JsOverlay
     public final double getDeltaGranularity(){
         return this.deltaGranularity;
@@ -221,6 +221,5 @@ public class ScrollStateInit{
     public final void setDeltaGranularity(double deltaGranularity){
         this.deltaGranularity = deltaGranularity;
     }
-
 
 }

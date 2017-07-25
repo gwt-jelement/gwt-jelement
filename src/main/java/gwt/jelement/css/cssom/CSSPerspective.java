@@ -19,6 +19,7 @@ package gwt.jelement.css.cssom;
 import gwt.jelement.css.cssom.CSSNumericValue;
 import gwt.jelement.css.cssom.CSSTransformComponent;
 import jsinterop.annotations.JsConstructor;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -32,7 +33,10 @@ public class CSSPerspective extends CSSTransformComponent{
     }
     
     @JsProperty(name="length")
-    public CSSNumericValue length;
+    public native CSSNumericValue getLength();
+    
+    @JsProperty(name="length")
+    public native void setLength(CSSNumericValue length);
     
     
 }

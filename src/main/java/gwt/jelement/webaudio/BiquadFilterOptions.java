@@ -26,11 +26,23 @@ import jsinterop.annotations.JsType;
 @JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class BiquadFilterOptions extends AudioNodeOptions{
 
+    @JsProperty(name="type")
+    private String type;
+
+    @JsProperty(name="Q")
+    private float Q;
+
+    @JsProperty(name="detune")
+    private float detune;
+
+    @JsProperty(name="frequency")
+    private float frequency;
+
+    @JsProperty(name="gain")
+    private float gain;
+
     public BiquadFilterOptions(){
     }
-
-    @JsProperty(name="type")
-    public String type;
 
     @JsOverlay
     public final BiquadFilterType getType(){
@@ -42,9 +54,6 @@ public class BiquadFilterOptions extends AudioNodeOptions{
         this.type = type.getInternalValue();
     }
 
-    @JsProperty(name="Q")
-    public float Q;
-
     @JsOverlay
     public final float getQ(){
         return this.Q;
@@ -54,9 +63,6 @@ public class BiquadFilterOptions extends AudioNodeOptions{
     public final void setQ(float Q){
         this.Q = Q;
     }
-
-    @JsProperty(name="detune")
-    public float detune;
 
     @JsOverlay
     public final float getDetune(){
@@ -68,9 +74,6 @@ public class BiquadFilterOptions extends AudioNodeOptions{
         this.detune = detune;
     }
 
-    @JsProperty(name="frequency")
-    public float frequency;
-
     @JsOverlay
     public final float getFrequency(){
         return this.frequency;
@@ -81,9 +84,6 @@ public class BiquadFilterOptions extends AudioNodeOptions{
         this.frequency = frequency;
     }
 
-    @JsProperty(name="gain")
-    public float gain;
-
     @JsOverlay
     public final float getGain(){
         return this.gain;
@@ -93,6 +93,5 @@ public class BiquadFilterOptions extends AudioNodeOptions{
     public final void setGain(float gain){
         this.gain = gain;
     }
-
 
 }

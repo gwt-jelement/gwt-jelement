@@ -33,7 +33,7 @@ import jsinterop.annotations.JsType;
 public class Response{
     
     @JsProperty(name="type")
-    public String type;
+    private String type;
     
     @JsOverlay
     public final ResponseType getType(){
@@ -41,54 +41,63 @@ public class Response{
     }
     
     @JsProperty(name="url")
-    public String url;
+    public native String getUrl();
     
     @JsProperty(name="redirected")
-    public boolean redirected;
+    public native boolean getRedirected();
     
     @JsProperty(name="status")
-    public short status;
+    public native short getStatus();
     
     @JsProperty(name="ok")
-    public boolean ok;
+    public native boolean getOk();
     
     @JsProperty(name="statusText")
-    public String statusText;
+    public native String getStatusText();
     
     @JsProperty(name="headers")
-    public Headers headers;
+    public native Headers getHeaders();
     
     @JsProperty(name="body")
-    public Object body;
+    public native Object getBody();
     
     @JsProperty(name="bodyUsed")
-    public boolean bodyUsed;
+    public native boolean getBodyUsed();
     
     @JsMethod(name = "arrayBuffer")
     public native Promise<ArrayBuffer> arrayBuffer();
     
+    
     @JsMethod(name = "blob")
     public native Promise<Blob> blob();
+    
     
     @JsMethod(name = "clone")
     public native Response clone();
     
+    
     @JsMethod(name = "error")
     public native Response error();
+    
     
     @JsMethod(name = "formData")
     public native Promise<FormData> formData();
     
+    
     @JsMethod(name = "json")
     public native Promise<Object> json();
+    
     
     @JsMethod(name = "redirect")
     public native Response redirect(String url);
     
+    
     @JsMethod(name = "redirect")
     public native Response redirect(String url, short status);
     
+    
     @JsMethod(name = "text")
     public native Promise<String> text();
+    
     
 }

@@ -27,11 +27,23 @@ import jsinterop.annotations.JsType;
 @JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class MessageEventInit extends EventInit{
 
+    @JsProperty(name="data")
+    private Object data;
+
+    @JsProperty(name="origin")
+    private String origin;
+
+    @JsProperty(name="lastEventId")
+    private String lastEventId;
+
+    @JsProperty(name="source")
+    private EventTarget source;
+
+    @JsProperty(name="ports")
+    private MessagePort[] ports;
+
     public MessageEventInit(){
     }
-
-    @JsProperty(name="data")
-    public Object data;
 
     @JsOverlay
     public final Object getData(){
@@ -43,9 +55,6 @@ public class MessageEventInit extends EventInit{
         this.data = data;
     }
 
-    @JsProperty(name="origin")
-    public String origin;
-
     @JsOverlay
     public final String getOrigin(){
         return this.origin;
@@ -55,9 +64,6 @@ public class MessageEventInit extends EventInit{
     public final void setOrigin(String origin){
         this.origin = origin;
     }
-
-    @JsProperty(name="lastEventId")
-    public String lastEventId;
 
     @JsOverlay
     public final String getLastEventId(){
@@ -69,9 +75,6 @@ public class MessageEventInit extends EventInit{
         this.lastEventId = lastEventId;
     }
 
-    @JsProperty(name="source")
-    public EventTarget source;
-
     @JsOverlay
     public final EventTarget getSource(){
         return this.source;
@@ -82,9 +85,6 @@ public class MessageEventInit extends EventInit{
         this.source = source;
     }
 
-    @JsProperty(name="ports")
-    public MessagePort[] ports;
-
     @JsOverlay
     public final MessagePort[] getPorts(){
         return this.ports;
@@ -94,6 +94,5 @@ public class MessageEventInit extends EventInit{
     public final void setPorts(MessagePort[] ports){
         this.ports = ports;
     }
-
 
 }

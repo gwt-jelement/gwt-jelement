@@ -25,11 +25,47 @@ import jsinterop.annotations.JsType;
 @JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class TouchInit{
 
+    @JsProperty(name="identifier")
+    private double identifier;
+
+    @JsProperty(name="target")
+    private EventTarget target;
+
+    @JsProperty(name="clientX")
+    private double clientX;
+
+    @JsProperty(name="clientY")
+    private double clientY;
+
+    @JsProperty(name="screenX")
+    private double screenX;
+
+    @JsProperty(name="screenY")
+    private double screenY;
+
+    @JsProperty(name="pageX")
+    private double pageX;
+
+    @JsProperty(name="pageY")
+    private double pageY;
+
+    @JsProperty(name="radiusX")
+    private float radiusX;
+
+    @JsProperty(name="radiusY")
+    private float radiusY;
+
+    @JsProperty(name="rotationAngle")
+    private float rotationAngle;
+
+    @JsProperty(name="force")
+    private float force;
+
+    @JsProperty(name="region")
+    private String region;
+
     public TouchInit(){
     }
-
-    @JsProperty(name="identifier")
-    public double identifier;
 
     @JsOverlay
     public final double getIdentifier(){
@@ -41,9 +77,6 @@ public class TouchInit{
         this.identifier = identifier;
     }
 
-    @JsProperty(name="target")
-    public EventTarget target;
-
     @JsOverlay
     public final EventTarget getTarget(){
         return this.target;
@@ -53,9 +86,6 @@ public class TouchInit{
     public final void setTarget(EventTarget target){
         this.target = target;
     }
-
-    @JsProperty(name="clientX")
-    public double clientX;
 
     @JsOverlay
     public final double getClientX(){
@@ -67,9 +97,6 @@ public class TouchInit{
         this.clientX = clientX;
     }
 
-    @JsProperty(name="clientY")
-    public double clientY;
-
     @JsOverlay
     public final double getClientY(){
         return this.clientY;
@@ -79,9 +106,6 @@ public class TouchInit{
     public final void setClientY(double clientY){
         this.clientY = clientY;
     }
-
-    @JsProperty(name="screenX")
-    public double screenX;
 
     @JsOverlay
     public final double getScreenX(){
@@ -93,9 +117,6 @@ public class TouchInit{
         this.screenX = screenX;
     }
 
-    @JsProperty(name="screenY")
-    public double screenY;
-
     @JsOverlay
     public final double getScreenY(){
         return this.screenY;
@@ -105,9 +126,6 @@ public class TouchInit{
     public final void setScreenY(double screenY){
         this.screenY = screenY;
     }
-
-    @JsProperty(name="pageX")
-    public double pageX;
 
     @JsOverlay
     public final double getPageX(){
@@ -119,9 +137,6 @@ public class TouchInit{
         this.pageX = pageX;
     }
 
-    @JsProperty(name="pageY")
-    public double pageY;
-
     @JsOverlay
     public final double getPageY(){
         return this.pageY;
@@ -131,9 +146,6 @@ public class TouchInit{
     public final void setPageY(double pageY){
         this.pageY = pageY;
     }
-
-    @JsProperty(name="radiusX")
-    public float radiusX;
 
     @JsOverlay
     public final float getRadiusX(){
@@ -145,9 +157,6 @@ public class TouchInit{
         this.radiusX = radiusX;
     }
 
-    @JsProperty(name="radiusY")
-    public float radiusY;
-
     @JsOverlay
     public final float getRadiusY(){
         return this.radiusY;
@@ -157,9 +166,6 @@ public class TouchInit{
     public final void setRadiusY(float radiusY){
         this.radiusY = radiusY;
     }
-
-    @JsProperty(name="rotationAngle")
-    public float rotationAngle;
 
     @JsOverlay
     public final float getRotationAngle(){
@@ -171,9 +177,6 @@ public class TouchInit{
         this.rotationAngle = rotationAngle;
     }
 
-    @JsProperty(name="force")
-    public float force;
-
     @JsOverlay
     public final float getForce(){
         return this.force;
@@ -184,9 +187,6 @@ public class TouchInit{
         this.force = force;
     }
 
-    @JsProperty(name="region")
-    public String region;
-
     @JsOverlay
     public final String getRegion(){
         return this.region;
@@ -196,6 +196,5 @@ public class TouchInit{
     public final void setRegion(String region){
         this.region = region;
     }
-
 
 }

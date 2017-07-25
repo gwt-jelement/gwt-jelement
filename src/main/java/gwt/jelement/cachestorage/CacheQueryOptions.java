@@ -24,11 +24,20 @@ import jsinterop.annotations.JsType;
 @JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class CacheQueryOptions{
 
+    @JsProperty(name="ignoreSearch")
+    private boolean ignoreSearch;
+
+    @JsProperty(name="ignoreMethod")
+    private boolean ignoreMethod;
+
+    @JsProperty(name="ignoreVary")
+    private boolean ignoreVary;
+
+    @JsProperty(name="cacheName")
+    private String cacheName;
+
     public CacheQueryOptions(){
     }
-
-    @JsProperty(name="ignoreSearch")
-    public boolean ignoreSearch;
 
     @JsOverlay
     public final boolean getIgnoreSearch(){
@@ -40,9 +49,6 @@ public class CacheQueryOptions{
         this.ignoreSearch = ignoreSearch;
     }
 
-    @JsProperty(name="ignoreMethod")
-    public boolean ignoreMethod;
-
     @JsOverlay
     public final boolean getIgnoreMethod(){
         return this.ignoreMethod;
@@ -52,9 +58,6 @@ public class CacheQueryOptions{
     public final void setIgnoreMethod(boolean ignoreMethod){
         this.ignoreMethod = ignoreMethod;
     }
-
-    @JsProperty(name="ignoreVary")
-    public boolean ignoreVary;
 
     @JsOverlay
     public final boolean getIgnoreVary(){
@@ -66,9 +69,6 @@ public class CacheQueryOptions{
         this.ignoreVary = ignoreVary;
     }
 
-    @JsProperty(name="cacheName")
-    public String cacheName;
-
     @JsOverlay
     public final String getCacheName(){
         return this.cacheName;
@@ -78,6 +78,5 @@ public class CacheQueryOptions{
     public final void setCacheName(String cacheName){
         this.cacheName = cacheName;
     }
-
 
 }

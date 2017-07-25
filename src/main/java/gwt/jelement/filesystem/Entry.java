@@ -23,6 +23,7 @@ import gwt.jelement.filesystem.ErrorCallback;
 import gwt.jelement.filesystem.MetadataCallback;
 import gwt.jelement.html.VoidCallback;
 import jsinterop.annotations.JsMethod;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -31,66 +32,82 @@ import jsinterop.annotations.JsType;
 public class Entry{
     
     @JsProperty(name="isFile")
-    public boolean isFile;
+    public native boolean getIsFile();
     
     @JsProperty(name="isDirectory")
-    public boolean isDirectory;
+    public native boolean getIsDirectory();
     
     @JsProperty(name="name")
-    public String name;
+    public native String getName();
     
     @JsProperty(name="fullPath")
-    public String fullPath;
+    public native String getFullPath();
     
     @JsProperty(name="filesystem")
-    public DOMFileSystem filesystem;
+    public native DOMFileSystem getFilesystem();
     
     @JsMethod(name = "copyTo")
     public native void copyTo(DirectoryEntry parent);
     
+    
     @JsMethod(name = "copyTo")
     public native void copyTo(DirectoryEntry parent, String name);
+    
     
     @JsMethod(name = "copyTo")
     public native void copyTo(DirectoryEntry parent, String name, EntryCallback successCallback);
     
+    
     @JsMethod(name = "copyTo")
     public native void copyTo(DirectoryEntry parent, String name, EntryCallback successCallback, ErrorCallback errorCallback);
+    
     
     @JsMethod(name = "getMetadata")
     public native void getMetadata(MetadataCallback successCallback);
     
+    
     @JsMethod(name = "getMetadata")
     public native void getMetadata(MetadataCallback successCallback, ErrorCallback errorCallback);
+    
     
     @JsMethod(name = "getParent")
     public native void getParent();
     
+    
     @JsMethod(name = "getParent")
     public native void getParent(EntryCallback successCallback);
+    
     
     @JsMethod(name = "getParent")
     public native void getParent(EntryCallback successCallback, ErrorCallback errorCallback);
     
+    
     @JsMethod(name = "moveTo")
     public native void moveTo(DirectoryEntry parent);
+    
     
     @JsMethod(name = "moveTo")
     public native void moveTo(DirectoryEntry parent, String name);
     
+    
     @JsMethod(name = "moveTo")
     public native void moveTo(DirectoryEntry parent, String name, EntryCallback successCallback);
+    
     
     @JsMethod(name = "moveTo")
     public native void moveTo(DirectoryEntry parent, String name, EntryCallback successCallback, ErrorCallback errorCallback);
     
+    
     @JsMethod(name = "remove")
     public native void remove(VoidCallback successCallback);
+    
     
     @JsMethod(name = "remove")
     public native void remove(VoidCallback successCallback, ErrorCallback errorCallback);
     
+    
     @JsMethod(name = "toURL")
     public native String toURL();
+    
     
 }

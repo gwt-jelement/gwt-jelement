@@ -16,6 +16,7 @@
  */
 package gwt.jelement.installedapp;
 
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -24,13 +25,13 @@ import jsinterop.annotations.JsType;
 public class RelatedApplication{
     
     @JsProperty(name="platform")
-    public String platform;
+    public native String getPlatform();
     
     @JsProperty(name="url")
-    public String url;
+    public native String getUrl();
     
     @JsProperty(name="id")
-    public String id;
+    public native String getId();
     
     
 }

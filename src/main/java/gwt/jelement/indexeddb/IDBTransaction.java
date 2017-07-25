@@ -33,16 +33,25 @@ import jsinterop.annotations.JsType;
 @JsType(namespace = JsPackage.GLOBAL, isNative = true)
 public class IDBTransaction extends EventTarget{
     
+    @JsProperty(name="mode")
+    private String mode;
+    
+    @JsProperty(name="onabort")
+    private EventHandlerNonNull onabort;
+    
+    @JsProperty(name="oncomplete")
+    private EventHandlerNonNull oncomplete;
+    
+    @JsProperty(name="onerror")
+    private EventHandlerNonNull onerror;
+    
     @JsConstructor
     public IDBTransaction(){
         super();
     }
     
     @JsProperty(name="objectStoreNames")
-    public DOMStringList objectStoreNames;
-    
-    @JsProperty(name="mode")
-    public String mode;
+    public native DOMStringList getObjectStoreNames();
     
     @JsOverlay
     public final IDBTransactionMode getMode(){
@@ -50,24 +59,47 @@ public class IDBTransaction extends EventTarget{
     }
     
     @JsProperty(name="db")
-    public IDBDatabase db;
+    public native IDBDatabase getDb();
     
     @JsProperty(name="error")
-    public DOMException error;
+    public native DOMException getError();
     
-    @JsProperty(name="onabort")
-    public EventHandlerNonNull onabort;
+    @JsOverlay
+    public final EventHandlerNonNull getOnAbort(){
+        return this.onabort;
+    }
     
-    @JsProperty(name="oncomplete")
-    public EventHandlerNonNull oncomplete;
+    @JsOverlay
+    public final void setOnAbort(EventHandlerNonNull onabort){
+        this.onabort = onabort;
+    }
     
-    @JsProperty(name="onerror")
-    public EventHandlerNonNull onerror;
+    @JsOverlay
+    public final EventHandlerNonNull getOnComplete(){
+        return this.oncomplete;
+    }
+    
+    @JsOverlay
+    public final void setOnComplete(EventHandlerNonNull oncomplete){
+        this.oncomplete = oncomplete;
+    }
+    
+    @JsOverlay
+    public final EventHandlerNonNull getOnError(){
+        return this.onerror;
+    }
+    
+    @JsOverlay
+    public final void setOnError(EventHandlerNonNull onerror){
+        this.onerror = onerror;
+    }
     
     @JsMethod(name = "abort")
     public native void abort();
     
+    
     @JsMethod(name = "objectStore")
     public native IDBObjectStore objectStore(String name);
+    
     
 }

@@ -21,6 +21,7 @@ import gwt.jelement.device_orientation.DeviceMotionEventInit;
 import gwt.jelement.device_orientation.DeviceRotationRate;
 import gwt.jelement.events.Event;
 import jsinterop.annotations.JsConstructor;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -39,16 +40,16 @@ public class DeviceMotionEvent extends Event{
     }
     
     @JsProperty(name="acceleration")
-    public DeviceAcceleration acceleration;
+    public native DeviceAcceleration getAcceleration();
     
     @JsProperty(name="accelerationIncludingGravity")
-    public DeviceAcceleration accelerationIncludingGravity;
+    public native DeviceAcceleration getAccelerationIncludingGravity();
     
     @JsProperty(name="rotationRate")
-    public DeviceRotationRate rotationRate;
+    public native DeviceRotationRate getRotationRate();
     
     @JsProperty(name="interval")
-    public double interval;
+    public native double getInterval();
     
     
 }

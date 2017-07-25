@@ -18,6 +18,7 @@ package gwt.jelement.svg;
 
 import gwt.jelement.svg.SVGPoint;
 import jsinterop.annotations.JsMethod;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -26,27 +27,33 @@ import jsinterop.annotations.JsType;
 public class SVGPointList{
     
     @JsProperty(name="length")
-    public double length;
+    public native double getLength();
     
     @JsProperty(name="numberOfItems")
-    public double numberOfItems;
+    public native double getNumberOfItems();
     
     @JsMethod(name = "appendItem")
     public native SVGPoint appendItem(SVGPoint newItem);
     
+    
     @JsMethod(name = "clear")
     public native void clear();
+    
     
     @JsMethod(name = "initialize")
     public native SVGPoint initialize(SVGPoint newItem);
     
+    
     @JsMethod(name = "insertItemBefore")
     public native SVGPoint insertItemBefore(SVGPoint newItem, double index);
+    
     
     @JsMethod(name = "removeItem")
     public native SVGPoint removeItem(double index);
     
+    
     @JsMethod(name = "replaceItem")
     public native SVGPoint replaceItem(SVGPoint newItem, double index);
+    
     
 }

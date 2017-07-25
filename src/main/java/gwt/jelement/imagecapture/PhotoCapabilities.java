@@ -28,7 +28,10 @@ import jsinterop.annotations.JsType;
 public class PhotoCapabilities{
     
     @JsProperty(name="redEyeReduction")
-    public String redEyeReduction;
+    private String redEyeReduction;
+    
+    @JsProperty(name="fillLightMode")
+    private String[] fillLightMode;
     
     @JsOverlay
     public final RedEyeReduction getRedEyeReduction(){
@@ -36,13 +39,10 @@ public class PhotoCapabilities{
     }
     
     @JsProperty(name="imageHeight")
-    public MediaSettingsRange imageHeight;
+    public native MediaSettingsRange getImageHeight();
     
     @JsProperty(name="imageWidth")
-    public MediaSettingsRange imageWidth;
-    
-    @JsProperty(name="fillLightMode")
-    public String[] fillLightMode;
+    public native MediaSettingsRange getImageWidth();
     
     @JsOverlay
     public final FillLightMode[] getFillLightMode(){

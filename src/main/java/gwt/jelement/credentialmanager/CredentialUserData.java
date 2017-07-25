@@ -16,6 +16,7 @@
  */
 package gwt.jelement.credentialmanager;
 
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -24,10 +25,10 @@ import jsinterop.annotations.JsType;
 public class CredentialUserData{
     
     @JsProperty(name="name")
-    public String name;
+    public native String getName();
     
     @JsProperty(name="iconURL")
-    public String iconURL;
+    public native String getIconURL();
     
     
 }

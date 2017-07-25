@@ -18,6 +18,7 @@ package gwt.jelement.webgl;
 
 import gwt.jelement.webgl.WebGLTimerQueryEXT;
 import jsinterop.annotations.JsMethod;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
@@ -35,25 +36,33 @@ public class EXTDisjointTimerQuery{
     @JsMethod(name = "beginQueryEXT")
     public native void beginQueryEXT(double target, WebGLTimerQueryEXT query);
     
+    
     @JsMethod(name = "createQueryEXT")
     public native WebGLTimerQueryEXT createQueryEXT();
+    
     
     @JsMethod(name = "deleteQueryEXT")
     public native void deleteQueryEXT(WebGLTimerQueryEXT query);
     
+    
     @JsMethod(name = "endQueryEXT")
     public native void endQueryEXT(double target);
+    
     
     @JsMethod(name = "getQueryEXT")
     public native Object getQueryEXT(double target, double pname);
     
+    
     @JsMethod(name = "getQueryObjectEXT")
     public native Object getQueryObjectEXT(WebGLTimerQueryEXT query, double pname);
+    
     
     @JsMethod(name = "isQueryEXT")
     public native boolean isQueryEXT(WebGLTimerQueryEXT query);
     
+    
     @JsMethod(name = "queryCounterEXT")
     public native void queryCounterEXT(WebGLTimerQueryEXT query, double target);
+    
     
 }

@@ -19,6 +19,7 @@ package gwt.jelement.dom;
 import gwt.jelement.dom.Node;
 import gwt.jelement.dom.NodeFilter;
 import jsinterop.annotations.JsMethod;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -27,27 +28,30 @@ import jsinterop.annotations.JsType;
 public class NodeIterator{
     
     @JsProperty(name="root")
-    public Node root;
+    public native Node getRoot();
     
     @JsProperty(name="referenceNode")
-    public Node referenceNode;
+    public native Node getReferenceNode();
     
     @JsProperty(name="pointerBeforeReferenceNode")
-    public boolean pointerBeforeReferenceNode;
+    public native boolean getPointerBeforeReferenceNode();
     
     @JsProperty(name="whatToShow")
-    public double whatToShow;
+    public native double getWhatToShow();
     
     @JsProperty(name="filter")
-    public NodeFilter filter;
+    public native NodeFilter getFilter();
     
     @JsMethod(name = "detach")
     public native void detach();
     
+    
     @JsMethod(name = "nextNode")
     public native Node nextNode();
     
+    
     @JsMethod(name = "previousNode")
     public native Node previousNode();
+    
     
 }

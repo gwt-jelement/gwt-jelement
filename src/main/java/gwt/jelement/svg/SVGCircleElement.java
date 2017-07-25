@@ -19,6 +19,7 @@ package gwt.jelement.svg;
 import gwt.jelement.svg.SVGAnimatedLength;
 import gwt.jelement.svg.SVGGeometryElement;
 import jsinterop.annotations.JsConstructor;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -32,13 +33,13 @@ public class SVGCircleElement extends SVGGeometryElement{
     }
     
     @JsProperty(name="cx")
-    public SVGAnimatedLength cx;
+    public native SVGAnimatedLength getCx();
     
     @JsProperty(name="cy")
-    public SVGAnimatedLength cy;
+    public native SVGAnimatedLength getCy();
     
     @JsProperty(name="r")
-    public SVGAnimatedLength r;
+    public native SVGAnimatedLength getR();
     
     
 }

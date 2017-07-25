@@ -19,6 +19,7 @@ package gwt.jelement.sensor;
 import gwt.jelement.sensor.Sensor;
 import gwt.jelement.sensor.SensorOptions;
 import jsinterop.annotations.JsConstructor;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -37,7 +38,7 @@ public class AmbientLightSensor extends Sensor{
     }
     
     @JsProperty(name="illuminance")
-    public double illuminance;
+    public native double getIlluminance();
     
     
 }

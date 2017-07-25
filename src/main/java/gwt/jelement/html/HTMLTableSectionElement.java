@@ -20,6 +20,7 @@ import gwt.jelement.html.HTMLCollection;
 import gwt.jelement.html.HTMLElement;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -33,27 +34,42 @@ public class HTMLTableSectionElement extends HTMLElement{
     }
     
     @JsProperty(name="rows")
-    public HTMLCollection rows;
+    public native HTMLCollection getRows();
     
     @JsProperty(name="align")
-    public String align;
+    public native String getAlign();
+    
+    @JsProperty(name="align")
+    public native void setAlign(String align);
     
     @JsProperty(name="ch")
-    public String ch;
+    public native String getCh();
+    
+    @JsProperty(name="ch")
+    public native void setCh(String ch);
     
     @JsProperty(name="chOff")
-    public String chOff;
+    public native String getChOff();
+    
+    @JsProperty(name="chOff")
+    public native void setChOff(String chOff);
     
     @JsProperty(name="vAlign")
-    public String vAlign;
+    public native String getVAlign();
+    
+    @JsProperty(name="vAlign")
+    public native void setVAlign(String vAlign);
     
     @JsMethod(name = "deleteRow")
     public native void deleteRow(double index);
     
+    
     @JsMethod(name = "insertRow")
     public native HTMLElement insertRow();
     
+    
     @JsMethod(name = "insertRow")
     public native HTMLElement insertRow(double index);
+    
     
 }

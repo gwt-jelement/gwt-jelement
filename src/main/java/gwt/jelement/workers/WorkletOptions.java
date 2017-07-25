@@ -25,11 +25,11 @@ import jsinterop.annotations.JsType;
 @JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class WorkletOptions{
 
+    @JsProperty(name="credentials")
+    private String credentials;
+
     public WorkletOptions(){
     }
-
-    @JsProperty(name="credentials")
-    public String credentials;
 
     @JsOverlay
     public final RequestCredentials getCredentials(){
@@ -40,6 +40,5 @@ public class WorkletOptions{
     public final void setCredentials(RequestCredentials credentials){
         this.credentials = credentials.getInternalValue();
     }
-
 
 }

@@ -34,49 +34,95 @@ import jsinterop.base.Any;
 @JsType(namespace = JsPackage.GLOBAL, isNative = true)
 public class IDBDatabase extends EventTarget{
     
+    @JsProperty(name="onabort")
+    private EventHandlerNonNull onabort;
+    
+    @JsProperty(name="onclose")
+    private EventHandlerNonNull onclose;
+    
+    @JsProperty(name="onerror")
+    private EventHandlerNonNull onerror;
+    
+    @JsProperty(name="onversionchange")
+    private EventHandlerNonNull onversionchange;
+    
     @JsConstructor
     public IDBDatabase(){
         super();
     }
     
     @JsProperty(name="name")
-    public String name;
+    public native String getName();
     
     @JsProperty(name="version")
-    public double version;
+    public native double getVersion();
     
     @JsProperty(name="objectStoreNames")
-    public DOMStringList objectStoreNames;
+    public native DOMStringList getObjectStoreNames();
     
-    @JsProperty(name="onabort")
-    public EventHandlerNonNull onabort;
+    @JsOverlay
+    public final EventHandlerNonNull getOnAbort(){
+        return this.onabort;
+    }
     
-    @JsProperty(name="onclose")
-    public EventHandlerNonNull onclose;
+    @JsOverlay
+    public final void setOnAbort(EventHandlerNonNull onabort){
+        this.onabort = onabort;
+    }
     
-    @JsProperty(name="onerror")
-    public EventHandlerNonNull onerror;
+    @JsOverlay
+    public final EventHandlerNonNull getOnClose(){
+        return this.onclose;
+    }
     
-    @JsProperty(name="onversionchange")
-    public EventHandlerNonNull onversionchange;
+    @JsOverlay
+    public final void setOnClose(EventHandlerNonNull onclose){
+        this.onclose = onclose;
+    }
+    
+    @JsOverlay
+    public final EventHandlerNonNull getOnError(){
+        return this.onerror;
+    }
+    
+    @JsOverlay
+    public final void setOnError(EventHandlerNonNull onerror){
+        this.onerror = onerror;
+    }
+    
+    @JsOverlay
+    public final EventHandlerNonNull getOnVersionchange(){
+        return this.onversionchange;
+    }
+    
+    @JsOverlay
+    public final void setOnVersionchange(EventHandlerNonNull onversionchange){
+        this.onversionchange = onversionchange;
+    }
     
     @JsMethod(name = "close")
     public native void close();
     
+    
     @JsMethod(name = "createObjectStore")
     public native IDBObjectStore createObjectStore(String name);
+    
     
     @JsMethod(name = "createObjectStore")
     public native IDBObjectStore createObjectStore(String name, IDBObjectStoreParameters options);
     
+    
     @JsMethod(name = "deleteObjectStore")
     public native void deleteObjectStore(String name);
+    
     
     @JsMethod(name = "transaction")
     public native IDBTransaction transaction(String storeNames);
     
+    
     @JsMethod(name = "transaction")
     public native IDBTransaction transaction(String[] storeNames);
+    
     
     @JsOverlay
     public final IDBTransaction transaction(String storeNames, IDBTransactionMode mode){
@@ -91,7 +137,9 @@ public class IDBDatabase extends EventTarget{
     @JsMethod(name = "transaction")
     public native IDBTransaction transaction(String storeNames, String mode);
     
+    
     @JsMethod(name = "transaction")
     public native IDBTransaction transaction(String[] storeNames, String mode);
+    
     
 }

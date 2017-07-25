@@ -20,6 +20,7 @@ import gwt.jelement.html.HTMLElement;
 import gwt.jelement.html.HTMLFormControlsCollection;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -33,48 +34,79 @@ public class HTMLFormElement extends HTMLElement{
     }
     
     @JsProperty(name="acceptCharset")
-    public String acceptCharset;
+    public native String getAcceptCharset();
+    
+    @JsProperty(name="acceptCharset")
+    public native void setAcceptCharset(String acceptCharset);
     
     @JsProperty(name="action")
-    public String action;
+    public native String getAction();
+    
+    @JsProperty(name="action")
+    public native void setAction(String action);
     
     @JsProperty(name="autocomplete")
-    public String autocomplete;
+    public native String getAutocomplete();
+    
+    @JsProperty(name="autocomplete")
+    public native void setAutocomplete(String autocomplete);
     
     @JsProperty(name="enctype")
-    public String enctype;
+    public native String getEnctype();
+    
+    @JsProperty(name="enctype")
+    public native void setEnctype(String enctype);
     
     @JsProperty(name="encoding")
-    public String encoding;
+    public native String getEncoding();
+    
+    @JsProperty(name="encoding")
+    public native void setEncoding(String encoding);
     
     @JsProperty(name="method")
-    public String method;
+    public native String getMethod();
+    
+    @JsProperty(name="method")
+    public native void setMethod(String method);
     
     @JsProperty(name="name")
-    public String name;
+    public native String getName();
+    
+    @JsProperty(name="name")
+    public native void setName(String name);
     
     @JsProperty(name="noValidate")
-    public boolean noValidate;
+    public native boolean getNoValidate();
+    
+    @JsProperty(name="noValidate")
+    public native void setNoValidate(boolean noValidate);
     
     @JsProperty(name="target")
-    public String target;
+    public native String getTarget();
+    
+    @JsProperty(name="target")
+    public native void setTarget(String target);
     
     @JsProperty(name="elements")
-    public HTMLFormControlsCollection elements;
+    public native HTMLFormControlsCollection getElements();
     
     @JsProperty(name="length")
-    public double length;
+    public native double getLength();
     
     @JsMethod(name = "checkValidity")
     public native boolean checkValidity();
     
+    
     @JsMethod(name = "reportValidity")
     public native boolean reportValidity();
+    
     
     @JsMethod(name = "reset")
     public native void reset();
     
+    
     @JsMethod(name = "submit")
     public native void submit();
+    
     
 }

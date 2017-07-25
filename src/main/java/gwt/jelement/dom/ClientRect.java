@@ -16,6 +16,7 @@
  */
 package gwt.jelement.dom;
 
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -24,22 +25,22 @@ import jsinterop.annotations.JsType;
 public class ClientRect{
     
     @JsProperty(name="top")
-    public float top;
+    public native float getTop();
     
     @JsProperty(name="right")
-    public float right;
+    public native float getRight();
     
     @JsProperty(name="bottom")
-    public float bottom;
+    public native float getBottom();
     
     @JsProperty(name="left")
-    public float left;
+    public native float getLeft();
     
     @JsProperty(name="width")
-    public float width;
+    public native float getWidth();
     
     @JsProperty(name="height")
-    public float height;
+    public native float getHeight();
     
     
 }

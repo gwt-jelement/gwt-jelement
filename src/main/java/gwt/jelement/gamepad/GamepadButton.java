@@ -16,6 +16,7 @@
  */
 package gwt.jelement.gamepad;
 
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -24,13 +25,13 @@ import jsinterop.annotations.JsType;
 public class GamepadButton{
     
     @JsProperty(name="pressed")
-    public boolean pressed;
+    public native boolean getPressed();
     
     @JsProperty(name="touched")
-    public boolean touched;
+    public native boolean getTouched();
     
     @JsProperty(name="value")
-    public double value;
+    public native double getValue();
     
     
 }

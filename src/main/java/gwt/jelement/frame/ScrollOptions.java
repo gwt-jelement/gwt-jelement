@@ -25,11 +25,11 @@ import jsinterop.annotations.JsType;
 @JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class ScrollOptions{
 
+    @JsProperty(name="behavior")
+    private String behavior;
+
     public ScrollOptions(){
     }
-
-    @JsProperty(name="behavior")
-    public String behavior;
 
     @JsOverlay
     public final ScrollBehavior getBehavior(){
@@ -40,6 +40,5 @@ public class ScrollOptions{
     public final void setBehavior(ScrollBehavior behavior){
         this.behavior = behavior.getInternalValue();
     }
-
 
 }

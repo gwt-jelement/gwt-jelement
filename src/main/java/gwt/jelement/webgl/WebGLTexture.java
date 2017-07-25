@@ -16,6 +16,7 @@
  */
 package gwt.jelement.webgl;
 
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -24,13 +25,13 @@ import jsinterop.annotations.JsType;
 public class WebGLTexture{
     
     @JsProperty(name="lastUploadedVideoWidth")
-    public double lastUploadedVideoWidth;
+    public native double getLastUploadedVideoWidth();
     
     @JsProperty(name="lastUploadedVideoHeight")
-    public double lastUploadedVideoHeight;
+    public native double getLastUploadedVideoHeight();
     
     @JsProperty(name="lastUploadedVideoTimestamp")
-    public double lastUploadedVideoTimestamp;
+    public native double getLastUploadedVideoTimestamp();
     
     
 }

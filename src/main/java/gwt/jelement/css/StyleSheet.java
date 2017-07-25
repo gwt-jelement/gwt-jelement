@@ -19,6 +19,7 @@ package gwt.jelement.css;
 import gwt.jelement.css.MediaList;
 import gwt.jelement.css.StyleSheet;
 import gwt.jelement.dom.Node;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -27,25 +28,28 @@ import jsinterop.annotations.JsType;
 public class StyleSheet{
     
     @JsProperty(name="type")
-    public String type;
+    public native String getType();
     
     @JsProperty(name="href")
-    public String href;
+    public native String getHref();
     
     @JsProperty(name="ownerNode")
-    public Node ownerNode;
+    public native Node getOwnerNode();
     
     @JsProperty(name="parentStyleSheet")
-    public StyleSheet parentStyleSheet;
+    public native StyleSheet getParentStyleSheet();
     
     @JsProperty(name="title")
-    public String title;
+    public native String getTitle();
     
     @JsProperty(name="media")
-    public MediaList media;
+    public native MediaList getMedia();
     
     @JsProperty(name="disabled")
-    public boolean disabled;
+    public native boolean getDisabled();
+    
+    @JsProperty(name="disabled")
+    public native void setDisabled(boolean disabled);
     
     
 }

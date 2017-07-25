@@ -27,11 +27,17 @@ import jsinterop.annotations.JsType;
 @JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class UIEventInit extends EventInit{
 
+    @JsProperty(name="view")
+    private Window view;
+
+    @JsProperty(name="detail")
+    private double detail;
+
+    @JsProperty(name="sourceCapabilities")
+    private InputDeviceCapabilities sourceCapabilities;
+
     public UIEventInit(){
     }
-
-    @JsProperty(name="view")
-    public Window view;
 
     @JsOverlay
     public final Window getView(){
@@ -43,9 +49,6 @@ public class UIEventInit extends EventInit{
         this.view = view;
     }
 
-    @JsProperty(name="detail")
-    public double detail;
-
     @JsOverlay
     public final double getDetail(){
         return this.detail;
@@ -56,9 +59,6 @@ public class UIEventInit extends EventInit{
         this.detail = detail;
     }
 
-    @JsProperty(name="sourceCapabilities")
-    public InputDeviceCapabilities sourceCapabilities;
-
     @JsOverlay
     public final InputDeviceCapabilities getSourceCapabilities(){
         return this.sourceCapabilities;
@@ -68,6 +68,5 @@ public class UIEventInit extends EventInit{
     public final void setSourceCapabilities(InputDeviceCapabilities sourceCapabilities){
         this.sourceCapabilities = sourceCapabilities;
     }
-
 
 }

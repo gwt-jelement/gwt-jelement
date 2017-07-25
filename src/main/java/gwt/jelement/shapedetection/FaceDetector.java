@@ -29,6 +29,7 @@ import gwt.jelement.svg.SVGImageElement;
 import elemental2.promise.Promise;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
@@ -46,25 +47,33 @@ public class FaceDetector{
     @JsMethod(name = "detect")
     public native Promise<DetectedFace[]> detect(HTMLImageElement image);
     
+    
     @JsMethod(name = "detect")
     public native Promise<DetectedFace[]> detect(SVGImageElement image);
+    
     
     @JsMethod(name = "detect")
     public native Promise<DetectedFace[]> detect(HTMLVideoElement image);
     
+    
     @JsMethod(name = "detect")
     public native Promise<DetectedFace[]> detect(HTMLCanvasElement image);
+    
     
     @JsMethod(name = "detect")
     public native Promise<DetectedFace[]> detect(Blob image);
     
+    
     @JsMethod(name = "detect")
     public native Promise<DetectedFace[]> detect(ImageData image);
+    
     
     @JsMethod(name = "detect")
     public native Promise<DetectedFace[]> detect(ImageBitmap image);
     
+    
     @JsMethod(name = "detect")
     public native Promise<DetectedFace[]> detect(OffscreenCanvas image);
+    
     
 }

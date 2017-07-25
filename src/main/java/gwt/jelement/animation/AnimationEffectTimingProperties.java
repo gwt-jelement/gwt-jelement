@@ -28,11 +28,32 @@ import jsinterop.base.Js;
 @JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class AnimationEffectTimingProperties{
 
+    @JsProperty(name="delay")
+    private double delay;
+
+    @JsProperty(name="endDelay")
+    private double endDelay;
+
+    @JsProperty(name="fill")
+    private String fill;
+
+    @JsProperty(name="iterationStart")
+    private double iterationStart;
+
+    @JsProperty(name="iterations")
+    private double iterations;
+
+    @JsProperty(name="duration")
+    private AnimationEffectTimingReadOnly.DurationUnion duration;
+
+    @JsProperty(name="direction")
+    private String direction;
+
+    @JsProperty(name="easing")
+    private String easing;
+
     public AnimationEffectTimingProperties(){
     }
-
-    @JsProperty(name="delay")
-    public double delay;
 
     @JsOverlay
     public final double getDelay(){
@@ -44,9 +65,6 @@ public class AnimationEffectTimingProperties{
         this.delay = delay;
     }
 
-    @JsProperty(name="endDelay")
-    public double endDelay;
-
     @JsOverlay
     public final double getEndDelay(){
         return this.endDelay;
@@ -56,9 +74,6 @@ public class AnimationEffectTimingProperties{
     public final void setEndDelay(double endDelay){
         this.endDelay = endDelay;
     }
-
-    @JsProperty(name="fill")
-    public String fill;
 
     @JsOverlay
     public final FillMode getFill(){
@@ -70,9 +85,6 @@ public class AnimationEffectTimingProperties{
         this.fill = fill.getInternalValue();
     }
 
-    @JsProperty(name="iterationStart")
-    public double iterationStart;
-
     @JsOverlay
     public final double getIterationStart(){
         return this.iterationStart;
@@ -82,9 +94,6 @@ public class AnimationEffectTimingProperties{
     public final void setIterationStart(double iterationStart){
         this.iterationStart = iterationStart;
     }
-
-    @JsProperty(name="iterations")
-    public double iterations;
 
     @JsOverlay
     public final double getIterations(){
@@ -96,9 +105,6 @@ public class AnimationEffectTimingProperties{
         this.iterations = iterations;
     }
 
-    @JsProperty(name="duration")
-    public AnimationEffectTimingReadOnly.DurationUnion duration;
-
     @JsOverlay
     public final void setDuration(double duration){
         this.duration = AnimationEffectTimingReadOnly.DurationUnion.of(duration);
@@ -108,9 +114,6 @@ public class AnimationEffectTimingProperties{
     public final void setDuration(String duration){
         this.duration = AnimationEffectTimingReadOnly.DurationUnion.of(duration);
     }
-
-    @JsProperty(name="direction")
-    public String direction;
 
     @JsOverlay
     public final PlaybackDirection getDirection(){
@@ -122,9 +125,6 @@ public class AnimationEffectTimingProperties{
         this.direction = direction.getInternalValue();
     }
 
-    @JsProperty(name="easing")
-    public String easing;
-
     @JsOverlay
     public final String getEasing(){
         return this.easing;
@@ -134,6 +134,5 @@ public class AnimationEffectTimingProperties{
     public final void setEasing(String easing){
         this.easing = easing;
     }
-
 
 }

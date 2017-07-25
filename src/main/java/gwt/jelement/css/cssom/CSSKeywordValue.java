@@ -18,6 +18,7 @@ package gwt.jelement.css.cssom;
 
 import gwt.jelement.css.cssom.CSSStyleValue;
 import jsinterop.annotations.JsConstructor;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -31,7 +32,10 @@ public class CSSKeywordValue extends CSSStyleValue{
     }
     
     @JsProperty(name="value")
-    public String value;
+    public native String getValue();
+    
+    @JsProperty(name="value")
+    public native void setValue(String value);
     
     
 }

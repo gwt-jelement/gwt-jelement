@@ -25,6 +25,7 @@ import gwt.jelement.svg.SVGAnimatedTransformList;
 import gwt.jelement.svg.SVGElement;
 import gwt.jelement.svg.SVGStringList;
 import jsinterop.annotations.JsConstructor;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -38,40 +39,40 @@ public class SVGPatternElement extends SVGElement{
     }
     
     @JsProperty(name="patternUnits")
-    public SVGAnimatedEnumeration patternUnits;
+    public native SVGAnimatedEnumeration getPatternUnits();
     
     @JsProperty(name="patternContentUnits")
-    public SVGAnimatedEnumeration patternContentUnits;
+    public native SVGAnimatedEnumeration getPatternContentUnits();
     
     @JsProperty(name="patternTransform")
-    public SVGAnimatedTransformList patternTransform;
+    public native SVGAnimatedTransformList getPatternTransform();
     
     @JsProperty(name="x")
-    public SVGAnimatedLength x;
+    public native SVGAnimatedLength getX();
     
     @JsProperty(name="y")
-    public SVGAnimatedLength y;
+    public native SVGAnimatedLength getY();
     
     @JsProperty(name="width")
-    public SVGAnimatedLength width;
+    public native SVGAnimatedLength getWidth();
     
     @JsProperty(name="height")
-    public SVGAnimatedLength height;
+    public native SVGAnimatedLength getHeight();
     
     @JsProperty(name="viewBox")
-    public SVGAnimatedRect viewBox;
+    public native SVGAnimatedRect getViewBox();
     
     @JsProperty(name="preserveAspectRatio")
-    public SVGAnimatedPreserveAspectRatio preserveAspectRatio;
+    public native SVGAnimatedPreserveAspectRatio getPreserveAspectRatio();
     
     @JsProperty(name="href")
-    public SVGAnimatedString href;
+    public native SVGAnimatedString getHref();
     
     @JsProperty(name="requiredExtensions")
-    public SVGStringList requiredExtensions;
+    public native SVGStringList getRequiredExtensions();
     
     @JsProperty(name="systemLanguage")
-    public SVGStringList systemLanguage;
+    public native SVGStringList getSystemLanguage();
     
     
 }

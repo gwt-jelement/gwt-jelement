@@ -18,6 +18,7 @@ package gwt.jelement.timing;
 
 import gwt.jelement.timing.PerformanceEntry;
 import jsinterop.annotations.JsMethod;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
@@ -27,13 +28,17 @@ public class PerformanceObserverEntryList{
     @JsMethod(name = "getEntries")
     public native PerformanceEntry[] getEntries();
     
+    
     @JsMethod(name = "getEntriesByName")
     public native PerformanceEntry[] getEntriesByName(String name);
+    
     
     @JsMethod(name = "getEntriesByName")
     public native PerformanceEntry[] getEntriesByName(String name, String entryType);
     
+    
     @JsMethod(name = "getEntriesByType")
     public native PerformanceEntry[] getEntriesByType(String entryType);
+    
     
 }

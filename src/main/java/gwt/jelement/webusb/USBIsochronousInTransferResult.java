@@ -19,6 +19,7 @@ package gwt.jelement.webusb;
 import gwt.jelement.dom.DataView;
 import gwt.jelement.webusb.USBIsochronousInTransferPacket;
 import jsinterop.annotations.JsConstructor;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -35,10 +36,10 @@ public class USBIsochronousInTransferResult{
     }
     
     @JsProperty(name="data")
-    public DataView data;
+    public native DataView getData();
     
     @JsProperty(name="packets")
-    public USBIsochronousInTransferPacket[] packets;
+    public native USBIsochronousInTransferPacket[] getPackets();
     
     
 }

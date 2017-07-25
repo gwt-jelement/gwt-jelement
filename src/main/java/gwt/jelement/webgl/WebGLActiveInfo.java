@@ -16,6 +16,7 @@
  */
 package gwt.jelement.webgl;
 
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -24,13 +25,13 @@ import jsinterop.annotations.JsType;
 public class WebGLActiveInfo{
     
     @JsProperty(name="size")
-    public double size;
+    public native double getSize();
     
     @JsProperty(name="type")
-    public double type;
+    public native double getType();
     
     @JsProperty(name="name")
-    public String name;
+    public native String getName();
     
     
 }

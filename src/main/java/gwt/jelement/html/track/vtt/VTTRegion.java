@@ -25,26 +25,44 @@ import jsinterop.annotations.JsType;
 @JsType(namespace = JsPackage.GLOBAL, isNative = true)
 public class VTTRegion{
     
+    @JsProperty(name="scroll")
+    private String scroll;
+    
     @JsProperty(name="width")
-    public double width;
+    public native double getWidth();
+    
+    @JsProperty(name="width")
+    public native void setWidth(double width);
     
     @JsProperty(name="lines")
-    public double lines;
+    public native double getLines();
+    
+    @JsProperty(name="lines")
+    public native void setLines(double lines);
     
     @JsProperty(name="regionAnchorX")
-    public double regionAnchorX;
+    public native double getRegionAnchorX();
+    
+    @JsProperty(name="regionAnchorX")
+    public native void setRegionAnchorX(double regionAnchorX);
     
     @JsProperty(name="regionAnchorY")
-    public double regionAnchorY;
+    public native double getRegionAnchorY();
+    
+    @JsProperty(name="regionAnchorY")
+    public native void setRegionAnchorY(double regionAnchorY);
     
     @JsProperty(name="viewportAnchorX")
-    public double viewportAnchorX;
+    public native double getViewportAnchorX();
+    
+    @JsProperty(name="viewportAnchorX")
+    public native void setViewportAnchorX(double viewportAnchorX);
     
     @JsProperty(name="viewportAnchorY")
-    public double viewportAnchorY;
+    public native double getViewportAnchorY();
     
-    @JsProperty(name="scroll")
-    public String scroll;
+    @JsProperty(name="viewportAnchorY")
+    public native void setViewportAnchorY(double viewportAnchorY);
     
     @JsOverlay
     public final ScrollSetting getScroll(){

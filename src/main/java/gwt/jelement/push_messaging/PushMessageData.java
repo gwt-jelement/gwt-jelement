@@ -19,6 +19,7 @@ package gwt.jelement.push_messaging;
 import gwt.jelement.fileapi.Blob;
 import elemental2.core.ArrayBuffer;
 import jsinterop.annotations.JsMethod;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
@@ -28,13 +29,17 @@ public class PushMessageData{
     @JsMethod(name = "arrayBuffer")
     public native ArrayBuffer arrayBuffer();
     
+    
     @JsMethod(name = "blob")
     public native Blob blob();
+    
     
     @JsMethod(name = "json")
     public native Object json();
     
+    
     @JsMethod(name = "text")
     public native String text();
+    
     
 }

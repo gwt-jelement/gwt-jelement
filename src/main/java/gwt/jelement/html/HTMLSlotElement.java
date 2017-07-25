@@ -21,6 +21,7 @@ import gwt.jelement.html.AssignedNodesOptions;
 import gwt.jelement.html.HTMLElement;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -34,12 +35,17 @@ public class HTMLSlotElement extends HTMLElement{
     }
     
     @JsProperty(name="name")
-    public String name;
+    public native String getName();
+    
+    @JsProperty(name="name")
+    public native void setName(String name);
     
     @JsMethod(name = "assignedNodes")
     public native Node[] assignedNodes();
     
+    
     @JsMethod(name = "assignedNodes")
     public native Node[] assignedNodes(AssignedNodesOptions options);
+    
     
 }

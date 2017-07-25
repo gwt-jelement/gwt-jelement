@@ -16,6 +16,7 @@
  */
 package gwt.jelement.speech;
 
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -24,10 +25,10 @@ import jsinterop.annotations.JsType;
 public class SpeechRecognitionAlternative{
     
     @JsProperty(name="transcript")
-    public String transcript;
+    public native String getTranscript();
     
     @JsProperty(name="confidence")
-    public float confidence;
+    public native float getConfidence();
     
     
 }

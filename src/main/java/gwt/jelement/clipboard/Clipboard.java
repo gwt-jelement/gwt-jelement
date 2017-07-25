@@ -21,6 +21,7 @@ import gwt.jelement.events.EventTarget;
 import elemental2.promise.Promise;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
@@ -35,13 +36,17 @@ public class Clipboard extends EventTarget{
     @JsMethod(name = "read")
     public native Promise<DataTransfer> read();
     
+    
     @JsMethod(name = "readText")
     public native Promise<String> readText();
+    
     
     @JsMethod(name = "write")
     public native Promise<Void> write(DataTransfer data);
     
+    
     @JsMethod(name = "writeText")
     public native Promise<Void> writeText(String data);
+    
     
 }

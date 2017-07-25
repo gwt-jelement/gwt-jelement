@@ -24,11 +24,11 @@ import jsinterop.annotations.JsType;
 @JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class TextDecodeOptions{
 
+    @JsProperty(name="stream")
+    private boolean stream;
+
     public TextDecodeOptions(){
     }
-
-    @JsProperty(name="stream")
-    public boolean stream;
 
     @JsOverlay
     public final boolean getStream(){
@@ -39,6 +39,5 @@ public class TextDecodeOptions{
     public final void setStream(boolean stream){
         this.stream = stream;
     }
-
 
 }

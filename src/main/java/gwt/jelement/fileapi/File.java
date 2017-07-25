@@ -22,6 +22,7 @@ import elemental2.core.ArrayBuffer;
 import elemental2.core.ArrayBufferView;
 import elemental2.core.Date;
 import jsinterop.annotations.JsConstructor;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -70,16 +71,16 @@ public class File extends Blob{
     }
     
     @JsProperty(name="name")
-    public String name;
+    public native String getName();
     
     @JsProperty(name="lastModified")
-    public double lastModified;
+    public native double getLastModified();
     
     @JsProperty(name="lastModifiedDate")
-    public Date lastModifiedDate;
+    public native Date getLastModifiedDate();
     
     @JsProperty(name="webkitRelativePath")
-    public String webkitRelativePath;
+    public native String getWebkitRelativePath();
     
     
 }

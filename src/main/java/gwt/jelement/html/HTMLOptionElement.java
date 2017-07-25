@@ -19,6 +19,7 @@ package gwt.jelement.html;
 import gwt.jelement.html.HTMLElement;
 import gwt.jelement.html.HTMLFormElement;
 import jsinterop.annotations.JsConstructor;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -32,28 +33,46 @@ public class HTMLOptionElement extends HTMLElement{
     }
     
     @JsProperty(name="disabled")
-    public boolean disabled;
+    public native boolean getDisabled();
+    
+    @JsProperty(name="disabled")
+    public native void setDisabled(boolean disabled);
     
     @JsProperty(name="form")
-    public HTMLFormElement form;
+    public native HTMLFormElement getForm();
     
     @JsProperty(name="label")
-    public String label;
+    public native String getLabel();
+    
+    @JsProperty(name="label")
+    public native void setLabel(String label);
     
     @JsProperty(name="defaultSelected")
-    public boolean defaultSelected;
+    public native boolean getDefaultSelected();
+    
+    @JsProperty(name="defaultSelected")
+    public native void setDefaultSelected(boolean defaultSelected);
     
     @JsProperty(name="selected")
-    public boolean selected;
+    public native boolean getSelected();
+    
+    @JsProperty(name="selected")
+    public native void setSelected(boolean selected);
     
     @JsProperty(name="value")
-    public String value;
+    public native String getValue();
+    
+    @JsProperty(name="value")
+    public native void setValue(String value);
     
     @JsProperty(name="text")
-    public String text;
+    public native String getText();
+    
+    @JsProperty(name="text")
+    public native void setText(String text);
     
     @JsProperty(name="index")
-    public double index;
+    public native double getIndex();
     
     
 }

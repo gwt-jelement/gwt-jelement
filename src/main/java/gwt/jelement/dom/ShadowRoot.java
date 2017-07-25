@@ -32,13 +32,13 @@ import jsinterop.annotations.JsType;
 @JsType(namespace = JsPackage.GLOBAL, isNative = true)
 public class ShadowRoot extends DocumentFragment{
     
+    @JsProperty(name="mode")
+    private String mode;
+    
     @JsConstructor
     public ShadowRoot(){
         super();
     }
-    
-    @JsProperty(name="mode")
-    public String mode;
     
     @JsOverlay
     public final ShadowRootMode getMode(){
@@ -46,36 +46,42 @@ public class ShadowRoot extends DocumentFragment{
     }
     
     @JsProperty(name="host")
-    public Element host;
+    public native Element getHost();
     
     @JsProperty(name="olderShadowRoot")
-    public ShadowRoot olderShadowRoot;
+    public native ShadowRoot getOlderShadowRoot();
     
     @JsProperty(name="innerHTML")
-    public String innerHTML;
+    public native String getInnerHTML();
+    
+    @JsProperty(name="innerHTML")
+    public native void setInnerHTML(String innerHTML);
     
     @JsProperty(name="delegatesFocus")
-    public boolean delegatesFocus;
+    public native boolean getDelegatesFocus();
     
     @JsProperty(name="activeElement")
-    public Element activeElement;
+    public native Element getActiveElement();
     
     @JsProperty(name="styleSheets")
-    public StyleSheetList styleSheets;
+    public native StyleSheetList getStyleSheets();
     
     @JsProperty(name="pointerLockElement")
-    public Element pointerLockElement;
+    public native Element getPointerLockElement();
     
     @JsProperty(name="fullscreenElement")
-    public Element fullscreenElement;
+    public native Element getFullscreenElement();
     
     @JsMethod(name = "elementFromPoint")
     public native Element elementFromPoint(double x, double y);
     
+    
     @JsMethod(name = "elementsFromPoint")
     public native Element[] elementsFromPoint(double x, double y);
     
+    
     @JsMethod(name = "getSelection")
     public native Selection getSelection();
+    
     
 }

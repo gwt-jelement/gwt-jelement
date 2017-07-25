@@ -18,6 +18,7 @@ package gwt.jelement.svg;
 
 import gwt.jelement.svg.SVGMatrix;
 import jsinterop.annotations.JsMethod;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -34,30 +35,36 @@ public class SVGTransform{
     
     
     @JsProperty(name="type")
-    public short type;
+    public native short getType();
     
     @JsProperty(name="matrix")
-    public SVGMatrix matrix;
+    public native SVGMatrix getMatrix();
     
     @JsProperty(name="angle")
-    public float angle;
+    public native float getAngle();
     
     @JsMethod(name = "setMatrix")
     public native void setMatrix(SVGMatrix matrix);
     
+    
     @JsMethod(name = "setRotate")
     public native void setRotate(float angle, float cx, float cy);
+    
     
     @JsMethod(name = "setScale")
     public native void setScale(float sx, float sy);
     
+    
     @JsMethod(name = "setSkewX")
     public native void setSkewX(float angle);
+    
     
     @JsMethod(name = "setSkewY")
     public native void setSkewY(float angle);
     
+    
     @JsMethod(name = "setTranslate")
     public native void setTranslate(float tx, float ty);
+    
     
 }

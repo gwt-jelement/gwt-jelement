@@ -23,12 +23,16 @@ import gwt.jelement.presentation.PresentationConnection;
 import elemental2.promise.Promise;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, isNative = true)
 public class PresentationRequest extends EventTarget{
+    
+    @JsProperty(name="onconnectionavailable")
+    private EventHandlerNonNull onconnectionavailable;
     
     @JsConstructor
     public PresentationRequest(String url){
@@ -40,16 +44,26 @@ public class PresentationRequest extends EventTarget{
         super();
     }
     
-    @JsProperty(name="onconnectionavailable")
-    public EventHandlerNonNull onconnectionavailable;
+    @JsOverlay
+    public final EventHandlerNonNull getOnConnectionavailable(){
+        return this.onconnectionavailable;
+    }
+    
+    @JsOverlay
+    public final void setOnConnectionavailable(EventHandlerNonNull onconnectionavailable){
+        this.onconnectionavailable = onconnectionavailable;
+    }
     
     @JsMethod(name = "getAvailability")
     public native Promise<PresentationAvailability> getAvailability();
     
+    
     @JsMethod(name = "reconnect")
     public native Promise<PresentationConnection> reconnect(String id);
     
+    
     @JsMethod(name = "start")
     public native Promise<PresentationConnection> start();
+    
     
 }

@@ -20,6 +20,7 @@ import gwt.jelement.events.CustomEventInit;
 import gwt.jelement.events.Event;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -38,18 +39,22 @@ public class CustomEvent extends Event{
     }
     
     @JsProperty(name="detail")
-    public Object detail;
+    public native Object getDetail();
     
     @JsMethod(name = "initCustomEvent")
     public native void initCustomEvent(String type);
     
+    
     @JsMethod(name = "initCustomEvent")
     public native void initCustomEvent(String type, boolean bubbles);
+    
     
     @JsMethod(name = "initCustomEvent")
     public native void initCustomEvent(String type, boolean bubbles, boolean cancelable);
     
+    
     @JsMethod(name = "initCustomEvent")
     public native void initCustomEvent(String type, boolean bubbles, boolean cancelable, Object detail);
+    
     
 }

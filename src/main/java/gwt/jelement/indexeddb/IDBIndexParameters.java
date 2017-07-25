@@ -24,11 +24,14 @@ import jsinterop.annotations.JsType;
 @JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class IDBIndexParameters{
 
+    @JsProperty(name="unique")
+    private boolean unique;
+
+    @JsProperty(name="multiEntry")
+    private boolean multiEntry;
+
     public IDBIndexParameters(){
     }
-
-    @JsProperty(name="unique")
-    public boolean unique;
 
     @JsOverlay
     public final boolean getUnique(){
@@ -40,9 +43,6 @@ public class IDBIndexParameters{
         this.unique = unique;
     }
 
-    @JsProperty(name="multiEntry")
-    public boolean multiEntry;
-
     @JsOverlay
     public final boolean getMultiEntry(){
         return this.multiEntry;
@@ -52,6 +52,5 @@ public class IDBIndexParameters{
     public final void setMultiEntry(boolean multiEntry){
         this.multiEntry = multiEntry;
     }
-
 
 }

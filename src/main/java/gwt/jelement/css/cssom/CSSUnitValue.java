@@ -18,6 +18,7 @@ package gwt.jelement.css.cssom;
 
 import gwt.jelement.css.cssom.CSSNumericValue;
 import jsinterop.annotations.JsConstructor;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -31,13 +32,19 @@ public class CSSUnitValue extends CSSNumericValue{
     }
     
     @JsProperty(name="value")
-    public double value;
+    public native double getValue();
+    
+    @JsProperty(name="value")
+    public native void setValue(double value);
     
     @JsProperty(name="unit")
-    public String unit;
+    public native String getUnit();
+    
+    @JsProperty(name="unit")
+    public native void setUnit(String unit);
     
     @JsProperty(name="type")
-    public String type;
+    public native String getType();
     
     
 }

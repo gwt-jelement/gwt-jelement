@@ -24,11 +24,17 @@ import jsinterop.annotations.JsType;
 @JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class EventInit{
 
+    @JsProperty(name="bubbles")
+    private boolean bubbles;
+
+    @JsProperty(name="cancelable")
+    private boolean cancelable;
+
+    @JsProperty(name="composed")
+    private boolean composed;
+
     public EventInit(){
     }
-
-    @JsProperty(name="bubbles")
-    public boolean bubbles;
 
     @JsOverlay
     public final boolean getBubbles(){
@@ -40,9 +46,6 @@ public class EventInit{
         this.bubbles = bubbles;
     }
 
-    @JsProperty(name="cancelable")
-    public boolean cancelable;
-
     @JsOverlay
     public final boolean getCancelable(){
         return this.cancelable;
@@ -53,9 +56,6 @@ public class EventInit{
         this.cancelable = cancelable;
     }
 
-    @JsProperty(name="composed")
-    public boolean composed;
-
     @JsOverlay
     public final boolean getComposed(){
         return this.composed;
@@ -65,6 +65,5 @@ public class EventInit{
     public final void setComposed(boolean composed){
         this.composed = composed;
     }
-
 
 }

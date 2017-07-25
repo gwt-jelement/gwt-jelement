@@ -24,11 +24,11 @@ import jsinterop.annotations.JsType;
 @JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class RegistrationOptions{
 
+    @JsProperty(name="scope")
+    private String scope;
+
     public RegistrationOptions(){
     }
-
-    @JsProperty(name="scope")
-    public String scope;
 
     @JsOverlay
     public final String getScope(){
@@ -39,6 +39,5 @@ public class RegistrationOptions{
     public final void setScope(String scope){
         this.scope = scope;
     }
-
 
 }

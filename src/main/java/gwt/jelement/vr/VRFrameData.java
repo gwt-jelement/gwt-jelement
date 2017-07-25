@@ -19,6 +19,7 @@ package gwt.jelement.vr;
 import gwt.jelement.vr.VRPose;
 import elemental2.core.Float32Array;
 import jsinterop.annotations.JsConstructor;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -31,19 +32,19 @@ public class VRFrameData{
     }
     
     @JsProperty(name="leftProjectionMatrix")
-    public Float32Array leftProjectionMatrix;
+    public native Float32Array getLeftProjectionMatrix();
     
     @JsProperty(name="leftViewMatrix")
-    public Float32Array leftViewMatrix;
+    public native Float32Array getLeftViewMatrix();
     
     @JsProperty(name="rightProjectionMatrix")
-    public Float32Array rightProjectionMatrix;
+    public native Float32Array getRightProjectionMatrix();
     
     @JsProperty(name="rightViewMatrix")
-    public Float32Array rightViewMatrix;
+    public native Float32Array getRightViewMatrix();
     
     @JsProperty(name="pose")
-    public VRPose pose;
+    public native VRPose getPose();
     
     
 }

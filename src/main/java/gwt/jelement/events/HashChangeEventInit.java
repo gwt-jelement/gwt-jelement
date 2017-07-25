@@ -25,11 +25,14 @@ import jsinterop.annotations.JsType;
 @JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class HashChangeEventInit extends EventInit{
 
+    @JsProperty(name="oldURL")
+    private String oldURL;
+
+    @JsProperty(name="newURL")
+    private String newURL;
+
     public HashChangeEventInit(){
     }
-
-    @JsProperty(name="oldURL")
-    public String oldURL;
 
     @JsOverlay
     public final String getOldURL(){
@@ -41,9 +44,6 @@ public class HashChangeEventInit extends EventInit{
         this.oldURL = oldURL;
     }
 
-    @JsProperty(name="newURL")
-    public String newURL;
-
     @JsOverlay
     public final String getNewURL(){
         return this.newURL;
@@ -53,6 +53,5 @@ public class HashChangeEventInit extends EventInit{
     public final void setNewURL(String newURL){
         this.newURL = newURL;
     }
-
 
 }

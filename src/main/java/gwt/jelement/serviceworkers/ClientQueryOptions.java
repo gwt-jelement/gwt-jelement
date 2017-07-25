@@ -25,11 +25,14 @@ import jsinterop.annotations.JsType;
 @JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class ClientQueryOptions{
 
+    @JsProperty(name="includeUncontrolled")
+    private boolean includeUncontrolled;
+
+    @JsProperty(name="type")
+    private String type;
+
     public ClientQueryOptions(){
     }
-
-    @JsProperty(name="includeUncontrolled")
-    public boolean includeUncontrolled;
 
     @JsOverlay
     public final boolean getIncludeUncontrolled(){
@@ -41,9 +44,6 @@ public class ClientQueryOptions{
         this.includeUncontrolled = includeUncontrolled;
     }
 
-    @JsProperty(name="type")
-    public String type;
-
     @JsOverlay
     public final ClientType getType(){
         return ClientType.of(this.type);
@@ -53,6 +53,5 @@ public class ClientQueryOptions{
     public final void setType(ClientType type){
         this.type = type.getInternalValue();
     }
-
 
 }

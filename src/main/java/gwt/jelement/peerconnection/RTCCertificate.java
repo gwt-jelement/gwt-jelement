@@ -18,6 +18,7 @@ package gwt.jelement.peerconnection;
 
 import gwt.jelement.peerconnection.RTCDtlsFingerprint;
 import jsinterop.annotations.JsMethod;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -26,9 +27,10 @@ import jsinterop.annotations.JsType;
 public class RTCCertificate{
     
     @JsProperty(name="expires")
-    public double expires;
+    public native double getExpires();
     
     @JsMethod(name = "getFingerprints")
     public native RTCDtlsFingerprint[] getFingerprints();
+    
     
 }

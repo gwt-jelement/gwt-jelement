@@ -18,6 +18,7 @@ package gwt.jelement.indexeddb;
 
 import gwt.jelement.indexeddb.IDBDatabase;
 import gwt.jelement.indexeddb.IDBTransaction;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -26,13 +27,13 @@ import jsinterop.annotations.JsType;
 public class IDBObserverChanges{
     
     @JsProperty(name="database")
-    public IDBDatabase database;
+    public native IDBDatabase getDatabase();
     
     @JsProperty(name="transaction")
-    public IDBTransaction transaction;
+    public native IDBTransaction getTransaction();
     
     @JsProperty(name="records")
-    public Object records;
+    public native Object getRecords();
     
     
 }

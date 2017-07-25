@@ -24,6 +24,7 @@ import elemental2.core.ArrayBufferView;
 import elemental2.promise.Promise;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -31,48 +32,75 @@ import jsinterop.annotations.JsType;
 @JsType(namespace = JsPackage.GLOBAL, isNative = true)
 public class MediaKeySession extends EventTarget{
     
+    @JsProperty(name="onkeystatuseschange")
+    private EventHandlerNonNull onkeystatuseschange;
+    
+    @JsProperty(name="onmessage")
+    private EventHandlerNonNull onmessage;
+    
     @JsConstructor
     public MediaKeySession(){
         super();
     }
     
     @JsProperty(name="sessionId")
-    public String sessionId;
+    public native String getSessionId();
     
     @JsProperty(name="expiration")
-    public double expiration;
+    public native double getExpiration();
     
     @JsProperty(name="closed")
-    public Promise closed;
+    public native Promise getClosed();
     
     @JsProperty(name="keyStatuses")
-    public MediaKeyStatusMap keyStatuses;
+    public native MediaKeyStatusMap getKeyStatuses();
     
-    @JsProperty(name="onkeystatuseschange")
-    public EventHandlerNonNull onkeystatuseschange;
+    @JsOverlay
+    public final EventHandlerNonNull getOnKeystatuseschange(){
+        return this.onkeystatuseschange;
+    }
     
-    @JsProperty(name="onmessage")
-    public EventHandlerNonNull onmessage;
+    @JsOverlay
+    public final void setOnKeystatuseschange(EventHandlerNonNull onkeystatuseschange){
+        this.onkeystatuseschange = onkeystatuseschange;
+    }
+    
+    @JsOverlay
+    public final EventHandlerNonNull getOnMessage(){
+        return this.onmessage;
+    }
+    
+    @JsOverlay
+    public final void setOnMessage(EventHandlerNonNull onmessage){
+        this.onmessage = onmessage;
+    }
     
     @JsMethod(name = "close")
     public native Promise<Void> close();
     
+    
     @JsMethod(name = "generateRequest")
     public native Promise<Void> generateRequest(String initDataType, ArrayBuffer initData);
+    
     
     @JsMethod(name = "generateRequest")
     public native Promise<Void> generateRequest(String initDataType, ArrayBufferView initData);
     
+    
     @JsMethod(name = "load")
     public native Promise<Boolean> load(String sessionId);
+    
     
     @JsMethod(name = "remove")
     public native Promise<Void> remove();
     
+    
     @JsMethod(name = "update")
     public native Promise<Void> update(ArrayBuffer response);
     
+    
     @JsMethod(name = "update")
     public native Promise<Void> update(ArrayBufferView response);
+    
     
 }

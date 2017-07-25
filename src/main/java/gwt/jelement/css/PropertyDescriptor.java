@@ -24,11 +24,20 @@ import jsinterop.annotations.JsType;
 @JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class PropertyDescriptor{
 
+    @JsProperty(name="name")
+    private String name;
+
+    @JsProperty(name="syntax")
+    private String syntax;
+
+    @JsProperty(name="inherits")
+    private boolean inherits;
+
+    @JsProperty(name="initialValue")
+    private String initialValue;
+
     public PropertyDescriptor(){
     }
-
-    @JsProperty(name="name")
-    public String name;
 
     @JsOverlay
     public final String getName(){
@@ -40,9 +49,6 @@ public class PropertyDescriptor{
         this.name = name;
     }
 
-    @JsProperty(name="syntax")
-    public String syntax;
-
     @JsOverlay
     public final String getSyntax(){
         return this.syntax;
@@ -52,9 +58,6 @@ public class PropertyDescriptor{
     public final void setSyntax(String syntax){
         this.syntax = syntax;
     }
-
-    @JsProperty(name="inherits")
-    public boolean inherits;
 
     @JsOverlay
     public final boolean getInherits(){
@@ -66,9 +69,6 @@ public class PropertyDescriptor{
         this.inherits = inherits;
     }
 
-    @JsProperty(name="initialValue")
-    public String initialValue;
-
     @JsOverlay
     public final String getInitialValue(){
         return this.initialValue;
@@ -78,6 +78,5 @@ public class PropertyDescriptor{
     public final void setInitialValue(String initialValue){
         this.initialValue = initialValue;
     }
-
 
 }

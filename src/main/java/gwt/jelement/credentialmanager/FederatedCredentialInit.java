@@ -25,11 +25,20 @@ import jsinterop.annotations.JsType;
 @JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class FederatedCredentialInit extends CredentialData{
 
+    @JsProperty(name="name")
+    private String name;
+
+    @JsProperty(name="iconURL")
+    private String iconURL;
+
+    @JsProperty(name="provider")
+    private String provider;
+
+    @JsProperty(name="protocol")
+    private String protocol;
+
     public FederatedCredentialInit(){
     }
-
-    @JsProperty(name="name")
-    public String name;
 
     @JsOverlay
     public final String getName(){
@@ -41,9 +50,6 @@ public class FederatedCredentialInit extends CredentialData{
         this.name = name;
     }
 
-    @JsProperty(name="iconURL")
-    public String iconURL;
-
     @JsOverlay
     public final String getIconURL(){
         return this.iconURL;
@@ -53,9 +59,6 @@ public class FederatedCredentialInit extends CredentialData{
     public final void setIconURL(String iconURL){
         this.iconURL = iconURL;
     }
-
-    @JsProperty(name="provider")
-    public String provider;
 
     @JsOverlay
     public final String getProvider(){
@@ -67,9 +70,6 @@ public class FederatedCredentialInit extends CredentialData{
         this.provider = provider;
     }
 
-    @JsProperty(name="protocol")
-    public String protocol;
-
     @JsOverlay
     public final String getProtocol(){
         return this.protocol;
@@ -79,6 +79,5 @@ public class FederatedCredentialInit extends CredentialData{
     public final void setProtocol(String protocol){
         this.protocol = protocol;
     }
-
 
 }

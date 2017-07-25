@@ -20,12 +20,16 @@ import gwt.jelement.dom.MessagePort;
 import gwt.jelement.events.EventHandlerNonNull;
 import gwt.jelement.events.EventTarget;
 import jsinterop.annotations.JsConstructor;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, isNative = true)
 public class SharedWorker extends EventTarget{
+    
+    @JsProperty(name="onerror")
+    private EventHandlerNonNull onerror;
     
     @JsConstructor
     public SharedWorker(String scriptURL){
@@ -38,13 +42,20 @@ public class SharedWorker extends EventTarget{
     }
     
     @JsProperty(name="port")
-    public MessagePort port;
+    public native MessagePort getPort();
     
     @JsProperty(name="workerStart")
-    public double workerStart;
+    public native double getWorkerStart();
     
-    @JsProperty(name="onerror")
-    public EventHandlerNonNull onerror;
+    @JsOverlay
+    public final EventHandlerNonNull getOnError(){
+        return this.onerror;
+    }
+    
+    @JsOverlay
+    public final void setOnError(EventHandlerNonNull onerror){
+        this.onerror = onerror;
+    }
     
     
 }

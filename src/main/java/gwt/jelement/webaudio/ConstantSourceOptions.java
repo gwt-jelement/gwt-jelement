@@ -24,11 +24,11 @@ import jsinterop.annotations.JsType;
 @JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class ConstantSourceOptions{
 
+    @JsProperty(name="offset")
+    private float offset;
+
     public ConstantSourceOptions(){
     }
-
-    @JsProperty(name="offset")
-    public float offset;
 
     @JsOverlay
     public final float getOffset(){
@@ -39,6 +39,5 @@ public class ConstantSourceOptions{
     public final void setOffset(float offset){
         this.offset = offset;
     }
-
 
 }

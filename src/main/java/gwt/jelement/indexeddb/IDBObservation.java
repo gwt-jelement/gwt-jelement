@@ -26,7 +26,7 @@ import jsinterop.annotations.JsType;
 public class IDBObservation{
     
     @JsProperty(name="type")
-    public String type;
+    private String type;
     
     @JsOverlay
     public final IDBObservationType getType(){
@@ -34,10 +34,10 @@ public class IDBObservation{
     }
     
     @JsProperty(name="key")
-    public Object key;
+    public native Object getKey();
     
     @JsProperty(name="value")
-    public Object value;
+    public native Object getValue();
     
     
 }

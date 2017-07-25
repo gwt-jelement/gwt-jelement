@@ -28,32 +28,56 @@ import jsinterop.annotations.JsType;
 @JsType(namespace = JsPackage.GLOBAL, isNative = true)
 public class FontFace{
     
+    @JsProperty(name="status")
+    private String status;
+    
     @JsProperty(name="family")
-    public String family;
+    public native String getFamily();
+    
+    @JsProperty(name="family")
+    public native void setFamily(String family);
     
     @JsProperty(name="style")
-    public String style;
+    public native String getStyle();
+    
+    @JsProperty(name="style")
+    public native void setStyle(String style);
     
     @JsProperty(name="weight")
-    public String weight;
+    public native String getWeight();
+    
+    @JsProperty(name="weight")
+    public native void setWeight(String weight);
     
     @JsProperty(name="stretch")
-    public String stretch;
+    public native String getStretch();
+    
+    @JsProperty(name="stretch")
+    public native void setStretch(String stretch);
     
     @JsProperty(name="unicodeRange")
-    public String unicodeRange;
+    public native String getUnicodeRange();
+    
+    @JsProperty(name="unicodeRange")
+    public native void setUnicodeRange(String unicodeRange);
     
     @JsProperty(name="variant")
-    public String variant;
+    public native String getVariant();
+    
+    @JsProperty(name="variant")
+    public native void setVariant(String variant);
     
     @JsProperty(name="featureSettings")
-    public String featureSettings;
+    public native String getFeatureSettings();
+    
+    @JsProperty(name="featureSettings")
+    public native void setFeatureSettings(String featureSettings);
     
     @JsProperty(name="display")
-    public String display;
+    public native String getDisplay();
     
-    @JsProperty(name="status")
-    public String status;
+    @JsProperty(name="display")
+    public native void setDisplay(String display);
     
     @JsOverlay
     public final FontFaceLoadStatus getStatus(){
@@ -61,9 +85,10 @@ public class FontFace{
     }
     
     @JsProperty(name="loaded")
-    public Promise<FontFace> loaded;
+    public native Promise<FontFace> getLoaded();
     
     @JsMethod(name = "load")
     public native Promise<FontFace> load();
+    
     
 }

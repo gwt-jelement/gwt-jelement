@@ -19,6 +19,7 @@ package gwt.jelement.xml;
 import gwt.jelement.dom.Node;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
@@ -31,5 +32,6 @@ public class XMLSerializer{
     
     @JsMethod(name = "serializeToString")
     public native String serializeToString(Node root);
+    
     
 }

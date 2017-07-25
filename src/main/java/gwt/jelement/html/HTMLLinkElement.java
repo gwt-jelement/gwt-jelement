@@ -21,6 +21,7 @@ import gwt.jelement.dom.DOMTokenList;
 import gwt.jelement.dom.Document;
 import gwt.jelement.html.HTMLElement;
 import jsinterop.annotations.JsConstructor;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -34,58 +35,100 @@ public class HTMLLinkElement extends HTMLElement{
     }
     
     @JsProperty(name="disabled")
-    public boolean disabled;
+    public native boolean getDisabled();
+    
+    @JsProperty(name="disabled")
+    public native void setDisabled(boolean disabled);
     
     @JsProperty(name="href")
-    public String href;
+    public native String getHref();
+    
+    @JsProperty(name="href")
+    public native void setHref(String href);
     
     @JsProperty(name="crossOrigin")
-    public String crossOrigin;
+    public native String getCrossOrigin();
+    
+    @JsProperty(name="crossOrigin")
+    public native void setCrossOrigin(String crossOrigin);
     
     @JsProperty(name="rel")
-    public String rel;
+    public native String getRel();
+    
+    @JsProperty(name="rel")
+    public native void setRel(String rel);
     
     @JsProperty(name="relList")
-    public DOMTokenList relList;
+    public native DOMTokenList getRelList();
     
     @JsProperty(name="media")
-    public String media;
+    public native String getMedia();
+    
+    @JsProperty(name="media")
+    public native void setMedia(String media);
     
     @JsProperty(name="hreflang")
-    public String hreflang;
+    public native String getHreflang();
+    
+    @JsProperty(name="hreflang")
+    public native void setHreflang(String hreflang);
     
     @JsProperty(name="type")
-    public String type;
+    public native String getType();
+    
+    @JsProperty(name="type")
+    public native void setType(String type);
     
     @JsProperty(name="as")
-    public String as;
+    public native String getAs();
+    
+    @JsProperty(name="as")
+    public native void setAs(String as);
     
     @JsProperty(name="referrerPolicy")
-    public String referrerPolicy;
+    public native String getReferrerPolicy();
+    
+    @JsProperty(name="referrerPolicy")
+    public native void setReferrerPolicy(String referrerPolicy);
     
     @JsProperty(name="sizes")
-    public DOMTokenList sizes;
+    public native DOMTokenList getSizes();
     
     @JsProperty(name="charset")
-    public String charset;
+    public native String getCharset();
+    
+    @JsProperty(name="charset")
+    public native void setCharset(String charset);
     
     @JsProperty(name="rev")
-    public String rev;
+    public native String getRev();
+    
+    @JsProperty(name="rev")
+    public native void setRev(String rev);
     
     @JsProperty(name="target")
-    public String target;
+    public native String getTarget();
+    
+    @JsProperty(name="target")
+    public native void setTarget(String target);
     
     @JsProperty(name="sheet")
-    public StyleSheet sheet;
+    public native StyleSheet getSheet();
     
     @JsProperty(name="import")
-    public Document import_;
+    public native Document getImport();
     
     @JsProperty(name="integrity")
-    public String integrity;
+    public native String getIntegrity();
+    
+    @JsProperty(name="integrity")
+    public native void setIntegrity(String integrity);
     
     @JsProperty(name="scope")
-    public String scope;
+    public native String getScope();
+    
+    @JsProperty(name="scope")
+    public native void setScope(String scope);
     
     
 }

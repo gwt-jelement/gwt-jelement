@@ -22,6 +22,7 @@ import elemental2.core.ArrayBuffer;
 import elemental2.core.ArrayBufferView;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -42,27 +43,32 @@ public class TextDecoder{
     }
     
     @JsProperty(name="encoding")
-    public String encoding;
+    public native String getEncoding();
     
     @JsProperty(name="fatal")
-    public boolean fatal;
+    public native boolean getFatal();
     
     @JsProperty(name="ignoreBOM")
-    public boolean ignoreBOM;
+    public native boolean getIgnoreBOM();
     
     @JsMethod(name = "decode")
     public native String decode();
     
+    
     @JsMethod(name = "decode")
     public native String decode(ArrayBuffer input);
+    
     
     @JsMethod(name = "decode")
     public native String decode(ArrayBufferView input);
     
+    
     @JsMethod(name = "decode")
     public native String decode(ArrayBuffer input, TextDecodeOptions options);
     
+    
     @JsMethod(name = "decode")
     public native String decode(ArrayBufferView input, TextDecodeOptions options);
+    
     
 }

@@ -26,11 +26,23 @@ import jsinterop.annotations.JsType;
 @JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class USBControlTransferParameters{
 
+    @JsProperty(name="requestType")
+    private String requestType;
+
+    @JsProperty(name="recipient")
+    private String recipient;
+
+    @JsProperty(name="request")
+    private byte request;
+
+    @JsProperty(name="value")
+    private short value;
+
+    @JsProperty(name="index")
+    private short index;
+
     public USBControlTransferParameters(){
     }
-
-    @JsProperty(name="requestType")
-    public String requestType;
 
     @JsOverlay
     public final USBRequestType getRequestType(){
@@ -42,9 +54,6 @@ public class USBControlTransferParameters{
         this.requestType = requestType.getInternalValue();
     }
 
-    @JsProperty(name="recipient")
-    public String recipient;
-
     @JsOverlay
     public final USBRecipient getRecipient(){
         return USBRecipient.of(this.recipient);
@@ -54,9 +63,6 @@ public class USBControlTransferParameters{
     public final void setRecipient(USBRecipient recipient){
         this.recipient = recipient.getInternalValue();
     }
-
-    @JsProperty(name="request")
-    public byte request;
 
     @JsOverlay
     public final byte getRequest(){
@@ -68,9 +74,6 @@ public class USBControlTransferParameters{
         this.request = request;
     }
 
-    @JsProperty(name="value")
-    public short value;
-
     @JsOverlay
     public final short getValue(){
         return this.value;
@@ -81,9 +84,6 @@ public class USBControlTransferParameters{
         this.value = value;
     }
 
-    @JsProperty(name="index")
-    public short index;
-
     @JsOverlay
     public final short getIndex(){
         return this.index;
@@ -93,6 +93,5 @@ public class USBControlTransferParameters{
     public final void setIndex(short index){
         this.index = index;
     }
-
 
 }

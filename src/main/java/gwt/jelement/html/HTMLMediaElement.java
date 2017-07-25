@@ -52,118 +52,180 @@ public class HTMLMediaElement extends HTMLElement{
     public static int HAVE_ENOUGH_DATA;
     
     
+    @JsProperty(name="onencrypted")
+    private EventHandlerNonNull onencrypted;
+    
+    @JsProperty(name="onwaitingforkey")
+    private EventHandlerNonNull onwaitingforkey;
+    
     @JsConstructor
     public HTMLMediaElement(){
         super();
     }
     
     @JsProperty(name="error")
-    public MediaError error;
+    public native MediaError getError();
     
     @JsProperty(name="src")
-    public String src;
+    public native String getSrc();
+    
+    @JsProperty(name="src")
+    public native void setSrc(String src);
     
     @JsProperty(name="currentSrc")
-    public String currentSrc;
+    public native String getCurrentSrc();
     
     @JsProperty(name="crossOrigin")
-    public String crossOrigin;
+    public native String getCrossOrigin();
+    
+    @JsProperty(name="crossOrigin")
+    public native void setCrossOrigin(String crossOrigin);
     
     @JsProperty(name="networkState")
-    public short networkState;
+    public native short getNetworkState();
     
     @JsProperty(name="preload")
-    public String preload;
+    public native String getPreload();
+    
+    @JsProperty(name="preload")
+    public native void setPreload(String preload);
     
     @JsProperty(name="buffered")
-    public TimeRanges buffered;
+    public native TimeRanges getBuffered();
     
     @JsProperty(name="readyState")
-    public short readyState;
+    public native short getReadyState();
     
     @JsProperty(name="seeking")
-    public boolean seeking;
+    public native boolean getSeeking();
     
     @JsProperty(name="currentTime")
-    public double currentTime;
+    public native double getCurrentTime();
+    
+    @JsProperty(name="currentTime")
+    public native void setCurrentTime(double currentTime);
     
     @JsProperty(name="duration")
-    public double duration;
+    public native double getDuration();
     
     @JsProperty(name="paused")
-    public boolean paused;
+    public native boolean getPaused();
     
     @JsProperty(name="defaultPlaybackRate")
-    public double defaultPlaybackRate;
+    public native double getDefaultPlaybackRate();
+    
+    @JsProperty(name="defaultPlaybackRate")
+    public native void setDefaultPlaybackRate(double defaultPlaybackRate);
     
     @JsProperty(name="playbackRate")
-    public double playbackRate;
+    public native double getPlaybackRate();
+    
+    @JsProperty(name="playbackRate")
+    public native void setPlaybackRate(double playbackRate);
     
     @JsProperty(name="played")
-    public TimeRanges played;
+    public native TimeRanges getPlayed();
     
     @JsProperty(name="seekable")
-    public TimeRanges seekable;
+    public native TimeRanges getSeekable();
     
     @JsProperty(name="ended")
-    public boolean ended;
+    public native boolean getEnded();
     
     @JsProperty(name="autoplay")
-    public boolean autoplay;
+    public native boolean getAutoplay();
+    
+    @JsProperty(name="autoplay")
+    public native void setAutoplay(boolean autoplay);
     
     @JsProperty(name="loop")
-    public boolean loop;
+    public native boolean getLoop();
+    
+    @JsProperty(name="loop")
+    public native void setLoop(boolean loop);
     
     @JsProperty(name="controls")
-    public boolean controls;
+    public native boolean getControls();
+    
+    @JsProperty(name="controls")
+    public native void setControls(boolean controls);
     
     @JsProperty(name="controlsList")
-    public DOMTokenList controlsList;
+    public native DOMTokenList getControlsList();
     
     @JsProperty(name="volume")
-    public double volume;
+    public native double getVolume();
+    
+    @JsProperty(name="volume")
+    public native void setVolume(double volume);
     
     @JsProperty(name="muted")
-    public boolean muted;
+    public native boolean getMuted();
+    
+    @JsProperty(name="muted")
+    public native void setMuted(boolean muted);
     
     @JsProperty(name="defaultMuted")
-    public boolean defaultMuted;
+    public native boolean getDefaultMuted();
+    
+    @JsProperty(name="defaultMuted")
+    public native void setDefaultMuted(boolean defaultMuted);
     
     @JsProperty(name="audioTracks")
-    public AudioTrackList audioTracks;
+    public native AudioTrackList getAudioTracks();
     
     @JsProperty(name="videoTracks")
-    public VideoTrackList videoTracks;
+    public native VideoTrackList getVideoTracks();
     
     @JsProperty(name="textTracks")
-    public TextTrackList textTracks;
+    public native TextTrackList getTextTracks();
     
     @JsProperty(name="webkitAudioDecodedByteCount")
-    public double webkitAudioDecodedByteCount;
+    public native double getWebkitAudioDecodedByteCount();
     
     @JsProperty(name="webkitVideoDecodedByteCount")
-    public double webkitVideoDecodedByteCount;
+    public native double getWebkitVideoDecodedByteCount();
     
     @JsProperty(name="sinkId")
-    public String sinkId;
+    public native String getSinkId();
     
     @JsProperty(name="mediaKeys")
-    public MediaKeys mediaKeys;
+    public native MediaKeys getMediaKeys();
     
-    @JsProperty(name="onencrypted")
-    public EventHandlerNonNull onencrypted;
+    @JsOverlay
+    public final EventHandlerNonNull getOnEncrypted(){
+        return this.onencrypted;
+    }
     
-    @JsProperty(name="onwaitingforkey")
-    public EventHandlerNonNull onwaitingforkey;
+    @JsOverlay
+    public final void setOnEncrypted(EventHandlerNonNull onencrypted){
+        this.onencrypted = onencrypted;
+    }
+    
+    @JsOverlay
+    public final EventHandlerNonNull getOnWaitingforkey(){
+        return this.onwaitingforkey;
+    }
+    
+    @JsOverlay
+    public final void setOnWaitingforkey(EventHandlerNonNull onwaitingforkey){
+        this.onwaitingforkey = onwaitingforkey;
+    }
     
     @JsProperty(name="remote")
-    public RemotePlayback remote;
+    public native RemotePlayback getRemote();
     
     @JsProperty(name="disableRemotePlayback")
-    public boolean disableRemotePlayback;
+    public native boolean getDisableRemotePlayback();
+    
+    @JsProperty(name="disableRemotePlayback")
+    public native void setDisableRemotePlayback(boolean disableRemotePlayback);
     
     @JsProperty(name="srcObject")
-    public MediaStream srcObject;
+    public native MediaStream getSrcObject();
+    
+    @JsProperty(name="srcObject")
+    public native void setSrcObject(MediaStream srcObject);
     
     @JsOverlay
     public final TextTrack addTextTrack(TextTrackKind kind){
@@ -173,6 +235,7 @@ public class HTMLMediaElement extends HTMLElement{
     @JsMethod(name = "addTextTrack")
     public native TextTrack addTextTrack(String kind);
     
+    
     @JsOverlay
     public final TextTrack addTextTrack(TextTrackKind kind, String label){
         return addTextTrack(kind.getInternalValue(), label);
@@ -180,6 +243,7 @@ public class HTMLMediaElement extends HTMLElement{
     
     @JsMethod(name = "addTextTrack")
     public native TextTrack addTextTrack(String kind, String label);
+    
     
     @JsOverlay
     public final TextTrack addTextTrack(TextTrackKind kind, String label, String language){
@@ -189,6 +253,7 @@ public class HTMLMediaElement extends HTMLElement{
     @JsMethod(name = "addTextTrack")
     public native TextTrack addTextTrack(String kind, String label, String language);
     
+    
     @JsOverlay
     public final CanPlayTypeResult canPlayTypeAsCanPlayTypeResult(String type){
         return CanPlayTypeResult.of(canPlayType(type));
@@ -197,22 +262,29 @@ public class HTMLMediaElement extends HTMLElement{
     @JsMethod(name = "canPlayType")
     public native String canPlayType(String type);
     
+    
     @JsMethod(name = "captureStream")
     public native MediaStream captureStream();
+    
     
     @JsMethod(name = "load")
     public native void load();
     
+    
     @JsMethod(name = "pause")
     public native void pause();
+    
     
     @JsMethod(name = "play")
     public native Promise<Void> play();
     
+    
     @JsMethod(name = "setMediaKeys")
     public native Promise setMediaKeys(MediaKeys mediaKeys);
     
+    
     @JsMethod(name = "setSinkId")
     public native Promise<Void> setSinkId(String sinkId);
+    
     
 }

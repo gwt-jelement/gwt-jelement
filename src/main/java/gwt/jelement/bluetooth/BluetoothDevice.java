@@ -20,6 +20,7 @@ import gwt.jelement.bluetooth.BluetoothRemoteGATTServer;
 import gwt.jelement.events.EventHandlerNonNull;
 import gwt.jelement.events.EventTarget;
 import jsinterop.annotations.JsConstructor;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -27,22 +28,32 @@ import jsinterop.annotations.JsType;
 @JsType(namespace = JsPackage.GLOBAL, isNative = true)
 public class BluetoothDevice extends EventTarget{
     
+    @JsProperty(name="ongattserverdisconnected")
+    private EventHandlerNonNull ongattserverdisconnected;
+    
     @JsConstructor
     public BluetoothDevice(){
         super();
     }
     
     @JsProperty(name="id")
-    public String id;
+    public native String getId();
     
     @JsProperty(name="name")
-    public String name;
+    public native String getName();
     
     @JsProperty(name="gatt")
-    public BluetoothRemoteGATTServer gatt;
+    public native BluetoothRemoteGATTServer getGatt();
     
-    @JsProperty(name="ongattserverdisconnected")
-    public EventHandlerNonNull ongattserverdisconnected;
+    @JsOverlay
+    public final EventHandlerNonNull getOnGattserverdisconnected(){
+        return this.ongattserverdisconnected;
+    }
+    
+    @JsOverlay
+    public final void setOnGattserverdisconnected(EventHandlerNonNull ongattserverdisconnected){
+        this.ongattserverdisconnected = ongattserverdisconnected;
+    }
     
     
 }

@@ -26,11 +26,11 @@ import jsinterop.annotations.JsType;
 @JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class MediaEncodingConfiguration extends MediaConfiguration{
 
+    @JsProperty(name="type")
+    private String type;
+
     public MediaEncodingConfiguration(){
     }
-
-    @JsProperty(name="type")
-    public String type;
 
     @JsOverlay
     public final MediaEncodingType getType(){
@@ -41,6 +41,5 @@ public class MediaEncodingConfiguration extends MediaConfiguration{
     public final void setType(MediaEncodingType type){
         this.type = type.getInternalValue();
     }
-
 
 }

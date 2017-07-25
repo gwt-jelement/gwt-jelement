@@ -29,11 +29,29 @@ import jsinterop.annotations.JsType;
 @JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class RTCConfiguration{
 
+    @JsProperty(name="iceServers")
+    private RTCIceServer[] iceServers;
+
+    @JsProperty(name="iceTransportPolicy")
+    private String iceTransportPolicy;
+
+    @JsProperty(name="iceTransports")
+    private String iceTransports;
+
+    @JsProperty(name="bundlePolicy")
+    private String bundlePolicy;
+
+    @JsProperty(name="rtcpMuxPolicy")
+    private String rtcpMuxPolicy;
+
+    @JsProperty(name="certificates")
+    private RTCCertificate[] certificates;
+
+    @JsProperty(name="iceCandidatePoolSize")
+    private byte iceCandidatePoolSize;
+
     public RTCConfiguration(){
     }
-
-    @JsProperty(name="iceServers")
-    public RTCIceServer[] iceServers;
 
     @JsOverlay
     public final RTCIceServer[] getIceServers(){
@@ -45,9 +63,6 @@ public class RTCConfiguration{
         this.iceServers = iceServers;
     }
 
-    @JsProperty(name="iceTransportPolicy")
-    public String iceTransportPolicy;
-
     @JsOverlay
     public final RTCIceTransportPolicy getIceTransportPolicy(){
         return RTCIceTransportPolicy.of(this.iceTransportPolicy);
@@ -57,9 +72,6 @@ public class RTCConfiguration{
     public final void setIceTransportPolicy(RTCIceTransportPolicy iceTransportPolicy){
         this.iceTransportPolicy = iceTransportPolicy.getInternalValue();
     }
-
-    @JsProperty(name="iceTransports")
-    public String iceTransports;
 
     @JsOverlay
     public final RTCIceTransportPolicy getIceTransports(){
@@ -71,9 +83,6 @@ public class RTCConfiguration{
         this.iceTransports = iceTransports.getInternalValue();
     }
 
-    @JsProperty(name="bundlePolicy")
-    public String bundlePolicy;
-
     @JsOverlay
     public final RTCBundlePolicy getBundlePolicy(){
         return RTCBundlePolicy.of(this.bundlePolicy);
@@ -83,9 +92,6 @@ public class RTCConfiguration{
     public final void setBundlePolicy(RTCBundlePolicy bundlePolicy){
         this.bundlePolicy = bundlePolicy.getInternalValue();
     }
-
-    @JsProperty(name="rtcpMuxPolicy")
-    public String rtcpMuxPolicy;
 
     @JsOverlay
     public final RTCRtcpMuxPolicy getRtcpMuxPolicy(){
@@ -97,9 +103,6 @@ public class RTCConfiguration{
         this.rtcpMuxPolicy = rtcpMuxPolicy.getInternalValue();
     }
 
-    @JsProperty(name="certificates")
-    public RTCCertificate[] certificates;
-
     @JsOverlay
     public final RTCCertificate[] getCertificates(){
         return this.certificates;
@@ -110,9 +113,6 @@ public class RTCConfiguration{
         this.certificates = certificates;
     }
 
-    @JsProperty(name="iceCandidatePoolSize")
-    public byte iceCandidatePoolSize;
-
     @JsOverlay
     public final byte getIceCandidatePoolSize(){
         return this.iceCandidatePoolSize;
@@ -122,6 +122,5 @@ public class RTCConfiguration{
     public final void setIceCandidatePoolSize(byte iceCandidatePoolSize){
         this.iceCandidatePoolSize = iceCandidatePoolSize;
     }
-
 
 }

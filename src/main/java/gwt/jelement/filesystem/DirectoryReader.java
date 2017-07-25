@@ -19,6 +19,7 @@ package gwt.jelement.filesystem;
 import gwt.jelement.filesystem.EntriesCallback;
 import gwt.jelement.filesystem.ErrorCallback;
 import jsinterop.annotations.JsMethod;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
@@ -28,7 +29,9 @@ public class DirectoryReader{
     @JsMethod(name = "readEntries")
     public native void readEntries(EntriesCallback successCallback);
     
+    
     @JsMethod(name = "readEntries")
     public native void readEntries(EntriesCallback successCallback, ErrorCallback errorCallback);
+    
     
 }

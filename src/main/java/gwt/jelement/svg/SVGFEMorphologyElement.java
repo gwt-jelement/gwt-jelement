@@ -22,6 +22,7 @@ import gwt.jelement.svg.SVGAnimatedNumber;
 import gwt.jelement.svg.SVGAnimatedString;
 import gwt.jelement.svg.SVGElement;
 import jsinterop.annotations.JsConstructor;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -39,31 +40,31 @@ public class SVGFEMorphologyElement extends SVGElement{
     }
     
     @JsProperty(name="in1")
-    public SVGAnimatedString in1;
+    public native SVGAnimatedString getIn1();
     
     @JsProperty(name="operator")
-    public SVGAnimatedEnumeration operator;
+    public native SVGAnimatedEnumeration getOperator();
     
     @JsProperty(name="radiusX")
-    public SVGAnimatedNumber radiusX;
+    public native SVGAnimatedNumber getRadiusX();
     
     @JsProperty(name="radiusY")
-    public SVGAnimatedNumber radiusY;
+    public native SVGAnimatedNumber getRadiusY();
     
     @JsProperty(name="x")
-    public SVGAnimatedLength x;
+    public native SVGAnimatedLength getX();
     
     @JsProperty(name="y")
-    public SVGAnimatedLength y;
+    public native SVGAnimatedLength getY();
     
     @JsProperty(name="width")
-    public SVGAnimatedLength width;
+    public native SVGAnimatedLength getWidth();
     
     @JsProperty(name="height")
-    public SVGAnimatedLength height;
+    public native SVGAnimatedLength getHeight();
     
     @JsProperty(name="result")
-    public SVGAnimatedString result;
+    public native SVGAnimatedString getResult();
     
     
 }

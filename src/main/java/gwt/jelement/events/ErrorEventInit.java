@@ -25,11 +25,23 @@ import jsinterop.annotations.JsType;
 @JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class ErrorEventInit extends EventInit{
 
+    @JsProperty(name="message")
+    private String message;
+
+    @JsProperty(name="filename")
+    private String filename;
+
+    @JsProperty(name="lineno")
+    private double lineno;
+
+    @JsProperty(name="colno")
+    private double colno;
+
+    @JsProperty(name="error")
+    private Object error;
+
     public ErrorEventInit(){
     }
-
-    @JsProperty(name="message")
-    public String message;
 
     @JsOverlay
     public final String getMessage(){
@@ -41,9 +53,6 @@ public class ErrorEventInit extends EventInit{
         this.message = message;
     }
 
-    @JsProperty(name="filename")
-    public String filename;
-
     @JsOverlay
     public final String getFilename(){
         return this.filename;
@@ -53,9 +62,6 @@ public class ErrorEventInit extends EventInit{
     public final void setFilename(String filename){
         this.filename = filename;
     }
-
-    @JsProperty(name="lineno")
-    public double lineno;
 
     @JsOverlay
     public final double getLineno(){
@@ -67,9 +73,6 @@ public class ErrorEventInit extends EventInit{
         this.lineno = lineno;
     }
 
-    @JsProperty(name="colno")
-    public double colno;
-
     @JsOverlay
     public final double getColno(){
         return this.colno;
@@ -80,9 +83,6 @@ public class ErrorEventInit extends EventInit{
         this.colno = colno;
     }
 
-    @JsProperty(name="error")
-    public Object error;
-
     @JsOverlay
     public final Object getError(){
         return this.error;
@@ -92,6 +92,5 @@ public class ErrorEventInit extends EventInit{
     public final void setError(Object error){
         this.error = error;
     }
-
 
 }

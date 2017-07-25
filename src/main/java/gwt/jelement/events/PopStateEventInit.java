@@ -25,11 +25,11 @@ import jsinterop.annotations.JsType;
 @JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class PopStateEventInit extends EventInit{
 
+    @JsProperty(name="state")
+    private Object state;
+
     public PopStateEventInit(){
     }
-
-    @JsProperty(name="state")
-    public Object state;
 
     @JsOverlay
     public final Object getState(){
@@ -40,6 +40,5 @@ public class PopStateEventInit extends EventInit{
     public final void setState(Object state){
         this.state = state;
     }
-
 
 }

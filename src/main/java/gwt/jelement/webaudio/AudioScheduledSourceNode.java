@@ -20,6 +20,7 @@ import gwt.jelement.events.EventHandlerNonNull;
 import gwt.jelement.webaudio.AudioNode;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -27,24 +28,38 @@ import jsinterop.annotations.JsType;
 @JsType(namespace = JsPackage.GLOBAL, isNative = true)
 public class AudioScheduledSourceNode extends AudioNode{
     
+    @JsProperty(name="onended")
+    private EventHandlerNonNull onended;
+    
     @JsConstructor
     public AudioScheduledSourceNode(){
         super();
     }
     
-    @JsProperty(name="onended")
-    public EventHandlerNonNull onended;
+    @JsOverlay
+    public final EventHandlerNonNull getOnEnded(){
+        return this.onended;
+    }
+    
+    @JsOverlay
+    public final void setOnEnded(EventHandlerNonNull onended){
+        this.onended = onended;
+    }
     
     @JsMethod(name = "start")
     public native void start();
     
+    
     @JsMethod(name = "start")
     public native void start(double when);
+    
     
     @JsMethod(name = "stop")
     public native void stop();
     
+    
     @JsMethod(name = "stop")
     public native void stop(double when);
+    
     
 }

@@ -19,6 +19,7 @@ package gwt.jelement.background_fetch;
 import gwt.jelement.background_fetch.BackgroundFetchEventInit;
 import gwt.jelement.serviceworkers.ExtendableEvent;
 import jsinterop.annotations.JsConstructor;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -32,7 +33,7 @@ public class BackgroundFetchEvent extends ExtendableEvent{
     }
     
     @JsProperty(name="tag")
-    public String tag;
+    public native String getTag();
     
     
 }

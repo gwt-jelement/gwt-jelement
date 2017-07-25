@@ -25,11 +25,14 @@ import jsinterop.annotations.JsType;
 @JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class ShadowRootInit{
 
+    @JsProperty(name="mode")
+    private String mode;
+
+    @JsProperty(name="delegatesFocus")
+    private boolean delegatesFocus;
+
     public ShadowRootInit(){
     }
-
-    @JsProperty(name="mode")
-    public String mode;
 
     @JsOverlay
     public final ShadowRootMode getMode(){
@@ -41,9 +44,6 @@ public class ShadowRootInit{
         this.mode = mode.getInternalValue();
     }
 
-    @JsProperty(name="delegatesFocus")
-    public boolean delegatesFocus;
-
     @JsOverlay
     public final boolean getDelegatesFocus(){
         return this.delegatesFocus;
@@ -53,6 +53,5 @@ public class ShadowRootInit{
     public final void setDelegatesFocus(boolean delegatesFocus){
         this.delegatesFocus = delegatesFocus;
     }
-
 
 }

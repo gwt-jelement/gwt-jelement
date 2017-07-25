@@ -24,11 +24,14 @@ import jsinterop.annotations.JsType;
 @JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class StorageEstimate{
 
+    @JsProperty(name="usage")
+    private double usage;
+
+    @JsProperty(name="quota")
+    private double quota;
+
     public StorageEstimate(){
     }
-
-    @JsProperty(name="usage")
-    public double usage;
 
     @JsOverlay
     public final double getUsage(){
@@ -40,9 +43,6 @@ public class StorageEstimate{
         this.usage = usage;
     }
 
-    @JsProperty(name="quota")
-    public double quota;
-
     @JsOverlay
     public final double getQuota(){
         return this.quota;
@@ -52,6 +52,5 @@ public class StorageEstimate{
     public final void setQuota(double quota){
         this.quota = quota;
     }
-
 
 }

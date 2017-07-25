@@ -25,8 +25,14 @@ import jsinterop.base.Js;
 @JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class BluetoothLEScanFilterInit{
 
-    public BluetoothLEScanFilterInit(){
-    }
+    @JsProperty(name="services")
+    private BluetoothLEScanFilterInit.BluetoothDescriptorUUID[] services;
+
+    @JsProperty(name="name")
+    private String name;
+
+    @JsProperty(name="namePrefix")
+    private String namePrefix;
 
     @JsType(isNative = true, name = "?", namespace = JsPackage.GLOBAL)
     public interface BluetoothDescriptorUUID {
@@ -62,8 +68,8 @@ public class BluetoothLEScanFilterInit{
     
     }
     
-    @JsProperty(name="services")
-    public BluetoothLEScanFilterInit.BluetoothDescriptorUUID[] services;
+    public BluetoothLEScanFilterInit(){
+    }
 
     @JsOverlay
     public final BluetoothLEScanFilterInit.BluetoothDescriptorUUID[] getServices(){
@@ -75,9 +81,6 @@ public class BluetoothLEScanFilterInit{
         this.services = services;
     }
 
-    @JsProperty(name="name")
-    public String name;
-
     @JsOverlay
     public final String getName(){
         return this.name;
@@ -88,9 +91,6 @@ public class BluetoothLEScanFilterInit{
         this.name = name;
     }
 
-    @JsProperty(name="namePrefix")
-    public String namePrefix;
-
     @JsOverlay
     public final String getNamePrefix(){
         return this.namePrefix;
@@ -100,6 +100,5 @@ public class BluetoothLEScanFilterInit{
     public final void setNamePrefix(String namePrefix){
         this.namePrefix = namePrefix;
     }
-
 
 }

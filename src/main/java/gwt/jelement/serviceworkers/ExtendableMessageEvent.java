@@ -79,25 +79,30 @@ public class ExtendableMessageEvent extends ExtendableEvent{
     
     }
     
+    @JsProperty(name="source")
+    private SourceUnion source;
+    
     @JsConstructor
     public ExtendableMessageEvent(){
         super((String) null);
     }
     
     @JsProperty(name="data")
-    public Object data;
+    public native Object getData();
     
     @JsProperty(name="origin")
-    public String origin;
+    public native String getOrigin();
     
     @JsProperty(name="lastEventId")
-    public String lastEventId;
+    public native String getLastEventId();
     
-    @JsProperty(name="source")
-    public SourceUnion source;
+    @JsOverlay
+    public final SourceUnion getSource(){
+        return this.source;
+    }
     
     @JsProperty(name="ports")
-    public MessagePort[] ports;
+    public native MessagePort[] getPorts();
     
     
 }

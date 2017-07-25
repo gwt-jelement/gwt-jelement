@@ -19,6 +19,7 @@ package gwt.jelement.battery;
 import gwt.jelement.events.EventHandlerNonNull;
 import gwt.jelement.events.EventTarget;
 import jsinterop.annotations.JsConstructor;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -26,34 +27,74 @@ import jsinterop.annotations.JsType;
 @JsType(namespace = JsPackage.GLOBAL, isNative = true)
 public class BatteryManager extends EventTarget{
     
+    @JsProperty(name="onchargingchange")
+    private EventHandlerNonNull onchargingchange;
+    
+    @JsProperty(name="onchargingtimechange")
+    private EventHandlerNonNull onchargingtimechange;
+    
+    @JsProperty(name="ondischargingtimechange")
+    private EventHandlerNonNull ondischargingtimechange;
+    
+    @JsProperty(name="onlevelchange")
+    private EventHandlerNonNull onlevelchange;
+    
     @JsConstructor
     public BatteryManager(){
         super();
     }
     
     @JsProperty(name="charging")
-    public boolean charging;
+    public native boolean getCharging();
     
     @JsProperty(name="chargingTime")
-    public double chargingTime;
+    public native double getChargingTime();
     
     @JsProperty(name="dischargingTime")
-    public double dischargingTime;
+    public native double getDischargingTime();
     
     @JsProperty(name="level")
-    public double level;
+    public native double getLevel();
     
-    @JsProperty(name="onchargingchange")
-    public EventHandlerNonNull onchargingchange;
+    @JsOverlay
+    public final EventHandlerNonNull getOnChargingchange(){
+        return this.onchargingchange;
+    }
     
-    @JsProperty(name="onchargingtimechange")
-    public EventHandlerNonNull onchargingtimechange;
+    @JsOverlay
+    public final void setOnChargingchange(EventHandlerNonNull onchargingchange){
+        this.onchargingchange = onchargingchange;
+    }
     
-    @JsProperty(name="ondischargingtimechange")
-    public EventHandlerNonNull ondischargingtimechange;
+    @JsOverlay
+    public final EventHandlerNonNull getOnChargingtimechange(){
+        return this.onchargingtimechange;
+    }
     
-    @JsProperty(name="onlevelchange")
-    public EventHandlerNonNull onlevelchange;
+    @JsOverlay
+    public final void setOnChargingtimechange(EventHandlerNonNull onchargingtimechange){
+        this.onchargingtimechange = onchargingtimechange;
+    }
+    
+    @JsOverlay
+    public final EventHandlerNonNull getOnDischargingtimechange(){
+        return this.ondischargingtimechange;
+    }
+    
+    @JsOverlay
+    public final void setOnDischargingtimechange(EventHandlerNonNull ondischargingtimechange){
+        this.ondischargingtimechange = ondischargingtimechange;
+    }
+    
+    @JsOverlay
+    public final EventHandlerNonNull getOnLevelchange(){
+        return this.onlevelchange;
+    }
+    
+    @JsOverlay
+    public final void setOnLevelchange(EventHandlerNonNull onlevelchange){
+        this.onlevelchange = onlevelchange;
+    }
     
     
 }

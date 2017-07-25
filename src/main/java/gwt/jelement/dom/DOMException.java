@@ -18,6 +18,7 @@ package gwt.jelement.dom;
 
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -64,15 +65,16 @@ public class DOMException{
     }
     
     @JsProperty(name="code")
-    public short code;
+    public native short getCode();
     
     @JsProperty(name="name")
-    public String name;
+    public native String getName();
     
     @JsProperty(name="message")
-    public String message;
+    public native String getMessage();
     
     @JsMethod(name = "toString")
     public native String toString();
+    
     
 }

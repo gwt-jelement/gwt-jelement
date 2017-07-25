@@ -17,6 +17,7 @@
 package gwt.jelement.frame;
 
 import jsinterop.annotations.JsMethod;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
@@ -26,7 +27,9 @@ public class External{
     @JsMethod(name = "AddSearchProvider")
     public native void AddSearchProvider();
     
+    
     @JsMethod(name = "IsSearchProviderInstalled")
     public native void IsSearchProviderInstalled();
+    
     
 }

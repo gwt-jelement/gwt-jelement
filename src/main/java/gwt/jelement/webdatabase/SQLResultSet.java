@@ -17,6 +17,7 @@
 package gwt.jelement.webdatabase;
 
 import gwt.jelement.webdatabase.SQLResultSetRowList;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -25,13 +26,13 @@ import jsinterop.annotations.JsType;
 public class SQLResultSet{
     
     @JsProperty(name="rows")
-    public SQLResultSetRowList rows;
+    public native SQLResultSetRowList getRows();
     
     @JsProperty(name="insertId")
-    public double insertId;
+    public native double getInsertId();
     
     @JsProperty(name="rowsAffected")
-    public double rowsAffected;
+    public native double getRowsAffected();
     
     
 }

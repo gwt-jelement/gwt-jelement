@@ -19,6 +19,7 @@ package gwt.jelement.dom;
 import gwt.jelement.dom.Element;
 import gwt.jelement.dom.IntersectionObserverEntry;
 import jsinterop.annotations.JsMethod;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -27,24 +28,28 @@ import jsinterop.annotations.JsType;
 public class IntersectionObserver{
     
     @JsProperty(name="root")
-    public Element root;
+    public native Element getRoot();
     
     @JsProperty(name="rootMargin")
-    public String rootMargin;
+    public native String getRootMargin();
     
     @JsProperty(name="thresholds")
-    public double[] thresholds;
+    public native double[] getThresholds();
     
     @JsMethod(name = "disconnect")
     public native void disconnect();
     
+    
     @JsMethod(name = "observe")
     public native void observe(Element target);
+    
     
     @JsMethod(name = "takeRecords")
     public native IntersectionObserverEntry[] takeRecords();
     
+    
     @JsMethod(name = "unobserve")
     public native void unobserve(Element target);
+    
     
 }

@@ -19,6 +19,7 @@ package gwt.jelement.inspector;
 import gwt.jelement.dom.Document;
 import gwt.jelement.filesystem.DOMFileSystem;
 import jsinterop.annotations.JsMethod;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
@@ -28,37 +29,49 @@ public class DevToolsHost{
     @JsMethod(name = "copyText")
     public native void copyText(String text);
     
+    
     @JsMethod(name = "getSelectionBackgroundColor")
     public native String getSelectionBackgroundColor();
+    
     
     @JsMethod(name = "getSelectionForegroundColor")
     public native String getSelectionForegroundColor();
     
+    
     @JsMethod(name = "isHostedMode")
     public native boolean isHostedMode();
+    
     
     @JsMethod(name = "isUnderTest")
     public native boolean isUnderTest();
     
+    
     @JsMethod(name = "isolatedFileSystem")
     public native DOMFileSystem isolatedFileSystem(String fileSystemId, String registeredName);
+    
     
     @JsMethod(name = "platform")
     public native String platform();
     
+    
     @JsMethod(name = "sendMessageToEmbedder")
     public native void sendMessageToEmbedder(String message);
+    
     
     @JsMethod(name = "showContextMenuAtPoint")
     public native void showContextMenuAtPoint(float x, float y, Object items);
     
+    
     @JsMethod(name = "showContextMenuAtPoint")
     public native void showContextMenuAtPoint(float x, float y, Object items, Document document);
+    
     
     @JsMethod(name = "upgradeDraggedFileSystemPermissions")
     public native void upgradeDraggedFileSystemPermissions(DOMFileSystem domFileSystem);
     
+    
     @JsMethod(name = "zoomFactor")
     public native float zoomFactor();
+    
     
 }

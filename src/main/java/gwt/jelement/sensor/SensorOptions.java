@@ -24,11 +24,11 @@ import jsinterop.annotations.JsType;
 @JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class SensorOptions{
 
+    @JsProperty(name="frequency")
+    private double frequency;
+
     public SensorOptions(){
     }
-
-    @JsProperty(name="frequency")
-    public double frequency;
 
     @JsOverlay
     public final double getFrequency(){
@@ -39,6 +39,5 @@ public class SensorOptions{
     public final void setFrequency(double frequency){
         this.frequency = frequency;
     }
-
 
 }

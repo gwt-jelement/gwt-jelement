@@ -21,6 +21,7 @@ import gwt.jelement.webaudio.AudioNode;
 import gwt.jelement.webaudio.BaseAudioContext;
 import gwt.jelement.webaudio.ConvolverOptions;
 import jsinterop.annotations.JsConstructor;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -39,10 +40,16 @@ public class ConvolverNode extends AudioNode{
     }
     
     @JsProperty(name="buffer")
-    public AudioBuffer buffer;
+    public native AudioBuffer getBuffer();
+    
+    @JsProperty(name="buffer")
+    public native void setBuffer(AudioBuffer buffer);
     
     @JsProperty(name="normalize")
-    public boolean normalize;
+    public native boolean getNormalize();
+    
+    @JsProperty(name="normalize")
+    public native void setNormalize(boolean normalize);
     
     
 }

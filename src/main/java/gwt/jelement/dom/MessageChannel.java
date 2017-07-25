@@ -17,6 +17,7 @@
 package gwt.jelement.dom;
 
 import gwt.jelement.dom.MessagePort;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -25,10 +26,10 @@ import jsinterop.annotations.JsType;
 public class MessageChannel{
     
     @JsProperty(name="port1")
-    public MessagePort port1;
+    public native MessagePort getPort1();
     
     @JsProperty(name="port2")
-    public MessagePort port2;
+    public native MessagePort getPort2();
     
     
 }

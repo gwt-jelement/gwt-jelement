@@ -25,11 +25,14 @@ import jsinterop.annotations.JsType;
 @JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class ConstrainPoint2DParameters{
 
+    @JsProperty(name="exact")
+    private Point2D[] exact;
+
+    @JsProperty(name="ideal")
+    private Point2D[] ideal;
+
     public ConstrainPoint2DParameters(){
     }
-
-    @JsProperty(name="exact")
-    public Point2D[] exact;
 
     @JsOverlay
     public final Point2D[] getExact(){
@@ -41,9 +44,6 @@ public class ConstrainPoint2DParameters{
         this.exact = exact;
     }
 
-    @JsProperty(name="ideal")
-    public Point2D[] ideal;
-
     @JsOverlay
     public final Point2D[] getIdeal(){
         return this.ideal;
@@ -53,6 +53,5 @@ public class ConstrainPoint2DParameters{
     public final void setIdeal(Point2D[] ideal){
         this.ideal = ideal;
     }
-
 
 }

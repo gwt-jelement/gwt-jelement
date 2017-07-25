@@ -26,6 +26,7 @@ import gwt.jelement.filesystem.FileSystemCallback;
 import gwt.jelement.workers.WorkerGlobalScope;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -36,45 +37,75 @@ public class DedicatedWorkerGlobalScope extends WorkerGlobalScope{
     public static int PERSISTENT;
     
     
+    @JsProperty(name="onmessage")
+    private EventHandlerNonNull onmessage;
+    
+    @JsProperty(name="onmessageerror")
+    private EventHandlerNonNull onmessageerror;
+    
     @JsConstructor
     public DedicatedWorkerGlobalScope(){
         super();
     }
     
-    @JsProperty(name="onmessage")
-    public EventHandlerNonNull onmessage;
+    @JsOverlay
+    public final EventHandlerNonNull getOnMessage(){
+        return this.onmessage;
+    }
     
-    @JsProperty(name="onmessageerror")
-    public EventHandlerNonNull onmessageerror;
+    @JsOverlay
+    public final void setOnMessage(EventHandlerNonNull onmessage){
+        this.onmessage = onmessage;
+    }
+    
+    @JsOverlay
+    public final EventHandlerNonNull getOnMessageerror(){
+        return this.onmessageerror;
+    }
+    
+    @JsOverlay
+    public final void setOnMessageerror(EventHandlerNonNull onmessageerror){
+        this.onmessageerror = onmessageerror;
+    }
     
     @JsMethod(name = "close")
     public native void close();
     
+    
     @JsMethod(name = "postMessage")
     public native void postMessage(Object message);
+    
     
     @JsMethod(name = "postMessage")
     public native void postMessage(Object message, MessagePort[] transfer);
     
+    
     @JsMethod(name = "webkitRequestFileSystem")
     public native void webkitRequestFileSystem(short type, double size);
+    
     
     @JsMethod(name = "webkitRequestFileSystem")
     public native void webkitRequestFileSystem(short type, double size, FileSystemCallback successCallback);
     
+    
     @JsMethod(name = "webkitRequestFileSystem")
     public native void webkitRequestFileSystem(short type, double size, FileSystemCallback successCallback, ErrorCallback errorCallback);
+    
     
     @JsMethod(name = "webkitRequestFileSystemSync")
     public native DOMFileSystemSync webkitRequestFileSystemSync(short type, double size);
     
+    
     @JsMethod(name = "webkitResolveLocalFileSystemSyncURL")
     public native EntrySync webkitResolveLocalFileSystemSyncURL(String url);
+    
     
     @JsMethod(name = "webkitResolveLocalFileSystemURL")
     public native void webkitResolveLocalFileSystemURL(String url, EntryCallback successCallback);
     
+    
     @JsMethod(name = "webkitResolveLocalFileSystemURL")
     public native void webkitResolveLocalFileSystemURL(String url, EntryCallback successCallback, ErrorCallback errorCallback);
+    
     
 }

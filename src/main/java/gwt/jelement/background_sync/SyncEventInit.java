@@ -25,11 +25,14 @@ import jsinterop.annotations.JsType;
 @JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class SyncEventInit extends ExtendableEventInit{
 
+    @JsProperty(name="tag")
+    private String tag;
+
+    @JsProperty(name="lastChance")
+    private boolean lastChance;
+
     public SyncEventInit(){
     }
-
-    @JsProperty(name="tag")
-    public String tag;
 
     @JsOverlay
     public final String getTag(){
@@ -41,9 +44,6 @@ public class SyncEventInit extends ExtendableEventInit{
         this.tag = tag;
     }
 
-    @JsProperty(name="lastChance")
-    public boolean lastChance;
-
     @JsOverlay
     public final boolean getLastChance(){
         return this.lastChance;
@@ -53,6 +53,5 @@ public class SyncEventInit extends ExtendableEventInit{
     public final void setLastChance(boolean lastChance){
         this.lastChance = lastChance;
     }
-
 
 }

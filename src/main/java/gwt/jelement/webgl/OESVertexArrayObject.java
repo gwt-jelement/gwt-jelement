@@ -18,6 +18,7 @@ package gwt.jelement.webgl;
 
 import gwt.jelement.webgl.WebGLVertexArrayObjectOES;
 import jsinterop.annotations.JsMethod;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
@@ -29,22 +30,29 @@ public class OESVertexArrayObject{
     @JsMethod(name = "bindVertexArrayOES")
     public native void bindVertexArrayOES();
     
+    
     @JsMethod(name = "bindVertexArrayOES")
     public native void bindVertexArrayOES(WebGLVertexArrayObjectOES arrayObject);
+    
     
     @JsMethod(name = "createVertexArrayOES")
     public native WebGLVertexArrayObjectOES createVertexArrayOES();
     
+    
     @JsMethod(name = "deleteVertexArrayOES")
     public native void deleteVertexArrayOES();
+    
     
     @JsMethod(name = "deleteVertexArrayOES")
     public native void deleteVertexArrayOES(WebGLVertexArrayObjectOES arrayObject);
     
+    
     @JsMethod(name = "isVertexArrayOES")
     public native boolean isVertexArrayOES();
     
+    
     @JsMethod(name = "isVertexArrayOES")
     public native boolean isVertexArrayOES(WebGLVertexArrayObjectOES arrayObject);
+    
     
 }

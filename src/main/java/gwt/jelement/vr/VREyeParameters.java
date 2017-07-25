@@ -17,6 +17,7 @@
 package gwt.jelement.vr;
 
 import elemental2.core.Float32Array;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -25,13 +26,13 @@ import jsinterop.annotations.JsType;
 public class VREyeParameters{
     
     @JsProperty(name="offset")
-    public Float32Array offset;
+    public native Float32Array getOffset();
     
     @JsProperty(name="renderWidth")
-    public double renderWidth;
+    public native double getRenderWidth();
     
     @JsProperty(name="renderHeight")
-    public double renderHeight;
+    public native double getRenderHeight();
     
     
 }

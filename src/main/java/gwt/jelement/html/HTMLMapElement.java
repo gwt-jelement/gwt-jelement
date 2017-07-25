@@ -19,6 +19,7 @@ package gwt.jelement.html;
 import gwt.jelement.html.HTMLCollection;
 import gwt.jelement.html.HTMLElement;
 import jsinterop.annotations.JsConstructor;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -32,10 +33,13 @@ public class HTMLMapElement extends HTMLElement{
     }
     
     @JsProperty(name="name")
-    public String name;
+    public native String getName();
+    
+    @JsProperty(name="name")
+    public native void setName(String name);
     
     @JsProperty(name="areas")
-    public HTMLCollection areas;
+    public native HTMLCollection getAreas();
     
     
 }

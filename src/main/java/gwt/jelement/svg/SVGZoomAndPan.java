@@ -16,6 +16,7 @@
  */
 package gwt.jelement.svg;
 
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -28,7 +29,10 @@ public class SVGZoomAndPan{
     
     
     @JsProperty(name="zoomAndPan")
-    public short zoomAndPan;
+    public native short getZoomAndPan();
+    
+    @JsProperty(name="zoomAndPan")
+    public native void setZoomAndPan(short zoomAndPan);
     
     
 }

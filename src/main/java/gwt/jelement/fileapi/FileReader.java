@@ -70,54 +70,125 @@ public class FileReader extends EventTarget{
     
     }
     
+    @JsProperty(name="result")
+    private ResultUnion result;
+    
+    @JsProperty(name="onloadstart")
+    private EventHandlerNonNull onloadstart;
+    
+    @JsProperty(name="onprogress")
+    private EventHandlerNonNull onprogress;
+    
+    @JsProperty(name="onload")
+    private EventHandlerNonNull onload;
+    
+    @JsProperty(name="onabort")
+    private EventHandlerNonNull onabort;
+    
+    @JsProperty(name="onerror")
+    private EventHandlerNonNull onerror;
+    
+    @JsProperty(name="onloadend")
+    private EventHandlerNonNull onloadend;
+    
     @JsConstructor
     public FileReader(){
         super();
     }
     
     @JsProperty(name="readyState")
-    public short readyState;
+    public native short getReadyState();
     
-    @JsProperty(name="result")
-    public ResultUnion result;
+    @JsOverlay
+    public final ResultUnion getResult(){
+        return this.result;
+    }
     
     @JsProperty(name="error")
-    public DOMException error;
+    public native DOMException getError();
     
-    @JsProperty(name="onloadstart")
-    public EventHandlerNonNull onloadstart;
+    @JsOverlay
+    public final EventHandlerNonNull getOnLoadstart(){
+        return this.onloadstart;
+    }
     
-    @JsProperty(name="onprogress")
-    public EventHandlerNonNull onprogress;
+    @JsOverlay
+    public final void setOnLoadstart(EventHandlerNonNull onloadstart){
+        this.onloadstart = onloadstart;
+    }
     
-    @JsProperty(name="onload")
-    public EventHandlerNonNull onload;
+    @JsOverlay
+    public final EventHandlerNonNull getOnProgress(){
+        return this.onprogress;
+    }
     
-    @JsProperty(name="onabort")
-    public EventHandlerNonNull onabort;
+    @JsOverlay
+    public final void setOnProgress(EventHandlerNonNull onprogress){
+        this.onprogress = onprogress;
+    }
     
-    @JsProperty(name="onerror")
-    public EventHandlerNonNull onerror;
+    @JsOverlay
+    public final EventHandlerNonNull getOnLoad(){
+        return this.onload;
+    }
     
-    @JsProperty(name="onloadend")
-    public EventHandlerNonNull onloadend;
+    @JsOverlay
+    public final void setOnLoad(EventHandlerNonNull onload){
+        this.onload = onload;
+    }
+    
+    @JsOverlay
+    public final EventHandlerNonNull getOnAbort(){
+        return this.onabort;
+    }
+    
+    @JsOverlay
+    public final void setOnAbort(EventHandlerNonNull onabort){
+        this.onabort = onabort;
+    }
+    
+    @JsOverlay
+    public final EventHandlerNonNull getOnError(){
+        return this.onerror;
+    }
+    
+    @JsOverlay
+    public final void setOnError(EventHandlerNonNull onerror){
+        this.onerror = onerror;
+    }
+    
+    @JsOverlay
+    public final EventHandlerNonNull getOnLoadend(){
+        return this.onloadend;
+    }
+    
+    @JsOverlay
+    public final void setOnLoadend(EventHandlerNonNull onloadend){
+        this.onloadend = onloadend;
+    }
     
     @JsMethod(name = "abort")
     public native void abort();
     
+    
     @JsMethod(name = "readAsArrayBuffer")
     public native void readAsArrayBuffer(Blob blob);
+    
     
     @JsMethod(name = "readAsBinaryString")
     public native void readAsBinaryString(Blob blob);
     
+    
     @JsMethod(name = "readAsDataURL")
     public native void readAsDataURL(Blob blob);
+    
     
     @JsMethod(name = "readAsText")
     public native void readAsText(Blob blob);
     
+    
     @JsMethod(name = "readAsText")
     public native void readAsText(Blob blob, String label);
+    
     
 }

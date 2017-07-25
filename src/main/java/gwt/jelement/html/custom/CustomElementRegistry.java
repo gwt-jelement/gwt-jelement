@@ -20,6 +20,7 @@ import gwt.jelement.dom.ElementDefinitionOptions;
 import gwt.jelement.jelement.Function;
 import elemental2.promise.Promise;
 import jsinterop.annotations.JsMethod;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
@@ -29,13 +30,17 @@ public class CustomElementRegistry{
     @JsMethod(name = "define")
     public native void define(String name, Function constructor);
     
+    
     @JsMethod(name = "define")
     public native void define(String name, Function constructor, ElementDefinitionOptions options);
+    
     
     @JsMethod(name = "get")
     public native Object get(String name);
     
+    
     @JsMethod(name = "whenDefined")
     public native Promise<Void> whenDefined(String name);
+    
     
 }

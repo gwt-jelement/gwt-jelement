@@ -20,6 +20,7 @@ import gwt.jelement.events.Event;
 import gwt.jelement.webusb.USBConnectionEventInit;
 import gwt.jelement.webusb.USBDevice;
 import jsinterop.annotations.JsConstructor;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -33,7 +34,7 @@ public class USBConnectionEvent extends Event{
     }
     
     @JsProperty(name="device")
-    public USBDevice device;
+    public native USBDevice getDevice();
     
     
 }

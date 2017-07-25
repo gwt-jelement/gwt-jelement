@@ -17,6 +17,7 @@
 package gwt.jelement.push_messaging;
 
 import elemental2.core.ArrayBuffer;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -25,10 +26,10 @@ import jsinterop.annotations.JsType;
 public class PushSubscriptionOptions{
     
     @JsProperty(name="userVisibleOnly")
-    public boolean userVisibleOnly;
+    public native boolean getUserVisibleOnly();
     
     @JsProperty(name="applicationServerKey")
-    public ArrayBuffer applicationServerKey;
+    public native ArrayBuffer getApplicationServerKey();
     
     
 }

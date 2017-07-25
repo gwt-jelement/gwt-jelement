@@ -18,6 +18,7 @@ package gwt.jelement.dom;
 
 import gwt.jelement.dom.Node;
 import gwt.jelement.dom.NodeList;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -26,31 +27,31 @@ import jsinterop.annotations.JsType;
 public class MutationRecord{
     
     @JsProperty(name="type")
-    public String type;
+    public native String getType();
     
     @JsProperty(name="target")
-    public Node target;
+    public native Node getTarget();
     
     @JsProperty(name="addedNodes")
-    public NodeList addedNodes;
+    public native NodeList getAddedNodes();
     
     @JsProperty(name="removedNodes")
-    public NodeList removedNodes;
+    public native NodeList getRemovedNodes();
     
     @JsProperty(name="previousSibling")
-    public Node previousSibling;
+    public native Node getPreviousSibling();
     
     @JsProperty(name="nextSibling")
-    public Node nextSibling;
+    public native Node getNextSibling();
     
     @JsProperty(name="attributeName")
-    public String attributeName;
+    public native String getAttributeName();
     
     @JsProperty(name="attributeNamespace")
-    public String attributeNamespace;
+    public native String getAttributeNamespace();
     
     @JsProperty(name="oldValue")
-    public String oldValue;
+    public native String getOldValue();
     
     
 }

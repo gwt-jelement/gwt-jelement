@@ -28,8 +28,11 @@ import jsinterop.base.Js;
 @JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class CredentialCreationOptions{
 
-    public CredentialCreationOptions(){
-    }
+    @JsProperty(name="password")
+    private PasswordCredentialInit password;
+
+    @JsProperty(name="federated")
+    private FederatedCredentialInit federated;
 
     @JsType(isNative = true, name = "?", namespace = JsPackage.GLOBAL)
     public interface PasswordCredentialInit {
@@ -65,8 +68,8 @@ public class CredentialCreationOptions{
     
     }
     
-    @JsProperty(name="password")
-    public PasswordCredentialInit password;
+    public CredentialCreationOptions(){
+    }
 
     @JsOverlay
     public final void setPassword(PasswordCredentialData password){
@@ -78,9 +81,6 @@ public class CredentialCreationOptions{
         this.password = CredentialCreationOptions.PasswordCredentialInit.of(password);
     }
 
-    @JsProperty(name="federated")
-    public FederatedCredentialInit federated;
-
     @JsOverlay
     public final FederatedCredentialInit getFederated(){
         return this.federated;
@@ -90,6 +90,5 @@ public class CredentialCreationOptions{
     public final void setFederated(FederatedCredentialInit federated){
         this.federated = federated;
     }
-
 
 }

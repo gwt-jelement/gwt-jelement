@@ -18,6 +18,7 @@ package gwt.jelement.fileapi;
 
 import gwt.jelement.fileapi.Blob;
 import jsinterop.annotations.JsMethod;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -26,27 +27,32 @@ import jsinterop.annotations.JsType;
 public class Blob{
     
     @JsProperty(name="size")
-    public double size;
+    public native double getSize();
     
     @JsProperty(name="type")
-    public String type;
+    public native String getType();
     
     @JsProperty(name="isClosed")
-    public boolean isClosed;
+    public native boolean getIsClosed();
     
     @JsMethod(name = "close")
     public native void close();
     
+    
     @JsMethod(name = "slice")
     public native Blob slice();
+    
     
     @JsMethod(name = "slice")
     public native Blob slice(double start);
     
+    
     @JsMethod(name = "slice")
     public native Blob slice(double start, double end);
     
+    
     @JsMethod(name = "slice")
     public native Blob slice(double start, double end, String contentType);
+    
     
 }

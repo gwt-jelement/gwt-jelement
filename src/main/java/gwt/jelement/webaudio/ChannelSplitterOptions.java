@@ -25,11 +25,11 @@ import jsinterop.annotations.JsType;
 @JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class ChannelSplitterOptions extends AudioNodeOptions{
 
+    @JsProperty(name="numberOfOutputs")
+    private double numberOfOutputs;
+
     public ChannelSplitterOptions(){
     }
-
-    @JsProperty(name="numberOfOutputs")
-    public double numberOfOutputs;
 
     @JsOverlay
     public final double getNumberOfOutputs(){
@@ -40,6 +40,5 @@ public class ChannelSplitterOptions extends AudioNodeOptions{
     public final void setNumberOfOutputs(double numberOfOutputs){
         this.numberOfOutputs = numberOfOutputs;
     }
-
 
 }

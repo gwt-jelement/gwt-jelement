@@ -42,31 +42,39 @@ public class VRDisplay extends EventTarget{
     }
     
     @JsProperty(name="displayId")
-    public double displayId;
+    public native double getDisplayId();
     
     @JsProperty(name="displayName")
-    public String displayName;
+    public native String getDisplayName();
     
     @JsProperty(name="isPresenting")
-    public boolean isPresenting;
+    public native boolean getIsPresenting();
     
     @JsProperty(name="capabilities")
-    public VRDisplayCapabilities capabilities;
+    public native VRDisplayCapabilities getCapabilities();
     
     @JsProperty(name="stageParameters")
-    public VRStageParameters stageParameters;
+    public native VRStageParameters getStageParameters();
     
     @JsProperty(name="depthNear")
-    public double depthNear;
+    public native double getDepthNear();
+    
+    @JsProperty(name="depthNear")
+    public native void setDepthNear(double depthNear);
     
     @JsProperty(name="depthFar")
-    public double depthFar;
+    public native double getDepthFar();
+    
+    @JsProperty(name="depthFar")
+    public native void setDepthFar(double depthFar);
     
     @JsMethod(name = "cancelAnimationFrame")
     public native void cancelAnimationFrame(double handle);
     
+    
     @JsMethod(name = "exitPresent")
     public native Promise exitPresent();
+    
     
     @JsOverlay
     public final VREyeParameters getEyeParameters(VREye whichEye){
@@ -76,19 +84,25 @@ public class VRDisplay extends EventTarget{
     @JsMethod(name = "getEyeParameters")
     public native VREyeParameters getEyeParameters(String whichEye);
     
+    
     @JsMethod(name = "getFrameData")
     public native boolean getFrameData(VRFrameData frameData);
+    
     
     @JsMethod(name = "getLayers")
     public native VRLayer[] getLayers();
     
+    
     @JsMethod(name = "requestAnimationFrame")
     public native double requestAnimationFrame(FrameRequestCallback callback);
+    
     
     @JsMethod(name = "requestPresent")
     public native Promise requestPresent(VRLayer[] layers);
     
+    
     @JsMethod(name = "submitFrame")
     public native void submitFrame();
+    
     
 }

@@ -18,6 +18,7 @@ package gwt.jelement.timing;
 
 import gwt.jelement.timing.PerformanceObserverInit;
 import jsinterop.annotations.JsMethod;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
@@ -27,7 +28,9 @@ public class PerformanceObserver{
     @JsMethod(name = "disconnect")
     public native void disconnect();
     
+    
     @JsMethod(name = "observe")
     public native void observe(PerformanceObserverInit options);
+    
     
 }

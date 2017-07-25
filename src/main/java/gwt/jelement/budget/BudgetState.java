@@ -16,6 +16,7 @@
  */
 package gwt.jelement.budget;
 
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -24,10 +25,10 @@ import jsinterop.annotations.JsType;
 public class BudgetState{
     
     @JsProperty(name="budgetAt")
-    public double budgetAt;
+    public native double getBudgetAt();
     
     @JsProperty(name="time")
-    public double time;
+    public native double getTime();
     
     
 }

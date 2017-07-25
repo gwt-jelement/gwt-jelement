@@ -26,11 +26,14 @@ import jsinterop.annotations.JsType;
 @JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class ForeignFetchEventInit extends ExtendableEventInit{
 
+    @JsProperty(name="request")
+    private Request request;
+
+    @JsProperty(name="origin")
+    private String origin;
+
     public ForeignFetchEventInit(){
     }
-
-    @JsProperty(name="request")
-    public Request request;
 
     @JsOverlay
     public final Request getRequest(){
@@ -42,9 +45,6 @@ public class ForeignFetchEventInit extends ExtendableEventInit{
         this.request = request;
     }
 
-    @JsProperty(name="origin")
-    public String origin;
-
     @JsOverlay
     public final String getOrigin(){
         return this.origin;
@@ -54,6 +54,5 @@ public class ForeignFetchEventInit extends ExtendableEventInit{
     public final void setOrigin(String origin){
         this.origin = origin;
     }
-
 
 }

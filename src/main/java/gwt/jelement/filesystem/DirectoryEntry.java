@@ -24,6 +24,7 @@ import gwt.jelement.filesystem.FileSystemFlags;
 import gwt.jelement.html.VoidCallback;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
@@ -38,34 +39,45 @@ public class DirectoryEntry extends Entry{
     @JsMethod(name = "createReader")
     public native DirectoryReader createReader();
     
+    
     @JsMethod(name = "getDirectory")
     public native void getDirectory(String path);
+    
     
     @JsMethod(name = "getDirectory")
     public native void getDirectory(String path, FileSystemFlags options);
     
+    
     @JsMethod(name = "getDirectory")
     public native void getDirectory(String path, FileSystemFlags options, EntryCallback successCallback);
+    
     
     @JsMethod(name = "getDirectory")
     public native void getDirectory(String path, FileSystemFlags options, EntryCallback successCallback, ErrorCallback errorCallback);
     
+    
     @JsMethod(name = "getFile")
     public native void getFile(String path);
+    
     
     @JsMethod(name = "getFile")
     public native void getFile(String path, FileSystemFlags options);
     
+    
     @JsMethod(name = "getFile")
     public native void getFile(String path, FileSystemFlags options, EntryCallback successCallback);
+    
     
     @JsMethod(name = "getFile")
     public native void getFile(String path, FileSystemFlags options, EntryCallback successCallback, ErrorCallback errorCallback);
     
+    
     @JsMethod(name = "removeRecursively")
     public native void removeRecursively(VoidCallback successCallback);
     
+    
     @JsMethod(name = "removeRecursively")
     public native void removeRecursively(VoidCallback successCallback, ErrorCallback errorCallback);
+    
     
 }

@@ -17,6 +17,7 @@
 package gwt.jelement.background_fetch;
 
 import gwt.jelement.fetch.Request;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -25,7 +26,7 @@ import jsinterop.annotations.JsType;
 public class BackgroundFetchFetch{
     
     @JsProperty(name="request")
-    public Request request;
+    public native Request getRequest();
     
     
 }

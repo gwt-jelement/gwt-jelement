@@ -19,6 +19,7 @@ package gwt.jelement.peerconnection;
 import gwt.jelement.events.Event;
 import gwt.jelement.peerconnection.RTCDTMFToneChangeEventInit;
 import jsinterop.annotations.JsConstructor;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -32,7 +33,7 @@ public class RTCDTMFToneChangeEvent extends Event{
     }
     
     @JsProperty(name="tone")
-    public String tone;
+    public native String getTone();
     
     
 }

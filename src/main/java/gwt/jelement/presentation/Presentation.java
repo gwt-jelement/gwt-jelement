@@ -18,6 +18,7 @@ package gwt.jelement.presentation;
 
 import gwt.jelement.presentation.PresentationReceiver;
 import gwt.jelement.presentation.PresentationRequest;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -26,10 +27,13 @@ import jsinterop.annotations.JsType;
 public class Presentation{
     
     @JsProperty(name="defaultRequest")
-    public PresentationRequest defaultRequest;
+    public native PresentationRequest getDefaultRequest();
+    
+    @JsProperty(name="defaultRequest")
+    public native void setDefaultRequest(PresentationRequest defaultRequest);
     
     @JsProperty(name="receiver")
-    public PresentationReceiver receiver;
+    public native PresentationReceiver getReceiver();
     
     
 }

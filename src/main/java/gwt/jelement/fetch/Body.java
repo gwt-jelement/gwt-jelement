@@ -21,6 +21,7 @@ import gwt.jelement.html.FormData;
 import elemental2.core.ArrayBuffer;
 import elemental2.promise.Promise;
 import jsinterop.annotations.JsMethod;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -29,21 +30,26 @@ import jsinterop.annotations.JsType;
 public class Body{
     
     @JsProperty(name="bodyUsed")
-    public boolean bodyUsed;
+    public native boolean getBodyUsed();
     
     @JsMethod(name = "arrayBuffer")
     public native Promise<ArrayBuffer> arrayBuffer();
     
+    
     @JsMethod(name = "blob")
     public native Promise<Blob> blob();
+    
     
     @JsMethod(name = "formData")
     public native Promise<FormData> formData();
     
+    
     @JsMethod(name = "json")
     public native Promise<Object> json();
     
+    
     @JsMethod(name = "text")
     public native Promise<String> text();
+    
     
 }

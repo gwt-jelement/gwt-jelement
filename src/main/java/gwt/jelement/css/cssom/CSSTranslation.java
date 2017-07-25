@@ -19,6 +19,7 @@ package gwt.jelement.css.cssom;
 import gwt.jelement.css.cssom.CSSNumericValue;
 import gwt.jelement.css.cssom.CSSTransformComponent;
 import jsinterop.annotations.JsConstructor;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -37,13 +38,22 @@ public class CSSTranslation extends CSSTransformComponent{
     }
     
     @JsProperty(name="x")
-    public CSSNumericValue x;
+    public native CSSNumericValue getX();
+    
+    @JsProperty(name="x")
+    public native void setX(CSSNumericValue x);
     
     @JsProperty(name="y")
-    public CSSNumericValue y;
+    public native CSSNumericValue getY();
+    
+    @JsProperty(name="y")
+    public native void setY(CSSNumericValue y);
     
     @JsProperty(name="z")
-    public CSSNumericValue z;
+    public native CSSNumericValue getZ();
+    
+    @JsProperty(name="z")
+    public native void setZ(CSSNumericValue z);
     
     
 }

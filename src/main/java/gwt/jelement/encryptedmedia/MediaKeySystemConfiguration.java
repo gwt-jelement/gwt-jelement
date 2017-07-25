@@ -26,11 +26,29 @@ import jsinterop.annotations.JsType;
 @JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class MediaKeySystemConfiguration{
 
+    @JsProperty(name="label")
+    private String label;
+
+    @JsProperty(name="initDataTypes")
+    private String[] initDataTypes;
+
+    @JsProperty(name="audioCapabilities")
+    private MediaKeySystemMediaCapability[] audioCapabilities;
+
+    @JsProperty(name="videoCapabilities")
+    private MediaKeySystemMediaCapability[] videoCapabilities;
+
+    @JsProperty(name="distinctiveIdentifier")
+    private String distinctiveIdentifier;
+
+    @JsProperty(name="persistentState")
+    private String persistentState;
+
+    @JsProperty(name="sessionTypes")
+    private String[] sessionTypes;
+
     public MediaKeySystemConfiguration(){
     }
-
-    @JsProperty(name="label")
-    public String label;
 
     @JsOverlay
     public final String getLabel(){
@@ -42,9 +60,6 @@ public class MediaKeySystemConfiguration{
         this.label = label;
     }
 
-    @JsProperty(name="initDataTypes")
-    public String[] initDataTypes;
-
     @JsOverlay
     public final String[] getInitDataTypes(){
         return this.initDataTypes;
@@ -54,9 +69,6 @@ public class MediaKeySystemConfiguration{
     public final void setInitDataTypes(String[] initDataTypes){
         this.initDataTypes = initDataTypes;
     }
-
-    @JsProperty(name="audioCapabilities")
-    public MediaKeySystemMediaCapability[] audioCapabilities;
 
     @JsOverlay
     public final MediaKeySystemMediaCapability[] getAudioCapabilities(){
@@ -68,9 +80,6 @@ public class MediaKeySystemConfiguration{
         this.audioCapabilities = audioCapabilities;
     }
 
-    @JsProperty(name="videoCapabilities")
-    public MediaKeySystemMediaCapability[] videoCapabilities;
-
     @JsOverlay
     public final MediaKeySystemMediaCapability[] getVideoCapabilities(){
         return this.videoCapabilities;
@@ -80,9 +89,6 @@ public class MediaKeySystemConfiguration{
     public final void setVideoCapabilities(MediaKeySystemMediaCapability[] videoCapabilities){
         this.videoCapabilities = videoCapabilities;
     }
-
-    @JsProperty(name="distinctiveIdentifier")
-    public String distinctiveIdentifier;
 
     @JsOverlay
     public final MediaKeysRequirement getDistinctiveIdentifier(){
@@ -94,9 +100,6 @@ public class MediaKeySystemConfiguration{
         this.distinctiveIdentifier = distinctiveIdentifier.getInternalValue();
     }
 
-    @JsProperty(name="persistentState")
-    public String persistentState;
-
     @JsOverlay
     public final MediaKeysRequirement getPersistentState(){
         return MediaKeysRequirement.of(this.persistentState);
@@ -107,9 +110,6 @@ public class MediaKeySystemConfiguration{
         this.persistentState = persistentState.getInternalValue();
     }
 
-    @JsProperty(name="sessionTypes")
-    public String[] sessionTypes;
-
     @JsOverlay
     public final String[] getSessionTypes(){
         return this.sessionTypes;
@@ -119,6 +119,5 @@ public class MediaKeySystemConfiguration{
     public final void setSessionTypes(String[] sessionTypes){
         this.sessionTypes = sessionTypes;
     }
-
 
 }

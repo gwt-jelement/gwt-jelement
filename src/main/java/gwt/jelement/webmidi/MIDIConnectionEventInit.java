@@ -26,11 +26,11 @@ import jsinterop.annotations.JsType;
 @JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class MIDIConnectionEventInit extends EventInit{
 
+    @JsProperty(name="port")
+    private MIDIPort port;
+
     public MIDIConnectionEventInit(){
     }
-
-    @JsProperty(name="port")
-    public MIDIPort port;
 
     @JsOverlay
     public final MIDIPort getPort(){
@@ -41,6 +41,5 @@ public class MIDIConnectionEventInit extends EventInit{
     public final void setPort(MIDIPort port){
         this.port = port;
     }
-
 
 }

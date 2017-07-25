@@ -18,6 +18,7 @@ package gwt.jelement.webusb;
 
 import gwt.jelement.webusb.USBIsochronousOutTransferPacket;
 import jsinterop.annotations.JsConstructor;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -30,7 +31,7 @@ public class USBIsochronousOutTransferResult{
     }
     
     @JsProperty(name="packets")
-    public USBIsochronousOutTransferPacket[] packets;
+    public native USBIsochronousOutTransferPacket[] getPackets();
     
     
 }

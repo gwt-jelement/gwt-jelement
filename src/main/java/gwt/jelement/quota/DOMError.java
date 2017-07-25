@@ -17,6 +17,7 @@
 package gwt.jelement.quota;
 
 import jsinterop.annotations.JsConstructor;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -33,10 +34,10 @@ public class DOMError{
     }
     
     @JsProperty(name="name")
-    public String name;
+    public native String getName();
     
     @JsProperty(name="message")
-    public String message;
+    public native String getMessage();
     
     
 }

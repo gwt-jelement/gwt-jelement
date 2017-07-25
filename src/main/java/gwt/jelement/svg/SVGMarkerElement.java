@@ -25,6 +25,7 @@ import gwt.jelement.svg.SVGAnimatedRect;
 import gwt.jelement.svg.SVGElement;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -45,36 +46,38 @@ public class SVGMarkerElement extends SVGElement{
     }
     
     @JsProperty(name="refX")
-    public SVGAnimatedLength refX;
+    public native SVGAnimatedLength getRefX();
     
     @JsProperty(name="refY")
-    public SVGAnimatedLength refY;
+    public native SVGAnimatedLength getRefY();
     
     @JsProperty(name="markerUnits")
-    public SVGAnimatedEnumeration markerUnits;
+    public native SVGAnimatedEnumeration getMarkerUnits();
     
     @JsProperty(name="markerWidth")
-    public SVGAnimatedLength markerWidth;
+    public native SVGAnimatedLength getMarkerWidth();
     
     @JsProperty(name="markerHeight")
-    public SVGAnimatedLength markerHeight;
+    public native SVGAnimatedLength getMarkerHeight();
     
     @JsProperty(name="orientType")
-    public SVGAnimatedEnumeration orientType;
+    public native SVGAnimatedEnumeration getOrientType();
     
     @JsProperty(name="orientAngle")
-    public SVGAnimatedAngle orientAngle;
+    public native SVGAnimatedAngle getOrientAngle();
     
     @JsProperty(name="viewBox")
-    public SVGAnimatedRect viewBox;
+    public native SVGAnimatedRect getViewBox();
     
     @JsProperty(name="preserveAspectRatio")
-    public SVGAnimatedPreserveAspectRatio preserveAspectRatio;
+    public native SVGAnimatedPreserveAspectRatio getPreserveAspectRatio();
     
     @JsMethod(name = "setOrientToAngle")
     public native void setOrientToAngle(SVGAngle angle);
     
+    
     @JsMethod(name = "setOrientToAuto")
     public native void setOrientToAuto();
+    
     
 }

@@ -21,6 +21,7 @@ import gwt.jelement.webaudio.AudioNode;
 import gwt.jelement.webaudio.BaseAudioContext;
 import gwt.jelement.webaudio.MediaElementAudioSourceOptions;
 import jsinterop.annotations.JsConstructor;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -34,7 +35,7 @@ public class MediaElementAudioSourceNode extends AudioNode{
     }
     
     @JsProperty(name="mediaElement")
-    public HTMLMediaElement mediaElement;
+    public native HTMLMediaElement getMediaElement();
     
     
 }

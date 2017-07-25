@@ -80,6 +80,9 @@ public class TrackEvent extends Event{
     
     }
     
+    @JsProperty(name="track")
+    private TrackUnion track;
+    
     @JsConstructor
     public TrackEvent(String type){
         super((String) null);
@@ -90,8 +93,10 @@ public class TrackEvent extends Event{
         super((String) null);
     }
     
-    @JsProperty(name="track")
-    public TrackUnion track;
+    @JsOverlay
+    public final TrackUnion getTrack(){
+        return this.track;
+    }
     
     
 }

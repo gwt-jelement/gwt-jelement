@@ -19,6 +19,7 @@ package gwt.jelement.events;
 import gwt.jelement.events.AnimationEventInit;
 import gwt.jelement.events.Event;
 import jsinterop.annotations.JsConstructor;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -37,10 +38,10 @@ public class AnimationEvent extends Event{
     }
     
     @JsProperty(name="animationName")
-    public String animationName;
+    public native String getAnimationName();
     
     @JsProperty(name="elapsedTime")
-    public double elapsedTime;
+    public native double getElapsedTime();
     
     
 }

@@ -26,11 +26,14 @@ import jsinterop.annotations.JsType;
 @JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class PromiseRejectionEventInit extends EventInit{
 
+    @JsProperty(name="promise")
+    private Promise<Object> promise;
+
+    @JsProperty(name="reason")
+    private Object reason;
+
     public PromiseRejectionEventInit(){
     }
-
-    @JsProperty(name="promise")
-    public Promise<Object> promise;
 
     @JsOverlay
     public final Promise<Object> getPromise(){
@@ -42,9 +45,6 @@ public class PromiseRejectionEventInit extends EventInit{
         this.promise = promise;
     }
 
-    @JsProperty(name="reason")
-    public Object reason;
-
     @JsOverlay
     public final Object getReason(){
         return this.reason;
@@ -54,6 +54,5 @@ public class PromiseRejectionEventInit extends EventInit{
     public final void setReason(Object reason){
         this.reason = reason;
     }
-
 
 }

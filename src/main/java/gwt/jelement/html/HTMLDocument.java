@@ -20,6 +20,7 @@ import gwt.jelement.dom.Document;
 import gwt.jelement.html.HTMLAllCollection;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -33,30 +34,48 @@ public class HTMLDocument extends Document{
     }
     
     @JsProperty(name="fgColor")
-    public String fgColor;
+    public native String getFgColor();
+    
+    @JsProperty(name="fgColor")
+    public native void setFgColor(String fgColor);
     
     @JsProperty(name="linkColor")
-    public String linkColor;
+    public native String getLinkColor();
+    
+    @JsProperty(name="linkColor")
+    public native void setLinkColor(String linkColor);
     
     @JsProperty(name="vlinkColor")
-    public String vlinkColor;
+    public native String getVlinkColor();
+    
+    @JsProperty(name="vlinkColor")
+    public native void setVlinkColor(String vlinkColor);
     
     @JsProperty(name="alinkColor")
-    public String alinkColor;
+    public native String getAlinkColor();
+    
+    @JsProperty(name="alinkColor")
+    public native void setAlinkColor(String alinkColor);
     
     @JsProperty(name="bgColor")
-    public String bgColor;
+    public native String getBgColor();
+    
+    @JsProperty(name="bgColor")
+    public native void setBgColor(String bgColor);
     
     @JsProperty(name="all")
-    public HTMLAllCollection all;
+    public native HTMLAllCollection getAll();
     
     @JsMethod(name = "captureEvents")
     public native void captureEvents();
     
+    
     @JsMethod(name = "clear")
     public native void clear();
     
+    
     @JsMethod(name = "releaseEvents")
     public native void releaseEvents();
+    
     
 }

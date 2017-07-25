@@ -25,6 +25,7 @@ import gwt.jelement.workers.WorkerGlobalScope;
 import elemental2.promise.Promise;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -32,69 +33,204 @@ import jsinterop.annotations.JsType;
 @JsType(namespace = JsPackage.GLOBAL, isNative = true)
 public class ServiceWorkerGlobalScope extends WorkerGlobalScope{
     
+    @JsProperty(name="onactivate")
+    private EventHandlerNonNull onactivate;
+    
+    @JsProperty(name="onfetch")
+    private EventHandlerNonNull onfetch;
+    
+    @JsProperty(name="oninstall")
+    private EventHandlerNonNull oninstall;
+    
+    @JsProperty(name="onmessage")
+    private EventHandlerNonNull onmessage;
+    
+    @JsProperty(name="onforeignfetch")
+    private EventHandlerNonNull onforeignfetch;
+    
+    @JsProperty(name="onbackgroundfetched")
+    private EventHandlerNonNull onbackgroundfetched;
+    
+    @JsProperty(name="onbackgroundfetchfail")
+    private EventHandlerNonNull onbackgroundfetchfail;
+    
+    @JsProperty(name="onbackgroundfetchabort")
+    private EventHandlerNonNull onbackgroundfetchabort;
+    
+    @JsProperty(name="onbackgroundfetchclick")
+    private EventHandlerNonNull onbackgroundfetchclick;
+    
+    @JsProperty(name="onsync")
+    private EventHandlerNonNull onsync;
+    
+    @JsProperty(name="onnotificationclick")
+    private EventHandlerNonNull onnotificationclick;
+    
+    @JsProperty(name="onnotificationclose")
+    private EventHandlerNonNull onnotificationclose;
+    
+    @JsProperty(name="onpush")
+    private EventHandlerNonNull onpush;
+    
     @JsConstructor
     public ServiceWorkerGlobalScope(){
         super();
     }
     
     @JsProperty(name="clients")
-    public Clients clients;
+    public native Clients getClients();
     
     @JsProperty(name="registration")
-    public ServiceWorkerRegistration registration;
+    public native ServiceWorkerRegistration getRegistration();
     
-    @JsProperty(name="onactivate")
-    public EventHandlerNonNull onactivate;
+    @JsOverlay
+    public final EventHandlerNonNull getOnActivate(){
+        return this.onactivate;
+    }
     
-    @JsProperty(name="onfetch")
-    public EventHandlerNonNull onfetch;
+    @JsOverlay
+    public final void setOnActivate(EventHandlerNonNull onactivate){
+        this.onactivate = onactivate;
+    }
     
-    @JsProperty(name="oninstall")
-    public EventHandlerNonNull oninstall;
+    @JsOverlay
+    public final EventHandlerNonNull getOnFetch(){
+        return this.onfetch;
+    }
     
-    @JsProperty(name="onmessage")
-    public EventHandlerNonNull onmessage;
+    @JsOverlay
+    public final void setOnFetch(EventHandlerNonNull onfetch){
+        this.onfetch = onfetch;
+    }
     
-    @JsProperty(name="onforeignfetch")
-    public EventHandlerNonNull onforeignfetch;
+    @JsOverlay
+    public final EventHandlerNonNull getOnInstall(){
+        return this.oninstall;
+    }
     
-    @JsProperty(name="onbackgroundfetched")
-    public EventHandlerNonNull onbackgroundfetched;
+    @JsOverlay
+    public final void setOnInstall(EventHandlerNonNull oninstall){
+        this.oninstall = oninstall;
+    }
     
-    @JsProperty(name="onbackgroundfetchfail")
-    public EventHandlerNonNull onbackgroundfetchfail;
+    @JsOverlay
+    public final EventHandlerNonNull getOnMessage(){
+        return this.onmessage;
+    }
     
-    @JsProperty(name="onbackgroundfetchabort")
-    public EventHandlerNonNull onbackgroundfetchabort;
+    @JsOverlay
+    public final void setOnMessage(EventHandlerNonNull onmessage){
+        this.onmessage = onmessage;
+    }
     
-    @JsProperty(name="onbackgroundfetchclick")
-    public EventHandlerNonNull onbackgroundfetchclick;
+    @JsOverlay
+    public final EventHandlerNonNull getOnForeignfetch(){
+        return this.onforeignfetch;
+    }
     
-    @JsProperty(name="onsync")
-    public EventHandlerNonNull onsync;
+    @JsOverlay
+    public final void setOnForeignfetch(EventHandlerNonNull onforeignfetch){
+        this.onforeignfetch = onforeignfetch;
+    }
     
-    @JsProperty(name="onnotificationclick")
-    public EventHandlerNonNull onnotificationclick;
+    @JsOverlay
+    public final EventHandlerNonNull getOnBackgroundfetched(){
+        return this.onbackgroundfetched;
+    }
     
-    @JsProperty(name="onnotificationclose")
-    public EventHandlerNonNull onnotificationclose;
+    @JsOverlay
+    public final void setOnBackgroundfetched(EventHandlerNonNull onbackgroundfetched){
+        this.onbackgroundfetched = onbackgroundfetched;
+    }
     
-    @JsProperty(name="onpush")
-    public EventHandlerNonNull onpush;
+    @JsOverlay
+    public final EventHandlerNonNull getOnBackgroundfetchfail(){
+        return this.onbackgroundfetchfail;
+    }
+    
+    @JsOverlay
+    public final void setOnBackgroundfetchfail(EventHandlerNonNull onbackgroundfetchfail){
+        this.onbackgroundfetchfail = onbackgroundfetchfail;
+    }
+    
+    @JsOverlay
+    public final EventHandlerNonNull getOnBackgroundfetchabort(){
+        return this.onbackgroundfetchabort;
+    }
+    
+    @JsOverlay
+    public final void setOnBackgroundfetchabort(EventHandlerNonNull onbackgroundfetchabort){
+        this.onbackgroundfetchabort = onbackgroundfetchabort;
+    }
+    
+    @JsOverlay
+    public final EventHandlerNonNull getOnBackgroundfetchclick(){
+        return this.onbackgroundfetchclick;
+    }
+    
+    @JsOverlay
+    public final void setOnBackgroundfetchclick(EventHandlerNonNull onbackgroundfetchclick){
+        this.onbackgroundfetchclick = onbackgroundfetchclick;
+    }
+    
+    @JsOverlay
+    public final EventHandlerNonNull getOnSync(){
+        return this.onsync;
+    }
+    
+    @JsOverlay
+    public final void setOnSync(EventHandlerNonNull onsync){
+        this.onsync = onsync;
+    }
+    
+    @JsOverlay
+    public final EventHandlerNonNull getOnNotificationclick(){
+        return this.onnotificationclick;
+    }
+    
+    @JsOverlay
+    public final void setOnNotificationclick(EventHandlerNonNull onnotificationclick){
+        this.onnotificationclick = onnotificationclick;
+    }
+    
+    @JsOverlay
+    public final EventHandlerNonNull getOnNotificationclose(){
+        return this.onnotificationclose;
+    }
+    
+    @JsOverlay
+    public final void setOnNotificationclose(EventHandlerNonNull onnotificationclose){
+        this.onnotificationclose = onnotificationclose;
+    }
+    
+    @JsOverlay
+    public final EventHandlerNonNull getOnPush(){
+        return this.onpush;
+    }
+    
+    @JsOverlay
+    public final void setOnPush(EventHandlerNonNull onpush){
+        this.onpush = onpush;
+    }
     
     @JsMethod(name = "fetch")
     public native Promise<Response> fetch(Request input);
     
+    
     @JsMethod(name = "fetch")
     public native Promise<Response> fetch(String input);
+    
     
     @JsMethod(name = "fetch")
     public native Promise<Response> fetch(Request input, Object init);
     
+    
     @JsMethod(name = "fetch")
     public native Promise<Response> fetch(String input, Object init);
     
+    
     @JsMethod(name = "skipWaiting")
     public native Promise<Void> skipWaiting();
+    
     
 }

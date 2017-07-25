@@ -22,6 +22,7 @@ import gwt.jelement.html.HTMLFormElement;
 import gwt.jelement.html.ValidityState;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -35,36 +36,45 @@ public class HTMLFieldSetElement extends HTMLElement{
     }
     
     @JsProperty(name="disabled")
-    public boolean disabled;
+    public native boolean getDisabled();
+    
+    @JsProperty(name="disabled")
+    public native void setDisabled(boolean disabled);
     
     @JsProperty(name="form")
-    public HTMLFormElement form;
+    public native HTMLFormElement getForm();
     
     @JsProperty(name="name")
-    public String name;
+    public native String getName();
+    
+    @JsProperty(name="name")
+    public native void setName(String name);
     
     @JsProperty(name="type")
-    public String type;
+    public native String getType();
     
     @JsProperty(name="elements")
-    public HTMLCollection elements;
+    public native HTMLCollection getElements();
     
     @JsProperty(name="willValidate")
-    public boolean willValidate;
+    public native boolean getWillValidate();
     
     @JsProperty(name="validity")
-    public ValidityState validity;
+    public native ValidityState getValidity();
     
     @JsProperty(name="validationMessage")
-    public String validationMessage;
+    public native String getValidationMessage();
     
     @JsMethod(name = "checkValidity")
     public native boolean checkValidity();
     
+    
     @JsMethod(name = "reportValidity")
     public native boolean reportValidity();
     
+    
     @JsMethod(name = "setCustomValidity")
     public native void setCustomValidity(String error);
+    
     
 }

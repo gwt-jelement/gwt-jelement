@@ -18,6 +18,7 @@ package gwt.jelement.html;
 
 import gwt.jelement.html.HTMLElement;
 import jsinterop.annotations.JsConstructor;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -31,16 +32,28 @@ public class HTMLMetaElement extends HTMLElement{
     }
     
     @JsProperty(name="name")
-    public String name;
+    public native String getName();
+    
+    @JsProperty(name="name")
+    public native void setName(String name);
     
     @JsProperty(name="httpEquiv")
-    public String httpEquiv;
+    public native String getHttpEquiv();
+    
+    @JsProperty(name="httpEquiv")
+    public native void setHttpEquiv(String httpEquiv);
     
     @JsProperty(name="content")
-    public String content;
+    public native String getContent();
+    
+    @JsProperty(name="content")
+    public native void setContent(String content);
     
     @JsProperty(name="scheme")
-    public String scheme;
+    public native String getScheme();
+    
+    @JsProperty(name="scheme")
+    public native void setScheme(String scheme);
     
     
 }

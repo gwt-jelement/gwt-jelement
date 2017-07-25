@@ -26,11 +26,11 @@ import jsinterop.annotations.JsType;
 @JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class DragEventInit extends MouseEventInit{
 
+    @JsProperty(name="dataTransfer")
+    private DataTransfer dataTransfer;
+
     public DragEventInit(){
     }
-
-    @JsProperty(name="dataTransfer")
-    public DataTransfer dataTransfer;
 
     @JsOverlay
     public final DataTransfer getDataTransfer(){
@@ -41,6 +41,5 @@ public class DragEventInit extends MouseEventInit{
     public final void setDataTransfer(DataTransfer dataTransfer){
         this.dataTransfer = dataTransfer;
     }
-
 
 }

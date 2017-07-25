@@ -23,6 +23,7 @@ import gwt.jelement.webaudio.AudioScheduledSourceNode;
 import gwt.jelement.webaudio.BaseAudioContext;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -41,33 +42,49 @@ public class AudioBufferSourceNode extends AudioScheduledSourceNode{
     }
     
     @JsProperty(name="buffer")
-    public AudioBuffer buffer;
+    public native AudioBuffer getBuffer();
+    
+    @JsProperty(name="buffer")
+    public native void setBuffer(AudioBuffer buffer);
     
     @JsProperty(name="playbackRate")
-    public AudioParam playbackRate;
+    public native AudioParam getPlaybackRate();
     
     @JsProperty(name="detune")
-    public AudioParam detune;
+    public native AudioParam getDetune();
     
     @JsProperty(name="loop")
-    public boolean loop;
+    public native boolean getLoop();
+    
+    @JsProperty(name="loop")
+    public native void setLoop(boolean loop);
     
     @JsProperty(name="loopStart")
-    public double loopStart;
+    public native double getLoopStart();
+    
+    @JsProperty(name="loopStart")
+    public native void setLoopStart(double loopStart);
     
     @JsProperty(name="loopEnd")
-    public double loopEnd;
+    public native double getLoopEnd();
+    
+    @JsProperty(name="loopEnd")
+    public native void setLoopEnd(double loopEnd);
     
     @JsMethod(name = "start")
     public native void start();
     
+    
     @JsMethod(name = "start")
     public native void start(double when);
+    
     
     @JsMethod(name = "start")
     public native void start(double when, double grainOffset);
     
+    
     @JsMethod(name = "start")
     public native void start(double when, double grainOffset, double grainDuration);
+    
     
 }

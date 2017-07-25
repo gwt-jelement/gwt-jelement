@@ -27,8 +27,47 @@ import jsinterop.base.Js;
 @JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class NotificationOptions{
 
-    public NotificationOptions(){
-    }
+    @JsProperty(name="dir")
+    private String dir;
+
+    @JsProperty(name="lang")
+    private String lang;
+
+    @JsProperty(name="body")
+    private String body;
+
+    @JsProperty(name="tag")
+    private String tag;
+
+    @JsProperty(name="image")
+    private String image;
+
+    @JsProperty(name="icon")
+    private String icon;
+
+    @JsProperty(name="badge")
+    private String badge;
+
+    @JsProperty(name="vibrate")
+    private VibrateUnion vibrate;
+
+    @JsProperty(name="timestamp")
+    private double timestamp;
+
+    @JsProperty(name="renotify")
+    private boolean renotify;
+
+    @JsProperty(name="silent")
+    private boolean silent;
+
+    @JsProperty(name="requireInteraction")
+    private boolean requireInteraction;
+
+    @JsProperty(name="data")
+    private Object data;
+
+    @JsProperty(name="actions")
+    private NotificationAction[] actions;
 
     @JsType(isNative = true, name = "?", namespace = JsPackage.GLOBAL)
     public interface VibrateUnion {
@@ -64,8 +103,8 @@ public class NotificationOptions{
     
     }
     
-    @JsProperty(name="dir")
-    public String dir;
+    public NotificationOptions(){
+    }
 
     @JsOverlay
     public final NotificationDirection getDir(){
@@ -77,9 +116,6 @@ public class NotificationOptions{
         this.dir = dir.getInternalValue();
     }
 
-    @JsProperty(name="lang")
-    public String lang;
-
     @JsOverlay
     public final String getLang(){
         return this.lang;
@@ -89,9 +125,6 @@ public class NotificationOptions{
     public final void setLang(String lang){
         this.lang = lang;
     }
-
-    @JsProperty(name="body")
-    public String body;
 
     @JsOverlay
     public final String getBody(){
@@ -103,9 +136,6 @@ public class NotificationOptions{
         this.body = body;
     }
 
-    @JsProperty(name="tag")
-    public String tag;
-
     @JsOverlay
     public final String getTag(){
         return this.tag;
@@ -115,9 +145,6 @@ public class NotificationOptions{
     public final void setTag(String tag){
         this.tag = tag;
     }
-
-    @JsProperty(name="image")
-    public String image;
 
     @JsOverlay
     public final String getImage(){
@@ -129,9 +156,6 @@ public class NotificationOptions{
         this.image = image;
     }
 
-    @JsProperty(name="icon")
-    public String icon;
-
     @JsOverlay
     public final String getIcon(){
         return this.icon;
@@ -141,9 +165,6 @@ public class NotificationOptions{
     public final void setIcon(String icon){
         this.icon = icon;
     }
-
-    @JsProperty(name="badge")
-    public String badge;
 
     @JsOverlay
     public final String getBadge(){
@@ -155,9 +176,6 @@ public class NotificationOptions{
         this.badge = badge;
     }
 
-    @JsProperty(name="vibrate")
-    public VibrateUnion vibrate;
-
     @JsOverlay
     public final void setVibrate(double vibrate){
         this.vibrate = NotificationOptions.VibrateUnion.of(vibrate);
@@ -167,9 +185,6 @@ public class NotificationOptions{
     public final void setVibrate(double[] vibrate){
         this.vibrate = NotificationOptions.VibrateUnion.of(vibrate);
     }
-
-    @JsProperty(name="timestamp")
-    public double timestamp;
 
     @JsOverlay
     public final double getTimestamp(){
@@ -181,9 +196,6 @@ public class NotificationOptions{
         this.timestamp = timestamp;
     }
 
-    @JsProperty(name="renotify")
-    public boolean renotify;
-
     @JsOverlay
     public final boolean getRenotify(){
         return this.renotify;
@@ -193,9 +205,6 @@ public class NotificationOptions{
     public final void setRenotify(boolean renotify){
         this.renotify = renotify;
     }
-
-    @JsProperty(name="silent")
-    public boolean silent;
 
     @JsOverlay
     public final boolean getSilent(){
@@ -207,9 +216,6 @@ public class NotificationOptions{
         this.silent = silent;
     }
 
-    @JsProperty(name="requireInteraction")
-    public boolean requireInteraction;
-
     @JsOverlay
     public final boolean getRequireInteraction(){
         return this.requireInteraction;
@@ -219,9 +225,6 @@ public class NotificationOptions{
     public final void setRequireInteraction(boolean requireInteraction){
         this.requireInteraction = requireInteraction;
     }
-
-    @JsProperty(name="data")
-    public Object data;
 
     @JsOverlay
     public final Object getData(){
@@ -233,9 +236,6 @@ public class NotificationOptions{
         this.data = data;
     }
 
-    @JsProperty(name="actions")
-    public NotificationAction[] actions;
-
     @JsOverlay
     public final NotificationAction[] getActions(){
         return this.actions;
@@ -245,6 +245,5 @@ public class NotificationOptions{
     public final void setActions(NotificationAction[] actions){
         this.actions = actions;
     }
-
 
 }

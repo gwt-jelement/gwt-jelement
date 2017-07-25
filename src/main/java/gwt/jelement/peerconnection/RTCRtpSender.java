@@ -17,6 +17,7 @@
 package gwt.jelement.peerconnection;
 
 import gwt.jelement.mediastream.MediaStreamTrack;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -25,7 +26,7 @@ import jsinterop.annotations.JsType;
 public class RTCRtpSender{
     
     @JsProperty(name="track")
-    public MediaStreamTrack track;
+    public native MediaStreamTrack getTrack();
     
     
 }

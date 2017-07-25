@@ -25,11 +25,11 @@ import jsinterop.annotations.JsType;
 @JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class WebGLContextEventInit extends EventInit{
 
+    @JsProperty(name="statusMessage")
+    private String statusMessage;
+
     public WebGLContextEventInit(){
     }
-
-    @JsProperty(name="statusMessage")
-    public String statusMessage;
 
     @JsOverlay
     public final String getStatusMessage(){
@@ -40,6 +40,5 @@ public class WebGLContextEventInit extends EventInit{
     public final void setStatusMessage(String statusMessage){
         this.statusMessage = statusMessage;
     }
-
 
 }

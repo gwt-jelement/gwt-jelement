@@ -46,23 +46,41 @@ import jsinterop.base.Js;
 @JsType(namespace = JsPackage.GLOBAL, isNative = true)
 public class OffscreenCanvasRenderingContext2D{
     
+    @JsProperty(name="imageSmoothingQuality")
+    private String imageSmoothingQuality;
+    
+    @JsProperty(name="strokeStyle")
+    private CanvasRenderingContext2D.StrokeStyleUnion strokeStyle;
+    
+    @JsProperty(name="fillStyle")
+    private CanvasRenderingContext2D.StrokeStyleUnion fillStyle;
+    
     @JsProperty(name="canvas")
-    public OffscreenCanvas canvas;
+    public native OffscreenCanvas getCanvas();
     
     @JsProperty(name="globalAlpha")
-    public double globalAlpha;
+    public native double getGlobalAlpha();
+    
+    @JsProperty(name="globalAlpha")
+    public native void setGlobalAlpha(double globalAlpha);
     
     @JsProperty(name="globalCompositeOperation")
-    public String globalCompositeOperation;
+    public native String getGlobalCompositeOperation();
+    
+    @JsProperty(name="globalCompositeOperation")
+    public native void setGlobalCompositeOperation(String globalCompositeOperation);
     
     @JsProperty(name="filter")
-    public String filter;
+    public native String getFilter();
+    
+    @JsProperty(name="filter")
+    public native void setFilter(String filter);
     
     @JsProperty(name="imageSmoothingEnabled")
-    public boolean imageSmoothingEnabled;
+    public native boolean getImageSmoothingEnabled();
     
-    @JsProperty(name="imageSmoothingQuality")
-    public String imageSmoothingQuality;
+    @JsProperty(name="imageSmoothingEnabled")
+    public native void setImageSmoothingEnabled(boolean imageSmoothingEnabled);
     
     @JsOverlay
     public final ImageSmoothingQuality getImageSmoothingQuality(){
@@ -74,8 +92,10 @@ public class OffscreenCanvasRenderingContext2D{
        this.imageSmoothingQuality = imageSmoothingQuality.getInternalValue();
     }
     
-    @JsProperty(name="strokeStyle")
-    public CanvasRenderingContext2D.StrokeStyleUnion strokeStyle;
+    @JsOverlay
+    public final CanvasRenderingContext2D.StrokeStyleUnion getStrokeStyle(){
+        return this.strokeStyle;
+    }
     
     @JsOverlay
     public final void setStrokeStyle(String strokeStyle){
@@ -92,8 +112,10 @@ public class OffscreenCanvasRenderingContext2D{
         this.strokeStyle = CanvasRenderingContext2D.StrokeStyleUnion.of(strokeStyle);
     }
     
-    @JsProperty(name="fillStyle")
-    public CanvasRenderingContext2D.StrokeStyleUnion fillStyle;
+    @JsOverlay
+    public final CanvasRenderingContext2D.StrokeStyleUnion getFillStyle(){
+        return this.fillStyle;
+    }
     
     @JsOverlay
     public final void setFillStyle(String fillStyle){
@@ -111,178 +133,254 @@ public class OffscreenCanvasRenderingContext2D{
     }
     
     @JsProperty(name="shadowOffsetX")
-    public double shadowOffsetX;
+    public native double getShadowOffsetX();
+    
+    @JsProperty(name="shadowOffsetX")
+    public native void setShadowOffsetX(double shadowOffsetX);
     
     @JsProperty(name="shadowOffsetY")
-    public double shadowOffsetY;
+    public native double getShadowOffsetY();
+    
+    @JsProperty(name="shadowOffsetY")
+    public native void setShadowOffsetY(double shadowOffsetY);
     
     @JsProperty(name="shadowBlur")
-    public double shadowBlur;
+    public native double getShadowBlur();
+    
+    @JsProperty(name="shadowBlur")
+    public native void setShadowBlur(double shadowBlur);
     
     @JsProperty(name="shadowColor")
-    public String shadowColor;
+    public native String getShadowColor();
+    
+    @JsProperty(name="shadowColor")
+    public native void setShadowColor(String shadowColor);
     
     @JsProperty(name="lineWidth")
-    public double lineWidth;
+    public native double getLineWidth();
+    
+    @JsProperty(name="lineWidth")
+    public native void setLineWidth(double lineWidth);
     
     @JsProperty(name="lineCap")
-    public String lineCap;
+    public native String getLineCap();
+    
+    @JsProperty(name="lineCap")
+    public native void setLineCap(String lineCap);
     
     @JsProperty(name="lineJoin")
-    public String lineJoin;
+    public native String getLineJoin();
+    
+    @JsProperty(name="lineJoin")
+    public native void setLineJoin(String lineJoin);
     
     @JsProperty(name="miterLimit")
-    public double miterLimit;
+    public native double getMiterLimit();
+    
+    @JsProperty(name="miterLimit")
+    public native void setMiterLimit(double miterLimit);
     
     @JsProperty(name="lineDashOffset")
-    public double lineDashOffset;
+    public native double getLineDashOffset();
+    
+    @JsProperty(name="lineDashOffset")
+    public native void setLineDashOffset(double lineDashOffset);
     
     @JsMethod(name = "arc")
     public native void arc(float x, float y, float radius, float startAngle, float endAngle);
     
+    
     @JsMethod(name = "arc")
     public native void arc(float x, float y, float radius, float startAngle, float endAngle, boolean anticlockwise);
+    
     
     @JsMethod(name = "arcTo")
     public native void arcTo(float x1, float y1, float x2, float y2, float radius);
     
+    
     @JsMethod(name = "beginPath")
     public native void beginPath();
+    
     
     @JsMethod(name = "bezierCurveTo")
     public native void bezierCurveTo(float cp1x, float cp1y, float cp2x, float cp2y, float x, float y);
     
+    
     @JsMethod(name = "clearRect")
     public native void clearRect(double x, double y, double width, double height);
+    
     
     @JsMethod(name = "clip")
     public native void clip();
     
+    
     @JsMethod(name = "clip")
     public native void clip(Path2D path);
+    
     
     @JsMethod(name = "closePath")
     public native void closePath();
     
+    
     @JsMethod(name = "commit")
     public native Promise commit();
+    
     
     @JsMethod(name = "createImageData")
     public native ImageData createImageData(ImageData imagedata);
     
+    
     @JsMethod(name = "createImageData")
     public native ImageData createImageData(double sw, double sh);
+    
     
     @JsMethod(name = "createImageData")
     public native ImageData createImageData(double sw, double sh, ImageDataColorSettings imageDataColorSettings);
     
+    
     @JsMethod(name = "createImageData")
     public native ImageData createImageData(Uint8ClampedArray data, double sw, double sh, ImageDataColorSettings imageDataColorSettings);
+    
     
     @JsMethod(name = "createImageData")
     public native ImageData createImageData(Uint16Array data, double sw, double sh, ImageDataColorSettings imageDataColorSettings);
     
+    
     @JsMethod(name = "createImageData")
     public native ImageData createImageData(Float32Array data, double sw, double sh, ImageDataColorSettings imageDataColorSettings);
+    
     
     @JsMethod(name = "createLinearGradient")
     public native CanvasGradient createLinearGradient(double x0, double y0, double x1, double y1);
     
+    
     @JsMethod(name = "createPattern")
     public native CanvasPattern createPattern(CSSImageValue image, String repetitionType);
+    
     
     @JsMethod(name = "createPattern")
     public native CanvasPattern createPattern(HTMLImageElement image, String repetitionType);
     
+    
     @JsMethod(name = "createPattern")
     public native CanvasPattern createPattern(SVGImageElement image, String repetitionType);
+    
     
     @JsMethod(name = "createPattern")
     public native CanvasPattern createPattern(HTMLVideoElement image, String repetitionType);
     
+    
     @JsMethod(name = "createPattern")
     public native CanvasPattern createPattern(HTMLCanvasElement image, String repetitionType);
+    
     
     @JsMethod(name = "createPattern")
     public native CanvasPattern createPattern(ImageBitmap image, String repetitionType);
     
+    
     @JsMethod(name = "createPattern")
     public native CanvasPattern createPattern(OffscreenCanvas image, String repetitionType);
+    
     
     @JsMethod(name = "createRadialGradient")
     public native CanvasGradient createRadialGradient(double x0, double y0, double r0, double x1, double y1, double r1);
     
+    
     @JsMethod(name = "drawImage")
     public native void drawImage(CSSImageValue image, double x, double y);
+    
     
     @JsMethod(name = "drawImage")
     public native void drawImage(HTMLImageElement image, double x, double y);
     
+    
     @JsMethod(name = "drawImage")
     public native void drawImage(SVGImageElement image, double x, double y);
+    
     
     @JsMethod(name = "drawImage")
     public native void drawImage(HTMLVideoElement image, double x, double y);
     
+    
     @JsMethod(name = "drawImage")
     public native void drawImage(HTMLCanvasElement image, double x, double y);
+    
     
     @JsMethod(name = "drawImage")
     public native void drawImage(ImageBitmap image, double x, double y);
     
+    
     @JsMethod(name = "drawImage")
     public native void drawImage(OffscreenCanvas image, double x, double y);
+    
     
     @JsMethod(name = "drawImage")
     public native void drawImage(CSSImageValue image, double x, double y, double width, double height);
     
+    
     @JsMethod(name = "drawImage")
     public native void drawImage(HTMLImageElement image, double x, double y, double width, double height);
+    
     
     @JsMethod(name = "drawImage")
     public native void drawImage(SVGImageElement image, double x, double y, double width, double height);
     
+    
     @JsMethod(name = "drawImage")
     public native void drawImage(HTMLVideoElement image, double x, double y, double width, double height);
+    
     
     @JsMethod(name = "drawImage")
     public native void drawImage(HTMLCanvasElement image, double x, double y, double width, double height);
     
+    
     @JsMethod(name = "drawImage")
     public native void drawImage(ImageBitmap image, double x, double y, double width, double height);
+    
     
     @JsMethod(name = "drawImage")
     public native void drawImage(OffscreenCanvas image, double x, double y, double width, double height);
     
+    
     @JsMethod(name = "drawImage")
     public native void drawImage(CSSImageValue image, double sx, double sy, double sw, double sh, double dx, double dy, double dw, double dh);
+    
     
     @JsMethod(name = "drawImage")
     public native void drawImage(HTMLImageElement image, double sx, double sy, double sw, double sh, double dx, double dy, double dw, double dh);
     
+    
     @JsMethod(name = "drawImage")
     public native void drawImage(SVGImageElement image, double sx, double sy, double sw, double sh, double dx, double dy, double dw, double dh);
+    
     
     @JsMethod(name = "drawImage")
     public native void drawImage(HTMLVideoElement image, double sx, double sy, double sw, double sh, double dx, double dy, double dw, double dh);
     
+    
     @JsMethod(name = "drawImage")
     public native void drawImage(HTMLCanvasElement image, double sx, double sy, double sw, double sh, double dx, double dy, double dw, double dh);
+    
     
     @JsMethod(name = "drawImage")
     public native void drawImage(ImageBitmap image, double sx, double sy, double sw, double sh, double dx, double dy, double dw, double dh);
     
+    
     @JsMethod(name = "drawImage")
     public native void drawImage(OffscreenCanvas image, double sx, double sy, double sw, double sh, double dx, double dy, double dw, double dh);
+    
     
     @JsMethod(name = "ellipse")
     public native void ellipse(float x, float y, float radiusX, float radiusY, float rotation, float startAngle, float endAngle);
     
+    
     @JsMethod(name = "ellipse")
     public native void ellipse(float x, float y, float radiusX, float radiusY, float rotation, float startAngle, float endAngle, boolean anticlockwise);
     
+    
     @JsMethod(name = "fill")
     public native void fill();
+    
     
     @JsOverlay
     public final void fill(CanvasFillRule winding){
@@ -292,8 +390,10 @@ public class OffscreenCanvasRenderingContext2D{
     @JsMethod(name = "fill")
     public native void fill(Path2D path);
     
+    
     @JsMethod(name = "fill")
     public native void fill(String winding);
+    
     
     @JsOverlay
     public final void fill(Path2D path, CanvasFillRule winding){
@@ -303,17 +403,22 @@ public class OffscreenCanvasRenderingContext2D{
     @JsMethod(name = "fill")
     public native void fill(Path2D path, String winding);
     
+    
     @JsMethod(name = "fillRect")
     public native void fillRect(double x, double y, double width, double height);
+    
     
     @JsMethod(name = "getImageData")
     public native ImageData getImageData(double sx, double sy, double sw, double sh);
     
+    
     @JsMethod(name = "getLineDash")
     public native double[] getLineDash();
     
+    
     @JsMethod(name = "isPointInPath")
     public native boolean isPointInPath(double x, double y);
+    
     
     @JsOverlay
     public final boolean isPointInPath(double x, double y, CanvasFillRule winding){
@@ -323,8 +428,10 @@ public class OffscreenCanvasRenderingContext2D{
     @JsMethod(name = "isPointInPath")
     public native boolean isPointInPath(Path2D path, double x, double y);
     
+    
     @JsMethod(name = "isPointInPath")
     public native boolean isPointInPath(double x, double y, String winding);
+    
     
     @JsOverlay
     public final boolean isPointInPath(Path2D path, double x, double y, CanvasFillRule winding){
@@ -334,64 +441,85 @@ public class OffscreenCanvasRenderingContext2D{
     @JsMethod(name = "isPointInPath")
     public native boolean isPointInPath(Path2D path, double x, double y, String winding);
     
+    
     @JsMethod(name = "isPointInStroke")
     public native boolean isPointInStroke(double x, double y);
+    
     
     @JsMethod(name = "isPointInStroke")
     public native boolean isPointInStroke(Path2D path, double x, double y);
     
+    
     @JsMethod(name = "lineTo")
     public native void lineTo(float x, float y);
+    
     
     @JsMethod(name = "moveTo")
     public native void moveTo(float x, float y);
     
+    
     @JsMethod(name = "putImageData")
     public native void putImageData(ImageData imagedata, double dx, double dy);
+    
     
     @JsMethod(name = "putImageData")
     public native void putImageData(ImageData imagedata, double dx, double dy, double dirtyX, double dirtyY, double dirtyWidth, double dirtyHeight);
     
+    
     @JsMethod(name = "quadraticCurveTo")
     public native void quadraticCurveTo(float cpx, float cpy, float x, float y);
+    
     
     @JsMethod(name = "rect")
     public native void rect(float x, float y, float width, float height);
     
+    
     @JsMethod(name = "resetTransform")
     public native void resetTransform();
+    
     
     @JsMethod(name = "restore")
     public native void restore();
     
+    
     @JsMethod(name = "rotate")
     public native void rotate(double angle);
+    
     
     @JsMethod(name = "save")
     public native void save();
     
+    
     @JsMethod(name = "scale")
     public native void scale(double x, double y);
+    
     
     @JsMethod(name = "setLineDash")
     public native void setLineDash(double[] dash);
     
+    
     @JsMethod(name = "setTransform")
     public native void setTransform(double a, double b, double c, double d, double e, double f);
+    
     
     @JsMethod(name = "stroke")
     public native void stroke();
     
+    
     @JsMethod(name = "stroke")
     public native void stroke(Path2D path);
+    
     
     @JsMethod(name = "strokeRect")
     public native void strokeRect(double x, double y, double width, double height);
     
+    
     @JsMethod(name = "transform")
     public native void transform(double a, double b, double c, double d, double e, double f);
     
+    
     @JsMethod(name = "translate")
     public native void translate(double x, double y);
+    
     
 }

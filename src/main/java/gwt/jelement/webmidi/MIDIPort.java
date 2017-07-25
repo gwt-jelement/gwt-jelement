@@ -32,13 +32,22 @@ import jsinterop.annotations.JsType;
 @JsType(namespace = JsPackage.GLOBAL, isNative = true)
 public class MIDIPort extends EventTarget{
     
+    @JsProperty(name="connection")
+    private String connection;
+    
+    @JsProperty(name="state")
+    private String state;
+    
+    @JsProperty(name="type")
+    private String type;
+    
+    @JsProperty(name="onstatechange")
+    private EventHandlerNonNull onstatechange;
+    
     @JsConstructor
     public MIDIPort(){
         super();
     }
-    
-    @JsProperty(name="connection")
-    public String connection;
     
     @JsOverlay
     public final MIDIPortConnectionState getConnection(){
@@ -46,24 +55,18 @@ public class MIDIPort extends EventTarget{
     }
     
     @JsProperty(name="id")
-    public String id;
+    public native String getId();
     
     @JsProperty(name="manufacturer")
-    public String manufacturer;
+    public native String getManufacturer();
     
     @JsProperty(name="name")
-    public String name;
-    
-    @JsProperty(name="state")
-    public String state;
+    public native String getName();
     
     @JsOverlay
     public final MIDIPortDeviceState getState(){
        return MIDIPortDeviceState.of(state);
     }
-    
-    @JsProperty(name="type")
-    public String type;
     
     @JsOverlay
     public final MIDIPortType getType(){
@@ -71,15 +74,24 @@ public class MIDIPort extends EventTarget{
     }
     
     @JsProperty(name="version")
-    public String version;
+    public native String getVersion();
     
-    @JsProperty(name="onstatechange")
-    public EventHandlerNonNull onstatechange;
+    @JsOverlay
+    public final EventHandlerNonNull getOnStatechange(){
+        return this.onstatechange;
+    }
+    
+    @JsOverlay
+    public final void setOnStatechange(EventHandlerNonNull onstatechange){
+        this.onstatechange = onstatechange;
+    }
     
     @JsMethod(name = "close")
     public native Promise close();
     
+    
     @JsMethod(name = "open")
     public native Promise open();
+    
     
 }

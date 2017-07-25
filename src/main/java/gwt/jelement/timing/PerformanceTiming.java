@@ -17,6 +17,7 @@
 package gwt.jelement.timing;
 
 import jsinterop.annotations.JsMethod;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -25,69 +26,70 @@ import jsinterop.annotations.JsType;
 public class PerformanceTiming{
     
     @JsProperty(name="navigationStart")
-    public double navigationStart;
+    public native double getNavigationStart();
     
     @JsProperty(name="unloadEventStart")
-    public double unloadEventStart;
+    public native double getUnloadEventStart();
     
     @JsProperty(name="unloadEventEnd")
-    public double unloadEventEnd;
+    public native double getUnloadEventEnd();
     
     @JsProperty(name="redirectStart")
-    public double redirectStart;
+    public native double getRedirectStart();
     
     @JsProperty(name="redirectEnd")
-    public double redirectEnd;
+    public native double getRedirectEnd();
     
     @JsProperty(name="fetchStart")
-    public double fetchStart;
+    public native double getFetchStart();
     
     @JsProperty(name="domainLookupStart")
-    public double domainLookupStart;
+    public native double getDomainLookupStart();
     
     @JsProperty(name="domainLookupEnd")
-    public double domainLookupEnd;
+    public native double getDomainLookupEnd();
     
     @JsProperty(name="connectStart")
-    public double connectStart;
+    public native double getConnectStart();
     
     @JsProperty(name="connectEnd")
-    public double connectEnd;
+    public native double getConnectEnd();
     
     @JsProperty(name="secureConnectionStart")
-    public double secureConnectionStart;
+    public native double getSecureConnectionStart();
     
     @JsProperty(name="requestStart")
-    public double requestStart;
+    public native double getRequestStart();
     
     @JsProperty(name="responseStart")
-    public double responseStart;
+    public native double getResponseStart();
     
     @JsProperty(name="responseEnd")
-    public double responseEnd;
+    public native double getResponseEnd();
     
     @JsProperty(name="domLoading")
-    public double domLoading;
+    public native double getDomLoading();
     
     @JsProperty(name="domInteractive")
-    public double domInteractive;
+    public native double getDomInteractive();
     
     @JsProperty(name="domContentLoadedEventStart")
-    public double domContentLoadedEventStart;
+    public native double getDomContentLoadedEventStart();
     
     @JsProperty(name="domContentLoadedEventEnd")
-    public double domContentLoadedEventEnd;
+    public native double getDomContentLoadedEventEnd();
     
     @JsProperty(name="domComplete")
-    public double domComplete;
+    public native double getDomComplete();
     
     @JsProperty(name="loadEventStart")
-    public double loadEventStart;
+    public native double getLoadEventStart();
     
     @JsProperty(name="loadEventEnd")
-    public double loadEventEnd;
+    public native double getLoadEventEnd();
     
     @JsMethod(name = "toJSON")
     public native Object toJSON();
+    
     
 }

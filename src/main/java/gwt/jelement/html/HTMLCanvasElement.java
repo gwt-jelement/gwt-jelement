@@ -106,42 +106,59 @@ public class HTMLCanvasElement extends HTMLElement{
     }
     
     @JsProperty(name="width")
-    public double width;
+    public native double getWidth();
+    
+    @JsProperty(name="width")
+    public native void setWidth(double width);
     
     @JsProperty(name="height")
-    public double height;
+    public native double getHeight();
+    
+    @JsProperty(name="height")
+    public native void setHeight(double height);
     
     @JsMethod(name = "captureStream")
     public native MediaStream captureStream();
     
+    
     @JsMethod(name = "captureStream")
     public native MediaStream captureStream(double frameRate);
+    
     
     @JsMethod(name = "getContext")
     public native <T extends HTMLCanvasElement.RenderingContext> T getContext(String contextId);
     
+    
     @JsMethod(name = "getContext")
     public native <T extends HTMLCanvasElement.RenderingContext> T getContext(String contextId, CanvasContextCreationAttributes attributes);
+    
     
     @JsMethod(name = "toBlob")
     public native void toBlob(BlobCallback _callback);
     
+    
     @JsMethod(name = "toBlob")
     public native void toBlob(BlobCallback _callback, String type);
+    
     
     @JsMethod(name = "toBlob")
     public native void toBlob(BlobCallback _callback, String type, Object arguments);
     
+    
     @JsMethod(name = "toDataURL")
     public native String toDataURL();
+    
     
     @JsMethod(name = "toDataURL")
     public native String toDataURL(String type);
     
+    
     @JsMethod(name = "toDataURL")
     public native String toDataURL(String type, Object arguments);
     
+    
     @JsMethod(name = "transferControlToOffscreen")
     public native OffscreenCanvas transferControlToOffscreen();
+    
     
 }

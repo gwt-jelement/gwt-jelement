@@ -18,6 +18,7 @@ package gwt.jelement.html;
 
 import gwt.jelement.html.HTMLElement;
 import jsinterop.annotations.JsConstructor;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -31,19 +32,34 @@ public class HTMLHRElement extends HTMLElement{
     }
     
     @JsProperty(name="align")
-    public String align;
+    public native String getAlign();
+    
+    @JsProperty(name="align")
+    public native void setAlign(String align);
     
     @JsProperty(name="color")
-    public String color;
+    public native String getColor();
+    
+    @JsProperty(name="color")
+    public native void setColor(String color);
     
     @JsProperty(name="noShade")
-    public boolean noShade;
+    public native boolean getNoShade();
+    
+    @JsProperty(name="noShade")
+    public native void setNoShade(boolean noShade);
     
     @JsProperty(name="size")
-    public String size;
+    public native String getSize();
+    
+    @JsProperty(name="size")
+    public native void setSize(String size);
     
     @JsProperty(name="width")
-    public String width;
+    public native String getWidth();
+    
+    @JsProperty(name="width")
+    public native void setWidth(String width);
     
     
 }

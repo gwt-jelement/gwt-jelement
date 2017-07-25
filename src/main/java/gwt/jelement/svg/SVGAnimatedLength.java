@@ -17,6 +17,7 @@
 package gwt.jelement.svg;
 
 import gwt.jelement.svg.SVGLength;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -25,10 +26,10 @@ import jsinterop.annotations.JsType;
 public class SVGAnimatedLength{
     
     @JsProperty(name="baseVal")
-    public SVGLength baseVal;
+    public native SVGLength getBaseVal();
     
     @JsProperty(name="animVal")
-    public SVGLength animVal;
+    public native SVGLength getAnimVal();
     
     
 }

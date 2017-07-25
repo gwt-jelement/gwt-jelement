@@ -21,6 +21,7 @@ import gwt.jelement.credentialmanager.CredentialCreationOptions;
 import gwt.jelement.credentialmanager.CredentialRequestOptions;
 import elemental2.promise.Promise;
 import jsinterop.annotations.JsMethod;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
@@ -30,22 +31,29 @@ public class CredentialsContainer{
     @JsMethod(name = "create")
     public native Promise create();
     
+    
     @JsMethod(name = "create")
     public native Promise create(CredentialCreationOptions options);
+    
     
     @JsMethod(name = "get")
     public native Promise get();
     
+    
     @JsMethod(name = "get")
     public native Promise get(CredentialRequestOptions options);
+    
     
     @JsMethod(name = "preventSilentAccess")
     public native Promise preventSilentAccess();
     
+    
     @JsMethod(name = "requireUserMediation")
     public native Promise requireUserMediation();
     
+    
     @JsMethod(name = "store")
     public native Promise store(Credential credential);
+    
     
 }

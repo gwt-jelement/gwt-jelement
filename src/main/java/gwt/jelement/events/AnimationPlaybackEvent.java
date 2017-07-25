@@ -19,6 +19,7 @@ package gwt.jelement.events;
 import gwt.jelement.events.AnimationPlaybackEventInit;
 import gwt.jelement.events.Event;
 import jsinterop.annotations.JsConstructor;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -37,10 +38,10 @@ public class AnimationPlaybackEvent extends Event{
     }
     
     @JsProperty(name="currentTime")
-    public double currentTime;
+    public native double getCurrentTime();
     
     @JsProperty(name="timelineTime")
-    public double timelineTime;
+    public native double getTimelineTime();
     
     
 }

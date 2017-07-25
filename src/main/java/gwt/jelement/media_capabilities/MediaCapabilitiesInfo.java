@@ -16,6 +16,7 @@
  */
 package gwt.jelement.media_capabilities;
 
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -24,13 +25,13 @@ import jsinterop.annotations.JsType;
 public class MediaCapabilitiesInfo{
     
     @JsProperty(name="supported")
-    public boolean supported;
+    public native boolean getSupported();
     
     @JsProperty(name="smooth")
-    public boolean smooth;
+    public native boolean getSmooth();
     
     @JsProperty(name="powerEfficient")
-    public boolean powerEfficient;
+    public native boolean getPowerEfficient();
     
     
 }

@@ -19,6 +19,7 @@ package gwt.jelement.encryptedmedia;
 import elemental2.core.ArrayBuffer;
 import elemental2.core.ArrayBufferView;
 import jsinterop.annotations.JsMethod;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -27,18 +28,22 @@ import jsinterop.annotations.JsType;
 public class MediaKeyStatusMap{
     
     @JsProperty(name="size")
-    public double size;
+    public native double getSize();
     
     @JsMethod(name = "get")
     public native Object get(ArrayBuffer keyId);
     
+    
     @JsMethod(name = "get")
     public native Object get(ArrayBufferView keyId);
+    
     
     @JsMethod(name = "has")
     public native boolean has(ArrayBuffer keyId);
     
+    
     @JsMethod(name = "has")
     public native boolean has(ArrayBufferView keyId);
+    
     
 }

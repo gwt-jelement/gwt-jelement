@@ -32,25 +32,31 @@ import jsinterop.annotations.JsType;
 @JsType(namespace = JsPackage.GLOBAL, isNative = true)
 public class AudioNode extends EventTarget{
     
+    @JsProperty(name="channelCountMode")
+    private String channelCountMode;
+    
+    @JsProperty(name="channelInterpretation")
+    private String channelInterpretation;
+    
     @JsConstructor
     public AudioNode(){
         super();
     }
     
     @JsProperty(name="context")
-    public BaseAudioContext context;
+    public native BaseAudioContext getContext();
     
     @JsProperty(name="numberOfInputs")
-    public double numberOfInputs;
+    public native double getNumberOfInputs();
     
     @JsProperty(name="numberOfOutputs")
-    public double numberOfOutputs;
+    public native double getNumberOfOutputs();
     
     @JsProperty(name="channelCount")
-    public double channelCount;
+    public native double getChannelCount();
     
-    @JsProperty(name="channelCountMode")
-    public String channelCountMode;
+    @JsProperty(name="channelCount")
+    public native void setChannelCount(double channelCount);
     
     @JsOverlay
     public final ChannelCountMode getChannelCountMode(){
@@ -61,9 +67,6 @@ public class AudioNode extends EventTarget{
     public final void setChannelCountMode(ChannelCountMode channelCountMode){
        this.channelCountMode = channelCountMode.getInternalValue();
     }
-    
-    @JsProperty(name="channelInterpretation")
-    public String channelInterpretation;
     
     @JsOverlay
     public final ChannelInterpretation getChannelInterpretation(){
@@ -78,37 +81,49 @@ public class AudioNode extends EventTarget{
     @JsMethod(name = "connect")
     public native AudioNode connect(AudioNode destination);
     
+    
     @JsMethod(name = "connect")
     public native void connect(AudioParam destination);
+    
     
     @JsMethod(name = "connect")
     public native AudioNode connect(AudioNode destination, double output);
     
+    
     @JsMethod(name = "connect")
     public native void connect(AudioParam destination, double output);
+    
     
     @JsMethod(name = "connect")
     public native AudioNode connect(AudioNode destination, double output, double input);
     
+    
     @JsMethod(name = "disconnect")
     public native void disconnect();
+    
     
     @JsMethod(name = "disconnect")
     public native void disconnect(double output);
     
+    
     @JsMethod(name = "disconnect")
     public native void disconnect(AudioNode destination);
+    
     
     @JsMethod(name = "disconnect")
     public native void disconnect(AudioParam destination);
     
+    
     @JsMethod(name = "disconnect")
     public native void disconnect(AudioNode destination, double output);
+    
     
     @JsMethod(name = "disconnect")
     public native void disconnect(AudioParam destination, double output);
     
+    
     @JsMethod(name = "disconnect")
     public native void disconnect(AudioNode destination, double output, double input);
+    
     
 }

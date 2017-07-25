@@ -24,11 +24,14 @@ import jsinterop.annotations.JsType;
 @JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class FormDataOptions{
 
+    @JsProperty(name="idName")
+    private String idName;
+
+    @JsProperty(name="passwordName")
+    private String passwordName;
+
     public FormDataOptions(){
     }
-
-    @JsProperty(name="idName")
-    public String idName;
 
     @JsOverlay
     public final String getIdName(){
@@ -40,9 +43,6 @@ public class FormDataOptions{
         this.idName = idName;
     }
 
-    @JsProperty(name="passwordName")
-    public String passwordName;
-
     @JsOverlay
     public final String getPasswordName(){
         return this.passwordName;
@@ -52,6 +52,5 @@ public class FormDataOptions{
     public final void setPasswordName(String passwordName){
         this.passwordName = passwordName;
     }
-
 
 }

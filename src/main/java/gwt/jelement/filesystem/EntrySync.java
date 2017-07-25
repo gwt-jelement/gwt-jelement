@@ -21,6 +21,7 @@ import gwt.jelement.filesystem.DirectoryEntrySync;
 import gwt.jelement.filesystem.EntrySync;
 import gwt.jelement.filesystem.Metadata;
 import jsinterop.annotations.JsMethod;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -29,36 +30,42 @@ import jsinterop.annotations.JsType;
 public class EntrySync{
     
     @JsProperty(name="isFile")
-    public boolean isFile;
+    public native boolean getIsFile();
     
     @JsProperty(name="isDirectory")
-    public boolean isDirectory;
+    public native boolean getIsDirectory();
     
     @JsProperty(name="name")
-    public String name;
+    public native String getName();
     
     @JsProperty(name="fullPath")
-    public String fullPath;
+    public native String getFullPath();
     
     @JsProperty(name="filesystem")
-    public DOMFileSystemSync filesystem;
+    public native DOMFileSystemSync getFilesystem();
     
     @JsMethod(name = "copyTo")
     public native EntrySync copyTo(DirectoryEntrySync parent, String name);
     
+    
     @JsMethod(name = "getMetadata")
     public native Metadata getMetadata();
+    
     
     @JsMethod(name = "getParent")
     public native DirectoryEntrySync getParent();
     
+    
     @JsMethod(name = "moveTo")
     public native EntrySync moveTo(DirectoryEntrySync parent, String name);
+    
     
     @JsMethod(name = "remove")
     public native void remove();
     
+    
     @JsMethod(name = "toURL")
     public native String toURL();
+    
     
 }

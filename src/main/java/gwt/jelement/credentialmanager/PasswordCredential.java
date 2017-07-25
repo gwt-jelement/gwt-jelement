@@ -63,19 +63,30 @@ public class PasswordCredential extends Credential{
     
     }
     
+    @JsProperty(name="additionalData")
+    private CredentialBodyType additionalData;
+    
     @JsConstructor
     public PasswordCredential(){
         super();
     }
     
     @JsProperty(name="idName")
-    public String idName;
+    public native String getIdName();
+    
+    @JsProperty(name="idName")
+    public native void setIdName(String idName);
     
     @JsProperty(name="passwordName")
-    public String passwordName;
+    public native String getPasswordName();
     
-    @JsProperty(name="additionalData")
-    public CredentialBodyType additionalData;
+    @JsProperty(name="passwordName")
+    public native void setPasswordName(String passwordName);
+    
+    @JsOverlay
+    public final CredentialBodyType getAdditionalData(){
+        return this.additionalData;
+    }
     
     @JsOverlay
     public final void setAdditionalData(FormData additionalData){
@@ -88,13 +99,13 @@ public class PasswordCredential extends Credential{
     }
     
     @JsProperty(name="password")
-    public String password;
+    public native String getPassword();
     
     @JsProperty(name="name")
-    public String name;
+    public native String getName();
     
     @JsProperty(name="iconURL")
-    public String iconURL;
+    public native String getIconURL();
     
     
 }

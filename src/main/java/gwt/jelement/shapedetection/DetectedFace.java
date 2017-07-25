@@ -19,6 +19,7 @@ package gwt.jelement.shapedetection;
 import gwt.jelement.geometry.DOMRect;
 import gwt.jelement.shapedetection.Landmark;
 import jsinterop.annotations.JsConstructor;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -31,10 +32,10 @@ public class DetectedFace{
     }
     
     @JsProperty(name="boundingBox")
-    public DOMRect boundingBox;
+    public native DOMRect getBoundingBox();
     
     @JsProperty(name="landmarks")
-    public Landmark[] landmarks;
+    public native Landmark[] getLandmarks();
     
     
 }

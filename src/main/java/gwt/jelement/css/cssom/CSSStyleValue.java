@@ -17,6 +17,7 @@
 package gwt.jelement.css.cssom;
 
 import jsinterop.annotations.JsMethod;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
@@ -26,7 +27,9 @@ public class CSSStyleValue{
     @JsMethod(name = "parse")
     public native Object parse(String property, String cssText);
     
+    
     @JsMethod(name = "toString")
     public native String toString();
+    
     
 }

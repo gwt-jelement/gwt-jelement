@@ -30,11 +30,14 @@ import jsinterop.base.Any;
 @JsType(namespace = JsPackage.GLOBAL, isNative = true)
 public class MediaSession{
     
-    @JsProperty(name="metadata")
-    public MediaMetadata metadata;
-    
     @JsProperty(name="playbackState")
-    public String playbackState;
+    private String playbackState;
+    
+    @JsProperty(name="metadata")
+    public native MediaMetadata getMetadata();
+    
+    @JsProperty(name="metadata")
+    public native void setMetadata(MediaMetadata metadata);
     
     @JsOverlay
     public final MediaSessionPlaybackState getPlaybackState(){
@@ -53,5 +56,6 @@ public class MediaSession{
     
     @JsMethod(name = "setActionHandler")
     public native void setActionHandler(String action, MediaSessionActionHandler handler);
+    
     
 }

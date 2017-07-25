@@ -26,11 +26,17 @@ import jsinterop.annotations.JsType;
 @JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class AudioProcessingEventInit extends EventInit{
 
+    @JsProperty(name="playbackTime")
+    private double playbackTime;
+
+    @JsProperty(name="inputBuffer")
+    private AudioBuffer inputBuffer;
+
+    @JsProperty(name="outputBuffer")
+    private AudioBuffer outputBuffer;
+
     public AudioProcessingEventInit(){
     }
-
-    @JsProperty(name="playbackTime")
-    public double playbackTime;
 
     @JsOverlay
     public final double getPlaybackTime(){
@@ -42,9 +48,6 @@ public class AudioProcessingEventInit extends EventInit{
         this.playbackTime = playbackTime;
     }
 
-    @JsProperty(name="inputBuffer")
-    public AudioBuffer inputBuffer;
-
     @JsOverlay
     public final AudioBuffer getInputBuffer(){
         return this.inputBuffer;
@@ -55,9 +58,6 @@ public class AudioProcessingEventInit extends EventInit{
         this.inputBuffer = inputBuffer;
     }
 
-    @JsProperty(name="outputBuffer")
-    public AudioBuffer outputBuffer;
-
     @JsOverlay
     public final AudioBuffer getOutputBuffer(){
         return this.outputBuffer;
@@ -67,6 +67,5 @@ public class AudioProcessingEventInit extends EventInit{
     public final void setOutputBuffer(AudioBuffer outputBuffer){
         this.outputBuffer = outputBuffer;
     }
-
 
 }

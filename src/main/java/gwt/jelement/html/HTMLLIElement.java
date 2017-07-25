@@ -18,6 +18,7 @@ package gwt.jelement.html;
 
 import gwt.jelement.html.HTMLElement;
 import jsinterop.annotations.JsConstructor;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -31,10 +32,16 @@ public class HTMLLIElement extends HTMLElement{
     }
     
     @JsProperty(name="value")
-    public double value;
+    public native double getValue();
+    
+    @JsProperty(name="value")
+    public native void setValue(double value);
     
     @JsProperty(name="type")
-    public String type;
+    public native String getType();
+    
+    @JsProperty(name="type")
+    public native void setType(String type);
     
     
 }

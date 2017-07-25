@@ -26,11 +26,14 @@ import jsinterop.base.Js;
 @JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class ConstrainDOMStringParameters{
 
+    @JsProperty(name="exact")
+    private IDBObjectStoreParameters.KeyPathUnion exact;
+
+    @JsProperty(name="ideal")
+    private IDBObjectStoreParameters.KeyPathUnion ideal;
+
     public ConstrainDOMStringParameters(){
     }
-
-    @JsProperty(name="exact")
-    public IDBObjectStoreParameters.KeyPathUnion exact;
 
     @JsOverlay
     public final void setExact(String exact){
@@ -42,9 +45,6 @@ public class ConstrainDOMStringParameters{
         this.exact = IDBObjectStoreParameters.KeyPathUnion.of(exact);
     }
 
-    @JsProperty(name="ideal")
-    public IDBObjectStoreParameters.KeyPathUnion ideal;
-
     @JsOverlay
     public final void setIdeal(String ideal){
         this.ideal = IDBObjectStoreParameters.KeyPathUnion.of(ideal);
@@ -54,6 +54,5 @@ public class ConstrainDOMStringParameters{
     public final void setIdeal(String[] ideal){
         this.ideal = IDBObjectStoreParameters.KeyPathUnion.of(ideal);
     }
-
 
 }

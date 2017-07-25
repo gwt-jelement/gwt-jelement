@@ -20,6 +20,7 @@ import gwt.jelement.animation.AnimationEffectReadOnly;
 import gwt.jelement.animation.KeyframeEffectOptions;
 import gwt.jelement.dom.Element;
 import jsinterop.annotations.JsConstructor;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 

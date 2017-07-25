@@ -17,6 +17,7 @@
 package gwt.jelement.svg;
 
 import gwt.jelement.svg.SVGRect;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -25,10 +26,10 @@ import jsinterop.annotations.JsType;
 public class SVGAnimatedRect{
     
     @JsProperty(name="baseVal")
-    public SVGRect baseVal;
+    public native SVGRect getBaseVal();
     
     @JsProperty(name="animVal")
-    public SVGRect animVal;
+    public native SVGRect getAnimVal();
     
     
 }

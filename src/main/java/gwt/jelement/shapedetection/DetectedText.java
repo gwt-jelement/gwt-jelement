@@ -18,6 +18,7 @@ package gwt.jelement.shapedetection;
 
 import gwt.jelement.geometry.DOMRect;
 import jsinterop.annotations.JsConstructor;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -30,10 +31,10 @@ public class DetectedText{
     }
     
     @JsProperty(name="rawValue")
-    public String rawValue;
+    public native String getRawValue();
     
     @JsProperty(name="boundingBox")
-    public DOMRect boundingBox;
+    public native DOMRect getBoundingBox();
     
     
 }

@@ -24,11 +24,17 @@ import jsinterop.annotations.JsType;
 @JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class DeviceAccelerationInit{
 
+    @JsProperty(name="x")
+    private double x;
+
+    @JsProperty(name="y")
+    private double y;
+
+    @JsProperty(name="z")
+    private double z;
+
     public DeviceAccelerationInit(){
     }
-
-    @JsProperty(name="x")
-    public double x;
 
     @JsOverlay
     public final double getX(){
@@ -40,9 +46,6 @@ public class DeviceAccelerationInit{
         this.x = x;
     }
 
-    @JsProperty(name="y")
-    public double y;
-
     @JsOverlay
     public final double getY(){
         return this.y;
@@ -53,9 +56,6 @@ public class DeviceAccelerationInit{
         this.y = y;
     }
 
-    @JsProperty(name="z")
-    public double z;
-
     @JsOverlay
     public final double getZ(){
         return this.z;
@@ -65,6 +65,5 @@ public class DeviceAccelerationInit{
     public final void setZ(double z){
         this.z = z;
     }
-
 
 }

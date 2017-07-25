@@ -17,6 +17,7 @@
 package gwt.jelement.plugins;
 
 import gwt.jelement.plugins.Plugin;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -25,16 +26,16 @@ import jsinterop.annotations.JsType;
 public class MimeType{
     
     @JsProperty(name="type")
-    public String type;
+    public native String getType();
     
     @JsProperty(name="suffixes")
-    public String suffixes;
+    public native String getSuffixes();
     
     @JsProperty(name="description")
-    public String description;
+    public native String getDescription();
     
     @JsProperty(name="enabledPlugin")
-    public Plugin enabledPlugin;
+    public native Plugin getEnabledPlugin();
     
     
 }

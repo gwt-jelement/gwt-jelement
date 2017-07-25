@@ -18,6 +18,7 @@ package gwt.jelement.presentation;
 
 import gwt.jelement.presentation.PresentationConnectionList;
 import elemental2.promise.Promise;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -26,7 +27,7 @@ import jsinterop.annotations.JsType;
 public class PresentationReceiver{
     
     @JsProperty(name="connectionList")
-    public Promise<PresentationConnectionList> connectionList;
+    public native Promise<PresentationConnectionList> getConnectionList();
     
     
 }

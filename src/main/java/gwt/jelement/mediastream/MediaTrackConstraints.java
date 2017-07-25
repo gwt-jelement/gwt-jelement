@@ -25,11 +25,11 @@ import jsinterop.annotations.JsType;
 @JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class MediaTrackConstraints extends MediaTrackConstraintSet{
 
+    @JsProperty(name="advanced")
+    private MediaTrackConstraintSet[] advanced;
+
     public MediaTrackConstraints(){
     }
-
-    @JsProperty(name="advanced")
-    public MediaTrackConstraintSet[] advanced;
 
     @JsOverlay
     public final MediaTrackConstraintSet[] getAdvanced(){
@@ -40,6 +40,5 @@ public class MediaTrackConstraints extends MediaTrackConstraintSet{
     public final void setAdvanced(MediaTrackConstraintSet[] advanced){
         this.advanced = advanced;
     }
-
 
 }

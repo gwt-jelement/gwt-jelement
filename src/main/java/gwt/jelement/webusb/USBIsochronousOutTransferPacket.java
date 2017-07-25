@@ -26,6 +26,9 @@ import jsinterop.annotations.JsType;
 @JsType(namespace = JsPackage.GLOBAL, isNative = true)
 public class USBIsochronousOutTransferPacket{
     
+    @JsProperty(name="status")
+    private String status;
+    
     @JsConstructor
     public USBIsochronousOutTransferPacket(USBTransferStatus status){
     }
@@ -35,10 +38,7 @@ public class USBIsochronousOutTransferPacket{
     }
     
     @JsProperty(name="bytesWritten")
-    public double bytesWritten;
-    
-    @JsProperty(name="status")
-    public String status;
+    public native double getBytesWritten();
     
     @JsOverlay
     public final USBTransferStatus getStatus(){

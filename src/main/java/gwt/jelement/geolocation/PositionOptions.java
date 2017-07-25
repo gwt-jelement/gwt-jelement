@@ -24,11 +24,17 @@ import jsinterop.annotations.JsType;
 @JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class PositionOptions{
 
+    @JsProperty(name="enableHighAccuracy")
+    private boolean enableHighAccuracy;
+
+    @JsProperty(name="timeout")
+    private double timeout;
+
+    @JsProperty(name="maximumAge")
+    private double maximumAge;
+
     public PositionOptions(){
     }
-
-    @JsProperty(name="enableHighAccuracy")
-    public boolean enableHighAccuracy;
 
     @JsOverlay
     public final boolean getEnableHighAccuracy(){
@@ -40,9 +46,6 @@ public class PositionOptions{
         this.enableHighAccuracy = enableHighAccuracy;
     }
 
-    @JsProperty(name="timeout")
-    public double timeout;
-
     @JsOverlay
     public final double getTimeout(){
         return this.timeout;
@@ -53,9 +56,6 @@ public class PositionOptions{
         this.timeout = timeout;
     }
 
-    @JsProperty(name="maximumAge")
-    public double maximumAge;
-
     @JsOverlay
     public final double getMaximumAge(){
         return this.maximumAge;
@@ -65,6 +65,5 @@ public class PositionOptions{
     public final void setMaximumAge(double maximumAge){
         this.maximumAge = maximumAge;
     }
-
 
 }

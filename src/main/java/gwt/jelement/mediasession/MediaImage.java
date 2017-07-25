@@ -24,11 +24,17 @@ import jsinterop.annotations.JsType;
 @JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class MediaImage{
 
+    @JsProperty(name="src")
+    private String src;
+
+    @JsProperty(name="sizes")
+    private String sizes;
+
+    @JsProperty(name="type")
+    private String type;
+
     public MediaImage(){
     }
-
-    @JsProperty(name="src")
-    public String src;
 
     @JsOverlay
     public final String getSrc(){
@@ -40,9 +46,6 @@ public class MediaImage{
         this.src = src;
     }
 
-    @JsProperty(name="sizes")
-    public String sizes;
-
     @JsOverlay
     public final String getSizes(){
         return this.sizes;
@@ -53,9 +56,6 @@ public class MediaImage{
         this.sizes = sizes;
     }
 
-    @JsProperty(name="type")
-    public String type;
-
     @JsOverlay
     public final String getType(){
         return this.type;
@@ -65,6 +65,5 @@ public class MediaImage{
     public final void setType(String type){
         this.type = type;
     }
-
 
 }

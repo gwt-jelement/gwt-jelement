@@ -19,6 +19,7 @@ package gwt.jelement.speech;
 import gwt.jelement.events.Event;
 import gwt.jelement.speech.SpeechSynthesisUtterance;
 import jsinterop.annotations.JsConstructor;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -32,16 +33,16 @@ public class SpeechSynthesisEvent extends Event{
     }
     
     @JsProperty(name="utterance")
-    public SpeechSynthesisUtterance utterance;
+    public native SpeechSynthesisUtterance getUtterance();
     
     @JsProperty(name="charIndex")
-    public double charIndex;
+    public native double getCharIndex();
     
     @JsProperty(name="elapsedTime")
-    public float elapsedTime;
+    public native float getElapsedTime();
     
     @JsProperty(name="name")
-    public String name;
+    public native String getName();
     
     
 }

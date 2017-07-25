@@ -25,11 +25,20 @@ import jsinterop.annotations.JsType;
 @JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class AnalyserOptions extends AudioNodeOptions{
 
+    @JsProperty(name="fftSize")
+    private double fftSize;
+
+    @JsProperty(name="maxDecibels")
+    private float maxDecibels;
+
+    @JsProperty(name="minDecibels")
+    private float minDecibels;
+
+    @JsProperty(name="smoothingTimeConstant")
+    private float smoothingTimeConstant;
+
     public AnalyserOptions(){
     }
-
-    @JsProperty(name="fftSize")
-    public double fftSize;
 
     @JsOverlay
     public final double getFftSize(){
@@ -41,9 +50,6 @@ public class AnalyserOptions extends AudioNodeOptions{
         this.fftSize = fftSize;
     }
 
-    @JsProperty(name="maxDecibels")
-    public float maxDecibels;
-
     @JsOverlay
     public final float getMaxDecibels(){
         return this.maxDecibels;
@@ -53,9 +59,6 @@ public class AnalyserOptions extends AudioNodeOptions{
     public final void setMaxDecibels(float maxDecibels){
         this.maxDecibels = maxDecibels;
     }
-
-    @JsProperty(name="minDecibels")
-    public float minDecibels;
 
     @JsOverlay
     public final float getMinDecibels(){
@@ -67,9 +70,6 @@ public class AnalyserOptions extends AudioNodeOptions{
         this.minDecibels = minDecibels;
     }
 
-    @JsProperty(name="smoothingTimeConstant")
-    public float smoothingTimeConstant;
-
     @JsOverlay
     public final float getSmoothingTimeConstant(){
         return this.smoothingTimeConstant;
@@ -79,6 +79,5 @@ public class AnalyserOptions extends AudioNodeOptions{
     public final void setSmoothingTimeConstant(float smoothingTimeConstant){
         this.smoothingTimeConstant = smoothingTimeConstant;
     }
-
 
 }

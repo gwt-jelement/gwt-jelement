@@ -24,11 +24,23 @@ import jsinterop.annotations.JsType;
 @JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class VideoConfiguration{
 
+    @JsProperty(name="contentType")
+    private String contentType;
+
+    @JsProperty(name="width")
+    private double width;
+
+    @JsProperty(name="height")
+    private double height;
+
+    @JsProperty(name="bitrate")
+    private double bitrate;
+
+    @JsProperty(name="framerate")
+    private double framerate;
+
     public VideoConfiguration(){
     }
-
-    @JsProperty(name="contentType")
-    public String contentType;
 
     @JsOverlay
     public final String getContentType(){
@@ -40,9 +52,6 @@ public class VideoConfiguration{
         this.contentType = contentType;
     }
 
-    @JsProperty(name="width")
-    public double width;
-
     @JsOverlay
     public final double getWidth(){
         return this.width;
@@ -52,9 +61,6 @@ public class VideoConfiguration{
     public final void setWidth(double width){
         this.width = width;
     }
-
-    @JsProperty(name="height")
-    public double height;
 
     @JsOverlay
     public final double getHeight(){
@@ -66,9 +72,6 @@ public class VideoConfiguration{
         this.height = height;
     }
 
-    @JsProperty(name="bitrate")
-    public double bitrate;
-
     @JsOverlay
     public final double getBitrate(){
         return this.bitrate;
@@ -79,9 +82,6 @@ public class VideoConfiguration{
         this.bitrate = bitrate;
     }
 
-    @JsProperty(name="framerate")
-    public double framerate;
-
     @JsOverlay
     public final double getFramerate(){
         return this.framerate;
@@ -91,6 +91,5 @@ public class VideoConfiguration{
     public final void setFramerate(double framerate){
         this.framerate = framerate;
     }
-
 
 }

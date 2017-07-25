@@ -28,28 +28,31 @@ import jsinterop.base.Js;
 @JsType(namespace = JsPackage.GLOBAL, isNative = true)
 public class AnimationEffectTiming extends AnimationEffectTimingReadOnly{
     
+    @JsProperty(name="duration")
+    private AnimationEffectTimingReadOnly.DurationUnion duration;
+    
+    @JsProperty(name="direction")
+    private String direction;
+    
     @JsConstructor
     public AnimationEffectTiming(){
         super();
     }
     
     @JsProperty(name="delay")
-    public double delay;
+    public native void setDelay(double delay);
     
     @JsProperty(name="endDelay")
-    public double endDelay;
+    public native void setEndDelay(double endDelay);
     
     @JsProperty(name="fill")
-    public String fill;
+    public native void setFill(String fill);
     
     @JsProperty(name="iterationStart")
-    public double iterationStart;
+    public native void setIterationStart(double iterationStart);
     
     @JsProperty(name="iterations")
-    public double iterations;
-    
-    @JsProperty(name="duration")
-    public AnimationEffectTimingReadOnly.DurationUnion duration;
+    public native void setIterations(double iterations);
     
     @JsOverlay
     public final void setDuration(double duration){
@@ -61,16 +64,13 @@ public class AnimationEffectTiming extends AnimationEffectTimingReadOnly{
         this.duration = AnimationEffectTimingReadOnly.DurationUnion.of(duration);
     }
     
-    @JsProperty(name="direction")
-    public String direction;
-    
     @JsOverlay
     public final void setDirection(PlaybackDirection direction){
        this.direction = direction.getInternalValue();
     }
     
     @JsProperty(name="easing")
-    public String easing;
+    public native void setEasing(String easing);
     
     
 }

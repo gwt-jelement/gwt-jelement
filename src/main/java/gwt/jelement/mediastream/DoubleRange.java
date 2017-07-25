@@ -24,11 +24,14 @@ import jsinterop.annotations.JsType;
 @JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class DoubleRange{
 
+    @JsProperty(name="max")
+    private double max;
+
+    @JsProperty(name="min")
+    private double min;
+
     public DoubleRange(){
     }
-
-    @JsProperty(name="max")
-    public double max;
 
     @JsOverlay
     public final double getMax(){
@@ -40,9 +43,6 @@ public class DoubleRange{
         this.max = max;
     }
 
-    @JsProperty(name="min")
-    public double min;
-
     @JsOverlay
     public final double getMin(){
         return this.min;
@@ -52,6 +52,5 @@ public class DoubleRange{
     public final void setMin(double min){
         this.min = min;
     }
-
 
 }

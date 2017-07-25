@@ -17,6 +17,7 @@
 package gwt.jelement.webgl;
 
 import jsinterop.annotations.JsMethod;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
@@ -26,7 +27,9 @@ public class WebGLLoseContext{
     @JsMethod(name = "loseContext")
     public native void loseContext();
     
+    
     @JsMethod(name = "restoreContext")
     public native void restoreContext();
+    
     
 }

@@ -25,11 +25,17 @@ import jsinterop.annotations.JsType;
 @JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class BackgroundFetchOptions{
 
+    @JsProperty(name="icons")
+    private IconDefinition[] icons;
+
+    @JsProperty(name="title")
+    private String title;
+
+    @JsProperty(name="totalDownloadSize")
+    private double totalDownloadSize;
+
     public BackgroundFetchOptions(){
     }
-
-    @JsProperty(name="icons")
-    public IconDefinition[] icons;
 
     @JsOverlay
     public final IconDefinition[] getIcons(){
@@ -41,9 +47,6 @@ public class BackgroundFetchOptions{
         this.icons = icons;
     }
 
-    @JsProperty(name="title")
-    public String title;
-
     @JsOverlay
     public final String getTitle(){
         return this.title;
@@ -54,9 +57,6 @@ public class BackgroundFetchOptions{
         this.title = title;
     }
 
-    @JsProperty(name="totalDownloadSize")
-    public double totalDownloadSize;
-
     @JsOverlay
     public final double getTotalDownloadSize(){
         return this.totalDownloadSize;
@@ -66,6 +66,5 @@ public class BackgroundFetchOptions{
     public final void setTotalDownloadSize(double totalDownloadSize){
         this.totalDownloadSize = totalDownloadSize;
     }
-
 
 }

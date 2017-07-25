@@ -20,6 +20,7 @@ import gwt.jelement.notifications.Notification;
 import gwt.jelement.notifications.NotificationEventInit;
 import gwt.jelement.serviceworkers.ExtendableEvent;
 import jsinterop.annotations.JsConstructor;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -33,13 +34,13 @@ public class NotificationEvent extends ExtendableEvent{
     }
     
     @JsProperty(name="notification")
-    public Notification notification;
+    public native Notification getNotification();
     
     @JsProperty(name="action")
-    public String action;
+    public native String getAction();
     
     @JsProperty(name="reply")
-    public String reply;
+    public native String getReply();
     
     
 }

@@ -25,11 +25,14 @@ import jsinterop.annotations.JsType;
 @JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class IIRFilterOptions extends AudioNodeOptions{
 
+    @JsProperty(name="feedforward")
+    private double[] feedforward;
+
+    @JsProperty(name="feedback")
+    private double[] feedback;
+
     public IIRFilterOptions(){
     }
-
-    @JsProperty(name="feedforward")
-    public double[] feedforward;
 
     @JsOverlay
     public final double[] getFeedforward(){
@@ -41,9 +44,6 @@ public class IIRFilterOptions extends AudioNodeOptions{
         this.feedforward = feedforward;
     }
 
-    @JsProperty(name="feedback")
-    public double[] feedback;
-
     @JsOverlay
     public final double[] getFeedback(){
         return this.feedback;
@@ -53,6 +53,5 @@ public class IIRFilterOptions extends AudioNodeOptions{
     public final void setFeedback(double[] feedback){
         this.feedback = feedback;
     }
-
 
 }

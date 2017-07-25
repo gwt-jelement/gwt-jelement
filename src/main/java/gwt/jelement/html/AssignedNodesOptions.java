@@ -24,11 +24,11 @@ import jsinterop.annotations.JsType;
 @JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class AssignedNodesOptions{
 
+    @JsProperty(name="flatten")
+    private boolean flatten;
+
     public AssignedNodesOptions(){
     }
-
-    @JsProperty(name="flatten")
-    public boolean flatten;
 
     @JsOverlay
     public final boolean getFlatten(){
@@ -39,6 +39,5 @@ public class AssignedNodesOptions{
     public final void setFlatten(boolean flatten){
         this.flatten = flatten;
     }
-
 
 }

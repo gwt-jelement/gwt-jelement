@@ -26,11 +26,11 @@ import jsinterop.annotations.JsType;
 @JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class MIDIMessageEventInit extends EventInit{
 
+    @JsProperty(name="data")
+    private Uint8Array data;
+
     public MIDIMessageEventInit(){
     }
-
-    @JsProperty(name="data")
-    public Uint8Array data;
 
     @JsOverlay
     public final Uint8Array getData(){
@@ -41,6 +41,5 @@ public class MIDIMessageEventInit extends EventInit{
     public final void setData(Uint8Array data){
         this.data = data;
     }
-
 
 }

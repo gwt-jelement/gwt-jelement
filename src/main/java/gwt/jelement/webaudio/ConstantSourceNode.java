@@ -21,6 +21,7 @@ import gwt.jelement.webaudio.AudioScheduledSourceNode;
 import gwt.jelement.webaudio.BaseAudioContext;
 import gwt.jelement.webaudio.ConstantSourceOptions;
 import jsinterop.annotations.JsConstructor;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -39,7 +40,7 @@ public class ConstantSourceNode extends AudioScheduledSourceNode{
     }
     
     @JsProperty(name="offset")
-    public AudioParam offset;
+    public native AudioParam getOffset();
     
     
 }

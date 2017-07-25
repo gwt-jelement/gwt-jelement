@@ -19,6 +19,7 @@ package gwt.jelement.css;
 import gwt.jelement.css.CSSConditionRule;
 import gwt.jelement.css.MediaList;
 import jsinterop.annotations.JsConstructor;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -32,7 +33,7 @@ public class CSSMediaRule extends CSSConditionRule{
     }
     
     @JsProperty(name="media")
-    public MediaList media;
+    public native MediaList getMedia();
     
     
 }

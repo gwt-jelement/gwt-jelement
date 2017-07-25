@@ -16,6 +16,7 @@
  */
 package gwt.jelement.crypto;
 
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -24,16 +25,16 @@ import jsinterop.annotations.JsType;
 public class CryptoKey{
     
     @JsProperty(name="type")
-    public String type;
+    public native String getType();
     
     @JsProperty(name="extractable")
-    public boolean extractable;
+    public native boolean getExtractable();
     
     @JsProperty(name="algorithm")
-    public Object algorithm;
+    public native Object getAlgorithm();
     
     @JsProperty(name="usages")
-    public String[] usages;
+    public native String[] getUsages();
     
     
 }

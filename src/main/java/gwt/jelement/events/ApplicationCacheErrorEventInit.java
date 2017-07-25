@@ -25,11 +25,20 @@ import jsinterop.annotations.JsType;
 @JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class ApplicationCacheErrorEventInit extends EventInit{
 
+    @JsProperty(name="reason")
+    private String reason;
+
+    @JsProperty(name="url")
+    private String url;
+
+    @JsProperty(name="status")
+    private short status;
+
+    @JsProperty(name="message")
+    private String message;
+
     public ApplicationCacheErrorEventInit(){
     }
-
-    @JsProperty(name="reason")
-    public String reason;
 
     @JsOverlay
     public final String getReason(){
@@ -41,9 +50,6 @@ public class ApplicationCacheErrorEventInit extends EventInit{
         this.reason = reason;
     }
 
-    @JsProperty(name="url")
-    public String url;
-
     @JsOverlay
     public final String getUrl(){
         return this.url;
@@ -53,9 +59,6 @@ public class ApplicationCacheErrorEventInit extends EventInit{
     public final void setUrl(String url){
         this.url = url;
     }
-
-    @JsProperty(name="status")
-    public short status;
 
     @JsOverlay
     public final short getStatus(){
@@ -67,9 +70,6 @@ public class ApplicationCacheErrorEventInit extends EventInit{
         this.status = status;
     }
 
-    @JsProperty(name="message")
-    public String message;
-
     @JsOverlay
     public final String getMessage(){
         return this.message;
@@ -79,6 +79,5 @@ public class ApplicationCacheErrorEventInit extends EventInit{
     public final void setMessage(String message){
         this.message = message;
     }
-
 
 }

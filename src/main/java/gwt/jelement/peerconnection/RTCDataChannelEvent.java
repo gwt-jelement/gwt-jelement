@@ -20,6 +20,7 @@ import gwt.jelement.events.Event;
 import gwt.jelement.peerconnection.RTCDataChannel;
 import gwt.jelement.peerconnection.RTCDataChannelEventInit;
 import jsinterop.annotations.JsConstructor;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -33,7 +34,7 @@ public class RTCDataChannelEvent extends Event{
     }
     
     @JsProperty(name="channel")
-    public RTCDataChannel channel;
+    public native RTCDataChannel getChannel();
     
     
 }

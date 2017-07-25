@@ -16,6 +16,7 @@
  */
 package gwt.jelement.html;
 
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -24,37 +25,37 @@ import jsinterop.annotations.JsType;
 public class ValidityState{
     
     @JsProperty(name="valueMissing")
-    public boolean valueMissing;
+    public native boolean getValueMissing();
     
     @JsProperty(name="typeMismatch")
-    public boolean typeMismatch;
+    public native boolean getTypeMismatch();
     
     @JsProperty(name="patternMismatch")
-    public boolean patternMismatch;
+    public native boolean getPatternMismatch();
     
     @JsProperty(name="tooLong")
-    public boolean tooLong;
+    public native boolean getTooLong();
     
     @JsProperty(name="tooShort")
-    public boolean tooShort;
+    public native boolean getTooShort();
     
     @JsProperty(name="rangeUnderflow")
-    public boolean rangeUnderflow;
+    public native boolean getRangeUnderflow();
     
     @JsProperty(name="rangeOverflow")
-    public boolean rangeOverflow;
+    public native boolean getRangeOverflow();
     
     @JsProperty(name="stepMismatch")
-    public boolean stepMismatch;
+    public native boolean getStepMismatch();
     
     @JsProperty(name="badInput")
-    public boolean badInput;
+    public native boolean getBadInput();
     
     @JsProperty(name="customError")
-    public boolean customError;
+    public native boolean getCustomError();
     
     @JsProperty(name="valid")
-    public boolean valid;
+    public native boolean getValid();
     
     
 }

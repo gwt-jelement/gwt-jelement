@@ -22,6 +22,7 @@ import gwt.jelement.background_fetch.BackgroundFetchedEventInit;
 import elemental2.promise.Promise;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -35,9 +36,10 @@ public class BackgroundFetchedEvent extends BackgroundFetchEvent{
     }
     
     @JsProperty(name="fetches")
-    public BackgroundFetchSettledFetch[] fetches;
+    public native BackgroundFetchSettledFetch[] getFetches();
     
     @JsMethod(name = "updateUI")
     public native Promise<Void> updateUI(String title);
+    
     
 }

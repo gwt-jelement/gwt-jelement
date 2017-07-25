@@ -24,11 +24,14 @@ import jsinterop.annotations.JsType;
 @JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class TextDecoderOptions{
 
+    @JsProperty(name="fatal")
+    private boolean fatal;
+
+    @JsProperty(name="ignoreBOM")
+    private boolean ignoreBOM;
+
     public TextDecoderOptions(){
     }
-
-    @JsProperty(name="fatal")
-    public boolean fatal;
 
     @JsOverlay
     public final boolean getFatal(){
@@ -40,9 +43,6 @@ public class TextDecoderOptions{
         this.fatal = fatal;
     }
 
-    @JsProperty(name="ignoreBOM")
-    public boolean ignoreBOM;
-
     @JsOverlay
     public final boolean getIgnoreBOM(){
         return this.ignoreBOM;
@@ -52,6 +52,5 @@ public class TextDecoderOptions{
     public final void setIgnoreBOM(boolean ignoreBOM){
         this.ignoreBOM = ignoreBOM;
     }
-
 
 }

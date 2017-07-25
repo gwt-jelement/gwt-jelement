@@ -18,6 +18,7 @@ package gwt.jelement.css;
 
 import gwt.jelement.css.CSSRule;
 import jsinterop.annotations.JsMethod;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -26,30 +27,41 @@ import jsinterop.annotations.JsType;
 public class CSSStyleDeclaration{
     
     @JsProperty(name="cssText")
-    public String cssText;
+    public native String getCssText();
+    
+    @JsProperty(name="cssText")
+    public native void setCssText(String cssText);
     
     @JsProperty(name="length")
-    public double length;
+    public native double getLength();
     
     @JsProperty(name="parentRule")
-    public CSSRule parentRule;
+    public native CSSRule getParentRule();
     
     @JsProperty(name="cssFloat")
-    public String cssFloat;
+    public native String getCssFloat();
+    
+    @JsProperty(name="cssFloat")
+    public native void setCssFloat(String cssFloat);
     
     @JsMethod(name = "getPropertyPriority")
     public native String getPropertyPriority(String property);
     
+    
     @JsMethod(name = "getPropertyValue")
     public native String getPropertyValue(String property);
+    
     
     @JsMethod(name = "removeProperty")
     public native String removeProperty(String property);
     
+    
     @JsMethod(name = "setProperty")
     public native void setProperty(String property, String value);
     
+    
     @JsMethod(name = "setProperty")
     public native void setProperty(String property, String value, String priority);
+    
     
 }

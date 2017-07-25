@@ -19,6 +19,7 @@ package gwt.jelement.xml;
 import gwt.jelement.dom.Node;
 import gwt.jelement.xml.XPathResult;
 import jsinterop.annotations.JsMethod;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
@@ -28,10 +29,13 @@ public class XPathExpression{
     @JsMethod(name = "evaluate")
     public native XPathResult evaluate(Node contextNode);
     
+    
     @JsMethod(name = "evaluate")
     public native XPathResult evaluate(Node contextNode, short type);
     
+    
     @JsMethod(name = "evaluate")
     public native XPathResult evaluate(Node contextNode, short type, Object inResult);
+    
     
 }

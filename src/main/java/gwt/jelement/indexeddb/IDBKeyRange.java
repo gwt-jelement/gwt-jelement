@@ -18,6 +18,7 @@ package gwt.jelement.indexeddb;
 
 import gwt.jelement.indexeddb.IDBKeyRange;
 import jsinterop.annotations.JsMethod;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -26,42 +27,51 @@ import jsinterop.annotations.JsType;
 public class IDBKeyRange{
     
     @JsProperty(name="lower")
-    public Object lower;
+    public native Object getLower();
     
     @JsProperty(name="upper")
-    public Object upper;
+    public native Object getUpper();
     
     @JsProperty(name="lowerOpen")
-    public boolean lowerOpen;
+    public native boolean getLowerOpen();
     
     @JsProperty(name="upperOpen")
-    public boolean upperOpen;
+    public native boolean getUpperOpen();
     
     @JsMethod(name = "bound")
     public native IDBKeyRange bound(Object lower, Object upper);
     
+    
     @JsMethod(name = "bound")
     public native IDBKeyRange bound(Object lower, Object upper, boolean lowerOpen);
+    
     
     @JsMethod(name = "bound")
     public native IDBKeyRange bound(Object lower, Object upper, boolean lowerOpen, boolean upperOpen);
     
+    
     @JsMethod(name = "includes")
     public native boolean includes(Object key);
+    
     
     @JsMethod(name = "lowerBound")
     public native IDBKeyRange lowerBound(Object bound);
     
+    
     @JsMethod(name = "lowerBound")
     public native IDBKeyRange lowerBound(Object bound, boolean open);
+    
     
     @JsMethod(name = "only")
     public native IDBKeyRange only(Object value);
     
+    
     @JsMethod(name = "upperBound")
     public native IDBKeyRange upperBound(Object bound);
     
+    
     @JsMethod(name = "upperBound")
     public native IDBKeyRange upperBound(Object bound, boolean open);
+    
     
 }

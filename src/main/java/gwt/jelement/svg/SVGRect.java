@@ -16,6 +16,7 @@
  */
 package gwt.jelement.svg;
 
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -24,16 +25,28 @@ import jsinterop.annotations.JsType;
 public class SVGRect{
     
     @JsProperty(name="x")
-    public float x;
+    public native float getX();
+    
+    @JsProperty(name="x")
+    public native void setX(float x);
     
     @JsProperty(name="y")
-    public float y;
+    public native float getY();
+    
+    @JsProperty(name="y")
+    public native void setY(float y);
     
     @JsProperty(name="width")
-    public float width;
+    public native float getWidth();
+    
+    @JsProperty(name="width")
+    public native void setWidth(float width);
     
     @JsProperty(name="height")
-    public float height;
+    public native float getHeight();
+    
+    @JsProperty(name="height")
+    public native void setHeight(float height);
     
     
 }

@@ -20,6 +20,7 @@ import gwt.jelement.quota.StorageErrorCallback;
 import gwt.jelement.quota.StorageQuotaCallback;
 import gwt.jelement.quota.StorageUsageCallback;
 import jsinterop.annotations.JsMethod;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
@@ -32,19 +33,25 @@ public class DeprecatedStorageInfo{
     @JsMethod(name = "queryUsageAndQuota")
     public native void queryUsageAndQuota(short storageType);
     
+    
     @JsMethod(name = "queryUsageAndQuota")
     public native void queryUsageAndQuota(short storageType, StorageUsageCallback usageCallback);
+    
     
     @JsMethod(name = "queryUsageAndQuota")
     public native void queryUsageAndQuota(short storageType, StorageUsageCallback usageCallback, StorageErrorCallback errorCallback);
     
+    
     @JsMethod(name = "requestQuota")
     public native void requestQuota(short storageType, double newQuotaInBytes);
+    
     
     @JsMethod(name = "requestQuota")
     public native void requestQuota(short storageType, double newQuotaInBytes, StorageQuotaCallback quotaCallback);
     
+    
     @JsMethod(name = "requestQuota")
     public native void requestQuota(short storageType, double newQuotaInBytes, StorageQuotaCallback quotaCallback, StorageErrorCallback errorCallback);
+    
     
 }

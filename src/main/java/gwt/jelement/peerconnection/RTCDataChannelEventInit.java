@@ -26,11 +26,11 @@ import jsinterop.annotations.JsType;
 @JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class RTCDataChannelEventInit extends EventInit{
 
+    @JsProperty(name="channel")
+    private RTCDataChannel channel;
+
     public RTCDataChannelEventInit(){
     }
-
-    @JsProperty(name="channel")
-    public RTCDataChannel channel;
 
     @JsOverlay
     public final RTCDataChannel getChannel(){
@@ -41,6 +41,5 @@ public class RTCDataChannelEventInit extends EventInit{
     public final void setChannel(RTCDataChannel channel){
         this.channel = channel;
     }
-
 
 }

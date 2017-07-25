@@ -25,11 +25,20 @@ import jsinterop.annotations.JsType;
 @JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class MediaMetadataInit{
 
+    @JsProperty(name="title")
+    private String title;
+
+    @JsProperty(name="artist")
+    private String artist;
+
+    @JsProperty(name="album")
+    private String album;
+
+    @JsProperty(name="artwork")
+    private MediaImage[] artwork;
+
     public MediaMetadataInit(){
     }
-
-    @JsProperty(name="title")
-    public String title;
 
     @JsOverlay
     public final String getTitle(){
@@ -41,9 +50,6 @@ public class MediaMetadataInit{
         this.title = title;
     }
 
-    @JsProperty(name="artist")
-    public String artist;
-
     @JsOverlay
     public final String getArtist(){
         return this.artist;
@@ -53,9 +59,6 @@ public class MediaMetadataInit{
     public final void setArtist(String artist){
         this.artist = artist;
     }
-
-    @JsProperty(name="album")
-    public String album;
 
     @JsOverlay
     public final String getAlbum(){
@@ -67,9 +70,6 @@ public class MediaMetadataInit{
         this.album = album;
     }
 
-    @JsProperty(name="artwork")
-    public MediaImage[] artwork;
-
     @JsOverlay
     public final MediaImage[] getArtwork(){
         return this.artwork;
@@ -79,6 +79,5 @@ public class MediaMetadataInit{
     public final void setArtwork(MediaImage[] artwork){
         this.artwork = artwork;
     }
-
 
 }

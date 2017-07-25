@@ -21,6 +21,7 @@ import gwt.jelement.filesystem.EntrySync;
 import gwt.jelement.filesystem.FileWriterSync;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
@@ -35,7 +36,9 @@ public class FileEntrySync extends EntrySync{
     @JsMethod(name = "createWriter")
     public native FileWriterSync createWriter();
     
+    
     @JsMethod(name = "file")
     public native File file();
+    
     
 }

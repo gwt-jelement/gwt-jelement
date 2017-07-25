@@ -24,11 +24,11 @@ import jsinterop.annotations.JsType;
 @JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class EventListenerOptions{
 
+    @JsProperty(name="capture")
+    private boolean capture;
+
     public EventListenerOptions(){
     }
-
-    @JsProperty(name="capture")
-    public boolean capture;
 
     @JsOverlay
     public final boolean getCapture(){
@@ -39,6 +39,5 @@ public class EventListenerOptions{
     public final void setCapture(boolean capture){
         this.capture = capture;
     }
-
 
 }

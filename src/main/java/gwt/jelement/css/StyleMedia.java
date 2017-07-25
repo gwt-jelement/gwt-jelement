@@ -17,6 +17,7 @@
 package gwt.jelement.css;
 
 import jsinterop.annotations.JsMethod;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -25,12 +26,14 @@ import jsinterop.annotations.JsType;
 public class StyleMedia{
     
     @JsProperty(name="type")
-    public String type;
+    public native String getType();
     
     @JsMethod(name = "matchMedium")
     public native boolean matchMedium();
     
+    
     @JsMethod(name = "matchMedium")
     public native boolean matchMedium(String mediaquery);
+    
     
 }

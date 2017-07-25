@@ -19,6 +19,7 @@ package gwt.jelement.html;
 import gwt.jelement.dom.NodeList;
 import gwt.jelement.html.HTMLElement;
 import jsinterop.annotations.JsConstructor;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -32,25 +33,43 @@ public class HTMLMeterElement extends HTMLElement{
     }
     
     @JsProperty(name="value")
-    public double value;
+    public native double getValue();
+    
+    @JsProperty(name="value")
+    public native void setValue(double value);
     
     @JsProperty(name="min")
-    public double min;
+    public native double getMin();
+    
+    @JsProperty(name="min")
+    public native void setMin(double min);
     
     @JsProperty(name="max")
-    public double max;
+    public native double getMax();
+    
+    @JsProperty(name="max")
+    public native void setMax(double max);
     
     @JsProperty(name="low")
-    public double low;
+    public native double getLow();
+    
+    @JsProperty(name="low")
+    public native void setLow(double low);
     
     @JsProperty(name="high")
-    public double high;
+    public native double getHigh();
+    
+    @JsProperty(name="high")
+    public native void setHigh(double high);
     
     @JsProperty(name="optimum")
-    public double optimum;
+    public native double getOptimum();
+    
+    @JsProperty(name="optimum")
+    public native void setOptimum(double optimum);
     
     @JsProperty(name="labels")
-    public NodeList labels;
+    public native NodeList getLabels();
     
     
 }

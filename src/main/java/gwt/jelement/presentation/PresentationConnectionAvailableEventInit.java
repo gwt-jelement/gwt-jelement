@@ -26,11 +26,11 @@ import jsinterop.annotations.JsType;
 @JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class PresentationConnectionAvailableEventInit extends EventInit{
 
+    @JsProperty(name="connection")
+    private PresentationConnection connection;
+
     public PresentationConnectionAvailableEventInit(){
     }
-
-    @JsProperty(name="connection")
-    public PresentationConnection connection;
 
     @JsOverlay
     public final PresentationConnection getConnection(){
@@ -41,6 +41,5 @@ public class PresentationConnectionAvailableEventInit extends EventInit{
     public final void setConnection(PresentationConnection connection){
         this.connection = connection;
     }
-
 
 }

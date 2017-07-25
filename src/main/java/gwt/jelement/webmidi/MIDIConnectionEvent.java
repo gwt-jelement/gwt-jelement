@@ -20,6 +20,7 @@ import gwt.jelement.events.Event;
 import gwt.jelement.webmidi.MIDIConnectionEventInit;
 import gwt.jelement.webmidi.MIDIPort;
 import jsinterop.annotations.JsConstructor;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -38,7 +39,7 @@ public class MIDIConnectionEvent extends Event{
     }
     
     @JsProperty(name="port")
-    public MIDIPort port;
+    public native MIDIPort getPort();
     
     
 }

@@ -19,6 +19,7 @@ package gwt.jelement.css;
 import gwt.jelement.css.MediaQueryListEventInit;
 import gwt.jelement.events.Event;
 import jsinterop.annotations.JsConstructor;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -37,10 +38,10 @@ public class MediaQueryListEvent extends Event{
     }
     
     @JsProperty(name="media")
-    public String media;
+    public native String getMedia();
     
     @JsProperty(name="matches")
-    public boolean matches;
+    public native boolean getMatches();
     
     
 }

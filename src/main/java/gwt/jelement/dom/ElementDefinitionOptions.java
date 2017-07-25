@@ -24,11 +24,11 @@ import jsinterop.annotations.JsType;
 @JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class ElementDefinitionOptions{
 
+    @JsProperty(name="extends")
+    private String extends_;
+
     public ElementDefinitionOptions(){
     }
-
-    @JsProperty(name="extends")
-    public String extends_;
 
     @JsOverlay
     public final String getExtends(){
@@ -39,6 +39,5 @@ public class ElementDefinitionOptions{
     public final void setExtends(String extends_){
         this.extends_ = extends_;
     }
-
 
 }

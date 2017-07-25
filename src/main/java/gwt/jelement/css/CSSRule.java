@@ -18,6 +18,7 @@ package gwt.jelement.css;
 
 import gwt.jelement.css.CSSRule;
 import gwt.jelement.css.CSSStyleSheet;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -38,16 +39,19 @@ public class CSSRule{
     
     
     @JsProperty(name="type")
-    public short type;
+    public native short getType();
     
     @JsProperty(name="cssText")
-    public String cssText;
+    public native String getCssText();
+    
+    @JsProperty(name="cssText")
+    public native void setCssText(String cssText);
     
     @JsProperty(name="parentRule")
-    public CSSRule parentRule;
+    public native CSSRule getParentRule();
     
     @JsProperty(name="parentStyleSheet")
-    public CSSStyleSheet parentStyleSheet;
+    public native CSSStyleSheet getParentStyleSheet();
     
     
 }

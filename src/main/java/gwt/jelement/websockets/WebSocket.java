@@ -37,40 +37,80 @@ public class WebSocket extends EventTarget{
     public static int CLOSED;
     
     
+    @JsProperty(name="onopen")
+    private EventHandlerNonNull onopen;
+    
+    @JsProperty(name="onerror")
+    private EventHandlerNonNull onerror;
+    
+    @JsProperty(name="onclose")
+    private EventHandlerNonNull onclose;
+    
+    @JsProperty(name="onmessage")
+    private EventHandlerNonNull onmessage;
+    
+    @JsProperty(name="binaryType")
+    private String binaryType;
+    
     @JsConstructor
     public WebSocket(){
         super();
     }
     
     @JsProperty(name="url")
-    public String url;
+    public native String getUrl();
     
     @JsProperty(name="readyState")
-    public short readyState;
+    public native short getReadyState();
     
     @JsProperty(name="bufferedAmount")
-    public double bufferedAmount;
+    public native double getBufferedAmount();
     
-    @JsProperty(name="onopen")
-    public EventHandlerNonNull onopen;
+    @JsOverlay
+    public final EventHandlerNonNull getOnOpen(){
+        return this.onopen;
+    }
     
-    @JsProperty(name="onerror")
-    public EventHandlerNonNull onerror;
+    @JsOverlay
+    public final void setOnOpen(EventHandlerNonNull onopen){
+        this.onopen = onopen;
+    }
     
-    @JsProperty(name="onclose")
-    public EventHandlerNonNull onclose;
+    @JsOverlay
+    public final EventHandlerNonNull getOnError(){
+        return this.onerror;
+    }
+    
+    @JsOverlay
+    public final void setOnError(EventHandlerNonNull onerror){
+        this.onerror = onerror;
+    }
+    
+    @JsOverlay
+    public final EventHandlerNonNull getOnClose(){
+        return this.onclose;
+    }
+    
+    @JsOverlay
+    public final void setOnClose(EventHandlerNonNull onclose){
+        this.onclose = onclose;
+    }
     
     @JsProperty(name="extensions")
-    public String extensions;
+    public native String getExtensions();
     
     @JsProperty(name="protocol")
-    public String protocol;
+    public native String getProtocol();
     
-    @JsProperty(name="onmessage")
-    public EventHandlerNonNull onmessage;
+    @JsOverlay
+    public final EventHandlerNonNull getOnMessage(){
+        return this.onmessage;
+    }
     
-    @JsProperty(name="binaryType")
-    public String binaryType;
+    @JsOverlay
+    public final void setOnMessage(EventHandlerNonNull onmessage){
+        this.onmessage = onmessage;
+    }
     
     @JsOverlay
     public final BinaryType getBinaryType(){
@@ -85,22 +125,29 @@ public class WebSocket extends EventTarget{
     @JsMethod(name = "close")
     public native void close();
     
+    
     @JsMethod(name = "close")
     public native void close(short code);
+    
     
     @JsMethod(name = "close")
     public native void close(short code, String reason);
     
+    
     @JsMethod(name = "send")
     public native void send(String data);
+    
     
     @JsMethod(name = "send")
     public native void send(Blob data);
     
+    
     @JsMethod(name = "send")
     public native void send(ArrayBuffer data);
     
+    
     @JsMethod(name = "send")
     public native void send(ArrayBufferView data);
+    
     
 }

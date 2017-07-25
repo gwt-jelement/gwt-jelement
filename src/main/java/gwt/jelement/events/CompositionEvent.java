@@ -21,6 +21,7 @@ import gwt.jelement.events.UIEvent;
 import gwt.jelement.frame.Window;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -39,24 +40,30 @@ public class CompositionEvent extends UIEvent{
     }
     
     @JsProperty(name="data")
-    public String data;
+    public native String getData();
     
     @JsMethod(name = "initCompositionEvent")
     public native void initCompositionEvent();
     
+    
     @JsMethod(name = "initCompositionEvent")
     public native void initCompositionEvent(String type);
+    
     
     @JsMethod(name = "initCompositionEvent")
     public native void initCompositionEvent(String type, boolean bubbles);
     
+    
     @JsMethod(name = "initCompositionEvent")
     public native void initCompositionEvent(String type, boolean bubbles, boolean cancelable);
+    
     
     @JsMethod(name = "initCompositionEvent")
     public native void initCompositionEvent(String type, boolean bubbles, boolean cancelable, Window view);
     
+    
     @JsMethod(name = "initCompositionEvent")
     public native void initCompositionEvent(String type, boolean bubbles, boolean cancelable, Window view, String data);
+    
     
 }

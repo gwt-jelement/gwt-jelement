@@ -27,11 +27,50 @@ import jsinterop.annotations.JsType;
 @JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class PannerOptions extends AudioNodeOptions{
 
+    @JsProperty(name="panningModel")
+    private String panningModel;
+
+    @JsProperty(name="distanceModel")
+    private String distanceModel;
+
+    @JsProperty(name="positionX")
+    private float positionX;
+
+    @JsProperty(name="positionY")
+    private float positionY;
+
+    @JsProperty(name="positionZ")
+    private float positionZ;
+
+    @JsProperty(name="orientationX")
+    private float orientationX;
+
+    @JsProperty(name="orientationY")
+    private float orientationY;
+
+    @JsProperty(name="orientationZ")
+    private float orientationZ;
+
+    @JsProperty(name="refDistance")
+    private double refDistance;
+
+    @JsProperty(name="maxDistance")
+    private double maxDistance;
+
+    @JsProperty(name="rolloffFactor")
+    private double rolloffFactor;
+
+    @JsProperty(name="coneInnerAngle")
+    private double coneInnerAngle;
+
+    @JsProperty(name="coneOuterAngle")
+    private double coneOuterAngle;
+
+    @JsProperty(name="coneOuterGain")
+    private double coneOuterGain;
+
     public PannerOptions(){
     }
-
-    @JsProperty(name="panningModel")
-    public String panningModel;
 
     @JsOverlay
     public final PanningModelType getPanningModel(){
@@ -43,9 +82,6 @@ public class PannerOptions extends AudioNodeOptions{
         this.panningModel = panningModel.getInternalValue();
     }
 
-    @JsProperty(name="distanceModel")
-    public String distanceModel;
-
     @JsOverlay
     public final DistanceModelType getDistanceModel(){
         return DistanceModelType.of(this.distanceModel);
@@ -55,9 +91,6 @@ public class PannerOptions extends AudioNodeOptions{
     public final void setDistanceModel(DistanceModelType distanceModel){
         this.distanceModel = distanceModel.getInternalValue();
     }
-
-    @JsProperty(name="positionX")
-    public float positionX;
 
     @JsOverlay
     public final float getPositionX(){
@@ -69,9 +102,6 @@ public class PannerOptions extends AudioNodeOptions{
         this.positionX = positionX;
     }
 
-    @JsProperty(name="positionY")
-    public float positionY;
-
     @JsOverlay
     public final float getPositionY(){
         return this.positionY;
@@ -81,9 +111,6 @@ public class PannerOptions extends AudioNodeOptions{
     public final void setPositionY(float positionY){
         this.positionY = positionY;
     }
-
-    @JsProperty(name="positionZ")
-    public float positionZ;
 
     @JsOverlay
     public final float getPositionZ(){
@@ -95,9 +122,6 @@ public class PannerOptions extends AudioNodeOptions{
         this.positionZ = positionZ;
     }
 
-    @JsProperty(name="orientationX")
-    public float orientationX;
-
     @JsOverlay
     public final float getOrientationX(){
         return this.orientationX;
@@ -107,9 +131,6 @@ public class PannerOptions extends AudioNodeOptions{
     public final void setOrientationX(float orientationX){
         this.orientationX = orientationX;
     }
-
-    @JsProperty(name="orientationY")
-    public float orientationY;
 
     @JsOverlay
     public final float getOrientationY(){
@@ -121,9 +142,6 @@ public class PannerOptions extends AudioNodeOptions{
         this.orientationY = orientationY;
     }
 
-    @JsProperty(name="orientationZ")
-    public float orientationZ;
-
     @JsOverlay
     public final float getOrientationZ(){
         return this.orientationZ;
@@ -133,9 +151,6 @@ public class PannerOptions extends AudioNodeOptions{
     public final void setOrientationZ(float orientationZ){
         this.orientationZ = orientationZ;
     }
-
-    @JsProperty(name="refDistance")
-    public double refDistance;
 
     @JsOverlay
     public final double getRefDistance(){
@@ -147,9 +162,6 @@ public class PannerOptions extends AudioNodeOptions{
         this.refDistance = refDistance;
     }
 
-    @JsProperty(name="maxDistance")
-    public double maxDistance;
-
     @JsOverlay
     public final double getMaxDistance(){
         return this.maxDistance;
@@ -159,9 +171,6 @@ public class PannerOptions extends AudioNodeOptions{
     public final void setMaxDistance(double maxDistance){
         this.maxDistance = maxDistance;
     }
-
-    @JsProperty(name="rolloffFactor")
-    public double rolloffFactor;
 
     @JsOverlay
     public final double getRolloffFactor(){
@@ -173,9 +182,6 @@ public class PannerOptions extends AudioNodeOptions{
         this.rolloffFactor = rolloffFactor;
     }
 
-    @JsProperty(name="coneInnerAngle")
-    public double coneInnerAngle;
-
     @JsOverlay
     public final double getConeInnerAngle(){
         return this.coneInnerAngle;
@@ -185,9 +191,6 @@ public class PannerOptions extends AudioNodeOptions{
     public final void setConeInnerAngle(double coneInnerAngle){
         this.coneInnerAngle = coneInnerAngle;
     }
-
-    @JsProperty(name="coneOuterAngle")
-    public double coneOuterAngle;
 
     @JsOverlay
     public final double getConeOuterAngle(){
@@ -199,9 +202,6 @@ public class PannerOptions extends AudioNodeOptions{
         this.coneOuterAngle = coneOuterAngle;
     }
 
-    @JsProperty(name="coneOuterGain")
-    public double coneOuterGain;
-
     @JsOverlay
     public final double getConeOuterGain(){
         return this.coneOuterGain;
@@ -211,6 +211,5 @@ public class PannerOptions extends AudioNodeOptions{
     public final void setConeOuterGain(double coneOuterGain){
         this.coneOuterGain = coneOuterGain;
     }
-
 
 }

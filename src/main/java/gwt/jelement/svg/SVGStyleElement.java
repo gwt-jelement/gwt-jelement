@@ -19,6 +19,7 @@ package gwt.jelement.svg;
 import gwt.jelement.css.StyleSheet;
 import gwt.jelement.svg.SVGElement;
 import jsinterop.annotations.JsConstructor;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -32,19 +33,31 @@ public class SVGStyleElement extends SVGElement{
     }
     
     @JsProperty(name="type")
-    public String type;
+    public native String getType();
+    
+    @JsProperty(name="type")
+    public native void setType(String type);
     
     @JsProperty(name="media")
-    public String media;
+    public native String getMedia();
+    
+    @JsProperty(name="media")
+    public native void setMedia(String media);
     
     @JsProperty(name="title")
-    public String title;
+    public native String getTitle();
+    
+    @JsProperty(name="title")
+    public native void setTitle(String title);
     
     @JsProperty(name="sheet")
-    public StyleSheet sheet;
+    public native StyleSheet getSheet();
     
     @JsProperty(name="disabled")
-    public boolean disabled;
+    public native boolean getDisabled();
+    
+    @JsProperty(name="disabled")
+    public native void setDisabled(boolean disabled);
     
     
 }

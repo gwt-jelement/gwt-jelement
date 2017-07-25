@@ -19,6 +19,7 @@ package gwt.jelement.svg;
 import gwt.jelement.svg.SVGAnimatedLength;
 import gwt.jelement.svg.SVGGeometryElement;
 import jsinterop.annotations.JsConstructor;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -32,16 +33,16 @@ public class SVGEllipseElement extends SVGGeometryElement{
     }
     
     @JsProperty(name="cx")
-    public SVGAnimatedLength cx;
+    public native SVGAnimatedLength getCx();
     
     @JsProperty(name="cy")
-    public SVGAnimatedLength cy;
+    public native SVGAnimatedLength getCy();
     
     @JsProperty(name="rx")
-    public SVGAnimatedLength rx;
+    public native SVGAnimatedLength getRx();
     
     @JsProperty(name="ry")
-    public SVGAnimatedLength ry;
+    public native SVGAnimatedLength getRy();
     
     
 }

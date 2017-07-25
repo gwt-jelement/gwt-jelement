@@ -31,38 +31,72 @@ import jsinterop.annotations.JsType;
 @JsType(namespace = JsPackage.GLOBAL, isNative = true)
 public class RemotePlayback extends EventTarget{
     
+    @JsProperty(name="state")
+    private String state;
+    
+    @JsProperty(name="onconnecting")
+    private EventHandlerNonNull onconnecting;
+    
+    @JsProperty(name="onconnect")
+    private EventHandlerNonNull onconnect;
+    
+    @JsProperty(name="ondisconnect")
+    private EventHandlerNonNull ondisconnect;
+    
     @JsConstructor
     public RemotePlayback(){
         super();
     }
-    
-    @JsProperty(name="state")
-    public String state;
     
     @JsOverlay
     public final RemotePlaybackState getState(){
        return RemotePlaybackState.of(state);
     }
     
-    @JsProperty(name="onconnecting")
-    public EventHandlerNonNull onconnecting;
+    @JsOverlay
+    public final EventHandlerNonNull getOnConnecting(){
+        return this.onconnecting;
+    }
     
-    @JsProperty(name="onconnect")
-    public EventHandlerNonNull onconnect;
+    @JsOverlay
+    public final void setOnConnecting(EventHandlerNonNull onconnecting){
+        this.onconnecting = onconnecting;
+    }
     
-    @JsProperty(name="ondisconnect")
-    public EventHandlerNonNull ondisconnect;
+    @JsOverlay
+    public final EventHandlerNonNull getOnConnect(){
+        return this.onconnect;
+    }
+    
+    @JsOverlay
+    public final void setOnConnect(EventHandlerNonNull onconnect){
+        this.onconnect = onconnect;
+    }
+    
+    @JsOverlay
+    public final EventHandlerNonNull getOnDisconnect(){
+        return this.ondisconnect;
+    }
+    
+    @JsOverlay
+    public final void setOnDisconnect(EventHandlerNonNull ondisconnect){
+        this.ondisconnect = ondisconnect;
+    }
     
     @JsMethod(name = "cancelWatchAvailability")
     public native Promise<Void> cancelWatchAvailability();
     
+    
     @JsMethod(name = "cancelWatchAvailability")
     public native Promise<Void> cancelWatchAvailability(double id);
+    
     
     @JsMethod(name = "prompt")
     public native Promise<Void> prompt();
     
+    
     @JsMethod(name = "watchAvailability")
     public native Promise<Double> watchAvailability(RemotePlaybackAvailabilityCallback callback);
+    
     
 }

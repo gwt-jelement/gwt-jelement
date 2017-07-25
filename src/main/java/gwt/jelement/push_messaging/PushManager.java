@@ -20,6 +20,7 @@ import gwt.jelement.push_messaging.PushSubscription;
 import gwt.jelement.push_messaging.PushSubscriptionOptionsInit;
 import elemental2.promise.Promise;
 import jsinterop.annotations.JsMethod;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -28,21 +29,26 @@ import jsinterop.annotations.JsType;
 public class PushManager{
     
     @JsProperty(name="supportedContentEncodings")
-    public static String[] supportedContentEncodings;
+    public static native String[] getSupportedContentEncodings();
     
     @JsMethod(name = "getSubscription")
     public native Promise<PushSubscription> getSubscription();
     
+    
     @JsMethod(name = "permissionState")
     public native Promise permissionState();
+    
     
     @JsMethod(name = "permissionState")
     public native Promise permissionState(PushSubscriptionOptionsInit options);
     
+    
     @JsMethod(name = "subscribe")
     public native Promise<PushSubscription> subscribe();
     
+    
     @JsMethod(name = "subscribe")
     public native Promise<PushSubscription> subscribe(PushSubscriptionOptionsInit options);
+    
     
 }

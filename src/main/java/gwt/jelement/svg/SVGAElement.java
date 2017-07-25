@@ -19,6 +19,7 @@ package gwt.jelement.svg;
 import gwt.jelement.svg.SVGAnimatedString;
 import gwt.jelement.svg.SVGGraphicsElement;
 import jsinterop.annotations.JsConstructor;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -32,10 +33,10 @@ public class SVGAElement extends SVGGraphicsElement{
     }
     
     @JsProperty(name="target")
-    public SVGAnimatedString target;
+    public native SVGAnimatedString getTarget();
     
     @JsProperty(name="href")
-    public SVGAnimatedString href;
+    public native SVGAnimatedString getHref();
     
     
 }

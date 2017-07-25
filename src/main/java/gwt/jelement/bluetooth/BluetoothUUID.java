@@ -17,6 +17,7 @@
 package gwt.jelement.bluetooth;
 
 import jsinterop.annotations.JsMethod;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
@@ -26,22 +27,29 @@ public class BluetoothUUID{
     @JsMethod(name = "canonicalUUID")
     public native String canonicalUUID(double alias);
     
+    
     @JsMethod(name = "getCharacteristic")
     public native String getCharacteristic(String name);
+    
     
     @JsMethod(name = "getCharacteristic")
     public native String getCharacteristic(double name);
     
+    
     @JsMethod(name = "getDescriptor")
     public native String getDescriptor(String name);
+    
     
     @JsMethod(name = "getDescriptor")
     public native String getDescriptor(double name);
     
+    
     @JsMethod(name = "getService")
     public native String getService(String name);
     
+    
     @JsMethod(name = "getService")
     public native String getService(double name);
+    
     
 }

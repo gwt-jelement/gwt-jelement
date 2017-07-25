@@ -22,6 +22,7 @@ import gwt.jelement.filesystem.ErrorCallback;
 import gwt.jelement.filesystem.FileWriterCallback;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
@@ -36,13 +37,17 @@ public class FileEntry extends Entry{
     @JsMethod(name = "createWriter")
     public native void createWriter(FileWriterCallback successCallback);
     
+    
     @JsMethod(name = "createWriter")
     public native void createWriter(FileWriterCallback successCallback, ErrorCallback errorCallback);
+    
     
     @JsMethod(name = "file")
     public native void file(BlobCallback successCallback);
     
+    
     @JsMethod(name = "file")
     public native void file(BlobCallback successCallback, ErrorCallback errorCallback);
+    
     
 }

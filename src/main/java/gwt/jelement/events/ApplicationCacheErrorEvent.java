@@ -19,6 +19,7 @@ package gwt.jelement.events;
 import gwt.jelement.events.ApplicationCacheErrorEventInit;
 import gwt.jelement.events.Event;
 import jsinterop.annotations.JsConstructor;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -37,16 +38,16 @@ public class ApplicationCacheErrorEvent extends Event{
     }
     
     @JsProperty(name="reason")
-    public String reason;
+    public native String getReason();
     
     @JsProperty(name="url")
-    public String url;
+    public native String getUrl();
     
     @JsProperty(name="status")
-    public short status;
+    public native short getStatus();
     
     @JsProperty(name="message")
-    public String message;
+    public native String getMessage();
     
     
 }

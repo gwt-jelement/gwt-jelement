@@ -24,11 +24,17 @@ import jsinterop.annotations.JsType;
 @JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class DeviceRotationRateInit{
 
+    @JsProperty(name="alpha")
+    private double alpha;
+
+    @JsProperty(name="beta")
+    private double beta;
+
+    @JsProperty(name="gamma")
+    private double gamma;
+
     public DeviceRotationRateInit(){
     }
-
-    @JsProperty(name="alpha")
-    public double alpha;
 
     @JsOverlay
     public final double getAlpha(){
@@ -40,9 +46,6 @@ public class DeviceRotationRateInit{
         this.alpha = alpha;
     }
 
-    @JsProperty(name="beta")
-    public double beta;
-
     @JsOverlay
     public final double getBeta(){
         return this.beta;
@@ -53,9 +56,6 @@ public class DeviceRotationRateInit{
         this.beta = beta;
     }
 
-    @JsProperty(name="gamma")
-    public double gamma;
-
     @JsOverlay
     public final double getGamma(){
         return this.gamma;
@@ -65,6 +65,5 @@ public class DeviceRotationRateInit{
     public final void setGamma(double gamma){
         this.gamma = gamma;
     }
-
 
 }

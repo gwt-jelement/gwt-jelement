@@ -24,11 +24,29 @@ import jsinterop.annotations.JsType;
 @JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class WebGLContextAttributes{
 
+    @JsProperty(name="alpha")
+    private boolean alpha;
+
+    @JsProperty(name="depth")
+    private boolean depth;
+
+    @JsProperty(name="stencil")
+    private boolean stencil;
+
+    @JsProperty(name="antialias")
+    private boolean antialias;
+
+    @JsProperty(name="premultipliedAlpha")
+    private boolean premultipliedAlpha;
+
+    @JsProperty(name="preserveDrawingBuffer")
+    private boolean preserveDrawingBuffer;
+
+    @JsProperty(name="failIfMajorPerformanceCaveat")
+    private boolean failIfMajorPerformanceCaveat;
+
     public WebGLContextAttributes(){
     }
-
-    @JsProperty(name="alpha")
-    public boolean alpha;
 
     @JsOverlay
     public final boolean getAlpha(){
@@ -40,9 +58,6 @@ public class WebGLContextAttributes{
         this.alpha = alpha;
     }
 
-    @JsProperty(name="depth")
-    public boolean depth;
-
     @JsOverlay
     public final boolean getDepth(){
         return this.depth;
@@ -52,9 +67,6 @@ public class WebGLContextAttributes{
     public final void setDepth(boolean depth){
         this.depth = depth;
     }
-
-    @JsProperty(name="stencil")
-    public boolean stencil;
 
     @JsOverlay
     public final boolean getStencil(){
@@ -66,9 +78,6 @@ public class WebGLContextAttributes{
         this.stencil = stencil;
     }
 
-    @JsProperty(name="antialias")
-    public boolean antialias;
-
     @JsOverlay
     public final boolean getAntialias(){
         return this.antialias;
@@ -78,9 +87,6 @@ public class WebGLContextAttributes{
     public final void setAntialias(boolean antialias){
         this.antialias = antialias;
     }
-
-    @JsProperty(name="premultipliedAlpha")
-    public boolean premultipliedAlpha;
 
     @JsOverlay
     public final boolean getPremultipliedAlpha(){
@@ -92,9 +98,6 @@ public class WebGLContextAttributes{
         this.premultipliedAlpha = premultipliedAlpha;
     }
 
-    @JsProperty(name="preserveDrawingBuffer")
-    public boolean preserveDrawingBuffer;
-
     @JsOverlay
     public final boolean getPreserveDrawingBuffer(){
         return this.preserveDrawingBuffer;
@@ -105,9 +108,6 @@ public class WebGLContextAttributes{
         this.preserveDrawingBuffer = preserveDrawingBuffer;
     }
 
-    @JsProperty(name="failIfMajorPerformanceCaveat")
-    public boolean failIfMajorPerformanceCaveat;
-
     @JsOverlay
     public final boolean getFailIfMajorPerformanceCaveat(){
         return this.failIfMajorPerformanceCaveat;
@@ -117,6 +117,5 @@ public class WebGLContextAttributes{
     public final void setFailIfMajorPerformanceCaveat(boolean failIfMajorPerformanceCaveat){
         this.failIfMajorPerformanceCaveat = failIfMajorPerformanceCaveat;
     }
-
 
 }

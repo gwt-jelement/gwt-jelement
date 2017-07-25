@@ -19,6 +19,7 @@ package gwt.jelement.html;
 import gwt.jelement.dom.NodeList;
 import gwt.jelement.html.HTMLElement;
 import jsinterop.annotations.JsConstructor;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -32,16 +33,22 @@ public class HTMLProgressElement extends HTMLElement{
     }
     
     @JsProperty(name="value")
-    public double value;
+    public native double getValue();
+    
+    @JsProperty(name="value")
+    public native void setValue(double value);
     
     @JsProperty(name="max")
-    public double max;
+    public native double getMax();
+    
+    @JsProperty(name="max")
+    public native void setMax(double max);
     
     @JsProperty(name="position")
-    public double position;
+    public native double getPosition();
     
     @JsProperty(name="labels")
-    public NodeList labels;
+    public native NodeList getLabels();
     
     
 }

@@ -21,6 +21,7 @@ import gwt.jelement.webaudio.AudioParam;
 import gwt.jelement.webaudio.BaseAudioContext;
 import gwt.jelement.webaudio.DynamicsCompressorOptions;
 import jsinterop.annotations.JsConstructor;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -39,22 +40,22 @@ public class DynamicsCompressorNode extends AudioNode{
     }
     
     @JsProperty(name="threshold")
-    public AudioParam threshold;
+    public native AudioParam getThreshold();
     
     @JsProperty(name="knee")
-    public AudioParam knee;
+    public native AudioParam getKnee();
     
     @JsProperty(name="ratio")
-    public AudioParam ratio;
+    public native AudioParam getRatio();
     
     @JsProperty(name="reduction")
-    public float reduction;
+    public native float getReduction();
     
     @JsProperty(name="attack")
-    public AudioParam attack;
+    public native AudioParam getAttack();
     
     @JsProperty(name="release")
-    public AudioParam release;
+    public native AudioParam getRelease();
     
     
 }

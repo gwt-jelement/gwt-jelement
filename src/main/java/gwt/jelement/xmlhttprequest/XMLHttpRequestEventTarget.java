@@ -19,6 +19,7 @@ package gwt.jelement.xmlhttprequest;
 import gwt.jelement.events.EventHandlerNonNull;
 import gwt.jelement.events.EventTarget;
 import jsinterop.annotations.JsConstructor;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -26,31 +27,101 @@ import jsinterop.annotations.JsType;
 @JsType(namespace = JsPackage.GLOBAL, isNative = true)
 public class XMLHttpRequestEventTarget extends EventTarget{
     
+    @JsProperty(name="onloadstart")
+    private EventHandlerNonNull onloadstart;
+    
+    @JsProperty(name="onprogress")
+    private EventHandlerNonNull onprogress;
+    
+    @JsProperty(name="onabort")
+    private EventHandlerNonNull onabort;
+    
+    @JsProperty(name="onerror")
+    private EventHandlerNonNull onerror;
+    
+    @JsProperty(name="onload")
+    private EventHandlerNonNull onload;
+    
+    @JsProperty(name="ontimeout")
+    private EventHandlerNonNull ontimeout;
+    
+    @JsProperty(name="onloadend")
+    private EventHandlerNonNull onloadend;
+    
     @JsConstructor
     public XMLHttpRequestEventTarget(){
         super();
     }
     
-    @JsProperty(name="onloadstart")
-    public EventHandlerNonNull onloadstart;
+    @JsOverlay
+    public final EventHandlerNonNull getOnLoadstart(){
+        return this.onloadstart;
+    }
     
-    @JsProperty(name="onprogress")
-    public EventHandlerNonNull onprogress;
+    @JsOverlay
+    public final void setOnLoadstart(EventHandlerNonNull onloadstart){
+        this.onloadstart = onloadstart;
+    }
     
-    @JsProperty(name="onabort")
-    public EventHandlerNonNull onabort;
+    @JsOverlay
+    public final EventHandlerNonNull getOnProgress(){
+        return this.onprogress;
+    }
     
-    @JsProperty(name="onerror")
-    public EventHandlerNonNull onerror;
+    @JsOverlay
+    public final void setOnProgress(EventHandlerNonNull onprogress){
+        this.onprogress = onprogress;
+    }
     
-    @JsProperty(name="onload")
-    public EventHandlerNonNull onload;
+    @JsOverlay
+    public final EventHandlerNonNull getOnAbort(){
+        return this.onabort;
+    }
     
-    @JsProperty(name="ontimeout")
-    public EventHandlerNonNull ontimeout;
+    @JsOverlay
+    public final void setOnAbort(EventHandlerNonNull onabort){
+        this.onabort = onabort;
+    }
     
-    @JsProperty(name="onloadend")
-    public EventHandlerNonNull onloadend;
+    @JsOverlay
+    public final EventHandlerNonNull getOnError(){
+        return this.onerror;
+    }
+    
+    @JsOverlay
+    public final void setOnError(EventHandlerNonNull onerror){
+        this.onerror = onerror;
+    }
+    
+    @JsOverlay
+    public final EventHandlerNonNull getOnLoad(){
+        return this.onload;
+    }
+    
+    @JsOverlay
+    public final void setOnLoad(EventHandlerNonNull onload){
+        this.onload = onload;
+    }
+    
+    @JsOverlay
+    public final EventHandlerNonNull getOnTimeout(){
+        return this.ontimeout;
+    }
+    
+    @JsOverlay
+    public final void setOnTimeout(EventHandlerNonNull ontimeout){
+        this.ontimeout = ontimeout;
+    }
+    
+    @JsOverlay
+    public final EventHandlerNonNull getOnLoadend(){
+        return this.onloadend;
+    }
+    
+    @JsOverlay
+    public final void setOnLoadend(EventHandlerNonNull onloadend){
+        this.onloadend = onloadend;
+    }
     
     
 }

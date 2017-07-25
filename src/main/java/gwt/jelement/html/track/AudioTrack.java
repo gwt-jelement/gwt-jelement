@@ -17,6 +17,7 @@
 package gwt.jelement.html.track;
 
 import gwt.jelement.mediasource.SourceBuffer;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -25,22 +26,25 @@ import jsinterop.annotations.JsType;
 public class AudioTrack{
     
     @JsProperty(name="id")
-    public String id;
+    public native String getId();
     
     @JsProperty(name="kind")
-    public String kind;
+    public native String getKind();
     
     @JsProperty(name="label")
-    public String label;
+    public native String getLabel();
     
     @JsProperty(name="language")
-    public String language;
+    public native String getLanguage();
     
     @JsProperty(name="enabled")
-    public boolean enabled;
+    public native boolean getEnabled();
+    
+    @JsProperty(name="enabled")
+    public native void setEnabled(boolean enabled);
     
     @JsProperty(name="sourceBuffer")
-    public SourceBuffer sourceBuffer;
+    public native SourceBuffer getSourceBuffer();
     
     
 }

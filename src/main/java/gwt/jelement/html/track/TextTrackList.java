@@ -21,6 +21,7 @@ import gwt.jelement.events.EventTarget;
 import gwt.jelement.html.track.TextTrack;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -28,24 +29,55 @@ import jsinterop.annotations.JsType;
 @JsType(namespace = JsPackage.GLOBAL, isNative = true)
 public class TextTrackList extends EventTarget{
     
+    @JsProperty(name="onchange")
+    private EventHandlerNonNull onchange;
+    
+    @JsProperty(name="onaddtrack")
+    private EventHandlerNonNull onaddtrack;
+    
+    @JsProperty(name="onremovetrack")
+    private EventHandlerNonNull onremovetrack;
+    
     @JsConstructor
     public TextTrackList(){
         super();
     }
     
     @JsProperty(name="length")
-    public double length;
+    public native double getLength();
     
-    @JsProperty(name="onchange")
-    public EventHandlerNonNull onchange;
+    @JsOverlay
+    public final EventHandlerNonNull getOnChange(){
+        return this.onchange;
+    }
     
-    @JsProperty(name="onaddtrack")
-    public EventHandlerNonNull onaddtrack;
+    @JsOverlay
+    public final void setOnChange(EventHandlerNonNull onchange){
+        this.onchange = onchange;
+    }
     
-    @JsProperty(name="onremovetrack")
-    public EventHandlerNonNull onremovetrack;
+    @JsOverlay
+    public final EventHandlerNonNull getOnAddtrack(){
+        return this.onaddtrack;
+    }
+    
+    @JsOverlay
+    public final void setOnAddtrack(EventHandlerNonNull onaddtrack){
+        this.onaddtrack = onaddtrack;
+    }
+    
+    @JsOverlay
+    public final EventHandlerNonNull getOnRemovetrack(){
+        return this.onremovetrack;
+    }
+    
+    @JsOverlay
+    public final void setOnRemovetrack(EventHandlerNonNull onremovetrack){
+        this.onremovetrack = onremovetrack;
+    }
     
     @JsMethod(name = "getTrackById")
     public native TextTrack getTrackById(String id);
+    
     
 }

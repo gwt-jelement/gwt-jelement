@@ -19,6 +19,7 @@ package gwt.jelement.page.scrolling;
 import gwt.jelement.page.scrolling.ScrollStateInit;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -35,48 +36,50 @@ public class ScrollState{
     }
     
     @JsProperty(name="deltaX")
-    public double deltaX;
+    public native double getDeltaX();
     
     @JsProperty(name="deltaY")
-    public double deltaY;
+    public native double getDeltaY();
     
     @JsProperty(name="positionX")
-    public double positionX;
+    public native double getPositionX();
     
     @JsProperty(name="positionY")
-    public double positionY;
+    public native double getPositionY();
     
     @JsProperty(name="velocityX")
-    public double velocityX;
+    public native double getVelocityX();
     
     @JsProperty(name="velocityY")
-    public double velocityY;
+    public native double getVelocityY();
     
     @JsProperty(name="isBeginning")
-    public boolean isBeginning;
+    public native boolean getIsBeginning();
     
     @JsProperty(name="inInertialPhase")
-    public boolean inInertialPhase;
+    public native boolean getInInertialPhase();
     
     @JsProperty(name="isEnding")
-    public boolean isEnding;
+    public native boolean getIsEnding();
     
     @JsProperty(name="shouldPropagate")
-    public boolean shouldPropagate;
+    public native boolean getShouldPropagate();
     
     @JsProperty(name="fromUserInput")
-    public boolean fromUserInput;
+    public native boolean getFromUserInput();
     
     @JsProperty(name="isDirectManipulation")
-    public boolean isDirectManipulation;
+    public native boolean getIsDirectManipulation();
     
     @JsProperty(name="deltaGranularity")
-    public double deltaGranularity;
+    public native double getDeltaGranularity();
     
     @JsMethod(name = "consumeDelta")
     public native void consumeDelta(double x, double y);
     
+    
     @JsMethod(name = "distributeToScrollChainDescendant")
     public native void distributeToScrollChainDescendant();
+    
     
 }

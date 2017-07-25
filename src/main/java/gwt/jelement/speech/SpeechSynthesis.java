@@ -22,6 +22,7 @@ import gwt.jelement.speech.SpeechSynthesisUtterance;
 import gwt.jelement.speech.SpeechSynthesisVoice;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -29,36 +30,51 @@ import jsinterop.annotations.JsType;
 @JsType(namespace = JsPackage.GLOBAL, isNative = true)
 public class SpeechSynthesis extends EventTarget{
     
+    @JsProperty(name="onvoiceschanged")
+    private EventHandlerNonNull onvoiceschanged;
+    
     @JsConstructor
     public SpeechSynthesis(){
         super();
     }
     
     @JsProperty(name="pending")
-    public boolean pending;
+    public native boolean getPending();
     
     @JsProperty(name="speaking")
-    public boolean speaking;
+    public native boolean getSpeaking();
     
     @JsProperty(name="paused")
-    public boolean paused;
+    public native boolean getPaused();
     
-    @JsProperty(name="onvoiceschanged")
-    public EventHandlerNonNull onvoiceschanged;
+    @JsOverlay
+    public final EventHandlerNonNull getOnVoiceschanged(){
+        return this.onvoiceschanged;
+    }
+    
+    @JsOverlay
+    public final void setOnVoiceschanged(EventHandlerNonNull onvoiceschanged){
+        this.onvoiceschanged = onvoiceschanged;
+    }
     
     @JsMethod(name = "cancel")
     public native void cancel();
     
+    
     @JsMethod(name = "getVoices")
     public native SpeechSynthesisVoice[] getVoices();
+    
     
     @JsMethod(name = "pause")
     public native void pause();
     
+    
     @JsMethod(name = "resume")
     public native void resume();
     
+    
     @JsMethod(name = "speak")
     public native void speak(SpeechSynthesisUtterance utterance);
+    
     
 }

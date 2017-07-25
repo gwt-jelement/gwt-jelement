@@ -17,6 +17,7 @@
 package gwt.jelement.timing;
 
 import jsinterop.annotations.JsMethod;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -30,12 +31,13 @@ public class PerformanceNavigation{
     
     
     @JsProperty(name="type")
-    public short type;
+    public native short getType();
     
     @JsProperty(name="redirectCount")
-    public short redirectCount;
+    public native short getRedirectCount();
     
     @JsMethod(name = "toJSON")
     public native Object toJSON();
+    
     
 }

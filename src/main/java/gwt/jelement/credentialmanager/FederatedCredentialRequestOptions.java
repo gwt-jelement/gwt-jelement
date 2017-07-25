@@ -24,11 +24,14 @@ import jsinterop.annotations.JsType;
 @JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class FederatedCredentialRequestOptions{
 
+    @JsProperty(name="providers")
+    private String[] providers;
+
+    @JsProperty(name="protocols")
+    private String[] protocols;
+
     public FederatedCredentialRequestOptions(){
     }
-
-    @JsProperty(name="providers")
-    public String[] providers;
 
     @JsOverlay
     public final String[] getProviders(){
@@ -40,9 +43,6 @@ public class FederatedCredentialRequestOptions{
         this.providers = providers;
     }
 
-    @JsProperty(name="protocols")
-    public String[] protocols;
-
     @JsOverlay
     public final String[] getProtocols(){
         return this.protocols;
@@ -52,6 +52,5 @@ public class FederatedCredentialRequestOptions{
     public final void setProtocols(String[] protocols){
         this.protocols = protocols;
     }
-
 
 }

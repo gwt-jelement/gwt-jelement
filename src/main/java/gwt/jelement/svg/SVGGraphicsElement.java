@@ -23,6 +23,7 @@ import gwt.jelement.svg.SVGRect;
 import gwt.jelement.svg.SVGStringList;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -36,27 +37,30 @@ public class SVGGraphicsElement extends SVGElement{
     }
     
     @JsProperty(name="transform")
-    public SVGAnimatedTransformList transform;
+    public native SVGAnimatedTransformList getTransform();
     
     @JsProperty(name="nearestViewportElement")
-    public SVGElement nearestViewportElement;
+    public native SVGElement getNearestViewportElement();
     
     @JsProperty(name="farthestViewportElement")
-    public SVGElement farthestViewportElement;
+    public native SVGElement getFarthestViewportElement();
     
     @JsProperty(name="requiredExtensions")
-    public SVGStringList requiredExtensions;
+    public native SVGStringList getRequiredExtensions();
     
     @JsProperty(name="systemLanguage")
-    public SVGStringList systemLanguage;
+    public native SVGStringList getSystemLanguage();
     
     @JsMethod(name = "getBBox")
     public native SVGRect getBBox();
     
+    
     @JsMethod(name = "getCTM")
     public native SVGMatrix getCTM();
     
+    
     @JsMethod(name = "getScreenCTM")
     public native SVGMatrix getScreenCTM();
+    
     
 }

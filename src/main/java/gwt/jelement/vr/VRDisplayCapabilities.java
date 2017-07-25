@@ -16,6 +16,7 @@
  */
 package gwt.jelement.vr;
 
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -24,16 +25,16 @@ import jsinterop.annotations.JsType;
 public class VRDisplayCapabilities{
     
     @JsProperty(name="hasPosition")
-    public boolean hasPosition;
+    public native boolean getHasPosition();
     
     @JsProperty(name="hasExternalDisplay")
-    public boolean hasExternalDisplay;
+    public native boolean getHasExternalDisplay();
     
     @JsProperty(name="canPresent")
-    public boolean canPresent;
+    public native boolean getCanPresent();
     
     @JsProperty(name="maxLayers")
-    public double maxLayers;
+    public native double getMaxLayers();
     
     
 }

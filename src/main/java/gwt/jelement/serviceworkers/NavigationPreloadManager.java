@@ -19,6 +19,7 @@ package gwt.jelement.serviceworkers;
 import gwt.jelement.serviceworkers.NavigationPreloadState;
 import elemental2.promise.Promise;
 import jsinterop.annotations.JsMethod;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
@@ -28,13 +29,17 @@ public class NavigationPreloadManager{
     @JsMethod(name = "disable")
     public native Promise<Void> disable();
     
+    
     @JsMethod(name = "enable")
     public native Promise<Void> enable();
+    
     
     @JsMethod(name = "getState")
     public native Promise<NavigationPreloadState> getState();
     
+    
     @JsMethod(name = "setHeaderValue")
     public native Promise<Void> setHeaderValue(String value);
+    
     
 }

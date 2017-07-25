@@ -25,11 +25,11 @@ import jsinterop.annotations.JsType;
 @JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class PageTransitionEventInit extends EventInit{
 
+    @JsProperty(name="persisted")
+    private boolean persisted;
+
     public PageTransitionEventInit(){
     }
-
-    @JsProperty(name="persisted")
-    public boolean persisted;
 
     @JsOverlay
     public final boolean getPersisted(){
@@ -40,6 +40,5 @@ public class PageTransitionEventInit extends EventInit{
     public final void setPersisted(boolean persisted){
         this.persisted = persisted;
     }
-
 
 }

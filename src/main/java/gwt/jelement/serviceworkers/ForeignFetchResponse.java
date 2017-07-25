@@ -25,11 +25,17 @@ import jsinterop.annotations.JsType;
 @JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class ForeignFetchResponse{
 
+    @JsProperty(name="response")
+    private Response response;
+
+    @JsProperty(name="origin")
+    private String origin;
+
+    @JsProperty(name="headers")
+    private String[] headers;
+
     public ForeignFetchResponse(){
     }
-
-    @JsProperty(name="response")
-    public Response response;
 
     @JsOverlay
     public final Response getResponse(){
@@ -41,9 +47,6 @@ public class ForeignFetchResponse{
         this.response = response;
     }
 
-    @JsProperty(name="origin")
-    public String origin;
-
     @JsOverlay
     public final String getOrigin(){
         return this.origin;
@@ -54,9 +57,6 @@ public class ForeignFetchResponse{
         this.origin = origin;
     }
 
-    @JsProperty(name="headers")
-    public String[] headers;
-
     @JsOverlay
     public final String[] getHeaders(){
         return this.headers;
@@ -66,6 +66,5 @@ public class ForeignFetchResponse{
     public final void setHeaders(String[] headers){
         this.headers = headers;
     }
-
 
 }

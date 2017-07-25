@@ -19,6 +19,7 @@ package gwt.jelement.permissions;
 import gwt.jelement.permissions.PermissionStatus;
 import elemental2.promise.Promise;
 import jsinterop.annotations.JsMethod;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
@@ -28,13 +29,17 @@ public class Permissions{
     @JsMethod(name = "query")
     public native Promise<PermissionStatus> query(Object permission);
     
+    
     @JsMethod(name = "request")
     public native Promise<PermissionStatus> request(Object permissions);
+    
     
     @JsMethod(name = "requestAll")
     public native Promise<PermissionStatus[]> requestAll(Object[] permissions);
     
+    
     @JsMethod(name = "revoke")
     public native Promise<PermissionStatus> revoke(Object permission);
+    
     
 }

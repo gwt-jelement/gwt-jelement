@@ -19,6 +19,7 @@ package gwt.jelement.mediasession;
 import gwt.jelement.mediasession.MediaImage;
 import gwt.jelement.mediasession.MediaMetadataInit;
 import jsinterop.annotations.JsConstructor;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -35,16 +36,28 @@ public class MediaMetadata{
     }
     
     @JsProperty(name="title")
-    public String title;
+    public native String getTitle();
+    
+    @JsProperty(name="title")
+    public native void setTitle(String title);
     
     @JsProperty(name="artist")
-    public String artist;
+    public native String getArtist();
+    
+    @JsProperty(name="artist")
+    public native void setArtist(String artist);
     
     @JsProperty(name="album")
-    public String album;
+    public native String getAlbum();
+    
+    @JsProperty(name="album")
+    public native void setAlbum(String album);
     
     @JsProperty(name="artwork")
-    public MediaImage[] artwork;
+    public native MediaImage[] getArtwork();
+    
+    @JsProperty(name="artwork")
+    public native void setArtwork(MediaImage[] artwork);
     
     
 }

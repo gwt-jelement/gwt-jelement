@@ -18,6 +18,7 @@ package gwt.jelement.webaudio;
 
 import gwt.jelement.webaudio.AudioNode;
 import jsinterop.annotations.JsConstructor;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -31,7 +32,7 @@ public class AudioDestinationNode extends AudioNode{
     }
     
     @JsProperty(name="maxChannelCount")
-    public double maxChannelCount;
+    public native double getMaxChannelCount();
     
     
 }

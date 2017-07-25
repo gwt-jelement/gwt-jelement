@@ -26,11 +26,11 @@ import jsinterop.annotations.JsType;
 @JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class RTCPeerConnectionIceEventInit extends EventInit{
 
+    @JsProperty(name="candidate")
+    private RTCIceCandidate candidate;
+
     public RTCPeerConnectionIceEventInit(){
     }
-
-    @JsProperty(name="candidate")
-    public RTCIceCandidate candidate;
 
     @JsOverlay
     public final RTCIceCandidate getCandidate(){
@@ -41,6 +41,5 @@ public class RTCPeerConnectionIceEventInit extends EventInit{
     public final void setCandidate(RTCIceCandidate candidate){
         this.candidate = candidate;
     }
-
 
 }

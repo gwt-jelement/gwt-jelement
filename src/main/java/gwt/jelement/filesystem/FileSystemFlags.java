@@ -24,11 +24,14 @@ import jsinterop.annotations.JsType;
 @JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class FileSystemFlags{
 
+    @JsProperty(name="create")
+    private boolean create;
+
+    @JsProperty(name="exclusive")
+    private boolean exclusive;
+
     public FileSystemFlags(){
     }
-
-    @JsProperty(name="create")
-    public boolean create;
 
     @JsOverlay
     public final boolean getCreate(){
@@ -40,9 +43,6 @@ public class FileSystemFlags{
         this.create = create;
     }
 
-    @JsProperty(name="exclusive")
-    public boolean exclusive;
-
     @JsOverlay
     public final boolean getExclusive(){
         return this.exclusive;
@@ -52,6 +52,5 @@ public class FileSystemFlags{
     public final void setExclusive(boolean exclusive){
         this.exclusive = exclusive;
     }
-
 
 }

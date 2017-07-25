@@ -25,11 +25,17 @@ import jsinterop.annotations.JsType;
 @JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class ProgressEventInit extends EventInit{
 
+    @JsProperty(name="lengthComputable")
+    private boolean lengthComputable;
+
+    @JsProperty(name="loaded")
+    private double loaded;
+
+    @JsProperty(name="total")
+    private double total;
+
     public ProgressEventInit(){
     }
-
-    @JsProperty(name="lengthComputable")
-    public boolean lengthComputable;
 
     @JsOverlay
     public final boolean getLengthComputable(){
@@ -41,9 +47,6 @@ public class ProgressEventInit extends EventInit{
         this.lengthComputable = lengthComputable;
     }
 
-    @JsProperty(name="loaded")
-    public double loaded;
-
     @JsOverlay
     public final double getLoaded(){
         return this.loaded;
@@ -54,9 +57,6 @@ public class ProgressEventInit extends EventInit{
         this.loaded = loaded;
     }
 
-    @JsProperty(name="total")
-    public double total;
-
     @JsOverlay
     public final double getTotal(){
         return this.total;
@@ -66,6 +66,5 @@ public class ProgressEventInit extends EventInit{
     public final void setTotal(double total){
         this.total = total;
     }
-
 
 }

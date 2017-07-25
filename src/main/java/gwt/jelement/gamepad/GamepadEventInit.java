@@ -26,11 +26,11 @@ import jsinterop.annotations.JsType;
 @JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class GamepadEventInit extends EventInit{
 
+    @JsProperty(name="gamepad")
+    private Gamepad gamepad;
+
     public GamepadEventInit(){
     }
-
-    @JsProperty(name="gamepad")
-    public Gamepad gamepad;
 
     @JsOverlay
     public final Gamepad getGamepad(){
@@ -41,6 +41,5 @@ public class GamepadEventInit extends EventInit{
     public final void setGamepad(Gamepad gamepad){
         this.gamepad = gamepad;
     }
-
 
 }

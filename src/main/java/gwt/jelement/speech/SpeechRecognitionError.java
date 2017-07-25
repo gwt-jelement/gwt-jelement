@@ -19,6 +19,7 @@ package gwt.jelement.speech;
 import gwt.jelement.events.Event;
 import gwt.jelement.speech.SpeechRecognitionErrorInit;
 import jsinterop.annotations.JsConstructor;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -37,10 +38,10 @@ public class SpeechRecognitionError extends Event{
     }
     
     @JsProperty(name="error")
-    public String error;
+    public native String getError();
     
     @JsProperty(name="message")
-    public String message;
+    public native String getMessage();
     
     
 }

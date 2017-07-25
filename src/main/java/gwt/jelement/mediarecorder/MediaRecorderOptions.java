@@ -24,11 +24,20 @@ import jsinterop.annotations.JsType;
 @JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class MediaRecorderOptions{
 
+    @JsProperty(name="mimeType")
+    private String mimeType;
+
+    @JsProperty(name="audioBitsPerSecond")
+    private double audioBitsPerSecond;
+
+    @JsProperty(name="videoBitsPerSecond")
+    private double videoBitsPerSecond;
+
+    @JsProperty(name="bitsPerSecond")
+    private double bitsPerSecond;
+
     public MediaRecorderOptions(){
     }
-
-    @JsProperty(name="mimeType")
-    public String mimeType;
 
     @JsOverlay
     public final String getMimeType(){
@@ -40,9 +49,6 @@ public class MediaRecorderOptions{
         this.mimeType = mimeType;
     }
 
-    @JsProperty(name="audioBitsPerSecond")
-    public double audioBitsPerSecond;
-
     @JsOverlay
     public final double getAudioBitsPerSecond(){
         return this.audioBitsPerSecond;
@@ -52,9 +58,6 @@ public class MediaRecorderOptions{
     public final void setAudioBitsPerSecond(double audioBitsPerSecond){
         this.audioBitsPerSecond = audioBitsPerSecond;
     }
-
-    @JsProperty(name="videoBitsPerSecond")
-    public double videoBitsPerSecond;
 
     @JsOverlay
     public final double getVideoBitsPerSecond(){
@@ -66,9 +69,6 @@ public class MediaRecorderOptions{
         this.videoBitsPerSecond = videoBitsPerSecond;
     }
 
-    @JsProperty(name="bitsPerSecond")
-    public double bitsPerSecond;
-
     @JsOverlay
     public final double getBitsPerSecond(){
         return this.bitsPerSecond;
@@ -78,6 +78,5 @@ public class MediaRecorderOptions{
     public final void setBitsPerSecond(double bitsPerSecond){
         this.bitsPerSecond = bitsPerSecond;
     }
-
 
 }

@@ -25,11 +25,11 @@ import jsinterop.annotations.JsType;
 @JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class MediaStreamAudioSourceOptions{
 
+    @JsProperty(name="mediaStream")
+    private MediaStream mediaStream;
+
     public MediaStreamAudioSourceOptions(){
     }
-
-    @JsProperty(name="mediaStream")
-    public MediaStream mediaStream;
 
     @JsOverlay
     public final MediaStream getMediaStream(){
@@ -40,6 +40,5 @@ public class MediaStreamAudioSourceOptions{
     public final void setMediaStream(MediaStream mediaStream){
         this.mediaStream = mediaStream;
     }
-
 
 }

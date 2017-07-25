@@ -24,6 +24,7 @@ import gwt.jelement.dom.NodeList;
 import gwt.jelement.events.EventTarget;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -56,96 +57,119 @@ public class Node extends EventTarget{
     }
     
     @JsProperty(name="nodeType")
-    public short nodeType;
+    public native short getNodeType();
     
     @JsProperty(name="nodeName")
-    public String nodeName;
+    public native String getNodeName();
     
     @JsProperty(name="baseURI")
-    public String baseURI;
+    public native String getBaseURI();
     
     @JsProperty(name="isConnected")
-    public boolean isConnected;
+    public native boolean getIsConnected();
     
     @JsProperty(name="ownerDocument")
-    public Document ownerDocument;
+    public native Document getOwnerDocument();
     
     @JsProperty(name="parentNode")
-    public Node parentNode;
+    public native Node getParentNode();
     
     @JsProperty(name="parentElement")
-    public Element parentElement;
+    public native Element getParentElement();
     
     @JsProperty(name="childNodes")
-    public NodeList childNodes;
+    public native NodeList getChildNodes();
     
     @JsProperty(name="firstChild")
-    public Node firstChild;
+    public native Node getFirstChild();
     
     @JsProperty(name="lastChild")
-    public Node lastChild;
+    public native Node getLastChild();
     
     @JsProperty(name="previousSibling")
-    public Node previousSibling;
+    public native Node getPreviousSibling();
     
     @JsProperty(name="nextSibling")
-    public Node nextSibling;
+    public native Node getNextSibling();
     
     @JsProperty(name="nodeValue")
-    public String nodeValue;
+    public native String getNodeValue();
+    
+    @JsProperty(name="nodeValue")
+    public native void setNodeValue(String nodeValue);
     
     @JsProperty(name="textContent")
-    public String textContent;
+    public native String getTextContent();
+    
+    @JsProperty(name="textContent")
+    public native void setTextContent(String textContent);
     
     @JsMethod(name = "appendChild")
     public native Node appendChild(Node node);
     
+    
     @JsMethod(name = "cloneNode")
     public native Node cloneNode();
+    
     
     @JsMethod(name = "cloneNode")
     public native Node cloneNode(boolean deep);
     
+    
     @JsMethod(name = "compareDocumentPosition")
     public native short compareDocumentPosition(Node other);
+    
     
     @JsMethod(name = "contains")
     public native boolean contains(Node other);
     
+    
     @JsMethod(name = "getRootNode")
     public native Node getRootNode();
+    
     
     @JsMethod(name = "getRootNode")
     public native Node getRootNode(GetRootNodeOptions options);
     
+    
     @JsMethod(name = "hasChildNodes")
     public native boolean hasChildNodes();
+    
     
     @JsMethod(name = "insertBefore")
     public native Node insertBefore(Node node, Node child);
     
+    
     @JsMethod(name = "isDefaultNamespace")
     public native boolean isDefaultNamespace(String namespaceURI);
+    
     
     @JsMethod(name = "isEqualNode")
     public native boolean isEqualNode(Node otherNode);
     
+    
     @JsMethod(name = "isSameNode")
     public native boolean isSameNode(Node otherNode);
+    
     
     @JsMethod(name = "lookupNamespaceURI")
     public native String lookupNamespaceURI(String prefix);
     
+    
     @JsMethod(name = "lookupPrefix")
     public native String lookupPrefix(String namespaceURI);
+    
     
     @JsMethod(name = "normalize")
     public native void normalize();
     
+    
     @JsMethod(name = "removeChild")
     public native Node removeChild(Node child);
     
+    
     @JsMethod(name = "replaceChild")
     public native Node replaceChild(Node node, Node child);
+    
     
 }

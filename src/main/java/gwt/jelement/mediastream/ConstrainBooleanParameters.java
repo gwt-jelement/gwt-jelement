@@ -24,11 +24,14 @@ import jsinterop.annotations.JsType;
 @JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class ConstrainBooleanParameters{
 
+    @JsProperty(name="exact")
+    private boolean exact;
+
+    @JsProperty(name="ideal")
+    private boolean ideal;
+
     public ConstrainBooleanParameters(){
     }
-
-    @JsProperty(name="exact")
-    public boolean exact;
 
     @JsOverlay
     public final boolean getExact(){
@@ -40,9 +43,6 @@ public class ConstrainBooleanParameters{
         this.exact = exact;
     }
 
-    @JsProperty(name="ideal")
-    public boolean ideal;
-
     @JsOverlay
     public final boolean getIdeal(){
         return this.ideal;
@@ -52,6 +52,5 @@ public class ConstrainBooleanParameters{
     public final void setIdeal(boolean ideal){
         this.ideal = ideal;
     }
-
 
 }

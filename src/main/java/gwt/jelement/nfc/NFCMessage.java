@@ -25,11 +25,14 @@ import jsinterop.annotations.JsType;
 @JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class NFCMessage{
 
+    @JsProperty(name="records")
+    private NFCRecord[] records;
+
+    @JsProperty(name="url")
+    private String url;
+
     public NFCMessage(){
     }
-
-    @JsProperty(name="records")
-    public NFCRecord[] records;
 
     @JsOverlay
     public final NFCRecord[] getRecords(){
@@ -41,9 +44,6 @@ public class NFCMessage{
         this.records = records;
     }
 
-    @JsProperty(name="url")
-    public String url;
-
     @JsOverlay
     public final String getUrl(){
         return this.url;
@@ -53,6 +53,5 @@ public class NFCMessage{
     public final void setUrl(String url){
         this.url = url;
     }
-
 
 }

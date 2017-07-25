@@ -66,16 +66,28 @@ public class VTTCue extends TextTrackCue{
     
     }
     
+    @JsProperty(name="vertical")
+    private String vertical;
+    
+    @JsProperty(name="line")
+    private LineUnion line;
+    
+    @JsProperty(name="position")
+    private LineUnion position;
+    
+    @JsProperty(name="align")
+    private String align;
+    
     @JsConstructor
     public VTTCue(){
         super();
     }
     
     @JsProperty(name="region")
-    public VTTRegion region;
+    public native VTTRegion getRegion();
     
-    @JsProperty(name="vertical")
-    public String vertical;
+    @JsProperty(name="region")
+    public native void setRegion(VTTRegion region);
     
     @JsOverlay
     public final DirectionSetting getVertical(){
@@ -88,10 +100,15 @@ public class VTTCue extends TextTrackCue{
     }
     
     @JsProperty(name="snapToLines")
-    public boolean snapToLines;
+    public native boolean getSnapToLines();
     
-    @JsProperty(name="line")
-    public LineUnion line;
+    @JsProperty(name="snapToLines")
+    public native void setSnapToLines(boolean snapToLines);
+    
+    @JsOverlay
+    public final LineUnion getLine(){
+        return this.line;
+    }
     
     @JsOverlay
     public final void setLine(double line){
@@ -103,8 +120,10 @@ public class VTTCue extends TextTrackCue{
         this.line = VTTCue.LineUnion.of(line);
     }
     
-    @JsProperty(name="position")
-    public LineUnion position;
+    @JsOverlay
+    public final LineUnion getPosition(){
+        return this.position;
+    }
     
     @JsOverlay
     public final void setPosition(double position){
@@ -117,10 +136,10 @@ public class VTTCue extends TextTrackCue{
     }
     
     @JsProperty(name="size")
-    public double size;
+    public native double getSize();
     
-    @JsProperty(name="align")
-    public String align;
+    @JsProperty(name="size")
+    public native void setSize(double size);
     
     @JsOverlay
     public final AlignSetting getAlign(){
@@ -133,9 +152,13 @@ public class VTTCue extends TextTrackCue{
     }
     
     @JsProperty(name="text")
-    public String text;
+    public native String getText();
+    
+    @JsProperty(name="text")
+    public native void setText(String text);
     
     @JsMethod(name = "getCueAsHTML")
     public native DocumentFragment getCueAsHTML();
+    
     
 }

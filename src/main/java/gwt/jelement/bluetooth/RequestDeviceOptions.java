@@ -26,11 +26,17 @@ import jsinterop.base.Js;
 @JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class RequestDeviceOptions{
 
+    @JsProperty(name="filters")
+    private BluetoothLEScanFilterInit[] filters;
+
+    @JsProperty(name="optionalServices")
+    private BluetoothLEScanFilterInit.BluetoothDescriptorUUID[] optionalServices;
+
+    @JsProperty(name="acceptAllDevices")
+    private boolean acceptAllDevices;
+
     public RequestDeviceOptions(){
     }
-
-    @JsProperty(name="filters")
-    public BluetoothLEScanFilterInit[] filters;
 
     @JsOverlay
     public final BluetoothLEScanFilterInit[] getFilters(){
@@ -42,9 +48,6 @@ public class RequestDeviceOptions{
         this.filters = filters;
     }
 
-    @JsProperty(name="optionalServices")
-    public BluetoothLEScanFilterInit.BluetoothDescriptorUUID[] optionalServices;
-
     @JsOverlay
     public final BluetoothLEScanFilterInit.BluetoothDescriptorUUID[] getOptionalServices(){
         return this.optionalServices;
@@ -55,9 +58,6 @@ public class RequestDeviceOptions{
         this.optionalServices = optionalServices;
     }
 
-    @JsProperty(name="acceptAllDevices")
-    public boolean acceptAllDevices;
-
     @JsOverlay
     public final boolean getAcceptAllDevices(){
         return this.acceptAllDevices;
@@ -67,6 +67,5 @@ public class RequestDeviceOptions{
     public final void setAcceptAllDevices(boolean acceptAllDevices){
         this.acceptAllDevices = acceptAllDevices;
     }
-
 
 }

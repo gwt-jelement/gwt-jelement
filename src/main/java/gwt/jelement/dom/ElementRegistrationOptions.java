@@ -24,11 +24,14 @@ import jsinterop.annotations.JsType;
 @JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class ElementRegistrationOptions{
 
+    @JsProperty(name="prototype")
+    private Object prototype;
+
+    @JsProperty(name="extends")
+    private String extends_;
+
     public ElementRegistrationOptions(){
     }
-
-    @JsProperty(name="prototype")
-    public Object prototype;
 
     @JsOverlay
     public final Object getPrototype(){
@@ -40,9 +43,6 @@ public class ElementRegistrationOptions{
         this.prototype = prototype;
     }
 
-    @JsProperty(name="extends")
-    public String extends_;
-
     @JsOverlay
     public final String getExtends(){
         return this.extends_;
@@ -52,6 +52,5 @@ public class ElementRegistrationOptions{
     public final void setExtends(String extends_){
         this.extends_ = extends_;
     }
-
 
 }

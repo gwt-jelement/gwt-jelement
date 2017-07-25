@@ -24,6 +24,7 @@ import gwt.jelement.mediastream.MediaStreamTrack;
 import elemental2.promise.Promise;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -36,24 +37,30 @@ public class ImageCapture{
     }
     
     @JsProperty(name="track")
-    public MediaStreamTrack track;
+    public native MediaStreamTrack getTrack();
     
     @JsMethod(name = "getPhotoCapabilities")
     public native Promise<PhotoCapabilities> getPhotoCapabilities();
     
+    
     @JsMethod(name = "getPhotoSettings")
     public native Promise<PhotoSettings> getPhotoSettings();
+    
     
     @JsMethod(name = "grabFrame")
     public native Promise<ImageBitmap> grabFrame();
     
+    
     @JsMethod(name = "setOptions")
     public native Promise<Void> setOptions(PhotoSettings photoSettings);
+    
     
     @JsMethod(name = "takePhoto")
     public native Promise<Blob> takePhoto();
     
+    
     @JsMethod(name = "takePhoto")
     public native Promise<Blob> takePhoto(PhotoSettings photoSettings);
+    
     
 }

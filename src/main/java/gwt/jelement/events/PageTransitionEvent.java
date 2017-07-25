@@ -19,6 +19,7 @@ package gwt.jelement.events;
 import gwt.jelement.events.Event;
 import gwt.jelement.events.PageTransitionEventInit;
 import jsinterop.annotations.JsConstructor;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -37,7 +38,7 @@ public class PageTransitionEvent extends Event{
     }
     
     @JsProperty(name="persisted")
-    public boolean persisted;
+    public native boolean getPersisted();
     
     
 }

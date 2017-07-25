@@ -19,6 +19,7 @@ package gwt.jelement.timing;
 import gwt.jelement.timing.PerformanceEntry;
 import gwt.jelement.timing.TaskAttributionTiming;
 import jsinterop.annotations.JsConstructor;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -32,7 +33,7 @@ public class PerformanceLongTaskTiming extends PerformanceEntry{
     }
     
     @JsProperty(name="attribution")
-    public TaskAttributionTiming[] attribution;
+    public native TaskAttributionTiming[] getAttribution();
     
     
 }

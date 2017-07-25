@@ -25,11 +25,17 @@ import jsinterop.annotations.JsType;
 @JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class PasswordCredentialData extends CredentialData{
 
+    @JsProperty(name="name")
+    private String name;
+
+    @JsProperty(name="iconURL")
+    private String iconURL;
+
+    @JsProperty(name="password")
+    private String password;
+
     public PasswordCredentialData(){
     }
-
-    @JsProperty(name="name")
-    public String name;
 
     @JsOverlay
     public final String getName(){
@@ -41,9 +47,6 @@ public class PasswordCredentialData extends CredentialData{
         this.name = name;
     }
 
-    @JsProperty(name="iconURL")
-    public String iconURL;
-
     @JsOverlay
     public final String getIconURL(){
         return this.iconURL;
@@ -54,9 +57,6 @@ public class PasswordCredentialData extends CredentialData{
         this.iconURL = iconURL;
     }
 
-    @JsProperty(name="password")
-    public String password;
-
     @JsOverlay
     public final String getPassword(){
         return this.password;
@@ -66,6 +66,5 @@ public class PasswordCredentialData extends CredentialData{
     public final void setPassword(String password){
         this.password = password;
     }
-
 
 }

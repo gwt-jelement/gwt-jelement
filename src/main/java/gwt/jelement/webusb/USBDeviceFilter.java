@@ -24,11 +24,26 @@ import jsinterop.annotations.JsType;
 @JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class USBDeviceFilter{
 
+    @JsProperty(name="vendorId")
+    private short vendorId;
+
+    @JsProperty(name="productId")
+    private short productId;
+
+    @JsProperty(name="classCode")
+    private byte classCode;
+
+    @JsProperty(name="subclassCode")
+    private byte subclassCode;
+
+    @JsProperty(name="protocolCode")
+    private byte protocolCode;
+
+    @JsProperty(name="serialNumber")
+    private String serialNumber;
+
     public USBDeviceFilter(){
     }
-
-    @JsProperty(name="vendorId")
-    public short vendorId;
 
     @JsOverlay
     public final short getVendorId(){
@@ -40,9 +55,6 @@ public class USBDeviceFilter{
         this.vendorId = vendorId;
     }
 
-    @JsProperty(name="productId")
-    public short productId;
-
     @JsOverlay
     public final short getProductId(){
         return this.productId;
@@ -52,9 +64,6 @@ public class USBDeviceFilter{
     public final void setProductId(short productId){
         this.productId = productId;
     }
-
-    @JsProperty(name="classCode")
-    public byte classCode;
 
     @JsOverlay
     public final byte getClassCode(){
@@ -66,9 +75,6 @@ public class USBDeviceFilter{
         this.classCode = classCode;
     }
 
-    @JsProperty(name="subclassCode")
-    public byte subclassCode;
-
     @JsOverlay
     public final byte getSubclassCode(){
         return this.subclassCode;
@@ -78,9 +84,6 @@ public class USBDeviceFilter{
     public final void setSubclassCode(byte subclassCode){
         this.subclassCode = subclassCode;
     }
-
-    @JsProperty(name="protocolCode")
-    public byte protocolCode;
 
     @JsOverlay
     public final byte getProtocolCode(){
@@ -92,9 +95,6 @@ public class USBDeviceFilter{
         this.protocolCode = protocolCode;
     }
 
-    @JsProperty(name="serialNumber")
-    public String serialNumber;
-
     @JsOverlay
     public final String getSerialNumber(){
         return this.serialNumber;
@@ -104,6 +104,5 @@ public class USBDeviceFilter{
     public final void setSerialNumber(String serialNumber){
         this.serialNumber = serialNumber;
     }
-
 
 }

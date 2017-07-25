@@ -19,6 +19,7 @@ package gwt.jelement.webgl;
 import gwt.jelement.events.Event;
 import gwt.jelement.webgl.WebGLContextEventInit;
 import jsinterop.annotations.JsConstructor;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -37,7 +38,7 @@ public class WebGLContextEvent extends Event{
     }
     
     @JsProperty(name="statusMessage")
-    public String statusMessage;
+    public native String getStatusMessage();
     
     
 }

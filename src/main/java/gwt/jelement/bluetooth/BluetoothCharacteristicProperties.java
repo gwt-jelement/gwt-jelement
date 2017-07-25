@@ -16,6 +16,7 @@
  */
 package gwt.jelement.bluetooth;
 
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -24,31 +25,31 @@ import jsinterop.annotations.JsType;
 public class BluetoothCharacteristicProperties{
     
     @JsProperty(name="broadcast")
-    public boolean broadcast;
+    public native boolean getBroadcast();
     
     @JsProperty(name="read")
-    public boolean read;
+    public native boolean getRead();
     
     @JsProperty(name="writeWithoutResponse")
-    public boolean writeWithoutResponse;
+    public native boolean getWriteWithoutResponse();
     
     @JsProperty(name="write")
-    public boolean write;
+    public native boolean getWrite();
     
     @JsProperty(name="notify")
-    public boolean notify;
+    public native boolean getNotify();
     
     @JsProperty(name="indicate")
-    public boolean indicate;
+    public native boolean getIndicate();
     
     @JsProperty(name="authenticatedSignedWrites")
-    public boolean authenticatedSignedWrites;
+    public native boolean getAuthenticatedSignedWrites();
     
     @JsProperty(name="reliableWrite")
-    public boolean reliableWrite;
+    public native boolean getReliableWrite();
     
     @JsProperty(name="writableAuxiliaries")
-    public boolean writableAuxiliaries;
+    public native boolean getWritableAuxiliaries();
     
     
 }

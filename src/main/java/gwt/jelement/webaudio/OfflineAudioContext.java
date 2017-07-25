@@ -22,6 +22,7 @@ import gwt.jelement.webaudio.BaseAudioContext;
 import elemental2.promise.Promise;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -29,21 +30,33 @@ import jsinterop.annotations.JsType;
 @JsType(namespace = JsPackage.GLOBAL, isNative = true)
 public class OfflineAudioContext extends BaseAudioContext{
     
+    @JsProperty(name="oncomplete")
+    private EventHandlerNonNull oncomplete;
+    
     @JsConstructor
     public OfflineAudioContext(double numberOfChannels, double numberOfFrames, float sampleRate){
         super();
     }
     
-    @JsProperty(name="oncomplete")
-    public EventHandlerNonNull oncomplete;
+    @JsOverlay
+    public final EventHandlerNonNull getOnComplete(){
+        return this.oncomplete;
+    }
+    
+    @JsOverlay
+    public final void setOnComplete(EventHandlerNonNull oncomplete){
+        this.oncomplete = oncomplete;
+    }
     
     @JsProperty(name="length")
-    public double length;
+    public native double getLength();
     
     @JsMethod(name = "startRendering")
     public native Promise<AudioBuffer> startRendering();
     
+    
     @JsMethod(name = "suspend")
     public native Promise<Void> suspend(double suspendTime);
+    
     
 }

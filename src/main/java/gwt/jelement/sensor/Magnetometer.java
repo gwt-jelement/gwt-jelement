@@ -19,6 +19,7 @@ package gwt.jelement.sensor;
 import gwt.jelement.sensor.Sensor;
 import gwt.jelement.sensor.SensorOptions;
 import jsinterop.annotations.JsConstructor;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -37,13 +38,13 @@ public class Magnetometer extends Sensor{
     }
     
     @JsProperty(name="x")
-    public double x;
+    public native double getX();
     
     @JsProperty(name="y")
-    public double y;
+    public native double getY();
     
     @JsProperty(name="z")
-    public double z;
+    public native double getZ();
     
     
 }

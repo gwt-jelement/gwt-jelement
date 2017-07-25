@@ -20,6 +20,7 @@ import gwt.jelement.events.EventHandlerNonNull;
 import gwt.jelement.events.EventTarget;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -27,24 +28,46 @@ import jsinterop.annotations.JsType;
 @JsType(namespace = JsPackage.GLOBAL, isNative = true)
 public class BroadcastChannel extends EventTarget{
     
+    @JsProperty(name="onmessage")
+    private EventHandlerNonNull onmessage;
+    
+    @JsProperty(name="onmessageerror")
+    private EventHandlerNonNull onmessageerror;
+    
     @JsConstructor
     public BroadcastChannel(String name){
         super();
     }
     
     @JsProperty(name="name")
-    public String name;
+    public native String getName();
     
-    @JsProperty(name="onmessage")
-    public EventHandlerNonNull onmessage;
+    @JsOverlay
+    public final EventHandlerNonNull getOnMessage(){
+        return this.onmessage;
+    }
     
-    @JsProperty(name="onmessageerror")
-    public EventHandlerNonNull onmessageerror;
+    @JsOverlay
+    public final void setOnMessage(EventHandlerNonNull onmessage){
+        this.onmessage = onmessage;
+    }
+    
+    @JsOverlay
+    public final EventHandlerNonNull getOnMessageerror(){
+        return this.onmessageerror;
+    }
+    
+    @JsOverlay
+    public final void setOnMessageerror(EventHandlerNonNull onmessageerror){
+        this.onmessageerror = onmessageerror;
+    }
     
     @JsMethod(name = "close")
     public native void close();
     
+    
     @JsMethod(name = "postMessage")
     public native void postMessage(Object message);
+    
     
 }

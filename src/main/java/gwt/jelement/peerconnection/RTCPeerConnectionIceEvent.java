@@ -20,6 +20,7 @@ import gwt.jelement.events.Event;
 import gwt.jelement.peerconnection.RTCIceCandidate;
 import gwt.jelement.peerconnection.RTCPeerConnectionIceEventInit;
 import jsinterop.annotations.JsConstructor;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -38,7 +39,7 @@ public class RTCPeerConnectionIceEvent extends Event{
     }
     
     @JsProperty(name="candidate")
-    public RTCIceCandidate candidate;
+    public native RTCIceCandidate getCandidate();
     
     
 }

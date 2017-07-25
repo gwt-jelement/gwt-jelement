@@ -20,6 +20,7 @@ import gwt.jelement.html.VoidCallback;
 import gwt.jelement.webdatabase.SQLTransactionCallback;
 import gwt.jelement.webdatabase.SQLTransactionErrorCallback;
 import jsinterop.annotations.JsMethod;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -28,36 +29,46 @@ import jsinterop.annotations.JsType;
 public class Database{
     
     @JsProperty(name="version")
-    public String version;
+    public native String getVersion();
     
     @JsMethod(name = "changeVersion")
     public native void changeVersion(String oldVersion, String newVersion);
     
+    
     @JsMethod(name = "changeVersion")
     public native void changeVersion(String oldVersion, String newVersion, SQLTransactionCallback callback);
+    
     
     @JsMethod(name = "changeVersion")
     public native void changeVersion(String oldVersion, String newVersion, SQLTransactionCallback callback, SQLTransactionErrorCallback errorCallback);
     
+    
     @JsMethod(name = "changeVersion")
     public native void changeVersion(String oldVersion, String newVersion, SQLTransactionCallback callback, SQLTransactionErrorCallback errorCallback, VoidCallback successCallback);
+    
     
     @JsMethod(name = "readTransaction")
     public native void readTransaction(SQLTransactionCallback callback);
     
+    
     @JsMethod(name = "readTransaction")
     public native void readTransaction(SQLTransactionCallback callback, SQLTransactionErrorCallback errorCallback);
+    
     
     @JsMethod(name = "readTransaction")
     public native void readTransaction(SQLTransactionCallback callback, SQLTransactionErrorCallback errorCallback, VoidCallback successCallback);
     
+    
     @JsMethod(name = "transaction")
     public native void transaction(SQLTransactionCallback callback);
+    
     
     @JsMethod(name = "transaction")
     public native void transaction(SQLTransactionCallback callback, SQLTransactionErrorCallback errorCallback);
     
+    
     @JsMethod(name = "transaction")
     public native void transaction(SQLTransactionCallback callback, SQLTransactionErrorCallback errorCallback, VoidCallback successCallback);
+    
     
 }

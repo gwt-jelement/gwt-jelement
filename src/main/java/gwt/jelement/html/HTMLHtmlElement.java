@@ -18,6 +18,7 @@ package gwt.jelement.html;
 
 import gwt.jelement.html.HTMLElement;
 import jsinterop.annotations.JsConstructor;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -31,7 +32,10 @@ public class HTMLHtmlElement extends HTMLElement{
     }
     
     @JsProperty(name="version")
-    public String version;
+    public native String getVersion();
+    
+    @JsProperty(name="version")
+    public native void setVersion(String version);
     
     
 }

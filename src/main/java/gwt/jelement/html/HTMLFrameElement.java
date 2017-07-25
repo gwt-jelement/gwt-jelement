@@ -20,6 +20,7 @@ import gwt.jelement.dom.Document;
 import gwt.jelement.frame.Window;
 import gwt.jelement.html.HTMLElement;
 import jsinterop.annotations.JsConstructor;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -33,34 +34,58 @@ public class HTMLFrameElement extends HTMLElement{
     }
     
     @JsProperty(name="name")
-    public String name;
+    public native String getName();
+    
+    @JsProperty(name="name")
+    public native void setName(String name);
     
     @JsProperty(name="scrolling")
-    public String scrolling;
+    public native String getScrolling();
+    
+    @JsProperty(name="scrolling")
+    public native void setScrolling(String scrolling);
     
     @JsProperty(name="src")
-    public String src;
+    public native String getSrc();
+    
+    @JsProperty(name="src")
+    public native void setSrc(String src);
     
     @JsProperty(name="frameBorder")
-    public String frameBorder;
+    public native String getFrameBorder();
+    
+    @JsProperty(name="frameBorder")
+    public native void setFrameBorder(String frameBorder);
     
     @JsProperty(name="longDesc")
-    public String longDesc;
+    public native String getLongDesc();
+    
+    @JsProperty(name="longDesc")
+    public native void setLongDesc(String longDesc);
     
     @JsProperty(name="noResize")
-    public boolean noResize;
+    public native boolean getNoResize();
+    
+    @JsProperty(name="noResize")
+    public native void setNoResize(boolean noResize);
     
     @JsProperty(name="contentDocument")
-    public Document contentDocument;
+    public native Document getContentDocument();
     
     @JsProperty(name="contentWindow")
-    public Window contentWindow;
+    public native Window getContentWindow();
     
     @JsProperty(name="marginHeight")
-    public String marginHeight;
+    public native String getMarginHeight();
+    
+    @JsProperty(name="marginHeight")
+    public native void setMarginHeight(String marginHeight);
     
     @JsProperty(name="marginWidth")
-    public String marginWidth;
+    public native String getMarginWidth();
+    
+    @JsProperty(name="marginWidth")
+    public native void setMarginWidth(String marginWidth);
     
     
 }

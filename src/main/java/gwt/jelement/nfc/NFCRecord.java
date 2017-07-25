@@ -25,11 +25,17 @@ import jsinterop.annotations.JsType;
 @JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class NFCRecord{
 
+    @JsProperty(name="recordType")
+    private String recordType;
+
+    @JsProperty(name="mediaType")
+    private String mediaType;
+
+    @JsProperty(name="data")
+    private Object data;
+
     public NFCRecord(){
     }
-
-    @JsProperty(name="recordType")
-    public String recordType;
 
     @JsOverlay
     public final NFCRecordType getRecordType(){
@@ -41,9 +47,6 @@ public class NFCRecord{
         this.recordType = recordType.getInternalValue();
     }
 
-    @JsProperty(name="mediaType")
-    public String mediaType;
-
     @JsOverlay
     public final String getMediaType(){
         return this.mediaType;
@@ -54,9 +57,6 @@ public class NFCRecord{
         this.mediaType = mediaType;
     }
 
-    @JsProperty(name="data")
-    public Object data;
-
     @JsOverlay
     public final Object getData(){
         return this.data;
@@ -66,6 +66,5 @@ public class NFCRecord{
     public final void setData(Object data){
         this.data = data;
     }
-
 
 }

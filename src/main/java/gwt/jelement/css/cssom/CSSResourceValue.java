@@ -27,13 +27,13 @@ import jsinterop.annotations.JsType;
 @JsType(namespace = JsPackage.GLOBAL, isNative = true)
 public class CSSResourceValue extends CSSStyleValue{
     
+    @JsProperty(name="state")
+    private String state;
+    
     @JsConstructor
     public CSSResourceValue(){
         super();
     }
-    
-    @JsProperty(name="state")
-    public String state;
     
     @JsOverlay
     public final CSSResourceState getState(){

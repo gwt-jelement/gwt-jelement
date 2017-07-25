@@ -29,13 +29,22 @@ import jsinterop.annotations.JsType;
 @JsType(namespace = JsPackage.GLOBAL, isNative = true)
 public class NetworkInformation extends EventTarget{
     
+    @JsProperty(name="type")
+    private String type;
+    
+    @JsProperty(name="onchange")
+    private EventHandlerNonNull onchange;
+    
+    @JsProperty(name="ontypechange")
+    private EventHandlerNonNull ontypechange;
+    
+    @JsProperty(name="effectiveType")
+    private String effectiveType;
+    
     @JsConstructor
     public NetworkInformation(){
         super();
     }
-    
-    @JsProperty(name="type")
-    public String type;
     
     @JsOverlay
     public final ConnectionType getType(){
@@ -43,16 +52,27 @@ public class NetworkInformation extends EventTarget{
     }
     
     @JsProperty(name="downlinkMax")
-    public double downlinkMax;
+    public native double getDownlinkMax();
     
-    @JsProperty(name="onchange")
-    public EventHandlerNonNull onchange;
+    @JsOverlay
+    public final EventHandlerNonNull getOnChange(){
+        return this.onchange;
+    }
     
-    @JsProperty(name="ontypechange")
-    public EventHandlerNonNull ontypechange;
+    @JsOverlay
+    public final void setOnChange(EventHandlerNonNull onchange){
+        this.onchange = onchange;
+    }
     
-    @JsProperty(name="effectiveType")
-    public String effectiveType;
+    @JsOverlay
+    public final EventHandlerNonNull getOnTypechange(){
+        return this.ontypechange;
+    }
+    
+    @JsOverlay
+    public final void setOnTypechange(EventHandlerNonNull ontypechange){
+        this.ontypechange = ontypechange;
+    }
     
     @JsOverlay
     public final EffectiveConnectionType getEffectiveType(){
@@ -60,10 +80,10 @@ public class NetworkInformation extends EventTarget{
     }
     
     @JsProperty(name="rtt")
-    public double rtt;
+    public native double getRtt();
     
     @JsProperty(name="downlink")
-    public double downlink;
+    public native double getDownlink();
     
     
 }

@@ -22,6 +22,7 @@ import gwt.jelement.dom.Text;
 import gwt.jelement.html.HTMLSlotElement;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -40,15 +41,17 @@ public class Text extends CharacterData{
     }
     
     @JsProperty(name="wholeText")
-    public String wholeText;
+    public native String getWholeText();
     
     @JsProperty(name="assignedSlot")
-    public HTMLSlotElement assignedSlot;
+    public native HTMLSlotElement getAssignedSlot();
     
     @JsMethod(name = "getDestinationInsertionPoints")
     public native NodeList getDestinationInsertionPoints();
     
+    
     @JsMethod(name = "splitText")
     public native Text splitText(double offset);
+    
     
 }

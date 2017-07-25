@@ -30,68 +30,135 @@ import jsinterop.annotations.JsType;
 @JsType(namespace = JsPackage.GLOBAL, isNative = true)
 public class MediaRecorder extends EventTarget{
     
+    @JsProperty(name="state")
+    private String state;
+    
+    @JsProperty(name="onstart")
+    private EventHandlerNonNull onstart;
+    
+    @JsProperty(name="onstop")
+    private EventHandlerNonNull onstop;
+    
+    @JsProperty(name="ondataavailable")
+    private EventHandlerNonNull ondataavailable;
+    
+    @JsProperty(name="onpause")
+    private EventHandlerNonNull onpause;
+    
+    @JsProperty(name="onresume")
+    private EventHandlerNonNull onresume;
+    
+    @JsProperty(name="onerror")
+    private EventHandlerNonNull onerror;
+    
     @JsConstructor
     public MediaRecorder(){
         super();
     }
     
     @JsProperty(name="stream")
-    public MediaStream stream;
+    public native MediaStream getStream();
     
     @JsProperty(name="mimeType")
-    public String mimeType;
-    
-    @JsProperty(name="state")
-    public String state;
+    public native String getMimeType();
     
     @JsOverlay
     public final RecordingState getState(){
        return RecordingState.of(state);
     }
     
-    @JsProperty(name="onstart")
-    public EventHandlerNonNull onstart;
+    @JsOverlay
+    public final EventHandlerNonNull getOnStart(){
+        return this.onstart;
+    }
     
-    @JsProperty(name="onstop")
-    public EventHandlerNonNull onstop;
+    @JsOverlay
+    public final void setOnStart(EventHandlerNonNull onstart){
+        this.onstart = onstart;
+    }
     
-    @JsProperty(name="ondataavailable")
-    public EventHandlerNonNull ondataavailable;
+    @JsOverlay
+    public final EventHandlerNonNull getOnStop(){
+        return this.onstop;
+    }
     
-    @JsProperty(name="onpause")
-    public EventHandlerNonNull onpause;
+    @JsOverlay
+    public final void setOnStop(EventHandlerNonNull onstop){
+        this.onstop = onstop;
+    }
     
-    @JsProperty(name="onresume")
-    public EventHandlerNonNull onresume;
+    @JsOverlay
+    public final EventHandlerNonNull getOnDataavailable(){
+        return this.ondataavailable;
+    }
     
-    @JsProperty(name="onerror")
-    public EventHandlerNonNull onerror;
+    @JsOverlay
+    public final void setOnDataavailable(EventHandlerNonNull ondataavailable){
+        this.ondataavailable = ondataavailable;
+    }
+    
+    @JsOverlay
+    public final EventHandlerNonNull getOnPause(){
+        return this.onpause;
+    }
+    
+    @JsOverlay
+    public final void setOnPause(EventHandlerNonNull onpause){
+        this.onpause = onpause;
+    }
+    
+    @JsOverlay
+    public final EventHandlerNonNull getOnResume(){
+        return this.onresume;
+    }
+    
+    @JsOverlay
+    public final void setOnResume(EventHandlerNonNull onresume){
+        this.onresume = onresume;
+    }
+    
+    @JsOverlay
+    public final EventHandlerNonNull getOnError(){
+        return this.onerror;
+    }
+    
+    @JsOverlay
+    public final void setOnError(EventHandlerNonNull onerror){
+        this.onerror = onerror;
+    }
     
     @JsProperty(name="videoBitsPerSecond")
-    public double videoBitsPerSecond;
+    public native double getVideoBitsPerSecond();
     
     @JsProperty(name="audioBitsPerSecond")
-    public double audioBitsPerSecond;
+    public native double getAudioBitsPerSecond();
     
     @JsMethod(name = "isTypeSupported")
     public native boolean isTypeSupported(String type);
     
+    
     @JsMethod(name = "pause")
     public native void pause();
+    
     
     @JsMethod(name = "requestData")
     public native void requestData();
     
+    
     @JsMethod(name = "resume")
     public native void resume();
+    
     
     @JsMethod(name = "start")
     public native void start();
     
+    
     @JsMethod(name = "start")
     public native void start(double timeslice);
     
+    
     @JsMethod(name = "stop")
     public native void stop();
+    
     
 }

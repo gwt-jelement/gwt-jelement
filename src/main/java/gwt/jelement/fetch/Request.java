@@ -36,52 +36,52 @@ import jsinterop.annotations.JsType;
 @JsType(namespace = JsPackage.GLOBAL, isNative = true)
 public class Request{
     
+    @JsProperty(name="referrerPolicy")
+    private String referrerPolicy;
+    
+    @JsProperty(name="mode")
+    private String mode;
+    
+    @JsProperty(name="credentials")
+    private String credentials;
+    
+    @JsProperty(name="cache")
+    private String cache;
+    
+    @JsProperty(name="redirect")
+    private String redirect;
+    
     @JsProperty(name="method")
-    public String method;
+    public native String getMethod();
     
     @JsProperty(name="url")
-    public String url;
+    public native String getUrl();
     
     @JsProperty(name="headers")
-    public Headers headers;
+    public native Headers getHeaders();
     
     @JsProperty(name="referrer")
-    public String referrer;
-    
-    @JsProperty(name="referrerPolicy")
-    public String referrerPolicy;
+    public native String getReferrer();
     
     @JsOverlay
     public final ReferrerPolicy getReferrerPolicy(){
        return ReferrerPolicy.of(referrerPolicy);
     }
     
-    @JsProperty(name="mode")
-    public String mode;
-    
     @JsOverlay
     public final RequestMode getMode(){
        return RequestMode.of(mode);
     }
-    
-    @JsProperty(name="credentials")
-    public String credentials;
     
     @JsOverlay
     public final RequestCredentials getCredentials(){
        return RequestCredentials.of(credentials);
     }
     
-    @JsProperty(name="cache")
-    public String cache;
-    
     @JsOverlay
     public final RequestCache getCache(){
        return RequestCache.of(cache);
     }
-    
-    @JsProperty(name="redirect")
-    public String redirect;
     
     @JsOverlay
     public final RequestRedirect getRedirect(){
@@ -89,27 +89,33 @@ public class Request{
     }
     
     @JsProperty(name="integrity")
-    public String integrity;
+    public native String getIntegrity();
     
     @JsProperty(name="bodyUsed")
-    public boolean bodyUsed;
+    public native boolean getBodyUsed();
     
     @JsMethod(name = "arrayBuffer")
     public native Promise<ArrayBuffer> arrayBuffer();
     
+    
     @JsMethod(name = "blob")
     public native Promise<Blob> blob();
+    
     
     @JsMethod(name = "clone")
     public native Request clone();
     
+    
     @JsMethod(name = "formData")
     public native Promise<FormData> formData();
+    
     
     @JsMethod(name = "json")
     public native Promise<Object> json();
     
+    
     @JsMethod(name = "text")
     public native Promise<String> text();
+    
     
 }

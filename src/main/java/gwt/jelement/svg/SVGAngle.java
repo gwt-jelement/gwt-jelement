@@ -17,6 +17,7 @@
 package gwt.jelement.svg;
 
 import jsinterop.annotations.JsMethod;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -31,21 +32,32 @@ public class SVGAngle{
     
     
     @JsProperty(name="unitType")
-    public short unitType;
+    public native short getUnitType();
     
     @JsProperty(name="value")
-    public float value;
+    public native float getValue();
+    
+    @JsProperty(name="value")
+    public native void setValue(float value);
     
     @JsProperty(name="valueInSpecifiedUnits")
-    public float valueInSpecifiedUnits;
+    public native float getValueInSpecifiedUnits();
+    
+    @JsProperty(name="valueInSpecifiedUnits")
+    public native void setValueInSpecifiedUnits(float valueInSpecifiedUnits);
     
     @JsProperty(name="valueAsString")
-    public String valueAsString;
+    public native String getValueAsString();
+    
+    @JsProperty(name="valueAsString")
+    public native void setValueAsString(String valueAsString);
     
     @JsMethod(name = "convertToSpecifiedUnits")
     public native void convertToSpecifiedUnits(short unitType);
     
+    
     @JsMethod(name = "newValueSpecifiedUnits")
     public native void newValueSpecifiedUnits(short unitType, float valueInSpecifiedUnits);
+    
     
 }

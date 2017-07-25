@@ -19,6 +19,7 @@ package gwt.jelement.css.cssom;
 import gwt.jelement.css.cssom.CSSNumericValue;
 import gwt.jelement.css.cssom.CSSStyleValue;
 import jsinterop.annotations.JsConstructor;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -32,10 +33,10 @@ public class CSSPositionValue extends CSSStyleValue{
     }
     
     @JsProperty(name="x")
-    public CSSNumericValue x;
+    public native CSSNumericValue getX();
     
     @JsProperty(name="y")
-    public CSSNumericValue y;
+    public native CSSNumericValue getY();
     
     
 }

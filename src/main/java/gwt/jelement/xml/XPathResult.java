@@ -18,6 +18,7 @@ package gwt.jelement.xml;
 
 import gwt.jelement.dom.Node;
 import jsinterop.annotations.JsMethod;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -37,30 +38,32 @@ public class XPathResult{
     
     
     @JsProperty(name="resultType")
-    public short resultType;
+    public native short getResultType();
     
     @JsProperty(name="numberValue")
-    public double numberValue;
+    public native double getNumberValue();
     
     @JsProperty(name="stringValue")
-    public String stringValue;
+    public native String getStringValue();
     
     @JsProperty(name="booleanValue")
-    public boolean booleanValue;
+    public native boolean getBooleanValue();
     
     @JsProperty(name="singleNodeValue")
-    public Node singleNodeValue;
+    public native Node getSingleNodeValue();
     
     @JsProperty(name="invalidIteratorState")
-    public boolean invalidIteratorState;
+    public native boolean getInvalidIteratorState();
     
     @JsProperty(name="snapshotLength")
-    public double snapshotLength;
+    public native double getSnapshotLength();
     
     @JsMethod(name = "iterateNext")
     public native Node iterateNext();
     
+    
     @JsMethod(name = "snapshotItem")
     public native Node snapshotItem(double index);
+    
     
 }

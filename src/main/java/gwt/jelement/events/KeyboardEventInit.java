@@ -25,11 +25,23 @@ import jsinterop.annotations.JsType;
 @JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class KeyboardEventInit extends EventModifierInit{
 
+    @JsProperty(name="key")
+    private String key;
+
+    @JsProperty(name="code")
+    private String code;
+
+    @JsProperty(name="location")
+    private double location;
+
+    @JsProperty(name="repeat")
+    private boolean repeat;
+
+    @JsProperty(name="isComposing")
+    private boolean isComposing;
+
     public KeyboardEventInit(){
     }
-
-    @JsProperty(name="key")
-    public String key;
 
     @JsOverlay
     public final String getKey(){
@@ -41,9 +53,6 @@ public class KeyboardEventInit extends EventModifierInit{
         this.key = key;
     }
 
-    @JsProperty(name="code")
-    public String code;
-
     @JsOverlay
     public final String getCode(){
         return this.code;
@@ -53,9 +62,6 @@ public class KeyboardEventInit extends EventModifierInit{
     public final void setCode(String code){
         this.code = code;
     }
-
-    @JsProperty(name="location")
-    public double location;
 
     @JsOverlay
     public final double getLocation(){
@@ -67,9 +73,6 @@ public class KeyboardEventInit extends EventModifierInit{
         this.location = location;
     }
 
-    @JsProperty(name="repeat")
-    public boolean repeat;
-
     @JsOverlay
     public final boolean getRepeat(){
         return this.repeat;
@@ -80,9 +83,6 @@ public class KeyboardEventInit extends EventModifierInit{
         this.repeat = repeat;
     }
 
-    @JsProperty(name="isComposing")
-    public boolean isComposing;
-
     @JsOverlay
     public final boolean getIsComposing(){
         return this.isComposing;
@@ -92,6 +92,5 @@ public class KeyboardEventInit extends EventModifierInit{
     public final void setIsComposing(boolean isComposing){
         this.isComposing = isComposing;
     }
-
 
 }

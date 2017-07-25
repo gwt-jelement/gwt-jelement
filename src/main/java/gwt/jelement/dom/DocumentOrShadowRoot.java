@@ -20,6 +20,7 @@ import gwt.jelement.css.StyleSheetList;
 import gwt.jelement.dom.Element;
 import gwt.jelement.editing.Selection;
 import jsinterop.annotations.JsMethod;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -28,24 +29,27 @@ import jsinterop.annotations.JsType;
 public class DocumentOrShadowRoot{
     
     @JsProperty(name="activeElement")
-    public Element activeElement;
+    public native Element getActiveElement();
     
     @JsProperty(name="styleSheets")
-    public StyleSheetList styleSheets;
+    public native StyleSheetList getStyleSheets();
     
     @JsProperty(name="pointerLockElement")
-    public Element pointerLockElement;
+    public native Element getPointerLockElement();
     
     @JsProperty(name="fullscreenElement")
-    public Element fullscreenElement;
+    public native Element getFullscreenElement();
     
     @JsMethod(name = "elementFromPoint")
     public native Element elementFromPoint(double x, double y);
     
+    
     @JsMethod(name = "elementsFromPoint")
     public native Element[] elementsFromPoint(double x, double y);
     
+    
     @JsMethod(name = "getSelection")
     public native Selection getSelection();
+    
     
 }

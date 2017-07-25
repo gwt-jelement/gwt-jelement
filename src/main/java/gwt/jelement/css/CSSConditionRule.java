@@ -18,6 +18,7 @@ package gwt.jelement.css;
 
 import gwt.jelement.css.CSSGroupingRule;
 import jsinterop.annotations.JsConstructor;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -31,7 +32,7 @@ public class CSSConditionRule extends CSSGroupingRule{
     }
     
     @JsProperty(name="conditionText")
-    public String conditionText;
+    public native String getConditionText();
     
     
 }

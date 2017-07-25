@@ -21,6 +21,7 @@ import gwt.jelement.events.EventTarget;
 import gwt.jelement.webmidi.MIDIInputMap;
 import gwt.jelement.webmidi.MIDIOutputMap;
 import jsinterop.annotations.JsConstructor;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -28,22 +29,32 @@ import jsinterop.annotations.JsType;
 @JsType(namespace = JsPackage.GLOBAL, isNative = true)
 public class MIDIAccess extends EventTarget{
     
+    @JsProperty(name="onstatechange")
+    private EventHandlerNonNull onstatechange;
+    
     @JsConstructor
     public MIDIAccess(){
         super();
     }
     
     @JsProperty(name="inputs")
-    public MIDIInputMap inputs;
+    public native MIDIInputMap getInputs();
     
     @JsProperty(name="outputs")
-    public MIDIOutputMap outputs;
+    public native MIDIOutputMap getOutputs();
     
     @JsProperty(name="sysexEnabled")
-    public boolean sysexEnabled;
+    public native boolean getSysexEnabled();
     
-    @JsProperty(name="onstatechange")
-    public EventHandlerNonNull onstatechange;
+    @JsOverlay
+    public final EventHandlerNonNull getOnStatechange(){
+        return this.onstatechange;
+    }
+    
+    @JsOverlay
+    public final void setOnStatechange(EventHandlerNonNull onstatechange){
+        this.onstatechange = onstatechange;
+    }
     
     
 }

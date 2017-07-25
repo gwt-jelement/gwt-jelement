@@ -25,11 +25,11 @@ import jsinterop.annotations.JsType;
 @JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class FilePropertyBag extends BlobPropertyBag{
 
+    @JsProperty(name="lastModified")
+    private double lastModified;
+
     public FilePropertyBag(){
     }
-
-    @JsProperty(name="lastModified")
-    public double lastModified;
 
     @JsOverlay
     public final double getLastModified(){
@@ -40,6 +40,5 @@ public class FilePropertyBag extends BlobPropertyBag{
     public final void setLastModified(double lastModified){
         this.lastModified = lastModified;
     }
-
 
 }

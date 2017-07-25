@@ -28,16 +28,16 @@ import jsinterop.annotations.JsType;
 @JsType(namespace = JsPackage.GLOBAL, isNative = true)
 public class VRDisplayEvent extends Event{
     
+    @JsProperty(name="reason")
+    private String reason;
+    
     @JsConstructor
     public VRDisplayEvent(){
         super((String) null);
     }
     
     @JsProperty(name="display")
-    public VRDisplay display;
-    
-    @JsProperty(name="reason")
-    public String reason;
+    public native VRDisplay getDisplay();
     
     @JsOverlay
     public final VRDisplayEventReason getReason(){

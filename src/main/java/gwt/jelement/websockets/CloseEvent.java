@@ -19,6 +19,7 @@ package gwt.jelement.websockets;
 import gwt.jelement.events.Event;
 import gwt.jelement.websockets.CloseEventInit;
 import jsinterop.annotations.JsConstructor;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -37,13 +38,13 @@ public class CloseEvent extends Event{
     }
     
     @JsProperty(name="wasClean")
-    public boolean wasClean;
+    public native boolean getWasClean();
     
     @JsProperty(name="code")
-    public short code;
+    public native short getCode();
     
     @JsProperty(name="reason")
-    public String reason;
+    public native String getReason();
     
     
 }

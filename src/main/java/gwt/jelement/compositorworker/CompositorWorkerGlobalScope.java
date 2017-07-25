@@ -22,6 +22,7 @@ import gwt.jelement.events.EventHandlerNonNull;
 import gwt.jelement.workers.WorkerGlobalScope;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -29,24 +30,38 @@ import jsinterop.annotations.JsType;
 @JsType(namespace = JsPackage.GLOBAL, isNative = true)
 public class CompositorWorkerGlobalScope extends WorkerGlobalScope{
     
+    @JsProperty(name="onmessage")
+    private EventHandlerNonNull onmessage;
+    
     @JsConstructor
     public CompositorWorkerGlobalScope(){
         super();
     }
     
-    @JsProperty(name="onmessage")
-    public EventHandlerNonNull onmessage;
+    @JsOverlay
+    public final EventHandlerNonNull getOnMessage(){
+        return this.onmessage;
+    }
+    
+    @JsOverlay
+    public final void setOnMessage(EventHandlerNonNull onmessage){
+        this.onmessage = onmessage;
+    }
     
     @JsMethod(name = "cancelAnimationFrame")
     public native void cancelAnimationFrame(double handle);
     
+    
     @JsMethod(name = "postMessage")
     public native void postMessage(Object message);
+    
     
     @JsMethod(name = "postMessage")
     public native void postMessage(Object message, MessagePort[] transfer);
     
+    
     @JsMethod(name = "requestAnimationFrame")
     public native double requestAnimationFrame(FrameRequestCallback callback);
+    
     
 }

@@ -56,21 +56,23 @@ public class DOMRect extends DOMRectReadOnly{
     }
     
     @JsProperty(name="x")
-    public double x;
+    public native void setX(double x);
     
     @JsProperty(name="y")
-    public double y;
+    public native void setY(double y);
     
     @JsProperty(name="width")
-    public double width;
+    public native void setWidth(double width);
     
     @JsProperty(name="height")
-    public double height;
+    public native void setHeight(double height);
     
     @JsMethod(name = "fromRect")
     public native DOMRect fromRect();
     
+    
     @JsMethod(name = "fromRect")
     public native DOMRect fromRect(DOMRectInit other);
+    
     
 }

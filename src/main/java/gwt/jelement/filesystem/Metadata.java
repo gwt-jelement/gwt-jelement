@@ -17,6 +17,7 @@
 package gwt.jelement.filesystem;
 
 import elemental2.core.Date;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -25,10 +26,10 @@ import jsinterop.annotations.JsType;
 public class Metadata{
     
     @JsProperty(name="modificationTime")
-    public Date modificationTime;
+    public native Date getModificationTime();
     
     @JsProperty(name="size")
-    public double size;
+    public native double getSize();
     
     
 }

@@ -17,6 +17,7 @@
 package gwt.jelement.frame;
 
 import gwt.jelement.events.EventHandlerNonNull;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -25,46 +26,186 @@ import jsinterop.annotations.JsType;
 public class WindowEventHandlers{
     
     @JsProperty(name="onbeforeunload")
-    public EventHandlerNonNull onbeforeunload;
+    private EventHandlerNonNull onbeforeunload;
     
     @JsProperty(name="onhashchange")
-    public EventHandlerNonNull onhashchange;
+    private EventHandlerNonNull onhashchange;
     
     @JsProperty(name="onlanguagechange")
-    public EventHandlerNonNull onlanguagechange;
+    private EventHandlerNonNull onlanguagechange;
     
     @JsProperty(name="onmessage")
-    public EventHandlerNonNull onmessage;
+    private EventHandlerNonNull onmessage;
     
     @JsProperty(name="onmessageerror")
-    public EventHandlerNonNull onmessageerror;
+    private EventHandlerNonNull onmessageerror;
     
     @JsProperty(name="onoffline")
-    public EventHandlerNonNull onoffline;
+    private EventHandlerNonNull onoffline;
     
     @JsProperty(name="ononline")
-    public EventHandlerNonNull ononline;
+    private EventHandlerNonNull ononline;
     
     @JsProperty(name="onpagehide")
-    public EventHandlerNonNull onpagehide;
+    private EventHandlerNonNull onpagehide;
     
     @JsProperty(name="onpageshow")
-    public EventHandlerNonNull onpageshow;
+    private EventHandlerNonNull onpageshow;
     
     @JsProperty(name="onpopstate")
-    public EventHandlerNonNull onpopstate;
+    private EventHandlerNonNull onpopstate;
     
     @JsProperty(name="onrejectionhandled")
-    public EventHandlerNonNull onrejectionhandled;
+    private EventHandlerNonNull onrejectionhandled;
     
     @JsProperty(name="onstorage")
-    public EventHandlerNonNull onstorage;
+    private EventHandlerNonNull onstorage;
     
     @JsProperty(name="onunhandledrejection")
-    public EventHandlerNonNull onunhandledrejection;
+    private EventHandlerNonNull onunhandledrejection;
     
     @JsProperty(name="onunload")
-    public EventHandlerNonNull onunload;
+    private EventHandlerNonNull onunload;
+    
+    @JsOverlay
+    public final EventHandlerNonNull getOnBeforeunload(){
+        return this.onbeforeunload;
+    }
+    
+    @JsOverlay
+    public final void setOnBeforeunload(EventHandlerNonNull onbeforeunload){
+        this.onbeforeunload = onbeforeunload;
+    }
+    
+    @JsOverlay
+    public final EventHandlerNonNull getOnHashchange(){
+        return this.onhashchange;
+    }
+    
+    @JsOverlay
+    public final void setOnHashchange(EventHandlerNonNull onhashchange){
+        this.onhashchange = onhashchange;
+    }
+    
+    @JsOverlay
+    public final EventHandlerNonNull getOnLanguagechange(){
+        return this.onlanguagechange;
+    }
+    
+    @JsOverlay
+    public final void setOnLanguagechange(EventHandlerNonNull onlanguagechange){
+        this.onlanguagechange = onlanguagechange;
+    }
+    
+    @JsOverlay
+    public final EventHandlerNonNull getOnMessage(){
+        return this.onmessage;
+    }
+    
+    @JsOverlay
+    public final void setOnMessage(EventHandlerNonNull onmessage){
+        this.onmessage = onmessage;
+    }
+    
+    @JsOverlay
+    public final EventHandlerNonNull getOnMessageerror(){
+        return this.onmessageerror;
+    }
+    
+    @JsOverlay
+    public final void setOnMessageerror(EventHandlerNonNull onmessageerror){
+        this.onmessageerror = onmessageerror;
+    }
+    
+    @JsOverlay
+    public final EventHandlerNonNull getOnOffline(){
+        return this.onoffline;
+    }
+    
+    @JsOverlay
+    public final void setOnOffline(EventHandlerNonNull onoffline){
+        this.onoffline = onoffline;
+    }
+    
+    @JsOverlay
+    public final EventHandlerNonNull getOnOnline(){
+        return this.ononline;
+    }
+    
+    @JsOverlay
+    public final void setOnOnline(EventHandlerNonNull ononline){
+        this.ononline = ononline;
+    }
+    
+    @JsOverlay
+    public final EventHandlerNonNull getOnPagehide(){
+        return this.onpagehide;
+    }
+    
+    @JsOverlay
+    public final void setOnPagehide(EventHandlerNonNull onpagehide){
+        this.onpagehide = onpagehide;
+    }
+    
+    @JsOverlay
+    public final EventHandlerNonNull getOnPageshow(){
+        return this.onpageshow;
+    }
+    
+    @JsOverlay
+    public final void setOnPageshow(EventHandlerNonNull onpageshow){
+        this.onpageshow = onpageshow;
+    }
+    
+    @JsOverlay
+    public final EventHandlerNonNull getOnPopstate(){
+        return this.onpopstate;
+    }
+    
+    @JsOverlay
+    public final void setOnPopstate(EventHandlerNonNull onpopstate){
+        this.onpopstate = onpopstate;
+    }
+    
+    @JsOverlay
+    public final EventHandlerNonNull getOnRejectionhandled(){
+        return this.onrejectionhandled;
+    }
+    
+    @JsOverlay
+    public final void setOnRejectionhandled(EventHandlerNonNull onrejectionhandled){
+        this.onrejectionhandled = onrejectionhandled;
+    }
+    
+    @JsOverlay
+    public final EventHandlerNonNull getOnStorage(){
+        return this.onstorage;
+    }
+    
+    @JsOverlay
+    public final void setOnStorage(EventHandlerNonNull onstorage){
+        this.onstorage = onstorage;
+    }
+    
+    @JsOverlay
+    public final EventHandlerNonNull getOnUnhandledrejection(){
+        return this.onunhandledrejection;
+    }
+    
+    @JsOverlay
+    public final void setOnUnhandledrejection(EventHandlerNonNull onunhandledrejection){
+        this.onunhandledrejection = onunhandledrejection;
+    }
+    
+    @JsOverlay
+    public final EventHandlerNonNull getOnUnload(){
+        return this.onunload;
+    }
+    
+    @JsOverlay
+    public final void setOnUnload(EventHandlerNonNull onunload){
+        this.onunload = onunload;
+    }
     
     
 }

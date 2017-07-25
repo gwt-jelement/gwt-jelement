@@ -20,6 +20,7 @@ import gwt.jelement.events.EventInit;
 import gwt.jelement.events.EventTarget;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -41,66 +42,79 @@ public class Event{
     }
     
     @JsProperty(name="type")
-    public String type;
+    public native String getType();
     
     @JsProperty(name="target")
-    public EventTarget target;
+    public native EventTarget getTarget();
     
     @JsProperty(name="currentTarget")
-    public EventTarget currentTarget;
+    public native EventTarget getCurrentTarget();
     
     @JsProperty(name="eventPhase")
-    public short eventPhase;
+    public native short getEventPhase();
     
     @JsProperty(name="bubbles")
-    public boolean bubbles;
+    public native boolean getBubbles();
     
     @JsProperty(name="cancelable")
-    public boolean cancelable;
+    public native boolean getCancelable();
     
     @JsProperty(name="defaultPrevented")
-    public boolean defaultPrevented;
+    public native boolean getDefaultPrevented();
     
     @JsProperty(name="composed")
-    public boolean composed;
+    public native boolean getComposed();
     
     @JsProperty(name="isTrusted")
-    public boolean isTrusted;
+    public native boolean getIsTrusted();
     
     @JsProperty(name="timeStamp")
-    public double timeStamp;
+    public native double getTimeStamp();
     
     @JsProperty(name="srcElement")
-    public EventTarget srcElement;
+    public native EventTarget getSrcElement();
     
     @JsProperty(name="returnValue")
-    public boolean returnValue;
+    public native boolean getReturnValue();
+    
+    @JsProperty(name="returnValue")
+    public native void setReturnValue(boolean returnValue);
     
     @JsProperty(name="cancelBubble")
-    public boolean cancelBubble;
+    public native boolean getCancelBubble();
+    
+    @JsProperty(name="cancelBubble")
+    public native void setCancelBubble(boolean cancelBubble);
     
     @JsProperty(name="path")
-    public EventTarget[] path;
+    public native EventTarget[] getPath();
     
     @JsMethod(name = "composedPath")
     public native EventTarget[] composedPath();
     
+    
     @JsMethod(name = "initEvent")
     public native void initEvent(String type);
+    
     
     @JsMethod(name = "initEvent")
     public native void initEvent(String type, boolean bubbles);
     
+    
     @JsMethod(name = "initEvent")
     public native void initEvent(String type, boolean bubbles, boolean cancelable);
+    
     
     @JsMethod(name = "preventDefault")
     public native void preventDefault();
     
+    
     @JsMethod(name = "stopImmediatePropagation")
     public native void stopImmediatePropagation();
     
+    
     @JsMethod(name = "stopPropagation")
     public native void stopPropagation();
+    
     
 }

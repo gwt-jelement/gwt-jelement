@@ -18,6 +18,7 @@ package gwt.jelement.html;
 
 import gwt.jelement.html.HTMLElement;
 import jsinterop.annotations.JsConstructor;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -31,7 +32,10 @@ public class HTMLDetailsElement extends HTMLElement{
     }
     
     @JsProperty(name="open")
-    public boolean open;
+    public native boolean getOpen();
+    
+    @JsProperty(name="open")
+    public native void setOpen(boolean open);
     
     
 }

@@ -19,6 +19,7 @@ package gwt.jelement.webusb;
 import gwt.jelement.webusb.USBDevice;
 import gwt.jelement.webusb.USBInterface;
 import jsinterop.annotations.JsConstructor;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -31,13 +32,13 @@ public class USBConfiguration{
     }
     
     @JsProperty(name="configurationValue")
-    public byte configurationValue;
+    public native byte getConfigurationValue();
     
     @JsProperty(name="configurationName")
-    public String configurationName;
+    public native String getConfigurationName();
     
     @JsProperty(name="interfaces")
-    public USBInterface[] interfaces;
+    public native USBInterface[] getInterfaces();
     
     
 }

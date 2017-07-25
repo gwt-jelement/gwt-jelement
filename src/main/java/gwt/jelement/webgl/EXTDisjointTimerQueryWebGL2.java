@@ -18,6 +18,7 @@ package gwt.jelement.webgl;
 
 import gwt.jelement.webgl.WebGLQuery;
 import jsinterop.annotations.JsMethod;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
@@ -31,5 +32,6 @@ public class EXTDisjointTimerQueryWebGL2{
     
     @JsMethod(name = "queryCounterEXT")
     public native void queryCounterEXT(WebGLQuery query, double target);
+    
     
 }

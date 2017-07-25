@@ -24,11 +24,11 @@ import jsinterop.annotations.JsType;
 @JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class EventSourceInit{
 
+    @JsProperty(name="withCredentials")
+    private boolean withCredentials;
+
     public EventSourceInit(){
     }
-
-    @JsProperty(name="withCredentials")
-    public boolean withCredentials;
 
     @JsOverlay
     public final boolean getWithCredentials(){
@@ -39,6 +39,5 @@ public class EventSourceInit{
     public final void setWithCredentials(boolean withCredentials){
         this.withCredentials = withCredentials;
     }
-
 
 }

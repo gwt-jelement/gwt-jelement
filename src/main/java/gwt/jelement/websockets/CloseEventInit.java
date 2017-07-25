@@ -25,11 +25,17 @@ import jsinterop.annotations.JsType;
 @JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class CloseEventInit extends EventInit{
 
+    @JsProperty(name="wasClean")
+    private boolean wasClean;
+
+    @JsProperty(name="code")
+    private short code;
+
+    @JsProperty(name="reason")
+    private String reason;
+
     public CloseEventInit(){
     }
-
-    @JsProperty(name="wasClean")
-    public boolean wasClean;
 
     @JsOverlay
     public final boolean getWasClean(){
@@ -41,9 +47,6 @@ public class CloseEventInit extends EventInit{
         this.wasClean = wasClean;
     }
 
-    @JsProperty(name="code")
-    public short code;
-
     @JsOverlay
     public final short getCode(){
         return this.code;
@@ -54,9 +57,6 @@ public class CloseEventInit extends EventInit{
         this.code = code;
     }
 
-    @JsProperty(name="reason")
-    public String reason;
-
     @JsOverlay
     public final String getReason(){
         return this.reason;
@@ -66,6 +66,5 @@ public class CloseEventInit extends EventInit{
     public final void setReason(String reason){
         this.reason = reason;
     }
-
 
 }
