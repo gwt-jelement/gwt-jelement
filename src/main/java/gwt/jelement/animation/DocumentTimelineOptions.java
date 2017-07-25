@@ -16,15 +16,29 @@
  */
 package gwt.jelement.animation;
 
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class DocumentTimelineOptions{
+
+    public DocumentTimelineOptions(){
+    }
 
     @JsProperty(name="originTime")
     public double originTime;
+
+    @JsOverlay
+    public final double getOriginTime(){
+        return this.originTime;
+    }
+
+    @JsOverlay
+    public final void setOriginTime(double originTime){
+        this.originTime = originTime;
+    }
 
 
 }

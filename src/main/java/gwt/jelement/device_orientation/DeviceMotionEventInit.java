@@ -19,24 +19,68 @@ package gwt.jelement.device_orientation;
 import gwt.jelement.device_orientation.DeviceAccelerationInit;
 import gwt.jelement.device_orientation.DeviceRotationRateInit;
 import gwt.jelement.events.EventInit;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class DeviceMotionEventInit extends EventInit{
+
+    public DeviceMotionEventInit(){
+    }
 
     @JsProperty(name="acceleration")
     public DeviceAccelerationInit acceleration;
 
+    @JsOverlay
+    public final DeviceAccelerationInit getAcceleration(){
+        return this.acceleration;
+    }
+
+    @JsOverlay
+    public final void setAcceleration(DeviceAccelerationInit acceleration){
+        this.acceleration = acceleration;
+    }
+
     @JsProperty(name="accelerationIncludingGravity")
     public DeviceAccelerationInit accelerationIncludingGravity;
+
+    @JsOverlay
+    public final DeviceAccelerationInit getAccelerationIncludingGravity(){
+        return this.accelerationIncludingGravity;
+    }
+
+    @JsOverlay
+    public final void setAccelerationIncludingGravity(DeviceAccelerationInit accelerationIncludingGravity){
+        this.accelerationIncludingGravity = accelerationIncludingGravity;
+    }
 
     @JsProperty(name="rotationRate")
     public DeviceRotationRateInit rotationRate;
 
+    @JsOverlay
+    public final DeviceRotationRateInit getRotationRate(){
+        return this.rotationRate;
+    }
+
+    @JsOverlay
+    public final void setRotationRate(DeviceRotationRateInit rotationRate){
+        this.rotationRate = rotationRate;
+    }
+
     @JsProperty(name="interval")
     public double interval;
+
+    @JsOverlay
+    public final double getInterval(){
+        return this.interval;
+    }
+
+    @JsOverlay
+    public final void setInterval(double interval){
+        this.interval = interval;
+    }
 
 
 }

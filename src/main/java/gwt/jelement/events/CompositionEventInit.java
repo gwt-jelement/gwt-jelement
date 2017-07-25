@@ -17,15 +17,29 @@
 package gwt.jelement.events;
 
 import gwt.jelement.events.UIEventInit;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class CompositionEventInit extends UIEventInit{
+
+    public CompositionEventInit(){
+    }
 
     @JsProperty(name="data")
     public String data;
+
+    @JsOverlay
+    public final String getData(){
+        return this.data;
+    }
+
+    @JsOverlay
+    public final void setData(String data){
+        this.data = data;
+    }
 
 
 }

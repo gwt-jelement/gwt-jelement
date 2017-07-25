@@ -17,15 +17,29 @@
 package gwt.jelement.peerconnection;
 
 import gwt.jelement.events.EventInit;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class RTCDTMFToneChangeEventInit extends EventInit{
+
+    public RTCDTMFToneChangeEventInit(){
+    }
 
     @JsProperty(name="tone")
     public String tone;
+
+    @JsOverlay
+    public final String getTone(){
+        return this.tone;
+    }
+
+    @JsOverlay
+    public final void setTone(String tone){
+        this.tone = tone;
+    }
 
 
 }

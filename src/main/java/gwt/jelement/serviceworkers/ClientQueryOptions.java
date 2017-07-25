@@ -22,14 +22,37 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class ClientQueryOptions{
+
+    public ClientQueryOptions(){
+    }
 
     @JsProperty(name="includeUncontrolled")
     public boolean includeUncontrolled;
 
+    @JsOverlay
+    public final boolean getIncludeUncontrolled(){
+        return this.includeUncontrolled;
+    }
+
+    @JsOverlay
+    public final void setIncludeUncontrolled(boolean includeUncontrolled){
+        this.includeUncontrolled = includeUncontrolled;
+    }
+
     @JsProperty(name="type")
-    public ClientType type;
+    public String type;
+
+    @JsOverlay
+    public final ClientType getType(){
+        return ClientType.of(this.type);
+    }
+
+    @JsOverlay
+    public final void setType(ClientType type){
+        this.type = type.getInternalValue();
+    }
 
 
 }

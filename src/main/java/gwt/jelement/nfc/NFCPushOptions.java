@@ -22,17 +22,50 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class NFCPushOptions{
 
+    public NFCPushOptions(){
+    }
+
     @JsProperty(name="target")
-    public NFCPushTarget target;
+    public String target;
+
+    @JsOverlay
+    public final NFCPushTarget getTarget(){
+        return NFCPushTarget.of(this.target);
+    }
+
+    @JsOverlay
+    public final void setTarget(NFCPushTarget target){
+        this.target = target.getInternalValue();
+    }
 
     @JsProperty(name="timeout")
     public double timeout;
 
+    @JsOverlay
+    public final double getTimeout(){
+        return this.timeout;
+    }
+
+    @JsOverlay
+    public final void setTimeout(double timeout){
+        this.timeout = timeout;
+    }
+
     @JsProperty(name="ignoreRead")
     public boolean ignoreRead;
+
+    @JsOverlay
+    public final boolean getIgnoreRead(){
+        return this.ignoreRead;
+    }
+
+    @JsOverlay
+    public final void setIgnoreRead(boolean ignoreRead){
+        this.ignoreRead = ignoreRead;
+    }
 
 
 }

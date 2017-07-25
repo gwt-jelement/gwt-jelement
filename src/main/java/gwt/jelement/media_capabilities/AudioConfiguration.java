@@ -16,24 +16,68 @@
  */
 package gwt.jelement.media_capabilities;
 
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class AudioConfiguration{
+
+    public AudioConfiguration(){
+    }
 
     @JsProperty(name="contentType")
     public String contentType;
 
+    @JsOverlay
+    public final String getContentType(){
+        return this.contentType;
+    }
+
+    @JsOverlay
+    public final void setContentType(String contentType){
+        this.contentType = contentType;
+    }
+
     @JsProperty(name="channels")
     public String channels;
+
+    @JsOverlay
+    public final String getChannels(){
+        return this.channels;
+    }
+
+    @JsOverlay
+    public final void setChannels(String channels){
+        this.channels = channels;
+    }
 
     @JsProperty(name="bitrate")
     public double bitrate;
 
+    @JsOverlay
+    public final double getBitrate(){
+        return this.bitrate;
+    }
+
+    @JsOverlay
+    public final void setBitrate(double bitrate){
+        this.bitrate = bitrate;
+    }
+
     @JsProperty(name="samplerate")
     public double samplerate;
+
+    @JsOverlay
+    public final double getSamplerate(){
+        return this.samplerate;
+    }
+
+    @JsOverlay
+    public final void setSamplerate(double samplerate){
+        this.samplerate = samplerate;
+    }
 
 
 }

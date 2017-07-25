@@ -24,20 +24,63 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class HitRegionOptions{
+
+    public HitRegionOptions(){
+    }
 
     @JsProperty(name="path")
     public Path2D path;
 
+    @JsOverlay
+    public final Path2D getPath(){
+        return this.path;
+    }
+
+    @JsOverlay
+    public final void setPath(Path2D path){
+        this.path = path;
+    }
+
     @JsProperty(name="fillRule")
-    public CanvasFillRule fillRule;
+    public String fillRule;
+
+    @JsOverlay
+    public final CanvasFillRule getFillRule(){
+        return CanvasFillRule.of(this.fillRule);
+    }
+
+    @JsOverlay
+    public final void setFillRule(CanvasFillRule fillRule){
+        this.fillRule = fillRule.getInternalValue();
+    }
 
     @JsProperty(name="id")
     public String id;
 
+    @JsOverlay
+    public final String getId(){
+        return this.id;
+    }
+
+    @JsOverlay
+    public final void setId(String id){
+        this.id = id;
+    }
+
     @JsProperty(name="control")
     public Element control;
+
+    @JsOverlay
+    public final Element getControl(){
+        return this.control;
+    }
+
+    @JsOverlay
+    public final void setControl(Element control){
+        this.control = control;
+    }
 
 
 }

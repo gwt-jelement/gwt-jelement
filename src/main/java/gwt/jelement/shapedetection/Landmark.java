@@ -23,14 +23,37 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class Landmark{
+
+    public Landmark(){
+    }
 
     @JsProperty(name="location")
     public Point2D location;
 
+    @JsOverlay
+    public final Point2D getLocation(){
+        return this.location;
+    }
+
+    @JsOverlay
+    public final void setLocation(Point2D location){
+        this.location = location;
+    }
+
     @JsProperty(name="type")
-    public LandmarkType type;
+    public String type;
+
+    @JsOverlay
+    public final LandmarkType getType(){
+        return LandmarkType.of(this.type);
+    }
+
+    @JsOverlay
+    public final void setType(LandmarkType type){
+        this.type = type.getInternalValue();
+    }
 
 
 }

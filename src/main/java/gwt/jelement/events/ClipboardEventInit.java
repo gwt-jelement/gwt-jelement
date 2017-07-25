@@ -18,15 +18,29 @@ package gwt.jelement.events;
 
 import gwt.jelement.clipboard.DataTransfer;
 import gwt.jelement.events.EventInit;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class ClipboardEventInit extends EventInit{
+
+    public ClipboardEventInit(){
+    }
 
     @JsProperty(name="clipboardData")
     public DataTransfer clipboardData;
+
+    @JsOverlay
+    public final DataTransfer getClipboardData(){
+        return this.clipboardData;
+    }
+
+    @JsOverlay
+    public final void setClipboardData(DataTransfer clipboardData){
+        this.clipboardData = clipboardData;
+    }
 
 
 }

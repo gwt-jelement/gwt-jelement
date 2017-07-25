@@ -25,32 +25,115 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 import jsinterop.base.Js;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class AnimationEffectTimingProperties{
+
+    public AnimationEffectTimingProperties(){
+    }
 
     @JsProperty(name="delay")
     public double delay;
 
+    @JsOverlay
+    public final double getDelay(){
+        return this.delay;
+    }
+
+    @JsOverlay
+    public final void setDelay(double delay){
+        this.delay = delay;
+    }
+
     @JsProperty(name="endDelay")
     public double endDelay;
 
+    @JsOverlay
+    public final double getEndDelay(){
+        return this.endDelay;
+    }
+
+    @JsOverlay
+    public final void setEndDelay(double endDelay){
+        this.endDelay = endDelay;
+    }
+
     @JsProperty(name="fill")
-    public FillMode fill;
+    public String fill;
+
+    @JsOverlay
+    public final FillMode getFill(){
+        return FillMode.of(this.fill);
+    }
+
+    @JsOverlay
+    public final void setFill(FillMode fill){
+        this.fill = fill.getInternalValue();
+    }
 
     @JsProperty(name="iterationStart")
     public double iterationStart;
 
+    @JsOverlay
+    public final double getIterationStart(){
+        return this.iterationStart;
+    }
+
+    @JsOverlay
+    public final void setIterationStart(double iterationStart){
+        this.iterationStart = iterationStart;
+    }
+
     @JsProperty(name="iterations")
     public double iterations;
+
+    @JsOverlay
+    public final double getIterations(){
+        return this.iterations;
+    }
+
+    @JsOverlay
+    public final void setIterations(double iterations){
+        this.iterations = iterations;
+    }
 
     @JsProperty(name="duration")
     public AnimationEffectTimingReadOnly.DoubleOrStringUnionType duration;
 
+    @JsOverlay
+    public final void setDuration(double duration){
+        this.duration = AnimationEffectTimingReadOnly.DoubleOrStringUnionType.of(duration);
+    }
+
+    @JsOverlay
+    public final void setDuration(String duration){
+        this.duration = AnimationEffectTimingReadOnly.DoubleOrStringUnionType.of(duration);
+    }
+
     @JsProperty(name="direction")
-    public PlaybackDirection direction;
+    public String direction;
+
+    @JsOverlay
+    public final PlaybackDirection getDirection(){
+        return PlaybackDirection.of(this.direction);
+    }
+
+    @JsOverlay
+    public final void setDirection(PlaybackDirection direction){
+        this.direction = direction.getInternalValue();
+    }
 
     @JsProperty(name="easing")
     public String easing;
+
+    @JsOverlay
+    public final String getEasing(){
+        return this.easing;
+    }
+
+    @JsOverlay
+    public final void setEasing(String easing){
+        this.easing = easing;
+    }
 
 
 }

@@ -16,15 +16,29 @@
  */
 package gwt.jelement.peerconnection;
 
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class RTCOfferAnswerOptions{
+
+    public RTCOfferAnswerOptions(){
+    }
 
     @JsProperty(name="voiceActivityDetection")
     public boolean voiceActivityDetection;
+
+    @JsOverlay
+    public final boolean getVoiceActivityDetection(){
+        return this.voiceActivityDetection;
+    }
+
+    @JsOverlay
+    public final void setVoiceActivityDetection(boolean voiceActivityDetection){
+        this.voiceActivityDetection = voiceActivityDetection;
+    }
 
 
 }

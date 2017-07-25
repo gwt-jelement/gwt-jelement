@@ -16,15 +16,29 @@
  */
 package gwt.jelement.events;
 
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class EventListenerOptions{
+
+    public EventListenerOptions(){
+    }
 
     @JsProperty(name="capture")
     public boolean capture;
+
+    @JsOverlay
+    public final boolean getCapture(){
+        return this.capture;
+    }
+
+    @JsOverlay
+    public final void setCapture(boolean capture){
+        this.capture = capture;
+    }
 
 
 }

@@ -16,18 +16,42 @@
  */
 package gwt.jelement.indexeddb;
 
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class IDBIndexParameters{
+
+    public IDBIndexParameters(){
+    }
 
     @JsProperty(name="unique")
     public boolean unique;
 
+    @JsOverlay
+    public final boolean getUnique(){
+        return this.unique;
+    }
+
+    @JsOverlay
+    public final void setUnique(boolean unique){
+        this.unique = unique;
+    }
+
     @JsProperty(name="multiEntry")
     public boolean multiEntry;
+
+    @JsOverlay
+    public final boolean getMultiEntry(){
+        return this.multiEntry;
+    }
+
+    @JsOverlay
+    public final void setMultiEntry(boolean multiEntry){
+        this.multiEntry = multiEntry;
+    }
 
 
 }

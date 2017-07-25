@@ -16,18 +16,42 @@
  */
 package gwt.jelement.credentialmanager;
 
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class FederatedCredentialRequestOptions{
+
+    public FederatedCredentialRequestOptions(){
+    }
 
     @JsProperty(name="providers")
     public String[] providers;
 
+    @JsOverlay
+    public final String[] getProviders(){
+        return this.providers;
+    }
+
+    @JsOverlay
+    public final void setProviders(String[] providers){
+        this.providers = providers;
+    }
+
     @JsProperty(name="protocols")
     public String[] protocols;
+
+    @JsOverlay
+    public final String[] getProtocols(){
+        return this.protocols;
+    }
+
+    @JsOverlay
+    public final void setProtocols(String[] protocols){
+        this.protocols = protocols;
+    }
 
 
 }

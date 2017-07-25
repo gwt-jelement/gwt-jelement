@@ -17,12 +17,16 @@
 package gwt.jelement.peerconnection;
 
 import gwt.jelement.peerconnection.RTCOfferAnswerOptions;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class RTCAnswerOptions extends RTCOfferAnswerOptions{
+
+    public RTCAnswerOptions(){
+    }
 
 
 }

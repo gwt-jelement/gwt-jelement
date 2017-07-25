@@ -16,21 +16,55 @@
  */
 package gwt.jelement.webshare;
 
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class ShareData{
+
+    public ShareData(){
+    }
 
     @JsProperty(name="title")
     public String title;
 
+    @JsOverlay
+    public final String getTitle(){
+        return this.title;
+    }
+
+    @JsOverlay
+    public final void setTitle(String title){
+        this.title = title;
+    }
+
     @JsProperty(name="text")
     public String text;
 
+    @JsOverlay
+    public final String getText(){
+        return this.text;
+    }
+
+    @JsOverlay
+    public final void setText(String text){
+        this.text = text;
+    }
+
     @JsProperty(name="url")
     public String url;
+
+    @JsOverlay
+    public final String getUrl(){
+        return this.url;
+    }
+
+    @JsOverlay
+    public final void setUrl(String url){
+        this.url = url;
+    }
 
 
 }

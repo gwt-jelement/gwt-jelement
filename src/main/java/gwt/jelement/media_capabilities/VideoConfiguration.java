@@ -16,27 +16,81 @@
  */
 package gwt.jelement.media_capabilities;
 
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class VideoConfiguration{
+
+    public VideoConfiguration(){
+    }
 
     @JsProperty(name="contentType")
     public String contentType;
 
+    @JsOverlay
+    public final String getContentType(){
+        return this.contentType;
+    }
+
+    @JsOverlay
+    public final void setContentType(String contentType){
+        this.contentType = contentType;
+    }
+
     @JsProperty(name="width")
     public double width;
+
+    @JsOverlay
+    public final double getWidth(){
+        return this.width;
+    }
+
+    @JsOverlay
+    public final void setWidth(double width){
+        this.width = width;
+    }
 
     @JsProperty(name="height")
     public double height;
 
+    @JsOverlay
+    public final double getHeight(){
+        return this.height;
+    }
+
+    @JsOverlay
+    public final void setHeight(double height){
+        this.height = height;
+    }
+
     @JsProperty(name="bitrate")
     public double bitrate;
 
+    @JsOverlay
+    public final double getBitrate(){
+        return this.bitrate;
+    }
+
+    @JsOverlay
+    public final void setBitrate(double bitrate){
+        this.bitrate = bitrate;
+    }
+
     @JsProperty(name="framerate")
     public double framerate;
+
+    @JsOverlay
+    public final double getFramerate(){
+        return this.framerate;
+    }
+
+    @JsOverlay
+    public final void setFramerate(double framerate){
+        this.framerate = framerate;
+    }
 
 
 }

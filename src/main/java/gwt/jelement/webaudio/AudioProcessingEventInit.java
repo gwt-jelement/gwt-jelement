@@ -18,21 +18,55 @@ package gwt.jelement.webaudio;
 
 import gwt.jelement.events.EventInit;
 import gwt.jelement.webaudio.AudioBuffer;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class AudioProcessingEventInit extends EventInit{
+
+    public AudioProcessingEventInit(){
+    }
 
     @JsProperty(name="playbackTime")
     public double playbackTime;
 
+    @JsOverlay
+    public final double getPlaybackTime(){
+        return this.playbackTime;
+    }
+
+    @JsOverlay
+    public final void setPlaybackTime(double playbackTime){
+        this.playbackTime = playbackTime;
+    }
+
     @JsProperty(name="inputBuffer")
     public AudioBuffer inputBuffer;
 
+    @JsOverlay
+    public final AudioBuffer getInputBuffer(){
+        return this.inputBuffer;
+    }
+
+    @JsOverlay
+    public final void setInputBuffer(AudioBuffer inputBuffer){
+        this.inputBuffer = inputBuffer;
+    }
+
     @JsProperty(name="outputBuffer")
     public AudioBuffer outputBuffer;
+
+    @JsOverlay
+    public final AudioBuffer getOutputBuffer(){
+        return this.outputBuffer;
+    }
+
+    @JsOverlay
+    public final void setOutputBuffer(AudioBuffer outputBuffer){
+        this.outputBuffer = outputBuffer;
+    }
 
 
 }

@@ -22,14 +22,37 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class ShadowRootInit{
 
+    public ShadowRootInit(){
+    }
+
     @JsProperty(name="mode")
-    public ShadowRootMode mode;
+    public String mode;
+
+    @JsOverlay
+    public final ShadowRootMode getMode(){
+        return ShadowRootMode.of(this.mode);
+    }
+
+    @JsOverlay
+    public final void setMode(ShadowRootMode mode){
+        this.mode = mode.getInternalValue();
+    }
 
     @JsProperty(name="delegatesFocus")
     public boolean delegatesFocus;
+
+    @JsOverlay
+    public final boolean getDelegatesFocus(){
+        return this.delegatesFocus;
+    }
+
+    @JsOverlay
+    public final void setDelegatesFocus(boolean delegatesFocus){
+        this.delegatesFocus = delegatesFocus;
+    }
 
 
 }

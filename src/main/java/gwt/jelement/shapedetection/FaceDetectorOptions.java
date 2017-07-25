@@ -16,18 +16,42 @@
  */
 package gwt.jelement.shapedetection;
 
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class FaceDetectorOptions{
+
+    public FaceDetectorOptions(){
+    }
 
     @JsProperty(name="maxDetectedFaces")
     public short maxDetectedFaces;
 
+    @JsOverlay
+    public final short getMaxDetectedFaces(){
+        return this.maxDetectedFaces;
+    }
+
+    @JsOverlay
+    public final void setMaxDetectedFaces(short maxDetectedFaces){
+        this.maxDetectedFaces = maxDetectedFaces;
+    }
+
     @JsProperty(name="fastMode")
     public boolean fastMode;
+
+    @JsOverlay
+    public final boolean getFastMode(){
+        return this.fastMode;
+    }
+
+    @JsOverlay
+    public final void setFastMode(boolean fastMode){
+        this.fastMode = fastMode;
+    }
 
 
 }

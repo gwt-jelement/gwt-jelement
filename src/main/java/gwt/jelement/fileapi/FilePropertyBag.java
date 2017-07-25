@@ -17,15 +17,29 @@
 package gwt.jelement.fileapi;
 
 import gwt.jelement.fileapi.BlobPropertyBag;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class FilePropertyBag extends BlobPropertyBag{
+
+    public FilePropertyBag(){
+    }
 
     @JsProperty(name="lastModified")
     public double lastModified;
+
+    @JsOverlay
+    public final double getLastModified(){
+        return this.lastModified;
+    }
+
+    @JsOverlay
+    public final void setLastModified(double lastModified){
+        this.lastModified = lastModified;
+    }
 
 
 }

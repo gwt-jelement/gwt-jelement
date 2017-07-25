@@ -17,18 +17,42 @@
 package gwt.jelement.events;
 
 import gwt.jelement.events.EventInit;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class AnimationEventInit extends EventInit{
+
+    public AnimationEventInit(){
+    }
 
     @JsProperty(name="animationName")
     public String animationName;
 
+    @JsOverlay
+    public final String getAnimationName(){
+        return this.animationName;
+    }
+
+    @JsOverlay
+    public final void setAnimationName(String animationName){
+        this.animationName = animationName;
+    }
+
     @JsProperty(name="elapsedTime")
     public double elapsedTime;
+
+    @JsOverlay
+    public final double getElapsedTime(){
+        return this.elapsedTime;
+    }
+
+    @JsOverlay
+    public final void setElapsedTime(double elapsedTime){
+        this.elapsedTime = elapsedTime;
+    }
 
 
 }

@@ -16,24 +16,68 @@
  */
 package gwt.jelement.mediarecorder;
 
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class MediaRecorderOptions{
+
+    public MediaRecorderOptions(){
+    }
 
     @JsProperty(name="mimeType")
     public String mimeType;
 
+    @JsOverlay
+    public final String getMimeType(){
+        return this.mimeType;
+    }
+
+    @JsOverlay
+    public final void setMimeType(String mimeType){
+        this.mimeType = mimeType;
+    }
+
     @JsProperty(name="audioBitsPerSecond")
     public double audioBitsPerSecond;
+
+    @JsOverlay
+    public final double getAudioBitsPerSecond(){
+        return this.audioBitsPerSecond;
+    }
+
+    @JsOverlay
+    public final void setAudioBitsPerSecond(double audioBitsPerSecond){
+        this.audioBitsPerSecond = audioBitsPerSecond;
+    }
 
     @JsProperty(name="videoBitsPerSecond")
     public double videoBitsPerSecond;
 
+    @JsOverlay
+    public final double getVideoBitsPerSecond(){
+        return this.videoBitsPerSecond;
+    }
+
+    @JsOverlay
+    public final void setVideoBitsPerSecond(double videoBitsPerSecond){
+        this.videoBitsPerSecond = videoBitsPerSecond;
+    }
+
     @JsProperty(name="bitsPerSecond")
     public double bitsPerSecond;
+
+    @JsOverlay
+    public final double getBitsPerSecond(){
+        return this.bitsPerSecond;
+    }
+
+    @JsOverlay
+    public final void setBitsPerSecond(double bitsPerSecond){
+        this.bitsPerSecond = bitsPerSecond;
+    }
 
 
 }

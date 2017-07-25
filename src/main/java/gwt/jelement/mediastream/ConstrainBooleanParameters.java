@@ -16,18 +16,42 @@
  */
 package gwt.jelement.mediastream;
 
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class ConstrainBooleanParameters{
+
+    public ConstrainBooleanParameters(){
+    }
 
     @JsProperty(name="exact")
     public boolean exact;
 
+    @JsOverlay
+    public final boolean getExact(){
+        return this.exact;
+    }
+
+    @JsOverlay
+    public final void setExact(boolean exact){
+        this.exact = exact;
+    }
+
     @JsProperty(name="ideal")
     public boolean ideal;
+
+    @JsOverlay
+    public final boolean getIdeal(){
+        return this.ideal;
+    }
+
+    @JsOverlay
+    public final void setIdeal(boolean ideal){
+        this.ideal = ideal;
+    }
 
 
 }

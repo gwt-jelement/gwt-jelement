@@ -17,24 +17,68 @@
 package gwt.jelement.mediasession;
 
 import gwt.jelement.mediasession.MediaImage;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class MediaMetadataInit{
+
+    public MediaMetadataInit(){
+    }
 
     @JsProperty(name="title")
     public String title;
 
+    @JsOverlay
+    public final String getTitle(){
+        return this.title;
+    }
+
+    @JsOverlay
+    public final void setTitle(String title){
+        this.title = title;
+    }
+
     @JsProperty(name="artist")
     public String artist;
+
+    @JsOverlay
+    public final String getArtist(){
+        return this.artist;
+    }
+
+    @JsOverlay
+    public final void setArtist(String artist){
+        this.artist = artist;
+    }
 
     @JsProperty(name="album")
     public String album;
 
+    @JsOverlay
+    public final String getAlbum(){
+        return this.album;
+    }
+
+    @JsOverlay
+    public final void setAlbum(String album){
+        this.album = album;
+    }
+
     @JsProperty(name="artwork")
     public MediaImage[] artwork;
+
+    @JsOverlay
+    public final MediaImage[] getArtwork(){
+        return this.artwork;
+    }
+
+    @JsOverlay
+    public final void setArtwork(MediaImage[] artwork){
+        this.artwork = artwork;
+    }
 
 
 }

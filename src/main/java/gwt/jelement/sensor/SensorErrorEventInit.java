@@ -18,15 +18,29 @@ package gwt.jelement.sensor;
 
 import gwt.jelement.dom.DOMException;
 import gwt.jelement.events.EventInit;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class SensorErrorEventInit extends EventInit{
+
+    public SensorErrorEventInit(){
+    }
 
     @JsProperty(name="error")
     public DOMException error;
+
+    @JsOverlay
+    public final DOMException getError(){
+        return this.error;
+    }
+
+    @JsOverlay
+    public final void setError(DOMException error){
+        this.error = error;
+    }
 
 
 }

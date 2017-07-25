@@ -17,24 +17,68 @@
 package gwt.jelement.geometry;
 
 import gwt.jelement.geometry.DOMPointInit;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class DOMQuadInit{
+
+    public DOMQuadInit(){
+    }
 
     @JsProperty(name="p1")
     public DOMPointInit p1;
 
+    @JsOverlay
+    public final DOMPointInit getP1(){
+        return this.p1;
+    }
+
+    @JsOverlay
+    public final void setP1(DOMPointInit p1){
+        this.p1 = p1;
+    }
+
     @JsProperty(name="p2")
     public DOMPointInit p2;
+
+    @JsOverlay
+    public final DOMPointInit getP2(){
+        return this.p2;
+    }
+
+    @JsOverlay
+    public final void setP2(DOMPointInit p2){
+        this.p2 = p2;
+    }
 
     @JsProperty(name="p3")
     public DOMPointInit p3;
 
+    @JsOverlay
+    public final DOMPointInit getP3(){
+        return this.p3;
+    }
+
+    @JsOverlay
+    public final void setP3(DOMPointInit p3){
+        this.p3 = p3;
+    }
+
     @JsProperty(name="p4")
     public DOMPointInit p4;
+
+    @JsOverlay
+    public final DOMPointInit getP4(){
+        return this.p4;
+    }
+
+    @JsOverlay
+    public final void setP4(DOMPointInit p4){
+        this.p4 = p4;
+    }
 
 
 }

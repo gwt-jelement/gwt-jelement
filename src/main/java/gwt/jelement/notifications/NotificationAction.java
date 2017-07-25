@@ -22,23 +22,76 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class NotificationAction{
 
+    public NotificationAction(){
+    }
+
     @JsProperty(name="type")
-    public NotificationActionType type;
+    public String type;
+
+    @JsOverlay
+    public final NotificationActionType getType(){
+        return NotificationActionType.of(this.type);
+    }
+
+    @JsOverlay
+    public final void setType(NotificationActionType type){
+        this.type = type.getInternalValue();
+    }
 
     @JsProperty(name="action")
     public String action;
 
+    @JsOverlay
+    public final String getAction(){
+        return this.action;
+    }
+
+    @JsOverlay
+    public final void setAction(String action){
+        this.action = action;
+    }
+
     @JsProperty(name="title")
     public String title;
+
+    @JsOverlay
+    public final String getTitle(){
+        return this.title;
+    }
+
+    @JsOverlay
+    public final void setTitle(String title){
+        this.title = title;
+    }
 
     @JsProperty(name="icon")
     public String icon;
 
+    @JsOverlay
+    public final String getIcon(){
+        return this.icon;
+    }
+
+    @JsOverlay
+    public final void setIcon(String icon){
+        this.icon = icon;
+    }
+
     @JsProperty(name="placeholder")
     public String placeholder;
+
+    @JsOverlay
+    public final String getPlaceholder(){
+        return this.placeholder;
+    }
+
+    @JsOverlay
+    public final void setPlaceholder(String placeholder){
+        this.placeholder = placeholder;
+    }
 
 
 }

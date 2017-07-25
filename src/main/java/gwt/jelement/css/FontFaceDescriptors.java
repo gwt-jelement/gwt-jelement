@@ -16,33 +16,107 @@
  */
 package gwt.jelement.css;
 
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class FontFaceDescriptors{
+
+    public FontFaceDescriptors(){
+    }
 
     @JsProperty(name="style")
     public String style;
 
+    @JsOverlay
+    public final String getStyle(){
+        return this.style;
+    }
+
+    @JsOverlay
+    public final void setStyle(String style){
+        this.style = style;
+    }
+
     @JsProperty(name="weight")
     public String weight;
+
+    @JsOverlay
+    public final String getWeight(){
+        return this.weight;
+    }
+
+    @JsOverlay
+    public final void setWeight(String weight){
+        this.weight = weight;
+    }
 
     @JsProperty(name="stretch")
     public String stretch;
 
+    @JsOverlay
+    public final String getStretch(){
+        return this.stretch;
+    }
+
+    @JsOverlay
+    public final void setStretch(String stretch){
+        this.stretch = stretch;
+    }
+
     @JsProperty(name="unicodeRange")
     public String unicodeRange;
+
+    @JsOverlay
+    public final String getUnicodeRange(){
+        return this.unicodeRange;
+    }
+
+    @JsOverlay
+    public final void setUnicodeRange(String unicodeRange){
+        this.unicodeRange = unicodeRange;
+    }
 
     @JsProperty(name="variant")
     public String variant;
 
+    @JsOverlay
+    public final String getVariant(){
+        return this.variant;
+    }
+
+    @JsOverlay
+    public final void setVariant(String variant){
+        this.variant = variant;
+    }
+
     @JsProperty(name="featureSettings")
     public String featureSettings;
 
+    @JsOverlay
+    public final String getFeatureSettings(){
+        return this.featureSettings;
+    }
+
+    @JsOverlay
+    public final void setFeatureSettings(String featureSettings){
+        this.featureSettings = featureSettings;
+    }
+
     @JsProperty(name="display")
     public String display;
+
+    @JsOverlay
+    public final String getDisplay(){
+        return this.display;
+    }
+
+    @JsOverlay
+    public final void setDisplay(String display){
+        this.display = display;
+    }
 
 
 }

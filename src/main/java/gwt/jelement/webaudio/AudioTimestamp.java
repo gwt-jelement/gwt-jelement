@@ -16,18 +16,42 @@
  */
 package gwt.jelement.webaudio;
 
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class AudioTimestamp{
+
+    public AudioTimestamp(){
+    }
 
     @JsProperty(name="contextTime")
     public double contextTime;
 
+    @JsOverlay
+    public final double getContextTime(){
+        return this.contextTime;
+    }
+
+    @JsOverlay
+    public final void setContextTime(double contextTime){
+        this.contextTime = contextTime;
+    }
+
     @JsProperty(name="performanceTime")
     public double performanceTime;
+
+    @JsOverlay
+    public final double getPerformanceTime(){
+        return this.performanceTime;
+    }
+
+    @JsOverlay
+    public final void setPerformanceTime(double performanceTime){
+        this.performanceTime = performanceTime;
+    }
 
 
 }

@@ -23,11 +23,24 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 import jsinterop.base.Js;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class MediaStreamConstraints{
+
+    public MediaStreamConstraints(){
+    }
 
     @JsType(isNative = true, name = "?", namespace = JsPackage.GLOBAL)
     public interface BooleanOrMediaTrackConstraintsUnionType {
+        @JsOverlay
+        static BooleanOrMediaTrackConstraintsUnionType of(boolean value){
+            return Js.cast(value);
+        }
+    
+        @JsOverlay
+        static BooleanOrMediaTrackConstraintsUnionType of(MediaTrackConstraints value){
+            return Js.cast(value);
+        }
+    
         @JsOverlay
         default boolean asBoolean(){
             return Js.cast(this);
@@ -53,8 +66,28 @@ public class MediaStreamConstraints{
     @JsProperty(name="video")
     public MediaStreamConstraints.BooleanOrMediaTrackConstraintsUnionType video;
 
+    @JsOverlay
+    public final void setVideo(boolean video){
+        this.video = MediaStreamConstraints.BooleanOrMediaTrackConstraintsUnionType.of(video);
+    }
+
+    @JsOverlay
+    public final void setVideo(MediaTrackConstraints video){
+        this.video = MediaStreamConstraints.BooleanOrMediaTrackConstraintsUnionType.of(video);
+    }
+
     @JsProperty(name="audio")
     public MediaStreamConstraints.BooleanOrMediaTrackConstraintsUnionType audio;
+
+    @JsOverlay
+    public final void setAudio(boolean audio){
+        this.audio = MediaStreamConstraints.BooleanOrMediaTrackConstraintsUnionType.of(audio);
+    }
+
+    @JsOverlay
+    public final void setAudio(MediaTrackConstraints audio){
+        this.audio = MediaStreamConstraints.BooleanOrMediaTrackConstraintsUnionType.of(audio);
+    }
 
 
 }

@@ -16,18 +16,42 @@
  */
 package gwt.jelement.encoding;
 
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class TextDecoderOptions{
+
+    public TextDecoderOptions(){
+    }
 
     @JsProperty(name="fatal")
     public boolean fatal;
 
+    @JsOverlay
+    public final boolean getFatal(){
+        return this.fatal;
+    }
+
+    @JsOverlay
+    public final void setFatal(boolean fatal){
+        this.fatal = fatal;
+    }
+
     @JsProperty(name="ignoreBOM")
     public boolean ignoreBOM;
+
+    @JsOverlay
+    public final boolean getIgnoreBOM(){
+        return this.ignoreBOM;
+    }
+
+    @JsOverlay
+    public final void setIgnoreBOM(boolean ignoreBOM){
+        this.ignoreBOM = ignoreBOM;
+    }
 
 
 }

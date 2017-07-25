@@ -18,15 +18,29 @@ package gwt.jelement.webaudio;
 
 import gwt.jelement.events.EventInit;
 import gwt.jelement.webaudio.AudioBuffer;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class OfflineAudioCompletionEventInit extends EventInit{
+
+    public OfflineAudioCompletionEventInit(){
+    }
 
     @JsProperty(name="renderedBuffer")
     public AudioBuffer renderedBuffer;
+
+    @JsOverlay
+    public final AudioBuffer getRenderedBuffer(){
+        return this.renderedBuffer;
+    }
+
+    @JsOverlay
+    public final void setRenderedBuffer(AudioBuffer renderedBuffer){
+        this.renderedBuffer = renderedBuffer;
+    }
 
 
 }

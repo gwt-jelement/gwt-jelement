@@ -17,18 +17,42 @@
 package gwt.jelement.speech;
 
 import gwt.jelement.events.EventInit;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class SpeechRecognitionErrorInit extends EventInit{
+
+    public SpeechRecognitionErrorInit(){
+    }
 
     @JsProperty(name="error")
     public String error;
 
+    @JsOverlay
+    public final String getError(){
+        return this.error;
+    }
+
+    @JsOverlay
+    public final void setError(String error){
+        this.error = error;
+    }
+
     @JsProperty(name="message")
     public String message;
+
+    @JsOverlay
+    public final String getMessage(){
+        return this.message;
+    }
+
+    @JsOverlay
+    public final void setMessage(String message){
+        this.message = message;
+    }
 
 
 }

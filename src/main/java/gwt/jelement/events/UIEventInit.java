@@ -19,21 +19,55 @@ package gwt.jelement.events;
 import gwt.jelement.events.EventInit;
 import gwt.jelement.frame.Window;
 import gwt.jelement.input.InputDeviceCapabilities;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class UIEventInit extends EventInit{
+
+    public UIEventInit(){
+    }
 
     @JsProperty(name="view")
     public Window view;
 
+    @JsOverlay
+    public final Window getView(){
+        return this.view;
+    }
+
+    @JsOverlay
+    public final void setView(Window view){
+        this.view = view;
+    }
+
     @JsProperty(name="detail")
     public double detail;
 
+    @JsOverlay
+    public final double getDetail(){
+        return this.detail;
+    }
+
+    @JsOverlay
+    public final void setDetail(double detail){
+        this.detail = detail;
+    }
+
     @JsProperty(name="sourceCapabilities")
     public InputDeviceCapabilities sourceCapabilities;
+
+    @JsOverlay
+    public final InputDeviceCapabilities getSourceCapabilities(){
+        return this.sourceCapabilities;
+    }
+
+    @JsOverlay
+    public final void setSourceCapabilities(InputDeviceCapabilities sourceCapabilities){
+        this.sourceCapabilities = sourceCapabilities;
+    }
 
 
 }

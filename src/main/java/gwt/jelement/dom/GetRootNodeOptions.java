@@ -16,15 +16,29 @@
  */
 package gwt.jelement.dom;
 
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class GetRootNodeOptions{
+
+    public GetRootNodeOptions(){
+    }
 
     @JsProperty(name="composed")
     public boolean composed;
+
+    @JsOverlay
+    public final boolean getComposed(){
+        return this.composed;
+    }
+
+    @JsOverlay
+    public final void setComposed(boolean composed){
+        this.composed = composed;
+    }
 
 
 }

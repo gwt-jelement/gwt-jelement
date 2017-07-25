@@ -18,15 +18,29 @@ package gwt.jelement.mediastream;
 
 import gwt.jelement.events.EventInit;
 import gwt.jelement.mediastream.MediaStreamTrack;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class MediaStreamTrackEventInit extends EventInit{
+
+    public MediaStreamTrackEventInit(){
+    }
 
     @JsProperty(name="track")
     public MediaStreamTrack track;
+
+    @JsOverlay
+    public final MediaStreamTrack getTrack(){
+        return this.track;
+    }
+
+    @JsOverlay
+    public final void setTrack(MediaStreamTrack track){
+        this.track = track;
+    }
 
 
 }

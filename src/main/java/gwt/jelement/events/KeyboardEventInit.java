@@ -17,27 +17,81 @@
 package gwt.jelement.events;
 
 import gwt.jelement.events.EventModifierInit;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class KeyboardEventInit extends EventModifierInit{
+
+    public KeyboardEventInit(){
+    }
 
     @JsProperty(name="key")
     public String key;
 
+    @JsOverlay
+    public final String getKey(){
+        return this.key;
+    }
+
+    @JsOverlay
+    public final void setKey(String key){
+        this.key = key;
+    }
+
     @JsProperty(name="code")
     public String code;
+
+    @JsOverlay
+    public final String getCode(){
+        return this.code;
+    }
+
+    @JsOverlay
+    public final void setCode(String code){
+        this.code = code;
+    }
 
     @JsProperty(name="location")
     public double location;
 
+    @JsOverlay
+    public final double getLocation(){
+        return this.location;
+    }
+
+    @JsOverlay
+    public final void setLocation(double location){
+        this.location = location;
+    }
+
     @JsProperty(name="repeat")
     public boolean repeat;
 
+    @JsOverlay
+    public final boolean getRepeat(){
+        return this.repeat;
+    }
+
+    @JsOverlay
+    public final void setRepeat(boolean repeat){
+        this.repeat = repeat;
+    }
+
     @JsProperty(name="isComposing")
     public boolean isComposing;
+
+    @JsOverlay
+    public final boolean getIsComposing(){
+        return this.isComposing;
+    }
+
+    @JsOverlay
+    public final void setIsComposing(boolean isComposing){
+        this.isComposing = isComposing;
+    }
 
 
 }

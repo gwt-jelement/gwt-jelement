@@ -18,18 +18,42 @@ package gwt.jelement.encryptedmedia;
 
 import gwt.jelement.events.EventInit;
 import elemental2.core.ArrayBuffer;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class MediaEncryptedEventInit extends EventInit{
+
+    public MediaEncryptedEventInit(){
+    }
 
     @JsProperty(name="initDataType")
     public String initDataType;
 
+    @JsOverlay
+    public final String getInitDataType(){
+        return this.initDataType;
+    }
+
+    @JsOverlay
+    public final void setInitDataType(String initDataType){
+        this.initDataType = initDataType;
+    }
+
     @JsProperty(name="initData")
     public ArrayBuffer initData;
+
+    @JsOverlay
+    public final ArrayBuffer getInitData(){
+        return this.initData;
+    }
+
+    @JsOverlay
+    public final void setInitData(ArrayBuffer initData){
+        this.initData = initData;
+    }
 
 
 }

@@ -18,18 +18,42 @@ package gwt.jelement.speech;
 
 import gwt.jelement.events.EventInit;
 import gwt.jelement.speech.SpeechRecognitionResultList;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class SpeechRecognitionEventInit extends EventInit{
+
+    public SpeechRecognitionEventInit(){
+    }
 
     @JsProperty(name="resultIndex")
     public double resultIndex;
 
+    @JsOverlay
+    public final double getResultIndex(){
+        return this.resultIndex;
+    }
+
+    @JsOverlay
+    public final void setResultIndex(double resultIndex){
+        this.resultIndex = resultIndex;
+    }
+
     @JsProperty(name="results")
     public SpeechRecognitionResultList results;
+
+    @JsOverlay
+    public final SpeechRecognitionResultList getResults(){
+        return this.results;
+    }
+
+    @JsOverlay
+    public final void setResults(SpeechRecognitionResultList results){
+        this.results = results;
+    }
 
 
 }

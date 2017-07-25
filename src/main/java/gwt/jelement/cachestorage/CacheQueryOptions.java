@@ -16,24 +16,68 @@
  */
 package gwt.jelement.cachestorage;
 
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class CacheQueryOptions{
+
+    public CacheQueryOptions(){
+    }
 
     @JsProperty(name="ignoreSearch")
     public boolean ignoreSearch;
 
+    @JsOverlay
+    public final boolean getIgnoreSearch(){
+        return this.ignoreSearch;
+    }
+
+    @JsOverlay
+    public final void setIgnoreSearch(boolean ignoreSearch){
+        this.ignoreSearch = ignoreSearch;
+    }
+
     @JsProperty(name="ignoreMethod")
     public boolean ignoreMethod;
+
+    @JsOverlay
+    public final boolean getIgnoreMethod(){
+        return this.ignoreMethod;
+    }
+
+    @JsOverlay
+    public final void setIgnoreMethod(boolean ignoreMethod){
+        this.ignoreMethod = ignoreMethod;
+    }
 
     @JsProperty(name="ignoreVary")
     public boolean ignoreVary;
 
+    @JsOverlay
+    public final boolean getIgnoreVary(){
+        return this.ignoreVary;
+    }
+
+    @JsOverlay
+    public final void setIgnoreVary(boolean ignoreVary){
+        this.ignoreVary = ignoreVary;
+    }
+
     @JsProperty(name="cacheName")
     public String cacheName;
+
+    @JsOverlay
+    public final String getCacheName(){
+        return this.cacheName;
+    }
+
+    @JsOverlay
+    public final void setCacheName(String cacheName){
+        this.cacheName = cacheName;
+    }
 
 
 }

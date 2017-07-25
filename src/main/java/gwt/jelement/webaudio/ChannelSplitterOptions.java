@@ -17,15 +17,29 @@
 package gwt.jelement.webaudio;
 
 import gwt.jelement.webaudio.AudioNodeOptions;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class ChannelSplitterOptions extends AudioNodeOptions{
+
+    public ChannelSplitterOptions(){
+    }
 
     @JsProperty(name="numberOfOutputs")
     public double numberOfOutputs;
+
+    @JsOverlay
+    public final double getNumberOfOutputs(){
+        return this.numberOfOutputs;
+    }
+
+    @JsOverlay
+    public final void setNumberOfOutputs(double numberOfOutputs){
+        this.numberOfOutputs = numberOfOutputs;
+    }
 
 
 }

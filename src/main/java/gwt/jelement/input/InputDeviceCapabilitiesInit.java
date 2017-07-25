@@ -16,15 +16,29 @@
  */
 package gwt.jelement.input;
 
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class InputDeviceCapabilitiesInit{
+
+    public InputDeviceCapabilitiesInit(){
+    }
 
     @JsProperty(name="firesTouchEvents")
     public boolean firesTouchEvents;
+
+    @JsOverlay
+    public final boolean getFiresTouchEvents(){
+        return this.firesTouchEvents;
+    }
+
+    @JsOverlay
+    public final void setFiresTouchEvents(boolean firesTouchEvents){
+        this.firesTouchEvents = firesTouchEvents;
+    }
 
 
 }

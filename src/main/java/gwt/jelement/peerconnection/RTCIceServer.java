@@ -23,20 +23,63 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 import jsinterop.base.Js;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class RTCIceServer{
+
+    public RTCIceServer(){
+    }
 
     @JsProperty(name="urls")
     public IDBObjectStoreParameters.StringOrStringArrayUnionType urls;
 
+    @JsOverlay
+    public final void setUrls(String urls){
+        this.urls = IDBObjectStoreParameters.StringOrStringArrayUnionType.of(urls);
+    }
+
+    @JsOverlay
+    public final void setUrls(String[] urls){
+        this.urls = IDBObjectStoreParameters.StringOrStringArrayUnionType.of(urls);
+    }
+
     @JsProperty(name="url")
     public String url;
+
+    @JsOverlay
+    public final String getUrl(){
+        return this.url;
+    }
+
+    @JsOverlay
+    public final void setUrl(String url){
+        this.url = url;
+    }
 
     @JsProperty(name="username")
     public String username;
 
+    @JsOverlay
+    public final String getUsername(){
+        return this.username;
+    }
+
+    @JsOverlay
+    public final void setUsername(String username){
+        this.username = username;
+    }
+
     @JsProperty(name="credential")
     public String credential;
+
+    @JsOverlay
+    public final String getCredential(){
+        return this.credential;
+    }
+
+    @JsOverlay
+    public final void setCredential(String credential){
+        this.credential = credential;
+    }
 
 
 }

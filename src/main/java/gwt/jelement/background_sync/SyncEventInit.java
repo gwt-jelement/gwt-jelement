@@ -17,18 +17,42 @@
 package gwt.jelement.background_sync;
 
 import gwt.jelement.serviceworkers.ExtendableEventInit;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class SyncEventInit extends ExtendableEventInit{
+
+    public SyncEventInit(){
+    }
 
     @JsProperty(name="tag")
     public String tag;
 
+    @JsOverlay
+    public final String getTag(){
+        return this.tag;
+    }
+
+    @JsOverlay
+    public final void setTag(String tag){
+        this.tag = tag;
+    }
+
     @JsProperty(name="lastChance")
     public boolean lastChance;
+
+    @JsOverlay
+    public final boolean getLastChance(){
+        return this.lastChance;
+    }
+
+    @JsOverlay
+    public final void setLastChance(boolean lastChance){
+        this.lastChance = lastChance;
+    }
 
 
 }

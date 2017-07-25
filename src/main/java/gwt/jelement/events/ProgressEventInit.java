@@ -17,21 +17,55 @@
 package gwt.jelement.events;
 
 import gwt.jelement.events.EventInit;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class ProgressEventInit extends EventInit{
+
+    public ProgressEventInit(){
+    }
 
     @JsProperty(name="lengthComputable")
     public boolean lengthComputable;
 
+    @JsOverlay
+    public final boolean getLengthComputable(){
+        return this.lengthComputable;
+    }
+
+    @JsOverlay
+    public final void setLengthComputable(boolean lengthComputable){
+        this.lengthComputable = lengthComputable;
+    }
+
     @JsProperty(name="loaded")
     public double loaded;
 
+    @JsOverlay
+    public final double getLoaded(){
+        return this.loaded;
+    }
+
+    @JsOverlay
+    public final void setLoaded(double loaded){
+        this.loaded = loaded;
+    }
+
     @JsProperty(name="total")
     public double total;
+
+    @JsOverlay
+    public final double getTotal(){
+        return this.total;
+    }
+
+    @JsOverlay
+    public final void setTotal(double total){
+        this.total = total;
+    }
 
 
 }

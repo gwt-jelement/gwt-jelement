@@ -18,15 +18,29 @@ package gwt.jelement.webmidi;
 
 import gwt.jelement.events.EventInit;
 import elemental2.core.Uint8Array;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class MIDIMessageEventInit extends EventInit{
+
+    public MIDIMessageEventInit(){
+    }
 
     @JsProperty(name="data")
     public Uint8Array data;
+
+    @JsOverlay
+    public final Uint8Array getData(){
+        return this.data;
+    }
+
+    @JsOverlay
+    public final void setData(Uint8Array data){
+        this.data = data;
+    }
 
 
 }

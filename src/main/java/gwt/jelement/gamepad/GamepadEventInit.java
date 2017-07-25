@@ -18,15 +18,29 @@ package gwt.jelement.gamepad;
 
 import gwt.jelement.events.EventInit;
 import gwt.jelement.gamepad.Gamepad;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class GamepadEventInit extends EventInit{
+
+    public GamepadEventInit(){
+    }
 
     @JsProperty(name="gamepad")
     public Gamepad gamepad;
+
+    @JsOverlay
+    public final Gamepad getGamepad(){
+        return this.gamepad;
+    }
+
+    @JsOverlay
+    public final void setGamepad(Gamepad gamepad){
+        this.gamepad = gamepad;
+    }
 
 
 }

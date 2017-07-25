@@ -16,21 +16,55 @@
  */
 package gwt.jelement.geolocation;
 
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class PositionOptions{
+
+    public PositionOptions(){
+    }
 
     @JsProperty(name="enableHighAccuracy")
     public boolean enableHighAccuracy;
 
+    @JsOverlay
+    public final boolean getEnableHighAccuracy(){
+        return this.enableHighAccuracy;
+    }
+
+    @JsOverlay
+    public final void setEnableHighAccuracy(boolean enableHighAccuracy){
+        this.enableHighAccuracy = enableHighAccuracy;
+    }
+
     @JsProperty(name="timeout")
     public double timeout;
 
+    @JsOverlay
+    public final double getTimeout(){
+        return this.timeout;
+    }
+
+    @JsOverlay
+    public final void setTimeout(double timeout){
+        this.timeout = timeout;
+    }
+
     @JsProperty(name="maximumAge")
     public double maximumAge;
+
+    @JsOverlay
+    public final double getMaximumAge(){
+        return this.maximumAge;
+    }
+
+    @JsOverlay
+    public final void setMaximumAge(double maximumAge){
+        this.maximumAge = maximumAge;
+    }
 
 
 }

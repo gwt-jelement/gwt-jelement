@@ -18,21 +18,55 @@ package gwt.jelement.events;
 
 import gwt.jelement.dom.Touch;
 import gwt.jelement.events.EventModifierInit;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class TouchEventInit extends EventModifierInit{
+
+    public TouchEventInit(){
+    }
 
     @JsProperty(name="touches")
     public Touch[] touches;
 
+    @JsOverlay
+    public final Touch[] getTouches(){
+        return this.touches;
+    }
+
+    @JsOverlay
+    public final void setTouches(Touch[] touches){
+        this.touches = touches;
+    }
+
     @JsProperty(name="targetTouches")
     public Touch[] targetTouches;
 
+    @JsOverlay
+    public final Touch[] getTargetTouches(){
+        return this.targetTouches;
+    }
+
+    @JsOverlay
+    public final void setTargetTouches(Touch[] targetTouches){
+        this.targetTouches = targetTouches;
+    }
+
     @JsProperty(name="changedTouches")
     public Touch[] changedTouches;
+
+    @JsOverlay
+    public final Touch[] getChangedTouches(){
+        return this.changedTouches;
+    }
+
+    @JsOverlay
+    public final void setChangedTouches(Touch[] changedTouches){
+        this.changedTouches = changedTouches;
+    }
 
 
 }

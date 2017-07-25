@@ -18,18 +18,42 @@ package gwt.jelement.webaudio;
 
 import gwt.jelement.webaudio.AudioBuffer;
 import gwt.jelement.webaudio.AudioNodeOptions;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class ConvolverOptions extends AudioNodeOptions{
+
+    public ConvolverOptions(){
+    }
 
     @JsProperty(name="buffer")
     public AudioBuffer buffer;
 
+    @JsOverlay
+    public final AudioBuffer getBuffer(){
+        return this.buffer;
+    }
+
+    @JsOverlay
+    public final void setBuffer(AudioBuffer buffer){
+        this.buffer = buffer;
+    }
+
     @JsProperty(name="disableNormalization")
     public boolean disableNormalization;
+
+    @JsOverlay
+    public final boolean getDisableNormalization(){
+        return this.disableNormalization;
+    }
+
+    @JsOverlay
+    public final void setDisableNormalization(boolean disableNormalization){
+        this.disableNormalization = disableNormalization;
+    }
 
 
 }

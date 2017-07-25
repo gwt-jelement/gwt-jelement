@@ -22,20 +22,63 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class PhotoSettings{
+
+    public PhotoSettings(){
+    }
 
     @JsProperty(name="redEyeReduction")
     public boolean redEyeReduction;
 
+    @JsOverlay
+    public final boolean getRedEyeReduction(){
+        return this.redEyeReduction;
+    }
+
+    @JsOverlay
+    public final void setRedEyeReduction(boolean redEyeReduction){
+        this.redEyeReduction = redEyeReduction;
+    }
+
     @JsProperty(name="imageHeight")
     public double imageHeight;
+
+    @JsOverlay
+    public final double getImageHeight(){
+        return this.imageHeight;
+    }
+
+    @JsOverlay
+    public final void setImageHeight(double imageHeight){
+        this.imageHeight = imageHeight;
+    }
 
     @JsProperty(name="imageWidth")
     public double imageWidth;
 
+    @JsOverlay
+    public final double getImageWidth(){
+        return this.imageWidth;
+    }
+
+    @JsOverlay
+    public final void setImageWidth(double imageWidth){
+        this.imageWidth = imageWidth;
+    }
+
     @JsProperty(name="fillLightMode")
-    public FillLightMode fillLightMode;
+    public String fillLightMode;
+
+    @JsOverlay
+    public final FillLightMode getFillLightMode(){
+        return FillLightMode.of(this.fillLightMode);
+    }
+
+    @JsOverlay
+    public final void setFillLightMode(FillLightMode fillLightMode){
+        this.fillLightMode = fillLightMode.getInternalValue();
+    }
 
 
 }

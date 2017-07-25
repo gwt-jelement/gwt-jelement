@@ -16,15 +16,29 @@
  */
 package gwt.jelement.webmidi;
 
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class MIDIOptions{
+
+    public MIDIOptions(){
+    }
 
     @JsProperty(name="sysex")
     public boolean sysex;
+
+    @JsOverlay
+    public final boolean getSysex(){
+        return this.sysex;
+    }
+
+    @JsOverlay
+    public final void setSysex(boolean sysex){
+        this.sysex = sysex;
+    }
 
 
 }

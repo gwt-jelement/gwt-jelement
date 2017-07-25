@@ -16,15 +16,29 @@
  */
 package gwt.jelement.html;
 
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class AssignedNodesOptions{
+
+    public AssignedNodesOptions(){
+    }
 
     @JsProperty(name="flatten")
     public boolean flatten;
+
+    @JsOverlay
+    public final boolean getFlatten(){
+        return this.flatten;
+    }
+
+    @JsOverlay
+    public final void setFlatten(boolean flatten){
+        this.flatten = flatten;
+    }
 
 
 }

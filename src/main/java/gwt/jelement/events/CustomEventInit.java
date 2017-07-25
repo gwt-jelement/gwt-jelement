@@ -17,15 +17,29 @@
 package gwt.jelement.events;
 
 import gwt.jelement.events.EventInit;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class CustomEventInit extends EventInit{
+
+    public CustomEventInit(){
+    }
 
     @JsProperty(name="detail")
     public Object detail;
+
+    @JsOverlay
+    public final Object getDetail(){
+        return this.detail;
+    }
+
+    @JsOverlay
+    public final void setDetail(Object detail){
+        this.detail = detail;
+    }
 
 
 }

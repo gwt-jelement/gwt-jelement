@@ -17,15 +17,29 @@
 package gwt.jelement.webgl;
 
 import gwt.jelement.events.EventInit;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class WebGLContextEventInit extends EventInit{
+
+    public WebGLContextEventInit(){
+    }
 
     @JsProperty(name="statusMessage")
     public String statusMessage;
+
+    @JsOverlay
+    public final String getStatusMessage(){
+        return this.statusMessage;
+    }
+
+    @JsOverlay
+    public final void setStatusMessage(String statusMessage){
+        this.statusMessage = statusMessage;
+    }
 
 
 }

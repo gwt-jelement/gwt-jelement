@@ -16,21 +16,55 @@
  */
 package gwt.jelement.device_orientation;
 
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class DeviceRotationRateInit{
+
+    public DeviceRotationRateInit(){
+    }
 
     @JsProperty(name="alpha")
     public double alpha;
 
+    @JsOverlay
+    public final double getAlpha(){
+        return this.alpha;
+    }
+
+    @JsOverlay
+    public final void setAlpha(double alpha){
+        this.alpha = alpha;
+    }
+
     @JsProperty(name="beta")
     public double beta;
 
+    @JsOverlay
+    public final double getBeta(){
+        return this.beta;
+    }
+
+    @JsOverlay
+    public final void setBeta(double beta){
+        this.beta = beta;
+    }
+
     @JsProperty(name="gamma")
     public double gamma;
+
+    @JsOverlay
+    public final double getGamma(){
+        return this.gamma;
+    }
+
+    @JsOverlay
+    public final void setGamma(double gamma){
+        this.gamma = gamma;
+    }
 
 
 }

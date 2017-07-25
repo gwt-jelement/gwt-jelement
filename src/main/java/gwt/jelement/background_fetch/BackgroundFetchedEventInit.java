@@ -18,15 +18,29 @@ package gwt.jelement.background_fetch;
 
 import gwt.jelement.background_fetch.BackgroundFetchEventInit;
 import gwt.jelement.background_fetch.BackgroundFetchSettledFetch;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class BackgroundFetchedEventInit extends BackgroundFetchEventInit{
+
+    public BackgroundFetchedEventInit(){
+    }
 
     @JsProperty(name="fetches")
     public BackgroundFetchSettledFetch[] fetches;
+
+    @JsOverlay
+    public final BackgroundFetchSettledFetch[] getFetches(){
+        return this.fetches;
+    }
+
+    @JsOverlay
+    public final void setFetches(BackgroundFetchSettledFetch[] fetches){
+        this.fetches = fetches;
+    }
 
 
 }

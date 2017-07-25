@@ -18,15 +18,29 @@ package gwt.jelement.webusb;
 
 import gwt.jelement.events.EventInit;
 import gwt.jelement.webusb.USBDevice;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class USBConnectionEventInit extends EventInit{
+
+    public USBConnectionEventInit(){
+    }
 
     @JsProperty(name="device")
     public USBDevice device;
+
+    @JsOverlay
+    public final USBDevice getDevice(){
+        return this.device;
+    }
+
+    @JsOverlay
+    public final void setDevice(USBDevice device){
+        this.device = device;
+    }
 
 
 }

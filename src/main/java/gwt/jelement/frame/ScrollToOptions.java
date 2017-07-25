@@ -17,18 +17,42 @@
 package gwt.jelement.frame;
 
 import gwt.jelement.frame.ScrollOptions;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class ScrollToOptions extends ScrollOptions{
+
+    public ScrollToOptions(){
+    }
 
     @JsProperty(name="left")
     public double left;
 
+    @JsOverlay
+    public final double getLeft(){
+        return this.left;
+    }
+
+    @JsOverlay
+    public final void setLeft(double left){
+        this.left = left;
+    }
+
     @JsProperty(name="top")
     public double top;
+
+    @JsOverlay
+    public final double getTop(){
+        return this.top;
+    }
+
+    @JsOverlay
+    public final void setTop(double top){
+        this.top = top;
+    }
 
 
 }

@@ -18,18 +18,42 @@ package gwt.jelement.serviceworkers;
 
 import gwt.jelement.fetch.Request;
 import gwt.jelement.serviceworkers.ExtendableEventInit;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class ForeignFetchEventInit extends ExtendableEventInit{
+
+    public ForeignFetchEventInit(){
+    }
 
     @JsProperty(name="request")
     public Request request;
 
+    @JsOverlay
+    public final Request getRequest(){
+        return this.request;
+    }
+
+    @JsOverlay
+    public final void setRequest(Request request){
+        this.request = request;
+    }
+
     @JsProperty(name="origin")
     public String origin;
+
+    @JsOverlay
+    public final String getOrigin(){
+        return this.origin;
+    }
+
+    @JsOverlay
+    public final void setOrigin(String origin){
+        this.origin = origin;
+    }
 
 
 }

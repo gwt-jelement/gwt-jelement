@@ -23,11 +23,24 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class BackgroundFetchClickEventInit extends BackgroundFetchEventInit{
 
+    public BackgroundFetchClickEventInit(){
+    }
+
     @JsProperty(name="state")
-    public BackgroundFetchState state;
+    public String state;
+
+    @JsOverlay
+    public final BackgroundFetchState getState(){
+        return BackgroundFetchState.of(this.state);
+    }
+
+    @JsOverlay
+    public final void setState(BackgroundFetchState state){
+        this.state = state.getInternalValue();
+    }
 
 
 }

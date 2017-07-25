@@ -18,18 +18,42 @@ package gwt.jelement.mediarecorder;
 
 import gwt.jelement.events.EventInit;
 import gwt.jelement.fileapi.Blob;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class BlobEventInit extends EventInit{
+
+    public BlobEventInit(){
+    }
 
     @JsProperty(name="data")
     public Blob data;
 
+    @JsOverlay
+    public final Blob getData(){
+        return this.data;
+    }
+
+    @JsOverlay
+    public final void setData(Blob data){
+        this.data = data;
+    }
+
     @JsProperty(name="timecode")
     public double timecode;
+
+    @JsOverlay
+    public final double getTimecode(){
+        return this.timecode;
+    }
+
+    @JsOverlay
+    public final void setTimecode(double timecode){
+        this.timecode = timecode;
+    }
 
 
 }

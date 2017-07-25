@@ -23,14 +23,37 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class ScrollIntoViewOptions extends ScrollOptions{
 
+    public ScrollIntoViewOptions(){
+    }
+
     @JsProperty(name="block")
-    public ScrollLogicalPosition block;
+    public String block;
+
+    @JsOverlay
+    public final ScrollLogicalPosition getBlock(){
+        return ScrollLogicalPosition.of(this.block);
+    }
+
+    @JsOverlay
+    public final void setBlock(ScrollLogicalPosition block){
+        this.block = block.getInternalValue();
+    }
 
     @JsProperty(name="inline")
-    public ScrollLogicalPosition inline;
+    public String inline;
+
+    @JsOverlay
+    public final ScrollLogicalPosition getInline(){
+        return ScrollLogicalPosition.of(this.inline);
+    }
+
+    @JsOverlay
+    public final void setInline(ScrollLogicalPosition inline){
+        this.inline = inline.getInternalValue();
+    }
 
 
 }

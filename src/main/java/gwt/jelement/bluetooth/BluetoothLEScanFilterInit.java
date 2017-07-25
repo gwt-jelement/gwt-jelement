@@ -22,11 +22,24 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 import jsinterop.base.Js;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class BluetoothLEScanFilterInit{
+
+    public BluetoothLEScanFilterInit(){
+    }
 
     @JsType(isNative = true, name = "?", namespace = JsPackage.GLOBAL)
     public interface BluetoothDescriptorUUID {
+        @JsOverlay
+        static BluetoothDescriptorUUID of(String value){
+            return Js.cast(value);
+        }
+    
+        @JsOverlay
+        static BluetoothDescriptorUUID of(double value){
+            return Js.cast(value);
+        }
+    
         @JsOverlay
         default String asString(){
             return Js.cast(this);
@@ -52,11 +65,41 @@ public class BluetoothLEScanFilterInit{
     @JsProperty(name="services")
     public BluetoothLEScanFilterInit.BluetoothDescriptorUUID[] services;
 
+    @JsOverlay
+    public final BluetoothLEScanFilterInit.BluetoothDescriptorUUID[] getServices(){
+        return this.services;
+    }
+
+    @JsOverlay
+    public final void setServices(BluetoothLEScanFilterInit.BluetoothDescriptorUUID[] services){
+        this.services = services;
+    }
+
     @JsProperty(name="name")
     public String name;
 
+    @JsOverlay
+    public final String getName(){
+        return this.name;
+    }
+
+    @JsOverlay
+    public final void setName(String name){
+        this.name = name;
+    }
+
     @JsProperty(name="namePrefix")
     public String namePrefix;
+
+    @JsOverlay
+    public final String getNamePrefix(){
+        return this.namePrefix;
+    }
+
+    @JsOverlay
+    public final void setNamePrefix(String namePrefix){
+        this.namePrefix = namePrefix;
+    }
 
 
 }

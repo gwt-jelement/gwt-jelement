@@ -23,17 +23,50 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class AudioNodeOptions{
+
+    public AudioNodeOptions(){
+    }
 
     @JsProperty(name="channelCount")
     public double channelCount;
 
+    @JsOverlay
+    public final double getChannelCount(){
+        return this.channelCount;
+    }
+
+    @JsOverlay
+    public final void setChannelCount(double channelCount){
+        this.channelCount = channelCount;
+    }
+
     @JsProperty(name="channelCountMode")
-    public ChannelCountMode channelCountMode;
+    public String channelCountMode;
+
+    @JsOverlay
+    public final ChannelCountMode getChannelCountMode(){
+        return ChannelCountMode.of(this.channelCountMode);
+    }
+
+    @JsOverlay
+    public final void setChannelCountMode(ChannelCountMode channelCountMode){
+        this.channelCountMode = channelCountMode.getInternalValue();
+    }
 
     @JsProperty(name="channelInterpretation")
-    public ChannelInterpretation channelInterpretation;
+    public String channelInterpretation;
+
+    @JsOverlay
+    public final ChannelInterpretation getChannelInterpretation(){
+        return ChannelInterpretation.of(this.channelInterpretation);
+    }
+
+    @JsOverlay
+    public final void setChannelInterpretation(ChannelInterpretation channelInterpretation){
+        this.channelInterpretation = channelInterpretation.getInternalValue();
+    }
 
 
 }

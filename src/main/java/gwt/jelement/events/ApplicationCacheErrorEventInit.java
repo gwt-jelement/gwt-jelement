@@ -17,24 +17,68 @@
 package gwt.jelement.events;
 
 import gwt.jelement.events.EventInit;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class ApplicationCacheErrorEventInit extends EventInit{
+
+    public ApplicationCacheErrorEventInit(){
+    }
 
     @JsProperty(name="reason")
     public String reason;
 
+    @JsOverlay
+    public final String getReason(){
+        return this.reason;
+    }
+
+    @JsOverlay
+    public final void setReason(String reason){
+        this.reason = reason;
+    }
+
     @JsProperty(name="url")
     public String url;
+
+    @JsOverlay
+    public final String getUrl(){
+        return this.url;
+    }
+
+    @JsOverlay
+    public final void setUrl(String url){
+        this.url = url;
+    }
 
     @JsProperty(name="status")
     public short status;
 
+    @JsOverlay
+    public final short getStatus(){
+        return this.status;
+    }
+
+    @JsOverlay
+    public final void setStatus(short status){
+        this.status = status;
+    }
+
     @JsProperty(name="message")
     public String message;
+
+    @JsOverlay
+    public final String getMessage(){
+        return this.message;
+    }
+
+    @JsOverlay
+    public final void setMessage(String message){
+        this.message = message;
+    }
 
 
 }

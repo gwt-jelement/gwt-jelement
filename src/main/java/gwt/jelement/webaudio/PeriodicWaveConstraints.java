@@ -16,15 +16,29 @@
  */
 package gwt.jelement.webaudio;
 
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class PeriodicWaveConstraints{
+
+    public PeriodicWaveConstraints(){
+    }
 
     @JsProperty(name="disableNormalization")
     public boolean disableNormalization;
+
+    @JsOverlay
+    public final boolean getDisableNormalization(){
+        return this.disableNormalization;
+    }
+
+    @JsOverlay
+    public final void setDisableNormalization(boolean disableNormalization){
+        this.disableNormalization = disableNormalization;
+    }
 
 
 }

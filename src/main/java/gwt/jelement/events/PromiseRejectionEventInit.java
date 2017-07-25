@@ -18,18 +18,42 @@ package gwt.jelement.events;
 
 import gwt.jelement.events.EventInit;
 import elemental2.promise.Promise;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class PromiseRejectionEventInit extends EventInit{
+
+    public PromiseRejectionEventInit(){
+    }
 
     @JsProperty(name="promise")
     public Promise<Object> promise;
 
+    @JsOverlay
+    public final Promise<Object> getPromise(){
+        return this.promise;
+    }
+
+    @JsOverlay
+    public final void setPromise(Promise<Object> promise){
+        this.promise = promise;
+    }
+
     @JsProperty(name="reason")
     public Object reason;
+
+    @JsOverlay
+    public final Object getReason(){
+        return this.reason;
+    }
+
+    @JsOverlay
+    public final void setReason(Object reason){
+        this.reason = reason;
+    }
 
 
 }

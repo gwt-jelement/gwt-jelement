@@ -17,21 +17,55 @@
 package gwt.jelement.serviceworkers;
 
 import gwt.jelement.fetch.Response;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class ForeignFetchResponse{
+
+    public ForeignFetchResponse(){
+    }
 
     @JsProperty(name="response")
     public Response response;
 
+    @JsOverlay
+    public final Response getResponse(){
+        return this.response;
+    }
+
+    @JsOverlay
+    public final void setResponse(Response response){
+        this.response = response;
+    }
+
     @JsProperty(name="origin")
     public String origin;
 
+    @JsOverlay
+    public final String getOrigin(){
+        return this.origin;
+    }
+
+    @JsOverlay
+    public final void setOrigin(String origin){
+        this.origin = origin;
+    }
+
     @JsProperty(name="headers")
     public String[] headers;
+
+    @JsOverlay
+    public final String[] getHeaders(){
+        return this.headers;
+    }
+
+    @JsOverlay
+    public final void setHeaders(String[] headers){
+        this.headers = headers;
+    }
 
 
 }

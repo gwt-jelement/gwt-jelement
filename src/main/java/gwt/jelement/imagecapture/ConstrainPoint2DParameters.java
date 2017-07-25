@@ -17,18 +17,42 @@
 package gwt.jelement.imagecapture;
 
 import gwt.jelement.imagecapture.Point2D;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class ConstrainPoint2DParameters{
+
+    public ConstrainPoint2DParameters(){
+    }
 
     @JsProperty(name="exact")
     public Point2D[] exact;
 
+    @JsOverlay
+    public final Point2D[] getExact(){
+        return this.exact;
+    }
+
+    @JsOverlay
+    public final void setExact(Point2D[] exact){
+        this.exact = exact;
+    }
+
     @JsProperty(name="ideal")
     public Point2D[] ideal;
+
+    @JsOverlay
+    public final Point2D[] getIdeal(){
+        return this.ideal;
+    }
+
+    @JsOverlay
+    public final void setIdeal(Point2D[] ideal){
+        this.ideal = ideal;
+    }
 
 
 }

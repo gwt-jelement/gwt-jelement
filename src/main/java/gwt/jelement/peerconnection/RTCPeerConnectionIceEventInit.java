@@ -18,15 +18,29 @@ package gwt.jelement.peerconnection;
 
 import gwt.jelement.events.EventInit;
 import gwt.jelement.peerconnection.RTCIceCandidate;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class RTCPeerConnectionIceEventInit extends EventInit{
+
+    public RTCPeerConnectionIceEventInit(){
+    }
 
     @JsProperty(name="candidate")
     public RTCIceCandidate candidate;
+
+    @JsOverlay
+    public final RTCIceCandidate getCandidate(){
+        return this.candidate;
+    }
+
+    @JsOverlay
+    public final void setCandidate(RTCIceCandidate candidate){
+        this.candidate = candidate;
+    }
 
 
 }

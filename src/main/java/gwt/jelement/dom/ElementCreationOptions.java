@@ -16,15 +16,29 @@
  */
 package gwt.jelement.dom;
 
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class ElementCreationOptions{
+
+    public ElementCreationOptions(){
+    }
 
     @JsProperty(name="is")
     public String is;
+
+    @JsOverlay
+    public final String getIs(){
+        return this.is;
+    }
+
+    @JsOverlay
+    public final void setIs(String is){
+        this.is = is;
+    }
 
 
 }

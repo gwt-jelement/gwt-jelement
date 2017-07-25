@@ -17,18 +17,42 @@
 package gwt.jelement.webaudio;
 
 import gwt.jelement.webaudio.AudioNodeOptions;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class DelayOptions extends AudioNodeOptions{
+
+    public DelayOptions(){
+    }
 
     @JsProperty(name="maxDelayTime")
     public double maxDelayTime;
 
+    @JsOverlay
+    public final double getMaxDelayTime(){
+        return this.maxDelayTime;
+    }
+
+    @JsOverlay
+    public final void setMaxDelayTime(double maxDelayTime){
+        this.maxDelayTime = maxDelayTime;
+    }
+
     @JsProperty(name="delayTime")
     public double delayTime;
+
+    @JsOverlay
+    public final double getDelayTime(){
+        return this.delayTime;
+    }
+
+    @JsOverlay
+    public final void setDelayTime(double delayTime){
+        this.delayTime = delayTime;
+    }
 
 
 }

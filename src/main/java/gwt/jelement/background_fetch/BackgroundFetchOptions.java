@@ -17,21 +17,55 @@
 package gwt.jelement.background_fetch;
 
 import gwt.jelement.background_fetch.IconDefinition;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class BackgroundFetchOptions{
+
+    public BackgroundFetchOptions(){
+    }
 
     @JsProperty(name="icons")
     public IconDefinition[] icons;
 
+    @JsOverlay
+    public final IconDefinition[] getIcons(){
+        return this.icons;
+    }
+
+    @JsOverlay
+    public final void setIcons(IconDefinition[] icons){
+        this.icons = icons;
+    }
+
     @JsProperty(name="title")
     public String title;
 
+    @JsOverlay
+    public final String getTitle(){
+        return this.title;
+    }
+
+    @JsOverlay
+    public final void setTitle(String title){
+        this.title = title;
+    }
+
     @JsProperty(name="totalDownloadSize")
     public double totalDownloadSize;
+
+    @JsOverlay
+    public final double getTotalDownloadSize(){
+        return this.totalDownloadSize;
+    }
+
+    @JsOverlay
+    public final void setTotalDownloadSize(double totalDownloadSize){
+        this.totalDownloadSize = totalDownloadSize;
+    }
 
 
 }

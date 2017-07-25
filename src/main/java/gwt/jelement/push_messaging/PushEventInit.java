@@ -25,11 +25,29 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 import jsinterop.base.Js;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class PushEventInit extends ExtendableEventInit{
+
+    public PushEventInit(){
+    }
 
     @JsType(isNative = true, name = "?", namespace = JsPackage.GLOBAL)
     public interface PushMessageDataInit {
+        @JsOverlay
+        static PushMessageDataInit of(ArrayBuffer value){
+            return Js.cast(value);
+        }
+    
+        @JsOverlay
+        static PushMessageDataInit of(ArrayBufferView value){
+            return Js.cast(value);
+        }
+    
+        @JsOverlay
+        static PushMessageDataInit of(String value){
+            return Js.cast(value);
+        }
+    
         @JsOverlay
         default ArrayBuffer asArrayBuffer(){
             return Js.cast(this);
@@ -64,6 +82,21 @@ public class PushEventInit extends ExtendableEventInit{
     
     @JsProperty(name="data")
     public PushEventInit.PushMessageDataInit data;
+
+    @JsOverlay
+    public final void setData(ArrayBuffer data){
+        this.data = PushEventInit.PushMessageDataInit.of(data);
+    }
+
+    @JsOverlay
+    public final void setData(ArrayBufferView data){
+        this.data = PushEventInit.PushMessageDataInit.of(data);
+    }
+
+    @JsOverlay
+    public final void setData(String data){
+        this.data = PushEventInit.PushMessageDataInit.of(data);
+    }
 
 
 }

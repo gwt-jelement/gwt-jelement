@@ -18,21 +18,55 @@ package gwt.jelement.serviceworkers;
 
 import gwt.jelement.fetch.Request;
 import gwt.jelement.serviceworkers.ExtendableEventInit;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class FetchEventInit extends ExtendableEventInit{
+
+    public FetchEventInit(){
+    }
 
     @JsProperty(name="request")
     public Request request;
 
+    @JsOverlay
+    public final Request getRequest(){
+        return this.request;
+    }
+
+    @JsOverlay
+    public final void setRequest(Request request){
+        this.request = request;
+    }
+
     @JsProperty(name="clientId")
     public String clientId;
 
+    @JsOverlay
+    public final String getClientId(){
+        return this.clientId;
+    }
+
+    @JsOverlay
+    public final void setClientId(String clientId){
+        this.clientId = clientId;
+    }
+
     @JsProperty(name="isReload")
     public boolean isReload;
+
+    @JsOverlay
+    public final boolean getIsReload(){
+        return this.isReload;
+    }
+
+    @JsOverlay
+    public final void setIsReload(boolean isReload){
+        this.isReload = isReload;
+    }
 
 
 }

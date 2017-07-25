@@ -17,15 +17,29 @@
 package gwt.jelement.animation;
 
 import gwt.jelement.animation.KeyframeEffectOptions;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class KeyframeAnimationOptions extends KeyframeEffectOptions{
+
+    public KeyframeAnimationOptions(){
+    }
 
     @JsProperty(name="id")
     public String id;
+
+    @JsOverlay
+    public final String getId(){
+        return this.id;
+    }
+
+    @JsOverlay
+    public final void setId(String id){
+        this.id = id;
+    }
 
 
 }

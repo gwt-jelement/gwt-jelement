@@ -24,11 +24,24 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 import jsinterop.base.Js;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class PushSubscriptionOptionsInit{
+
+    public PushSubscriptionOptionsInit(){
+    }
 
     @JsType(isNative = true, name = "?", namespace = JsPackage.GLOBAL)
     public interface BufferSource {
+        @JsOverlay
+        static BufferSource of(ArrayBuffer value){
+            return Js.cast(value);
+        }
+    
+        @JsOverlay
+        static BufferSource of(ArrayBufferView value){
+            return Js.cast(value);
+        }
+    
         @JsOverlay
         default ArrayBuffer asArrayBuffer(){
             return Js.cast(this);
@@ -54,8 +67,28 @@ public class PushSubscriptionOptionsInit{
     @JsProperty(name="userVisibleOnly")
     public boolean userVisibleOnly;
 
+    @JsOverlay
+    public final boolean getUserVisibleOnly(){
+        return this.userVisibleOnly;
+    }
+
+    @JsOverlay
+    public final void setUserVisibleOnly(boolean userVisibleOnly){
+        this.userVisibleOnly = userVisibleOnly;
+    }
+
     @JsProperty(name="applicationServerKey")
     public PushSubscriptionOptionsInit.BufferSource applicationServerKey;
+
+    @JsOverlay
+    public final void setApplicationServerKey(ArrayBuffer applicationServerKey){
+        this.applicationServerKey = PushSubscriptionOptionsInit.BufferSource.of(applicationServerKey);
+    }
+
+    @JsOverlay
+    public final void setApplicationServerKey(ArrayBufferView applicationServerKey){
+        this.applicationServerKey = PushSubscriptionOptionsInit.BufferSource.of(applicationServerKey);
+    }
 
 
 }

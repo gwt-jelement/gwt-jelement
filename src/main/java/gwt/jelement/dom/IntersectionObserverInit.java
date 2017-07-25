@@ -23,11 +23,24 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 import jsinterop.base.Js;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class IntersectionObserverInit{
+
+    public IntersectionObserverInit(){
+    }
 
     @JsType(isNative = true, name = "?", namespace = JsPackage.GLOBAL)
     public interface DoubleOrDoubleArrayUnionType {
+        @JsOverlay
+        static DoubleOrDoubleArrayUnionType of(double value){
+            return Js.cast(value);
+        }
+    
+        @JsOverlay
+        static DoubleOrDoubleArrayUnionType of(double[] value){
+            return Js.cast(value);
+        }
+    
         @JsOverlay
         default double asDouble(){
             return Js.cast(this);
@@ -53,11 +66,41 @@ public class IntersectionObserverInit{
     @JsProperty(name="root")
     public Element root;
 
+    @JsOverlay
+    public final Element getRoot(){
+        return this.root;
+    }
+
+    @JsOverlay
+    public final void setRoot(Element root){
+        this.root = root;
+    }
+
     @JsProperty(name="rootMargin")
     public String rootMargin;
 
+    @JsOverlay
+    public final String getRootMargin(){
+        return this.rootMargin;
+    }
+
+    @JsOverlay
+    public final void setRootMargin(String rootMargin){
+        this.rootMargin = rootMargin;
+    }
+
     @JsProperty(name="threshold")
     public IntersectionObserverInit.DoubleOrDoubleArrayUnionType threshold;
+
+    @JsOverlay
+    public final void setThreshold(double threshold){
+        this.threshold = IntersectionObserverInit.DoubleOrDoubleArrayUnionType.of(threshold);
+    }
+
+    @JsOverlay
+    public final void setThreshold(double[] threshold){
+        this.threshold = IntersectionObserverInit.DoubleOrDoubleArrayUnionType.of(threshold);
+    }
 
 
 }

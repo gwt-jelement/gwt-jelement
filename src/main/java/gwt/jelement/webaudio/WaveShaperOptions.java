@@ -23,14 +23,37 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class WaveShaperOptions extends AudioNodeOptions{
+
+    public WaveShaperOptions(){
+    }
 
     @JsProperty(name="curve")
     public float[] curve;
 
+    @JsOverlay
+    public final float[] getCurve(){
+        return this.curve;
+    }
+
+    @JsOverlay
+    public final void setCurve(float[] curve){
+        this.curve = curve;
+    }
+
     @JsProperty(name="oversample")
-    public OverSampleType oversample;
+    public String oversample;
+
+    @JsOverlay
+    public final OverSampleType getOversample(){
+        return OverSampleType.of(this.oversample);
+    }
+
+    @JsOverlay
+    public final void setOversample(OverSampleType oversample){
+        this.oversample = oversample.getInternalValue();
+    }
 
 
 }

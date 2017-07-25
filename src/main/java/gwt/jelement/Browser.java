@@ -34,4 +34,7 @@ public class Browser {
     public static Window self;
     public static Window top;
     public static Window window;
+    public static double Infinity;
+    public static double NaN;
+    public static Object undefined;
 }

@@ -17,15 +17,29 @@
 package gwt.jelement.permissions;
 
 import gwt.jelement.permissions.PermissionDescriptor;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class PushPermissionDescriptor extends PermissionDescriptor{
+
+    public PushPermissionDescriptor(){
+    }
 
     @JsProperty(name="userVisibleOnly")
     public boolean userVisibleOnly;
+
+    @JsOverlay
+    public final boolean getUserVisibleOnly(){
+        return this.userVisibleOnly;
+    }
+
+    @JsOverlay
+    public final void setUserVisibleOnly(boolean userVisibleOnly){
+        this.userVisibleOnly = userVisibleOnly;
+    }
 
 
 }

@@ -16,30 +16,94 @@
  */
 package gwt.jelement.peerconnection;
 
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class RTCDataChannelInit{
+
+    public RTCDataChannelInit(){
+    }
 
     @JsProperty(name="ordered")
     public boolean ordered;
 
+    @JsOverlay
+    public final boolean getOrdered(){
+        return this.ordered;
+    }
+
+    @JsOverlay
+    public final void setOrdered(boolean ordered){
+        this.ordered = ordered;
+    }
+
     @JsProperty(name="maxRetransmitTime")
     public short maxRetransmitTime;
+
+    @JsOverlay
+    public final short getMaxRetransmitTime(){
+        return this.maxRetransmitTime;
+    }
+
+    @JsOverlay
+    public final void setMaxRetransmitTime(short maxRetransmitTime){
+        this.maxRetransmitTime = maxRetransmitTime;
+    }
 
     @JsProperty(name="maxRetransmits")
     public short maxRetransmits;
 
+    @JsOverlay
+    public final short getMaxRetransmits(){
+        return this.maxRetransmits;
+    }
+
+    @JsOverlay
+    public final void setMaxRetransmits(short maxRetransmits){
+        this.maxRetransmits = maxRetransmits;
+    }
+
     @JsProperty(name="protocol")
     public String protocol;
+
+    @JsOverlay
+    public final String getProtocol(){
+        return this.protocol;
+    }
+
+    @JsOverlay
+    public final void setProtocol(String protocol){
+        this.protocol = protocol;
+    }
 
     @JsProperty(name="negotiated")
     public boolean negotiated;
 
+    @JsOverlay
+    public final boolean getNegotiated(){
+        return this.negotiated;
+    }
+
+    @JsOverlay
+    public final void setNegotiated(boolean negotiated){
+        this.negotiated = negotiated;
+    }
+
     @JsProperty(name="id")
     public short id;
+
+    @JsOverlay
+    public final short getId(){
+        return this.id;
+    }
+
+    @JsOverlay
+    public final void setId(short id){
+        this.id = id;
+    }
 
 
 }

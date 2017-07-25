@@ -17,15 +17,29 @@
 package gwt.jelement.app_banner;
 
 import gwt.jelement.events.EventInit;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class BeforeInstallPromptEventInit extends EventInit{
+
+    public BeforeInstallPromptEventInit(){
+    }
 
     @JsProperty(name="platforms")
     public String[] platforms;
+
+    @JsOverlay
+    public final String[] getPlatforms(){
+        return this.platforms;
+    }
+
+    @JsOverlay
+    public final void setPlatforms(String[] platforms){
+        this.platforms = platforms;
+    }
 
 
 }

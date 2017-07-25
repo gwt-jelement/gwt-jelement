@@ -16,15 +16,29 @@
  */
 package gwt.jelement.dom;
 
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class IdleRequestOptions{
+
+    public IdleRequestOptions(){
+    }
 
     @JsProperty(name="timeout")
     public double timeout;
+
+    @JsOverlay
+    public final double getTimeout(){
+        return this.timeout;
+    }
+
+    @JsOverlay
+    public final void setTimeout(double timeout){
+        this.timeout = timeout;
+    }
 
 
 }

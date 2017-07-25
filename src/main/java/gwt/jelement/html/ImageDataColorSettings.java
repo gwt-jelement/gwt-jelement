@@ -23,14 +23,37 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class ImageDataColorSettings{
 
+    public ImageDataColorSettings(){
+    }
+
     @JsProperty(name="colorSpace")
-    public CanvasColorSpace colorSpace;
+    public String colorSpace;
+
+    @JsOverlay
+    public final CanvasColorSpace getColorSpace(){
+        return CanvasColorSpace.of(this.colorSpace);
+    }
+
+    @JsOverlay
+    public final void setColorSpace(CanvasColorSpace colorSpace){
+        this.colorSpace = colorSpace.getInternalValue();
+    }
 
     @JsProperty(name="storageFormat")
-    public ImageDataStorageFormat storageFormat;
+    public String storageFormat;
+
+    @JsOverlay
+    public final ImageDataStorageFormat getStorageFormat(){
+        return ImageDataStorageFormat.of(this.storageFormat);
+    }
+
+    @JsOverlay
+    public final void setStorageFormat(ImageDataStorageFormat storageFormat){
+        this.storageFormat = storageFormat.getInternalValue();
+    }
 
 
 }

@@ -16,21 +16,55 @@
  */
 package gwt.jelement.peerconnection;
 
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class RTCIceCandidateInit{
+
+    public RTCIceCandidateInit(){
+    }
 
     @JsProperty(name="candidate")
     public String candidate;
 
+    @JsOverlay
+    public final String getCandidate(){
+        return this.candidate;
+    }
+
+    @JsOverlay
+    public final void setCandidate(String candidate){
+        this.candidate = candidate;
+    }
+
     @JsProperty(name="sdpMid")
     public String sdpMid;
 
+    @JsOverlay
+    public final String getSdpMid(){
+        return this.sdpMid;
+    }
+
+    @JsOverlay
+    public final void setSdpMid(String sdpMid){
+        this.sdpMid = sdpMid;
+    }
+
     @JsProperty(name="sdpMLineIndex")
     public short sdpMLineIndex;
+
+    @JsOverlay
+    public final short getSdpMLineIndex(){
+        return this.sdpMLineIndex;
+    }
+
+    @JsOverlay
+    public final void setSdpMLineIndex(short sdpMLineIndex){
+        this.sdpMLineIndex = sdpMLineIndex;
+    }
 
 
 }

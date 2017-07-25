@@ -22,14 +22,37 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class BlobPropertyBag{
+
+    public BlobPropertyBag(){
+    }
 
     @JsProperty(name="type")
     public String type;
 
+    @JsOverlay
+    public final String getType(){
+        return this.type;
+    }
+
+    @JsOverlay
+    public final void setType(String type){
+        this.type = type;
+    }
+
     @JsProperty(name="endings")
-    public NormalizeLineEndings endings;
+    public String endings;
+
+    @JsOverlay
+    public final NormalizeLineEndings getEndings(){
+        return NormalizeLineEndings.of(this.endings);
+    }
+
+    @JsOverlay
+    public final void setEndings(NormalizeLineEndings endings){
+        this.endings = endings.getInternalValue();
+    }
 
 
 }

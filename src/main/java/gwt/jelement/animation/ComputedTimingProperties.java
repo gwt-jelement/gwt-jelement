@@ -17,27 +17,81 @@
 package gwt.jelement.animation;
 
 import gwt.jelement.animation.AnimationEffectTimingProperties;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class ComputedTimingProperties extends AnimationEffectTimingProperties{
+
+    public ComputedTimingProperties(){
+    }
 
     @JsProperty(name="endTime")
     public double endTime;
 
+    @JsOverlay
+    public final double getEndTime(){
+        return this.endTime;
+    }
+
+    @JsOverlay
+    public final void setEndTime(double endTime){
+        this.endTime = endTime;
+    }
+
     @JsProperty(name="activeDuration")
     public double activeDuration;
+
+    @JsOverlay
+    public final double getActiveDuration(){
+        return this.activeDuration;
+    }
+
+    @JsOverlay
+    public final void setActiveDuration(double activeDuration){
+        this.activeDuration = activeDuration;
+    }
 
     @JsProperty(name="localTime")
     public double localTime;
 
+    @JsOverlay
+    public final double getLocalTime(){
+        return this.localTime;
+    }
+
+    @JsOverlay
+    public final void setLocalTime(double localTime){
+        this.localTime = localTime;
+    }
+
     @JsProperty(name="progress")
     public double progress;
 
+    @JsOverlay
+    public final double getProgress(){
+        return this.progress;
+    }
+
+    @JsOverlay
+    public final void setProgress(double progress){
+        this.progress = progress;
+    }
+
     @JsProperty(name="currentIteration")
     public double currentIteration;
+
+    @JsOverlay
+    public final double getCurrentIteration(){
+        return this.currentIteration;
+    }
+
+    @JsOverlay
+    public final void setCurrentIteration(double currentIteration){
+        this.currentIteration = currentIteration;
+    }
 
 
 }

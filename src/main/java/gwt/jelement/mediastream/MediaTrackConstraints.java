@@ -17,15 +17,29 @@
 package gwt.jelement.mediastream;
 
 import gwt.jelement.mediastream.MediaTrackConstraintSet;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class MediaTrackConstraints extends MediaTrackConstraintSet{
+
+    public MediaTrackConstraints(){
+    }
 
     @JsProperty(name="advanced")
     public MediaTrackConstraintSet[] advanced;
+
+    @JsOverlay
+    public final MediaTrackConstraintSet[] getAdvanced(){
+        return this.advanced;
+    }
+
+    @JsOverlay
+    public final void setAdvanced(MediaTrackConstraintSet[] advanced){
+        this.advanced = advanced;
+    }
 
 
 }

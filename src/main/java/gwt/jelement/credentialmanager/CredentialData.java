@@ -16,15 +16,29 @@
  */
 package gwt.jelement.credentialmanager;
 
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class CredentialData{
+
+    public CredentialData(){
+    }
 
     @JsProperty(name="id")
     public String id;
+
+    @JsOverlay
+    public final String getId(){
+        return this.id;
+    }
+
+    @JsOverlay
+    public final void setId(String id){
+        this.id = id;
+    }
 
 
 }

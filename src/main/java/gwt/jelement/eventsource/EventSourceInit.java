@@ -16,15 +16,29 @@
  */
 package gwt.jelement.eventsource;
 
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class EventSourceInit{
+
+    public EventSourceInit(){
+    }
 
     @JsProperty(name="withCredentials")
     public boolean withCredentials;
+
+    @JsOverlay
+    public final boolean getWithCredentials(){
+        return this.withCredentials;
+    }
+
+    @JsOverlay
+    public final void setWithCredentials(boolean withCredentials){
+        this.withCredentials = withCredentials;
+    }
 
 
 }

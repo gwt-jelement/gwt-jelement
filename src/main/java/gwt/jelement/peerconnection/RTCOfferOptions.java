@@ -17,21 +17,55 @@
 package gwt.jelement.peerconnection;
 
 import gwt.jelement.peerconnection.RTCOfferAnswerOptions;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class RTCOfferOptions extends RTCOfferAnswerOptions{
+
+    public RTCOfferOptions(){
+    }
 
     @JsProperty(name="iceRestart")
     public boolean iceRestart;
 
+    @JsOverlay
+    public final boolean getIceRestart(){
+        return this.iceRestart;
+    }
+
+    @JsOverlay
+    public final void setIceRestart(boolean iceRestart){
+        this.iceRestart = iceRestart;
+    }
+
     @JsProperty(name="offerToReceiveVideo")
     public double offerToReceiveVideo;
 
+    @JsOverlay
+    public final double getOfferToReceiveVideo(){
+        return this.offerToReceiveVideo;
+    }
+
+    @JsOverlay
+    public final void setOfferToReceiveVideo(double offerToReceiveVideo){
+        this.offerToReceiveVideo = offerToReceiveVideo;
+    }
+
     @JsProperty(name="offerToReceiveAudio")
     public double offerToReceiveAudio;
+
+    @JsOverlay
+    public final double getOfferToReceiveAudio(){
+        return this.offerToReceiveAudio;
+    }
+
+    @JsOverlay
+    public final void setOfferToReceiveAudio(double offerToReceiveAudio){
+        this.offerToReceiveAudio = offerToReceiveAudio;
+    }
 
 
 }

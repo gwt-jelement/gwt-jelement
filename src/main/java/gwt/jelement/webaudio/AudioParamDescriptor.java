@@ -16,24 +16,68 @@
  */
 package gwt.jelement.webaudio;
 
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class AudioParamDescriptor{
+
+    public AudioParamDescriptor(){
+    }
 
     @JsProperty(name="name")
     public String name;
 
+    @JsOverlay
+    public final String getName(){
+        return this.name;
+    }
+
+    @JsOverlay
+    public final void setName(String name){
+        this.name = name;
+    }
+
     @JsProperty(name="defaultValue")
     public float defaultValue;
+
+    @JsOverlay
+    public final float getDefaultValue(){
+        return this.defaultValue;
+    }
+
+    @JsOverlay
+    public final void setDefaultValue(float defaultValue){
+        this.defaultValue = defaultValue;
+    }
 
     @JsProperty(name="minValue")
     public float minValue;
 
+    @JsOverlay
+    public final float getMinValue(){
+        return this.minValue;
+    }
+
+    @JsOverlay
+    public final void setMinValue(float minValue){
+        this.minValue = minValue;
+    }
+
     @JsProperty(name="maxValue")
     public float maxValue;
+
+    @JsOverlay
+    public final float getMaxValue(){
+        return this.maxValue;
+    }
+
+    @JsOverlay
+    public final void setMaxValue(float maxValue){
+        this.maxValue = maxValue;
+    }
 
 
 }

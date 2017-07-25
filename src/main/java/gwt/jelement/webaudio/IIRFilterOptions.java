@@ -17,18 +17,42 @@
 package gwt.jelement.webaudio;
 
 import gwt.jelement.webaudio.AudioNodeOptions;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class IIRFilterOptions extends AudioNodeOptions{
+
+    public IIRFilterOptions(){
+    }
 
     @JsProperty(name="feedforward")
     public double[] feedforward;
 
+    @JsOverlay
+    public final double[] getFeedforward(){
+        return this.feedforward;
+    }
+
+    @JsOverlay
+    public final void setFeedforward(double[] feedforward){
+        this.feedforward = feedforward;
+    }
+
     @JsProperty(name="feedback")
     public double[] feedback;
+
+    @JsOverlay
+    public final double[] getFeedback(){
+        return this.feedback;
+    }
+
+    @JsOverlay
+    public final void setFeedback(double[] feedback){
+        this.feedback = feedback;
+    }
 
 
 }

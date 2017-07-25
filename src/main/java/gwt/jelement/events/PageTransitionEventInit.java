@@ -17,15 +17,29 @@
 package gwt.jelement.events;
 
 import gwt.jelement.events.EventInit;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class PageTransitionEventInit extends EventInit{
+
+    public PageTransitionEventInit(){
+    }
 
     @JsProperty(name="persisted")
     public boolean persisted;
+
+    @JsOverlay
+    public final boolean getPersisted(){
+        return this.persisted;
+    }
+
+    @JsOverlay
+    public final void setPersisted(boolean persisted){
+        this.persisted = persisted;
+    }
 
 
 }

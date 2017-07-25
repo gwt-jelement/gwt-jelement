@@ -22,11 +22,24 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 import jsinterop.base.Js;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class IDBObjectStoreParameters{
+
+    public IDBObjectStoreParameters(){
+    }
 
     @JsType(isNative = true, name = "?", namespace = JsPackage.GLOBAL)
     public interface StringOrStringArrayUnionType {
+        @JsOverlay
+        static StringOrStringArrayUnionType of(String value){
+            return Js.cast(value);
+        }
+    
+        @JsOverlay
+        static StringOrStringArrayUnionType of(String[] value){
+            return Js.cast(value);
+        }
+    
         @JsOverlay
         default String asString(){
             return Js.cast(this);
@@ -52,8 +65,28 @@ public class IDBObjectStoreParameters{
     @JsProperty(name="keyPath")
     public IDBObjectStoreParameters.StringOrStringArrayUnionType keyPath;
 
+    @JsOverlay
+    public final void setKeyPath(String keyPath){
+        this.keyPath = IDBObjectStoreParameters.StringOrStringArrayUnionType.of(keyPath);
+    }
+
+    @JsOverlay
+    public final void setKeyPath(String[] keyPath){
+        this.keyPath = IDBObjectStoreParameters.StringOrStringArrayUnionType.of(keyPath);
+    }
+
     @JsProperty(name="autoIncrement")
     public boolean autoIncrement;
+
+    @JsOverlay
+    public final boolean getAutoIncrement(){
+        return this.autoIncrement;
+    }
+
+    @JsOverlay
+    public final void setAutoIncrement(boolean autoIncrement){
+        this.autoIncrement = autoIncrement;
+    }
 
 
 }

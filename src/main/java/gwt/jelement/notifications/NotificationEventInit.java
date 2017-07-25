@@ -18,21 +18,55 @@ package gwt.jelement.notifications;
 
 import gwt.jelement.notifications.Notification;
 import gwt.jelement.serviceworkers.ExtendableEventInit;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class NotificationEventInit extends ExtendableEventInit{
+
+    public NotificationEventInit(){
+    }
 
     @JsProperty(name="notification")
     public Notification notification;
 
+    @JsOverlay
+    public final Notification getNotification(){
+        return this.notification;
+    }
+
+    @JsOverlay
+    public final void setNotification(Notification notification){
+        this.notification = notification;
+    }
+
     @JsProperty(name="action")
     public String action;
 
+    @JsOverlay
+    public final String getAction(){
+        return this.action;
+    }
+
+    @JsOverlay
+    public final void setAction(String action){
+        this.action = action;
+    }
+
     @JsProperty(name="reply")
     public String reply;
+
+    @JsOverlay
+    public final String getReply(){
+        return this.reply;
+    }
+
+    @JsOverlay
+    public final void setReply(String reply){
+        this.reply = reply;
+    }
 
 
 }

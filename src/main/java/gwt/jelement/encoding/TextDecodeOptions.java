@@ -16,15 +16,29 @@
  */
 package gwt.jelement.encoding;
 
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class TextDecodeOptions{
+
+    public TextDecodeOptions(){
+    }
 
     @JsProperty(name="stream")
     public boolean stream;
+
+    @JsOverlay
+    public final boolean getStream(){
+        return this.stream;
+    }
+
+    @JsOverlay
+    public final void setStream(boolean stream){
+        this.stream = stream;
+    }
 
 
 }

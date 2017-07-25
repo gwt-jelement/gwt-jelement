@@ -24,20 +24,63 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class OscillatorOptions extends AudioNodeOptions{
 
+    public OscillatorOptions(){
+    }
+
     @JsProperty(name="type")
-    public OscillatorType type;
+    public String type;
+
+    @JsOverlay
+    public final OscillatorType getType(){
+        return OscillatorType.of(this.type);
+    }
+
+    @JsOverlay
+    public final void setType(OscillatorType type){
+        this.type = type.getInternalValue();
+    }
 
     @JsProperty(name="detune")
     public float detune;
 
+    @JsOverlay
+    public final float getDetune(){
+        return this.detune;
+    }
+
+    @JsOverlay
+    public final void setDetune(float detune){
+        this.detune = detune;
+    }
+
     @JsProperty(name="frequency")
     public float frequency;
 
+    @JsOverlay
+    public final float getFrequency(){
+        return this.frequency;
+    }
+
+    @JsOverlay
+    public final void setFrequency(float frequency){
+        this.frequency = frequency;
+    }
+
     @JsProperty(name="periodicWave")
     public PeriodicWave periodicWave;
+
+    @JsOverlay
+    public final PeriodicWave getPeriodicWave(){
+        return this.periodicWave;
+    }
+
+    @JsOverlay
+    public final void setPeriodicWave(PeriodicWave periodicWave){
+        this.periodicWave = periodicWave;
+    }
 
 
 }

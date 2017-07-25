@@ -16,18 +16,42 @@
  */
 package gwt.jelement.serviceworkers;
 
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class ForeignFetchOptions{
+
+    public ForeignFetchOptions(){
+    }
 
     @JsProperty(name="scopes")
     public String[] scopes;
 
+    @JsOverlay
+    public final String[] getScopes(){
+        return this.scopes;
+    }
+
+    @JsOverlay
+    public final void setScopes(String[] scopes){
+        this.scopes = scopes;
+    }
+
     @JsProperty(name="origins")
     public String[] origins;
+
+    @JsOverlay
+    public final String[] getOrigins(){
+        return this.origins;
+    }
+
+    @JsOverlay
+    public final void setOrigins(String[] origins){
+        this.origins = origins;
+    }
 
 
 }

@@ -16,18 +16,42 @@
  */
 package gwt.jelement.dom;
 
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class ElementRegistrationOptions{
+
+    public ElementRegistrationOptions(){
+    }
 
     @JsProperty(name="prototype")
     public Object prototype;
 
+    @JsOverlay
+    public final Object getPrototype(){
+        return this.prototype;
+    }
+
+    @JsOverlay
+    public final void setPrototype(Object prototype){
+        this.prototype = prototype;
+    }
+
     @JsProperty(name="extends")
     public String extends_;
+
+    @JsOverlay
+    public final String getExtends(){
+        return this.extends_;
+    }
+
+    @JsOverlay
+    public final void setExtends(String extends_){
+        this.extends_ = extends_;
+    }
 
 
 }

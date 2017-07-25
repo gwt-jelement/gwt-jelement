@@ -19,27 +19,81 @@ package gwt.jelement.events;
 import gwt.jelement.dom.MessagePort;
 import gwt.jelement.events.EventInit;
 import gwt.jelement.events.EventTarget;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class MessageEventInit extends EventInit{
+
+    public MessageEventInit(){
+    }
 
     @JsProperty(name="data")
     public Object data;
 
+    @JsOverlay
+    public final Object getData(){
+        return this.data;
+    }
+
+    @JsOverlay
+    public final void setData(Object data){
+        this.data = data;
+    }
+
     @JsProperty(name="origin")
     public String origin;
+
+    @JsOverlay
+    public final String getOrigin(){
+        return this.origin;
+    }
+
+    @JsOverlay
+    public final void setOrigin(String origin){
+        this.origin = origin;
+    }
 
     @JsProperty(name="lastEventId")
     public String lastEventId;
 
+    @JsOverlay
+    public final String getLastEventId(){
+        return this.lastEventId;
+    }
+
+    @JsOverlay
+    public final void setLastEventId(String lastEventId){
+        this.lastEventId = lastEventId;
+    }
+
     @JsProperty(name="source")
     public EventTarget source;
 
+    @JsOverlay
+    public final EventTarget getSource(){
+        return this.source;
+    }
+
+    @JsOverlay
+    public final void setSource(EventTarget source){
+        this.source = source;
+    }
+
     @JsProperty(name="ports")
     public MessagePort[] ports;
+
+    @JsOverlay
+    public final MessagePort[] getPorts(){
+        return this.ports;
+    }
+
+    @JsOverlay
+    public final void setPorts(MessagePort[] ports){
+        this.ports = ports;
+    }
 
 
 }

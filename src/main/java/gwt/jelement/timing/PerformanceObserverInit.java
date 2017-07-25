@@ -16,15 +16,29 @@
  */
 package gwt.jelement.timing;
 
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class PerformanceObserverInit{
+
+    public PerformanceObserverInit(){
+    }
 
     @JsProperty(name="entryTypes")
     public String[] entryTypes;
+
+    @JsOverlay
+    public final String[] getEntryTypes(){
+        return this.entryTypes;
+    }
+
+    @JsOverlay
+    public final void setEntryTypes(String[] entryTypes){
+        this.entryTypes = entryTypes;
+    }
 
 
 }

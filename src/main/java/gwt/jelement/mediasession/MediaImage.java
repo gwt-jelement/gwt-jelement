@@ -16,21 +16,55 @@
  */
 package gwt.jelement.mediasession;
 
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class MediaImage{
+
+    public MediaImage(){
+    }
 
     @JsProperty(name="src")
     public String src;
 
+    @JsOverlay
+    public final String getSrc(){
+        return this.src;
+    }
+
+    @JsOverlay
+    public final void setSrc(String src){
+        this.src = src;
+    }
+
     @JsProperty(name="sizes")
     public String sizes;
 
+    @JsOverlay
+    public final String getSizes(){
+        return this.sizes;
+    }
+
+    @JsOverlay
+    public final void setSizes(String sizes){
+        this.sizes = sizes;
+    }
+
     @JsProperty(name="type")
     public String type;
+
+    @JsOverlay
+    public final String getType(){
+        return this.type;
+    }
+
+    @JsOverlay
+    public final void setType(String type){
+        this.type = type;
+    }
 
 
 }

@@ -22,14 +22,37 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class RTCSessionDescriptionInit{
 
+    public RTCSessionDescriptionInit(){
+    }
+
     @JsProperty(name="type")
-    public RTCSdpType type;
+    public String type;
+
+    @JsOverlay
+    public final RTCSdpType getType(){
+        return RTCSdpType.of(this.type);
+    }
+
+    @JsOverlay
+    public final void setType(RTCSdpType type){
+        this.type = type.getInternalValue();
+    }
 
     @JsProperty(name="sdp")
     public String sdp;
+
+    @JsOverlay
+    public final String getSdp(){
+        return this.sdp;
+    }
+
+    @JsOverlay
+    public final void setSdp(String sdp){
+        this.sdp = sdp;
+    }
 
 
 }

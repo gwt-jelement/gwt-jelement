@@ -16,18 +16,42 @@
  */
 package gwt.jelement.encryptedmedia;
 
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class MediaKeySystemMediaCapability{
+
+    public MediaKeySystemMediaCapability(){
+    }
 
     @JsProperty(name="contentType")
     public String contentType;
 
+    @JsOverlay
+    public final String getContentType(){
+        return this.contentType;
+    }
+
+    @JsOverlay
+    public final void setContentType(String contentType){
+        this.contentType = contentType;
+    }
+
     @JsProperty(name="robustness")
     public String robustness;
+
+    @JsOverlay
+    public final String getRobustness(){
+        return this.robustness;
+    }
+
+    @JsOverlay
+    public final void setRobustness(String robustness){
+        this.robustness = robustness;
+    }
 
 
 }

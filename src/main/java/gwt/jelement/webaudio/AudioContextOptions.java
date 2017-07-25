@@ -22,11 +22,24 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 import jsinterop.base.Js;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class AudioContextOptions{
+
+    public AudioContextOptions(){
+    }
 
     @JsType(isNative = true, name = "?", namespace = JsPackage.GLOBAL)
     public interface AudioContextLatencyCategoryOrDoubleUnionType {
+        @JsOverlay
+        static AudioContextLatencyCategoryOrDoubleUnionType of(String value){
+            return Js.cast(value);
+        }
+    
+        @JsOverlay
+        static AudioContextLatencyCategoryOrDoubleUnionType of(double value){
+            return Js.cast(value);
+        }
+    
         @JsOverlay
         default String asString(){
             return Js.cast(this);
@@ -51,6 +64,16 @@ public class AudioContextOptions{
     
     @JsProperty(name="latencyHint")
     public AudioContextOptions.AudioContextLatencyCategoryOrDoubleUnionType latencyHint;
+
+    @JsOverlay
+    public final void setLatencyHint(String latencyHint){
+        this.latencyHint = AudioContextOptions.AudioContextLatencyCategoryOrDoubleUnionType.of(latencyHint);
+    }
+
+    @JsOverlay
+    public final void setLatencyHint(double latencyHint){
+        this.latencyHint = AudioContextOptions.AudioContextLatencyCategoryOrDoubleUnionType.of(latencyHint);
+    }
 
 
 }

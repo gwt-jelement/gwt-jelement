@@ -17,15 +17,29 @@
 package gwt.jelement.events;
 
 import gwt.jelement.events.EventInit;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class PopStateEventInit extends EventInit{
+
+    public PopStateEventInit(){
+    }
 
     @JsProperty(name="state")
     public Object state;
+
+    @JsOverlay
+    public final Object getState(){
+        return this.state;
+    }
+
+    @JsOverlay
+    public final void setState(Object state){
+        this.state = state;
+    }
 
 
 }

@@ -22,11 +22,24 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class ScrollOptions{
 
+    public ScrollOptions(){
+    }
+
     @JsProperty(name="behavior")
-    public ScrollBehavior behavior;
+    public String behavior;
+
+    @JsOverlay
+    public final ScrollBehavior getBehavior(){
+        return ScrollBehavior.of(this.behavior);
+    }
+
+    @JsOverlay
+    public final void setBehavior(ScrollBehavior behavior){
+        this.behavior = behavior.getInternalValue();
+    }
 
 
 }

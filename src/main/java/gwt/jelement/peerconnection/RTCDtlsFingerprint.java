@@ -16,18 +16,42 @@
  */
 package gwt.jelement.peerconnection;
 
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class RTCDtlsFingerprint{
+
+    public RTCDtlsFingerprint(){
+    }
 
     @JsProperty(name="algorithm")
     public String algorithm;
 
+    @JsOverlay
+    public final String getAlgorithm(){
+        return this.algorithm;
+    }
+
+    @JsOverlay
+    public final void setAlgorithm(String algorithm){
+        this.algorithm = algorithm;
+    }
+
     @JsProperty(name="value")
     public String value;
+
+    @JsOverlay
+    public final String getValue(){
+        return this.value;
+    }
+
+    @JsOverlay
+    public final void setValue(String value){
+        this.value = value;
+    }
 
 
 }

@@ -17,30 +17,94 @@
 package gwt.jelement.events;
 
 import gwt.jelement.events.MouseEventInit;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class WheelEventInit extends MouseEventInit{
+
+    public WheelEventInit(){
+    }
 
     @JsProperty(name="deltaX")
     public double deltaX;
 
+    @JsOverlay
+    public final double getDeltaX(){
+        return this.deltaX;
+    }
+
+    @JsOverlay
+    public final void setDeltaX(double deltaX){
+        this.deltaX = deltaX;
+    }
+
     @JsProperty(name="deltaY")
     public double deltaY;
+
+    @JsOverlay
+    public final double getDeltaY(){
+        return this.deltaY;
+    }
+
+    @JsOverlay
+    public final void setDeltaY(double deltaY){
+        this.deltaY = deltaY;
+    }
 
     @JsProperty(name="deltaZ")
     public double deltaZ;
 
+    @JsOverlay
+    public final double getDeltaZ(){
+        return this.deltaZ;
+    }
+
+    @JsOverlay
+    public final void setDeltaZ(double deltaZ){
+        this.deltaZ = deltaZ;
+    }
+
     @JsProperty(name="deltaMode")
     public double deltaMode;
+
+    @JsOverlay
+    public final double getDeltaMode(){
+        return this.deltaMode;
+    }
+
+    @JsOverlay
+    public final void setDeltaMode(double deltaMode){
+        this.deltaMode = deltaMode;
+    }
 
     @JsProperty(name="wheelDeltaX")
     public double wheelDeltaX;
 
+    @JsOverlay
+    public final double getWheelDeltaX(){
+        return this.wheelDeltaX;
+    }
+
+    @JsOverlay
+    public final void setWheelDeltaX(double wheelDeltaX){
+        this.wheelDeltaX = wheelDeltaX;
+    }
+
     @JsProperty(name="wheelDeltaY")
     public double wheelDeltaY;
+
+    @JsOverlay
+    public final double getWheelDeltaY(){
+        return this.wheelDeltaY;
+    }
+
+    @JsOverlay
+    public final void setWheelDeltaY(double wheelDeltaY){
+        this.wheelDeltaY = wheelDeltaY;
+    }
 
 
 }

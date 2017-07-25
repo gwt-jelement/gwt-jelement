@@ -17,21 +17,55 @@
 package gwt.jelement.websockets;
 
 import gwt.jelement.events.EventInit;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class CloseEventInit extends EventInit{
+
+    public CloseEventInit(){
+    }
 
     @JsProperty(name="wasClean")
     public boolean wasClean;
 
+    @JsOverlay
+    public final boolean getWasClean(){
+        return this.wasClean;
+    }
+
+    @JsOverlay
+    public final void setWasClean(boolean wasClean){
+        this.wasClean = wasClean;
+    }
+
     @JsProperty(name="code")
     public short code;
 
+    @JsOverlay
+    public final short getCode(){
+        return this.code;
+    }
+
+    @JsOverlay
+    public final void setCode(short code){
+        this.code = code;
+    }
+
     @JsProperty(name="reason")
     public String reason;
+
+    @JsOverlay
+    public final String getReason(){
+        return this.reason;
+    }
+
+    @JsOverlay
+    public final void setReason(String reason){
+        this.reason = reason;
+    }
 
 
 }

@@ -17,18 +17,42 @@
 package gwt.jelement.css;
 
 import gwt.jelement.events.EventInit;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class MediaQueryListEventInit extends EventInit{
+
+    public MediaQueryListEventInit(){
+    }
 
     @JsProperty(name="media")
     public String media;
 
+    @JsOverlay
+    public final String getMedia(){
+        return this.media;
+    }
+
+    @JsOverlay
+    public final void setMedia(String media){
+        this.media = media;
+    }
+
     @JsProperty(name="matches")
     public boolean matches;
+
+    @JsOverlay
+    public final boolean getMatches(){
+        return this.matches;
+    }
+
+    @JsOverlay
+    public final void setMatches(boolean matches){
+        this.matches = matches;
+    }
 
 
 }

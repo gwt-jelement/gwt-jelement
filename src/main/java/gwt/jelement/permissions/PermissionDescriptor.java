@@ -22,11 +22,24 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class PermissionDescriptor{
 
+    public PermissionDescriptor(){
+    }
+
     @JsProperty(name="name")
-    public PermissionName name;
+    public String name;
+
+    @JsOverlay
+    public final PermissionName getName(){
+        return PermissionName.of(this.name);
+    }
+
+    @JsOverlay
+    public final void setName(PermissionName name){
+        this.name = name.getInternalValue();
+    }
 
 
 }

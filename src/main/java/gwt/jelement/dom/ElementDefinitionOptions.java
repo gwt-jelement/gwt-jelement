@@ -16,15 +16,29 @@
  */
 package gwt.jelement.dom;
 
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class ElementDefinitionOptions{
+
+    public ElementDefinitionOptions(){
+    }
 
     @JsProperty(name="extends")
     public String extends_;
+
+    @JsOverlay
+    public final String getExtends(){
+        return this.extends_;
+    }
+
+    @JsOverlay
+    public final void setExtends(String extends_){
+        this.extends_ = extends_;
+    }
 
 
 }

@@ -17,18 +17,42 @@
 package gwt.jelement.events;
 
 import gwt.jelement.events.EventInit;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class HashChangeEventInit extends EventInit{
+
+    public HashChangeEventInit(){
+    }
 
     @JsProperty(name="oldURL")
     public String oldURL;
 
+    @JsOverlay
+    public final String getOldURL(){
+        return this.oldURL;
+    }
+
+    @JsOverlay
+    public final void setOldURL(String oldURL){
+        this.oldURL = oldURL;
+    }
+
     @JsProperty(name="newURL")
     public String newURL;
+
+    @JsOverlay
+    public final String getNewURL(){
+        return this.newURL;
+    }
+
+    @JsOverlay
+    public final void setNewURL(String newURL){
+        this.newURL = newURL;
+    }
 
 
 }

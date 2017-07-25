@@ -17,18 +17,42 @@
 package gwt.jelement.nfc;
 
 import gwt.jelement.nfc.NFCRecord;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class NFCMessage{
+
+    public NFCMessage(){
+    }
 
     @JsProperty(name="records")
     public NFCRecord[] records;
 
+    @JsOverlay
+    public final NFCRecord[] getRecords(){
+        return this.records;
+    }
+
+    @JsOverlay
+    public final void setRecords(NFCRecord[] records){
+        this.records = records;
+    }
+
     @JsProperty(name="url")
     public String url;
+
+    @JsOverlay
+    public final String getUrl(){
+        return this.url;
+    }
+
+    @JsOverlay
+    public final void setUrl(String url){
+        this.url = url;
+    }
 
 
 }

@@ -19,27 +19,81 @@ package gwt.jelement.events;
 import gwt.jelement.clipboard.DataTransfer;
 import gwt.jelement.dom.StaticRange;
 import gwt.jelement.events.UIEventInit;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class InputEventInit extends UIEventInit{
+
+    public InputEventInit(){
+    }
 
     @JsProperty(name="data")
     public String data;
 
+    @JsOverlay
+    public final String getData(){
+        return this.data;
+    }
+
+    @JsOverlay
+    public final void setData(String data){
+        this.data = data;
+    }
+
     @JsProperty(name="isComposing")
     public boolean isComposing;
+
+    @JsOverlay
+    public final boolean getIsComposing(){
+        return this.isComposing;
+    }
+
+    @JsOverlay
+    public final void setIsComposing(boolean isComposing){
+        this.isComposing = isComposing;
+    }
 
     @JsProperty(name="inputType")
     public String inputType;
 
+    @JsOverlay
+    public final String getInputType(){
+        return this.inputType;
+    }
+
+    @JsOverlay
+    public final void setInputType(String inputType){
+        this.inputType = inputType;
+    }
+
     @JsProperty(name="dataTransfer")
     public DataTransfer dataTransfer;
 
+    @JsOverlay
+    public final DataTransfer getDataTransfer(){
+        return this.dataTransfer;
+    }
+
+    @JsOverlay
+    public final void setDataTransfer(DataTransfer dataTransfer){
+        this.dataTransfer = dataTransfer;
+    }
+
     @JsProperty(name="targetRanges")
     public StaticRange[] targetRanges;
+
+    @JsOverlay
+    public final StaticRange[] getTargetRanges(){
+        return this.targetRanges;
+    }
+
+    @JsOverlay
+    public final void setTargetRanges(StaticRange[] targetRanges){
+        this.targetRanges = targetRanges;
+    }
 
 
 }

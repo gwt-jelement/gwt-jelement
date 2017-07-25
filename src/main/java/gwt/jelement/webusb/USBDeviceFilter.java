@@ -16,30 +16,94 @@
  */
 package gwt.jelement.webusb;
 
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class USBDeviceFilter{
+
+    public USBDeviceFilter(){
+    }
 
     @JsProperty(name="vendorId")
     public short vendorId;
 
+    @JsOverlay
+    public final short getVendorId(){
+        return this.vendorId;
+    }
+
+    @JsOverlay
+    public final void setVendorId(short vendorId){
+        this.vendorId = vendorId;
+    }
+
     @JsProperty(name="productId")
     public short productId;
+
+    @JsOverlay
+    public final short getProductId(){
+        return this.productId;
+    }
+
+    @JsOverlay
+    public final void setProductId(short productId){
+        this.productId = productId;
+    }
 
     @JsProperty(name="classCode")
     public byte classCode;
 
+    @JsOverlay
+    public final byte getClassCode(){
+        return this.classCode;
+    }
+
+    @JsOverlay
+    public final void setClassCode(byte classCode){
+        this.classCode = classCode;
+    }
+
     @JsProperty(name="subclassCode")
     public byte subclassCode;
+
+    @JsOverlay
+    public final byte getSubclassCode(){
+        return this.subclassCode;
+    }
+
+    @JsOverlay
+    public final void setSubclassCode(byte subclassCode){
+        this.subclassCode = subclassCode;
+    }
 
     @JsProperty(name="protocolCode")
     public byte protocolCode;
 
+    @JsOverlay
+    public final byte getProtocolCode(){
+        return this.protocolCode;
+    }
+
+    @JsOverlay
+    public final void setProtocolCode(byte protocolCode){
+        this.protocolCode = protocolCode;
+    }
+
     @JsProperty(name="serialNumber")
     public String serialNumber;
+
+    @JsOverlay
+    public final String getSerialNumber(){
+        return this.serialNumber;
+    }
+
+    @JsOverlay
+    public final void setSerialNumber(String serialNumber){
+        this.serialNumber = serialNumber;
+    }
 
 
 }

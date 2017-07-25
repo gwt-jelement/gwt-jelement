@@ -18,15 +18,29 @@ package gwt.jelement.css;
 
 import gwt.jelement.css.FontFace;
 import gwt.jelement.events.EventInit;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class FontFaceSetLoadEventInit extends EventInit{
+
+    public FontFaceSetLoadEventInit(){
+    }
 
     @JsProperty(name="fontfaces")
     public FontFace[] fontfaces;
+
+    @JsOverlay
+    public final FontFace[] getFontfaces(){
+        return this.fontfaces;
+    }
+
+    @JsOverlay
+    public final void setFontfaces(FontFace[] fontfaces){
+        this.fontfaces = fontfaces;
+    }
 
 
 }

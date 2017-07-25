@@ -17,21 +17,55 @@
 package gwt.jelement.events;
 
 import gwt.jelement.events.EventInit;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class TransitionEventInit extends EventInit{
+
+    public TransitionEventInit(){
+    }
 
     @JsProperty(name="propertyName")
     public String propertyName;
 
+    @JsOverlay
+    public final String getPropertyName(){
+        return this.propertyName;
+    }
+
+    @JsOverlay
+    public final void setPropertyName(String propertyName){
+        this.propertyName = propertyName;
+    }
+
     @JsProperty(name="elapsedTime")
     public double elapsedTime;
 
+    @JsOverlay
+    public final double getElapsedTime(){
+        return this.elapsedTime;
+    }
+
+    @JsOverlay
+    public final void setElapsedTime(double elapsedTime){
+        this.elapsedTime = elapsedTime;
+    }
+
     @JsProperty(name="pseudoElement")
     public String pseudoElement;
+
+    @JsOverlay
+    public final String getPseudoElement(){
+        return this.pseudoElement;
+    }
+
+    @JsOverlay
+    public final void setPseudoElement(String pseudoElement){
+        this.pseudoElement = pseudoElement;
+    }
 
 
 }

@@ -17,21 +17,55 @@
 package gwt.jelement.credentialmanager;
 
 import gwt.jelement.credentialmanager.CredentialData;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class PasswordCredentialData extends CredentialData{
+
+    public PasswordCredentialData(){
+    }
 
     @JsProperty(name="name")
     public String name;
 
+    @JsOverlay
+    public final String getName(){
+        return this.name;
+    }
+
+    @JsOverlay
+    public final void setName(String name){
+        this.name = name;
+    }
+
     @JsProperty(name="iconURL")
     public String iconURL;
 
+    @JsOverlay
+    public final String getIconURL(){
+        return this.iconURL;
+    }
+
+    @JsOverlay
+    public final void setIconURL(String iconURL){
+        this.iconURL = iconURL;
+    }
+
     @JsProperty(name="password")
     public String password;
+
+    @JsOverlay
+    public final String getPassword(){
+        return this.password;
+    }
+
+    @JsOverlay
+    public final void setPassword(String password){
+        this.password = password;
+    }
 
 
 }

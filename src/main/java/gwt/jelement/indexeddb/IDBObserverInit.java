@@ -23,17 +23,50 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class IDBObserverInit{
+
+    public IDBObserverInit(){
+    }
 
     @JsProperty(name="transaction")
     public boolean transaction;
 
+    @JsOverlay
+    public final boolean getTransaction(){
+        return this.transaction;
+    }
+
+    @JsOverlay
+    public final void setTransaction(boolean transaction){
+        this.transaction = transaction;
+    }
+
     @JsProperty(name="values")
     public boolean values;
 
+    @JsOverlay
+    public final boolean getValues(){
+        return this.values;
+    }
+
+    @JsOverlay
+    public final void setValues(boolean values){
+        this.values = values;
+    }
+
     @JsProperty(name="noRecords")
     public boolean noRecords;
+
+    @JsOverlay
+    public final boolean getNoRecords(){
+        return this.noRecords;
+    }
+
+    @JsOverlay
+    public final void setNoRecords(boolean noRecords){
+        this.noRecords = noRecords;
+    }
 
     @JsProperty(name="operationTypes")
     public String[] operationTypes;

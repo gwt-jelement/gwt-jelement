@@ -17,15 +17,29 @@
 package gwt.jelement.webaudio;
 
 import gwt.jelement.mediastream.MediaStream;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class MediaStreamAudioSourceOptions{
+
+    public MediaStreamAudioSourceOptions(){
+    }
 
     @JsProperty(name="mediaStream")
     public MediaStream mediaStream;
+
+    @JsOverlay
+    public final MediaStream getMediaStream(){
+        return this.mediaStream;
+    }
+
+    @JsOverlay
+    public final void setMediaStream(MediaStream mediaStream){
+        this.mediaStream = mediaStream;
+    }
 
 
 }

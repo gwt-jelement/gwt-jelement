@@ -25,11 +25,24 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 import jsinterop.base.Js;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class CredentialCreationOptions{
+
+    public CredentialCreationOptions(){
+    }
 
     @JsType(isNative = true, name = "?", namespace = JsPackage.GLOBAL)
     public interface PasswordCredentialInit {
+        @JsOverlay
+        static PasswordCredentialInit of(PasswordCredentialData value){
+            return Js.cast(value);
+        }
+    
+        @JsOverlay
+        static PasswordCredentialInit of(HTMLFormElement value){
+            return Js.cast(value);
+        }
+    
         @JsOverlay
         default PasswordCredentialData asPasswordCredentialData(){
             return Js.cast(this);
@@ -55,8 +68,28 @@ public class CredentialCreationOptions{
     @JsProperty(name="password")
     public CredentialCreationOptions.PasswordCredentialInit password;
 
+    @JsOverlay
+    public final void setPassword(PasswordCredentialData password){
+        this.password = CredentialCreationOptions.PasswordCredentialInit.of(password);
+    }
+
+    @JsOverlay
+    public final void setPassword(HTMLFormElement password){
+        this.password = CredentialCreationOptions.PasswordCredentialInit.of(password);
+    }
+
     @JsProperty(name="federated")
     public FederatedCredentialInit federated;
+
+    @JsOverlay
+    public final FederatedCredentialInit getFederated(){
+        return this.federated;
+    }
+
+    @JsOverlay
+    public final void setFederated(FederatedCredentialInit federated){
+        this.federated = federated;
+    }
 
 
 }

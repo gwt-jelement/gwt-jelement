@@ -18,15 +18,29 @@ package gwt.jelement.events;
 
 import gwt.jelement.events.EventTarget;
 import gwt.jelement.events.UIEventInit;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class FocusEventInit extends UIEventInit{
+
+    public FocusEventInit(){
+    }
 
     @JsProperty(name="relatedTarget")
     public EventTarget relatedTarget;
+
+    @JsOverlay
+    public final EventTarget getRelatedTarget(){
+        return this.relatedTarget;
+    }
+
+    @JsOverlay
+    public final void setRelatedTarget(EventTarget relatedTarget){
+        this.relatedTarget = relatedTarget;
+    }
 
 
 }

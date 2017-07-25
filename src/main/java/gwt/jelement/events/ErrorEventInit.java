@@ -17,27 +17,81 @@
 package gwt.jelement.events;
 
 import gwt.jelement.events.EventInit;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class ErrorEventInit extends EventInit{
+
+    public ErrorEventInit(){
+    }
 
     @JsProperty(name="message")
     public String message;
 
+    @JsOverlay
+    public final String getMessage(){
+        return this.message;
+    }
+
+    @JsOverlay
+    public final void setMessage(String message){
+        this.message = message;
+    }
+
     @JsProperty(name="filename")
     public String filename;
+
+    @JsOverlay
+    public final String getFilename(){
+        return this.filename;
+    }
+
+    @JsOverlay
+    public final void setFilename(String filename){
+        this.filename = filename;
+    }
 
     @JsProperty(name="lineno")
     public double lineno;
 
+    @JsOverlay
+    public final double getLineno(){
+        return this.lineno;
+    }
+
+    @JsOverlay
+    public final void setLineno(double lineno){
+        this.lineno = lineno;
+    }
+
     @JsProperty(name="colno")
     public double colno;
 
+    @JsOverlay
+    public final double getColno(){
+        return this.colno;
+    }
+
+    @JsOverlay
+    public final void setColno(double colno){
+        this.colno = colno;
+    }
+
     @JsProperty(name="error")
     public Object error;
+
+    @JsOverlay
+    public final Object getError(){
+        return this.error;
+    }
+
+    @JsOverlay
+    public final void setError(Object error){
+        this.error = error;
+    }
 
 
 }

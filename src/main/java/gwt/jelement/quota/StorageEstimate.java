@@ -16,18 +16,42 @@
  */
 package gwt.jelement.quota;
 
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class StorageEstimate{
+
+    public StorageEstimate(){
+    }
 
     @JsProperty(name="usage")
     public double usage;
 
+    @JsOverlay
+    public final double getUsage(){
+        return this.usage;
+    }
+
+    @JsOverlay
+    public final void setUsage(double usage){
+        this.usage = usage;
+    }
+
     @JsProperty(name="quota")
     public double quota;
+
+    @JsOverlay
+    public final double getQuota(){
+        return this.quota;
+    }
+
+    @JsOverlay
+    public final void setQuota(double quota){
+        this.quota = quota;
+    }
 
 
 }

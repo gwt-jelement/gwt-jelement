@@ -18,15 +18,29 @@ package gwt.jelement.events;
 
 import gwt.jelement.clipboard.DataTransfer;
 import gwt.jelement.events.MouseEventInit;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class DragEventInit extends MouseEventInit{
+
+    public DragEventInit(){
+    }
 
     @JsProperty(name="dataTransfer")
     public DataTransfer dataTransfer;
+
+    @JsOverlay
+    public final DataTransfer getDataTransfer(){
+        return this.dataTransfer;
+    }
+
+    @JsOverlay
+    public final void setDataTransfer(DataTransfer dataTransfer){
+        this.dataTransfer = dataTransfer;
+    }
 
 
 }

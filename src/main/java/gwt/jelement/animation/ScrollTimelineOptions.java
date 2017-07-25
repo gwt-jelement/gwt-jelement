@@ -25,17 +25,50 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 import jsinterop.base.Js;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class ScrollTimelineOptions{
+
+    public ScrollTimelineOptions(){
+    }
 
     @JsProperty(name="scrollSource")
     public Element scrollSource;
 
+    @JsOverlay
+    public final Element getScrollSource(){
+        return this.scrollSource;
+    }
+
+    @JsOverlay
+    public final void setScrollSource(Element scrollSource){
+        this.scrollSource = scrollSource;
+    }
+
     @JsProperty(name="orientation")
-    public ScrollDirection orientation;
+    public String orientation;
+
+    @JsOverlay
+    public final ScrollDirection getOrientation(){
+        return ScrollDirection.of(this.orientation);
+    }
+
+    @JsOverlay
+    public final void setOrientation(ScrollDirection orientation){
+        this.orientation = orientation.getInternalValue();
+    }
 
     @JsProperty(name="timeRange")
     public ScrollTimeline.DoubleOrScrollTimelineAutoKeywordUnionType timeRange;
+
+    @JsOverlay
+    public final void setTimeRange(double timeRange){
+        this.timeRange = ScrollTimeline.DoubleOrScrollTimelineAutoKeywordUnionType.of(timeRange);
+    }
+
+    @JsOverlay
+    public final void setTimeRange(String timeRange){
+        this.timeRange = ScrollTimeline.DoubleOrScrollTimelineAutoKeywordUnionType.of(timeRange);
+    }
 
 
 }

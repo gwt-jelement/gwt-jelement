@@ -17,15 +17,29 @@
 package gwt.jelement.webaudio;
 
 import gwt.jelement.webaudio.AudioNodeOptions;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class ChannelMergerOptions extends AudioNodeOptions{
+
+    public ChannelMergerOptions(){
+    }
 
     @JsProperty(name="numberOfInputs")
     public double numberOfInputs;
+
+    @JsOverlay
+    public final double getNumberOfInputs(){
+        return this.numberOfInputs;
+    }
+
+    @JsOverlay
+    public final void setNumberOfInputs(double numberOfInputs){
+        this.numberOfInputs = numberOfInputs;
+    }
 
 
 }

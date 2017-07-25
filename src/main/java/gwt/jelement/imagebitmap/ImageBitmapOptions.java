@@ -25,26 +25,89 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class ImageBitmapOptions{
 
+    public ImageBitmapOptions(){
+    }
+
     @JsProperty(name="imageOrientation")
-    public ImageOrientation imageOrientation;
+    public String imageOrientation;
+
+    @JsOverlay
+    public final ImageOrientation getImageOrientation(){
+        return ImageOrientation.of(this.imageOrientation);
+    }
+
+    @JsOverlay
+    public final void setImageOrientation(ImageOrientation imageOrientation){
+        this.imageOrientation = imageOrientation.getInternalValue();
+    }
 
     @JsProperty(name="premultiplyAlpha")
-    public PremultiplyAlpha premultiplyAlpha;
+    public String premultiplyAlpha;
+
+    @JsOverlay
+    public final PremultiplyAlpha getPremultiplyAlpha(){
+        return PremultiplyAlpha.of(this.premultiplyAlpha);
+    }
+
+    @JsOverlay
+    public final void setPremultiplyAlpha(PremultiplyAlpha premultiplyAlpha){
+        this.premultiplyAlpha = premultiplyAlpha.getInternalValue();
+    }
 
     @JsProperty(name="colorSpaceConversion")
-    public ColorSpaceConversion colorSpaceConversion;
+    public String colorSpaceConversion;
+
+    @JsOverlay
+    public final ColorSpaceConversion getColorSpaceConversion(){
+        return ColorSpaceConversion.of(this.colorSpaceConversion);
+    }
+
+    @JsOverlay
+    public final void setColorSpaceConversion(ColorSpaceConversion colorSpaceConversion){
+        this.colorSpaceConversion = colorSpaceConversion.getInternalValue();
+    }
 
     @JsProperty(name="resizeWidth")
     public double resizeWidth;
 
+    @JsOverlay
+    public final double getResizeWidth(){
+        return this.resizeWidth;
+    }
+
+    @JsOverlay
+    public final void setResizeWidth(double resizeWidth){
+        this.resizeWidth = resizeWidth;
+    }
+
     @JsProperty(name="resizeHeight")
     public double resizeHeight;
 
+    @JsOverlay
+    public final double getResizeHeight(){
+        return this.resizeHeight;
+    }
+
+    @JsOverlay
+    public final void setResizeHeight(double resizeHeight){
+        this.resizeHeight = resizeHeight;
+    }
+
     @JsProperty(name="resizeQuality")
-    public ResizeQuality resizeQuality;
+    public String resizeQuality;
+
+    @JsOverlay
+    public final ResizeQuality getResizeQuality(){
+        return ResizeQuality.of(this.resizeQuality);
+    }
+
+    @JsOverlay
+    public final void setResizeQuality(ResizeQuality resizeQuality){
+        this.resizeQuality = resizeQuality.getInternalValue();
+    }
 
 
 }

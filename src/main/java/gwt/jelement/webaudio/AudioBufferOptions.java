@@ -16,21 +16,55 @@
  */
 package gwt.jelement.webaudio;
 
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class AudioBufferOptions{
+
+    public AudioBufferOptions(){
+    }
 
     @JsProperty(name="numberOfChannels")
     public double numberOfChannels;
 
+    @JsOverlay
+    public final double getNumberOfChannels(){
+        return this.numberOfChannels;
+    }
+
+    @JsOverlay
+    public final void setNumberOfChannels(double numberOfChannels){
+        this.numberOfChannels = numberOfChannels;
+    }
+
     @JsProperty(name="length")
     public double length;
 
+    @JsOverlay
+    public final double getLength(){
+        return this.length;
+    }
+
+    @JsOverlay
+    public final void setLength(double length){
+        this.length = length;
+    }
+
     @JsProperty(name="sampleRate")
     public float sampleRate;
+
+    @JsOverlay
+    public final float getSampleRate(){
+        return this.sampleRate;
+    }
+
+    @JsOverlay
+    public final void setSampleRate(float sampleRate){
+        this.sampleRate = sampleRate;
+    }
 
 
 }

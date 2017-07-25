@@ -16,15 +16,29 @@
  */
 package gwt.jelement.css.cssom;
 
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class CSSMatrixComponentOptions{
+
+    public CSSMatrixComponentOptions(){
+    }
 
     @JsProperty(name="is2D")
     public boolean is2D;
+
+    @JsOverlay
+    public final boolean getIs2D(){
+        return this.is2D;
+    }
+
+    @JsOverlay
+    public final void setIs2D(boolean is2D){
+        this.is2D = is2D;
+    }
 
 
 }

@@ -16,18 +16,42 @@
  */
 package gwt.jelement.serviceworkers;
 
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class NavigationPreloadState{
+
+    public NavigationPreloadState(){
+    }
 
     @JsProperty(name="enabled")
     public boolean enabled;
 
+    @JsOverlay
+    public final boolean getEnabled(){
+        return this.enabled;
+    }
+
+    @JsOverlay
+    public final void setEnabled(boolean enabled){
+        this.enabled = enabled;
+    }
+
     @JsProperty(name="headerValue")
     public String headerValue;
+
+    @JsOverlay
+    public final String getHeaderValue(){
+        return this.headerValue;
+    }
+
+    @JsOverlay
+    public final void setHeaderValue(String headerValue){
+        this.headerValue = headerValue;
+    }
 
 
 }

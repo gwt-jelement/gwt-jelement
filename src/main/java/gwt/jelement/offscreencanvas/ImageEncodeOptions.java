@@ -16,18 +16,42 @@
  */
 package gwt.jelement.offscreencanvas;
 
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class ImageEncodeOptions{
+
+    public ImageEncodeOptions(){
+    }
 
     @JsProperty(name="type")
     public String type;
 
+    @JsOverlay
+    public final String getType(){
+        return this.type;
+    }
+
+    @JsOverlay
+    public final void setType(String type){
+        this.type = type;
+    }
+
     @JsProperty(name="quality")
     public double quality;
+
+    @JsOverlay
+    public final double getQuality(){
+        return this.quality;
+    }
+
+    @JsOverlay
+    public final void setQuality(double quality){
+        this.quality = quality;
+    }
 
 
 }

@@ -23,11 +23,24 @@ import jsinterop.annotations.JsType;
 import jsinterop.base.Js;
 import jsinterop.base.JsPropertyMap;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class ResponseInit{
+
+    public ResponseInit(){
+    }
 
     @JsType(isNative = true, name = "?", namespace = JsPackage.GLOBAL)
     public interface HeadersInit {
+        @JsOverlay
+        static HeadersInit of(String[][] value){
+            return Js.cast(value);
+        }
+    
+        @JsOverlay
+        static HeadersInit of(JsPropertyMap<String> value){
+            return Js.cast(value);
+        }
+    
         @JsOverlay
         default String[][] asStringArrayArray(){
             return Js.cast(this);
@@ -53,11 +66,41 @@ public class ResponseInit{
     @JsProperty(name="status")
     public short status;
 
+    @JsOverlay
+    public final short getStatus(){
+        return this.status;
+    }
+
+    @JsOverlay
+    public final void setStatus(short status){
+        this.status = status;
+    }
+
     @JsProperty(name="statusText")
     public String statusText;
 
+    @JsOverlay
+    public final String getStatusText(){
+        return this.statusText;
+    }
+
+    @JsOverlay
+    public final void setStatusText(String statusText){
+        this.statusText = statusText;
+    }
+
     @JsProperty(name="headers")
     public ResponseInit.HeadersInit headers;
+
+    @JsOverlay
+    public final void setHeaders(String[][] headers){
+        this.headers = ResponseInit.HeadersInit.of(headers);
+    }
+
+    @JsOverlay
+    public final void setHeaders(JsPropertyMap<String> headers){
+        this.headers = ResponseInit.HeadersInit.of(headers);
+    }
 
 
 }

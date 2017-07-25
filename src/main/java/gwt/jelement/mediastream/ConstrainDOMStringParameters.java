@@ -23,14 +23,37 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 import jsinterop.base.Js;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class ConstrainDOMStringParameters{
+
+    public ConstrainDOMStringParameters(){
+    }
 
     @JsProperty(name="exact")
     public IDBObjectStoreParameters.StringOrStringArrayUnionType exact;
 
+    @JsOverlay
+    public final void setExact(String exact){
+        this.exact = IDBObjectStoreParameters.StringOrStringArrayUnionType.of(exact);
+    }
+
+    @JsOverlay
+    public final void setExact(String[] exact){
+        this.exact = IDBObjectStoreParameters.StringOrStringArrayUnionType.of(exact);
+    }
+
     @JsProperty(name="ideal")
     public IDBObjectStoreParameters.StringOrStringArrayUnionType ideal;
+
+    @JsOverlay
+    public final void setIdeal(String ideal){
+        this.ideal = IDBObjectStoreParameters.StringOrStringArrayUnionType.of(ideal);
+    }
+
+    @JsOverlay
+    public final void setIdeal(String[] ideal){
+        this.ideal = IDBObjectStoreParameters.StringOrStringArrayUnionType.of(ideal);
+    }
 
 
 }

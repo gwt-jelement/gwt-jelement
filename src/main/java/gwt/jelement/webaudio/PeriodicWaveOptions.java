@@ -17,18 +17,42 @@
 package gwt.jelement.webaudio;
 
 import gwt.jelement.webaudio.PeriodicWaveConstraints;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class PeriodicWaveOptions extends PeriodicWaveConstraints{
+
+    public PeriodicWaveOptions(){
+    }
 
     @JsProperty(name="real")
     public float[] real;
 
+    @JsOverlay
+    public final float[] getReal(){
+        return this.real;
+    }
+
+    @JsOverlay
+    public final void setReal(float[] real){
+        this.real = real;
+    }
+
     @JsProperty(name="imag")
     public float[] imag;
+
+    @JsOverlay
+    public final float[] getImag(){
+        return this.imag;
+    }
+
+    @JsOverlay
+    public final void setImag(float[] imag){
+        this.imag = imag;
+    }
 
 
 }

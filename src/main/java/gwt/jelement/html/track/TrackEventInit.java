@@ -27,11 +27,29 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 import jsinterop.base.Js;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class TrackEventInit extends EventInit{
+
+    public TrackEventInit(){
+    }
 
     @JsProperty(name="track")
     public TrackEvent.VideoTrackOrAudioTrackOrTextTrackUnionType track;
+
+    @JsOverlay
+    public final void setTrack(VideoTrack track){
+        this.track = TrackEvent.VideoTrackOrAudioTrackOrTextTrackUnionType.of(track);
+    }
+
+    @JsOverlay
+    public final void setTrack(AudioTrack track){
+        this.track = TrackEvent.VideoTrackOrAudioTrackOrTextTrackUnionType.of(track);
+    }
+
+    @JsOverlay
+    public final void setTrack(TextTrack track){
+        this.track = TrackEvent.VideoTrackOrAudioTrackOrTextTrackUnionType.of(track);
+    }
 
 
 }

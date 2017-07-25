@@ -16,21 +16,55 @@
  */
 package gwt.jelement.events;
 
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class EventInit{
+
+    public EventInit(){
+    }
 
     @JsProperty(name="bubbles")
     public boolean bubbles;
 
+    @JsOverlay
+    public final boolean getBubbles(){
+        return this.bubbles;
+    }
+
+    @JsOverlay
+    public final void setBubbles(boolean bubbles){
+        this.bubbles = bubbles;
+    }
+
     @JsProperty(name="cancelable")
     public boolean cancelable;
 
+    @JsOverlay
+    public final boolean getCancelable(){
+        return this.cancelable;
+    }
+
+    @JsOverlay
+    public final void setCancelable(boolean cancelable){
+        this.cancelable = cancelable;
+    }
+
     @JsProperty(name="composed")
     public boolean composed;
+
+    @JsOverlay
+    public final boolean getComposed(){
+        return this.composed;
+    }
+
+    @JsOverlay
+    public final void setComposed(boolean composed){
+        this.composed = composed;
+    }
 
 
 }

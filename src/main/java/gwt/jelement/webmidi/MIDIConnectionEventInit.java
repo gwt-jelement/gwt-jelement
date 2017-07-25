@@ -18,15 +18,29 @@ package gwt.jelement.webmidi;
 
 import gwt.jelement.events.EventInit;
 import gwt.jelement.webmidi.MIDIPort;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class MIDIConnectionEventInit extends EventInit{
+
+    public MIDIConnectionEventInit(){
+    }
 
     @JsProperty(name="port")
     public MIDIPort port;
+
+    @JsOverlay
+    public final MIDIPort getPort(){
+        return this.port;
+    }
+
+    @JsOverlay
+    public final void setPort(MIDIPort port){
+        this.port = port;
+    }
 
 
 }

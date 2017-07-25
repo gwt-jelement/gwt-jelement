@@ -16,18 +16,42 @@
  */
 package gwt.jelement.mediastream;
 
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class LongRange{
+
+    public LongRange(){
+    }
 
     @JsProperty(name="max")
     public double max;
 
+    @JsOverlay
+    public final double getMax(){
+        return this.max;
+    }
+
+    @JsOverlay
+    public final void setMax(double max){
+        this.max = max;
+    }
+
     @JsProperty(name="min")
     public double min;
+
+    @JsOverlay
+    public final double getMin(){
+        return this.min;
+    }
+
+    @JsOverlay
+    public final void setMin(double min){
+        this.min = min;
+    }
 
 
 }

@@ -17,30 +17,94 @@
 package gwt.jelement.webaudio;
 
 import gwt.jelement.webaudio.AudioBuffer;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class AudioBufferSourceOptions{
+
+    public AudioBufferSourceOptions(){
+    }
 
     @JsProperty(name="buffer")
     public AudioBuffer buffer;
 
+    @JsOverlay
+    public final AudioBuffer getBuffer(){
+        return this.buffer;
+    }
+
+    @JsOverlay
+    public final void setBuffer(AudioBuffer buffer){
+        this.buffer = buffer;
+    }
+
     @JsProperty(name="detune")
     public float detune;
+
+    @JsOverlay
+    public final float getDetune(){
+        return this.detune;
+    }
+
+    @JsOverlay
+    public final void setDetune(float detune){
+        this.detune = detune;
+    }
 
     @JsProperty(name="loop")
     public boolean loop;
 
+    @JsOverlay
+    public final boolean getLoop(){
+        return this.loop;
+    }
+
+    @JsOverlay
+    public final void setLoop(boolean loop){
+        this.loop = loop;
+    }
+
     @JsProperty(name="loopEnd")
     public double loopEnd;
+
+    @JsOverlay
+    public final double getLoopEnd(){
+        return this.loopEnd;
+    }
+
+    @JsOverlay
+    public final void setLoopEnd(double loopEnd){
+        this.loopEnd = loopEnd;
+    }
 
     @JsProperty(name="loopStart")
     public double loopStart;
 
+    @JsOverlay
+    public final double getLoopStart(){
+        return this.loopStart;
+    }
+
+    @JsOverlay
+    public final void setLoopStart(double loopStart){
+        this.loopStart = loopStart;
+    }
+
     @JsProperty(name="playbackRate")
     public float playbackRate;
+
+    @JsOverlay
+    public final float getPlaybackRate(){
+        return this.playbackRate;
+    }
+
+    @JsOverlay
+    public final void setPlaybackRate(float playbackRate){
+        this.playbackRate = playbackRate;
+    }
 
 
 }

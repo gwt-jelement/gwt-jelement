@@ -18,18 +18,42 @@ package gwt.jelement.media_capabilities;
 
 import gwt.jelement.media_capabilities.AudioConfiguration;
 import gwt.jelement.media_capabilities.VideoConfiguration;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class MediaConfiguration{
+
+    public MediaConfiguration(){
+    }
 
     @JsProperty(name="video")
     public VideoConfiguration video;
 
+    @JsOverlay
+    public final VideoConfiguration getVideo(){
+        return this.video;
+    }
+
+    @JsOverlay
+    public final void setVideo(VideoConfiguration video){
+        this.video = video;
+    }
+
     @JsProperty(name="audio")
     public AudioConfiguration audio;
+
+    @JsOverlay
+    public final AudioConfiguration getAudio(){
+        return this.audio;
+    }
+
+    @JsOverlay
+    public final void setAudio(AudioConfiguration audio){
+        this.audio = audio;
+    }
 
 
 }

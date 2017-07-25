@@ -16,24 +16,68 @@
  */
 package gwt.jelement.css;
 
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class PropertyDescriptor{
+
+    public PropertyDescriptor(){
+    }
 
     @JsProperty(name="name")
     public String name;
 
+    @JsOverlay
+    public final String getName(){
+        return this.name;
+    }
+
+    @JsOverlay
+    public final void setName(String name){
+        this.name = name;
+    }
+
     @JsProperty(name="syntax")
     public String syntax;
+
+    @JsOverlay
+    public final String getSyntax(){
+        return this.syntax;
+    }
+
+    @JsOverlay
+    public final void setSyntax(String syntax){
+        this.syntax = syntax;
+    }
 
     @JsProperty(name="inherits")
     public boolean inherits;
 
+    @JsOverlay
+    public final boolean getInherits(){
+        return this.inherits;
+    }
+
+    @JsOverlay
+    public final void setInherits(boolean inherits){
+        this.inherits = inherits;
+    }
+
     @JsProperty(name="initialValue")
     public String initialValue;
+
+    @JsOverlay
+    public final String getInitialValue(){
+        return this.initialValue;
+    }
+
+    @JsOverlay
+    public final void setInitialValue(String initialValue){
+        this.initialValue = initialValue;
+    }
 
 
 }

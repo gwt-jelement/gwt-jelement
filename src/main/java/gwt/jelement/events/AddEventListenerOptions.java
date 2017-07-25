@@ -17,18 +17,42 @@
 package gwt.jelement.events;
 
 import gwt.jelement.events.EventListenerOptions;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class AddEventListenerOptions extends EventListenerOptions{
+
+    public AddEventListenerOptions(){
+    }
 
     @JsProperty(name="passive")
     public boolean passive;
 
+    @JsOverlay
+    public final boolean getPassive(){
+        return this.passive;
+    }
+
+    @JsOverlay
+    public final void setPassive(boolean passive){
+        this.passive = passive;
+    }
+
     @JsProperty(name="once")
     public boolean once;
+
+    @JsOverlay
+    public final boolean getOnce(){
+        return this.once;
+    }
+
+    @JsOverlay
+    public final void setOnce(boolean once){
+        this.once = once;
+    }
 
 
 }

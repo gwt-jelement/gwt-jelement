@@ -16,18 +16,42 @@
  */
 package gwt.jelement.credentialmanager;
 
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class FormDataOptions{
+
+    public FormDataOptions(){
+    }
 
     @JsProperty(name="idName")
     public String idName;
 
+    @JsOverlay
+    public final String getIdName(){
+        return this.idName;
+    }
+
+    @JsOverlay
+    public final void setIdName(String idName){
+        this.idName = idName;
+    }
+
     @JsProperty(name="passwordName")
     public String passwordName;
+
+    @JsOverlay
+    public final String getPasswordName(){
+        return this.passwordName;
+    }
+
+    @JsOverlay
+    public final void setPasswordName(String passwordName){
+        this.passwordName = passwordName;
+    }
 
 
 }

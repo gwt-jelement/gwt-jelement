@@ -18,15 +18,29 @@ package gwt.jelement.presentation;
 
 import gwt.jelement.events.EventInit;
 import gwt.jelement.presentation.PresentationConnection;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class PresentationConnectionAvailableEventInit extends EventInit{
+
+    public PresentationConnectionAvailableEventInit(){
+    }
 
     @JsProperty(name="connection")
     public PresentationConnection connection;
+
+    @JsOverlay
+    public final PresentationConnection getConnection(){
+        return this.connection;
+    }
+
+    @JsOverlay
+    public final void setConnection(PresentationConnection connection){
+        this.connection = connection;
+    }
 
 
 }

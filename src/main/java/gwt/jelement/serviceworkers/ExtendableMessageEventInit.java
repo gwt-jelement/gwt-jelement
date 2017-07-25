@@ -27,23 +27,81 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 import jsinterop.base.Js;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class ExtendableMessageEventInit extends ExtendableEventInit{
+
+    public ExtendableMessageEventInit(){
+    }
 
     @JsProperty(name="data")
     public Object data;
 
+    @JsOverlay
+    public final Object getData(){
+        return this.data;
+    }
+
+    @JsOverlay
+    public final void setData(Object data){
+        this.data = data;
+    }
+
     @JsProperty(name="origin")
     public String origin;
+
+    @JsOverlay
+    public final String getOrigin(){
+        return this.origin;
+    }
+
+    @JsOverlay
+    public final void setOrigin(String origin){
+        this.origin = origin;
+    }
 
     @JsProperty(name="lastEventId")
     public String lastEventId;
 
+    @JsOverlay
+    public final String getLastEventId(){
+        return this.lastEventId;
+    }
+
+    @JsOverlay
+    public final void setLastEventId(String lastEventId){
+        this.lastEventId = lastEventId;
+    }
+
     @JsProperty(name="source")
     public ExtendableMessageEvent.ClientOrServiceWorkerOrMessagePortUnionType source;
 
+    @JsOverlay
+    public final void setSource(Client source){
+        this.source = ExtendableMessageEvent.ClientOrServiceWorkerOrMessagePortUnionType.of(source);
+    }
+
+    @JsOverlay
+    public final void setSource(ServiceWorker source){
+        this.source = ExtendableMessageEvent.ClientOrServiceWorkerOrMessagePortUnionType.of(source);
+    }
+
+    @JsOverlay
+    public final void setSource(MessagePort source){
+        this.source = ExtendableMessageEvent.ClientOrServiceWorkerOrMessagePortUnionType.of(source);
+    }
+
     @JsProperty(name="ports")
     public MessagePort[] ports;
+
+    @JsOverlay
+    public final MessagePort[] getPorts(){
+        return this.ports;
+    }
+
+    @JsOverlay
+    public final void setPorts(MessagePort[] ports){
+        this.ports = ports;
+    }
 
 
 }

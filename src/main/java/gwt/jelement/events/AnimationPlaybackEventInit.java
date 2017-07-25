@@ -17,18 +17,42 @@
 package gwt.jelement.events;
 
 import gwt.jelement.events.EventInit;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class AnimationPlaybackEventInit extends EventInit{
+
+    public AnimationPlaybackEventInit(){
+    }
 
     @JsProperty(name="currentTime")
     public double currentTime;
 
+    @JsOverlay
+    public final double getCurrentTime(){
+        return this.currentTime;
+    }
+
+    @JsOverlay
+    public final void setCurrentTime(double currentTime){
+        this.currentTime = currentTime;
+    }
+
     @JsProperty(name="timelineTime")
     public double timelineTime;
+
+    @JsOverlay
+    public final double getTimelineTime(){
+        return this.timelineTime;
+    }
+
+    @JsOverlay
+    public final void setTimelineTime(double timelineTime){
+        this.timelineTime = timelineTime;
+    }
 
 
 }

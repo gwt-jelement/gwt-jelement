@@ -16,18 +16,42 @@
  */
 package gwt.jelement.imagecapture;
 
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class Point2D{
+
+    public Point2D(){
+    }
 
     @JsProperty(name="x")
     public float x;
 
+    @JsOverlay
+    public final float getX(){
+        return this.x;
+    }
+
+    @JsOverlay
+    public final void setX(float x){
+        this.x = x;
+    }
+
     @JsProperty(name="y")
     public float y;
+
+    @JsOverlay
+    public final float getY(){
+        return this.y;
+    }
+
+    @JsOverlay
+    public final void setY(float y){
+        this.y = y;
+    }
 
 
 }

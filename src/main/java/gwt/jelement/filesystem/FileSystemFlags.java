@@ -16,18 +16,42 @@
  */
 package gwt.jelement.filesystem;
 
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class FileSystemFlags{
+
+    public FileSystemFlags(){
+    }
 
     @JsProperty(name="create")
     public boolean create;
 
+    @JsOverlay
+    public final boolean getCreate(){
+        return this.create;
+    }
+
+    @JsOverlay
+    public final void setCreate(boolean create){
+        this.create = create;
+    }
+
     @JsProperty(name="exclusive")
     public boolean exclusive;
+
+    @JsOverlay
+    public final boolean getExclusive(){
+        return this.exclusive;
+    }
+
+    @JsOverlay
+    public final void setExclusive(boolean exclusive){
+        this.exclusive = exclusive;
+    }
 
 
 }

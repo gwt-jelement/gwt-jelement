@@ -17,24 +17,68 @@
 package gwt.jelement.credentialmanager;
 
 import gwt.jelement.credentialmanager.CredentialData;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class FederatedCredentialInit extends CredentialData{
+
+    public FederatedCredentialInit(){
+    }
 
     @JsProperty(name="name")
     public String name;
 
+    @JsOverlay
+    public final String getName(){
+        return this.name;
+    }
+
+    @JsOverlay
+    public final void setName(String name){
+        this.name = name;
+    }
+
     @JsProperty(name="iconURL")
     public String iconURL;
+
+    @JsOverlay
+    public final String getIconURL(){
+        return this.iconURL;
+    }
+
+    @JsOverlay
+    public final void setIconURL(String iconURL){
+        this.iconURL = iconURL;
+    }
 
     @JsProperty(name="provider")
     public String provider;
 
+    @JsOverlay
+    public final String getProvider(){
+        return this.provider;
+    }
+
+    @JsOverlay
+    public final void setProvider(String provider){
+        this.provider = provider;
+    }
+
     @JsProperty(name="protocol")
     public String protocol;
+
+    @JsOverlay
+    public final String getProtocol(){
+        return this.protocol;
+    }
+
+    @JsOverlay
+    public final void setProtocol(String protocol){
+        this.protocol = protocol;
+    }
 
 
 }

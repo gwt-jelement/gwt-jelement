@@ -17,15 +17,29 @@
 package gwt.jelement.webaudio;
 
 import gwt.jelement.webaudio.AudioNodeOptions;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class StereoPannerOptions extends AudioNodeOptions{
+
+    public StereoPannerOptions(){
+    }
 
     @JsProperty(name="pan")
     public float pan;
+
+    @JsOverlay
+    public final float getPan(){
+        return this.pan;
+    }
+
+    @JsOverlay
+    public final void setPan(float pan){
+        this.pan = pan;
+    }
 
 
 }

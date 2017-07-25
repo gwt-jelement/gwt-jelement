@@ -17,15 +17,29 @@
 package gwt.jelement.webusb;
 
 import gwt.jelement.webusb.USBDeviceFilter;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class USBDeviceRequestOptions{
+
+    public USBDeviceRequestOptions(){
+    }
 
     @JsProperty(name="filters")
     public USBDeviceFilter[] filters;
+
+    @JsOverlay
+    public final USBDeviceFilter[] getFilters(){
+        return this.filters;
+    }
+
+    @JsOverlay
+    public final void setFilters(USBDeviceFilter[] filters){
+        this.filters = filters;
+    }
 
 
 }
