@@ -23,9 +23,8 @@ import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="AbsoluteOrientationSensor", isNative = true)
 public class AbsoluteOrientationSensor extends OrientationSensor{
-    
     @JsConstructor
     public AbsoluteOrientationSensor(){
         super();
@@ -35,6 +34,5 @@ public class AbsoluteOrientationSensor extends OrientationSensor{
     public AbsoluteOrientationSensor(SensorOptions sensorOptions){
         super();
     }
-    
     
 }

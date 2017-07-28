@@ -25,9 +25,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="DataTransferItem", isNative = true)
 public class DataTransferItem{
-    
     @JsProperty(name="kind")
     public native String getKind();
     
@@ -37,13 +36,10 @@ public class DataTransferItem{
     @JsMethod(name = "getAsFile")
     public native File getAsFile();
     
-    
     @JsMethod(name = "getAsString")
     public native void getAsString(FunctionStringCallback callback);
     
-    
     @JsMethod(name = "webkitGetAsEntry")
     public native Entry webkitGetAsEntry();
-    
     
 }

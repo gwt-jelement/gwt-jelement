@@ -25,9 +25,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="GamepadEvent", isNative = true)
 public class GamepadEvent extends Event{
-    
     @JsConstructor
     public GamepadEvent(String type){
         super((String) null);
@@ -40,6 +39,5 @@ public class GamepadEvent extends Event{
     
     @JsProperty(name="gamepad")
     public native Gamepad getGamepad();
-    
     
 }

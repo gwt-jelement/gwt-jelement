@@ -24,9 +24,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="Gamepad", isNative = true)
 public class Gamepad{
-    
     @JsProperty(name="hand")
     private String hand;
     
@@ -54,13 +53,12 @@ public class Gamepad{
     @JsProperty(name="pose")
     public native GamepadPose getPose();
     
+    @JsProperty(name="displayId")
+    public native double getDisplayId();
+    
     @JsOverlay
     public final GamepadHand getHand(){
        return GamepadHand.of(hand);
     }
-    
-    @JsProperty(name="displayId")
-    public native double getDisplayId();
-    
     
 }

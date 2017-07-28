@@ -25,9 +25,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="AudioScheduledSourceNode", isNative = true)
 public class AudioScheduledSourceNode extends AudioNode{
-    
     @JsProperty(name="onended")
     private EventHandlerNonNull onended;
     
@@ -49,17 +48,13 @@ public class AudioScheduledSourceNode extends AudioNode{
     @JsMethod(name = "start")
     public native void start();
     
-    
     @JsMethod(name = "start")
     public native void start(double when);
-    
     
     @JsMethod(name = "stop")
     public native void stop();
     
-    
     @JsMethod(name = "stop")
     public native void stop(double when);
-    
     
 }

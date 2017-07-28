@@ -20,10 +20,8 @@ import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="OESTextureHalfFloat", isNative = true)
 public class OESTextureHalfFloat{
-    public static int HALF_FLOAT_OES;
-    
-    
+    public static double HALF_FLOAT_OES;
     
 }

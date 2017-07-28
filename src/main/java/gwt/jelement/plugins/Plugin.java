@@ -23,9 +23,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="Plugin", isNative = true)
 public class Plugin{
-    
     @JsProperty(name="name")
     public native String getName();
     
@@ -40,6 +39,5 @@ public class Plugin{
     
     @JsMethod(name = "namedItem")
     public native MimeType namedItem(String name);
-    
     
 }

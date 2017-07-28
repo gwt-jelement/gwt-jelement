@@ -16,20 +16,19 @@
  */
 package gwt.jelement.fileapi;
 
+import gwt.jelement.core.ArrayBuffer;
+import gwt.jelement.core.ArrayBufferView;
+import gwt.jelement.core.Date;
 import gwt.jelement.fileapi.Blob;
 import gwt.jelement.fileapi.FilePropertyBag;
-import elemental2.core.ArrayBuffer;
-import elemental2.core.ArrayBufferView;
-import elemental2.core.Date;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="File", isNative = true)
 public class File extends Blob{
-    
     @JsConstructor
     public File(ArrayBuffer[] fileBits, String fileName){
         super();
@@ -81,6 +80,5 @@ public class File extends Blob{
     
     @JsProperty(name="webkitRelativePath")
     public native String getWebkitRelativePath();
-    
     
 }

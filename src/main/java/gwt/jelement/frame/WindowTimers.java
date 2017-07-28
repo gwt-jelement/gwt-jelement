@@ -16,77 +16,48 @@
  */
 package gwt.jelement.frame;
 
-import gwt.jelement.jelement.Function;
+import gwt.jelement.core.CallbackFunction;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="WindowTimers", isNative = true)
 public class WindowTimers{
-    
     @JsMethod(name = "clearInterval")
     public native void clearInterval();
-    
     
     @JsMethod(name = "clearInterval")
     public native void clearInterval(double handle);
     
-    
     @JsMethod(name = "clearTimeout")
     public native void clearTimeout();
-    
     
     @JsMethod(name = "clearTimeout")
     public native void clearTimeout(double handle);
     
-    
     @JsMethod(name = "setInterval")
-    public native double setInterval(Function handler);
-    
+    public native double setInterval(CallbackFunction handler);
     
     @JsMethod(name = "setInterval")
     public native double setInterval(String handler);
     
-    
     @JsMethod(name = "setInterval")
-    public native double setInterval(Function handler, double timeout);
-    
-    
-    @JsMethod(name = "setInterval")
-    public native double setInterval(String handler, double timeout);
-    
-    
-    @JsMethod(name = "setInterval")
-    public native double setInterval(Function handler, double timeout, Object... arguments);
-    
+    public native double setInterval(CallbackFunction handler, double timeout, Object... arguments);
     
     @JsMethod(name = "setInterval")
     public native double setInterval(String handler, double timeout, Object... arguments);
     
-    
     @JsMethod(name = "setTimeout")
-    public native double setTimeout(Function handler);
-    
+    public native double setTimeout(CallbackFunction handler);
     
     @JsMethod(name = "setTimeout")
     public native double setTimeout(String handler);
     
-    
     @JsMethod(name = "setTimeout")
-    public native double setTimeout(Function handler, double timeout);
-    
-    
-    @JsMethod(name = "setTimeout")
-    public native double setTimeout(String handler, double timeout);
-    
-    
-    @JsMethod(name = "setTimeout")
-    public native double setTimeout(Function handler, double timeout, Object... arguments);
-    
+    public native double setTimeout(CallbackFunction handler, double timeout, Object... arguments);
     
     @JsMethod(name = "setTimeout")
     public native double setTimeout(String handler, double timeout, Object... arguments);
-    
     
 }

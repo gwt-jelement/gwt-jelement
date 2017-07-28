@@ -22,15 +22,12 @@ import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="SyncManager", isNative = true)
 public class SyncManager{
-    
     @JsMethod(name = "getTags")
     public native Promise<String[]> getTags();
     
-    
     @JsMethod(name = "register")
     public native Promise<Void> register(String tag);
-    
     
 }

@@ -25,12 +25,11 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="SVGViewElement", isNative = true)
 public class SVGViewElement extends SVGElement{
-    public static int SVG_ZOOMANDPAN_UNKNOWN;
-    public static int SVG_ZOOMANDPAN_DISABLE;
-    public static int SVG_ZOOMANDPAN_MAGNIFY;
-    
+    public static short SVG_ZOOMANDPAN_UNKNOWN;
+    public static short SVG_ZOOMANDPAN_DISABLE;
+    public static short SVG_ZOOMANDPAN_MAGNIFY;
     
     @JsConstructor
     public SVGViewElement(){
@@ -48,6 +47,5 @@ public class SVGViewElement extends SVGElement{
     
     @JsProperty(name="zoomAndPan")
     public native void setZoomAndPan(short zoomAndPan);
-    
     
 }

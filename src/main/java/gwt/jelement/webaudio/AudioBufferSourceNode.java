@@ -28,9 +28,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="AudioBufferSourceNode", isNative = true)
 public class AudioBufferSourceNode extends AudioScheduledSourceNode{
-    
     @JsConstructor
     public AudioBufferSourceNode(BaseAudioContext context){
         super();
@@ -74,17 +73,13 @@ public class AudioBufferSourceNode extends AudioScheduledSourceNode{
     @JsMethod(name = "start")
     public native void start();
     
-    
     @JsMethod(name = "start")
     public native void start(double when);
-    
     
     @JsMethod(name = "start")
     public native void start(double when, double grainOffset);
     
-    
     @JsMethod(name = "start")
     public native void start(double when, double grainOffset, double grainDuration);
-    
     
 }

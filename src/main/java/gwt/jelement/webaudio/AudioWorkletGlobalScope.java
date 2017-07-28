@@ -16,7 +16,7 @@
  */
 package gwt.jelement.webaudio;
 
-import gwt.jelement.jelement.Function;
+import gwt.jelement.core.Function;
 import gwt.jelement.workers.WorkletGlobalScope;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
@@ -24,9 +24,8 @@ import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="AudioWorkletGlobalScope", isNative = true)
 public class AudioWorkletGlobalScope extends WorkletGlobalScope{
-    
     @JsConstructor
     public AudioWorkletGlobalScope(){
         super();
@@ -34,6 +33,5 @@ public class AudioWorkletGlobalScope extends WorkletGlobalScope{
     
     @JsMethod(name = "registerProcessor")
     public native void registerProcessor(String name, Function processorConstructor);
-    
     
 }

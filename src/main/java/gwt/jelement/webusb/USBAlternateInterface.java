@@ -24,9 +24,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="USBAlternateInterface", isNative = true)
 public class USBAlternateInterface{
-    
     @JsConstructor
     public USBAlternateInterface(USBInterface deviceInterface, byte alternateSetting){
     }
@@ -48,6 +47,5 @@ public class USBAlternateInterface{
     
     @JsProperty(name="endpoints")
     public native USBEndpoint[] getEndpoints();
-    
     
 }

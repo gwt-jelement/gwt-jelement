@@ -23,9 +23,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="IDBCursorWithValue", isNative = true)
 public class IDBCursorWithValue extends IDBCursor{
-    
     @JsConstructor
     public IDBCursorWithValue(){
         super();
@@ -33,6 +32,5 @@ public class IDBCursorWithValue extends IDBCursor{
     
     @JsProperty(name="value")
     public native Object getValue();
-    
     
 }

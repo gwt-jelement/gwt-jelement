@@ -16,12 +16,12 @@
  */
 package gwt.jelement.fetch;
 
+import gwt.jelement.core.ArrayBuffer;
 import gwt.jelement.fetch.Headers;
 import gwt.jelement.fetch.Response;
 import gwt.jelement.fetch.ResponseType;
 import gwt.jelement.fileapi.Blob;
 import gwt.jelement.html.FormData;
-import elemental2.core.ArrayBuffer;
 import elemental2.promise.Promise;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
@@ -29,16 +29,10 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="Response", isNative = true)
 public class Response{
-    
     @JsProperty(name="type")
     private String type;
-    
-    @JsOverlay
-    public final ResponseType getType(){
-       return ResponseType.of(type);
-    }
     
     @JsProperty(name="url")
     public native String getUrl();
@@ -64,40 +58,36 @@ public class Response{
     @JsProperty(name="bodyUsed")
     public native boolean getBodyUsed();
     
+    @JsOverlay
+    public final ResponseType getType(){
+       return ResponseType.of(type);
+    }
+    
     @JsMethod(name = "arrayBuffer")
     public native Promise<ArrayBuffer> arrayBuffer();
-    
     
     @JsMethod(name = "blob")
     public native Promise<Blob> blob();
     
-    
     @JsMethod(name = "clone")
     public native Response clone();
     
-    
     @JsMethod(name = "error")
-    public native Response error();
-    
+    public static native Response error();
     
     @JsMethod(name = "formData")
     public native Promise<FormData> formData();
     
-    
     @JsMethod(name = "json")
     public native Promise<Object> json();
     
+    @JsMethod(name = "redirect")
+    public static native Response redirect(String url);
     
     @JsMethod(name = "redirect")
-    public native Response redirect(String url);
-    
-    
-    @JsMethod(name = "redirect")
-    public native Response redirect(String url, short status);
-    
+    public static native Response redirect(String url, short status);
     
     @JsMethod(name = "text")
     public native Promise<String> text();
-    
     
 }

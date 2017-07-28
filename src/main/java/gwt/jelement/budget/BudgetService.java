@@ -25,12 +25,10 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 import jsinterop.base.Any;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="BudgetService", isNative = true)
 public class BudgetService{
-    
     @JsMethod(name = "getBudget")
     public native Promise<BudgetState[]> getBudget();
-    
     
     @JsOverlay
     public final Promise<Double> getCost(OperationType operation){
@@ -40,7 +38,6 @@ public class BudgetService{
     @JsMethod(name = "getCost")
     public native Promise<Double> getCost(String operation);
     
-    
     @JsOverlay
     public final Promise<Boolean> reserve(OperationType operation){
         return reserve(operation.getInternalValue());
@@ -48,6 +45,5 @@ public class BudgetService{
     
     @JsMethod(name = "reserve")
     public native Promise<Boolean> reserve(String operation);
-    
     
 }

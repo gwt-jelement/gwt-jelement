@@ -24,9 +24,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="DetectedBarcode", isNative = true)
 public class DetectedBarcode{
-    
     @JsConstructor
     public DetectedBarcode(){
     }
@@ -39,6 +38,5 @@ public class DetectedBarcode{
     
     @JsProperty(name="cornerPoints")
     public native Point2D[] getCornerPoints();
-    
     
 }

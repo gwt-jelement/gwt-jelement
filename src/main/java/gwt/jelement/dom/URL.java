@@ -27,9 +27,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="URL", isNative = true)
 public class URL{
-    
     @JsConstructor
     public URL(String url){
     }
@@ -105,19 +104,15 @@ public class URL{
     public native void setHash(String hash);
     
     @JsMethod(name = "createObjectURL")
-    public native String createObjectURL(Blob blob);
-    
-    
-    @JsMethod(name = "createObjectURL")
-    public native String createObjectURL(MediaSource source);
-    
+    public static native String createObjectURL(Blob blob);
     
     @JsMethod(name = "createObjectURL")
-    public native String createObjectURL(MediaStream stream);
+    public static native String createObjectURL(MediaSource source);
     
+    @JsMethod(name = "createObjectURL")
+    public static native String createObjectURL(MediaStream stream);
     
     @JsMethod(name = "revokeObjectURL")
-    public native void revokeObjectURL(String url);
-    
+    public static native void revokeObjectURL(String url);
     
 }

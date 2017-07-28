@@ -16,13 +16,13 @@
  */
 package gwt.jelement.geometry;
 
+import gwt.jelement.core.Float32Array;
+import gwt.jelement.core.Float64Array;
 import gwt.jelement.geometry.DOMMatrix;
 import gwt.jelement.geometry.DOMMatrixInit;
 import gwt.jelement.geometry.DOMMatrixReadOnly;
 import gwt.jelement.geometry.DOMPoint;
 import gwt.jelement.geometry.DOMPointInit;
-import elemental2.core.Float32Array;
-import elemental2.core.Float64Array;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
@@ -30,9 +30,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="DOMMatrixReadOnly", isNative = true)
 public class DOMMatrixReadOnly{
-    
     @JsConstructor
     public DOMMatrixReadOnly(){
     }
@@ -120,189 +119,136 @@ public class DOMMatrixReadOnly{
     @JsMethod(name = "flipX")
     public native DOMMatrix flipX();
     
-    
     @JsMethod(name = "flipY")
     public native DOMMatrix flipY();
     
-    
     @JsMethod(name = "fromFloat32Array")
-    public native DOMMatrixReadOnly fromFloat32Array(Float32Array array32);
-    
+    public static native DOMMatrixReadOnly fromFloat32Array(Float32Array array32);
     
     @JsMethod(name = "fromFloat64Array")
-    public native DOMMatrixReadOnly fromFloat64Array(Float64Array array64);
-    
-    
-    @JsMethod(name = "fromMatrix")
-    public native DOMMatrixReadOnly fromMatrix();
-    
+    public static native DOMMatrixReadOnly fromFloat64Array(Float64Array array64);
     
     @JsMethod(name = "fromMatrix")
-    public native DOMMatrixReadOnly fromMatrix(DOMMatrixInit other);
+    public static native DOMMatrixReadOnly fromMatrix();
     
+    @JsMethod(name = "fromMatrix")
+    public static native DOMMatrixReadOnly fromMatrix(DOMMatrixInit other);
     
     @JsMethod(name = "inverse")
     public native DOMMatrix inverse();
     
-    
     @JsMethod(name = "multiply")
     public native DOMMatrix multiply();
-    
     
     @JsMethod(name = "multiply")
     public native DOMMatrix multiply(DOMMatrixInit other);
     
-    
     @JsMethod(name = "rotate")
     public native DOMMatrix rotate();
-    
     
     @JsMethod(name = "rotate")
     public native DOMMatrix rotate(double rotX);
     
-    
     @JsMethod(name = "rotate")
     public native DOMMatrix rotate(double rotX, double rotY);
-    
     
     @JsMethod(name = "rotate")
     public native DOMMatrix rotate(double rotX, double rotY, double rotZ);
     
-    
     @JsMethod(name = "rotateAxisAngle")
     public native DOMMatrix rotateAxisAngle();
-    
     
     @JsMethod(name = "rotateAxisAngle")
     public native DOMMatrix rotateAxisAngle(double x);
     
-    
     @JsMethod(name = "rotateAxisAngle")
     public native DOMMatrix rotateAxisAngle(double x, double y);
-    
     
     @JsMethod(name = "rotateAxisAngle")
     public native DOMMatrix rotateAxisAngle(double x, double y, double z);
     
-    
     @JsMethod(name = "rotateAxisAngle")
     public native DOMMatrix rotateAxisAngle(double x, double y, double z, double angle);
-    
     
     @JsMethod(name = "rotateFromVector")
     public native DOMMatrix rotateFromVector();
     
-    
     @JsMethod(name = "rotateFromVector")
     public native DOMMatrix rotateFromVector(double x);
-    
     
     @JsMethod(name = "rotateFromVector")
     public native DOMMatrix rotateFromVector(double x, double y);
     
-    
     @JsMethod(name = "scale")
     public native DOMMatrix scale();
-    
     
     @JsMethod(name = "scale")
     public native DOMMatrix scale(double scaleX);
     
-    
     @JsMethod(name = "scale")
     public native DOMMatrix scale(double scaleX, double scaleY);
-    
     
     @JsMethod(name = "scale")
     public native DOMMatrix scale(double scaleX, double scaleY, double scaleZ);
     
-    
     @JsMethod(name = "scale")
     public native DOMMatrix scale(double scaleX, double scaleY, double scaleZ, double originX);
-    
     
     @JsMethod(name = "scale")
     public native DOMMatrix scale(double scaleX, double scaleY, double scaleZ, double originX, double originY);
     
-    
     @JsMethod(name = "scale")
     public native DOMMatrix scale(double scaleX, double scaleY, double scaleZ, double originX, double originY, double originZ);
-    
     
     @JsMethod(name = "scale3d")
     public native DOMMatrix scale3d();
     
-    
     @JsMethod(name = "scale3d")
     public native DOMMatrix scale3d(double scale);
-    
     
     @JsMethod(name = "scale3d")
     public native DOMMatrix scale3d(double scale, double originX);
     
-    
     @JsMethod(name = "scale3d")
     public native DOMMatrix scale3d(double scale, double originX, double originY);
-    
     
     @JsMethod(name = "scale3d")
     public native DOMMatrix scale3d(double scale, double originX, double originY, double originZ);
     
-    
     @JsMethod(name = "skewX")
     public native DOMMatrix skewX();
-    
     
     @JsMethod(name = "skewX")
     public native DOMMatrix skewX(double sx);
     
-    
     @JsMethod(name = "skewY")
     public native DOMMatrix skewY();
-    
     
     @JsMethod(name = "skewY")
     public native DOMMatrix skewY(double sy);
     
-    
     @JsMethod(name = "toFloat32Array")
     public native Float32Array toFloat32Array();
-    
     
     @JsMethod(name = "toFloat64Array")
     public native Float64Array toFloat64Array();
     
-    
-    @JsMethod(name = "toJSON")
-    public native Object toJSON();
-    
-    
-    @JsMethod(name = "toString")
-    public native String toString();
-    
-    
     @JsMethod(name = "transformPoint")
     public native DOMPoint transformPoint();
-    
     
     @JsMethod(name = "transformPoint")
     public native DOMPoint transformPoint(DOMPointInit point);
     
-    
     @JsMethod(name = "translate")
     public native DOMMatrix translate();
-    
     
     @JsMethod(name = "translate")
     public native DOMMatrix translate(double tx);
     
-    
     @JsMethod(name = "translate")
     public native DOMMatrix translate(double tx, double ty);
     
-    
     @JsMethod(name = "translate")
     public native DOMMatrix translate(double tx, double ty, double tz);
-    
     
 }

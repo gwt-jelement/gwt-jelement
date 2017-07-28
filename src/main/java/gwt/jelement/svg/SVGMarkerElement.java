@@ -30,15 +30,14 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="SVGMarkerElement", isNative = true)
 public class SVGMarkerElement extends SVGElement{
-    public static int SVG_MARKERUNITS_UNKNOWN;
-    public static int SVG_MARKERUNITS_USERSPACEONUSE;
-    public static int SVG_MARKERUNITS_STROKEWIDTH;
-    public static int SVG_MARKER_ORIENT_UNKNOWN;
-    public static int SVG_MARKER_ORIENT_AUTO;
-    public static int SVG_MARKER_ORIENT_ANGLE;
-    
+    public static short SVG_MARKERUNITS_UNKNOWN;
+    public static short SVG_MARKERUNITS_USERSPACEONUSE;
+    public static short SVG_MARKERUNITS_STROKEWIDTH;
+    public static short SVG_MARKER_ORIENT_UNKNOWN;
+    public static short SVG_MARKER_ORIENT_AUTO;
+    public static short SVG_MARKER_ORIENT_ANGLE;
     
     @JsConstructor
     public SVGMarkerElement(){
@@ -75,9 +74,7 @@ public class SVGMarkerElement extends SVGElement{
     @JsMethod(name = "setOrientToAngle")
     public native void setOrientToAngle(SVGAngle angle);
     
-    
     @JsMethod(name = "setOrientToAuto")
     public native void setOrientToAuto();
-    
     
 }

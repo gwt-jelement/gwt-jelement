@@ -21,14 +21,12 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="SpeechRecognitionAlternative", isNative = true)
 public class SpeechRecognitionAlternative{
-    
     @JsProperty(name="transcript")
     public native String getTranscript();
     
     @JsProperty(name="confidence")
     public native float getConfidence();
-    
     
 }

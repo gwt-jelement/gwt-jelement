@@ -22,14 +22,12 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="CSSVariableReferenceValue", isNative = true)
 public class CSSVariableReferenceValue{
-    
     @JsProperty(name="variable")
     public native String getVariable();
     
     @JsProperty(name="fallback")
     public native CSSUnparsedValue getFallback();
-    
     
 }

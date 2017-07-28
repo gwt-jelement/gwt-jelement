@@ -27,9 +27,8 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 import jsinterop.base.Js;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="DOMPoint", isNative = true)
 public class DOMPoint extends DOMPointReadOnly{
-    
     @JsConstructor
     public DOMPoint(){
         super();
@@ -68,11 +67,9 @@ public class DOMPoint extends DOMPointReadOnly{
     public native void setW(double w);
     
     @JsMethod(name = "fromPoint")
-    public native DOMPoint fromPoint();
-    
+    public static native DOMPoint fromPoint();
     
     @JsMethod(name = "fromPoint")
-    public native DOMPoint fromPoint(DOMPointInit other);
-    
+    public static native DOMPoint fromPoint(DOMPointInit other);
     
 }

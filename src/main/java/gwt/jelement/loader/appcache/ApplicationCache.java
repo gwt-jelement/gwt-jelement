@@ -25,15 +25,14 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="ApplicationCache", isNative = true)
 public class ApplicationCache extends EventTarget{
-    public static int UNCACHED;
-    public static int IDLE;
-    public static int CHECKING;
-    public static int DOWNLOADING;
-    public static int UPDATEREADY;
-    public static int OBSOLETE;
-    
+    public static short UNCACHED;
+    public static short IDLE;
+    public static short CHECKING;
+    public static short DOWNLOADING;
+    public static short UPDATEREADY;
+    public static short OBSOLETE;
     
     @JsProperty(name="onchecking")
     private EventHandlerNonNull onchecking;
@@ -150,13 +149,10 @@ public class ApplicationCache extends EventTarget{
     @JsMethod(name = "abort")
     public native void abort();
     
-    
     @JsMethod(name = "swapCache")
     public native void swapCache();
     
-    
     @JsMethod(name = "update")
     public native void update();
-    
     
 }

@@ -22,31 +22,24 @@ import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="UnderlyingSourceBase", isNative = true)
 public class UnderlyingSourceBase{
-    
     @JsMethod(name = "cancel")
     public native Promise<Void> cancel();
-    
     
     @JsMethod(name = "cancel")
     public native Promise<Void> cancel(Object reason);
     
-    
     @JsMethod(name = "notifyLockAcquired")
     public native void notifyLockAcquired();
-    
     
     @JsMethod(name = "notifyLockReleased")
     public native void notifyLockReleased();
     
-    
     @JsMethod(name = "pull")
     public native Promise<Void> pull();
     
-    
     @JsMethod(name = "start")
     public native Promise<Void> start(Object stream);
-    
     
 }

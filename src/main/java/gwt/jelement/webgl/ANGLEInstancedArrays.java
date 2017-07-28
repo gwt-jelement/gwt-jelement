@@ -21,21 +21,17 @@ import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="ANGLEInstancedArrays", isNative = true)
 public class ANGLEInstancedArrays{
-    public static int VERTEX_ATTRIB_ARRAY_DIVISOR_ANGLE;
-    
+    public static double VERTEX_ATTRIB_ARRAY_DIVISOR_ANGLE;
     
     @JsMethod(name = "drawArraysInstancedANGLE")
     public native void drawArraysInstancedANGLE(double mode, double first, double count, double primcount);
     
-    
     @JsMethod(name = "drawElementsInstancedANGLE")
     public native void drawElementsInstancedANGLE(double mode, double count, double type, double offset, double primcount);
     
-    
     @JsMethod(name = "vertexAttribDivisorANGLE")
     public native void vertexAttribDivisorANGLE(double index, double divisor);
-    
     
 }

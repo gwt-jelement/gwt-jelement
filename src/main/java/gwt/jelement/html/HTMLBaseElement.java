@@ -23,9 +23,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="HTMLBaseElement", isNative = true)
 public class HTMLBaseElement extends HTMLElement{
-    
     @JsConstructor
     public HTMLBaseElement(){
         super();
@@ -42,6 +41,5 @@ public class HTMLBaseElement extends HTMLElement{
     
     @JsProperty(name="target")
     public native void setTarget(String target);
-    
     
 }

@@ -23,11 +23,9 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="PresentationReceiver", isNative = true)
 public class PresentationReceiver{
-    
     @JsProperty(name="connectionList")
     public native Promise<PresentationConnectionList> getConnectionList();
-    
     
 }

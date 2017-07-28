@@ -24,9 +24,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="HashChangeEvent", isNative = true)
 public class HashChangeEvent extends Event{
-    
     @JsConstructor
     public HashChangeEvent(String type){
         super((String) null);
@@ -42,6 +41,5 @@ public class HashChangeEvent extends Event{
     
     @JsProperty(name="newURL")
     public native String getNewURL();
-    
     
 }

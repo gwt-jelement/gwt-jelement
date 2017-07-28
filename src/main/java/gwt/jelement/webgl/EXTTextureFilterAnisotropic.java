@@ -20,11 +20,9 @@ import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="EXTTextureFilterAnisotropic", isNative = true)
 public class EXTTextureFilterAnisotropic{
-    public static int TEXTURE_MAX_ANISOTROPY_EXT;
-    public static int MAX_TEXTURE_MAX_ANISOTROPY_EXT;
-    
-    
+    public static double TEXTURE_MAX_ANISOTROPY_EXT;
+    public static double MAX_TEXTURE_MAX_ANISOTROPY_EXT;
     
 }

@@ -24,9 +24,8 @@ import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="KeyframeEffect", isNative = true)
 public class KeyframeEffect extends KeyframeEffectReadOnly{
-    
     @JsConstructor
     public KeyframeEffect(Element target, Object[] effect){
         super((Element) null, (Object[]) null);
@@ -56,6 +55,5 @@ public class KeyframeEffect extends KeyframeEffectReadOnly{
     public KeyframeEffect(Element target, Object effect, KeyframeEffectOptions options){
         super((Element) null, (Object[]) null);
     }
-    
     
 }

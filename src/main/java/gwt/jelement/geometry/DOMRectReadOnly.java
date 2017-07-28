@@ -25,9 +25,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="DOMRectReadOnly", isNative = true)
 public class DOMRectReadOnly{
-    
     @JsConstructor
     public DOMRectReadOnly(){
     }
@@ -73,15 +72,9 @@ public class DOMRectReadOnly{
     public native double getLeft();
     
     @JsMethod(name = "fromRect")
-    public native DOMRectReadOnly fromRect();
-    
+    public static native DOMRectReadOnly fromRect();
     
     @JsMethod(name = "fromRect")
-    public native DOMRectReadOnly fromRect(DOMRectInit other);
-    
-    
-    @JsMethod(name = "toJSON")
-    public native Object toJSON();
-    
+    public static native DOMRectReadOnly fromRect(DOMRectInit other);
     
 }

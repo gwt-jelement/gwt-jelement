@@ -26,9 +26,8 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 import jsinterop.base.Js;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="PasswordCredential", isNative = true)
 public class PasswordCredential extends Credential{
-    
     @JsType(isNative = true, name = "?", namespace = JsPackage.GLOBAL)
     public interface CredentialBodyType {
         @JsOverlay
@@ -106,6 +105,5 @@ public class PasswordCredential extends Credential{
     
     @JsProperty(name="iconURL")
     public native String getIconURL();
-    
     
 }

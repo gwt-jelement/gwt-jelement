@@ -24,9 +24,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="AccessibleNodeList", isNative = true)
 public class AccessibleNodeList{
-    
     @JsConstructor
     public AccessibleNodeList(){
     }
@@ -44,13 +43,10 @@ public class AccessibleNodeList{
     @JsMethod(name = "add")
     public native void add(AccessibleNode node);
     
-    
     @JsMethod(name = "add")
     public native void add(AccessibleNode node, AccessibleNode before);
     
-    
     @JsMethod(name = "remove")
     public native void remove(double index);
-    
     
 }

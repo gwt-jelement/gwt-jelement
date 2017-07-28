@@ -22,11 +22,9 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="BackgroundFetchFetch", isNative = true)
 public class BackgroundFetchFetch{
-    
     @JsProperty(name="request")
     public native Request getRequest();
-    
     
 }

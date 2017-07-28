@@ -23,15 +23,12 @@ import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="Worklet", isNative = true)
 public class Worklet{
-    
     @JsMethod(name = "addModule")
     public native Promise<Void> addModule(String url);
     
-    
     @JsMethod(name = "addModule")
     public native Promise<Void> addModule(String url, WorkletOptions options);
-    
     
 }

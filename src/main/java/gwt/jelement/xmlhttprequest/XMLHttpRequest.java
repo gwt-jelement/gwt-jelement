@@ -16,6 +16,8 @@
  */
 package gwt.jelement.xmlhttprequest;
 
+import gwt.jelement.core.ArrayBuffer;
+import gwt.jelement.core.ArrayBufferView;
 import gwt.jelement.dom.Document;
 import gwt.jelement.dom.URLSearchParams;
 import gwt.jelement.events.EventHandlerNonNull;
@@ -24,8 +26,6 @@ import gwt.jelement.html.FormData;
 import gwt.jelement.xmlhttprequest.XMLHttpRequestEventTarget;
 import gwt.jelement.xmlhttprequest.XMLHttpRequestResponseType;
 import gwt.jelement.xmlhttprequest.XMLHttpRequestUpload;
-import elemental2.core.ArrayBuffer;
-import elemental2.core.ArrayBufferView;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
@@ -33,14 +33,13 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="XMLHttpRequest", isNative = true)
 public class XMLHttpRequest extends XMLHttpRequestEventTarget{
-    public static int UNSENT;
-    public static int OPENED;
-    public static int HEADERS_RECEIVED;
-    public static int LOADING;
-    public static int DONE;
-    
+    public static short UNSENT;
+    public static short OPENED;
+    public static short HEADERS_RECEIVED;
+    public static short LOADING;
+    public static short DONE;
     
     @JsProperty(name="onreadystatechange")
     private EventHandlerNonNull onreadystatechange;
@@ -90,6 +89,15 @@ public class XMLHttpRequest extends XMLHttpRequestEventTarget{
     @JsProperty(name="statusText")
     public native String getStatusText();
     
+    @JsProperty(name="response")
+    public native Object getResponse();
+    
+    @JsProperty(name="responseText")
+    public native String getResponseText();
+    
+    @JsProperty(name="responseXML")
+    public native Document getResponseXML();
+    
     @JsOverlay
     public final XMLHttpRequestResponseType getResponseType(){
        return XMLHttpRequestResponseType.of(responseType);
@@ -100,81 +108,55 @@ public class XMLHttpRequest extends XMLHttpRequestEventTarget{
        this.responseType = responseType.getInternalValue();
     }
     
-    @JsProperty(name="response")
-    public native Object getResponse();
-    
-    @JsProperty(name="responseText")
-    public native String getResponseText();
-    
-    @JsProperty(name="responseXML")
-    public native Document getResponseXML();
-    
     @JsMethod(name = "abort")
     public native void abort();
-    
     
     @JsMethod(name = "getAllResponseHeaders")
     public native String getAllResponseHeaders();
     
-    
     @JsMethod(name = "getResponseHeader")
     public native String getResponseHeader(String name);
-    
     
     @JsMethod(name = "open")
     public native void open(String method, String url);
     
-    
     @JsMethod(name = "open")
     public native void open(String method, String url, boolean async);
-    
     
     @JsMethod(name = "open")
     public native void open(String method, String url, boolean async, String username);
     
-    
     @JsMethod(name = "open")
     public native void open(String method, String url, boolean async, String username, String password);
-    
     
     @JsMethod(name = "overrideMimeType")
     public native void overrideMimeType(String mime);
     
-    
     @JsMethod(name = "send")
     public native void send();
-    
     
     @JsMethod(name = "send")
     public native void send(ArrayBuffer body);
     
-    
     @JsMethod(name = "send")
     public native void send(ArrayBufferView body);
-    
     
     @JsMethod(name = "send")
     public native void send(Blob body);
     
-    
     @JsMethod(name = "send")
     public native void send(Document body);
-    
     
     @JsMethod(name = "send")
     public native void send(String body);
     
-    
     @JsMethod(name = "send")
     public native void send(FormData body);
-    
     
     @JsMethod(name = "send")
     public native void send(URLSearchParams body);
     
-    
     @JsMethod(name = "setRequestHeader")
     public native void setRequestHeader(String name, String value);
-    
     
 }

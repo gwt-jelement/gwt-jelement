@@ -26,9 +26,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="CompositionEvent", isNative = true)
 public class CompositionEvent extends UIEvent{
-    
     @JsConstructor
     public CompositionEvent(String type){
         super((String) null);
@@ -45,25 +44,19 @@ public class CompositionEvent extends UIEvent{
     @JsMethod(name = "initCompositionEvent")
     public native void initCompositionEvent();
     
-    
     @JsMethod(name = "initCompositionEvent")
     public native void initCompositionEvent(String type);
-    
     
     @JsMethod(name = "initCompositionEvent")
     public native void initCompositionEvent(String type, boolean bubbles);
     
-    
     @JsMethod(name = "initCompositionEvent")
     public native void initCompositionEvent(String type, boolean bubbles, boolean cancelable);
-    
     
     @JsMethod(name = "initCompositionEvent")
     public native void initCompositionEvent(String type, boolean bubbles, boolean cancelable, Window view);
     
-    
     @JsMethod(name = "initCompositionEvent")
     public native void initCompositionEvent(String type, boolean bubbles, boolean cancelable, Window view, String data);
-    
     
 }

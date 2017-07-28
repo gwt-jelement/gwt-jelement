@@ -22,13 +22,11 @@ import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="SVGTSpanElement", isNative = true)
 public class SVGTSpanElement extends SVGTextPositioningElement{
-    
     @JsConstructor
     public SVGTSpanElement(){
         super();
     }
-    
     
 }

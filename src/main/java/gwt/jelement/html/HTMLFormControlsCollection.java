@@ -22,13 +22,11 @@ import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="HTMLFormControlsCollection", isNative = true)
 public class HTMLFormControlsCollection extends HTMLCollection{
-    
     @JsConstructor
     public HTMLFormControlsCollection(){
         super();
     }
-    
     
 }

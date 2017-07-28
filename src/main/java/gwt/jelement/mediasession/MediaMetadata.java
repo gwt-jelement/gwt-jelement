@@ -24,9 +24,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="MediaMetadata", isNative = true)
 public class MediaMetadata{
-    
     @JsConstructor
     public MediaMetadata(){
     }
@@ -58,6 +57,5 @@ public class MediaMetadata{
     
     @JsProperty(name="artwork")
     public native void setArtwork(MediaImage[] artwork);
-    
     
 }

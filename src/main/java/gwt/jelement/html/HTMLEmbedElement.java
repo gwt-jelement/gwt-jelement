@@ -25,9 +25,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="HTMLEmbedElement", isNative = true)
 public class HTMLEmbedElement extends HTMLElement{
-    
     @JsConstructor
     public HTMLEmbedElement(){
         super();
@@ -71,6 +70,5 @@ public class HTMLEmbedElement extends HTMLElement{
     
     @JsMethod(name = "getSVGDocument")
     public native Document getSVGDocument();
-    
     
 }

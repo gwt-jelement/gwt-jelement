@@ -22,9 +22,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="ImageBitmap", isNative = true)
 public class ImageBitmap{
-    
     @JsProperty(name="width")
     public native double getWidth();
     
@@ -33,6 +32,5 @@ public class ImageBitmap{
     
     @JsMethod(name = "close")
     public native void close();
-    
     
 }

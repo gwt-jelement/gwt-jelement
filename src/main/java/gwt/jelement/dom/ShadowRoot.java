@@ -29,20 +29,14 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="ShadowRoot", isNative = true)
 public class ShadowRoot extends DocumentFragment{
-    
     @JsProperty(name="mode")
     private String mode;
     
     @JsConstructor
     public ShadowRoot(){
         super();
-    }
-    
-    @JsOverlay
-    public final ShadowRootMode getMode(){
-       return ShadowRootMode.of(mode);
     }
     
     @JsProperty(name="host")
@@ -72,16 +66,18 @@ public class ShadowRoot extends DocumentFragment{
     @JsProperty(name="fullscreenElement")
     public native Element getFullscreenElement();
     
+    @JsOverlay
+    public final ShadowRootMode getMode(){
+       return ShadowRootMode.of(mode);
+    }
+    
     @JsMethod(name = "elementFromPoint")
     public native Element elementFromPoint(double x, double y);
-    
     
     @JsMethod(name = "elementsFromPoint")
     public native Element[] elementsFromPoint(double x, double y);
     
-    
     @JsMethod(name = "getSelection")
     public native Selection getSelection();
-    
     
 }

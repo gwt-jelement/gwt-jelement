@@ -22,30 +22,24 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="Storage", isNative = true)
 public class Storage{
-    
     @JsProperty(name="length")
     public native double getLength();
     
     @JsMethod(name = "clear")
     public native void clear();
     
-    
     @JsMethod(name = "getItem")
     public native String getItem(String key);
-    
     
     @JsMethod(name = "key")
     public native String key(double index);
     
-    
     @JsMethod(name = "removeItem")
     public native void removeItem(String key);
     
-    
     @JsMethod(name = "setItem")
     public native void setItem(String key, String value);
-    
     
 }

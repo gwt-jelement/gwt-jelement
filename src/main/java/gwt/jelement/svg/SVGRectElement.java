@@ -24,9 +24,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="SVGRectElement", isNative = true)
 public class SVGRectElement extends SVGGeometryElement{
-    
     @JsConstructor
     public SVGRectElement(){
         super();
@@ -49,6 +48,5 @@ public class SVGRectElement extends SVGGeometryElement{
     
     @JsProperty(name="ry")
     public native SVGAnimatedLength getRy();
-    
     
 }

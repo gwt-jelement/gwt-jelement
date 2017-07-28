@@ -24,9 +24,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="CSSMediaRule", isNative = true)
 public class CSSMediaRule extends CSSConditionRule{
-    
     @JsConstructor
     public CSSMediaRule(){
         super();
@@ -34,6 +33,5 @@ public class CSSMediaRule extends CSSConditionRule{
     
     @JsProperty(name="media")
     public native MediaList getMedia();
-    
     
 }

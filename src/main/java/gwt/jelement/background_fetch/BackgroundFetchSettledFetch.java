@@ -25,9 +25,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="BackgroundFetchSettledFetch", isNative = true)
 public class BackgroundFetchSettledFetch extends BackgroundFetchFetch{
-    
     @JsConstructor
     public BackgroundFetchSettledFetch(Request request, Response response){
         super();
@@ -35,6 +34,5 @@ public class BackgroundFetchSettledFetch extends BackgroundFetchFetch{
     
     @JsProperty(name="response")
     public native Response getResponse();
-    
     
 }

@@ -22,9 +22,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="VTTRegion", isNative = true)
 public class VTTRegion{
-    
     @JsProperty(name="scroll")
     private String scroll;
     
@@ -73,6 +72,5 @@ public class VTTRegion{
     public final void setScroll(ScrollSetting scroll){
        this.scroll = scroll.getInternalValue();
     }
-    
     
 }

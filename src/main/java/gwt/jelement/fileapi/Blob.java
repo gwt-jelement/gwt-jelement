@@ -23,9 +23,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="Blob", isNative = true)
 public class Blob{
-    
     @JsProperty(name="size")
     public native double getSize();
     
@@ -38,21 +37,16 @@ public class Blob{
     @JsMethod(name = "close")
     public native void close();
     
-    
     @JsMethod(name = "slice")
     public native Blob slice();
-    
     
     @JsMethod(name = "slice")
     public native Blob slice(double start);
     
-    
     @JsMethod(name = "slice")
     public native Blob slice(double start, double end);
     
-    
     @JsMethod(name = "slice")
     public native Blob slice(double start, double end, String contentType);
-    
     
 }

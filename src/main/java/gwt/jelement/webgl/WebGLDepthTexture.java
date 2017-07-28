@@ -20,10 +20,8 @@ import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="WebGLDepthTexture", isNative = true)
 public class WebGLDepthTexture{
-    public static int UNSIGNED_INT_24_8_WEBGL;
-    
-    
+    public static double UNSIGNED_INT_24_8_WEBGL;
     
 }

@@ -22,16 +22,10 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="TrackDefault", isNative = true)
 public class TrackDefault{
-    
     @JsProperty(name="type")
     private String type;
-    
-    @JsOverlay
-    public final TrackDefaultType getType(){
-       return TrackDefaultType.of(type);
-    }
     
     @JsProperty(name="byteStreamTrackID")
     public native String getByteStreamTrackID();
@@ -45,5 +39,9 @@ public class TrackDefault{
     @JsProperty(name="kinds")
     public native String[] getKinds();
     
+    @JsOverlay
+    public final TrackDefaultType getType(){
+       return TrackDefaultType.of(type);
+    }
     
 }

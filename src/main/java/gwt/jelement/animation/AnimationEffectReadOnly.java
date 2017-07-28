@@ -24,14 +24,12 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="AnimationEffectReadOnly", isNative = true)
 public class AnimationEffectReadOnly{
-    
     @JsProperty(name="timing")
     public native AnimationEffectTimingReadOnly getTiming();
     
     @JsMethod(name = "getComputedTiming")
     public native ComputedTimingProperties getComputedTiming();
-    
     
 }

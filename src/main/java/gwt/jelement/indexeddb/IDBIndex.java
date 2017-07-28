@@ -26,9 +26,8 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 import jsinterop.base.Any;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="IDBIndex", isNative = true)
 public class IDBIndex{
-    
     @JsProperty(name="name")
     public native String getName();
     
@@ -50,50 +49,38 @@ public class IDBIndex{
     @JsMethod(name = "count")
     public native IDBRequest count();
     
-    
     @JsMethod(name = "count")
     public native IDBRequest count(Object key);
-    
     
     @JsMethod(name = "get")
     public native IDBRequest get(Object key);
     
-    
     @JsMethod(name = "getAll")
     public native IDBRequest getAll();
-    
     
     @JsMethod(name = "getAll")
     public native IDBRequest getAll(Object query);
     
-    
     @JsMethod(name = "getAll")
     public native IDBRequest getAll(Object query, double count);
-    
     
     @JsMethod(name = "getAllKeys")
     public native IDBRequest getAllKeys();
     
-    
     @JsMethod(name = "getAllKeys")
     public native IDBRequest getAllKeys(Object query);
-    
     
     @JsMethod(name = "getAllKeys")
     public native IDBRequest getAllKeys(Object query, double count);
     
-    
     @JsMethod(name = "getKey")
     public native IDBRequest getKey(Object key);
-    
     
     @JsMethod(name = "openCursor")
     public native IDBRequest openCursor();
     
-    
     @JsMethod(name = "openCursor")
     public native IDBRequest openCursor(Object range);
-    
     
     @JsOverlay
     public final IDBRequest openCursor(Object range, IDBCursorDirection direction){
@@ -103,14 +90,11 @@ public class IDBIndex{
     @JsMethod(name = "openCursor")
     public native IDBRequest openCursor(Object range, String direction);
     
-    
     @JsMethod(name = "openKeyCursor")
     public native IDBRequest openKeyCursor();
     
-    
     @JsMethod(name = "openKeyCursor")
     public native IDBRequest openKeyCursor(Object range);
-    
     
     @JsOverlay
     public final IDBRequest openKeyCursor(Object range, IDBCursorDirection direction){
@@ -119,6 +103,5 @@ public class IDBIndex{
     
     @JsMethod(name = "openKeyCursor")
     public native IDBRequest openKeyCursor(Object range, String direction);
-    
     
 }

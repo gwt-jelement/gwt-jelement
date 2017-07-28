@@ -23,9 +23,8 @@ import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="SVGPathElement", isNative = true)
 public class SVGPathElement extends SVGGeometryElement{
-    
     @JsConstructor
     public SVGPathElement(){
         super();
@@ -33,6 +32,5 @@ public class SVGPathElement extends SVGGeometryElement{
     
     @JsMethod(name = "getPathSegAtLength")
     public native double getPathSegAtLength(float distance);
-    
     
 }

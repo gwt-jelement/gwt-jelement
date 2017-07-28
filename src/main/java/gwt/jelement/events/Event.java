@@ -25,13 +25,12 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="Event", isNative = true)
 public class Event{
-    public static int NONE;
-    public static int CAPTURING_PHASE;
-    public static int AT_TARGET;
-    public static int BUBBLING_PHASE;
-    
+    public static short NONE;
+    public static short CAPTURING_PHASE;
+    public static short AT_TARGET;
+    public static short BUBBLING_PHASE;
     
     @JsConstructor
     public Event(String type){
@@ -92,29 +91,22 @@ public class Event{
     @JsMethod(name = "composedPath")
     public native EventTarget[] composedPath();
     
-    
     @JsMethod(name = "initEvent")
     public native void initEvent(String type);
-    
     
     @JsMethod(name = "initEvent")
     public native void initEvent(String type, boolean bubbles);
     
-    
     @JsMethod(name = "initEvent")
     public native void initEvent(String type, boolean bubbles, boolean cancelable);
-    
     
     @JsMethod(name = "preventDefault")
     public native void preventDefault();
     
-    
     @JsMethod(name = "stopImmediatePropagation")
     public native void stopImmediatePropagation();
     
-    
     @JsMethod(name = "stopPropagation")
     public native void stopPropagation();
-    
     
 }

@@ -24,9 +24,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="CSSResourceValue", isNative = true)
 public class CSSResourceValue extends CSSStyleValue{
-    
     @JsProperty(name="state")
     private String state;
     
@@ -39,6 +38,5 @@ public class CSSResourceValue extends CSSStyleValue{
     public final CSSResourceState getState(){
        return CSSResourceState.of(state);
     }
-    
     
 }

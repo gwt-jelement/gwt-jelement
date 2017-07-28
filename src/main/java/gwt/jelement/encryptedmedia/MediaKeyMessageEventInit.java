@@ -16,9 +16,9 @@
  */
 package gwt.jelement.encryptedmedia;
 
+import gwt.jelement.core.ArrayBuffer;
 import gwt.jelement.encryptedmedia.MediaKeyMessageType;
 import gwt.jelement.events.EventInit;
-import elemental2.core.ArrayBuffer;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;

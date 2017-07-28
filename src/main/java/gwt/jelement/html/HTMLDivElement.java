@@ -23,9 +23,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="HTMLDivElement", isNative = true)
 public class HTMLDivElement extends HTMLElement{
-    
     @JsConstructor
     public HTMLDivElement(){
         super();
@@ -36,6 +35,5 @@ public class HTMLDivElement extends HTMLElement{
     
     @JsProperty(name="align")
     public native void setAlign(String align);
-    
     
 }

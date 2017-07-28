@@ -26,9 +26,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="CSSStyleSheet", isNative = true)
 public class CSSStyleSheet extends StyleSheet{
-    
     @JsConstructor
     public CSSStyleSheet(){
         super();
@@ -46,37 +45,28 @@ public class CSSStyleSheet extends StyleSheet{
     @JsMethod(name = "addRule")
     public native double addRule();
     
-    
     @JsMethod(name = "addRule")
     public native double addRule(String selector);
-    
     
     @JsMethod(name = "addRule")
     public native double addRule(String selector, String style);
     
-    
     @JsMethod(name = "addRule")
     public native double addRule(String selector, String style, double index);
-    
     
     @JsMethod(name = "deleteRule")
     public native void deleteRule(double index);
     
-    
     @JsMethod(name = "insertRule")
     public native double insertRule(String rule);
-    
     
     @JsMethod(name = "insertRule")
     public native double insertRule(String rule, double index);
     
-    
     @JsMethod(name = "removeRule")
     public native void removeRule();
     
-    
     @JsMethod(name = "removeRule")
     public native void removeRule(double index);
-    
     
 }

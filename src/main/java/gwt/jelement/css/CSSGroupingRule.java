@@ -25,9 +25,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="CSSGroupingRule", isNative = true)
 public class CSSGroupingRule extends CSSRule{
-    
     @JsConstructor
     public CSSGroupingRule(){
         super();
@@ -39,9 +38,7 @@ public class CSSGroupingRule extends CSSRule{
     @JsMethod(name = "deleteRule")
     public native void deleteRule(double index);
     
-    
     @JsMethod(name = "insertRule")
     public native double insertRule(String rule, double index);
-    
     
 }

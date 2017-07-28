@@ -23,9 +23,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="HTMLUListElement", isNative = true)
 public class HTMLUListElement extends HTMLElement{
-    
     @JsConstructor
     public HTMLUListElement(){
         super();
@@ -42,6 +41,5 @@ public class HTMLUListElement extends HTMLElement{
     
     @JsProperty(name="type")
     public native void setType(String type);
-    
     
 }

@@ -21,9 +21,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="VideoPlaybackQuality", isNative = true)
 public class VideoPlaybackQuality{
-    
     @JsProperty(name="creationTime")
     public native double getCreationTime();
     
@@ -35,6 +34,5 @@ public class VideoPlaybackQuality{
     
     @JsProperty(name="corruptedVideoFrames")
     public native double getCorruptedVideoFrames();
-    
     
 }

@@ -22,11 +22,9 @@ import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="WebGLDebugShaders", isNative = true)
 public class WebGLDebugShaders{
-    
     @JsMethod(name = "getTranslatedShaderSource")
     public native String getTranslatedShaderSource(WebGLShader shader);
-    
     
 }

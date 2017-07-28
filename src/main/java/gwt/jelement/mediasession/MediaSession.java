@@ -27,9 +27,8 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 import jsinterop.base.Any;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="MediaSession", isNative = true)
 public class MediaSession{
-    
     @JsProperty(name="playbackState")
     private String playbackState;
     
@@ -56,6 +55,5 @@ public class MediaSession{
     
     @JsMethod(name = "setActionHandler")
     public native void setActionHandler(String action, MediaSessionActionHandler handler);
-    
     
 }

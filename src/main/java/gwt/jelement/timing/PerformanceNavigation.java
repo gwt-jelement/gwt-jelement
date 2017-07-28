@@ -16,28 +16,22 @@
  */
 package gwt.jelement.timing;
 
-import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="PerformanceNavigation", isNative = true)
 public class PerformanceNavigation{
-    public static int TYPE_NAVIGATE;
-    public static int TYPE_RELOAD;
-    public static int TYPE_BACK_FORWARD;
-    public static int TYPE_RESERVED;
-    
+    public static short TYPE_NAVIGATE;
+    public static short TYPE_RELOAD;
+    public static short TYPE_BACK_FORWARD;
+    public static short TYPE_RESERVED;
     
     @JsProperty(name="type")
     public native short getType();
     
     @JsProperty(name="redirectCount")
     public native short getRedirectCount();
-    
-    @JsMethod(name = "toJSON")
-    public native Object toJSON();
-    
     
 }

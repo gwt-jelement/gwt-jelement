@@ -25,9 +25,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="HTMLTableRowElement", isNative = true)
 public class HTMLTableRowElement extends HTMLElement{
-    
     @JsConstructor
     public HTMLTableRowElement(){
         super();
@@ -75,13 +74,10 @@ public class HTMLTableRowElement extends HTMLElement{
     @JsMethod(name = "deleteCell")
     public native void deleteCell(double index);
     
-    
     @JsMethod(name = "insertCell")
     public native HTMLElement insertCell();
     
-    
     @JsMethod(name = "insertCell")
     public native HTMLElement insertCell(double index);
-    
     
 }

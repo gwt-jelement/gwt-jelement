@@ -27,9 +27,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="SpeechSynthesis", isNative = true)
 public class SpeechSynthesis extends EventTarget{
-    
     @JsProperty(name="onvoiceschanged")
     private EventHandlerNonNull onvoiceschanged;
     
@@ -60,21 +59,16 @@ public class SpeechSynthesis extends EventTarget{
     @JsMethod(name = "cancel")
     public native void cancel();
     
-    
     @JsMethod(name = "getVoices")
     public native SpeechSynthesisVoice[] getVoices();
-    
     
     @JsMethod(name = "pause")
     public native void pause();
     
-    
     @JsMethod(name = "resume")
     public native void resume();
     
-    
     @JsMethod(name = "speak")
     public native void speak(SpeechSynthesisUtterance utterance);
-    
     
 }

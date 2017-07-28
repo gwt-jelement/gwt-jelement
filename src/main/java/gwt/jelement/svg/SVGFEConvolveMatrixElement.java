@@ -30,13 +30,12 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="SVGFEConvolveMatrixElement", isNative = true)
 public class SVGFEConvolveMatrixElement extends SVGElement{
-    public static int SVG_EDGEMODE_UNKNOWN;
-    public static int SVG_EDGEMODE_DUPLICATE;
-    public static int SVG_EDGEMODE_WRAP;
-    public static int SVG_EDGEMODE_NONE;
-    
+    public static short SVG_EDGEMODE_UNKNOWN;
+    public static short SVG_EDGEMODE_DUPLICATE;
+    public static short SVG_EDGEMODE_WRAP;
+    public static short SVG_EDGEMODE_NONE;
     
     @JsConstructor
     public SVGFEConvolveMatrixElement(){
@@ -93,6 +92,5 @@ public class SVGFEConvolveMatrixElement extends SVGElement{
     
     @JsProperty(name="result")
     public native SVGAnimatedString getResult();
-    
     
 }

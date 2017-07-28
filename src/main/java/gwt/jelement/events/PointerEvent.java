@@ -26,9 +26,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="PointerEvent", isNative = true)
 public class PointerEvent extends MouseEvent{
-    
     @JsConstructor
     public PointerEvent(String type){
         super((String) null);
@@ -71,6 +70,5 @@ public class PointerEvent extends MouseEvent{
     
     @JsMethod(name = "getCoalescedEvents")
     public native PointerEvent[] getCoalescedEvents();
-    
     
 }

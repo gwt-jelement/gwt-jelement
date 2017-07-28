@@ -23,9 +23,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="CSSConditionRule", isNative = true)
 public class CSSConditionRule extends CSSGroupingRule{
-    
     @JsConstructor
     public CSSConditionRule(){
         super();
@@ -33,6 +32,5 @@ public class CSSConditionRule extends CSSGroupingRule{
     
     @JsProperty(name="conditionText")
     public native String getConditionText();
-    
     
 }

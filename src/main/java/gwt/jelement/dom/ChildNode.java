@@ -22,47 +22,27 @@ import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="ChildNode", isNative = true)
 public class ChildNode{
-    
-    @JsMethod(name = "after")
-    public native void after();
-    
-    
     @JsMethod(name = "after")
     public native void after(Node... nodes);
-    
     
     @JsMethod(name = "after")
     public native void after(String... nodes);
     
-    
-    @JsMethod(name = "before")
-    public native void before();
-    
-    
     @JsMethod(name = "before")
     public native void before(Node... nodes);
-    
     
     @JsMethod(name = "before")
     public native void before(String... nodes);
     
-    
     @JsMethod(name = "remove")
     public native void remove();
-    
-    
-    @JsMethod(name = "replaceWith")
-    public native void replaceWith();
-    
     
     @JsMethod(name = "replaceWith")
     public native void replaceWith(Node... nodes);
     
-    
     @JsMethod(name = "replaceWith")
     public native void replaceWith(String... nodes);
-    
     
 }

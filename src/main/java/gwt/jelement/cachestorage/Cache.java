@@ -25,103 +25,78 @@ import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="Cache", isNative = true)
 public class Cache{
-    
     @JsMethod(name = "add")
     public native Promise<Void> add(Request request);
-    
     
     @JsMethod(name = "add")
     public native Promise<Void> add(String request);
     
-    
     @JsMethod(name = "addAll")
     public native Promise<Void> addAll(Request[] requests);
-    
     
     @JsMethod(name = "addAll")
     public native Promise<Void> addAll(String[] requests);
     
-    
     @JsMethod(name = "delete")
     public native Promise<Boolean> delete(Request request);
-    
     
     @JsMethod(name = "delete")
     public native Promise<Boolean> delete(String request);
     
-    
     @JsMethod(name = "delete")
     public native Promise<Boolean> delete(Request request, CacheQueryOptions options);
-    
     
     @JsMethod(name = "delete")
     public native Promise<Boolean> delete(String request, CacheQueryOptions options);
     
-    
     @JsMethod(name = "keys")
     public native Promise<Request[]> keys();
-    
     
     @JsMethod(name = "keys")
     public native Promise<Request[]> keys(Request request);
     
-    
     @JsMethod(name = "keys")
     public native Promise<Request[]> keys(String request);
-    
     
     @JsMethod(name = "keys")
     public native Promise<Request[]> keys(Request request, CacheQueryOptions options);
     
-    
     @JsMethod(name = "keys")
     public native Promise<Request[]> keys(String request, CacheQueryOptions options);
-    
     
     @JsMethod(name = "match")
     public native Promise<Object> match(Request request);
     
-    
     @JsMethod(name = "match")
     public native Promise<Object> match(String request);
-    
     
     @JsMethod(name = "match")
     public native Promise<Object> match(Request request, CacheQueryOptions options);
     
-    
     @JsMethod(name = "match")
     public native Promise<Object> match(String request, CacheQueryOptions options);
-    
     
     @JsMethod(name = "matchAll")
     public native Promise<Response[]> matchAll();
     
-    
     @JsMethod(name = "matchAll")
     public native Promise<Response[]> matchAll(Request request);
-    
     
     @JsMethod(name = "matchAll")
     public native Promise<Response[]> matchAll(String request);
     
-    
     @JsMethod(name = "matchAll")
     public native Promise<Response[]> matchAll(Request request, CacheQueryOptions options);
-    
     
     @JsMethod(name = "matchAll")
     public native Promise<Response[]> matchAll(String request, CacheQueryOptions options);
     
-    
     @JsMethod(name = "put")
     public native Promise<Void> put(Request request, Response response);
     
-    
     @JsMethod(name = "put")
     public native Promise<Void> put(String request, Response response);
-    
     
 }

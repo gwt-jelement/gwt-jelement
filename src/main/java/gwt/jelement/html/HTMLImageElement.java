@@ -25,9 +25,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="HTMLImageElement", isNative = true)
 public class HTMLImageElement extends HTMLElement{
-    
     @JsConstructor
     public HTMLImageElement(){
         super();
@@ -155,6 +154,5 @@ public class HTMLImageElement extends HTMLElement{
     
     @JsMethod(name = "decode")
     public native Promise decode();
-    
     
 }

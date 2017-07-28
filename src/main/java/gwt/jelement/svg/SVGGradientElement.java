@@ -26,13 +26,12 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="SVGGradientElement", isNative = true)
 public class SVGGradientElement extends SVGElement{
-    public static int SVG_SPREADMETHOD_UNKNOWN;
-    public static int SVG_SPREADMETHOD_PAD;
-    public static int SVG_SPREADMETHOD_REFLECT;
-    public static int SVG_SPREADMETHOD_REPEAT;
-    
+    public static short SVG_SPREADMETHOD_UNKNOWN;
+    public static short SVG_SPREADMETHOD_PAD;
+    public static short SVG_SPREADMETHOD_REFLECT;
+    public static short SVG_SPREADMETHOD_REPEAT;
     
     @JsConstructor
     public SVGGradientElement(){
@@ -50,6 +49,5 @@ public class SVGGradientElement extends SVGElement{
     
     @JsProperty(name="href")
     public native SVGAnimatedString getHref();
-    
     
 }

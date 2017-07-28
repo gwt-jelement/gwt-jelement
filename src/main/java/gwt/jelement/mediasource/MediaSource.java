@@ -29,9 +29,8 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 import jsinterop.base.Any;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="MediaSource", isNative = true)
 public class MediaSource extends EventTarget{
-    
     @JsProperty(name="onsourceopen")
     private EventHandlerNonNull onsourceopen;
     
@@ -94,14 +93,11 @@ public class MediaSource extends EventTarget{
     @JsMethod(name = "addSourceBuffer")
     public native SourceBuffer addSourceBuffer(String type);
     
-    
     @JsMethod(name = "clearLiveSeekableRange")
     public native void clearLiveSeekableRange();
     
-    
     @JsMethod(name = "endOfStream")
     public native void endOfStream();
-    
     
     @JsOverlay
     public final void endOfStream(EndOfStreamError error){
@@ -111,17 +107,13 @@ public class MediaSource extends EventTarget{
     @JsMethod(name = "endOfStream")
     public native void endOfStream(String error);
     
-    
     @JsMethod(name = "isTypeSupported")
-    public native boolean isTypeSupported(String type);
-    
+    public static native boolean isTypeSupported(String type);
     
     @JsMethod(name = "removeSourceBuffer")
     public native void removeSourceBuffer(SourceBuffer buffer);
     
-    
     @JsMethod(name = "setLiveSeekableRange")
     public native void setLiveSeekableRange(double start, double end);
-    
     
 }

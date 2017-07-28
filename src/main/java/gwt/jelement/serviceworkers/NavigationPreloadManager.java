@@ -23,23 +23,18 @@ import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="NavigationPreloadManager", isNative = true)
 public class NavigationPreloadManager{
-    
     @JsMethod(name = "disable")
     public native Promise<Void> disable();
-    
     
     @JsMethod(name = "enable")
     public native Promise<Void> enable();
     
-    
     @JsMethod(name = "getState")
     public native Promise<NavigationPreloadState> getState();
     
-    
     @JsMethod(name = "setHeaderValue")
     public native Promise<Void> setHeaderValue(String value);
-    
     
 }

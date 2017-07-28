@@ -16,11 +16,11 @@
  */
 package gwt.jelement.fileapi;
 
+import gwt.jelement.core.ArrayBuffer;
 import gwt.jelement.dom.DOMException;
 import gwt.jelement.events.EventHandlerNonNull;
 import gwt.jelement.events.EventTarget;
 import gwt.jelement.fileapi.Blob;
-import elemental2.core.ArrayBuffer;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
@@ -29,12 +29,11 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 import jsinterop.base.Js;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="FileReader", isNative = true)
 public class FileReader extends EventTarget{
-    public static int EMPTY;
-    public static int LOADING;
-    public static int DONE;
-    
+    public static short EMPTY;
+    public static short LOADING;
+    public static short DONE;
     
     @JsType(isNative = true, name = "?", namespace = JsPackage.GLOBAL)
     public interface ResultUnion {
@@ -170,25 +169,19 @@ public class FileReader extends EventTarget{
     @JsMethod(name = "abort")
     public native void abort();
     
-    
     @JsMethod(name = "readAsArrayBuffer")
     public native void readAsArrayBuffer(Blob blob);
-    
     
     @JsMethod(name = "readAsBinaryString")
     public native void readAsBinaryString(Blob blob);
     
-    
     @JsMethod(name = "readAsDataURL")
     public native void readAsDataURL(Blob blob);
-    
     
     @JsMethod(name = "readAsText")
     public native void readAsText(Blob blob);
     
-    
     @JsMethod(name = "readAsText")
     public native void readAsText(Blob blob, String label);
-    
     
 }

@@ -23,9 +23,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="SpeechGrammarList", isNative = true)
 public class SpeechGrammarList{
-    
     @JsConstructor
     public SpeechGrammarList(){
     }
@@ -36,17 +35,13 @@ public class SpeechGrammarList{
     @JsMethod(name = "addFromString")
     public native void addFromString(String string);
     
-    
     @JsMethod(name = "addFromString")
     public native void addFromString(String string, float weight);
-    
     
     @JsMethod(name = "addFromUri")
     public native void addFromUri(String src);
     
-    
     @JsMethod(name = "addFromUri")
     public native void addFromUri(String src, float weight);
-    
     
 }

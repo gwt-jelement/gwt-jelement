@@ -16,8 +16,8 @@
  */
 package gwt.jelement.webaudio;
 
+import gwt.jelement.core.Float32Array;
 import gwt.jelement.webaudio.AudioBufferOptions;
-import elemental2.core.Float32Array;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
@@ -25,9 +25,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="AudioBuffer", isNative = true)
 public class AudioBuffer{
-    
     @JsConstructor
     public AudioBuffer(AudioBufferOptions options){
     }
@@ -47,21 +46,16 @@ public class AudioBuffer{
     @JsMethod(name = "copyFromChannel")
     public native void copyFromChannel(Float32Array destination, double channelNumber);
     
-    
     @JsMethod(name = "copyFromChannel")
     public native void copyFromChannel(Float32Array destination, double channelNumber, double startInChannel);
-    
     
     @JsMethod(name = "copyToChannel")
     public native void copyToChannel(Float32Array source, double channelNumber);
     
-    
     @JsMethod(name = "copyToChannel")
     public native void copyToChannel(Float32Array source, double channelNumber, double startInChannel);
     
-    
     @JsMethod(name = "getChannelData")
     public native Float32Array getChannelData(double channelIndex);
-    
     
 }

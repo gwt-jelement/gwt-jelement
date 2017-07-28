@@ -16,11 +16,11 @@
  */
 package gwt.jelement.webaudio;
 
+import gwt.jelement.core.Float32Array;
+import gwt.jelement.core.Uint8Array;
 import gwt.jelement.webaudio.AnalyserOptions;
 import gwt.jelement.webaudio.AudioNode;
 import gwt.jelement.webaudio.BaseAudioContext;
-import elemental2.core.Float32Array;
-import elemental2.core.Uint8Array;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
@@ -28,9 +28,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="AnalyserNode", isNative = true)
 public class AnalyserNode extends AudioNode{
-    
     @JsConstructor
     public AnalyserNode(BaseAudioContext context){
         super();
@@ -71,17 +70,13 @@ public class AnalyserNode extends AudioNode{
     @JsMethod(name = "getByteFrequencyData")
     public native void getByteFrequencyData(Uint8Array array);
     
-    
     @JsMethod(name = "getByteTimeDomainData")
     public native void getByteTimeDomainData(Uint8Array array);
-    
     
     @JsMethod(name = "getFloatFrequencyData")
     public native void getFloatFrequencyData(Float32Array array);
     
-    
     @JsMethod(name = "getFloatTimeDomainData")
     public native void getFloatTimeDomainData(Float32Array array);
-    
     
 }

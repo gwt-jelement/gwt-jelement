@@ -21,35 +21,27 @@ import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="BluetoothUUID", isNative = true)
 public class BluetoothUUID{
-    
     @JsMethod(name = "canonicalUUID")
-    public native String canonicalUUID(double alias);
-    
-    
-    @JsMethod(name = "getCharacteristic")
-    public native String getCharacteristic(String name);
-    
+    public static native String canonicalUUID(double alias);
     
     @JsMethod(name = "getCharacteristic")
-    public native String getCharacteristic(double name);
+    public static native String getCharacteristic(String name);
     
-    
-    @JsMethod(name = "getDescriptor")
-    public native String getDescriptor(String name);
-    
+    @JsMethod(name = "getCharacteristic")
+    public static native String getCharacteristic(double name);
     
     @JsMethod(name = "getDescriptor")
-    public native String getDescriptor(double name);
+    public static native String getDescriptor(String name);
     
-    
-    @JsMethod(name = "getService")
-    public native String getService(String name);
-    
+    @JsMethod(name = "getDescriptor")
+    public static native String getDescriptor(double name);
     
     @JsMethod(name = "getService")
-    public native String getService(double name);
+    public static native String getService(String name);
     
+    @JsMethod(name = "getService")
+    public static native String getService(double name);
     
 }

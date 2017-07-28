@@ -25,9 +25,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="HTMLFormElement", isNative = true)
 public class HTMLFormElement extends HTMLElement{
-    
     @JsConstructor
     public HTMLFormElement(){
         super();
@@ -96,17 +95,13 @@ public class HTMLFormElement extends HTMLElement{
     @JsMethod(name = "checkValidity")
     public native boolean checkValidity();
     
-    
     @JsMethod(name = "reportValidity")
     public native boolean reportValidity();
-    
     
     @JsMethod(name = "reset")
     public native void reset();
     
-    
     @JsMethod(name = "submit")
     public native void submit();
-    
     
 }

@@ -21,27 +21,21 @@ import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="Headers", isNative = true)
 public class Headers{
-    
     @JsMethod(name = "append")
     public native void append(String name, String value);
-    
     
     @JsMethod(name = "delete")
     public native void delete(String key);
     
-    
     @JsMethod(name = "get")
     public native String get(String key);
-    
     
     @JsMethod(name = "has")
     public native boolean has(String key);
     
-    
     @JsMethod(name = "set")
     public native void set(String key, String value);
-    
     
 }

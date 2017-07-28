@@ -27,9 +27,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="WorkerPerformance", isNative = true)
 public class WorkerPerformance extends EventTarget{
-    
     @JsProperty(name="onresourcetimingbufferfull")
     private EventHandlerNonNull onresourcetimingbufferfull;
     
@@ -54,61 +53,46 @@ public class WorkerPerformance extends EventTarget{
     @JsMethod(name = "clearMarks")
     public native void clearMarks();
     
-    
     @JsMethod(name = "clearMarks")
     public native void clearMarks(String markName);
-    
     
     @JsMethod(name = "clearMeasures")
     public native void clearMeasures();
     
-    
     @JsMethod(name = "clearMeasures")
     public native void clearMeasures(String measureName);
-    
     
     @JsMethod(name = "clearResourceTimings")
     public native void clearResourceTimings();
     
-    
     @JsMethod(name = "getEntries")
     public native PerformanceEntry[] getEntries();
-    
     
     @JsMethod(name = "getEntriesByName")
     public native PerformanceEntry[] getEntriesByName(String name);
     
-    
     @JsMethod(name = "getEntriesByName")
     public native PerformanceEntry[] getEntriesByName(String name, String entryType);
-    
     
     @JsMethod(name = "getEntriesByType")
     public native PerformanceEntry[] getEntriesByType(String entryType);
     
-    
     @JsMethod(name = "mark")
     public native void mark(String markName);
-    
     
     @JsMethod(name = "measure")
     public native void measure(String measureName);
     
-    
     @JsMethod(name = "measure")
     public native void measure(String measureName, String startMark);
-    
     
     @JsMethod(name = "measure")
     public native void measure(String measureName, String startMark, String endMark);
     
-    
     @JsMethod(name = "now")
     public native double now();
     
-    
     @JsMethod(name = "setResourceTimingBufferSize")
     public native void setResourceTimingBufferSize(double maxSize);
-    
     
 }

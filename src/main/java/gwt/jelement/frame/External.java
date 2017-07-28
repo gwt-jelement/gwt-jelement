@@ -21,15 +21,12 @@ import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="External", isNative = true)
 public class External{
-    
     @JsMethod(name = "AddSearchProvider")
     public native void AddSearchProvider();
     
-    
     @JsMethod(name = "IsSearchProviderInstalled")
     public native void IsSearchProviderInstalled();
-    
     
 }

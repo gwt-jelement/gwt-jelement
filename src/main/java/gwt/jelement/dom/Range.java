@@ -28,13 +28,12 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="Range", isNative = true)
 public class Range{
-    public static int START_TO_START;
-    public static int START_TO_END;
-    public static int END_TO_END;
-    public static int END_TO_START;
-    
+    public static short START_TO_START;
+    public static short START_TO_END;
+    public static short END_TO_END;
+    public static short END_TO_START;
     
     @JsConstructor
     public Range(){
@@ -61,109 +60,79 @@ public class Range{
     @JsMethod(name = "cloneContents")
     public native DocumentFragment cloneContents();
     
-    
     @JsMethod(name = "cloneRange")
     public native Range cloneRange();
-    
     
     @JsMethod(name = "collapse")
     public native void collapse();
     
-    
     @JsMethod(name = "collapse")
     public native void collapse(boolean toStart);
-    
     
     @JsMethod(name = "compareBoundaryPoints")
     public native short compareBoundaryPoints(short how, Range sourceRange);
     
-    
     @JsMethod(name = "comparePoint")
     public native short comparePoint(Node node, double offset);
-    
     
     @JsMethod(name = "createContextualFragment")
     public native DocumentFragment createContextualFragment(String fragment);
     
-    
     @JsMethod(name = "deleteContents")
     public native void deleteContents();
-    
     
     @JsMethod(name = "detach")
     public native void detach();
     
-    
     @JsMethod(name = "expand")
     public native void expand();
-    
     
     @JsMethod(name = "expand")
     public native void expand(String unit);
     
-    
     @JsMethod(name = "extractContents")
     public native DocumentFragment extractContents();
-    
     
     @JsMethod(name = "getBoundingClientRect")
     public native ClientRect getBoundingClientRect();
     
-    
     @JsMethod(name = "getClientRects")
     public native ClientRectList getClientRects();
-    
     
     @JsMethod(name = "insertNode")
     public native void insertNode(Node node);
     
-    
     @JsMethod(name = "intersectsNode")
     public native boolean intersectsNode(Node node);
-    
     
     @JsMethod(name = "isPointInRange")
     public native boolean isPointInRange(Node node, double offset);
     
-    
     @JsMethod(name = "selectNode")
     public native void selectNode(Node node);
-    
     
     @JsMethod(name = "selectNodeContents")
     public native void selectNodeContents(Node node);
     
-    
     @JsMethod(name = "setEnd")
     public native void setEnd(Node node, double offset);
-    
     
     @JsMethod(name = "setEndAfter")
     public native void setEndAfter(Node node);
     
-    
     @JsMethod(name = "setEndBefore")
     public native void setEndBefore(Node node);
-    
     
     @JsMethod(name = "setStart")
     public native void setStart(Node node, double offset);
     
-    
     @JsMethod(name = "setStartAfter")
     public native void setStartAfter(Node node);
-    
     
     @JsMethod(name = "setStartBefore")
     public native void setStartBefore(Node node);
     
-    
     @JsMethod(name = "surroundContents")
     public native void surroundContents(Node newParent);
-    
-    
-    @JsMethod(name = "toString")
-    public native String toString();
-    
     
 }

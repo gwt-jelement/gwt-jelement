@@ -26,9 +26,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="AudioContext", isNative = true)
 public class AudioContext extends BaseAudioContext{
-    
     @JsConstructor
     public AudioContext(){
         super();
@@ -40,13 +39,10 @@ public class AudioContext extends BaseAudioContext{
     @JsMethod(name = "close")
     public native Promise<Void> close();
     
-    
     @JsMethod(name = "getOutputTimestamp")
     public native AudioTimestamp getOutputTimestamp();
     
-    
     @JsMethod(name = "suspend")
     public native Promise<Void> suspend();
-    
     
 }

@@ -29,27 +29,26 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="Node", isNative = true)
 public class Node extends EventTarget{
-    public static int ELEMENT_NODE;
-    public static int ATTRIBUTE_NODE;
-    public static int TEXT_NODE;
-    public static int CDATA_SECTION_NODE;
-    public static int ENTITY_REFERENCE_NODE;
-    public static int ENTITY_NODE;
-    public static int PROCESSING_INSTRUCTION_NODE;
-    public static int COMMENT_NODE;
-    public static int DOCUMENT_NODE;
-    public static int DOCUMENT_TYPE_NODE;
-    public static int DOCUMENT_FRAGMENT_NODE;
-    public static int NOTATION_NODE;
-    public static int DOCUMENT_POSITION_DISCONNECTED;
-    public static int DOCUMENT_POSITION_PRECEDING;
-    public static int DOCUMENT_POSITION_FOLLOWING;
-    public static int DOCUMENT_POSITION_CONTAINS;
-    public static int DOCUMENT_POSITION_CONTAINED_BY;
-    public static int DOCUMENT_POSITION_IMPLEMENTATION_SPECIFIC;
-    
+    public static short ELEMENT_NODE;
+    public static short ATTRIBUTE_NODE;
+    public static short TEXT_NODE;
+    public static short CDATA_SECTION_NODE;
+    public static short ENTITY_REFERENCE_NODE;
+    public static short ENTITY_NODE;
+    public static short PROCESSING_INSTRUCTION_NODE;
+    public static short COMMENT_NODE;
+    public static short DOCUMENT_NODE;
+    public static short DOCUMENT_TYPE_NODE;
+    public static short DOCUMENT_FRAGMENT_NODE;
+    public static short NOTATION_NODE;
+    public static short DOCUMENT_POSITION_DISCONNECTED;
+    public static short DOCUMENT_POSITION_PRECEDING;
+    public static short DOCUMENT_POSITION_FOLLOWING;
+    public static short DOCUMENT_POSITION_CONTAINS;
+    public static short DOCUMENT_POSITION_CONTAINED_BY;
+    public static short DOCUMENT_POSITION_IMPLEMENTATION_SPECIFIC;
     
     @JsConstructor
     public Node(){
@@ -107,69 +106,52 @@ public class Node extends EventTarget{
     @JsMethod(name = "appendChild")
     public native Node appendChild(Node node);
     
-    
     @JsMethod(name = "cloneNode")
     public native Node cloneNode();
-    
     
     @JsMethod(name = "cloneNode")
     public native Node cloneNode(boolean deep);
     
-    
     @JsMethod(name = "compareDocumentPosition")
     public native short compareDocumentPosition(Node other);
-    
     
     @JsMethod(name = "contains")
     public native boolean contains(Node other);
     
-    
     @JsMethod(name = "getRootNode")
     public native Node getRootNode();
-    
     
     @JsMethod(name = "getRootNode")
     public native Node getRootNode(GetRootNodeOptions options);
     
-    
     @JsMethod(name = "hasChildNodes")
     public native boolean hasChildNodes();
-    
     
     @JsMethod(name = "insertBefore")
     public native Node insertBefore(Node node, Node child);
     
-    
     @JsMethod(name = "isDefaultNamespace")
     public native boolean isDefaultNamespace(String namespaceURI);
-    
     
     @JsMethod(name = "isEqualNode")
     public native boolean isEqualNode(Node otherNode);
     
-    
     @JsMethod(name = "isSameNode")
     public native boolean isSameNode(Node otherNode);
-    
     
     @JsMethod(name = "lookupNamespaceURI")
     public native String lookupNamespaceURI(String prefix);
     
-    
     @JsMethod(name = "lookupPrefix")
     public native String lookupPrefix(String namespaceURI);
-    
     
     @JsMethod(name = "normalize")
     public native void normalize();
     
-    
     @JsMethod(name = "removeChild")
     public native Node removeChild(Node child);
     
-    
     @JsMethod(name = "replaceChild")
     public native Node replaceChild(Node node, Node child);
-    
     
 }

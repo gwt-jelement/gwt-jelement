@@ -21,11 +21,9 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="NavigatorOnLine", isNative = true)
 public class NavigatorOnLine{
-    
     @JsProperty(name="onLine")
     public native boolean getOnLine();
-    
     
 }

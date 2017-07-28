@@ -25,9 +25,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="SVGTextPositioningElement", isNative = true)
 public class SVGTextPositioningElement extends SVGTextContentElement{
-    
     @JsConstructor
     public SVGTextPositioningElement(){
         super();
@@ -47,6 +46,5 @@ public class SVGTextPositioningElement extends SVGTextContentElement{
     
     @JsProperty(name="rotate")
     public native SVGAnimatedNumberList getRotate();
-    
     
 }

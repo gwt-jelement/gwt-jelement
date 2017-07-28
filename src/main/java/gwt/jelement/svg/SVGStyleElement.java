@@ -24,9 +24,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="SVGStyleElement", isNative = true)
 public class SVGStyleElement extends SVGElement{
-    
     @JsConstructor
     public SVGStyleElement(){
         super();
@@ -58,6 +57,5 @@ public class SVGStyleElement extends SVGElement{
     
     @JsProperty(name="disabled")
     public native void setDisabled(boolean disabled);
-    
     
 }

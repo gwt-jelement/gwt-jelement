@@ -49,18 +49,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="RTCPeerConnection", isNative = true)
 public class RTCPeerConnection extends EventTarget{
-    
-    @JsProperty(name="signalingState")
-    private String signalingState;
-    
-    @JsProperty(name="iceGatheringState")
-    private String iceGatheringState;
-    
-    @JsProperty(name="iceConnectionState")
-    private String iceConnectionState;
-    
     @JsProperty(name="onnegotiationneeded")
     private EventHandlerNonNull onnegotiationneeded;
     
@@ -85,6 +75,15 @@ public class RTCPeerConnection extends EventTarget{
     @JsProperty(name="onremovestream")
     private EventHandlerNonNull onremovestream;
     
+    @JsProperty(name="signalingState")
+    private String signalingState;
+    
+    @JsProperty(name="iceGatheringState")
+    private String iceGatheringState;
+    
+    @JsProperty(name="iceConnectionState")
+    private String iceConnectionState;
+    
     @JsConstructor
     public RTCPeerConnection(){
         super();
@@ -95,21 +94,6 @@ public class RTCPeerConnection extends EventTarget{
     
     @JsProperty(name="remoteDescription")
     public native RTCSessionDescription getRemoteDescription();
-    
-    @JsOverlay
-    public final RTCSignalingState getSignalingState(){
-       return RTCSignalingState.of(signalingState);
-    }
-    
-    @JsOverlay
-    public final RTCIceGatheringState getIceGatheringState(){
-       return RTCIceGatheringState.of(iceGatheringState);
-    }
-    
-    @JsOverlay
-    public final RTCIceConnectionState getIceConnectionState(){
-       return RTCIceConnectionState.of(iceConnectionState);
-    }
     
     @JsOverlay
     public final EventHandlerNonNull getOnNegotiationneeded(){
@@ -191,148 +175,127 @@ public class RTCPeerConnection extends EventTarget{
         this.onremovestream = onremovestream;
     }
     
+    @JsOverlay
+    public final RTCSignalingState getSignalingState(){
+       return RTCSignalingState.of(signalingState);
+    }
+    
+    @JsOverlay
+    public final RTCIceGatheringState getIceGatheringState(){
+       return RTCIceGatheringState.of(iceGatheringState);
+    }
+    
+    @JsOverlay
+    public final RTCIceConnectionState getIceConnectionState(){
+       return RTCIceConnectionState.of(iceConnectionState);
+    }
+    
     @JsMethod(name = "addIceCandidate")
     public native Promise<Void> addIceCandidate(RTCIceCandidateInit candidate);
-    
     
     @JsMethod(name = "addIceCandidate")
     public native Promise<Void> addIceCandidate(RTCIceCandidate candidate);
     
-    
     @JsMethod(name = "addIceCandidate")
     public native Promise<Void> addIceCandidate(RTCIceCandidateInit candidate, VoidCallback successCallback, RTCPeerConnectionErrorCallback failureCallback);
-    
     
     @JsMethod(name = "addIceCandidate")
     public native Promise<Void> addIceCandidate(RTCIceCandidate candidate, VoidCallback successCallback, RTCPeerConnectionErrorCallback failureCallback);
     
-    
     @JsMethod(name = "addStream")
     public native void addStream(MediaStream stream);
-    
     
     @JsMethod(name = "addStream")
     public native void addStream(MediaStream stream, Object mediaConstraints);
     
-    
     @JsMethod(name = "close")
     public native void close();
-    
     
     @JsMethod(name = "createAnswer")
     public native Promise<RTCSessionDescription> createAnswer();
     
-    
     @JsMethod(name = "createAnswer")
     public native Promise<RTCSessionDescription> createAnswer(RTCAnswerOptions options);
-    
     
     @JsMethod(name = "createAnswer")
     public native Promise<Void> createAnswer(RTCSessionDescriptionCallback successCallback, RTCPeerConnectionErrorCallback failureCallback);
     
-    
     @JsMethod(name = "createAnswer")
     public native Promise<Void> createAnswer(RTCSessionDescriptionCallback successCallback, RTCPeerConnectionErrorCallback failureCallback, Object mediaConstraints);
-    
     
     @JsMethod(name = "createDTMFSender")
     public native RTCDTMFSender createDTMFSender(MediaStreamTrack track);
     
-    
     @JsMethod(name = "createDataChannel")
     public native RTCDataChannel createDataChannel(String label);
-    
     
     @JsMethod(name = "createDataChannel")
     public native RTCDataChannel createDataChannel(String label, RTCDataChannelInit dataChannelDict);
     
-    
     @JsMethod(name = "createOffer")
     public native Promise<RTCSessionDescription> createOffer();
-    
     
     @JsMethod(name = "createOffer")
     public native Promise<RTCSessionDescription> createOffer(RTCOfferOptions options);
     
-    
     @JsMethod(name = "createOffer")
     public native Promise<Void> createOffer(RTCSessionDescriptionCallback successCallback, RTCPeerConnectionErrorCallback failureCallback);
-    
     
     @JsMethod(name = "createOffer")
     public native Promise<Void> createOffer(RTCSessionDescriptionCallback successCallback, RTCPeerConnectionErrorCallback failureCallback, Object rtcOfferOptions);
     
+    @JsMethod(name = "generateCertificate")
+    public static native Promise<RTCCertificate> generateCertificate(Object keygenAlgorithm);
     
     @JsMethod(name = "generateCertificate")
-    public native Promise<RTCCertificate> generateCertificate(Object keygenAlgorithm);
-    
-    
-    @JsMethod(name = "generateCertificate")
-    public native Promise<RTCCertificate> generateCertificate(String keygenAlgorithm);
-    
+    public static native Promise<RTCCertificate> generateCertificate(String keygenAlgorithm);
     
     @JsMethod(name = "getLocalStreams")
     public native MediaStream[] getLocalStreams();
     
-    
     @JsMethod(name = "getReceivers")
     public native RTCRtpReceiver[] getReceivers();
-    
     
     @JsMethod(name = "getRemoteStreams")
     public native MediaStream[] getRemoteStreams();
     
-    
     @JsMethod(name = "getSenders")
     public native RTCRtpSender[] getSenders();
-    
     
     @JsMethod(name = "getStats")
     public native Promise<RTCStatsReport> getStats();
     
-    
     @JsMethod(name = "getStats")
     public native Promise<Void> getStats(RTCStatsCallback successCallback);
-    
     
     @JsMethod(name = "getStats")
     public native Promise<Void> getStats(RTCStatsCallback successCallback, MediaStreamTrack selector);
     
-    
     @JsMethod(name = "getStreamById")
     public native MediaStream getStreamById(String streamId);
-    
     
     @JsMethod(name = "removeStream")
     public native void removeStream(MediaStream stream);
     
-    
     @JsMethod(name = "setConfiguration")
     public native void setConfiguration(RTCConfiguration configuration);
-    
     
     @JsMethod(name = "setLocalDescription")
     public native Promise<Void> setLocalDescription(RTCSessionDescriptionInit description);
     
-    
     @JsMethod(name = "setLocalDescription")
     public native Promise<Void> setLocalDescription(RTCSessionDescriptionInit description, VoidCallback successCallback);
-    
     
     @JsMethod(name = "setLocalDescription")
     public native Promise<Void> setLocalDescription(RTCSessionDescriptionInit description, VoidCallback successCallback, RTCPeerConnectionErrorCallback failureCallback);
     
-    
     @JsMethod(name = "setRemoteDescription")
     public native Promise<Void> setRemoteDescription(RTCSessionDescriptionInit description);
-    
     
     @JsMethod(name = "setRemoteDescription")
     public native Promise<Void> setRemoteDescription(RTCSessionDescriptionInit description, VoidCallback successCallback);
     
-    
     @JsMethod(name = "setRemoteDescription")
     public native Promise<Void> setRemoteDescription(RTCSessionDescriptionInit description, VoidCallback successCallback, RTCPeerConnectionErrorCallback failureCallback);
-    
     
 }

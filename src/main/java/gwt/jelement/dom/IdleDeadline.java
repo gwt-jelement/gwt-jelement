@@ -22,14 +22,12 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="IdleDeadline", isNative = true)
 public class IdleDeadline{
-    
     @JsProperty(name="didTimeout")
     public native boolean getDidTimeout();
     
     @JsMethod(name = "timeRemaining")
     public native double timeRemaining();
-    
     
 }

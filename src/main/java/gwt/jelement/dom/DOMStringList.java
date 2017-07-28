@@ -22,14 +22,12 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="DOMStringList", isNative = true)
 public class DOMStringList{
-    
     @JsProperty(name="length")
     public native double getLength();
     
     @JsMethod(name = "contains")
     public native boolean contains(String string);
-    
     
 }

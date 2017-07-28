@@ -24,9 +24,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="HTMLStyleElement", isNative = true)
 public class HTMLStyleElement extends HTMLElement{
-    
     @JsConstructor
     public HTMLStyleElement(){
         super();
@@ -52,6 +51,5 @@ public class HTMLStyleElement extends HTMLElement{
     
     @JsProperty(name="sheet")
     public native StyleSheet getSheet();
-    
     
 }

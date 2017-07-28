@@ -28,9 +28,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="FetchEvent", isNative = true)
 public class FetchEvent extends ExtendableEvent{
-    
     @JsConstructor
     public FetchEvent(String type, FetchEventInit eventInitDict){
         super((String) null);
@@ -50,6 +49,5 @@ public class FetchEvent extends ExtendableEvent{
     
     @JsMethod(name = "respondWith")
     public native void respondWith(Promise<Response> r);
-    
     
 }

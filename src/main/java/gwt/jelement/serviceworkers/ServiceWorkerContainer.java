@@ -29,9 +29,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="ServiceWorkerContainer", isNative = true)
 public class ServiceWorkerContainer extends EventTarget{
-    
     @JsProperty(name="oncontrollerchange")
     private EventHandlerNonNull oncontrollerchange;
     
@@ -72,21 +71,16 @@ public class ServiceWorkerContainer extends EventTarget{
     @JsMethod(name = "getRegistration")
     public native Promise<ServiceWorkerRegistration> getRegistration();
     
-    
     @JsMethod(name = "getRegistration")
     public native Promise<ServiceWorkerRegistration> getRegistration(String documentURL);
-    
     
     @JsMethod(name = "getRegistrations")
     public native Promise<ServiceWorkerRegistration[]> getRegistrations();
     
-    
     @JsMethod(name = "register")
     public native Promise<ServiceWorkerRegistration> register(String url);
     
-    
     @JsMethod(name = "register")
     public native Promise<ServiceWorkerRegistration> register(String url, RegistrationOptions options);
-    
     
 }

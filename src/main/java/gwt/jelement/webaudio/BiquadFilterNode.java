@@ -16,10 +16,10 @@
  */
 package gwt.jelement.webaudio;
 
+import gwt.jelement.core.Float32Array;
 import gwt.jelement.webaudio.AudioNode;
 import gwt.jelement.webaudio.AudioParam;
 import gwt.jelement.webaudio.BiquadFilterType;
-import elemental2.core.Float32Array;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
@@ -27,25 +27,14 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="BiquadFilterNode", isNative = true)
 public class BiquadFilterNode extends AudioNode{
-    
     @JsProperty(name="type")
     private String type;
     
     @JsConstructor
     public BiquadFilterNode(){
         super();
-    }
-    
-    @JsOverlay
-    public final BiquadFilterType getType(){
-       return BiquadFilterType.of(type);
-    }
-    
-    @JsOverlay
-    public final void setType(BiquadFilterType type){
-       this.type = type.getInternalValue();
     }
     
     @JsProperty(name="frequency")
@@ -60,8 +49,17 @@ public class BiquadFilterNode extends AudioNode{
     @JsProperty(name="gain")
     public native AudioParam getGain();
     
+    @JsOverlay
+    public final BiquadFilterType getType(){
+       return BiquadFilterType.of(type);
+    }
+    
+    @JsOverlay
+    public final void setType(BiquadFilterType type){
+       this.type = type.getInternalValue();
+    }
+    
     @JsMethod(name = "getFrequencyResponse")
     public native void getFrequencyResponse(Float32Array frequencyHz, Float32Array magResponse, Float32Array phaseResponse);
-    
     
 }

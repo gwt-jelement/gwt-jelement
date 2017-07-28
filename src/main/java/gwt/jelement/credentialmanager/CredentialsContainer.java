@@ -25,35 +25,27 @@ import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="CredentialsContainer", isNative = true)
 public class CredentialsContainer{
-    
     @JsMethod(name = "create")
     public native Promise create();
-    
     
     @JsMethod(name = "create")
     public native Promise create(CredentialCreationOptions options);
     
-    
     @JsMethod(name = "get")
     public native Promise get();
-    
     
     @JsMethod(name = "get")
     public native Promise get(CredentialRequestOptions options);
     
-    
     @JsMethod(name = "preventSilentAccess")
     public native Promise preventSilentAccess();
-    
     
     @JsMethod(name = "requireUserMediation")
     public native Promise requireUserMediation();
     
-    
     @JsMethod(name = "store")
     public native Promise store(Credential credential);
-    
     
 }

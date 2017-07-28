@@ -23,9 +23,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="AudioListener", isNative = true)
 public class AudioListener{
-    
     @JsProperty(name="positionX")
     public native AudioParam getPositionX();
     
@@ -56,9 +55,7 @@ public class AudioListener{
     @JsMethod(name = "setOrientation")
     public native void setOrientation(float x, float y, float z, float xUp, float yUp, float zUp);
     
-    
     @JsMethod(name = "setPosition")
     public native void setPosition(float x, float y, float z);
-    
     
 }

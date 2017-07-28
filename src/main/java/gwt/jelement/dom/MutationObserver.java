@@ -24,23 +24,18 @@ import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="MutationObserver", isNative = true)
 public class MutationObserver{
-    
     @JsMethod(name = "disconnect")
     public native void disconnect();
-    
     
     @JsMethod(name = "observe")
     public native void observe(Node target);
     
-    
     @JsMethod(name = "observe")
     public native void observe(Node target, MutationObserverInit options);
     
-    
     @JsMethod(name = "takeRecords")
     public native MutationRecord[] takeRecords();
-    
     
 }

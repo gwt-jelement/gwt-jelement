@@ -26,9 +26,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="CSSKeyframesRule", isNative = true)
 public class CSSKeyframesRule extends CSSRule{
-    
     @JsConstructor
     public CSSKeyframesRule(){
         super();
@@ -46,13 +45,10 @@ public class CSSKeyframesRule extends CSSRule{
     @JsMethod(name = "appendRule")
     public native void appendRule(String rule);
     
-    
     @JsMethod(name = "deleteRule")
     public native void deleteRule(String select);
     
-    
     @JsMethod(name = "findRule")
     public native CSSKeyframeRule findRule(String select);
-    
     
 }

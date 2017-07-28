@@ -26,9 +26,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="CSSTransformValue", isNative = true)
 public class CSSTransformValue extends CSSStyleValue{
-    
     @JsConstructor
     public CSSTransformValue(){
         super();
@@ -47,6 +46,5 @@ public class CSSTransformValue extends CSSStyleValue{
     
     @JsMethod(name = "toMatrix")
     public native DOMMatrix toMatrix();
-    
     
 }

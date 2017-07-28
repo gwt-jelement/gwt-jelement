@@ -28,9 +28,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="SVGGraphicsElement", isNative = true)
 public class SVGGraphicsElement extends SVGElement{
-    
     @JsConstructor
     public SVGGraphicsElement(){
         super();
@@ -54,13 +53,10 @@ public class SVGGraphicsElement extends SVGElement{
     @JsMethod(name = "getBBox")
     public native SVGRect getBBox();
     
-    
     @JsMethod(name = "getCTM")
     public native SVGMatrix getCTM();
     
-    
     @JsMethod(name = "getScreenCTM")
     public native SVGMatrix getScreenCTM();
-    
     
 }

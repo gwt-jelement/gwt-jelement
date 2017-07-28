@@ -23,9 +23,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="RadioNodeList", isNative = true)
 public class RadioNodeList extends NodeList{
-    
     @JsConstructor
     public RadioNodeList(){
         super();
@@ -36,6 +35,5 @@ public class RadioNodeList extends NodeList{
     
     @JsProperty(name="value")
     public native void setValue(String value);
-    
     
 }

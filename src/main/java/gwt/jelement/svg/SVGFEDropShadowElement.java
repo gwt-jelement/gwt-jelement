@@ -27,9 +27,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="SVGFEDropShadowElement", isNative = true)
 public class SVGFEDropShadowElement extends SVGElement{
-    
     @JsConstructor
     public SVGFEDropShadowElement(){
         super();
@@ -67,6 +66,5 @@ public class SVGFEDropShadowElement extends SVGElement{
     
     @JsMethod(name = "setStdDeviation")
     public native void setStdDeviation(float stdDeviationX, float stdDeviationY);
-    
     
 }

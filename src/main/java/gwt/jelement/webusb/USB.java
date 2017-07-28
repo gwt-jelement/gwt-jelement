@@ -28,9 +28,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="USB", isNative = true)
 public class USB extends EventTarget{
-    
     @JsProperty(name="onconnect")
     private EventHandlerNonNull onconnect;
     
@@ -65,9 +64,7 @@ public class USB extends EventTarget{
     @JsMethod(name = "getDevices")
     public native Promise<USBDevice[]> getDevices();
     
-    
     @JsMethod(name = "requestDevice")
     public native Promise<USBDevice[]> requestDevice(USBDeviceRequestOptions options);
-    
     
 }

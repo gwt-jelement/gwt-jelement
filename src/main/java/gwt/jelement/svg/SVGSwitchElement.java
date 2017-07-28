@@ -22,13 +22,11 @@ import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="SVGSwitchElement", isNative = true)
 public class SVGSwitchElement extends SVGGraphicsElement{
-    
     @JsConstructor
     public SVGSwitchElement(){
         super();
     }
-    
     
 }

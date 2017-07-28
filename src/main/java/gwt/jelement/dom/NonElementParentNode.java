@@ -22,11 +22,9 @@ import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="NonElementParentNode", isNative = true)
 public class NonElementParentNode{
-    
     @JsMethod(name = "getElementById")
     public native <T extends Element> T getElementById(String elementId);
-    
     
 }

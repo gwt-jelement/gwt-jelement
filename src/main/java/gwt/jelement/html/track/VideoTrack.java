@@ -22,9 +22,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="VideoTrack", isNative = true)
 public class VideoTrack{
-    
     @JsProperty(name="id")
     public native String getId();
     
@@ -45,6 +44,5 @@ public class VideoTrack{
     
     @JsProperty(name="sourceBuffer")
     public native SourceBuffer getSourceBuffer();
-    
     
 }

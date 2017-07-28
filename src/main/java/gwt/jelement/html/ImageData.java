@@ -16,10 +16,10 @@
  */
 package gwt.jelement.html;
 
+import gwt.jelement.core.Float32Array;
+import gwt.jelement.core.Uint16Array;
+import gwt.jelement.core.Uint8ClampedArray;
 import gwt.jelement.html.ImageDataColorSettings;
-import elemental2.core.Float32Array;
-import elemental2.core.Uint16Array;
-import elemental2.core.Uint8ClampedArray;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
@@ -27,9 +27,8 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 import jsinterop.base.Js;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="ImageData", isNative = true)
 public class ImageData{
-    
     @JsType(isNative = true, name = "?", namespace = JsPackage.GLOBAL)
     public interface ImageDataArray {
         @JsOverlay
@@ -98,6 +97,5 @@ public class ImageData{
     
     @JsMethod(name = "getColorSettings")
     public native ImageDataColorSettings getColorSettings();
-    
     
 }

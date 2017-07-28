@@ -25,9 +25,8 @@ import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="ExtendableEvent", isNative = true)
 public class ExtendableEvent extends Event{
-    
     @JsConstructor
     public ExtendableEvent(String type){
         super((String) null);
@@ -40,6 +39,5 @@ public class ExtendableEvent extends Event{
     
     @JsMethod(name = "waitUntil")
     public native void waitUntil(Promise<Object> f);
-    
     
 }

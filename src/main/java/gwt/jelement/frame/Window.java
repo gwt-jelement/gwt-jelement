@@ -17,6 +17,7 @@
 package gwt.jelement.frame;
 
 import gwt.jelement.cachestorage.CacheStorage;
+import gwt.jelement.core.CallbackFunction;
 import gwt.jelement.crypto.Crypto;
 import gwt.jelement.css.CSSRuleList;
 import gwt.jelement.css.CSSStyleDeclaration;
@@ -62,7 +63,6 @@ import gwt.jelement.html.custom.CustomElementRegistry;
 import gwt.jelement.imagebitmap.ImageBitmap;
 import gwt.jelement.imagebitmap.ImageBitmapOptions;
 import gwt.jelement.indexeddb.IDBFactory;
-import gwt.jelement.jelement.Function;
 import gwt.jelement.loader.appcache.ApplicationCache;
 import gwt.jelement.mediastream.MediaStream;
 import gwt.jelement.offscreencanvas.OffscreenCanvas;
@@ -88,11 +88,10 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="Window", isNative = true)
 public class Window extends EventTarget{
-    public static int TEMPORARY;
-    public static int PERSISTENT;
-    
+    public static short TEMPORARY;
+    public static short PERSISTENT;
     
     @JsProperty(name="onorientationchange")
     private EventHandlerNonNull onorientationchange;
@@ -1711,461 +1710,334 @@ public class Window extends EventTarget{
     @JsMethod(name = "alert")
     public native void alert();
     
-    
     @JsMethod(name = "alert")
     public native void alert(String message);
-    
     
     @JsMethod(name = "atob")
     public native String atob(String atob);
     
-    
     @JsMethod(name = "blur")
     public native void blur();
-    
     
     @JsMethod(name = "btoa")
     public native String btoa(String btoa);
     
-    
     @JsMethod(name = "cancelAnimationFrame")
     public native void cancelAnimationFrame(double handle);
-    
     
     @JsMethod(name = "cancelIdleCallback")
     public native void cancelIdleCallback(double handle);
     
-    
     @JsMethod(name = "captureEvents")
     public native void captureEvents();
-    
     
     @JsMethod(name = "clearInterval")
     public native void clearInterval();
     
-    
     @JsMethod(name = "clearInterval")
     public native void clearInterval(double handle);
-    
     
     @JsMethod(name = "clearTimeout")
     public native void clearTimeout();
     
-    
     @JsMethod(name = "clearTimeout")
     public native void clearTimeout(double handle);
-    
     
     @JsMethod(name = "close")
     public native void close();
     
-    
     @JsMethod(name = "confirm")
     public native boolean confirm();
-    
     
     @JsMethod(name = "confirm")
     public native boolean confirm(String message);
     
-    
     @JsMethod(name = "createImageBitmap")
     public native Promise createImageBitmap(HTMLImageElement imageBitmap);
-    
     
     @JsMethod(name = "createImageBitmap")
     public native Promise createImageBitmap(SVGImageElement imageBitmap);
     
-    
     @JsMethod(name = "createImageBitmap")
     public native Promise createImageBitmap(HTMLVideoElement imageBitmap);
-    
     
     @JsMethod(name = "createImageBitmap")
     public native Promise createImageBitmap(HTMLCanvasElement imageBitmap);
     
-    
     @JsMethod(name = "createImageBitmap")
     public native Promise createImageBitmap(Blob imageBitmap);
-    
     
     @JsMethod(name = "createImageBitmap")
     public native Promise createImageBitmap(ImageData imageBitmap);
     
-    
     @JsMethod(name = "createImageBitmap")
     public native Promise createImageBitmap(ImageBitmap imageBitmap);
-    
     
     @JsMethod(name = "createImageBitmap")
     public native Promise createImageBitmap(OffscreenCanvas imageBitmap);
     
-    
     @JsMethod(name = "createImageBitmap")
     public native Promise createImageBitmap(HTMLImageElement imageBitmap, ImageBitmapOptions options);
-    
     
     @JsMethod(name = "createImageBitmap")
     public native Promise createImageBitmap(SVGImageElement imageBitmap, ImageBitmapOptions options);
     
-    
     @JsMethod(name = "createImageBitmap")
     public native Promise createImageBitmap(HTMLVideoElement imageBitmap, ImageBitmapOptions options);
-    
     
     @JsMethod(name = "createImageBitmap")
     public native Promise createImageBitmap(HTMLCanvasElement imageBitmap, ImageBitmapOptions options);
     
-    
     @JsMethod(name = "createImageBitmap")
     public native Promise createImageBitmap(Blob imageBitmap, ImageBitmapOptions options);
-    
     
     @JsMethod(name = "createImageBitmap")
     public native Promise createImageBitmap(ImageData imageBitmap, ImageBitmapOptions options);
     
-    
     @JsMethod(name = "createImageBitmap")
     public native Promise createImageBitmap(ImageBitmap imageBitmap, ImageBitmapOptions options);
-    
     
     @JsMethod(name = "createImageBitmap")
     public native Promise createImageBitmap(OffscreenCanvas imageBitmap, ImageBitmapOptions options);
     
-    
     @JsMethod(name = "createImageBitmap")
     public native Promise createImageBitmap(HTMLImageElement imageBitmap, double sx, double sy, double sw, double sh);
-    
     
     @JsMethod(name = "createImageBitmap")
     public native Promise createImageBitmap(SVGImageElement imageBitmap, double sx, double sy, double sw, double sh);
     
-    
     @JsMethod(name = "createImageBitmap")
     public native Promise createImageBitmap(HTMLVideoElement imageBitmap, double sx, double sy, double sw, double sh);
-    
     
     @JsMethod(name = "createImageBitmap")
     public native Promise createImageBitmap(HTMLCanvasElement imageBitmap, double sx, double sy, double sw, double sh);
     
-    
     @JsMethod(name = "createImageBitmap")
     public native Promise createImageBitmap(Blob imageBitmap, double sx, double sy, double sw, double sh);
-    
     
     @JsMethod(name = "createImageBitmap")
     public native Promise createImageBitmap(ImageData imageBitmap, double sx, double sy, double sw, double sh);
     
-    
     @JsMethod(name = "createImageBitmap")
     public native Promise createImageBitmap(ImageBitmap imageBitmap, double sx, double sy, double sw, double sh);
-    
     
     @JsMethod(name = "createImageBitmap")
     public native Promise createImageBitmap(OffscreenCanvas imageBitmap, double sx, double sy, double sw, double sh);
     
-    
     @JsMethod(name = "createImageBitmap")
     public native Promise createImageBitmap(HTMLImageElement imageBitmap, double sx, double sy, double sw, double sh, ImageBitmapOptions options);
-    
     
     @JsMethod(name = "createImageBitmap")
     public native Promise createImageBitmap(SVGImageElement imageBitmap, double sx, double sy, double sw, double sh, ImageBitmapOptions options);
     
-    
     @JsMethod(name = "createImageBitmap")
     public native Promise createImageBitmap(HTMLVideoElement imageBitmap, double sx, double sy, double sw, double sh, ImageBitmapOptions options);
-    
     
     @JsMethod(name = "createImageBitmap")
     public native Promise createImageBitmap(HTMLCanvasElement imageBitmap, double sx, double sy, double sw, double sh, ImageBitmapOptions options);
     
-    
     @JsMethod(name = "createImageBitmap")
     public native Promise createImageBitmap(Blob imageBitmap, double sx, double sy, double sw, double sh, ImageBitmapOptions options);
-    
     
     @JsMethod(name = "createImageBitmap")
     public native Promise createImageBitmap(ImageData imageBitmap, double sx, double sy, double sw, double sh, ImageBitmapOptions options);
     
-    
     @JsMethod(name = "createImageBitmap")
     public native Promise createImageBitmap(ImageBitmap imageBitmap, double sx, double sy, double sw, double sh, ImageBitmapOptions options);
-    
     
     @JsMethod(name = "createImageBitmap")
     public native Promise createImageBitmap(OffscreenCanvas imageBitmap, double sx, double sy, double sw, double sh, ImageBitmapOptions options);
     
-    
     @JsMethod(name = "fetch")
     public native Promise<Response> fetch(Request input);
-    
     
     @JsMethod(name = "fetch")
     public native Promise<Response> fetch(String input);
     
-    
     @JsMethod(name = "fetch")
     public native Promise<Response> fetch(Request input, Object init);
-    
     
     @JsMethod(name = "fetch")
     public native Promise<Response> fetch(String input, Object init);
     
-    
     @JsMethod(name = "find")
     public native boolean find();
-    
     
     @JsMethod(name = "find")
     public native boolean find(String string);
     
-    
     @JsMethod(name = "find")
     public native boolean find(String string, boolean caseSensitive);
-    
     
     @JsMethod(name = "find")
     public native boolean find(String string, boolean caseSensitive, boolean backwards);
     
-    
     @JsMethod(name = "find")
     public native boolean find(String string, boolean caseSensitive, boolean backwards, boolean wrap);
-    
     
     @JsMethod(name = "find")
     public native boolean find(String string, boolean caseSensitive, boolean backwards, boolean wrap, boolean wholeWord);
     
-    
     @JsMethod(name = "find")
     public native boolean find(String string, boolean caseSensitive, boolean backwards, boolean wrap, boolean wholeWord, boolean searchInFrames);
-    
     
     @JsMethod(name = "find")
     public native boolean find(String string, boolean caseSensitive, boolean backwards, boolean wrap, boolean wholeWord, boolean searchInFrames, boolean showDialog);
     
-    
     @JsMethod(name = "focus")
     public native void focus();
-    
     
     @JsMethod(name = "getComputedStyle")
     public native CSSStyleDeclaration getComputedStyle(Element elt);
     
-    
     @JsMethod(name = "getComputedStyle")
     public native CSSStyleDeclaration getComputedStyle(Element elt, String pseudoElt);
-    
     
     @JsMethod(name = "getComputedStyleMap")
     public native StylePropertyMapReadonly getComputedStyleMap(Element element);
     
-    
     @JsMethod(name = "getComputedStyleMap")
     public native StylePropertyMapReadonly getComputedStyleMap(Element element, String pseudoElement);
-    
     
     @JsMethod(name = "getMatchedCSSRules")
     public native CSSRuleList getMatchedCSSRules();
     
-    
     @JsMethod(name = "getMatchedCSSRules")
     public native CSSRuleList getMatchedCSSRules(Element element);
-    
     
     @JsMethod(name = "getMatchedCSSRules")
     public native CSSRuleList getMatchedCSSRules(Element element, String pseudoElement);
     
-    
     @JsMethod(name = "getSelection")
     public native Selection getSelection();
-    
     
     @JsMethod(name = "matchMedia")
     public native MediaQueryList matchMedia(String query);
     
-    
     @JsMethod(name = "moveBy")
     public native void moveBy(double x, double y);
-    
     
     @JsMethod(name = "moveTo")
     public native void moveTo(double x, double y);
     
-    
     @JsMethod(name = "open")
     public native Window open(String url, String target);
-    
     
     @JsMethod(name = "open")
     public native Window open(String url, String target, String features);
     
-    
     @JsMethod(name = "openDatabase")
     public native Database openDatabase(String name, String version, String displayName, double estimatedSize);
-    
     
     @JsMethod(name = "openDatabase")
     public native Database openDatabase(String name, String version, String displayName, double estimatedSize, DatabaseCallback creationCallback);
     
-    
     @JsMethod(name = "postMessage")
     public native void postMessage(Object message, String targetOrigin);
-    
     
     @JsMethod(name = "postMessage")
     public native void postMessage(Object message, String targetOrigin, MessagePort[] transfer);
     
-    
     @JsMethod(name = "print")
     public native void print();
-    
     
     @JsMethod(name = "prompt")
     public native String prompt();
     
-    
     @JsMethod(name = "prompt")
     public native String prompt(String message);
-    
     
     @JsMethod(name = "prompt")
     public native String prompt(String message, String defaultValue);
     
-    
     @JsMethod(name = "releaseEvents")
     public native void releaseEvents();
-    
     
     @JsMethod(name = "requestAnimationFrame")
     public native double requestAnimationFrame(FrameRequestCallback callback);
     
-    
     @JsMethod(name = "requestIdleCallback")
     public native double requestIdleCallback(IdleRequestCallback callback);
-    
     
     @JsMethod(name = "requestIdleCallback")
     public native double requestIdleCallback(IdleRequestCallback callback, IdleRequestOptions options);
     
-    
     @JsMethod(name = "resizeBy")
     public native void resizeBy(double x, double y);
-    
     
     @JsMethod(name = "resizeTo")
     public native void resizeTo(double x, double y);
     
-    
     @JsMethod(name = "scroll")
     public native void scroll();
-    
     
     @JsMethod(name = "scroll")
     public native void scroll(ScrollToOptions options);
     
-    
     @JsMethod(name = "scroll")
     public native void scroll(double x, double y);
-    
     
     @JsMethod(name = "scrollBy")
     public native void scrollBy();
     
-    
     @JsMethod(name = "scrollBy")
     public native void scrollBy(ScrollToOptions options);
-    
     
     @JsMethod(name = "scrollBy")
     public native void scrollBy(double x, double y);
     
-    
     @JsMethod(name = "scrollTo")
     public native void scrollTo();
-    
     
     @JsMethod(name = "scrollTo")
     public native void scrollTo(ScrollToOptions options);
     
-    
     @JsMethod(name = "scrollTo")
     public native void scrollTo(double x, double y);
     
-    
     @JsMethod(name = "setInterval")
-    public native double setInterval(Function handler);
-    
+    public native double setInterval(CallbackFunction handler);
     
     @JsMethod(name = "setInterval")
     public native double setInterval(String handler);
     
-    
     @JsMethod(name = "setInterval")
-    public native double setInterval(Function handler, double timeout);
-    
-    
-    @JsMethod(name = "setInterval")
-    public native double setInterval(String handler, double timeout);
-    
-    
-    @JsMethod(name = "setInterval")
-    public native double setInterval(Function handler, double timeout, Object... arguments);
-    
+    public native double setInterval(CallbackFunction handler, double timeout, Object... arguments);
     
     @JsMethod(name = "setInterval")
     public native double setInterval(String handler, double timeout, Object... arguments);
     
-    
     @JsMethod(name = "setTimeout")
-    public native double setTimeout(Function handler);
-    
+    public native double setTimeout(CallbackFunction handler);
     
     @JsMethod(name = "setTimeout")
     public native double setTimeout(String handler);
     
-    
     @JsMethod(name = "setTimeout")
-    public native double setTimeout(Function handler, double timeout);
-    
-    
-    @JsMethod(name = "setTimeout")
-    public native double setTimeout(String handler, double timeout);
-    
-    
-    @JsMethod(name = "setTimeout")
-    public native double setTimeout(Function handler, double timeout, Object... arguments);
-    
+    public native double setTimeout(CallbackFunction handler, double timeout, Object... arguments);
     
     @JsMethod(name = "setTimeout")
     public native double setTimeout(String handler, double timeout, Object... arguments);
     
-    
     @JsMethod(name = "stop")
     public native void stop();
-    
     
     @JsMethod(name = "webkitCancelAnimationFrame")
     public native void webkitCancelAnimationFrame(double id);
     
-    
     @JsMethod(name = "webkitRequestAnimationFrame")
     public native double webkitRequestAnimationFrame(FrameRequestCallback callback);
-    
     
     @JsMethod(name = "webkitRequestFileSystem")
     public native void webkitRequestFileSystem(short type, double size, FileSystemCallback successCallback);
     
-    
     @JsMethod(name = "webkitRequestFileSystem")
     public native void webkitRequestFileSystem(short type, double size, FileSystemCallback successCallback, ErrorCallback errorCallback);
-    
     
     @JsMethod(name = "webkitResolveLocalFileSystemURL")
     public native void webkitResolveLocalFileSystemURL(String url, EntryCallback successCallback);
     
-    
     @JsMethod(name = "webkitResolveLocalFileSystemURL")
     public native void webkitResolveLocalFileSystemURL(String url, EntryCallback successCallback, ErrorCallback errorCallback);
-    
     
 }
