@@ -25,9 +25,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="HTMLDocument", isNative = true)
 public class HTMLDocument extends Document{
-    
     @JsConstructor
     public HTMLDocument(){
         super();
@@ -69,13 +68,10 @@ public class HTMLDocument extends Document{
     @JsMethod(name = "captureEvents")
     public native void captureEvents();
     
-    
     @JsMethod(name = "clear")
     public native void clear();
     
-    
     @JsMethod(name = "releaseEvents")
     public native void releaseEvents();
-    
     
 }

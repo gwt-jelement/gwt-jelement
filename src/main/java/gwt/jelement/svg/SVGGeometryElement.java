@@ -26,9 +26,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="SVGGeometryElement", isNative = true)
 public class SVGGeometryElement extends SVGGraphicsElement{
-    
     @JsConstructor
     public SVGGeometryElement(){
         super();
@@ -40,17 +39,13 @@ public class SVGGeometryElement extends SVGGraphicsElement{
     @JsMethod(name = "getPointAtLength")
     public native SVGPoint getPointAtLength(float distance);
     
-    
     @JsMethod(name = "getTotalLength")
     public native float getTotalLength();
-    
     
     @JsMethod(name = "isPointInFill")
     public native boolean isPointInFill(SVGPoint point);
     
-    
     @JsMethod(name = "isPointInStroke")
     public native boolean isPointInStroke(SVGPoint point);
-    
     
 }

@@ -23,15 +23,13 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="MediaKeysPolicy", isNative = true)
 public class MediaKeysPolicy{
-    
     @JsConstructor
     public MediaKeysPolicy(MediaKeysPolicyInit init){
     }
     
     @JsProperty(name="minHdcpVersion")
     public native String getMinHdcpVersion();
-    
     
 }

@@ -21,9 +21,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="URLUtilsReadOnly", isNative = true)
 public class URLUtilsReadOnly{
-    
     @JsProperty(name="href")
     public native String getHref();
     
@@ -50,6 +49,5 @@ public class URLUtilsReadOnly{
     
     @JsProperty(name="hash")
     public native String getHash();
-    
     
 }

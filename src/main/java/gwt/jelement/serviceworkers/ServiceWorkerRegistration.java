@@ -34,9 +34,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="ServiceWorkerRegistration", isNative = true)
 public class ServiceWorkerRegistration extends EventTarget{
-    
     @JsProperty(name="onupdatefound")
     private EventHandlerNonNull onupdatefound;
     
@@ -82,25 +81,19 @@ public class ServiceWorkerRegistration extends EventTarget{
     @JsMethod(name = "getNotifications")
     public native Promise<Notification[]> getNotifications();
     
-    
     @JsMethod(name = "getNotifications")
     public native Promise<Notification[]> getNotifications(GetNotificationOptions filter);
-    
     
     @JsMethod(name = "showNotification")
     public native Promise showNotification(String title);
     
-    
     @JsMethod(name = "showNotification")
     public native Promise showNotification(String title, NotificationOptions options);
-    
     
     @JsMethod(name = "unregister")
     public native Promise<Boolean> unregister();
     
-    
     @JsMethod(name = "update")
     public native Promise<Void> update();
-    
     
 }

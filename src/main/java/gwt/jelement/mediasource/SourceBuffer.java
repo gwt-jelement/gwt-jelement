@@ -16,6 +16,8 @@
  */
 package gwt.jelement.mediasource;
 
+import gwt.jelement.core.ArrayBuffer;
+import gwt.jelement.core.ArrayBufferView;
 import gwt.jelement.events.EventHandlerNonNull;
 import gwt.jelement.events.EventTarget;
 import gwt.jelement.html.TimeRanges;
@@ -23,8 +25,6 @@ import gwt.jelement.html.track.AudioTrackList;
 import gwt.jelement.html.track.VideoTrackList;
 import gwt.jelement.mediasource.AppendMode;
 import gwt.jelement.mediasource.TrackDefaultList;
-import elemental2.core.ArrayBuffer;
-import elemental2.core.ArrayBufferView;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
@@ -32,12 +32,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="SourceBuffer", isNative = true)
 public class SourceBuffer extends EventTarget{
-    
-    @JsProperty(name="mode")
-    private String mode;
-    
     @JsProperty(name="onupdatestart")
     private EventHandlerNonNull onupdatestart;
     
@@ -53,19 +49,12 @@ public class SourceBuffer extends EventTarget{
     @JsProperty(name="onabort")
     private EventHandlerNonNull onabort;
     
+    @JsProperty(name="mode")
+    private String mode;
+    
     @JsConstructor
     public SourceBuffer(){
         super();
-    }
-    
-    @JsOverlay
-    public final AppendMode getMode(){
-       return AppendMode.of(mode);
-    }
-    
-    @JsOverlay
-    public final void setMode(AppendMode mode){
-       this.mode = mode.getInternalValue();
     }
     
     @JsProperty(name="updating")
@@ -154,20 +143,26 @@ public class SourceBuffer extends EventTarget{
     @JsProperty(name="trackDefaults")
     public native void setTrackDefaults(TrackDefaultList trackDefaults);
     
+    @JsOverlay
+    public final AppendMode getMode(){
+       return AppendMode.of(mode);
+    }
+    
+    @JsOverlay
+    public final void setMode(AppendMode mode){
+       this.mode = mode.getInternalValue();
+    }
+    
     @JsMethod(name = "abort")
     public native void abort();
-    
     
     @JsMethod(name = "appendBuffer")
     public native void appendBuffer(ArrayBuffer data);
     
-    
     @JsMethod(name = "appendBuffer")
     public native void appendBuffer(ArrayBufferView data);
     
-    
     @JsMethod(name = "remove")
     public native void remove(double start, double end);
-    
     
 }

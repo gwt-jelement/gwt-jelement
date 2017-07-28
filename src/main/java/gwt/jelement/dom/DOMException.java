@@ -23,34 +23,33 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="DOMException", isNative = true)
 public class DOMException{
-    public static int INDEX_SIZE_ERR;
-    public static int DOMSTRING_SIZE_ERR;
-    public static int HIERARCHY_REQUEST_ERR;
-    public static int WRONG_DOCUMENT_ERR;
-    public static int INVALID_CHARACTER_ERR;
-    public static int NO_DATA_ALLOWED_ERR;
-    public static int NO_MODIFICATION_ALLOWED_ERR;
-    public static int NOT_FOUND_ERR;
-    public static int NOT_SUPPORTED_ERR;
-    public static int INUSE_ATTRIBUTE_ERR;
-    public static int INVALID_STATE_ERR;
-    public static int SYNTAX_ERR;
-    public static int INVALID_MODIFICATION_ERR;
-    public static int NAMESPACE_ERR;
-    public static int INVALID_ACCESS_ERR;
-    public static int VALIDATION_ERR;
-    public static int TYPE_MISMATCH_ERR;
-    public static int SECURITY_ERR;
-    public static int NETWORK_ERR;
-    public static int ABORT_ERR;
-    public static int URL_MISMATCH_ERR;
-    public static int QUOTA_EXCEEDED_ERR;
-    public static int TIMEOUT_ERR;
-    public static int INVALID_NODE_TYPE_ERR;
-    public static int DATA_CLONE_ERR;
-    
+    public static short INDEX_SIZE_ERR;
+    public static short DOMSTRING_SIZE_ERR;
+    public static short HIERARCHY_REQUEST_ERR;
+    public static short WRONG_DOCUMENT_ERR;
+    public static short INVALID_CHARACTER_ERR;
+    public static short NO_DATA_ALLOWED_ERR;
+    public static short NO_MODIFICATION_ALLOWED_ERR;
+    public static short NOT_FOUND_ERR;
+    public static short NOT_SUPPORTED_ERR;
+    public static short INUSE_ATTRIBUTE_ERR;
+    public static short INVALID_STATE_ERR;
+    public static short SYNTAX_ERR;
+    public static short INVALID_MODIFICATION_ERR;
+    public static short NAMESPACE_ERR;
+    public static short INVALID_ACCESS_ERR;
+    public static short VALIDATION_ERR;
+    public static short TYPE_MISMATCH_ERR;
+    public static short SECURITY_ERR;
+    public static short NETWORK_ERR;
+    public static short ABORT_ERR;
+    public static short URL_MISMATCH_ERR;
+    public static short QUOTA_EXCEEDED_ERR;
+    public static short TIMEOUT_ERR;
+    public static short INVALID_NODE_TYPE_ERR;
+    public static short DATA_CLONE_ERR;
     
     @JsConstructor
     public DOMException(){
@@ -75,6 +74,5 @@ public class DOMException{
     
     @JsMethod(name = "toString")
     public native String toString();
-    
     
 }

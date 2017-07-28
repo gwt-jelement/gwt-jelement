@@ -23,9 +23,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="HTMLParamElement", isNative = true)
 public class HTMLParamElement extends HTMLElement{
-    
     @JsConstructor
     public HTMLParamElement(){
         super();
@@ -54,6 +53,5 @@ public class HTMLParamElement extends HTMLElement{
     
     @JsProperty(name="valueType")
     public native void setValueType(String valueType);
-    
     
 }

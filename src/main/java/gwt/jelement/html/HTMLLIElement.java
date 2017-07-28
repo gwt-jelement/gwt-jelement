@@ -23,9 +23,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="HTMLLIElement", isNative = true)
 public class HTMLLIElement extends HTMLElement{
-    
     @JsConstructor
     public HTMLLIElement(){
         super();
@@ -42,6 +41,5 @@ public class HTMLLIElement extends HTMLElement{
     
     @JsProperty(name="type")
     public native void setType(String type);
-    
     
 }

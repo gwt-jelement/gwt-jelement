@@ -26,9 +26,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="DeviceMotionEvent", isNative = true)
 public class DeviceMotionEvent extends Event{
-    
     @JsConstructor
     public DeviceMotionEvent(String type){
         super((String) null);
@@ -50,6 +49,5 @@ public class DeviceMotionEvent extends Event{
     
     @JsProperty(name="interval")
     public native double getInterval();
-    
     
 }

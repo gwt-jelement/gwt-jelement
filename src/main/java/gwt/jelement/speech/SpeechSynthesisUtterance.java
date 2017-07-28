@@ -25,9 +25,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="SpeechSynthesisUtterance", isNative = true)
 public class SpeechSynthesisUtterance extends EventTarget{
-    
     @JsProperty(name="onstart")
     private EventHandlerNonNull onstart;
     
@@ -164,6 +163,5 @@ public class SpeechSynthesisUtterance extends EventTarget{
     public final void setOnBoundary(EventHandlerNonNull onboundary){
         this.onboundary = onboundary;
     }
-    
     
 }

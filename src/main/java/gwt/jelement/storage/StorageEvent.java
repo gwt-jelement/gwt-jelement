@@ -26,9 +26,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="StorageEvent", isNative = true)
 public class StorageEvent extends Event{
-    
     @JsConstructor
     public StorageEvent(String type){
         super((String) null);
@@ -57,37 +56,28 @@ public class StorageEvent extends Event{
     @JsMethod(name = "initStorageEvent")
     public native void initStorageEvent();
     
-    
     @JsMethod(name = "initStorageEvent")
     public native void initStorageEvent(String typeArg);
-    
     
     @JsMethod(name = "initStorageEvent")
     public native void initStorageEvent(String typeArg, boolean canBubbleArg);
     
-    
     @JsMethod(name = "initStorageEvent")
     public native void initStorageEvent(String typeArg, boolean canBubbleArg, boolean cancelableArg);
-    
     
     @JsMethod(name = "initStorageEvent")
     public native void initStorageEvent(String typeArg, boolean canBubbleArg, boolean cancelableArg, String keyArg);
     
-    
     @JsMethod(name = "initStorageEvent")
     public native void initStorageEvent(String typeArg, boolean canBubbleArg, boolean cancelableArg, String keyArg, String oldValueArg);
-    
     
     @JsMethod(name = "initStorageEvent")
     public native void initStorageEvent(String typeArg, boolean canBubbleArg, boolean cancelableArg, String keyArg, String oldValueArg, String newValueArg);
     
-    
     @JsMethod(name = "initStorageEvent")
     public native void initStorageEvent(String typeArg, boolean canBubbleArg, boolean cancelableArg, String keyArg, String oldValueArg, String newValueArg, String urlArg);
     
-    
     @JsMethod(name = "initStorageEvent")
     public native void initStorageEvent(String typeArg, boolean canBubbleArg, boolean cancelableArg, String keyArg, String oldValueArg, String newValueArg, String urlArg, Storage storageAreaArg);
-    
     
 }

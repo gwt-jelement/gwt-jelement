@@ -24,9 +24,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="SVGPolygonElement", isNative = true)
 public class SVGPolygonElement extends SVGGeometryElement{
-    
     @JsConstructor
     public SVGPolygonElement(){
         super();
@@ -37,6 +36,5 @@ public class SVGPolygonElement extends SVGGeometryElement{
     
     @JsProperty(name="animatedPoints")
     public native SVGPointList getAnimatedPoints();
-    
     
 }

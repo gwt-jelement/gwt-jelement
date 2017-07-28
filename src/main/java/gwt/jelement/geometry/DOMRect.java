@@ -27,9 +27,8 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 import jsinterop.base.Js;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="DOMRect", isNative = true)
 public class DOMRect extends DOMRectReadOnly{
-    
     @JsConstructor
     public DOMRect(){
         super();
@@ -68,11 +67,9 @@ public class DOMRect extends DOMRectReadOnly{
     public native void setHeight(double height);
     
     @JsMethod(name = "fromRect")
-    public native DOMRect fromRect();
-    
+    public static native DOMRect fromRect();
     
     @JsMethod(name = "fromRect")
-    public native DOMRect fromRect(DOMRectInit other);
-    
+    public static native DOMRect fromRect(DOMRectInit other);
     
 }

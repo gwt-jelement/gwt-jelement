@@ -23,9 +23,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="Presentation", isNative = true)
 public class Presentation{
-    
     @JsProperty(name="defaultRequest")
     public native PresentationRequest getDefaultRequest();
     
@@ -34,6 +33,5 @@ public class Presentation{
     
     @JsProperty(name="receiver")
     public native PresentationReceiver getReceiver();
-    
     
 }

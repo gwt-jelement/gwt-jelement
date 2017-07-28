@@ -26,9 +26,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="ParentNode", isNative = true)
 public class ParentNode{
-    
     @JsProperty(name="children")
     public native HTMLCollection getChildren();
     
@@ -42,35 +41,21 @@ public class ParentNode{
     public native double getChildElementCount();
     
     @JsMethod(name = "append")
-    public native void append();
-    
-    
-    @JsMethod(name = "append")
     public native void append(Node... nodes);
-    
     
     @JsMethod(name = "append")
     public native void append(String... nodes);
     
-    
-    @JsMethod(name = "prepend")
-    public native void prepend();
-    
-    
     @JsMethod(name = "prepend")
     public native void prepend(Node... nodes);
-    
     
     @JsMethod(name = "prepend")
     public native void prepend(String... nodes);
     
-    
     @JsMethod(name = "querySelector")
     public native <T extends Element> T querySelector(String selectors);
     
-    
     @JsMethod(name = "querySelectorAll")
     public native NodeList querySelectorAll(String selectors);
-    
     
 }

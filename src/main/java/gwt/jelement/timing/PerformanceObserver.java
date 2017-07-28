@@ -22,15 +22,12 @@ import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="PerformanceObserver", isNative = true)
 public class PerformanceObserver{
-    
     @JsMethod(name = "disconnect")
     public native void disconnect();
     
-    
     @JsMethod(name = "observe")
     public native void observe(PerformanceObserverInit options);
-    
     
 }

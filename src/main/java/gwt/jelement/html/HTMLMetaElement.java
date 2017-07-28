@@ -23,9 +23,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="HTMLMetaElement", isNative = true)
 public class HTMLMetaElement extends HTMLElement{
-    
     @JsConstructor
     public HTMLMetaElement(){
         super();
@@ -54,6 +53,5 @@ public class HTMLMetaElement extends HTMLElement{
     
     @JsProperty(name="scheme")
     public native void setScheme(String scheme);
-    
     
 }

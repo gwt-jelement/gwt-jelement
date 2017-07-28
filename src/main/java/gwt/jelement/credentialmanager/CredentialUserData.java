@@ -21,14 +21,12 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="CredentialUserData", isNative = true)
 public class CredentialUserData{
-    
     @JsProperty(name="name")
     public native String getName();
     
     @JsProperty(name="iconURL")
     public native String getIconURL();
-    
     
 }

@@ -29,8 +29,10 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="MIDIPort", isNative = true)
 public class MIDIPort extends EventTarget{
+    @JsProperty(name="onstatechange")
+    private EventHandlerNonNull onstatechange;
     
     @JsProperty(name="connection")
     private String connection;
@@ -41,17 +43,9 @@ public class MIDIPort extends EventTarget{
     @JsProperty(name="type")
     private String type;
     
-    @JsProperty(name="onstatechange")
-    private EventHandlerNonNull onstatechange;
-    
     @JsConstructor
     public MIDIPort(){
         super();
-    }
-    
-    @JsOverlay
-    public final MIDIPortConnectionState getConnection(){
-       return MIDIPortConnectionState.of(connection);
     }
     
     @JsProperty(name="id")
@@ -62,16 +56,6 @@ public class MIDIPort extends EventTarget{
     
     @JsProperty(name="name")
     public native String getName();
-    
-    @JsOverlay
-    public final MIDIPortDeviceState getState(){
-       return MIDIPortDeviceState.of(state);
-    }
-    
-    @JsOverlay
-    public final MIDIPortType getType(){
-       return MIDIPortType.of(type);
-    }
     
     @JsProperty(name="version")
     public native String getVersion();
@@ -86,12 +70,25 @@ public class MIDIPort extends EventTarget{
         this.onstatechange = onstatechange;
     }
     
+    @JsOverlay
+    public final MIDIPortConnectionState getConnection(){
+       return MIDIPortConnectionState.of(connection);
+    }
+    
+    @JsOverlay
+    public final MIDIPortDeviceState getState(){
+       return MIDIPortDeviceState.of(state);
+    }
+    
+    @JsOverlay
+    public final MIDIPortType getType(){
+       return MIDIPortType.of(type);
+    }
+    
     @JsMethod(name = "close")
     public native Promise close();
     
-    
     @JsMethod(name = "open")
     public native Promise open();
-    
     
 }

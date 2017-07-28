@@ -27,17 +27,16 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="IDBRequest", isNative = true)
 public class IDBRequest extends EventTarget{
-    
-    @JsProperty(name="readyState")
-    private String readyState;
-    
     @JsProperty(name="onsuccess")
     private EventHandlerNonNull onsuccess;
     
     @JsProperty(name="onerror")
     private EventHandlerNonNull onerror;
+    
+    @JsProperty(name="readyState")
+    private String readyState;
     
     @JsConstructor
     public IDBRequest(){
@@ -55,11 +54,6 @@ public class IDBRequest extends EventTarget{
     
     @JsProperty(name="transaction")
     public native IDBTransaction getTransaction();
-    
-    @JsOverlay
-    public final IDBRequestReadyState getReadyState(){
-       return IDBRequestReadyState.of(readyState);
-    }
     
     @JsOverlay
     public final EventHandlerNonNull getOnSuccess(){
@@ -81,5 +75,9 @@ public class IDBRequest extends EventTarget{
         this.onerror = onerror;
     }
     
+    @JsOverlay
+    public final IDBRequestReadyState getReadyState(){
+       return IDBRequestReadyState.of(readyState);
+    }
     
 }

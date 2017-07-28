@@ -23,14 +23,12 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="RTCCertificate", isNative = true)
 public class RTCCertificate{
-    
     @JsProperty(name="expires")
     public native double getExpires();
     
     @JsMethod(name = "getFingerprints")
     public native RTCDtlsFingerprint[] getFingerprints();
-    
     
 }

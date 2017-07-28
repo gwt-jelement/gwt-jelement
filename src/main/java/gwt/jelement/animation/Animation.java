@@ -30,17 +30,16 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="Animation", isNative = true)
 public class Animation extends EventTarget{
-    
-    @JsProperty(name="playState")
-    private String playState;
-    
     @JsProperty(name="onfinish")
     private EventHandlerNonNull onfinish;
     
     @JsProperty(name="oncancel")
     private EventHandlerNonNull oncancel;
+    
+    @JsProperty(name="playState")
+    private String playState;
     
     @JsConstructor
     public Animation(){
@@ -74,11 +73,6 @@ public class Animation extends EventTarget{
     @JsProperty(name="playbackRate")
     public native void setPlaybackRate(double playbackRate);
     
-    @JsOverlay
-    public final AnimationPlayState getPlayState(){
-       return AnimationPlayState.of(playState);
-    }
-    
     @JsProperty(name="id")
     public native String getId();
     
@@ -111,24 +105,24 @@ public class Animation extends EventTarget{
     @JsProperty(name="ready")
     public native Promise<Animation> getReady();
     
+    @JsOverlay
+    public final AnimationPlayState getPlayState(){
+       return AnimationPlayState.of(playState);
+    }
+    
     @JsMethod(name = "cancel")
     public native void cancel();
-    
     
     @JsMethod(name = "finish")
     public native void finish();
     
-    
     @JsMethod(name = "pause")
     public native void pause();
-    
     
     @JsMethod(name = "play")
     public native void play();
     
-    
     @JsMethod(name = "reverse")
     public native void reverse();
-    
     
 }

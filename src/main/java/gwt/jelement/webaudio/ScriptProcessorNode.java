@@ -24,9 +24,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="ScriptProcessorNode", isNative = true)
 public class ScriptProcessorNode extends AudioNode{
-    
     @JsProperty(name="onaudioprocess")
     private EventHandlerNonNull onaudioprocess;
     
@@ -47,6 +46,5 @@ public class ScriptProcessorNode extends AudioNode{
     
     @JsProperty(name="bufferSize")
     public native double getBufferSize();
-    
     
 }

@@ -26,9 +26,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="DelayNode", isNative = true)
 public class DelayNode extends AudioNode{
-    
     @JsConstructor
     public DelayNode(BaseAudioContext context){
         super();
@@ -41,6 +40,5 @@ public class DelayNode extends AudioNode{
     
     @JsProperty(name="delayTime")
     public native AudioParam getDelayTime();
-    
     
 }

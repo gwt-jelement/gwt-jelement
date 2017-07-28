@@ -24,9 +24,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="HTMLFrameSetElement", isNative = true)
 public class HTMLFrameSetElement extends HTMLElement{
-    
     @JsProperty(name="onorientationchange")
     private EventHandlerNonNull onorientationchange;
     
@@ -238,6 +237,5 @@ public class HTMLFrameSetElement extends HTMLElement{
     public final void setOnUnload(EventHandlerNonNull onunload){
         this.onunload = onunload;
     }
-    
     
 }

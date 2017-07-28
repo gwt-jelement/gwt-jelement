@@ -31,9 +31,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="HTMLSelectElement", isNative = true)
 public class HTMLSelectElement extends HTMLElement{
-    
     @JsConstructor
     public HTMLSelectElement(){
         super();
@@ -120,49 +119,37 @@ public class HTMLSelectElement extends HTMLElement{
     @JsMethod(name = "add")
     public native void add(HTMLOptionElement element);
     
-    
     @JsMethod(name = "add")
     public native void add(HTMLOptGroupElement element);
-    
     
     @JsMethod(name = "add")
     public native void add(HTMLOptionElement element, HTMLElement before);
     
-    
     @JsMethod(name = "add")
     public native void add(HTMLOptionElement element, double before);
-    
     
     @JsMethod(name = "add")
     public native void add(HTMLOptGroupElement element, HTMLElement before);
     
-    
     @JsMethod(name = "add")
     public native void add(HTMLOptGroupElement element, double before);
-    
     
     @JsMethod(name = "checkValidity")
     public native boolean checkValidity();
     
-    
     @JsMethod(name = "namedItem")
     public native HTMLOptionElement namedItem(String name);
-    
     
     @JsMethod(name = "remove")
     public native void remove();
     
-    
     @JsMethod(name = "remove")
     public native void remove(double index);
-    
     
     @JsMethod(name = "reportValidity")
     public native boolean reportValidity();
     
-    
     @JsMethod(name = "setCustomValidity")
     public native void setCustomValidity(String error);
-    
     
 }

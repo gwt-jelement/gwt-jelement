@@ -21,18 +21,16 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="SVGZoomAndPan", isNative = true)
 public class SVGZoomAndPan{
-    public static int SVG_ZOOMANDPAN_UNKNOWN;
-    public static int SVG_ZOOMANDPAN_DISABLE;
-    public static int SVG_ZOOMANDPAN_MAGNIFY;
-    
+    public static short SVG_ZOOMANDPAN_UNKNOWN;
+    public static short SVG_ZOOMANDPAN_DISABLE;
+    public static short SVG_ZOOMANDPAN_MAGNIFY;
     
     @JsProperty(name="zoomAndPan")
     public native short getZoomAndPan();
     
     @JsProperty(name="zoomAndPan")
     public native void setZoomAndPan(short zoomAndPan);
-    
     
 }

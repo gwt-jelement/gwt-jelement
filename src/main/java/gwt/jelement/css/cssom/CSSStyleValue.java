@@ -21,15 +21,9 @@ import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="CSSStyleValue", isNative = true)
 public class CSSStyleValue{
-    
     @JsMethod(name = "parse")
-    public native Object parse(String property, String cssText);
-    
-    
-    @JsMethod(name = "toString")
-    public native String toString();
-    
+    public static native Object parse(String property, String cssText);
     
 }

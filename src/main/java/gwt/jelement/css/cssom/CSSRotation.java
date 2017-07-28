@@ -24,9 +24,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="CSSRotation", isNative = true)
 public class CSSRotation extends CSSTransformComponent{
-    
     @JsConstructor
     public CSSRotation(CSSNumericValue angleValue){
         super();
@@ -60,6 +59,5 @@ public class CSSRotation extends CSSTransformComponent{
     
     @JsProperty(name="z")
     public native void setZ(double z);
-    
     
 }

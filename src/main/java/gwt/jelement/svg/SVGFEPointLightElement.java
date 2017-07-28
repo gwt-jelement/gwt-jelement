@@ -24,9 +24,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="SVGFEPointLightElement", isNative = true)
 public class SVGFEPointLightElement extends SVGElement{
-    
     @JsConstructor
     public SVGFEPointLightElement(){
         super();
@@ -40,6 +39,5 @@ public class SVGFEPointLightElement extends SVGElement{
     
     @JsProperty(name="z")
     public native SVGAnimatedNumber getZ();
-    
     
 }

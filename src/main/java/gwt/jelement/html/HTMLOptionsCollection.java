@@ -28,16 +28,12 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 import jsinterop.base.Js;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="HTMLOptionsCollection", isNative = true)
 public class HTMLOptionsCollection extends HTMLCollection{
-    
     @JsConstructor
     public HTMLOptionsCollection(){
         super();
     }
-    
-    @JsProperty(name="length")
-    public native void setLength(double length);
     
     @JsProperty(name="selectedIndex")
     public native double getSelectedIndex();
@@ -45,32 +41,28 @@ public class HTMLOptionsCollection extends HTMLCollection{
     @JsProperty(name="selectedIndex")
     public native void setSelectedIndex(double selectedIndex);
     
+    @JsProperty(name="length")
+    public native void setLength(double length);
+    
     @JsMethod(name = "add")
     public native void add(HTMLOptionElement element);
-    
     
     @JsMethod(name = "add")
     public native void add(HTMLOptGroupElement element);
     
-    
     @JsMethod(name = "add")
     public native void add(HTMLOptionElement element, HTMLElement before);
-    
     
     @JsMethod(name = "add")
     public native void add(HTMLOptionElement element, double before);
     
-    
     @JsMethod(name = "add")
     public native void add(HTMLOptGroupElement element, HTMLElement before);
-    
     
     @JsMethod(name = "add")
     public native void add(HTMLOptGroupElement element, double before);
     
-    
     @JsMethod(name = "remove")
     public native void remove(double index);
-    
     
 }

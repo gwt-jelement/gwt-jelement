@@ -23,9 +23,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="TaskAttributionTiming", isNative = true)
 public class TaskAttributionTiming extends PerformanceEntry{
-    
     @JsConstructor
     public TaskAttributionTiming(){
         super();
@@ -42,6 +41,5 @@ public class TaskAttributionTiming extends PerformanceEntry{
     
     @JsProperty(name="containerName")
     public native String getContainerName();
-    
     
 }

@@ -23,135 +23,102 @@ import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="CSS", isNative = true)
 public class CSS{
-    
     @JsMethod(name = "Hz")
-    public native CSSUnitValue Hz(double value);
-    
+    public static native CSSUnitValue Hz(double value);
     
     @JsMethod(name = "ch")
-    public native CSSUnitValue ch(double value);
-    
+    public static native CSSUnitValue ch(double value);
     
     @JsMethod(name = "cm")
-    public native CSSUnitValue cm(double value);
-    
+    public static native CSSUnitValue cm(double value);
     
     @JsMethod(name = "deg")
-    public native CSSUnitValue deg(double value);
-    
+    public static native CSSUnitValue deg(double value);
     
     @JsMethod(name = "dpcm")
-    public native CSSUnitValue dpcm(double value);
-    
+    public static native CSSUnitValue dpcm(double value);
     
     @JsMethod(name = "dpi")
-    public native CSSUnitValue dpi(double value);
-    
+    public static native CSSUnitValue dpi(double value);
     
     @JsMethod(name = "dppx")
-    public native CSSUnitValue dppx(double value);
-    
+    public static native CSSUnitValue dppx(double value);
     
     @JsMethod(name = "em")
-    public native CSSUnitValue em(double value);
-    
+    public static native CSSUnitValue em(double value);
     
     @JsMethod(name = "escape")
-    public native String escape(String ident);
-    
+    public static native String escape(String ident);
     
     @JsMethod(name = "ex")
-    public native CSSUnitValue ex(double value);
-    
+    public static native CSSUnitValue ex(double value);
     
     @JsMethod(name = "fr")
-    public native CSSUnitValue fr(double value);
-    
+    public static native CSSUnitValue fr(double value);
     
     @JsMethod(name = "grad")
-    public native CSSUnitValue grad(double value);
-    
+    public static native CSSUnitValue grad(double value);
     
     @JsMethod(name = "in")
-    public native CSSUnitValue in(double value);
-    
+    public static native CSSUnitValue in(double value);
     
     @JsMethod(name = "kHz")
-    public native CSSUnitValue kHz(double value);
-    
+    public static native CSSUnitValue kHz(double value);
     
     @JsMethod(name = "mm")
-    public native CSSUnitValue mm(double value);
-    
+    public static native CSSUnitValue mm(double value);
     
     @JsMethod(name = "ms")
-    public native CSSUnitValue ms(double value);
-    
+    public static native CSSUnitValue ms(double value);
     
     @JsMethod(name = "number")
-    public native CSSUnitValue number(double value);
-    
+    public static native CSSUnitValue number(double value);
     
     @JsMethod(name = "pc")
-    public native CSSUnitValue pc(double value);
-    
+    public static native CSSUnitValue pc(double value);
     
     @JsMethod(name = "percent")
-    public native CSSUnitValue percent(double value);
-    
+    public static native CSSUnitValue percent(double value);
     
     @JsMethod(name = "pt")
-    public native CSSUnitValue pt(double value);
-    
+    public static native CSSUnitValue pt(double value);
     
     @JsMethod(name = "px")
-    public native CSSUnitValue px(double value);
-    
+    public static native CSSUnitValue px(double value);
     
     @JsMethod(name = "rad")
-    public native CSSUnitValue rad(double value);
-    
+    public static native CSSUnitValue rad(double value);
     
     @JsMethod(name = "registerProperty")
-    public native void registerProperty(PropertyDescriptor descriptor);
-    
+    public static native void registerProperty(PropertyDescriptor descriptor);
     
     @JsMethod(name = "rem")
-    public native CSSUnitValue rem(double value);
-    
+    public static native CSSUnitValue rem(double value);
     
     @JsMethod(name = "s")
-    public native CSSUnitValue s(double value);
-    
-    
-    @JsMethod(name = "supports")
-    public native boolean supports(String conditionText);
-    
+    public static native CSSUnitValue s(double value);
     
     @JsMethod(name = "supports")
-    public native boolean supports(String property, String value);
+    public static native boolean supports(String conditionText);
     
+    @JsMethod(name = "supports")
+    public static native boolean supports(String property, String value);
     
     @JsMethod(name = "turn")
-    public native CSSUnitValue turn(double value);
-    
+    public static native CSSUnitValue turn(double value);
     
     @JsMethod(name = "vh")
-    public native CSSUnitValue vh(double value);
-    
+    public static native CSSUnitValue vh(double value);
     
     @JsMethod(name = "vmax")
-    public native CSSUnitValue vmax(double value);
-    
+    public static native CSSUnitValue vmax(double value);
     
     @JsMethod(name = "vmin")
-    public native CSSUnitValue vmin(double value);
-    
+    public static native CSSUnitValue vmin(double value);
     
     @JsMethod(name = "vw")
-    public native CSSUnitValue vw(double value);
-    
+    public static native CSSUnitValue vw(double value);
     
 }

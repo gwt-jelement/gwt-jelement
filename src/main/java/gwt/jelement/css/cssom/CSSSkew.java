@@ -24,9 +24,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="CSSSkew", isNative = true)
 public class CSSSkew extends CSSTransformComponent{
-    
     @JsConstructor
     public CSSSkew(CSSNumericValue ax, CSSNumericValue ay){
         super();
@@ -43,6 +42,5 @@ public class CSSSkew extends CSSTransformComponent{
     
     @JsProperty(name="ay")
     public native void setAy(CSSNumericValue ay);
-    
     
 }

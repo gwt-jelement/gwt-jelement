@@ -25,15 +25,12 @@ import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="MediaCapabilities", isNative = true)
 public class MediaCapabilities{
-    
     @JsMethod(name = "decodingInfo")
     public native Promise<MediaCapabilitiesInfo> decodingInfo(MediaDecodingConfiguration configuration);
     
-    
     @JsMethod(name = "encodingInfo")
     public native Promise<MediaCapabilitiesInfo> encodingInfo(MediaEncodingConfiguration configuration);
-    
     
 }

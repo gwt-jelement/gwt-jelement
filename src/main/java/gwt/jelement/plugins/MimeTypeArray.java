@@ -23,14 +23,12 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="MimeTypeArray", isNative = true)
 public class MimeTypeArray{
-    
     @JsProperty(name="length")
     public native double getLength();
     
     @JsMethod(name = "namedItem")
     public native MimeType namedItem(String name);
-    
     
 }

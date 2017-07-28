@@ -21,46 +21,44 @@ import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="WebGLDrawBuffers", isNative = true)
 public class WebGLDrawBuffers{
-    public static int COLOR_ATTACHMENT0_WEBGL;
-    public static int COLOR_ATTACHMENT1_WEBGL;
-    public static int COLOR_ATTACHMENT2_WEBGL;
-    public static int COLOR_ATTACHMENT3_WEBGL;
-    public static int COLOR_ATTACHMENT4_WEBGL;
-    public static int COLOR_ATTACHMENT5_WEBGL;
-    public static int COLOR_ATTACHMENT6_WEBGL;
-    public static int COLOR_ATTACHMENT7_WEBGL;
-    public static int COLOR_ATTACHMENT8_WEBGL;
-    public static int COLOR_ATTACHMENT9_WEBGL;
-    public static int COLOR_ATTACHMENT10_WEBGL;
-    public static int COLOR_ATTACHMENT11_WEBGL;
-    public static int COLOR_ATTACHMENT12_WEBGL;
-    public static int COLOR_ATTACHMENT13_WEBGL;
-    public static int COLOR_ATTACHMENT14_WEBGL;
-    public static int COLOR_ATTACHMENT15_WEBGL;
-    public static int DRAW_BUFFER0_WEBGL;
-    public static int DRAW_BUFFER1_WEBGL;
-    public static int DRAW_BUFFER2_WEBGL;
-    public static int DRAW_BUFFER3_WEBGL;
-    public static int DRAW_BUFFER4_WEBGL;
-    public static int DRAW_BUFFER5_WEBGL;
-    public static int DRAW_BUFFER6_WEBGL;
-    public static int DRAW_BUFFER7_WEBGL;
-    public static int DRAW_BUFFER8_WEBGL;
-    public static int DRAW_BUFFER9_WEBGL;
-    public static int DRAW_BUFFER10_WEBGL;
-    public static int DRAW_BUFFER11_WEBGL;
-    public static int DRAW_BUFFER12_WEBGL;
-    public static int DRAW_BUFFER13_WEBGL;
-    public static int DRAW_BUFFER14_WEBGL;
-    public static int DRAW_BUFFER15_WEBGL;
-    public static int MAX_COLOR_ATTACHMENTS_WEBGL;
-    public static int MAX_DRAW_BUFFERS_WEBGL;
-    
+    public static double COLOR_ATTACHMENT0_WEBGL;
+    public static double COLOR_ATTACHMENT1_WEBGL;
+    public static double COLOR_ATTACHMENT2_WEBGL;
+    public static double COLOR_ATTACHMENT3_WEBGL;
+    public static double COLOR_ATTACHMENT4_WEBGL;
+    public static double COLOR_ATTACHMENT5_WEBGL;
+    public static double COLOR_ATTACHMENT6_WEBGL;
+    public static double COLOR_ATTACHMENT7_WEBGL;
+    public static double COLOR_ATTACHMENT8_WEBGL;
+    public static double COLOR_ATTACHMENT9_WEBGL;
+    public static double COLOR_ATTACHMENT10_WEBGL;
+    public static double COLOR_ATTACHMENT11_WEBGL;
+    public static double COLOR_ATTACHMENT12_WEBGL;
+    public static double COLOR_ATTACHMENT13_WEBGL;
+    public static double COLOR_ATTACHMENT14_WEBGL;
+    public static double COLOR_ATTACHMENT15_WEBGL;
+    public static double DRAW_BUFFER0_WEBGL;
+    public static double DRAW_BUFFER1_WEBGL;
+    public static double DRAW_BUFFER2_WEBGL;
+    public static double DRAW_BUFFER3_WEBGL;
+    public static double DRAW_BUFFER4_WEBGL;
+    public static double DRAW_BUFFER5_WEBGL;
+    public static double DRAW_BUFFER6_WEBGL;
+    public static double DRAW_BUFFER7_WEBGL;
+    public static double DRAW_BUFFER8_WEBGL;
+    public static double DRAW_BUFFER9_WEBGL;
+    public static double DRAW_BUFFER10_WEBGL;
+    public static double DRAW_BUFFER11_WEBGL;
+    public static double DRAW_BUFFER12_WEBGL;
+    public static double DRAW_BUFFER13_WEBGL;
+    public static double DRAW_BUFFER14_WEBGL;
+    public static double DRAW_BUFFER15_WEBGL;
+    public static double MAX_COLOR_ATTACHMENTS_WEBGL;
+    public static double MAX_DRAW_BUFFERS_WEBGL;
     
     @JsMethod(name = "drawBuffersWEBGL")
     public native void drawBuffersWEBGL(double[] buffers);
-    
     
 }

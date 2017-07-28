@@ -24,13 +24,12 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="HTMLTrackElement", isNative = true)
 public class HTMLTrackElement extends HTMLElement{
-    public static int NONE;
-    public static int LOADING;
-    public static int LOADED;
-    public static int ERROR;
-    
+    public static short NONE;
+    public static short LOADING;
+    public static short LOADED;
+    public static short ERROR;
     
     @JsConstructor
     public HTMLTrackElement(){
@@ -72,6 +71,5 @@ public class HTMLTrackElement extends HTMLElement{
     
     @JsProperty(name="track")
     public native TextTrack getTrack();
-    
     
 }

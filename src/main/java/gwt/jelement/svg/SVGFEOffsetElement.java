@@ -26,9 +26,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="SVGFEOffsetElement", isNative = true)
 public class SVGFEOffsetElement extends SVGElement{
-    
     @JsConstructor
     public SVGFEOffsetElement(){
         super();
@@ -57,6 +56,5 @@ public class SVGFEOffsetElement extends SVGElement{
     
     @JsProperty(name="result")
     public native SVGAnimatedString getResult();
-    
     
 }

@@ -24,9 +24,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="SyncEvent", isNative = true)
 public class SyncEvent extends ExtendableEvent{
-    
     @JsConstructor
     public SyncEvent(String type, SyncEventInit init){
         super((String) null);
@@ -37,6 +36,5 @@ public class SyncEvent extends ExtendableEvent{
     
     @JsProperty(name="lastChance")
     public native boolean getLastChance();
-    
     
 }

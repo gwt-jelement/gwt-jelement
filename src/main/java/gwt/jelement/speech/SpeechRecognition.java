@@ -27,9 +27,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="SpeechRecognition", isNative = true)
 public class SpeechRecognition extends EventTarget{
-    
     @JsProperty(name="onaudiostart")
     private EventHandlerNonNull onaudiostart;
     
@@ -217,13 +216,10 @@ public class SpeechRecognition extends EventTarget{
     @JsMethod(name = "abort")
     public native void abort();
     
-    
     @JsMethod(name = "start")
     public native void start();
     
-    
     @JsMethod(name = "stop")
     public native void stop();
-    
     
 }

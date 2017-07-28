@@ -23,9 +23,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="SVGPointList", isNative = true)
 public class SVGPointList{
-    
     @JsProperty(name="length")
     public native double getLength();
     
@@ -35,25 +34,19 @@ public class SVGPointList{
     @JsMethod(name = "appendItem")
     public native SVGPoint appendItem(SVGPoint newItem);
     
-    
     @JsMethod(name = "clear")
     public native void clear();
-    
     
     @JsMethod(name = "initialize")
     public native SVGPoint initialize(SVGPoint newItem);
     
-    
     @JsMethod(name = "insertItemBefore")
     public native SVGPoint insertItemBefore(SVGPoint newItem, double index);
-    
     
     @JsMethod(name = "removeItem")
     public native SVGPoint removeItem(double index);
     
-    
     @JsMethod(name = "replaceItem")
     public native SVGPoint replaceItem(SVGPoint newItem, double index);
-    
     
 }

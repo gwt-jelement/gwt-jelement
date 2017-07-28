@@ -21,9 +21,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="Coordinates", isNative = true)
 public class Coordinates{
-    
     @JsProperty(name="latitude")
     public native double getLatitude();
     
@@ -44,6 +43,5 @@ public class Coordinates{
     
     @JsProperty(name="speed")
     public native double getSpeed();
-    
     
 }

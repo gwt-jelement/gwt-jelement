@@ -22,14 +22,13 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="SVGAngle", isNative = true)
 public class SVGAngle{
-    public static int SVG_ANGLETYPE_UNKNOWN;
-    public static int SVG_ANGLETYPE_UNSPECIFIED;
-    public static int SVG_ANGLETYPE_DEG;
-    public static int SVG_ANGLETYPE_RAD;
-    public static int SVG_ANGLETYPE_GRAD;
-    
+    public static short SVG_ANGLETYPE_UNKNOWN;
+    public static short SVG_ANGLETYPE_UNSPECIFIED;
+    public static short SVG_ANGLETYPE_DEG;
+    public static short SVG_ANGLETYPE_RAD;
+    public static short SVG_ANGLETYPE_GRAD;
     
     @JsProperty(name="unitType")
     public native short getUnitType();
@@ -55,9 +54,7 @@ public class SVGAngle{
     @JsMethod(name = "convertToSpecifiedUnits")
     public native void convertToSpecifiedUnits(short unitType);
     
-    
     @JsMethod(name = "newValueSpecifiedUnits")
     public native void newValueSpecifiedUnits(short unitType, float valueInSpecifiedUnits);
-    
     
 }

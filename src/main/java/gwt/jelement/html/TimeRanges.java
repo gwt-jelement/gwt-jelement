@@ -22,18 +22,15 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="TimeRanges", isNative = true)
 public class TimeRanges{
-    
     @JsProperty(name="length")
     public native double getLength();
     
     @JsMethod(name = "end")
     public native double end(double index);
     
-    
     @JsMethod(name = "start")
     public native double start(double index);
-    
     
 }

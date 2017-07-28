@@ -23,9 +23,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="FileWriterSync", isNative = true)
 public class FileWriterSync{
-    
     @JsProperty(name="position")
     public native double getPosition();
     
@@ -35,13 +34,10 @@ public class FileWriterSync{
     @JsMethod(name = "seek")
     public native void seek(double position);
     
-    
     @JsMethod(name = "truncate")
     public native void truncate(double size);
     
-    
     @JsMethod(name = "write")
     public native void write(Blob data);
-    
     
 }

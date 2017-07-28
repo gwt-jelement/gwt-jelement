@@ -23,9 +23,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="DetectedText", isNative = true)
 public class DetectedText{
-    
     @JsConstructor
     public DetectedText(){
     }
@@ -35,6 +34,5 @@ public class DetectedText{
     
     @JsProperty(name="boundingBox")
     public native DOMRect getBoundingBox();
-    
     
 }

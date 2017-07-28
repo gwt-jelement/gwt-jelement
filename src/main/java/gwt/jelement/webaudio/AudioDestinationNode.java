@@ -23,9 +23,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="AudioDestinationNode", isNative = true)
 public class AudioDestinationNode extends AudioNode{
-    
     @JsConstructor
     public AudioDestinationNode(){
         super();
@@ -33,6 +32,5 @@ public class AudioDestinationNode extends AudioNode{
     
     @JsProperty(name="maxChannelCount")
     public native double getMaxChannelCount();
-    
     
 }

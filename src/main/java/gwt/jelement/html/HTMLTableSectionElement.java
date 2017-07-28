@@ -25,9 +25,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="HTMLTableSectionElement", isNative = true)
 public class HTMLTableSectionElement extends HTMLElement{
-    
     @JsConstructor
     public HTMLTableSectionElement(){
         super();
@@ -63,13 +62,10 @@ public class HTMLTableSectionElement extends HTMLElement{
     @JsMethod(name = "deleteRow")
     public native void deleteRow(double index);
     
-    
     @JsMethod(name = "insertRow")
     public native HTMLElement insertRow();
     
-    
     @JsMethod(name = "insertRow")
     public native HTMLElement insertRow(double index);
-    
     
 }

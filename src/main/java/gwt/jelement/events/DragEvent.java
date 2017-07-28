@@ -25,9 +25,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="DragEvent", isNative = true)
 public class DragEvent extends MouseEvent{
-    
     @JsConstructor
     public DragEvent(String type){
         super((String) null);
@@ -40,6 +39,5 @@ public class DragEvent extends MouseEvent{
     
     @JsProperty(name="dataTransfer")
     public native DataTransfer getDataTransfer();
-    
     
 }

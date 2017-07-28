@@ -30,9 +30,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="ServiceWorkerGlobalScope", isNative = true)
 public class ServiceWorkerGlobalScope extends WorkerGlobalScope{
-    
     @JsProperty(name="onactivate")
     private EventHandlerNonNull onactivate;
     
@@ -216,21 +215,16 @@ public class ServiceWorkerGlobalScope extends WorkerGlobalScope{
     @JsMethod(name = "fetch")
     public native Promise<Response> fetch(Request input);
     
-    
     @JsMethod(name = "fetch")
     public native Promise<Response> fetch(String input);
-    
     
     @JsMethod(name = "fetch")
     public native Promise<Response> fetch(Request input, Object init);
     
-    
     @JsMethod(name = "fetch")
     public native Promise<Response> fetch(String input, Object init);
     
-    
     @JsMethod(name = "skipWaiting")
     public native Promise<Void> skipWaiting();
-    
     
 }

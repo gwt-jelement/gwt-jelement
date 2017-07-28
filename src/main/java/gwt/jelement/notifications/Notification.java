@@ -29,11 +29,10 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="Notification", isNative = true)
 public class Notification extends EventTarget{
-    
-    @JsProperty(name="permission")
-    private static String permission;
+    @JsProperty(name="maxActions")
+    public static double maxActions;
     
     @JsProperty(name="onclick")
     private EventHandlerNonNull onclick;
@@ -47,18 +46,13 @@ public class Notification extends EventTarget{
     @JsProperty(name="onclose")
     private EventHandlerNonNull onclose;
     
+    @JsProperty(name="permission")
+    private static String permission;
+    
     @JsConstructor
     public Notification(){
         super();
     }
-    
-    @JsOverlay
-    public final static NotificationPermission getPermission(){
-       return NotificationPermission.of(permission);
-    }
-    
-    @JsProperty(name="maxActions")
-    public static native double getMaxActions();
     
     @JsOverlay
     public final EventHandlerNonNull getOnClick(){
@@ -145,16 +139,18 @@ public class Notification extends EventTarget{
     @JsProperty(name="actions")
     public native NotificationAction[] getActions();
     
+    @JsOverlay
+    public final static NotificationPermission getPermission(){
+       return NotificationPermission.of(permission);
+    }
+    
     @JsMethod(name = "close")
     public native void close();
     
+    @JsMethod(name = "requestPermission")
+    public static native Promise<String> requestPermission();
     
     @JsMethod(name = "requestPermission")
-    public native Promise<String> requestPermission();
-    
-    
-    @JsMethod(name = "requestPermission")
-    public native Promise<String> requestPermission(NotificationPermissionCallback deprecatedCallback);
-    
+    public static native Promise<String> requestPermission(NotificationPermissionCallback deprecatedCallback);
     
 }

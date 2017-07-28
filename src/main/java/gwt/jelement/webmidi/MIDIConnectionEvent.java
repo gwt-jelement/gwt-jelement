@@ -25,9 +25,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="MIDIConnectionEvent", isNative = true)
 public class MIDIConnectionEvent extends Event{
-    
     @JsConstructor
     public MIDIConnectionEvent(String type){
         super((String) null);
@@ -40,6 +39,5 @@ public class MIDIConnectionEvent extends Event{
     
     @JsProperty(name="port")
     public native MIDIPort getPort();
-    
     
 }

@@ -24,9 +24,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="TreeWalker", isNative = true)
 public class TreeWalker{
-    
     @JsProperty(name="root")
     public native Node getRoot();
     
@@ -45,29 +44,22 @@ public class TreeWalker{
     @JsMethod(name = "firstChild")
     public native Node firstChild();
     
-    
     @JsMethod(name = "lastChild")
     public native Node lastChild();
-    
     
     @JsMethod(name = "nextNode")
     public native Node nextNode();
     
-    
     @JsMethod(name = "nextSibling")
     public native Node nextSibling();
-    
     
     @JsMethod(name = "parentNode")
     public native Node parentNode();
     
-    
     @JsMethod(name = "previousNode")
     public native Node previousNode();
     
-    
     @JsMethod(name = "previousSibling")
     public native Node previousSibling();
-    
     
 }

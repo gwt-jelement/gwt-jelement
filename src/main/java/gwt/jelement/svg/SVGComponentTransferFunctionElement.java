@@ -26,15 +26,14 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="SVGComponentTransferFunctionElement", isNative = true)
 public class SVGComponentTransferFunctionElement extends SVGElement{
-    public static int SVG_FECOMPONENTTRANSFER_TYPE_UNKNOWN;
-    public static int SVG_FECOMPONENTTRANSFER_TYPE_IDENTITY;
-    public static int SVG_FECOMPONENTTRANSFER_TYPE_TABLE;
-    public static int SVG_FECOMPONENTTRANSFER_TYPE_DISCRETE;
-    public static int SVG_FECOMPONENTTRANSFER_TYPE_LINEAR;
-    public static int SVG_FECOMPONENTTRANSFER_TYPE_GAMMA;
-    
+    public static short SVG_FECOMPONENTTRANSFER_TYPE_UNKNOWN;
+    public static short SVG_FECOMPONENTTRANSFER_TYPE_IDENTITY;
+    public static short SVG_FECOMPONENTTRANSFER_TYPE_TABLE;
+    public static short SVG_FECOMPONENTTRANSFER_TYPE_DISCRETE;
+    public static short SVG_FECOMPONENTTRANSFER_TYPE_LINEAR;
+    public static short SVG_FECOMPONENTTRANSFER_TYPE_GAMMA;
     
     @JsConstructor
     public SVGComponentTransferFunctionElement(){
@@ -61,6 +60,5 @@ public class SVGComponentTransferFunctionElement extends SVGElement{
     
     @JsProperty(name="offset")
     public native SVGAnimatedNumber getOffset();
-    
     
 }

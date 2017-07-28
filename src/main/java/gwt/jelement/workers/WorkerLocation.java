@@ -21,9 +21,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="WorkerLocation", isNative = true)
 public class WorkerLocation{
-    
     @JsProperty(name="href")
     public native String getHref();
     
@@ -50,6 +49,5 @@ public class WorkerLocation{
     
     @JsProperty(name="hash")
     public native String getHash();
-    
     
 }

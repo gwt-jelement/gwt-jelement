@@ -23,9 +23,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="HTMLMenuElement", isNative = true)
 public class HTMLMenuElement extends HTMLElement{
-    
     @JsConstructor
     public HTMLMenuElement(){
         super();
@@ -36,6 +35,5 @@ public class HTMLMenuElement extends HTMLElement{
     
     @JsProperty(name="compact")
     public native void setCompact(boolean compact);
-    
     
 }

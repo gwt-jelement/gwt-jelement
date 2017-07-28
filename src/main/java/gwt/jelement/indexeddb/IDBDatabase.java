@@ -31,9 +31,8 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 import jsinterop.base.Any;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="IDBDatabase", isNative = true)
 public class IDBDatabase extends EventTarget{
-    
     @JsProperty(name="onabort")
     private EventHandlerNonNull onabort;
     
@@ -103,26 +102,20 @@ public class IDBDatabase extends EventTarget{
     @JsMethod(name = "close")
     public native void close();
     
-    
     @JsMethod(name = "createObjectStore")
     public native IDBObjectStore createObjectStore(String name);
-    
     
     @JsMethod(name = "createObjectStore")
     public native IDBObjectStore createObjectStore(String name, IDBObjectStoreParameters options);
     
-    
     @JsMethod(name = "deleteObjectStore")
     public native void deleteObjectStore(String name);
-    
     
     @JsMethod(name = "transaction")
     public native IDBTransaction transaction(String storeNames);
     
-    
     @JsMethod(name = "transaction")
     public native IDBTransaction transaction(String[] storeNames);
-    
     
     @JsOverlay
     public final IDBTransaction transaction(String storeNames, IDBTransactionMode mode){
@@ -137,9 +130,7 @@ public class IDBDatabase extends EventTarget{
     @JsMethod(name = "transaction")
     public native IDBTransaction transaction(String storeNames, String mode);
     
-    
     @JsMethod(name = "transaction")
     public native IDBTransaction transaction(String[] storeNames, String mode);
-    
     
 }

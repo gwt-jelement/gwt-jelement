@@ -21,23 +21,22 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="SVGPreserveAspectRatio", isNative = true)
 public class SVGPreserveAspectRatio{
-    public static int SVG_PRESERVEASPECTRATIO_UNKNOWN;
-    public static int SVG_PRESERVEASPECTRATIO_NONE;
-    public static int SVG_PRESERVEASPECTRATIO_XMINYMIN;
-    public static int SVG_PRESERVEASPECTRATIO_XMIDYMIN;
-    public static int SVG_PRESERVEASPECTRATIO_XMAXYMIN;
-    public static int SVG_PRESERVEASPECTRATIO_XMINYMID;
-    public static int SVG_PRESERVEASPECTRATIO_XMIDYMID;
-    public static int SVG_PRESERVEASPECTRATIO_XMAXYMID;
-    public static int SVG_PRESERVEASPECTRATIO_XMINYMAX;
-    public static int SVG_PRESERVEASPECTRATIO_XMIDYMAX;
-    public static int SVG_PRESERVEASPECTRATIO_XMAXYMAX;
-    public static int SVG_MEETORSLICE_UNKNOWN;
-    public static int SVG_MEETORSLICE_MEET;
-    public static int SVG_MEETORSLICE_SLICE;
-    
+    public static short SVG_PRESERVEASPECTRATIO_UNKNOWN;
+    public static short SVG_PRESERVEASPECTRATIO_NONE;
+    public static short SVG_PRESERVEASPECTRATIO_XMINYMIN;
+    public static short SVG_PRESERVEASPECTRATIO_XMIDYMIN;
+    public static short SVG_PRESERVEASPECTRATIO_XMAXYMIN;
+    public static short SVG_PRESERVEASPECTRATIO_XMINYMID;
+    public static short SVG_PRESERVEASPECTRATIO_XMIDYMID;
+    public static short SVG_PRESERVEASPECTRATIO_XMAXYMID;
+    public static short SVG_PRESERVEASPECTRATIO_XMINYMAX;
+    public static short SVG_PRESERVEASPECTRATIO_XMIDYMAX;
+    public static short SVG_PRESERVEASPECTRATIO_XMAXYMAX;
+    public static short SVG_MEETORSLICE_UNKNOWN;
+    public static short SVG_MEETORSLICE_MEET;
+    public static short SVG_MEETORSLICE_SLICE;
     
     @JsProperty(name="align")
     public native short getAlign();
@@ -50,6 +49,5 @@ public class SVGPreserveAspectRatio{
     
     @JsProperty(name="meetOrSlice")
     public native void setMeetOrSlice(short meetOrSlice);
-    
     
 }

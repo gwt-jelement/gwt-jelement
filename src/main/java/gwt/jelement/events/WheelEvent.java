@@ -24,12 +24,11 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="WheelEvent", isNative = true)
 public class WheelEvent extends MouseEvent{
-    public static int DOM_DELTA_PIXEL;
-    public static int DOM_DELTA_LINE;
-    public static int DOM_DELTA_PAGE;
-    
+    public static double DOM_DELTA_PIXEL;
+    public static double DOM_DELTA_LINE;
+    public static double DOM_DELTA_PAGE;
     
     @JsConstructor
     public WheelEvent(String type){
@@ -61,6 +60,5 @@ public class WheelEvent extends MouseEvent{
     
     @JsProperty(name="wheelDelta")
     public native double getWheelDelta();
-    
     
 }

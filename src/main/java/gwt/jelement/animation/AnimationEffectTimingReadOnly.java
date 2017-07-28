@@ -23,9 +23,8 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 import jsinterop.base.Js;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="AnimationEffectTimingReadOnly", isNative = true)
 public class AnimationEffectTimingReadOnly{
-    
     @JsType(isNative = true, name = "?", namespace = JsPackage.GLOBAL)
     public interface DurationUnion {
         @JsOverlay
@@ -86,13 +85,12 @@ public class AnimationEffectTimingReadOnly{
         return this.duration;
     }
     
+    @JsProperty(name="easing")
+    public native String getEasing();
+    
     @JsOverlay
     public final PlaybackDirection getDirection(){
        return PlaybackDirection.of(direction);
     }
-    
-    @JsProperty(name="easing")
-    public native String getEasing();
-    
     
 }

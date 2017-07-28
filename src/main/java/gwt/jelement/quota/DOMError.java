@@ -22,9 +22,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="DOMError", isNative = true)
 public class DOMError{
-    
     @JsConstructor
     public DOMError(String name){
     }
@@ -38,6 +37,5 @@ public class DOMError{
     
     @JsProperty(name="message")
     public native String getMessage();
-    
     
 }

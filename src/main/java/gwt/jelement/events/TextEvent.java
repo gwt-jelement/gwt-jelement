@@ -25,9 +25,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="TextEvent", isNative = true)
 public class TextEvent extends UIEvent{
-    
     @JsConstructor
     public TextEvent(){
         super((String) null);
@@ -39,25 +38,19 @@ public class TextEvent extends UIEvent{
     @JsMethod(name = "initTextEvent")
     public native void initTextEvent();
     
-    
     @JsMethod(name = "initTextEvent")
     public native void initTextEvent(String type);
-    
     
     @JsMethod(name = "initTextEvent")
     public native void initTextEvent(String type, boolean bubbles);
     
-    
     @JsMethod(name = "initTextEvent")
     public native void initTextEvent(String type, boolean bubbles, boolean cancelable);
-    
     
     @JsMethod(name = "initTextEvent")
     public native void initTextEvent(String type, boolean bubbles, boolean cancelable, Window view);
     
-    
     @JsMethod(name = "initTextEvent")
     public native void initTextEvent(String type, boolean bubbles, boolean cancelable, Window view, String data);
-    
     
 }

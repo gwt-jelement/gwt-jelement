@@ -26,9 +26,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="Worker", isNative = true)
 public class Worker extends EventTarget{
-    
     @JsProperty(name="onmessage")
     private EventHandlerNonNull onmessage;
     
@@ -63,13 +62,10 @@ public class Worker extends EventTarget{
     @JsMethod(name = "postMessage")
     public native void postMessage(Object message);
     
-    
     @JsMethod(name = "postMessage")
     public native void postMessage(Object message, MessagePort[] transfer);
     
-    
     @JsMethod(name = "terminate")
     public native void terminate();
-    
     
 }

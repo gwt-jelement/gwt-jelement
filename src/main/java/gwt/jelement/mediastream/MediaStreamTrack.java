@@ -31,20 +31,19 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="MediaStreamTrack", isNative = true)
 public class MediaStreamTrack extends EventTarget{
-    
     @JsProperty(name="onmute")
     private EventHandlerNonNull onmute;
     
     @JsProperty(name="onunmute")
     private EventHandlerNonNull onunmute;
     
-    @JsProperty(name="readyState")
-    private String readyState;
-    
     @JsProperty(name="onended")
     private EventHandlerNonNull onended;
+    
+    @JsProperty(name="readyState")
+    private String readyState;
     
     @JsConstructor
     public MediaStreamTrack(){
@@ -90,11 +89,6 @@ public class MediaStreamTrack extends EventTarget{
     }
     
     @JsOverlay
-    public final MediaStreamTrackState getReadyState(){
-       return MediaStreamTrackState.of(readyState);
-    }
-    
-    @JsOverlay
     public final EventHandlerNonNull getOnEnded(){
         return this.onended;
     }
@@ -110,32 +104,30 @@ public class MediaStreamTrack extends EventTarget{
     @JsProperty(name="contentHint")
     public native void setContentHint(String contentHint);
     
+    @JsOverlay
+    public final MediaStreamTrackState getReadyState(){
+       return MediaStreamTrackState.of(readyState);
+    }
+    
     @JsMethod(name = "applyConstraints")
     public native Promise<MediaTrackConstraints> applyConstraints();
-    
     
     @JsMethod(name = "applyConstraints")
     public native Promise<MediaTrackConstraints> applyConstraints(MediaTrackConstraints constraints);
     
-    
     @JsMethod(name = "clone")
     public native MediaStreamTrack clone();
-    
     
     @JsMethod(name = "getCapabilities")
     public native MediaTrackCapabilities getCapabilities();
     
-    
     @JsMethod(name = "getConstraints")
     public native MediaTrackConstraints getConstraints();
-    
     
     @JsMethod(name = "getSettings")
     public native MediaTrackSettings getSettings();
     
-    
     @JsMethod(name = "stop")
     public native void stop();
-    
     
 }

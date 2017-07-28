@@ -23,9 +23,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="HTMLTableColElement", isNative = true)
 public class HTMLTableColElement extends HTMLElement{
-    
     @JsConstructor
     public HTMLTableColElement(){
         super();
@@ -66,6 +65,5 @@ public class HTMLTableColElement extends HTMLElement{
     
     @JsProperty(name="width")
     public native void setWidth(String width);
-    
     
 }

@@ -21,9 +21,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="NavigatorID", isNative = true)
 public class NavigatorID{
-    
     @JsProperty(name="appCodeName")
     public native String getAppCodeName();
     
@@ -41,6 +40,5 @@ public class NavigatorID{
     
     @JsProperty(name="userAgent")
     public native String getUserAgent();
-    
     
 }

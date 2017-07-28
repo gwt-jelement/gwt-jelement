@@ -16,15 +16,14 @@
  */
 package gwt.jelement.vr;
 
-import elemental2.core.Float32Array;
+import gwt.jelement.core.Float32Array;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="VRStageParameters", isNative = true)
 public class VRStageParameters{
-    
     @JsProperty(name="sittingToStandingTransform")
     public native Float32Array getSittingToStandingTransform();
     
@@ -33,6 +32,5 @@ public class VRStageParameters{
     
     @JsProperty(name="sizeZ")
     public native float getSizeZ();
-    
     
 }

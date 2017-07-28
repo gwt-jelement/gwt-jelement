@@ -24,9 +24,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="NodeIterator", isNative = true)
 public class NodeIterator{
-    
     @JsProperty(name="root")
     public native Node getRoot();
     
@@ -45,13 +44,10 @@ public class NodeIterator{
     @JsMethod(name = "detach")
     public native void detach();
     
-    
     @JsMethod(name = "nextNode")
     public native Node nextNode();
     
-    
     @JsMethod(name = "previousNode")
     public native Node previousNode();
-    
     
 }

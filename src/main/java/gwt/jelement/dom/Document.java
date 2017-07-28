@@ -18,13 +18,13 @@ package gwt.jelement.dom;
 
 import gwt.jelement.animation.Animation;
 import gwt.jelement.animation.DocumentTimeline;
+import gwt.jelement.core.Function;
 import gwt.jelement.css.FontFaceSet;
 import gwt.jelement.css.StyleSheetList;
 import gwt.jelement.dom.AddressSpace;
 import gwt.jelement.dom.Attr;
 import gwt.jelement.dom.CDATASection;
 import gwt.jelement.dom.Comment;
-import gwt.jelement.dom.CustomElementConstructor;
 import gwt.jelement.dom.DOMImplementation;
 import gwt.jelement.dom.DocumentFragment;
 import gwt.jelement.dom.DocumentReadyState;
@@ -65,9 +65,8 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 import jsinterop.base.Js;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="Document", isNative = true)
 public class Document extends Node{
-    
     @JsType(isNative = true, name = "?", namespace = JsPackage.GLOBAL)
     public interface HTMLOrSVGScriptElement {
         @JsOverlay
@@ -102,9 +101,6 @@ public class Document extends Node{
     
     }
     
-    @JsProperty(name="readyState")
-    private String readyState;
-    
     @JsProperty(name="currentScript")
     private HTMLOrSVGScriptElement currentScript;
     
@@ -116,12 +112,6 @@ public class Document extends Node{
     
     @JsProperty(name="onpointerlockerror")
     private EventHandlerNonNull onpointerlockerror;
-    
-    @JsProperty(name="visibilityState")
-    private String visibilityState;
-    
-    @JsProperty(name="addressSpace")
-    private String addressSpace;
     
     @JsProperty(name="onbeforecopy")
     private EventHandlerNonNull onbeforecopy;
@@ -387,6 +377,15 @@ public class Document extends Node{
     @JsProperty(name="ontouchstart")
     private EventHandlerNonNull ontouchstart;
     
+    @JsProperty(name="readyState")
+    private String readyState;
+    
+    @JsProperty(name="visibilityState")
+    private String visibilityState;
+    
+    @JsProperty(name="addressSpace")
+    private String addressSpace;
+    
     @JsConstructor
     public Document(){
         super();
@@ -469,11 +468,6 @@ public class Document extends Node{
     
     @JsProperty(name="lastModified")
     public native String getLastModified();
-    
-    @JsOverlay
-    public final DocumentReadyState getReadyState(){
-       return DocumentReadyState.of(readyState);
-    }
     
     @JsProperty(name="title")
     public native String getTitle();
@@ -578,16 +572,6 @@ public class Document extends Node{
     
     @JsProperty(name="hidden")
     public native boolean getHidden();
-    
-    @JsOverlay
-    public final VisibilityState getVisibilityState(){
-       return VisibilityState.of(visibilityState);
-    }
-    
-    @JsOverlay
-    public final AddressSpace getAddressSpace(){
-       return AddressSpace.of(addressSpace);
-    }
     
     @JsProperty(name="webkitVisibilityState")
     public native String getWebkitVisibilityState();
@@ -1523,320 +1507,241 @@ public class Document extends Node{
     @JsProperty(name="fonts")
     public native FontFaceSet getFonts();
     
+    @JsOverlay
+    public final DocumentReadyState getReadyState(){
+       return DocumentReadyState.of(readyState);
+    }
+    
+    @JsOverlay
+    public final VisibilityState getVisibilityState(){
+       return VisibilityState.of(visibilityState);
+    }
+    
+    @JsOverlay
+    public final AddressSpace getAddressSpace(){
+       return AddressSpace.of(addressSpace);
+    }
+    
     @JsMethod(name = "adoptNode")
     public native Node adoptNode(Node node);
-    
-    
-    @JsMethod(name = "append")
-    public native void append();
-    
     
     @JsMethod(name = "append")
     public native void append(Node... nodes);
     
-    
     @JsMethod(name = "append")
     public native void append(String... nodes);
-    
     
     @JsMethod(name = "caretRangeFromPoint")
     public native Range caretRangeFromPoint();
     
-    
     @JsMethod(name = "caretRangeFromPoint")
     public native Range caretRangeFromPoint(double x);
-    
     
     @JsMethod(name = "caretRangeFromPoint")
     public native Range caretRangeFromPoint(double x, double y);
     
-    
     @JsMethod(name = "close")
     public native void close();
-    
     
     @JsMethod(name = "createAttribute")
     public native Attr createAttribute(String localName);
     
-    
     @JsMethod(name = "createAttributeNS")
     public native Attr createAttributeNS(String namespaceURI, String qualifiedName);
-    
     
     @JsMethod(name = "createCDATASection")
     public native CDATASection createCDATASection(String data);
     
-    
     @JsMethod(name = "createComment")
     public native Comment createComment(String data);
-    
     
     @JsMethod(name = "createDocumentFragment")
     public native DocumentFragment createDocumentFragment();
     
-    
     @JsMethod(name = "createElement")
     public native <T extends Element> T createElement(String localName);
-    
     
     @JsMethod(name = "createElement")
     public native <T extends Element> T createElement(String localName, String options);
     
-    
     @JsMethod(name = "createElement")
     public native <T extends Element> T createElement(String localName, Object options);
-    
     
     @JsMethod(name = "createElementNS")
     public native <T extends Element> T createElementNS(String namespaceURI, String qualifiedName);
     
-    
     @JsMethod(name = "createElementNS")
     public native <T extends Element> T createElementNS(String namespaceURI, String qualifiedName, String options);
-    
     
     @JsMethod(name = "createElementNS")
     public native <T extends Element> T createElementNS(String namespaceURI, String qualifiedName, Object options);
     
-    
     @JsMethod(name = "createEvent")
     public native Event createEvent(String eventType);
-    
     
     @JsMethod(name = "createExpression")
     public native XPathExpression createExpression(String expression);
     
-    
     @JsMethod(name = "createExpression")
     public native XPathExpression createExpression(String expression, XPathNSResolver resolver);
-    
     
     @JsMethod(name = "createNSResolver")
     public native XPathNSResolver createNSResolver(Node nodeResolver);
     
-    
     @JsMethod(name = "createNodeIterator")
     public native NodeIterator createNodeIterator(Node root);
-    
     
     @JsMethod(name = "createNodeIterator")
     public native NodeIterator createNodeIterator(Node root, double whatToShow);
     
-    
     @JsMethod(name = "createNodeIterator")
     public native NodeIterator createNodeIterator(Node root, double whatToShow, NodeFilter filter);
-    
     
     @JsMethod(name = "createProcessingInstruction")
     public native ProcessingInstruction createProcessingInstruction(String target, String data);
     
-    
     @JsMethod(name = "createRange")
     public native Range createRange();
-    
     
     @JsMethod(name = "createTextNode")
     public native Text createTextNode(String data);
     
-    
     @JsMethod(name = "createTouch")
     public native Touch createTouch(Window view, EventTarget target, double identifier, double pageX, double pageY, double screenX, double screenY);
-    
     
     @JsMethod(name = "createTouch")
     public native Touch createTouch(Window view, EventTarget target, double identifier, double pageX, double pageY, double screenX, double screenY, double radiusX);
     
-    
     @JsMethod(name = "createTouch")
     public native Touch createTouch(Window view, EventTarget target, double identifier, double pageX, double pageY, double screenX, double screenY, double radiusX, double radiusY);
-    
     
     @JsMethod(name = "createTouch")
     public native Touch createTouch(Window view, EventTarget target, double identifier, double pageX, double pageY, double screenX, double screenY, double radiusX, double radiusY, float rotationAngle);
     
-    
     @JsMethod(name = "createTouch")
     public native Touch createTouch(Window view, EventTarget target, double identifier, double pageX, double pageY, double screenX, double screenY, double radiusX, double radiusY, float rotationAngle, float force);
-    
-    
-    @JsMethod(name = "createTouchList")
-    public native TouchList createTouchList();
-    
     
     @JsMethod(name = "createTouchList")
     public native TouchList createTouchList(Touch... touches);
     
-    
     @JsMethod(name = "createTreeWalker")
     public native TreeWalker createTreeWalker(Node root);
-    
     
     @JsMethod(name = "createTreeWalker")
     public native TreeWalker createTreeWalker(Node root, double whatToShow);
     
-    
     @JsMethod(name = "createTreeWalker")
     public native TreeWalker createTreeWalker(Node root, double whatToShow, NodeFilter filter);
-    
     
     @JsMethod(name = "elementFromPoint")
     public native Element elementFromPoint(double x, double y);
     
-    
     @JsMethod(name = "elementsFromPoint")
     public native Element[] elementsFromPoint(double x, double y);
-    
     
     @JsMethod(name = "evaluate")
     public native XPathResult evaluate(String expression, Node contextNode);
     
-    
     @JsMethod(name = "evaluate")
     public native XPathResult evaluate(String expression, Node contextNode, XPathNSResolver resolver);
-    
     
     @JsMethod(name = "evaluate")
     public native XPathResult evaluate(String expression, Node contextNode, XPathNSResolver resolver, short type);
     
-    
     @JsMethod(name = "evaluate")
     public native XPathResult evaluate(String expression, Node contextNode, XPathNSResolver resolver, short type, Object inResult);
-    
     
     @JsMethod(name = "execCommand")
     public native boolean execCommand(String commandId);
     
-    
     @JsMethod(name = "execCommand")
     public native boolean execCommand(String commandId, boolean showUI);
-    
     
     @JsMethod(name = "execCommand")
     public native boolean execCommand(String commandId, boolean showUI, String value);
     
-    
     @JsMethod(name = "exitFullscreen")
     public native void exitFullscreen();
-    
     
     @JsMethod(name = "exitPointerLock")
     public native void exitPointerLock();
     
-    
     @JsMethod(name = "getAnimations")
     public native Animation[] getAnimations();
-    
     
     @JsMethod(name = "getElementById")
     public native <T extends Element> T getElementById(String elementId);
     
-    
     @JsMethod(name = "getElementsByClassName")
     public native HTMLCollection getElementsByClassName(String classNames);
-    
     
     @JsMethod(name = "getElementsByName")
     public native NodeList getElementsByName(String elementName);
     
-    
     @JsMethod(name = "getElementsByTagName")
     public native HTMLCollection getElementsByTagName(String localName);
-    
     
     @JsMethod(name = "getElementsByTagNameNS")
     public native HTMLCollection getElementsByTagNameNS(String namespaceURI, String localName);
     
-    
     @JsMethod(name = "getSelection")
     public native Selection getSelection();
-    
     
     @JsMethod(name = "hasFocus")
     public native boolean hasFocus();
     
-    
     @JsMethod(name = "importNode")
     public native Node importNode(Node node);
-    
     
     @JsMethod(name = "importNode")
     public native Node importNode(Node node, boolean deep);
     
-    
     @JsMethod(name = "open")
     public native void open();
-    
-    
-    @JsMethod(name = "prepend")
-    public native void prepend();
-    
     
     @JsMethod(name = "prepend")
     public native void prepend(Node... nodes);
     
-    
     @JsMethod(name = "prepend")
     public native void prepend(String... nodes);
-    
     
     @JsMethod(name = "queryCommandEnabled")
     public native boolean queryCommandEnabled(String commandId);
     
-    
     @JsMethod(name = "queryCommandIndeterm")
     public native boolean queryCommandIndeterm(String commandId);
-    
     
     @JsMethod(name = "queryCommandState")
     public native boolean queryCommandState(String commandId);
     
-    
     @JsMethod(name = "queryCommandSupported")
     public native boolean queryCommandSupported(String commandId);
-    
     
     @JsMethod(name = "queryCommandValue")
     public native String queryCommandValue(String commandId);
     
-    
     @JsMethod(name = "querySelector")
     public native <T extends Element> T querySelector(String selectors);
-    
     
     @JsMethod(name = "querySelectorAll")
     public native NodeList querySelectorAll(String selectors);
     
+    @JsMethod(name = "registerElement")
+    public native Function registerElement(String type);
     
     @JsMethod(name = "registerElement")
-    public native CustomElementConstructor registerElement(String type);
-    
-    
-    @JsMethod(name = "registerElement")
-    public native CustomElementConstructor registerElement(String type, ElementRegistrationOptions options);
-    
+    public native Function registerElement(String type, ElementRegistrationOptions options);
     
     @JsMethod(name = "webkitCancelFullScreen")
     public native void webkitCancelFullScreen();
     
-    
     @JsMethod(name = "webkitExitFullscreen")
     public native void webkitExitFullscreen();
-    
-    
-    @JsMethod(name = "write")
-    public native void write();
-    
     
     @JsMethod(name = "write")
     public native void write(String... text);
     
-    
-    @JsMethod(name = "writeln")
-    public native void writeln();
-    
-    
     @JsMethod(name = "writeln")
     public native void writeln(String... text);
-    
     
 }

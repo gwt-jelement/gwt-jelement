@@ -27,9 +27,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="HTMLElement", isNative = true)
 public class HTMLElement extends Element{
-    
     @JsProperty(name="onabort")
     private EventHandlerNonNull onabort;
     
@@ -1101,13 +1100,10 @@ public class HTMLElement extends Element{
     @JsMethod(name = "blur")
     public native void blur();
     
-    
     @JsMethod(name = "click")
     public native void click();
     
-    
     @JsMethod(name = "focus")
     public native void focus();
-    
     
 }

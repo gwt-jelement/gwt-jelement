@@ -24,9 +24,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="BatteryManager", isNative = true)
 public class BatteryManager extends EventTarget{
-    
     @JsProperty(name="onchargingchange")
     private EventHandlerNonNull onchargingchange;
     
@@ -95,6 +94,5 @@ public class BatteryManager extends EventTarget{
     public final void setOnLevelchange(EventHandlerNonNull onlevelchange){
         this.onlevelchange = onlevelchange;
     }
-    
     
 }

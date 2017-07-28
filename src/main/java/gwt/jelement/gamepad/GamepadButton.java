@@ -21,9 +21,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="GamepadButton", isNative = true)
 public class GamepadButton{
-    
     @JsProperty(name="pressed")
     public native boolean getPressed();
     
@@ -32,6 +31,5 @@ public class GamepadButton{
     
     @JsProperty(name="value")
     public native double getValue();
-    
     
 }

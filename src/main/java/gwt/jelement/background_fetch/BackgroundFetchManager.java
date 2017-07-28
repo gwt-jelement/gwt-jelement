@@ -25,47 +25,36 @@ import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="BackgroundFetchManager", isNative = true)
 public class BackgroundFetchManager{
-    
     @JsMethod(name = "fetch")
     public native Promise<BackgroundFetchRegistration> fetch(String tag, Request requests);
-    
     
     @JsMethod(name = "fetch")
     public native Promise<BackgroundFetchRegistration> fetch(String tag, String requests);
     
-    
     @JsMethod(name = "fetch")
     public native Promise<BackgroundFetchRegistration> fetch(String tag, Request[] requests);
-    
     
     @JsMethod(name = "fetch")
     public native Promise<BackgroundFetchRegistration> fetch(String tag, String[] requests);
     
-    
     @JsMethod(name = "fetch")
     public native Promise<BackgroundFetchRegistration> fetch(String tag, Request requests, BackgroundFetchOptions options);
-    
     
     @JsMethod(name = "fetch")
     public native Promise<BackgroundFetchRegistration> fetch(String tag, String requests, BackgroundFetchOptions options);
     
-    
     @JsMethod(name = "fetch")
     public native Promise<BackgroundFetchRegistration> fetch(String tag, Request[] requests, BackgroundFetchOptions options);
-    
     
     @JsMethod(name = "fetch")
     public native Promise<BackgroundFetchRegistration> fetch(String tag, String[] requests, BackgroundFetchOptions options);
     
-    
     @JsMethod(name = "get")
     public native Promise<BackgroundFetchRegistration> get(String tag);
     
-    
     @JsMethod(name = "getTags")
     public native Promise<String[]> getTags();
-    
     
 }

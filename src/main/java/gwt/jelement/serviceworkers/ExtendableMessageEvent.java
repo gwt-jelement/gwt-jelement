@@ -27,9 +27,8 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 import jsinterop.base.Js;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="ExtendableMessageEvent", isNative = true)
 public class ExtendableMessageEvent extends ExtendableEvent{
-    
     @JsType(isNative = true, name = "?", namespace = JsPackage.GLOBAL)
     public interface SourceUnion {
         @JsOverlay
@@ -103,6 +102,5 @@ public class ExtendableMessageEvent extends ExtendableEvent{
     
     @JsProperty(name="ports")
     public native MessagePort[] getPorts();
-    
     
 }

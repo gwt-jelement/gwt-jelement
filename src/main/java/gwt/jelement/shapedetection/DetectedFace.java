@@ -24,9 +24,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="DetectedFace", isNative = true)
 public class DetectedFace{
-    
     @JsConstructor
     public DetectedFace(){
     }
@@ -36,6 +35,5 @@ public class DetectedFace{
     
     @JsProperty(name="landmarks")
     public native Landmark[] getLandmarks();
-    
     
 }

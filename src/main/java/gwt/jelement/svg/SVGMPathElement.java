@@ -24,9 +24,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="SVGMPathElement", isNative = true)
 public class SVGMPathElement extends SVGElement{
-    
     @JsConstructor
     public SVGMPathElement(){
         super();
@@ -34,6 +33,5 @@ public class SVGMPathElement extends SVGElement{
     
     @JsProperty(name="href")
     public native SVGAnimatedString getHref();
-    
     
 }

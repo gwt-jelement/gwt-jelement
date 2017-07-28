@@ -21,14 +21,12 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="NavigatorLanguage", isNative = true)
 public class NavigatorLanguage{
-    
     @JsProperty(name="language")
     public native String getLanguage();
     
     @JsProperty(name="languages")
     public native String[] getLanguages();
-    
     
 }

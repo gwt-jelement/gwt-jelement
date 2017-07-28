@@ -24,9 +24,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="Attr", isNative = true)
 public class Attr extends Node{
-    
     @JsConstructor
     public Attr(){
         super();
@@ -55,6 +54,5 @@ public class Attr extends Node{
     
     @JsProperty(name="specified")
     public native boolean getSpecified();
-    
     
 }

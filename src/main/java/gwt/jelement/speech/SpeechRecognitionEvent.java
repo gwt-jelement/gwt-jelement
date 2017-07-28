@@ -26,9 +26,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="SpeechRecognitionEvent", isNative = true)
 public class SpeechRecognitionEvent extends Event{
-    
     @JsConstructor
     public SpeechRecognitionEvent(String type){
         super((String) null);
@@ -50,6 +49,5 @@ public class SpeechRecognitionEvent extends Event{
     
     @JsProperty(name="emma")
     public native Document getEmma();
-    
     
 }

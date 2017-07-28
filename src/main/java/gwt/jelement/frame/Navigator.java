@@ -19,6 +19,7 @@ package gwt.jelement.frame;
 import gwt.jelement.bluetooth.Bluetooth;
 import gwt.jelement.budget.BudgetService;
 import gwt.jelement.clipboard.Clipboard;
+import gwt.jelement.core.ArrayBufferView;
 import gwt.jelement.credentialmanager.CredentialsContainer;
 import gwt.jelement.encryptedmedia.MediaKeySystemAccess;
 import gwt.jelement.encryptedmedia.MediaKeySystemConfiguration;
@@ -45,7 +46,6 @@ import gwt.jelement.serviceworkers.ServiceWorkerContainer;
 import gwt.jelement.webmidi.MIDIOptions;
 import gwt.jelement.webshare.ShareData;
 import gwt.jelement.webusb.USB;
-import elemental2.core.ArrayBufferView;
 import elemental2.promise.Promise;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
@@ -53,9 +53,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="Navigator", isNative = true)
 public class Navigator{
-    
     @JsProperty(name="vendorSub")
     public native String getVendorSub();
     
@@ -164,97 +163,73 @@ public class Navigator{
     @JsMethod(name = "cancelKeyboardLock")
     public native void cancelKeyboardLock();
     
-    
     @JsMethod(name = "getBattery")
     public native Promise getBattery();
-    
     
     @JsMethod(name = "getGamepads")
     public native GamepadList getGamepads();
     
-    
     @JsMethod(name = "getInstalledRelatedApps")
     public native Promise<RelatedApplication> getInstalledRelatedApps();
-    
     
     @JsMethod(name = "getUserMedia")
     public native void getUserMedia(MediaStreamConstraints constraints, NavigatorUserMediaSuccessCallback successCallback, NavigatorUserMediaErrorCallback errorCallback);
     
-    
     @JsMethod(name = "getVRDisplays")
     public native Promise getVRDisplays();
-    
     
     @JsMethod(name = "isProtocolHandlerRegistered")
     public native String isProtocolHandlerRegistered(String scheme, String url);
     
-    
     @JsMethod(name = "javaEnabled")
     public native boolean javaEnabled();
-    
     
     @JsMethod(name = "registerProtocolHandler")
     public native void registerProtocolHandler(String scheme, String url, String title);
     
-    
     @JsMethod(name = "requestKeyboardLock")
     public native Promise<Void> requestKeyboardLock();
-    
     
     @JsMethod(name = "requestKeyboardLock")
     public native Promise<Void> requestKeyboardLock(String[] keyCodes);
     
-    
     @JsMethod(name = "requestMIDIAccess")
     public native Promise requestMIDIAccess();
-    
     
     @JsMethod(name = "requestMIDIAccess")
     public native Promise requestMIDIAccess(MIDIOptions options);
     
-    
     @JsMethod(name = "requestMediaKeySystemAccess")
     public native Promise<MediaKeySystemAccess> requestMediaKeySystemAccess(String keySystem, MediaKeySystemConfiguration[] supportedConfigurations);
-    
     
     @JsMethod(name = "sendBeacon")
     public native boolean sendBeacon(String url);
     
-    
     @JsMethod(name = "sendBeacon")
     public native boolean sendBeacon(String url, ArrayBufferView data);
-    
     
     @JsMethod(name = "sendBeacon")
     public native boolean sendBeacon(String url, Blob data);
     
-    
     @JsMethod(name = "sendBeacon")
     public native boolean sendBeacon(String url, String data);
-    
     
     @JsMethod(name = "sendBeacon")
     public native boolean sendBeacon(String url, FormData data);
     
-    
     @JsMethod(name = "share")
     public native Promise<Void> share(ShareData data);
-    
     
     @JsMethod(name = "unregisterProtocolHandler")
     public native void unregisterProtocolHandler(String scheme, String url);
     
-    
     @JsMethod(name = "vibrate")
     public native boolean vibrate(double pattern);
-    
     
     @JsMethod(name = "vibrate")
     public native boolean vibrate(double[] pattern);
     
-    
     @JsMethod(name = "webkitGetUserMedia")
     public native void webkitGetUserMedia(MediaStreamConstraints constraints, NavigatorUserMediaSuccessCallback successCallback, NavigatorUserMediaErrorCallback errorCallback);
-    
     
 }

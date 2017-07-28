@@ -22,20 +22,19 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="SVGLength", isNative = true)
 public class SVGLength{
-    public static int SVG_LENGTHTYPE_UNKNOWN;
-    public static int SVG_LENGTHTYPE_NUMBER;
-    public static int SVG_LENGTHTYPE_PERCENTAGE;
-    public static int SVG_LENGTHTYPE_EMS;
-    public static int SVG_LENGTHTYPE_EXS;
-    public static int SVG_LENGTHTYPE_PX;
-    public static int SVG_LENGTHTYPE_CM;
-    public static int SVG_LENGTHTYPE_MM;
-    public static int SVG_LENGTHTYPE_IN;
-    public static int SVG_LENGTHTYPE_PT;
-    public static int SVG_LENGTHTYPE_PC;
-    
+    public static short SVG_LENGTHTYPE_UNKNOWN;
+    public static short SVG_LENGTHTYPE_NUMBER;
+    public static short SVG_LENGTHTYPE_PERCENTAGE;
+    public static short SVG_LENGTHTYPE_EMS;
+    public static short SVG_LENGTHTYPE_EXS;
+    public static short SVG_LENGTHTYPE_PX;
+    public static short SVG_LENGTHTYPE_CM;
+    public static short SVG_LENGTHTYPE_MM;
+    public static short SVG_LENGTHTYPE_IN;
+    public static short SVG_LENGTHTYPE_PT;
+    public static short SVG_LENGTHTYPE_PC;
     
     @JsProperty(name="unitType")
     public native short getUnitType();
@@ -61,9 +60,7 @@ public class SVGLength{
     @JsMethod(name = "convertToSpecifiedUnits")
     public native void convertToSpecifiedUnits(short unitType);
     
-    
     @JsMethod(name = "newValueSpecifiedUnits")
     public native void newValueSpecifiedUnits(short unitType, float valueInSpecifiedUnits);
-    
     
 }

@@ -22,13 +22,11 @@ import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="SVGAnimateTransformElement", isNative = true)
 public class SVGAnimateTransformElement extends SVGAnimationElement{
-    
     @JsConstructor
     public SVGAnimateTransformElement(){
         super();
     }
-    
     
 }

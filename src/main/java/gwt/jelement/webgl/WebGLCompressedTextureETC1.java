@@ -20,10 +20,8 @@ import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="WebGLCompressedTextureETC1", isNative = true)
 public class WebGLCompressedTextureETC1{
-    public static int COMPRESSED_RGB_ETC1_WEBGL;
-    
-    
+    public static double COMPRESSED_RGB_ETC1_WEBGL;
     
 }

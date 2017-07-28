@@ -22,16 +22,14 @@ import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="EXTDisjointTimerQueryWebGL2", isNative = true)
 public class EXTDisjointTimerQueryWebGL2{
-    public static int QUERY_COUNTER_BITS_EXT;
-    public static int TIME_ELAPSED_EXT;
-    public static int TIMESTAMP_EXT;
-    public static int GPU_DISJOINT_EXT;
-    
+    public static double QUERY_COUNTER_BITS_EXT;
+    public static double TIME_ELAPSED_EXT;
+    public static double TIMESTAMP_EXT;
+    public static double GPU_DISJOINT_EXT;
     
     @JsMethod(name = "queryCounterEXT")
     public native void queryCounterEXT(WebGLQuery query, double target);
-    
     
 }

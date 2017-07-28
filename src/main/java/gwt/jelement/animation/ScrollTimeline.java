@@ -27,9 +27,8 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 import jsinterop.base.Js;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="ScrollTimeline", isNative = true)
 public class ScrollTimeline extends AnimationTimeline{
-    
     @JsType(isNative = true, name = "?", namespace = JsPackage.GLOBAL)
     public interface TimeRangeUnion {
         @JsOverlay
@@ -64,11 +63,11 @@ public class ScrollTimeline extends AnimationTimeline{
     
     }
     
-    @JsProperty(name="orientation")
-    private String orientation;
-    
     @JsProperty(name="timeRange")
     private TimeRangeUnion timeRange;
+    
+    @JsProperty(name="orientation")
+    private String orientation;
     
     @JsConstructor
     public ScrollTimeline(){
@@ -84,14 +83,13 @@ public class ScrollTimeline extends AnimationTimeline{
     public native Element getScrollSource();
     
     @JsOverlay
-    public final ScrollDirection getOrientation(){
-       return ScrollDirection.of(orientation);
-    }
-    
-    @JsOverlay
     public final TimeRangeUnion getTimeRange(){
         return this.timeRange;
     }
     
+    @JsOverlay
+    public final ScrollDirection getOrientation(){
+       return ScrollDirection.of(orientation);
+    }
     
 }

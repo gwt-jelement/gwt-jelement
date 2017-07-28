@@ -16,6 +16,7 @@
  */
 package gwt.jelement.fetch;
 
+import gwt.jelement.core.ArrayBuffer;
 import gwt.jelement.fetch.Headers;
 import gwt.jelement.fetch.ReferrerPolicy;
 import gwt.jelement.fetch.Request;
@@ -25,7 +26,6 @@ import gwt.jelement.fetch.RequestRedirect;
 import gwt.jelement.fileapi.Blob;
 import gwt.jelement.html.FormData;
 import gwt.jelement.workers.RequestCredentials;
-import elemental2.core.ArrayBuffer;
 import elemental2.promise.Promise;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
@@ -33,9 +33,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="Request", isNative = true)
 public class Request{
-    
     @JsProperty(name="referrerPolicy")
     private String referrerPolicy;
     
@@ -63,6 +62,12 @@ public class Request{
     @JsProperty(name="referrer")
     public native String getReferrer();
     
+    @JsProperty(name="integrity")
+    public native String getIntegrity();
+    
+    @JsProperty(name="bodyUsed")
+    public native boolean getBodyUsed();
+    
     @JsOverlay
     public final ReferrerPolicy getReferrerPolicy(){
        return ReferrerPolicy.of(referrerPolicy);
@@ -88,34 +93,22 @@ public class Request{
        return RequestRedirect.of(redirect);
     }
     
-    @JsProperty(name="integrity")
-    public native String getIntegrity();
-    
-    @JsProperty(name="bodyUsed")
-    public native boolean getBodyUsed();
-    
     @JsMethod(name = "arrayBuffer")
     public native Promise<ArrayBuffer> arrayBuffer();
-    
     
     @JsMethod(name = "blob")
     public native Promise<Blob> blob();
     
-    
     @JsMethod(name = "clone")
     public native Request clone();
-    
     
     @JsMethod(name = "formData")
     public native Promise<FormData> formData();
     
-    
     @JsMethod(name = "json")
     public native Promise<Object> json();
     
-    
     @JsMethod(name = "text")
     public native Promise<String> text();
-    
     
 }

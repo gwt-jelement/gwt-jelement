@@ -24,9 +24,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="CSSPositionValue", isNative = true)
 public class CSSPositionValue extends CSSStyleValue{
-    
     @JsConstructor
     public CSSPositionValue(CSSNumericValue x, CSSNumericValue y){
         super();
@@ -37,6 +36,5 @@ public class CSSPositionValue extends CSSStyleValue{
     
     @JsProperty(name="y")
     public native CSSNumericValue getY();
-    
     
 }

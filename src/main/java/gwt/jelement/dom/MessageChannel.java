@@ -22,14 +22,12 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="MessageChannel", isNative = true)
 public class MessageChannel{
-    
     @JsProperty(name="port1")
     public native MessagePort getPort1();
     
     @JsProperty(name="port2")
     public native MessagePort getPort2();
-    
     
 }

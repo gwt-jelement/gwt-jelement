@@ -28,9 +28,8 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 import jsinterop.base.Any;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="ScreenOrientation", isNative = true)
 public class ScreenOrientation extends EventTarget{
-    
     @JsProperty(name="onchange")
     private EventHandlerNonNull onchange;
     
@@ -63,9 +62,7 @@ public class ScreenOrientation extends EventTarget{
     @JsMethod(name = "lock")
     public native Promise lock(String orientation);
     
-    
     @JsMethod(name = "unlock")
     public native void unlock();
-    
     
 }

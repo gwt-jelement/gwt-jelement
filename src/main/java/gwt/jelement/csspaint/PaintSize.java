@@ -21,14 +21,12 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="PaintSize", isNative = true)
 public class PaintSize{
-    
     @JsProperty(name="width")
     public native double getWidth();
     
     @JsProperty(name="height")
     public native double getHeight();
-    
     
 }

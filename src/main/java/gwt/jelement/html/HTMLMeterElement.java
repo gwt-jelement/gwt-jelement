@@ -24,9 +24,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="HTMLMeterElement", isNative = true)
 public class HTMLMeterElement extends HTMLElement{
-    
     @JsConstructor
     public HTMLMeterElement(){
         super();
@@ -70,6 +69,5 @@ public class HTMLMeterElement extends HTMLElement{
     
     @JsProperty(name="labels")
     public native NodeList getLabels();
-    
     
 }

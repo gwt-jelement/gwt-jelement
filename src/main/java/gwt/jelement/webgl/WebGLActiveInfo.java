@@ -21,9 +21,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="WebGLActiveInfo", isNative = true)
 public class WebGLActiveInfo{
-    
     @JsProperty(name="size")
     public native double getSize();
     
@@ -32,6 +31,5 @@ public class WebGLActiveInfo{
     
     @JsProperty(name="name")
     public native String getName();
-    
     
 }

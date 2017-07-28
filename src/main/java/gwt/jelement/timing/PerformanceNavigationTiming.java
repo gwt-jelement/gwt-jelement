@@ -19,15 +19,13 @@ package gwt.jelement.timing;
 import gwt.jelement.timing.NavigationType;
 import gwt.jelement.timing.PerformanceResourceTiming;
 import jsinterop.annotations.JsConstructor;
-import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="PerformanceNavigationTiming", isNative = true)
 public class PerformanceNavigationTiming extends PerformanceResourceTiming{
-    
     @JsProperty(name="type")
     private String type;
     
@@ -60,16 +58,12 @@ public class PerformanceNavigationTiming extends PerformanceResourceTiming{
     @JsProperty(name="loadEventEnd")
     public native double getLoadEventEnd();
     
+    @JsProperty(name="redirectCount")
+    public native short getRedirectCount();
+    
     @JsOverlay
     public final NavigationType getType(){
        return NavigationType.of(type);
     }
-    
-    @JsProperty(name="redirectCount")
-    public native short getRedirectCount();
-    
-    @JsMethod(name = "toJSON")
-    public native Object toJSON();
-    
     
 }

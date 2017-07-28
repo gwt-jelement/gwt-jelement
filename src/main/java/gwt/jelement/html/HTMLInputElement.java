@@ -16,6 +16,7 @@
  */
 package gwt.jelement.html;
 
+import gwt.jelement.core.Date;
 import gwt.jelement.dom.NodeList;
 import gwt.jelement.fileapi.FileList;
 import gwt.jelement.filesystem.Entry;
@@ -23,7 +24,6 @@ import gwt.jelement.html.HTMLElement;
 import gwt.jelement.html.HTMLFormElement;
 import gwt.jelement.html.SelectionMode;
 import gwt.jelement.html.ValidityState;
-import elemental2.core.Date;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
@@ -32,9 +32,8 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 import jsinterop.base.Any;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="HTMLInputElement", isNative = true)
 public class HTMLInputElement extends HTMLElement{
-    
     @JsConstructor
     public HTMLInputElement(){
         super();
@@ -328,26 +327,20 @@ public class HTMLInputElement extends HTMLElement{
     @JsMethod(name = "checkValidity")
     public native boolean checkValidity();
     
-    
     @JsMethod(name = "reportValidity")
     public native boolean reportValidity();
-    
     
     @JsMethod(name = "select")
     public native void select();
     
-    
     @JsMethod(name = "setCustomValidity")
     public native void setCustomValidity(String error);
-    
     
     @JsMethod(name = "setRangeText")
     public native void setRangeText(String replacement);
     
-    
     @JsMethod(name = "setRangeText")
     public native void setRangeText(String replacement, double start, double end);
-    
     
     @JsOverlay
     public final void setRangeText(String replacement, double start, double end, SelectionMode selectionMode){
@@ -357,29 +350,22 @@ public class HTMLInputElement extends HTMLElement{
     @JsMethod(name = "setRangeText")
     public native void setRangeText(String replacement, double start, double end, String selectionMode);
     
-    
     @JsMethod(name = "setSelectionRange")
     public native void setSelectionRange(double start, double end);
-    
     
     @JsMethod(name = "setSelectionRange")
     public native void setSelectionRange(double start, double end, String direction);
     
-    
     @JsMethod(name = "stepDown")
     public native void stepDown();
-    
     
     @JsMethod(name = "stepDown")
     public native void stepDown(double n);
     
-    
     @JsMethod(name = "stepUp")
     public native void stepUp();
     
-    
     @JsMethod(name = "stepUp")
     public native void stepUp(double n);
-    
     
 }

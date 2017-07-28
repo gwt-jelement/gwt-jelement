@@ -16,15 +16,14 @@
  */
 package gwt.jelement.gamepad;
 
-import elemental2.core.Float32Array;
+import gwt.jelement.core.Float32Array;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="GamepadPose", isNative = true)
 public class GamepadPose{
-    
     @JsProperty(name="hasOrientation")
     public native boolean getHasOrientation();
     
@@ -48,6 +47,5 @@ public class GamepadPose{
     
     @JsProperty(name="angularAcceleration")
     public native Float32Array getAngularAcceleration();
-    
     
 }

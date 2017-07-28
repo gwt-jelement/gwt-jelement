@@ -22,9 +22,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="WindowEventHandlers", isNative = true)
 public class WindowEventHandlers{
-    
     @JsProperty(name="onbeforeunload")
     private EventHandlerNonNull onbeforeunload;
     
@@ -206,6 +205,5 @@ public class WindowEventHandlers{
     public final void setOnUnload(EventHandlerNonNull onunload){
         this.onunload = onunload;
     }
-    
     
 }

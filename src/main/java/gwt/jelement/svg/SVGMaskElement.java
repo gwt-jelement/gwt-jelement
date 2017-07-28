@@ -26,9 +26,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="SVGMaskElement", isNative = true)
 public class SVGMaskElement extends SVGElement{
-    
     @JsConstructor
     public SVGMaskElement(){
         super();
@@ -57,6 +56,5 @@ public class SVGMaskElement extends SVGElement{
     
     @JsProperty(name="systemLanguage")
     public native SVGStringList getSystemLanguage();
-    
     
 }

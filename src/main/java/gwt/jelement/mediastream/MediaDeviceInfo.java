@@ -17,25 +17,18 @@
 package gwt.jelement.mediastream;
 
 import gwt.jelement.mediastream.MediaDeviceKind;
-import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="MediaDeviceInfo", isNative = true)
 public class MediaDeviceInfo{
-    
     @JsProperty(name="kind")
     private String kind;
     
     @JsProperty(name="deviceId")
     public native String getDeviceId();
-    
-    @JsOverlay
-    public final MediaDeviceKind getKind(){
-       return MediaDeviceKind.of(kind);
-    }
     
     @JsProperty(name="label")
     public native String getLabel();
@@ -43,8 +36,9 @@ public class MediaDeviceInfo{
     @JsProperty(name="groupId")
     public native String getGroupId();
     
-    @JsMethod(name = "toJSON")
-    public native Object toJSON();
-    
+    @JsOverlay
+    public final MediaDeviceKind getKind(){
+       return MediaDeviceKind.of(kind);
+    }
     
 }

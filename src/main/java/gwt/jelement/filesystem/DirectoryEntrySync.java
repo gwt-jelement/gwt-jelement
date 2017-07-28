@@ -27,9 +27,8 @@ import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="DirectoryEntrySync", isNative = true)
 public class DirectoryEntrySync extends EntrySync{
-    
     @JsConstructor
     public DirectoryEntrySync(){
         super();
@@ -38,17 +37,13 @@ public class DirectoryEntrySync extends EntrySync{
     @JsMethod(name = "createReader")
     public native DirectoryReaderSync createReader();
     
-    
     @JsMethod(name = "getDirectory")
     public native DirectoryEntrySync getDirectory(String path, FileSystemFlags flags);
-    
     
     @JsMethod(name = "getFile")
     public native FileEntrySync getFile(String path, FileSystemFlags flags);
     
-    
     @JsMethod(name = "removeRecursively")
     public native void removeRecursively();
-    
     
 }

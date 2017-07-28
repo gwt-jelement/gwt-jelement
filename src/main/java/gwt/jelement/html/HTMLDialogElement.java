@@ -24,9 +24,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="HTMLDialogElement", isNative = true)
 public class HTMLDialogElement extends HTMLElement{
-    
     @JsConstructor
     public HTMLDialogElement(){
         super();
@@ -47,17 +46,13 @@ public class HTMLDialogElement extends HTMLElement{
     @JsMethod(name = "close")
     public native void close();
     
-    
     @JsMethod(name = "close")
     public native void close(String returnValue);
-    
     
     @JsMethod(name = "show")
     public native void show();
     
-    
     @JsMethod(name = "showModal")
     public native void showModal();
-    
     
 }

@@ -24,9 +24,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="MIDIInput", isNative = true)
 public class MIDIInput extends MIDIPort{
-    
     @JsProperty(name="onmidimessage")
     private EventHandlerNonNull onmidimessage;
     
@@ -44,6 +43,5 @@ public class MIDIInput extends MIDIPort{
     public final void setOnMidimessage(EventHandlerNonNull onmidimessage){
         this.onmidimessage = onmidimessage;
     }
-    
     
 }

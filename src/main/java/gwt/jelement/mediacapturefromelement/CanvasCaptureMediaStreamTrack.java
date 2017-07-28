@@ -25,9 +25,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="CanvasCaptureMediaStreamTrack", isNative = true)
 public class CanvasCaptureMediaStreamTrack extends MediaStreamTrack{
-    
     @JsConstructor
     public CanvasCaptureMediaStreamTrack(){
         super();
@@ -38,6 +37,5 @@ public class CanvasCaptureMediaStreamTrack extends MediaStreamTrack{
     
     @JsMethod(name = "requestFrame")
     public native void requestFrame();
-    
     
 }

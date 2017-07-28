@@ -21,9 +21,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="SpeechSynthesisVoice", isNative = true)
 public class SpeechSynthesisVoice{
-    
     @JsProperty(name="voiceURI")
     public native String getVoiceURI();
     
@@ -38,6 +37,5 @@ public class SpeechSynthesisVoice{
     
     @JsProperty(name="default")
     public native boolean getDefault();
-    
     
 }

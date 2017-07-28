@@ -24,9 +24,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="Touch", isNative = true)
 public class Touch{
-    
     @JsConstructor
     public Touch(TouchInit initDict){
     }
@@ -69,6 +68,5 @@ public class Touch{
     
     @JsProperty(name="region")
     public native String getRegion();
-    
     
 }

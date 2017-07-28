@@ -24,9 +24,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="DeviceOrientationEvent", isNative = true)
 public class DeviceOrientationEvent extends Event{
-    
     @JsConstructor
     public DeviceOrientationEvent(String type){
         super((String) null);
@@ -48,6 +47,5 @@ public class DeviceOrientationEvent extends Event{
     
     @JsProperty(name="absolute")
     public native boolean getAbsolute();
-    
     
 }

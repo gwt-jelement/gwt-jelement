@@ -25,9 +25,8 @@ import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="Clipboard", isNative = true)
 public class Clipboard extends EventTarget{
-    
     @JsConstructor
     public Clipboard(){
         super();
@@ -36,17 +35,13 @@ public class Clipboard extends EventTarget{
     @JsMethod(name = "read")
     public native Promise<DataTransfer> read();
     
-    
     @JsMethod(name = "readText")
     public native Promise<String> readText();
-    
     
     @JsMethod(name = "write")
     public native Promise<Void> write(DataTransfer data);
     
-    
     @JsMethod(name = "writeText")
     public native Promise<Void> writeText(String data);
-    
     
 }

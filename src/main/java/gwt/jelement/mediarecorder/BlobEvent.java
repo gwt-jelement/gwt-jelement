@@ -25,9 +25,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="BlobEvent", isNative = true)
 public class BlobEvent extends Event{
-    
     @JsConstructor
     public BlobEvent(String type, BlobEventInit eventInitDict){
         super((String) null);
@@ -38,6 +37,5 @@ public class BlobEvent extends Event{
     
     @JsProperty(name="timecode")
     public native double getTimecode();
-    
     
 }

@@ -23,9 +23,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="HTMLOptGroupElement", isNative = true)
 public class HTMLOptGroupElement extends HTMLElement{
-    
     @JsConstructor
     public HTMLOptGroupElement(){
         super();
@@ -42,6 +41,5 @@ public class HTMLOptGroupElement extends HTMLElement{
     
     @JsProperty(name="label")
     public native void setLabel(String label);
-    
     
 }

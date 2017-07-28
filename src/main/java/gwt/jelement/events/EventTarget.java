@@ -25,35 +25,27 @@ import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="EventTarget", isNative = true)
 public class EventTarget{
-    
     @JsMethod(name = "addEventListener")
     public native void addEventListener(String type, EventListener listener);
-    
     
     @JsMethod(name = "addEventListener")
     public native void addEventListener(String type, EventListener listener, AddEventListenerOptions options);
     
-    
     @JsMethod(name = "addEventListener")
     public native void addEventListener(String type, EventListener listener, boolean options);
-    
     
     @JsMethod(name = "dispatchEvent")
     public native boolean dispatchEvent(Event event);
     
-    
     @JsMethod(name = "removeEventListener")
     public native void removeEventListener(String type, EventListener listener);
-    
     
     @JsMethod(name = "removeEventListener")
     public native void removeEventListener(String type, EventListener listener, EventListenerOptions options);
     
-    
     @JsMethod(name = "removeEventListener")
     public native void removeEventListener(String type, EventListener listener, boolean options);
-    
     
 }

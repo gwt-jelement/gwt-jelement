@@ -26,15 +26,14 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="SVGTextPathElement", isNative = true)
 public class SVGTextPathElement extends SVGTextContentElement{
-    public static int TEXTPATH_METHODTYPE_UNKNOWN;
-    public static int TEXTPATH_METHODTYPE_ALIGN;
-    public static int TEXTPATH_METHODTYPE_STRETCH;
-    public static int TEXTPATH_SPACINGTYPE_UNKNOWN;
-    public static int TEXTPATH_SPACINGTYPE_AUTO;
-    public static int TEXTPATH_SPACINGTYPE_EXACT;
-    
+    public static short TEXTPATH_METHODTYPE_UNKNOWN;
+    public static short TEXTPATH_METHODTYPE_ALIGN;
+    public static short TEXTPATH_METHODTYPE_STRETCH;
+    public static short TEXTPATH_SPACINGTYPE_UNKNOWN;
+    public static short TEXTPATH_SPACINGTYPE_AUTO;
+    public static short TEXTPATH_SPACINGTYPE_EXACT;
     
     @JsConstructor
     public SVGTextPathElement(){
@@ -52,6 +51,5 @@ public class SVGTextPathElement extends SVGTextContentElement{
     
     @JsProperty(name="href")
     public native SVGAnimatedString getHref();
-    
     
 }

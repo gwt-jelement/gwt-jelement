@@ -23,15 +23,13 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="USBIsochronousOutTransferResult", isNative = true)
 public class USBIsochronousOutTransferResult{
-    
     @JsConstructor
     public USBIsochronousOutTransferResult(USBIsochronousOutTransferPacket[] packets){
     }
     
     @JsProperty(name="packets")
     public native USBIsochronousOutTransferPacket[] getPackets();
-    
     
 }

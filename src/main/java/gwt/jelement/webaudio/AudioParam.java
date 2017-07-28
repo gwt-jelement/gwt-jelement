@@ -23,9 +23,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="AudioParam", isNative = true)
 public class AudioParam{
-    
     @JsProperty(name="value")
     public native float getValue();
     
@@ -44,29 +43,22 @@ public class AudioParam{
     @JsMethod(name = "cancelAndHoldAtTime")
     public native AudioParam cancelAndHoldAtTime(double startTime);
     
-    
     @JsMethod(name = "cancelScheduledValues")
     public native AudioParam cancelScheduledValues(double startTime);
-    
     
     @JsMethod(name = "exponentialRampToValueAtTime")
     public native AudioParam exponentialRampToValueAtTime(float value, double time);
     
-    
     @JsMethod(name = "linearRampToValueAtTime")
     public native AudioParam linearRampToValueAtTime(float value, double time);
-    
     
     @JsMethod(name = "setTargetAtTime")
     public native AudioParam setTargetAtTime(float target, double time, double timeConstant);
     
-    
     @JsMethod(name = "setValueAtTime")
     public native AudioParam setValueAtTime(float value, double time);
     
-    
     @JsMethod(name = "setValueCurveAtTime")
     public native AudioParam setValueCurveAtTime(float[] values, double time, double duration);
-    
     
 }

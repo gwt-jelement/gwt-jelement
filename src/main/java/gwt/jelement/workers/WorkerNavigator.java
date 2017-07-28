@@ -25,9 +25,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="WorkerNavigator", isNative = true)
 public class WorkerNavigator{
-    
     @JsProperty(name="budget")
     public native BudgetService getBudget();
     
@@ -63,6 +62,5 @@ public class WorkerNavigator{
     
     @JsProperty(name="onLine")
     public native boolean getOnLine();
-    
     
 }

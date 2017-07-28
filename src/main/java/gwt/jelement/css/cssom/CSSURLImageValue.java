@@ -23,9 +23,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="CSSURLImageValue", isNative = true)
 public class CSSURLImageValue extends CSSImageValue{
-    
     @JsConstructor
     public CSSURLImageValue(String url){
         super();
@@ -33,6 +32,5 @@ public class CSSURLImageValue extends CSSImageValue{
     
     @JsProperty(name="url")
     public native String getUrl();
-    
     
 }

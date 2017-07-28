@@ -22,19 +22,15 @@ import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="ResizeObserver", isNative = true)
 public class ResizeObserver{
-    
     @JsMethod(name = "disconnect")
     public native void disconnect();
-    
     
     @JsMethod(name = "observe")
     public native void observe(Element target);
     
-    
     @JsMethod(name = "unobserve")
     public native void unobserve(Element target);
-    
     
 }

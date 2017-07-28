@@ -24,9 +24,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="HTMLLegendElement", isNative = true)
 public class HTMLLegendElement extends HTMLElement{
-    
     @JsConstructor
     public HTMLLegendElement(){
         super();
@@ -40,6 +39,5 @@ public class HTMLLegendElement extends HTMLElement{
     
     @JsProperty(name="align")
     public native void setAlign(String align);
-    
     
 }

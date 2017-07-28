@@ -28,9 +28,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="Entry", isNative = true)
 public class Entry{
-    
     @JsProperty(name="isFile")
     public native boolean getIsFile();
     
@@ -49,65 +48,49 @@ public class Entry{
     @JsMethod(name = "copyTo")
     public native void copyTo(DirectoryEntry parent);
     
-    
     @JsMethod(name = "copyTo")
     public native void copyTo(DirectoryEntry parent, String name);
-    
     
     @JsMethod(name = "copyTo")
     public native void copyTo(DirectoryEntry parent, String name, EntryCallback successCallback);
     
-    
     @JsMethod(name = "copyTo")
     public native void copyTo(DirectoryEntry parent, String name, EntryCallback successCallback, ErrorCallback errorCallback);
-    
     
     @JsMethod(name = "getMetadata")
     public native void getMetadata(MetadataCallback successCallback);
     
-    
     @JsMethod(name = "getMetadata")
     public native void getMetadata(MetadataCallback successCallback, ErrorCallback errorCallback);
-    
     
     @JsMethod(name = "getParent")
     public native void getParent();
     
-    
     @JsMethod(name = "getParent")
     public native void getParent(EntryCallback successCallback);
-    
     
     @JsMethod(name = "getParent")
     public native void getParent(EntryCallback successCallback, ErrorCallback errorCallback);
     
-    
     @JsMethod(name = "moveTo")
     public native void moveTo(DirectoryEntry parent);
-    
     
     @JsMethod(name = "moveTo")
     public native void moveTo(DirectoryEntry parent, String name);
     
-    
     @JsMethod(name = "moveTo")
     public native void moveTo(DirectoryEntry parent, String name, EntryCallback successCallback);
-    
     
     @JsMethod(name = "moveTo")
     public native void moveTo(DirectoryEntry parent, String name, EntryCallback successCallback, ErrorCallback errorCallback);
     
-    
     @JsMethod(name = "remove")
     public native void remove(VoidCallback successCallback);
-    
     
     @JsMethod(name = "remove")
     public native void remove(VoidCallback successCallback, ErrorCallback errorCallback);
     
-    
     @JsMethod(name = "toURL")
     public native String toURL();
-    
     
 }

@@ -16,9 +16,9 @@
  */
 package gwt.jelement.push_messaging;
 
+import gwt.jelement.core.ArrayBuffer;
 import gwt.jelement.push_messaging.PushEncryptionKeyName;
 import gwt.jelement.push_messaging.PushSubscriptionOptions;
-import elemental2.core.ArrayBuffer;
 import elemental2.promise.Promise;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
@@ -27,9 +27,8 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 import jsinterop.base.Any;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="PushSubscription", isNative = true)
 public class PushSubscription{
-    
     @JsProperty(name="endpoint")
     public native String getEndpoint();
     
@@ -47,13 +46,7 @@ public class PushSubscription{
     @JsMethod(name = "getKey")
     public native ArrayBuffer getKey(String name);
     
-    
-    @JsMethod(name = "toJSON")
-    public native Object toJSON();
-    
-    
     @JsMethod(name = "unsubscribe")
     public native Promise<Boolean> unsubscribe();
-    
     
 }

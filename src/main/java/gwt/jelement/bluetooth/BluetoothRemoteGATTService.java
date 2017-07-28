@@ -25,9 +25,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="BluetoothRemoteGATTService", isNative = true)
 public class BluetoothRemoteGATTService{
-    
     @JsProperty(name="device")
     public native BluetoothDevice getDevice();
     
@@ -40,21 +39,16 @@ public class BluetoothRemoteGATTService{
     @JsMethod(name = "getCharacteristic")
     public native Promise<BluetoothRemoteGATTCharacteristic> getCharacteristic(String characteristic);
     
-    
     @JsMethod(name = "getCharacteristic")
     public native Promise<BluetoothRemoteGATTCharacteristic> getCharacteristic(double characteristic);
-    
     
     @JsMethod(name = "getCharacteristics")
     public native Promise<BluetoothRemoteGATTCharacteristic[]> getCharacteristics();
     
-    
     @JsMethod(name = "getCharacteristics")
     public native Promise<BluetoothRemoteGATTCharacteristic[]> getCharacteristics(String characteristic);
     
-    
     @JsMethod(name = "getCharacteristics")
     public native Promise<BluetoothRemoteGATTCharacteristic[]> getCharacteristics(double characteristic);
-    
     
 }

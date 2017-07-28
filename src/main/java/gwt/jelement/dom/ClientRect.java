@@ -21,9 +21,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="ClientRect", isNative = true)
 public class ClientRect{
-    
     @JsProperty(name="top")
     public native float getTop();
     
@@ -41,6 +40,5 @@ public class ClientRect{
     
     @JsProperty(name="height")
     public native float getHeight();
-    
     
 }

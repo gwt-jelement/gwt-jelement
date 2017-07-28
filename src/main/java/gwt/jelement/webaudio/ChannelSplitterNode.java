@@ -24,9 +24,8 @@ import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="ChannelSplitterNode", isNative = true)
 public class ChannelSplitterNode extends AudioNode{
-    
     @JsConstructor
     public ChannelSplitterNode(BaseAudioContext context){
         super();
@@ -36,6 +35,5 @@ public class ChannelSplitterNode extends AudioNode{
     public ChannelSplitterNode(BaseAudioContext context, ChannelSplitterOptions options){
         super();
     }
-    
     
 }

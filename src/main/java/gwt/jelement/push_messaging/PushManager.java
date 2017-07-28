@@ -25,30 +25,24 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="PushManager", isNative = true)
 public class PushManager{
-    
     @JsProperty(name="supportedContentEncodings")
-    public static native String[] getSupportedContentEncodings();
+    public static String[] supportedContentEncodings;
     
     @JsMethod(name = "getSubscription")
     public native Promise<PushSubscription> getSubscription();
     
-    
     @JsMethod(name = "permissionState")
     public native Promise permissionState();
-    
     
     @JsMethod(name = "permissionState")
     public native Promise permissionState(PushSubscriptionOptionsInit options);
     
-    
     @JsMethod(name = "subscribe")
     public native Promise<PushSubscription> subscribe();
     
-    
     @JsMethod(name = "subscribe")
     public native Promise<PushSubscription> subscribe(PushSubscriptionOptionsInit options);
-    
     
 }

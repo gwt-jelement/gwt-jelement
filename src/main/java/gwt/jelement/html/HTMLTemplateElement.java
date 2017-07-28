@@ -24,9 +24,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="HTMLTemplateElement", isNative = true)
 public class HTMLTemplateElement extends HTMLElement{
-    
     @JsConstructor
     public HTMLTemplateElement(){
         super();
@@ -34,6 +33,5 @@ public class HTMLTemplateElement extends HTMLElement{
     
     @JsProperty(name="content")
     public native DocumentFragment getContent();
-    
     
 }

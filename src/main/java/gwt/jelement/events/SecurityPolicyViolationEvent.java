@@ -24,9 +24,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="SecurityPolicyViolationEvent", isNative = true)
 public class SecurityPolicyViolationEvent extends Event{
-    
     @JsProperty(name="disposition")
     private String disposition;
     
@@ -53,11 +52,6 @@ public class SecurityPolicyViolationEvent extends Event{
     @JsProperty(name="originalPolicy")
     public native String getOriginalPolicy();
     
-    @JsOverlay
-    public final SecurityPolicyViolationEventDisposition getDisposition(){
-       return SecurityPolicyViolationEventDisposition.of(disposition);
-    }
-    
     @JsProperty(name="sourceFile")
     public native String getSourceFile();
     
@@ -73,5 +67,9 @@ public class SecurityPolicyViolationEvent extends Event{
     @JsProperty(name="sample")
     public native String getSample();
     
+    @JsOverlay
+    public final SecurityPolicyViolationEventDisposition getDisposition(){
+       return SecurityPolicyViolationEventDisposition.of(disposition);
+    }
     
 }

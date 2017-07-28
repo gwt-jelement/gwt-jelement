@@ -21,11 +21,9 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="NavigatorCookies", isNative = true)
 public class NavigatorCookies{
-    
     @JsProperty(name="cookieEnabled")
     public native boolean getCookieEnabled();
-    
     
 }

@@ -27,12 +27,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="MediaRecorder", isNative = true)
 public class MediaRecorder extends EventTarget{
-    
-    @JsProperty(name="state")
-    private String state;
-    
     @JsProperty(name="onstart")
     private EventHandlerNonNull onstart;
     
@@ -51,6 +47,9 @@ public class MediaRecorder extends EventTarget{
     @JsProperty(name="onerror")
     private EventHandlerNonNull onerror;
     
+    @JsProperty(name="state")
+    private String state;
+    
     @JsConstructor
     public MediaRecorder(){
         super();
@@ -61,11 +60,6 @@ public class MediaRecorder extends EventTarget{
     
     @JsProperty(name="mimeType")
     public native String getMimeType();
-    
-    @JsOverlay
-    public final RecordingState getState(){
-       return RecordingState.of(state);
-    }
     
     @JsOverlay
     public final EventHandlerNonNull getOnStart(){
@@ -133,32 +127,30 @@ public class MediaRecorder extends EventTarget{
     @JsProperty(name="audioBitsPerSecond")
     public native double getAudioBitsPerSecond();
     
-    @JsMethod(name = "isTypeSupported")
-    public native boolean isTypeSupported(String type);
+    @JsOverlay
+    public final RecordingState getState(){
+       return RecordingState.of(state);
+    }
     
+    @JsMethod(name = "isTypeSupported")
+    public static native boolean isTypeSupported(String type);
     
     @JsMethod(name = "pause")
     public native void pause();
     
-    
     @JsMethod(name = "requestData")
     public native void requestData();
-    
     
     @JsMethod(name = "resume")
     public native void resume();
     
-    
     @JsMethod(name = "start")
     public native void start();
-    
     
     @JsMethod(name = "start")
     public native void start(double timeslice);
     
-    
     @JsMethod(name = "stop")
     public native void stop();
-    
     
 }

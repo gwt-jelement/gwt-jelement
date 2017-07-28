@@ -35,9 +35,8 @@ import jsinterop.annotations.JsType;
 import jsinterop.base.Any;
 import jsinterop.base.Js;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="OffscreenCanvas", isNative = true)
 public class OffscreenCanvas extends EventTarget{
-    
     @JsType(isNative = true, name = "?", namespace = JsPackage.GLOBAL)
     public interface OffscreenRenderingContext {
         @JsOverlay
@@ -107,10 +106,8 @@ public class OffscreenCanvas extends EventTarget{
     @JsMethod(name = "convertToBlob")
     public native Promise<Blob> convertToBlob();
     
-    
     @JsMethod(name = "convertToBlob")
     public native Promise<Blob> convertToBlob(ImageEncodeOptions options);
-    
     
     @JsOverlay
     public final OffscreenCanvas.OffscreenRenderingContext getContext(OffscreenRenderingContextType contextType){
@@ -120,7 +117,6 @@ public class OffscreenCanvas extends EventTarget{
     @JsMethod(name = "getContext")
     public native OffscreenCanvas.OffscreenRenderingContext getContext(String contextType);
     
-    
     @JsOverlay
     public final OffscreenCanvas.OffscreenRenderingContext getContext(OffscreenRenderingContextType contextType, CanvasContextCreationAttributes attributes){
         return getContext(contextType.getInternalValue(), attributes);
@@ -129,9 +125,7 @@ public class OffscreenCanvas extends EventTarget{
     @JsMethod(name = "getContext")
     public native OffscreenCanvas.OffscreenRenderingContext getContext(String contextType, CanvasContextCreationAttributes attributes);
     
-    
     @JsMethod(name = "transferToImageBitmap")
     public native ImageBitmap transferToImageBitmap();
-    
     
 }

@@ -16,11 +16,11 @@
  */
 package gwt.jelement.encryptedmedia;
 
+import gwt.jelement.core.ArrayBuffer;
+import gwt.jelement.core.ArrayBufferView;
 import gwt.jelement.encryptedmedia.MediaKeySession;
 import gwt.jelement.encryptedmedia.MediaKeySessionType;
 import gwt.jelement.encryptedmedia.MediaKeysPolicy;
-import elemental2.core.ArrayBuffer;
-import elemental2.core.ArrayBufferView;
 import elemental2.promise.Promise;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
@@ -28,12 +28,10 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 import jsinterop.base.Any;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="MediaKeys", isNative = true)
 public class MediaKeys{
-    
     @JsMethod(name = "createSession")
     public native MediaKeySession createSession();
-    
     
     @JsOverlay
     public final MediaKeySession createSession(MediaKeySessionType sessionType){
@@ -43,17 +41,13 @@ public class MediaKeys{
     @JsMethod(name = "createSession")
     public native MediaKeySession createSession(String sessionType);
     
-    
     @JsMethod(name = "getStatusForPolicy")
     public native Promise<String> getStatusForPolicy(MediaKeysPolicy policy);
-    
     
     @JsMethod(name = "setServerCertificate")
     public native Promise<Boolean> setServerCertificate(ArrayBuffer serverCertificate);
     
-    
     @JsMethod(name = "setServerCertificate")
     public native Promise<Boolean> setServerCertificate(ArrayBufferView serverCertificate);
-    
     
 }

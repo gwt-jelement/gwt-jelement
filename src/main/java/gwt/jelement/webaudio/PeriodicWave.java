@@ -23,9 +23,8 @@ import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="PeriodicWave", isNative = true)
 public class PeriodicWave{
-    
     @JsConstructor
     public PeriodicWave(BaseAudioContext context){
     }
@@ -33,6 +32,5 @@ public class PeriodicWave{
     @JsConstructor
     public PeriodicWave(BaseAudioContext context, PeriodicWaveOptions options){
     }
-    
     
 }

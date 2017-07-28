@@ -26,9 +26,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="DataTransfer", isNative = true)
 public class DataTransfer{
-    
     @JsConstructor
     public DataTransfer(){
     }
@@ -57,21 +56,16 @@ public class DataTransfer{
     @JsMethod(name = "clearData")
     public native void clearData();
     
-    
     @JsMethod(name = "clearData")
     public native void clearData(String format);
-    
     
     @JsMethod(name = "getData")
     public native String getData(String format);
     
-    
     @JsMethod(name = "setData")
     public native void setData(String format, String data);
     
-    
     @JsMethod(name = "setDragImage")
     public native void setDragImage(Element image, double x, double y);
-    
     
 }

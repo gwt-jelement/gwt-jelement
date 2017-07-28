@@ -22,9 +22,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="GlobalEventHandlers", isNative = true)
 public class GlobalEventHandlers{
-    
     @JsProperty(name="onabort")
     private EventHandlerNonNull onabort;
     
@@ -973,6 +972,5 @@ public class GlobalEventHandlers{
     public final void setOnTouchstart(EventHandlerNonNull ontouchstart){
         this.ontouchstart = ontouchstart;
     }
-    
     
 }

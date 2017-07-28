@@ -22,9 +22,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="SpeechGrammar", isNative = true)
 public class SpeechGrammar{
-    
     @JsConstructor
     public SpeechGrammar(){
     }
@@ -40,6 +39,5 @@ public class SpeechGrammar{
     
     @JsProperty(name="weight")
     public native void setWeight(float weight);
-    
     
 }

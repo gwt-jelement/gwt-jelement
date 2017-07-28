@@ -23,14 +23,12 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="SVGFitToViewBox", isNative = true)
 public class SVGFitToViewBox{
-    
     @JsProperty(name="viewBox")
     public native SVGAnimatedRect getViewBox();
     
     @JsProperty(name="preserveAspectRatio")
     public native SVGAnimatedPreserveAspectRatio getPreserveAspectRatio();
-    
     
 }

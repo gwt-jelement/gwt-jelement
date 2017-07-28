@@ -23,9 +23,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="TrackDefaultList", isNative = true)
 public class TrackDefaultList{
-    
     @JsConstructor
     public TrackDefaultList(){
     }
@@ -36,6 +35,5 @@ public class TrackDefaultList{
     
     @JsProperty(name="length")
     public native double getLength();
-    
     
 }

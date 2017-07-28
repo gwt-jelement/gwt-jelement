@@ -27,9 +27,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="SVGFEGaussianBlurElement", isNative = true)
 public class SVGFEGaussianBlurElement extends SVGElement{
-    
     @JsConstructor
     public SVGFEGaussianBlurElement(){
         super();
@@ -61,6 +60,5 @@ public class SVGFEGaussianBlurElement extends SVGElement{
     
     @JsMethod(name = "setStdDeviation")
     public native void setStdDeviation(float stdDeviationX, float stdDeviationY);
-    
     
 }

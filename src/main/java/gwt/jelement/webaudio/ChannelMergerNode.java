@@ -24,9 +24,8 @@ import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="ChannelMergerNode", isNative = true)
 public class ChannelMergerNode extends AudioNode{
-    
     @JsConstructor
     public ChannelMergerNode(BaseAudioContext context){
         super();
@@ -36,6 +35,5 @@ public class ChannelMergerNode extends AudioNode{
     public ChannelMergerNode(BaseAudioContext context, ChannelMergerOptions options){
         super();
     }
-    
     
 }

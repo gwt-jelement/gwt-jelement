@@ -23,14 +23,12 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="TextTrackCueList", isNative = true)
 public class TextTrackCueList{
-    
     @JsProperty(name="length")
     public native double getLength();
     
     @JsMethod(name = "getCueById")
     public native TextTrackCue getCueById(String id);
-    
     
 }

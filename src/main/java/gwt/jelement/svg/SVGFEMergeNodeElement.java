@@ -24,9 +24,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="SVGFEMergeNodeElement", isNative = true)
 public class SVGFEMergeNodeElement extends SVGElement{
-    
     @JsConstructor
     public SVGFEMergeNodeElement(){
         super();
@@ -34,6 +33,5 @@ public class SVGFEMergeNodeElement extends SVGElement{
     
     @JsProperty(name="in1")
     public native SVGAnimatedString getIn1();
-    
     
 }

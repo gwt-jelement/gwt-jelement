@@ -26,9 +26,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="TextTrackList", isNative = true)
 public class TextTrackList extends EventTarget{
-    
     @JsProperty(name="onchange")
     private EventHandlerNonNull onchange;
     
@@ -78,6 +77,5 @@ public class TextTrackList extends EventTarget{
     
     @JsMethod(name = "getTrackById")
     public native TextTrack getTrackById(String id);
-    
     
 }

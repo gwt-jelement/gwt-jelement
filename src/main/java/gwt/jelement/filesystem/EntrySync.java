@@ -26,9 +26,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="EntrySync", isNative = true)
 public class EntrySync{
-    
     @JsProperty(name="isFile")
     public native boolean getIsFile();
     
@@ -47,25 +46,19 @@ public class EntrySync{
     @JsMethod(name = "copyTo")
     public native EntrySync copyTo(DirectoryEntrySync parent, String name);
     
-    
     @JsMethod(name = "getMetadata")
     public native Metadata getMetadata();
-    
     
     @JsMethod(name = "getParent")
     public native DirectoryEntrySync getParent();
     
-    
     @JsMethod(name = "moveTo")
     public native EntrySync moveTo(DirectoryEntrySync parent, String name);
-    
     
     @JsMethod(name = "remove")
     public native void remove();
     
-    
     @JsMethod(name = "toURL")
     public native String toURL();
-    
     
 }

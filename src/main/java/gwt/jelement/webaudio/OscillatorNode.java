@@ -27,9 +27,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="OscillatorNode", isNative = true)
 public class OscillatorNode extends AudioScheduledSourceNode{
-    
     @JsProperty(name="type")
     private String type;
     
@@ -37,6 +36,12 @@ public class OscillatorNode extends AudioScheduledSourceNode{
     public OscillatorNode(){
         super();
     }
+    
+    @JsProperty(name="frequency")
+    public native AudioParam getFrequency();
+    
+    @JsProperty(name="detune")
+    public native AudioParam getDetune();
     
     @JsOverlay
     public final OscillatorType getType(){
@@ -48,14 +53,7 @@ public class OscillatorNode extends AudioScheduledSourceNode{
        this.type = type.getInternalValue();
     }
     
-    @JsProperty(name="frequency")
-    public native AudioParam getFrequency();
-    
-    @JsProperty(name="detune")
-    public native AudioParam getDetune();
-    
     @JsMethod(name = "setPeriodicWave")
     public native void setPeriodicWave(PeriodicWave periodicWave);
-    
     
 }

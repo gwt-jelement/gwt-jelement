@@ -24,9 +24,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="HTMLOptionElement", isNative = true)
 public class HTMLOptionElement extends HTMLElement{
-    
     @JsConstructor
     public HTMLOptionElement(){
         super();
@@ -73,6 +72,5 @@ public class HTMLOptionElement extends HTMLElement{
     
     @JsProperty(name="index")
     public native double getIndex();
-    
     
 }

@@ -27,9 +27,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="MediaStream", isNative = true)
 public class MediaStream extends EventTarget{
-    
     @JsProperty(name="onaddtrack")
     private EventHandlerNonNull onaddtrack;
     
@@ -106,29 +105,22 @@ public class MediaStream extends EventTarget{
     @JsMethod(name = "addTrack")
     public native void addTrack(MediaStreamTrack track);
     
-    
     @JsMethod(name = "clone")
     public native MediaStream clone();
-    
     
     @JsMethod(name = "getAudioTracks")
     public native MediaStreamTrack[] getAudioTracks();
     
-    
     @JsMethod(name = "getTrackById")
     public native MediaStreamTrack getTrackById(String trackId);
-    
     
     @JsMethod(name = "getTracks")
     public native MediaStreamTrack[] getTracks();
     
-    
     @JsMethod(name = "getVideoTracks")
     public native MediaStreamTrack[] getVideoTracks();
     
-    
     @JsMethod(name = "removeTrack")
     public native void removeTrack(MediaStreamTrack track);
-    
     
 }

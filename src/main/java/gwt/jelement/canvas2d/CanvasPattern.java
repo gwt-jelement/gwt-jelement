@@ -22,11 +22,9 @@ import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="CanvasPattern", isNative = true)
 public class CanvasPattern{
-    
     @JsMethod(name = "setTransform")
     public native void setTransform(SVGMatrix transform);
-    
     
 }

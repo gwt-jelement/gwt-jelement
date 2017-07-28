@@ -24,15 +24,12 @@ import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="Bluetooth", isNative = true)
 public class Bluetooth{
-    
     @JsMethod(name = "requestDevice")
     public native Promise<BluetoothDevice> requestDevice();
     
-    
     @JsMethod(name = "requestDevice")
     public native Promise<BluetoothDevice> requestDevice(RequestDeviceOptions options);
-    
     
 }

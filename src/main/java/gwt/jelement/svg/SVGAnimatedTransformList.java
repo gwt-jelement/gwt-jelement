@@ -22,14 +22,12 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="SVGAnimatedTransformList", isNative = true)
 public class SVGAnimatedTransformList{
-    
     @JsProperty(name="baseVal")
     public native SVGTransformList getBaseVal();
     
     @JsProperty(name="animVal")
     public native SVGTransformList getAnimVal();
-    
     
 }

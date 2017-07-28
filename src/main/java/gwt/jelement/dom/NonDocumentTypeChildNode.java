@@ -22,14 +22,12 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="NonDocumentTypeChildNode", isNative = true)
 public class NonDocumentTypeChildNode{
-    
     @JsProperty(name="previousElementSibling")
     public native Element getPreviousElementSibling();
     
     @JsProperty(name="nextElementSibling")
     public native Element getNextElementSibling();
-    
     
 }

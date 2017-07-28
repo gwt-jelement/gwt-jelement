@@ -27,9 +27,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="DOMPointReadOnly", isNative = true)
 public class DOMPointReadOnly{
-    
     @JsConstructor
     public DOMPointReadOnly(){
     }
@@ -63,23 +62,15 @@ public class DOMPointReadOnly{
     public native double getW();
     
     @JsMethod(name = "fromPoint")
-    public native DOMPointReadOnly fromPoint();
-    
+    public static native DOMPointReadOnly fromPoint();
     
     @JsMethod(name = "fromPoint")
-    public native DOMPointReadOnly fromPoint(DOMPointInit other);
-    
+    public static native DOMPointReadOnly fromPoint(DOMPointInit other);
     
     @JsMethod(name = "matrixTransform")
     public native DOMPoint matrixTransform();
     
-    
     @JsMethod(name = "matrixTransform")
     public native DOMPoint matrixTransform(DOMMatrixInit matrix);
-    
-    
-    @JsMethod(name = "toJSON")
-    public native Object toJSON();
-    
     
 }

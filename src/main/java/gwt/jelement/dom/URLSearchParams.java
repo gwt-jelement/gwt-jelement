@@ -21,39 +21,27 @@ import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="URLSearchParams", isNative = true)
 public class URLSearchParams{
-    
     @JsMethod(name = "append")
     public native void append(String name, String value);
-    
     
     @JsMethod(name = "delete")
     public native void delete(String name);
     
-    
     @JsMethod(name = "get")
     public native String get(String name);
-    
     
     @JsMethod(name = "getAll")
     public native String[] getAll(String name);
     
-    
     @JsMethod(name = "has")
     public native boolean has(String name);
-    
     
     @JsMethod(name = "set")
     public native void set(String name, String value);
     
-    
     @JsMethod(name = "sort")
     public native void sort();
-    
-    
-    @JsMethod(name = "toString")
-    public native String toString();
-    
     
 }

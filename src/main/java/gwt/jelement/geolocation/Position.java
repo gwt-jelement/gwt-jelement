@@ -22,14 +22,12 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="Position", isNative = true)
 public class Position{
-    
     @JsProperty(name="coords")
     public native Coordinates getCoords();
     
     @JsProperty(name="timestamp")
     public native double getTimestamp();
-    
     
 }

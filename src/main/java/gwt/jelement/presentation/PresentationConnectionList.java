@@ -25,9 +25,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="PresentationConnectionList", isNative = true)
 public class PresentationConnectionList extends EventTarget{
-    
     @JsProperty(name="onconnectionavailable")
     private EventHandlerNonNull onconnectionavailable;
     
@@ -48,6 +47,5 @@ public class PresentationConnectionList extends EventTarget{
     public final void setOnConnectionavailable(EventHandlerNonNull onconnectionavailable){
         this.onconnectionavailable = onconnectionavailable;
     }
-    
     
 }

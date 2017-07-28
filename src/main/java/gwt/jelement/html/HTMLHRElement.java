@@ -23,9 +23,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="HTMLHRElement", isNative = true)
 public class HTMLHRElement extends HTMLElement{
-    
     @JsConstructor
     public HTMLHRElement(){
         super();
@@ -60,6 +59,5 @@ public class HTMLHRElement extends HTMLElement{
     
     @JsProperty(name="width")
     public native void setWidth(String width);
-    
     
 }

@@ -23,9 +23,8 @@ import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="LinearAccelerationSensor", isNative = true)
 public class LinearAccelerationSensor extends Accelerometer{
-    
     @JsConstructor
     public LinearAccelerationSensor(){
         super();
@@ -35,6 +34,5 @@ public class LinearAccelerationSensor extends Accelerometer{
     public LinearAccelerationSensor(SensorOptions sensorOptions){
         super();
     }
-    
     
 }

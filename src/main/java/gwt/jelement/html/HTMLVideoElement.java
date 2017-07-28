@@ -25,9 +25,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="HTMLVideoElement", isNative = true)
 public class HTMLVideoElement extends HTMLMediaElement{
-    
     @JsConstructor
     public HTMLVideoElement(){
         super();
@@ -72,21 +71,16 @@ public class HTMLVideoElement extends HTMLMediaElement{
     @JsMethod(name = "getVideoPlaybackQuality")
     public native VideoPlaybackQuality getVideoPlaybackQuality();
     
-    
     @JsMethod(name = "webkitEnterFullScreen")
     public native void webkitEnterFullScreen();
-    
     
     @JsMethod(name = "webkitEnterFullscreen")
     public native void webkitEnterFullscreen();
     
-    
     @JsMethod(name = "webkitExitFullScreen")
     public native void webkitExitFullScreen();
     
-    
     @JsMethod(name = "webkitExitFullscreen")
     public native void webkitExitFullscreen();
-    
     
 }

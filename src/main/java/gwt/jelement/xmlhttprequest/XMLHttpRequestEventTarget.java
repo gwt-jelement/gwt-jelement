@@ -24,9 +24,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="XMLHttpRequestEventTarget", isNative = true)
 public class XMLHttpRequestEventTarget extends EventTarget{
-    
     @JsProperty(name="onloadstart")
     private EventHandlerNonNull onloadstart;
     
@@ -122,6 +121,5 @@ public class XMLHttpRequestEventTarget extends EventTarget{
     public final void setOnLoadend(EventHandlerNonNull onloadend){
         this.onloadend = onloadend;
     }
-    
     
 }

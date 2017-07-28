@@ -25,9 +25,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="TouchEvent", isNative = true)
 public class TouchEvent extends UIEvent{
-    
     @JsConstructor
     public TouchEvent(String type){
         super((String) null);
@@ -58,6 +57,5 @@ public class TouchEvent extends UIEvent{
     
     @JsProperty(name="shiftKey")
     public native boolean getShiftKey();
-    
     
 }

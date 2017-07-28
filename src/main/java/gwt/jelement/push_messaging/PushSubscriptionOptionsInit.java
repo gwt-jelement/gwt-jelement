@@ -16,8 +16,8 @@
  */
 package gwt.jelement.push_messaging;
 
-import elemental2.core.ArrayBuffer;
-import elemental2.core.ArrayBufferView;
+import gwt.jelement.core.ArrayBuffer;
+import gwt.jelement.core.ArrayBufferView;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;

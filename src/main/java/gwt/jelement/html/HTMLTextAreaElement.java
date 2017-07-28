@@ -29,9 +29,8 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 import jsinterop.base.Any;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="HTMLTextAreaElement", isNative = true)
 public class HTMLTextAreaElement extends HTMLElement{
-    
     @JsConstructor
     public HTMLTextAreaElement(){
         super();
@@ -169,26 +168,20 @@ public class HTMLTextAreaElement extends HTMLElement{
     @JsMethod(name = "checkValidity")
     public native boolean checkValidity();
     
-    
     @JsMethod(name = "reportValidity")
     public native boolean reportValidity();
-    
     
     @JsMethod(name = "select")
     public native void select();
     
-    
     @JsMethod(name = "setCustomValidity")
     public native void setCustomValidity(String error);
-    
     
     @JsMethod(name = "setRangeText")
     public native void setRangeText(String replacement);
     
-    
     @JsMethod(name = "setRangeText")
     public native void setRangeText(String replacement, double start, double end);
-    
     
     @JsOverlay
     public final void setRangeText(String replacement, double start, double end, SelectionMode selectionMode){
@@ -198,13 +191,10 @@ public class HTMLTextAreaElement extends HTMLElement{
     @JsMethod(name = "setRangeText")
     public native void setRangeText(String replacement, double start, double end, String selectionMode);
     
-    
     @JsMethod(name = "setSelectionRange")
     public native void setSelectionRange(double start, double end);
     
-    
     @JsMethod(name = "setSelectionRange")
     public native void setSelectionRange(double start, double end, String direction);
-    
     
 }

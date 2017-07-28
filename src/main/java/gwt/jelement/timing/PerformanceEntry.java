@@ -16,15 +16,13 @@
  */
 package gwt.jelement.timing;
 
-import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="PerformanceEntry", isNative = true)
 public class PerformanceEntry{
-    
     @JsProperty(name="name")
     public native String getName();
     
@@ -36,9 +34,5 @@ public class PerformanceEntry{
     
     @JsProperty(name="duration")
     public native double getDuration();
-    
-    @JsMethod(name = "toJSON")
-    public native Object toJSON();
-    
     
 }

@@ -26,9 +26,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="MediaQueryList", isNative = true)
 public class MediaQueryList extends EventTarget{
-    
     @JsProperty(name="onchange")
     private EventHandlerNonNull onchange;
     
@@ -56,9 +55,7 @@ public class MediaQueryList extends EventTarget{
     @JsMethod(name = "addListener")
     public native void addListener(EventListener listener);
     
-    
     @JsMethod(name = "removeListener")
     public native void removeListener(EventListener listener);
-    
     
 }

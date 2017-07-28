@@ -33,9 +33,8 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 import jsinterop.base.Any;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="VRDisplay", isNative = true)
 public class VRDisplay extends EventTarget{
-    
     @JsConstructor
     public VRDisplay(){
         super();
@@ -71,10 +70,8 @@ public class VRDisplay extends EventTarget{
     @JsMethod(name = "cancelAnimationFrame")
     public native void cancelAnimationFrame(double handle);
     
-    
     @JsMethod(name = "exitPresent")
     public native Promise exitPresent();
-    
     
     @JsOverlay
     public final VREyeParameters getEyeParameters(VREye whichEye){
@@ -84,25 +81,19 @@ public class VRDisplay extends EventTarget{
     @JsMethod(name = "getEyeParameters")
     public native VREyeParameters getEyeParameters(String whichEye);
     
-    
     @JsMethod(name = "getFrameData")
     public native boolean getFrameData(VRFrameData frameData);
-    
     
     @JsMethod(name = "getLayers")
     public native VRLayer[] getLayers();
     
-    
     @JsMethod(name = "requestAnimationFrame")
     public native double requestAnimationFrame(FrameRequestCallback callback);
-    
     
     @JsMethod(name = "requestPresent")
     public native Promise requestPresent(VRLayer[] layers);
     
-    
     @JsMethod(name = "submitFrame")
     public native void submitFrame();
-    
     
 }

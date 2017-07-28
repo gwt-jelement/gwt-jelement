@@ -21,9 +21,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="MemoryInfo", isNative = true)
 public class MemoryInfo{
-    
     @JsProperty(name="totalJSHeapSize")
     public native double getTotalJSHeapSize();
     
@@ -32,6 +31,5 @@ public class MemoryInfo{
     
     @JsProperty(name="jsHeapSizeLimit")
     public native double getJsHeapSizeLimit();
-    
     
 }

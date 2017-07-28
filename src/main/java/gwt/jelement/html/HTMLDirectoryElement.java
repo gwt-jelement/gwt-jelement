@@ -23,9 +23,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="HTMLDirectoryElement", isNative = true)
 public class HTMLDirectoryElement extends HTMLElement{
-    
     @JsConstructor
     public HTMLDirectoryElement(){
         super();
@@ -36,6 +35,5 @@ public class HTMLDirectoryElement extends HTMLElement{
     
     @JsProperty(name="compact")
     public native void setCompact(boolean compact);
-    
     
 }

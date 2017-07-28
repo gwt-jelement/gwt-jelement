@@ -23,23 +23,18 @@ import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="Permissions", isNative = true)
 public class Permissions{
-    
     @JsMethod(name = "query")
     public native Promise<PermissionStatus> query(Object permission);
-    
     
     @JsMethod(name = "request")
     public native Promise<PermissionStatus> request(Object permissions);
     
-    
     @JsMethod(name = "requestAll")
     public native Promise<PermissionStatus[]> requestAll(Object[] permissions);
     
-    
     @JsMethod(name = "revoke")
     public native Promise<PermissionStatus> revoke(Object permission);
-    
     
 }

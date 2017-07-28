@@ -29,8 +29,10 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="TextTrack", isNative = true)
 public class TextTrack extends EventTarget{
+    @JsProperty(name="oncuechange")
+    private EventHandlerNonNull oncuechange;
     
     @JsProperty(name="kind")
     private String kind;
@@ -38,17 +40,9 @@ public class TextTrack extends EventTarget{
     @JsProperty(name="mode")
     private String mode;
     
-    @JsProperty(name="oncuechange")
-    private EventHandlerNonNull oncuechange;
-    
     @JsConstructor
     public TextTrack(){
         super();
-    }
-    
-    @JsOverlay
-    public final TextTrackKind getKind(){
-       return TextTrackKind.of(kind);
     }
     
     @JsProperty(name="label")
@@ -59,16 +53,6 @@ public class TextTrack extends EventTarget{
     
     @JsProperty(name="id")
     public native String getId();
-    
-    @JsOverlay
-    public final TextTrackMode getMode(){
-       return TextTrackMode.of(mode);
-    }
-    
-    @JsOverlay
-    public final void setMode(TextTrackMode mode){
-       this.mode = mode.getInternalValue();
-    }
     
     @JsProperty(name="cues")
     public native TextTrackCueList getCues();
@@ -86,12 +70,25 @@ public class TextTrack extends EventTarget{
         this.oncuechange = oncuechange;
     }
     
+    @JsOverlay
+    public final TextTrackKind getKind(){
+       return TextTrackKind.of(kind);
+    }
+    
+    @JsOverlay
+    public final TextTrackMode getMode(){
+       return TextTrackMode.of(mode);
+    }
+    
+    @JsOverlay
+    public final void setMode(TextTrackMode mode){
+       this.mode = mode.getInternalValue();
+    }
+    
     @JsMethod(name = "addCue")
     public native void addCue(TextTrackCue cue);
     
-    
     @JsMethod(name = "removeCue")
     public native void removeCue(TextTrackCue cue);
-    
     
 }

@@ -21,15 +21,12 @@ import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="WindowBase64", isNative = true)
 public class WindowBase64{
-    
     @JsMethod(name = "atob")
     public native String atob(String atob);
     
-    
     @JsMethod(name = "btoa")
     public native String btoa(String btoa);
-    
     
 }

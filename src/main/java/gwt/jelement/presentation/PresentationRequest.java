@@ -28,9 +28,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="PresentationRequest", isNative = true)
 public class PresentationRequest extends EventTarget{
-    
     @JsProperty(name="onconnectionavailable")
     private EventHandlerNonNull onconnectionavailable;
     
@@ -57,13 +56,10 @@ public class PresentationRequest extends EventTarget{
     @JsMethod(name = "getAvailability")
     public native Promise<PresentationAvailability> getAvailability();
     
-    
     @JsMethod(name = "reconnect")
     public native Promise<PresentationConnection> reconnect(String id);
     
-    
     @JsMethod(name = "start")
     public native Promise<PresentationConnection> start();
-    
     
 }

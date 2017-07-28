@@ -23,14 +23,12 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="ResizeObserverEntry", isNative = true)
 public class ResizeObserverEntry{
-    
     @JsProperty(name="target")
     public native Element getTarget();
     
     @JsProperty(name="contentRect")
     public native ClientRect getContentRect();
-    
     
 }

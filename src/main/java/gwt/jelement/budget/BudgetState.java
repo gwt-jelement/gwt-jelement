@@ -21,14 +21,12 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="BudgetState", isNative = true)
 public class BudgetState{
-    
     @JsProperty(name="budgetAt")
     public native double getBudgetAt();
     
     @JsProperty(name="time")
     public native double getTime();
-    
     
 }

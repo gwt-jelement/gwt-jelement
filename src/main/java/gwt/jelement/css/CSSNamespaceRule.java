@@ -23,9 +23,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="CSSNamespaceRule", isNative = true)
 public class CSSNamespaceRule extends CSSRule{
-    
     @JsConstructor
     public CSSNamespaceRule(){
         super();
@@ -36,6 +35,5 @@ public class CSSNamespaceRule extends CSSRule{
     
     @JsProperty(name="prefix")
     public native String getPrefix();
-    
     
 }

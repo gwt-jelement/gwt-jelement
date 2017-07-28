@@ -22,9 +22,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="StaticRange", isNative = true)
 public class StaticRange{
-    
     @JsProperty(name="startContainer")
     public native Node getStartContainer();
     
@@ -39,6 +38,5 @@ public class StaticRange{
     
     @JsProperty(name="collapsed")
     public native boolean getCollapsed();
-    
     
 }

@@ -14,27 +14,91 @@
  * License for the specific language governing permissions and limitations under
  * the License.
  */
-
 package gwt.jelement;
 
+import gwt.jelement.core.Math;
+import gwt.jelement.frame.Console;
 import gwt.jelement.frame.Location;
 import gwt.jelement.frame.Navigator;
-import gwt.jelement.frame.Screen;
 import gwt.jelement.frame.Window;
 import gwt.jelement.html.HTMLDocument;
+import jsinterop.annotations.JsMethod;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
+import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(name = "window", isNative = true, namespace = JsPackage.GLOBAL)
-public class Browser {
-    public static HTMLDocument document;
-    public static Location location;
+@JsType(namespace = JsPackage.GLOBAL, name="window", isNative = true)
+public class Browser{
+    @JsProperty(name="navigator")
     public static Navigator navigator;
-    public static Screen screen;
-    public static Window self;
-    public static Window top;
+    
+    @JsProperty(name="window")
     public static Window window;
+    
+    @JsProperty(name="document")
+    public static HTMLDocument document;
+    
+    @JsProperty(name="location")
+    public static Location location;
+    
+    @JsProperty(name="self")
+    public static Window self;
+    
+    @JsProperty(name="top")
+    public static Window top;
+    
+    @JsProperty(name="console")
+    public static Console console;
+    
+    @JsProperty(name="Infinity")
     public static double Infinity;
+    
+    @JsProperty(name="NaN")
     public static double NaN;
+    
+    @JsProperty(name="undefined")
     public static Object undefined;
+    
+    @JsProperty(name="Math")
+    public static Math JsMath;
+    
+    @JsMethod(name = "decodeURI")
+    public static native String decodeURI(String value);
+    
+    @JsMethod(name = "decodeURIComponent")
+    public static native String decodeURIComponent(String component);
+    
+    @JsMethod(name = "encodeURI")
+    public static native String encodeURI(String uri);
+    
+    @JsMethod(name = "encodeURIComponent")
+    public static native String encodeURIComponent(String uriComponent);
+    
+    @Deprecated
+    @JsMethod(name = "escape")
+    public static native String escape(String value);
+    
+    @JsMethod(name = "eval")
+    public static native Object eval(String code);
+    
+    @JsMethod(name = "isFinite")
+    public static native boolean isFinite(Object value);
+    
+    @JsMethod(name = "isNaN")
+    public static native boolean isNaN(Object value);
+    
+    @JsMethod(name = "parseFloat")
+    public static native double parseFloat(Object value);
+    
+    @JsMethod(name = "parseInt")
+    public static native int parseInt(String value, int radix);
+    
+    @Deprecated
+    @JsMethod(name = "unescape")
+    public static native String unescape(String value);
+    
+    @JsMethod(name = "uneval")
+    public static native String uneval(Object value);
+    
 }

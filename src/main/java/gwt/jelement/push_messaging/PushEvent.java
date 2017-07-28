@@ -25,9 +25,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="PushEvent", isNative = true)
 public class PushEvent extends ExtendableEvent{
-    
     @JsConstructor
     public PushEvent(String type){
         super((String) null);
@@ -40,6 +39,5 @@ public class PushEvent extends ExtendableEvent{
     
     @JsProperty(name="data")
     public native PushMessageData getData();
-    
     
 }

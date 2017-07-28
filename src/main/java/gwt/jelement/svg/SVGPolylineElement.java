@@ -24,9 +24,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="SVGPolylineElement", isNative = true)
 public class SVGPolylineElement extends SVGGeometryElement{
-    
     @JsConstructor
     public SVGPolylineElement(){
         super();
@@ -37,6 +36,5 @@ public class SVGPolylineElement extends SVGGeometryElement{
     
     @JsProperty(name="animatedPoints")
     public native SVGPointList getAnimatedPoints();
-    
     
 }

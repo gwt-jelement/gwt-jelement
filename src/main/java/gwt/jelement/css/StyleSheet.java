@@ -24,9 +24,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="StyleSheet", isNative = true)
 public class StyleSheet{
-    
     @JsProperty(name="type")
     public native String getType();
     
@@ -50,6 +49,5 @@ public class StyleSheet{
     
     @JsProperty(name="disabled")
     public native void setDisabled(boolean disabled);
-    
     
 }

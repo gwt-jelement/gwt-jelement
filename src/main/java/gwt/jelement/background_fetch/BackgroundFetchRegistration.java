@@ -24,9 +24,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="BackgroundFetchRegistration", isNative = true)
 public class BackgroundFetchRegistration{
-    
     @JsProperty(name="tag")
     public native String getTag();
     
@@ -41,6 +40,5 @@ public class BackgroundFetchRegistration{
     
     @JsMethod(name = "abort")
     public native Promise<Boolean> abort();
-    
     
 }

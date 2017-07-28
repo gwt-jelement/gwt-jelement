@@ -21,15 +21,12 @@ import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="InspectorOverlayHost", isNative = true)
 public class InspectorOverlayHost{
-    
     @JsMethod(name = "resume")
     public native void resume();
     
-    
     @JsMethod(name = "stepOver")
     public native void stepOver();
-    
     
 }

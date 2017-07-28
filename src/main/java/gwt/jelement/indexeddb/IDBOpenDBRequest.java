@@ -24,9 +24,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="IDBOpenDBRequest", isNative = true)
 public class IDBOpenDBRequest extends IDBRequest{
-    
     @JsProperty(name="onblocked")
     private EventHandlerNonNull onblocked;
     
@@ -57,6 +56,5 @@ public class IDBOpenDBRequest extends IDBRequest{
     public final void setOnUpgradeneeded(EventHandlerNonNull onupgradeneeded){
         this.onupgradeneeded = onupgradeneeded;
     }
-    
     
 }

@@ -16,20 +16,18 @@
  */
 package gwt.jelement.filesystem;
 
-import elemental2.core.Date;
+import gwt.jelement.core.Date;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="Metadata", isNative = true)
 public class Metadata{
-    
     @JsProperty(name="modificationTime")
     public native Date getModificationTime();
     
     @JsProperty(name="size")
     public native double getSize();
-    
     
 }

@@ -23,9 +23,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="HTMLSourceElement", isNative = true)
 public class HTMLSourceElement extends HTMLElement{
-    
     @JsConstructor
     public HTMLSourceElement(){
         super();
@@ -60,6 +59,5 @@ public class HTMLSourceElement extends HTMLElement{
     
     @JsProperty(name="media")
     public native void setMedia(String media);
-    
     
 }

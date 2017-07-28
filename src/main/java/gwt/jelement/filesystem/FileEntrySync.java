@@ -25,9 +25,8 @@ import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="FileEntrySync", isNative = true)
 public class FileEntrySync extends EntrySync{
-    
     @JsConstructor
     public FileEntrySync(){
         super();
@@ -36,9 +35,7 @@ public class FileEntrySync extends EntrySync{
     @JsMethod(name = "createWriter")
     public native FileWriterSync createWriter();
     
-    
     @JsMethod(name = "file")
     public native File file();
-    
     
 }

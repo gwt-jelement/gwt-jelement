@@ -27,14 +27,13 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="SVGFEColorMatrixElement", isNative = true)
 public class SVGFEColorMatrixElement extends SVGElement{
-    public static int SVG_FECOLORMATRIX_TYPE_UNKNOWN;
-    public static int SVG_FECOLORMATRIX_TYPE_MATRIX;
-    public static int SVG_FECOLORMATRIX_TYPE_SATURATE;
-    public static int SVG_FECOLORMATRIX_TYPE_HUEROTATE;
-    public static int SVG_FECOLORMATRIX_TYPE_LUMINANCETOALPHA;
-    
+    public static short SVG_FECOLORMATRIX_TYPE_UNKNOWN;
+    public static short SVG_FECOLORMATRIX_TYPE_MATRIX;
+    public static short SVG_FECOLORMATRIX_TYPE_SATURATE;
+    public static short SVG_FECOLORMATRIX_TYPE_HUEROTATE;
+    public static short SVG_FECOLORMATRIX_TYPE_LUMINANCETOALPHA;
     
     @JsConstructor
     public SVGFEColorMatrixElement(){
@@ -64,6 +63,5 @@ public class SVGFEColorMatrixElement extends SVGElement{
     
     @JsProperty(name="result")
     public native SVGAnimatedString getResult();
-    
     
 }

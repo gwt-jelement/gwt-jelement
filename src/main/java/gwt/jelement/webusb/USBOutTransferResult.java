@@ -23,9 +23,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="USBOutTransferResult", isNative = true)
 public class USBOutTransferResult{
-    
     @JsProperty(name="status")
     private String status;
     
@@ -44,6 +43,5 @@ public class USBOutTransferResult{
     public final USBTransferStatus getStatus(){
        return USBTransferStatus.of(status);
     }
-    
     
 }

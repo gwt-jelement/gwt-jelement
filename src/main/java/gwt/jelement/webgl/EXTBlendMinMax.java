@@ -20,11 +20,9 @@ import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="EXTBlendMinMax", isNative = true)
 public class EXTBlendMinMax{
-    public static int MIN_EXT;
-    public static int MAX_EXT;
-    
-    
+    public static double MIN_EXT;
+    public static double MAX_EXT;
     
 }

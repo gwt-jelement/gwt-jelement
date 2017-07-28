@@ -24,9 +24,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="SVGClipPathElement", isNative = true)
 public class SVGClipPathElement extends SVGGraphicsElement{
-    
     @JsConstructor
     public SVGClipPathElement(){
         super();
@@ -34,6 +33,5 @@ public class SVGClipPathElement extends SVGGraphicsElement{
     
     @JsProperty(name="clipPathUnits")
     public native SVGAnimatedEnumeration getClipPathUnits();
-    
     
 }

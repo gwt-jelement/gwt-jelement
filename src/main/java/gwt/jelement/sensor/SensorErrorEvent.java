@@ -25,9 +25,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="SensorErrorEvent", isNative = true)
 public class SensorErrorEvent extends Event{
-    
     @JsConstructor
     public SensorErrorEvent(String type, SensorErrorEventInit eventInitDict){
         super((String) null);
@@ -35,6 +34,5 @@ public class SensorErrorEvent extends Event{
     
     @JsProperty(name="error")
     public native DOMException getError();
-    
     
 }

@@ -24,9 +24,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="SVGCircleElement", isNative = true)
 public class SVGCircleElement extends SVGGeometryElement{
-    
     @JsConstructor
     public SVGCircleElement(){
         super();
@@ -40,6 +39,5 @@ public class SVGCircleElement extends SVGGeometryElement{
     
     @JsProperty(name="r")
     public native SVGAnimatedLength getR();
-    
     
 }

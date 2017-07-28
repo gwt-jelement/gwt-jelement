@@ -24,9 +24,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="USBInterface", isNative = true)
 public class USBInterface{
-    
     @JsConstructor
     public USBInterface(USBConfiguration configuration, byte interfaceNumber){
     }
@@ -42,6 +41,5 @@ public class USBInterface{
     
     @JsProperty(name="claimed")
     public native boolean getClaimed();
-    
     
 }

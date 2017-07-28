@@ -26,17 +26,16 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="NetworkInformation", isNative = true)
 public class NetworkInformation extends EventTarget{
-    
-    @JsProperty(name="type")
-    private String type;
-    
     @JsProperty(name="onchange")
     private EventHandlerNonNull onchange;
     
     @JsProperty(name="ontypechange")
     private EventHandlerNonNull ontypechange;
+    
+    @JsProperty(name="type")
+    private String type;
     
     @JsProperty(name="effectiveType")
     private String effectiveType;
@@ -44,11 +43,6 @@ public class NetworkInformation extends EventTarget{
     @JsConstructor
     public NetworkInformation(){
         super();
-    }
-    
-    @JsOverlay
-    public final ConnectionType getType(){
-       return ConnectionType.of(type);
     }
     
     @JsProperty(name="downlinkMax")
@@ -74,16 +68,20 @@ public class NetworkInformation extends EventTarget{
         this.ontypechange = ontypechange;
     }
     
-    @JsOverlay
-    public final EffectiveConnectionType getEffectiveType(){
-       return EffectiveConnectionType.of(effectiveType);
-    }
-    
     @JsProperty(name="rtt")
     public native double getRtt();
     
     @JsProperty(name="downlink")
     public native double getDownlink();
     
+    @JsOverlay
+    public final ConnectionType getType(){
+       return ConnectionType.of(type);
+    }
+    
+    @JsOverlay
+    public final EffectiveConnectionType getEffectiveType(){
+       return EffectiveConnectionType.of(effectiveType);
+    }
     
 }

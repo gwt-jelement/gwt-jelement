@@ -26,9 +26,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="ConstantSourceNode", isNative = true)
 public class ConstantSourceNode extends AudioScheduledSourceNode{
-    
     @JsConstructor
     public ConstantSourceNode(BaseAudioContext context){
         super();
@@ -41,6 +40,5 @@ public class ConstantSourceNode extends AudioScheduledSourceNode{
     
     @JsProperty(name="offset")
     public native AudioParam getOffset();
-    
     
 }

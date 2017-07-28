@@ -25,9 +25,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="MediaStreamTrackEvent", isNative = true)
 public class MediaStreamTrackEvent extends Event{
-    
     @JsConstructor
     public MediaStreamTrackEvent(String type, MediaStreamTrackEventInit eventInitDict){
         super((String) null);
@@ -35,6 +34,5 @@ public class MediaStreamTrackEvent extends Event{
     
     @JsProperty(name="track")
     public native MediaStreamTrack getTrack();
-    
     
 }

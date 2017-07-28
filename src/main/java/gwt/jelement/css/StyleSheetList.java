@@ -21,11 +21,9 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="StyleSheetList", isNative = true)
 public class StyleSheetList{
-    
     @JsProperty(name="length")
     public native double getLength();
-    
     
 }

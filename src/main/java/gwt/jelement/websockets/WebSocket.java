@@ -16,12 +16,12 @@
  */
 package gwt.jelement.websockets;
 
+import gwt.jelement.core.ArrayBuffer;
+import gwt.jelement.core.ArrayBufferView;
 import gwt.jelement.events.EventHandlerNonNull;
 import gwt.jelement.events.EventTarget;
 import gwt.jelement.fileapi.Blob;
 import gwt.jelement.websockets.BinaryType;
-import elemental2.core.ArrayBuffer;
-import elemental2.core.ArrayBufferView;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
@@ -29,13 +29,12 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="WebSocket", isNative = true)
 public class WebSocket extends EventTarget{
-    public static int CONNECTING;
-    public static int OPEN;
-    public static int CLOSING;
-    public static int CLOSED;
-    
+    public static short CONNECTING;
+    public static short OPEN;
+    public static short CLOSING;
+    public static short CLOSED;
     
     @JsProperty(name="onopen")
     private EventHandlerNonNull onopen;
@@ -125,29 +124,22 @@ public class WebSocket extends EventTarget{
     @JsMethod(name = "close")
     public native void close();
     
-    
     @JsMethod(name = "close")
     public native void close(short code);
-    
     
     @JsMethod(name = "close")
     public native void close(short code, String reason);
     
-    
     @JsMethod(name = "send")
     public native void send(String data);
-    
     
     @JsMethod(name = "send")
     public native void send(Blob data);
     
-    
     @JsMethod(name = "send")
     public native void send(ArrayBuffer data);
     
-    
     @JsMethod(name = "send")
     public native void send(ArrayBufferView data);
-    
     
 }

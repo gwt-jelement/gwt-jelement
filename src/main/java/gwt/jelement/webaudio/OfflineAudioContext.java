@@ -27,9 +27,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="OfflineAudioContext", isNative = true)
 public class OfflineAudioContext extends BaseAudioContext{
-    
     @JsProperty(name="oncomplete")
     private EventHandlerNonNull oncomplete;
     
@@ -54,9 +53,7 @@ public class OfflineAudioContext extends BaseAudioContext{
     @JsMethod(name = "startRendering")
     public native Promise<AudioBuffer> startRendering();
     
-    
     @JsMethod(name = "suspend")
     public native Promise<Void> suspend(double suspendTime);
-    
     
 }

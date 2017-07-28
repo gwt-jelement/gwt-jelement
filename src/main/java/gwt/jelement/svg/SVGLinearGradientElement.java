@@ -24,9 +24,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="SVGLinearGradientElement", isNative = true)
 public class SVGLinearGradientElement extends SVGGradientElement{
-    
     @JsConstructor
     public SVGLinearGradientElement(){
         super();
@@ -43,6 +42,5 @@ public class SVGLinearGradientElement extends SVGGradientElement{
     
     @JsProperty(name="y2")
     public native SVGAnimatedLength getY2();
-    
     
 }

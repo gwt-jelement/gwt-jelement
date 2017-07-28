@@ -21,9 +21,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="VRDisplayCapabilities", isNative = true)
 public class VRDisplayCapabilities{
-    
     @JsProperty(name="hasPosition")
     public native boolean getHasPosition();
     
@@ -35,6 +34,5 @@ public class VRDisplayCapabilities{
     
     @JsProperty(name="maxLayers")
     public native double getMaxLayers();
-    
     
 }

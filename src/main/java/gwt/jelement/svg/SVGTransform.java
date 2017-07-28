@@ -23,16 +23,15 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="SVGTransform", isNative = true)
 public class SVGTransform{
-    public static int SVG_TRANSFORM_UNKNOWN;
-    public static int SVG_TRANSFORM_MATRIX;
-    public static int SVG_TRANSFORM_TRANSLATE;
-    public static int SVG_TRANSFORM_SCALE;
-    public static int SVG_TRANSFORM_ROTATE;
-    public static int SVG_TRANSFORM_SKEWX;
-    public static int SVG_TRANSFORM_SKEWY;
-    
+    public static short SVG_TRANSFORM_UNKNOWN;
+    public static short SVG_TRANSFORM_MATRIX;
+    public static short SVG_TRANSFORM_TRANSLATE;
+    public static short SVG_TRANSFORM_SCALE;
+    public static short SVG_TRANSFORM_ROTATE;
+    public static short SVG_TRANSFORM_SKEWX;
+    public static short SVG_TRANSFORM_SKEWY;
     
     @JsProperty(name="type")
     public native short getType();
@@ -46,25 +45,19 @@ public class SVGTransform{
     @JsMethod(name = "setMatrix")
     public native void setMatrix(SVGMatrix matrix);
     
-    
     @JsMethod(name = "setRotate")
     public native void setRotate(float angle, float cx, float cy);
-    
     
     @JsMethod(name = "setScale")
     public native void setScale(float sx, float sy);
     
-    
     @JsMethod(name = "setSkewX")
     public native void setSkewX(float angle);
-    
     
     @JsMethod(name = "setSkewY")
     public native void setSkewY(float angle);
     
-    
     @JsMethod(name = "setTranslate")
     public native void setTranslate(float tx, float ty);
-    
     
 }

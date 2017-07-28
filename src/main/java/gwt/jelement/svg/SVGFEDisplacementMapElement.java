@@ -27,14 +27,13 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="SVGFEDisplacementMapElement", isNative = true)
 public class SVGFEDisplacementMapElement extends SVGElement{
-    public static int SVG_CHANNEL_UNKNOWN;
-    public static int SVG_CHANNEL_R;
-    public static int SVG_CHANNEL_G;
-    public static int SVG_CHANNEL_B;
-    public static int SVG_CHANNEL_A;
-    
+    public static short SVG_CHANNEL_UNKNOWN;
+    public static short SVG_CHANNEL_R;
+    public static short SVG_CHANNEL_G;
+    public static short SVG_CHANNEL_B;
+    public static short SVG_CHANNEL_A;
     
     @JsConstructor
     public SVGFEDisplacementMapElement(){
@@ -70,6 +69,5 @@ public class SVGFEDisplacementMapElement extends SVGElement{
     
     @JsProperty(name="result")
     public native SVGAnimatedString getResult();
-    
     
 }

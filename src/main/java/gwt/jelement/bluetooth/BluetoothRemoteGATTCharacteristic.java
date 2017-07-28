@@ -20,11 +20,11 @@ import gwt.jelement.bluetooth.BluetoothCharacteristicProperties;
 import gwt.jelement.bluetooth.BluetoothRemoteGATTCharacteristic;
 import gwt.jelement.bluetooth.BluetoothRemoteGATTDescriptor;
 import gwt.jelement.bluetooth.BluetoothRemoteGATTService;
-import gwt.jelement.dom.DataView;
+import gwt.jelement.core.ArrayBuffer;
+import gwt.jelement.core.ArrayBufferView;
+import gwt.jelement.core.DataView;
 import gwt.jelement.events.EventHandlerNonNull;
 import gwt.jelement.events.EventTarget;
-import elemental2.core.ArrayBuffer;
-import elemental2.core.ArrayBufferView;
 import elemental2.promise.Promise;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
@@ -33,9 +33,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="BluetoothRemoteGATTCharacteristic", isNative = true)
 public class BluetoothRemoteGATTCharacteristic extends EventTarget{
-    
     @JsProperty(name="oncharacteristicvaluechanged")
     private EventHandlerNonNull oncharacteristicvaluechanged;
     
@@ -69,41 +68,31 @@ public class BluetoothRemoteGATTCharacteristic extends EventTarget{
     @JsMethod(name = "getDescriptor")
     public native Promise<BluetoothRemoteGATTDescriptor> getDescriptor(String descriptor);
     
-    
     @JsMethod(name = "getDescriptor")
     public native Promise<BluetoothRemoteGATTDescriptor> getDescriptor(double descriptor);
-    
     
     @JsMethod(name = "getDescriptors")
     public native Promise<BluetoothRemoteGATTDescriptor[]> getDescriptors();
     
-    
     @JsMethod(name = "getDescriptors")
     public native Promise<BluetoothRemoteGATTDescriptor[]> getDescriptors(String descriptor);
-    
     
     @JsMethod(name = "getDescriptors")
     public native Promise<BluetoothRemoteGATTDescriptor[]> getDescriptors(double descriptor);
     
-    
     @JsMethod(name = "readValue")
     public native Promise<DataView> readValue();
-    
     
     @JsMethod(name = "startNotifications")
     public native Promise<BluetoothRemoteGATTCharacteristic> startNotifications();
     
-    
     @JsMethod(name = "stopNotifications")
     public native Promise<BluetoothRemoteGATTCharacteristic> stopNotifications();
-    
     
     @JsMethod(name = "writeValue")
     public native Promise<Void> writeValue(ArrayBuffer value);
     
-    
     @JsMethod(name = "writeValue")
     public native Promise<Void> writeValue(ArrayBufferView value);
-    
     
 }

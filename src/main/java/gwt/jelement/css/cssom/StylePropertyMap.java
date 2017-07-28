@@ -24,9 +24,8 @@ import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="StylePropertyMap", isNative = true)
 public class StylePropertyMap extends StylePropertyMapReadonly{
-    
     @JsConstructor
     public StylePropertyMap(){
         super();
@@ -35,29 +34,22 @@ public class StylePropertyMap extends StylePropertyMapReadonly{
     @JsMethod(name = "append")
     public native void append(String property, CSSStyleValue value);
     
-    
     @JsMethod(name = "append")
     public native void append(String property, CSSStyleValue[] value);
-    
     
     @JsMethod(name = "append")
     public native void append(String property, String value);
     
-    
     @JsMethod(name = "delete")
     public native void delete(String property);
-    
     
     @JsMethod(name = "set")
     public native void set(String property, CSSStyleValue value);
     
-    
     @JsMethod(name = "set")
     public native void set(String property, CSSStyleValue[] value);
     
-    
     @JsMethod(name = "set")
     public native void set(String property, String value);
-    
     
 }

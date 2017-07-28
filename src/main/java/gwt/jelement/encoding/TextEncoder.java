@@ -16,7 +16,7 @@
  */
 package gwt.jelement.encoding;
 
-import elemental2.core.Uint8Array;
+import gwt.jelement.core.Uint8Array;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
@@ -24,9 +24,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="TextEncoder", isNative = true)
 public class TextEncoder{
-    
     @JsConstructor
     public TextEncoder(){
     }
@@ -37,9 +36,7 @@ public class TextEncoder{
     @JsMethod(name = "encode")
     public native Uint8Array encode();
     
-    
     @JsMethod(name = "encode")
     public native Uint8Array encode(String input);
-    
     
 }

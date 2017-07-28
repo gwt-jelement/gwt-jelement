@@ -16,17 +16,16 @@
  */
 package gwt.jelement.vr;
 
+import gwt.jelement.core.Float32Array;
 import gwt.jelement.vr.VRPose;
-import elemental2.core.Float32Array;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="VRFrameData", isNative = true)
 public class VRFrameData{
-    
     @JsConstructor
     public VRFrameData(){
     }
@@ -45,6 +44,5 @@ public class VRFrameData{
     
     @JsProperty(name="pose")
     public native VRPose getPose();
-    
     
 }

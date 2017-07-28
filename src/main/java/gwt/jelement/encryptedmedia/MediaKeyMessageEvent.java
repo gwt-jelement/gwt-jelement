@@ -16,18 +16,17 @@
  */
 package gwt.jelement.encryptedmedia;
 
+import gwt.jelement.core.ArrayBuffer;
 import gwt.jelement.encryptedmedia.MediaKeyMessageType;
 import gwt.jelement.events.Event;
-import elemental2.core.ArrayBuffer;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="MediaKeyMessageEvent", isNative = true)
 public class MediaKeyMessageEvent extends Event{
-    
     @JsProperty(name="messageType")
     private String messageType;
     
@@ -36,13 +35,12 @@ public class MediaKeyMessageEvent extends Event{
         super((String) null);
     }
     
+    @JsProperty(name="message")
+    public native ArrayBuffer getMessage();
+    
     @JsOverlay
     public final MediaKeyMessageType getMessageType(){
        return MediaKeyMessageType.of(messageType);
     }
-    
-    @JsProperty(name="message")
-    public native ArrayBuffer getMessage();
-    
     
 }

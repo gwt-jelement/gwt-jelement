@@ -25,9 +25,8 @@ import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="InstallEvent", isNative = true)
 public class InstallEvent extends ExtendableEvent{
-    
     @JsConstructor
     public InstallEvent(String type){
         super((String) null);
@@ -40,6 +39,5 @@ public class InstallEvent extends ExtendableEvent{
     
     @JsMethod(name = "registerForeignFetch")
     public native void registerForeignFetch(ForeignFetchOptions options);
-    
     
 }

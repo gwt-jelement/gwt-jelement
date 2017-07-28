@@ -21,9 +21,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="DeviceAcceleration", isNative = true)
 public class DeviceAcceleration{
-    
     @JsProperty(name="x")
     public native double getX();
     
@@ -32,6 +31,5 @@ public class DeviceAcceleration{
     
     @JsProperty(name="z")
     public native double getZ();
-    
     
 }

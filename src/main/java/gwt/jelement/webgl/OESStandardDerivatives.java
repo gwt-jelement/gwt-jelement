@@ -20,10 +20,8 @@ import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="OESStandardDerivatives", isNative = true)
 public class OESStandardDerivatives{
-    public static int FRAGMENT_SHADER_DERIVATIVE_HINT_OES;
-    
-    
+    public static double FRAGMENT_SHADER_DERIVATIVE_HINT_OES;
     
 }

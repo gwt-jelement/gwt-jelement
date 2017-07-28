@@ -25,9 +25,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="OfflineAudioCompletionEvent", isNative = true)
 public class OfflineAudioCompletionEvent extends Event{
-    
     @JsConstructor
     public OfflineAudioCompletionEvent(String type, OfflineAudioCompletionEventInit eventInitDict){
         super((String) null);
@@ -35,6 +34,5 @@ public class OfflineAudioCompletionEvent extends Event{
     
     @JsProperty(name="renderedBuffer")
     public native AudioBuffer getRenderedBuffer();
-    
     
 }

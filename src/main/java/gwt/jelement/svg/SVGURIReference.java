@@ -22,11 +22,9 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="SVGURIReference", isNative = true)
 public class SVGURIReference{
-    
     @JsProperty(name="href")
     public native SVGAnimatedString getHref();
-    
     
 }

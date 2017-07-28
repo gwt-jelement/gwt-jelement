@@ -28,12 +28,11 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="SVGTextContentElement", isNative = true)
 public class SVGTextContentElement extends SVGGraphicsElement{
-    public static int LENGTHADJUST_UNKNOWN;
-    public static int LENGTHADJUST_SPACING;
-    public static int LENGTHADJUST_SPACINGANDGLYPHS;
-    
+    public static short LENGTHADJUST_UNKNOWN;
+    public static short LENGTHADJUST_SPACING;
+    public static short LENGTHADJUST_SPACINGANDGLYPHS;
     
     @JsConstructor
     public SVGTextContentElement(){
@@ -49,37 +48,28 @@ public class SVGTextContentElement extends SVGGraphicsElement{
     @JsMethod(name = "getCharNumAtPosition")
     public native double getCharNumAtPosition(SVGPoint point);
     
-    
     @JsMethod(name = "getComputedTextLength")
     public native float getComputedTextLength();
-    
     
     @JsMethod(name = "getEndPositionOfChar")
     public native SVGPoint getEndPositionOfChar(double charnum);
     
-    
     @JsMethod(name = "getExtentOfChar")
     public native SVGRect getExtentOfChar(double charnum);
-    
     
     @JsMethod(name = "getNumberOfChars")
     public native double getNumberOfChars();
     
-    
     @JsMethod(name = "getRotationOfChar")
     public native float getRotationOfChar(double charnum);
-    
     
     @JsMethod(name = "getStartPositionOfChar")
     public native SVGPoint getStartPositionOfChar(double charnum);
     
-    
     @JsMethod(name = "getSubStringLength")
     public native float getSubStringLength(double charnum, double nchars);
     
-    
     @JsMethod(name = "selectSubString")
     public native void selectSubString(double charnum, double nchars);
-    
     
 }

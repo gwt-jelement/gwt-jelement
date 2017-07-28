@@ -45,9 +45,8 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 import jsinterop.base.Any;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="Element", isNative = true)
 public class Element extends Node{
-    
     @JsProperty(name="onbeforecopy")
     private EventHandlerNonNull onbeforecopy;
     
@@ -337,272 +336,190 @@ public class Element extends Node{
     public native Element getNextElementSibling();
     
     @JsMethod(name = "after")
-    public native void after();
-    
-    
-    @JsMethod(name = "after")
     public native void after(Node... nodes);
-    
     
     @JsMethod(name = "after")
     public native void after(String... nodes);
     
-    
     @JsMethod(name = "animate")
     public native Animation animate(Object[] effect);
-    
     
     @JsMethod(name = "animate")
     public native Animation animate(Object effect);
     
-    
     @JsMethod(name = "animate")
     public native Animation animate(Object[] effect, double options);
-    
     
     @JsMethod(name = "animate")
     public native Animation animate(Object[] effect, KeyframeAnimationOptions options);
     
-    
     @JsMethod(name = "animate")
     public native Animation animate(Object effect, double options);
-    
     
     @JsMethod(name = "animate")
     public native Animation animate(Object effect, KeyframeAnimationOptions options);
     
-    
-    @JsMethod(name = "append")
-    public native void append();
-    
-    
     @JsMethod(name = "append")
     public native void append(Node... nodes);
-    
     
     @JsMethod(name = "append")
     public native void append(String... nodes);
     
-    
     @JsMethod(name = "attachShadow")
     public native ShadowRoot attachShadow(ShadowRootInit shadowRootInitDict);
-    
-    
-    @JsMethod(name = "before")
-    public native void before();
-    
     
     @JsMethod(name = "before")
     public native void before(Node... nodes);
     
-    
     @JsMethod(name = "before")
     public native void before(String... nodes);
-    
     
     @JsMethod(name = "closest")
     public native Element closest(String selectors);
     
-    
     @JsMethod(name = "createShadowRoot")
     public native ShadowRoot createShadowRoot();
-    
     
     @JsMethod(name = "getAnimations")
     public native Animation[] getAnimations();
     
-    
     @JsMethod(name = "getAttribute")
     public native String getAttribute(String name);
-    
     
     @JsMethod(name = "getAttributeNS")
     public native String getAttributeNS(String namespaceURI, String localName);
     
-    
     @JsMethod(name = "getAttributeNames")
     public native String[] getAttributeNames();
-    
     
     @JsMethod(name = "getAttributeNode")
     public native Attr getAttributeNode(String name);
     
-    
     @JsMethod(name = "getAttributeNodeNS")
     public native Attr getAttributeNodeNS(String namespaceURI, String localName);
-    
     
     @JsMethod(name = "getBoundingClientRect")
     public native ClientRect getBoundingClientRect();
     
-    
     @JsMethod(name = "getClientRects")
     public native ClientRectList getClientRects();
-    
     
     @JsMethod(name = "getDestinationInsertionPoints")
     public native NodeList getDestinationInsertionPoints();
     
-    
     @JsMethod(name = "getElementsByClassName")
     public native HTMLCollection getElementsByClassName(String classNames);
-    
     
     @JsMethod(name = "getElementsByTagName")
     public native HTMLCollection getElementsByTagName(String localName);
     
-    
     @JsMethod(name = "getElementsByTagNameNS")
     public native HTMLCollection getElementsByTagNameNS(String namespaceURI, String localName);
-    
     
     @JsMethod(name = "hasAttribute")
     public native boolean hasAttribute(String name);
     
-    
     @JsMethod(name = "hasAttributeNS")
     public native boolean hasAttributeNS(String namespaceURI, String localName);
-    
     
     @JsMethod(name = "hasAttributes")
     public native boolean hasAttributes();
     
-    
     @JsMethod(name = "hasPointerCapture")
     public native boolean hasPointerCapture(double pointerId);
-    
     
     @JsMethod(name = "insertAdjacentElement")
     public native Element insertAdjacentElement(String where, Element element);
     
-    
     @JsMethod(name = "insertAdjacentHTML")
     public native void insertAdjacentHTML(String position, String text);
-    
     
     @JsMethod(name = "insertAdjacentText")
     public native void insertAdjacentText(String where, String data);
     
-    
     @JsMethod(name = "matches")
     public native boolean matches(String selectors);
-    
-    
-    @JsMethod(name = "prepend")
-    public native void prepend();
-    
     
     @JsMethod(name = "prepend")
     public native void prepend(Node... nodes);
     
-    
     @JsMethod(name = "prepend")
     public native void prepend(String... nodes);
-    
     
     @JsMethod(name = "querySelector")
     public native <T extends Element> T querySelector(String selectors);
     
-    
     @JsMethod(name = "querySelectorAll")
     public native NodeList querySelectorAll(String selectors);
-    
     
     @JsMethod(name = "releasePointerCapture")
     public native void releasePointerCapture(double pointerId);
     
-    
     @JsMethod(name = "remove")
     public native void remove();
-    
     
     @JsMethod(name = "removeAttribute")
     public native void removeAttribute(String name);
     
-    
     @JsMethod(name = "removeAttributeNS")
     public native void removeAttributeNS(String namespaceURI, String localName);
-    
     
     @JsMethod(name = "removeAttributeNode")
     public native Attr removeAttributeNode(Attr attr);
     
-    
-    @JsMethod(name = "replaceWith")
-    public native void replaceWith();
-    
-    
     @JsMethod(name = "replaceWith")
     public native void replaceWith(Node... nodes);
-    
     
     @JsMethod(name = "replaceWith")
     public native void replaceWith(String... nodes);
     
-    
     @JsMethod(name = "requestFullscreen")
     public native void requestFullscreen();
-    
     
     @JsMethod(name = "requestPointerLock")
     public native void requestPointerLock();
     
-    
     @JsMethod(name = "scroll")
     public native void scroll();
-    
     
     @JsMethod(name = "scroll")
     public native void scroll(ScrollToOptions options);
     
-    
     @JsMethod(name = "scroll")
     public native void scroll(double x, double y);
-    
     
     @JsMethod(name = "scrollBy")
     public native void scrollBy();
     
-    
     @JsMethod(name = "scrollBy")
     public native void scrollBy(ScrollToOptions options);
-    
     
     @JsMethod(name = "scrollBy")
     public native void scrollBy(double x, double y);
     
-    
     @JsMethod(name = "scrollIntoView")
     public native void scrollIntoView();
-    
     
     @JsMethod(name = "scrollIntoView")
     public native void scrollIntoView(ScrollIntoViewOptions arg);
     
-    
     @JsMethod(name = "scrollIntoView")
     public native void scrollIntoView(boolean arg);
-    
     
     @JsMethod(name = "scrollIntoViewIfNeeded")
     public native void scrollIntoViewIfNeeded();
     
-    
     @JsMethod(name = "scrollIntoViewIfNeeded")
     public native void scrollIntoViewIfNeeded(boolean centerIfNeeded);
-    
     
     @JsMethod(name = "scrollTo")
     public native void scrollTo();
     
-    
     @JsMethod(name = "scrollTo")
     public native void scrollTo(ScrollToOptions options);
     
-    
     @JsMethod(name = "scrollTo")
     public native void scrollTo(double x, double y);
-    
     
     @JsOverlay
     public final void setApplyScroll(ScrollStateCallback scrollStateCallback, NativeScrollBehavior nativeScrollBehavior){
@@ -612,22 +529,17 @@ public class Element extends Node{
     @JsMethod(name = "setApplyScroll")
     public native void setApplyScroll(ScrollStateCallback scrollStateCallback, String nativeScrollBehavior);
     
-    
     @JsMethod(name = "setAttribute")
     public native void setAttribute(String name, String value);
-    
     
     @JsMethod(name = "setAttributeNS")
     public native void setAttributeNS(String namespaceURI, String name, String value);
     
-    
     @JsMethod(name = "setAttributeNode")
     public native Attr setAttributeNode(Attr attr);
     
-    
     @JsMethod(name = "setAttributeNodeNS")
     public native Attr setAttributeNodeNS(Attr attr);
-    
     
     @JsOverlay
     public final void setDistributeScroll(ScrollStateCallback scrollStateCallback, NativeScrollBehavior nativeScrollBehavior){
@@ -637,21 +549,16 @@ public class Element extends Node{
     @JsMethod(name = "setDistributeScroll")
     public native void setDistributeScroll(ScrollStateCallback scrollStateCallback, String nativeScrollBehavior);
     
-    
     @JsMethod(name = "setPointerCapture")
     public native void setPointerCapture(double pointerId);
-    
     
     @JsMethod(name = "webkitMatchesSelector")
     public native boolean webkitMatchesSelector(String selectors);
     
-    
     @JsMethod(name = "webkitRequestFullScreen")
     public native void webkitRequestFullScreen();
     
-    
     @JsMethod(name = "webkitRequestFullscreen")
     public native void webkitRequestFullscreen();
-    
     
 }

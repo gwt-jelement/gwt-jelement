@@ -29,9 +29,8 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 import jsinterop.base.Js;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="VTTCue", isNative = true)
 public class VTTCue extends TextTrackCue{
-    
     @JsType(isNative = true, name = "?", namespace = JsPackage.GLOBAL)
     public interface LineUnion {
         @JsOverlay
@@ -66,14 +65,14 @@ public class VTTCue extends TextTrackCue{
     
     }
     
-    @JsProperty(name="vertical")
-    private String vertical;
-    
     @JsProperty(name="line")
     private LineUnion line;
     
     @JsProperty(name="position")
     private LineUnion position;
+    
+    @JsProperty(name="vertical")
+    private String vertical;
     
     @JsProperty(name="align")
     private String align;
@@ -88,16 +87,6 @@ public class VTTCue extends TextTrackCue{
     
     @JsProperty(name="region")
     public native void setRegion(VTTRegion region);
-    
-    @JsOverlay
-    public final DirectionSetting getVertical(){
-       return DirectionSetting.of(vertical);
-    }
-    
-    @JsOverlay
-    public final void setVertical(DirectionSetting vertical){
-       this.vertical = vertical.getInternalValue();
-    }
     
     @JsProperty(name="snapToLines")
     public native boolean getSnapToLines();
@@ -141,6 +130,22 @@ public class VTTCue extends TextTrackCue{
     @JsProperty(name="size")
     public native void setSize(double size);
     
+    @JsProperty(name="text")
+    public native String getText();
+    
+    @JsProperty(name="text")
+    public native void setText(String text);
+    
+    @JsOverlay
+    public final DirectionSetting getVertical(){
+       return DirectionSetting.of(vertical);
+    }
+    
+    @JsOverlay
+    public final void setVertical(DirectionSetting vertical){
+       this.vertical = vertical.getInternalValue();
+    }
+    
     @JsOverlay
     public final AlignSetting getAlign(){
        return AlignSetting.of(align);
@@ -151,14 +156,7 @@ public class VTTCue extends TextTrackCue{
        this.align = align.getInternalValue();
     }
     
-    @JsProperty(name="text")
-    public native String getText();
-    
-    @JsProperty(name="text")
-    public native void setText(String text);
-    
     @JsMethod(name = "getCueAsHTML")
     public native DocumentFragment getCueAsHTML();
-    
     
 }

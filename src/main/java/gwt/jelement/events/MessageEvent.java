@@ -27,9 +27,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="MessageEvent", isNative = true)
 public class MessageEvent extends Event{
-    
     @JsConstructor
     public MessageEvent(String type){
         super((String) null);
@@ -61,37 +60,28 @@ public class MessageEvent extends Event{
     @JsMethod(name = "initMessageEvent")
     public native void initMessageEvent();
     
-    
     @JsMethod(name = "initMessageEvent")
     public native void initMessageEvent(String typeArg);
-    
     
     @JsMethod(name = "initMessageEvent")
     public native void initMessageEvent(String typeArg, boolean canBubbleArg);
     
-    
     @JsMethod(name = "initMessageEvent")
     public native void initMessageEvent(String typeArg, boolean canBubbleArg, boolean cancelableArg);
-    
     
     @JsMethod(name = "initMessageEvent")
     public native void initMessageEvent(String typeArg, boolean canBubbleArg, boolean cancelableArg, Object dataArg);
     
-    
     @JsMethod(name = "initMessageEvent")
     public native void initMessageEvent(String typeArg, boolean canBubbleArg, boolean cancelableArg, Object dataArg, String originArg);
-    
     
     @JsMethod(name = "initMessageEvent")
     public native void initMessageEvent(String typeArg, boolean canBubbleArg, boolean cancelableArg, Object dataArg, String originArg, String lastEventIdArg);
     
-    
     @JsMethod(name = "initMessageEvent")
     public native void initMessageEvent(String typeArg, boolean canBubbleArg, boolean cancelableArg, Object dataArg, String originArg, String lastEventIdArg, EventTarget sourceArg);
     
-    
     @JsMethod(name = "initMessageEvent")
     public native void initMessageEvent(String typeArg, boolean canBubbleArg, boolean cancelableArg, Object dataArg, String originArg, String lastEventIdArg, EventTarget sourceArg, MessagePort[] portsArg);
-    
     
 }

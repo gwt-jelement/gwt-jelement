@@ -23,9 +23,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="MutationRecord", isNative = true)
 public class MutationRecord{
-    
     @JsProperty(name="type")
     public native String getType();
     
@@ -52,6 +51,5 @@ public class MutationRecord{
     
     @JsProperty(name="oldValue")
     public native String getOldValue();
-    
     
 }

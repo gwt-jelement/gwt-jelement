@@ -27,9 +27,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="HTMLButtonElement", isNative = true)
 public class HTMLButtonElement extends HTMLElement{
-    
     @JsConstructor
     public HTMLButtonElement(){
         super();
@@ -113,13 +112,10 @@ public class HTMLButtonElement extends HTMLElement{
     @JsMethod(name = "checkValidity")
     public native boolean checkValidity();
     
-    
     @JsMethod(name = "reportValidity")
     public native boolean reportValidity();
     
-    
     @JsMethod(name = "setCustomValidity")
     public native void setCustomValidity(String error);
-    
     
 }

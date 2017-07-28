@@ -29,9 +29,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="ImageCapture", isNative = true)
 public class ImageCapture{
-    
     @JsConstructor
     public ImageCapture(MediaStreamTrack track){
     }
@@ -42,25 +41,19 @@ public class ImageCapture{
     @JsMethod(name = "getPhotoCapabilities")
     public native Promise<PhotoCapabilities> getPhotoCapabilities();
     
-    
     @JsMethod(name = "getPhotoSettings")
     public native Promise<PhotoSettings> getPhotoSettings();
-    
     
     @JsMethod(name = "grabFrame")
     public native Promise<ImageBitmap> grabFrame();
     
-    
     @JsMethod(name = "setOptions")
     public native Promise<Void> setOptions(PhotoSettings photoSettings);
-    
     
     @JsMethod(name = "takePhoto")
     public native Promise<Blob> takePhoto();
     
-    
     @JsMethod(name = "takePhoto")
     public native Promise<Blob> takePhoto(PhotoSettings photoSettings);
-    
     
 }

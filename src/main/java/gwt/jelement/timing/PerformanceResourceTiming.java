@@ -24,9 +24,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="PerformanceResourceTiming", isNative = true)
 public class PerformanceResourceTiming extends PerformanceEntry{
-    
     @JsConstructor
     public PerformanceResourceTiming(){
         super();
@@ -85,6 +84,5 @@ public class PerformanceResourceTiming extends PerformanceEntry{
     
     @JsProperty(name="serverTiming")
     public native PerformanceServerTiming[] getServerTiming();
-    
     
 }

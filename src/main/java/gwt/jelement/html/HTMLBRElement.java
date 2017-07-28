@@ -23,9 +23,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="HTMLBRElement", isNative = true)
 public class HTMLBRElement extends HTMLElement{
-    
     @JsConstructor
     public HTMLBRElement(){
         super();
@@ -36,6 +35,5 @@ public class HTMLBRElement extends HTMLElement{
     
     @JsProperty(name="clear")
     public native void setClear(String clear);
-    
     
 }

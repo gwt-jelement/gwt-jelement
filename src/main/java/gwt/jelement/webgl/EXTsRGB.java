@@ -20,13 +20,11 @@ import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="EXTsRGB", isNative = true)
 public class EXTsRGB{
-    public static int SRGB_EXT;
-    public static int SRGB_ALPHA_EXT;
-    public static int SRGB8_ALPHA8_EXT;
-    public static int FRAMEBUFFER_ATTACHMENT_COLOR_ENCODING_EXT;
-    
-    
+    public static double SRGB_EXT;
+    public static double SRGB_ALPHA_EXT;
+    public static double SRGB8_ALPHA8_EXT;
+    public static double FRAMEBUFFER_ATTACHMENT_COLOR_ENCODING_EXT;
     
 }

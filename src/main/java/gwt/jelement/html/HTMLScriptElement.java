@@ -23,9 +23,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="HTMLScriptElement", isNative = true)
 public class HTMLScriptElement extends HTMLElement{
-    
     @JsConstructor
     public HTMLScriptElement(){
         super();
@@ -96,6 +95,5 @@ public class HTMLScriptElement extends HTMLElement{
     
     @JsProperty(name="integrity")
     public native void setIntegrity(String integrity);
-    
     
 }

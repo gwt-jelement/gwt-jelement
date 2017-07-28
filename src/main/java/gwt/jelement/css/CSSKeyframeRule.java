@@ -24,9 +24,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="CSSKeyframeRule", isNative = true)
 public class CSSKeyframeRule extends CSSRule{
-    
     @JsConstructor
     public CSSKeyframeRule(){
         super();
@@ -40,6 +39,5 @@ public class CSSKeyframeRule extends CSSRule{
     
     @JsProperty(name="style")
     public native CSSStyleDeclaration getStyle();
-    
     
 }

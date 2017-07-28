@@ -24,9 +24,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="SVGLineElement", isNative = true)
 public class SVGLineElement extends SVGGeometryElement{
-    
     @JsConstructor
     public SVGLineElement(){
         super();
@@ -43,6 +42,5 @@ public class SVGLineElement extends SVGGeometryElement{
     
     @JsProperty(name="y2")
     public native SVGAnimatedLength getY2();
-    
     
 }

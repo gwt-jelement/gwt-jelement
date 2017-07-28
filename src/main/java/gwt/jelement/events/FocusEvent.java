@@ -25,9 +25,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="FocusEvent", isNative = true)
 public class FocusEvent extends UIEvent{
-    
     @JsConstructor
     public FocusEvent(String type){
         super((String) null);
@@ -40,6 +39,5 @@ public class FocusEvent extends UIEvent{
     
     @JsProperty(name="relatedTarget")
     public native EventTarget getRelatedTarget();
-    
     
 }

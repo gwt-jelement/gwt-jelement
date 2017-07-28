@@ -25,9 +25,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="RTCPeerConnectionIceEvent", isNative = true)
 public class RTCPeerConnectionIceEvent extends Event{
-    
     @JsConstructor
     public RTCPeerConnectionIceEvent(String type){
         super((String) null);
@@ -40,6 +39,5 @@ public class RTCPeerConnectionIceEvent extends Event{
     
     @JsProperty(name="candidate")
     public native RTCIceCandidate getCandidate();
-    
     
 }

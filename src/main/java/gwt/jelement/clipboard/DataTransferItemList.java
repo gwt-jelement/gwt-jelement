@@ -24,26 +24,21 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="DataTransferItemList", isNative = true)
 public class DataTransferItemList{
-    
     @JsProperty(name="length")
     public native double getLength();
     
     @JsMethod(name = "add")
     public native DataTransferItem add(File file);
     
-    
     @JsMethod(name = "add")
     public native DataTransferItem add(String data, String type);
-    
     
     @JsMethod(name = "clear")
     public native void clear();
     
-    
     @JsMethod(name = "remove")
     public native void remove(double index);
-    
     
 }

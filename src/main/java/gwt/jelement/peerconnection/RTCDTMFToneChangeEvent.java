@@ -24,9 +24,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="RTCDTMFToneChangeEvent", isNative = true)
 public class RTCDTMFToneChangeEvent extends Event{
-    
     @JsConstructor
     public RTCDTMFToneChangeEvent(String type, RTCDTMFToneChangeEventInit eventInitDict){
         super((String) null);
@@ -34,6 +33,5 @@ public class RTCDTMFToneChangeEvent extends Event{
     
     @JsProperty(name="tone")
     public native String getTone();
-    
     
 }

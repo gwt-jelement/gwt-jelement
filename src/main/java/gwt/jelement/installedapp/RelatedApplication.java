@@ -21,9 +21,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="RelatedApplication", isNative = true)
 public class RelatedApplication{
-    
     @JsProperty(name="platform")
     public native String getPlatform();
     
@@ -32,6 +31,5 @@ public class RelatedApplication{
     
     @JsProperty(name="id")
     public native String getId();
-    
     
 }

@@ -30,9 +30,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="MediaDevices", isNative = true)
 public class MediaDevices extends EventTarget{
-    
     @JsProperty(name="ondevicechange")
     private EventHandlerNonNull ondevicechange;
     
@@ -54,17 +53,13 @@ public class MediaDevices extends EventTarget{
     @JsMethod(name = "enumerateDevices")
     public native Promise<MediaDeviceInfo[]> enumerateDevices();
     
-    
     @JsMethod(name = "getSupportedConstraints")
     public native MediaTrackSupportedConstraints getSupportedConstraints();
-    
     
     @JsMethod(name = "getUserMedia")
     public native Promise<MediaStream> getUserMedia();
     
-    
     @JsMethod(name = "getUserMedia")
     public native Promise<MediaStream> getUserMedia(MediaStreamConstraints constraints);
-    
     
 }

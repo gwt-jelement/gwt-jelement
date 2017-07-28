@@ -25,9 +25,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="CustomEvent", isNative = true)
 public class CustomEvent extends Event{
-    
     @JsConstructor
     public CustomEvent(String type){
         super((String) null);
@@ -44,17 +43,13 @@ public class CustomEvent extends Event{
     @JsMethod(name = "initCustomEvent")
     public native void initCustomEvent(String type);
     
-    
     @JsMethod(name = "initCustomEvent")
     public native void initCustomEvent(String type, boolean bubbles);
-    
     
     @JsMethod(name = "initCustomEvent")
     public native void initCustomEvent(String type, boolean bubbles, boolean cancelable);
     
-    
     @JsMethod(name = "initCustomEvent")
     public native void initCustomEvent(String type, boolean bubbles, boolean cancelable, Object detail);
-    
     
 }

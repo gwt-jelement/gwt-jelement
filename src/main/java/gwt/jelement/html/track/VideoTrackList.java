@@ -26,9 +26,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="VideoTrackList", isNative = true)
 public class VideoTrackList extends EventTarget{
-    
     @JsProperty(name="onchange")
     private EventHandlerNonNull onchange;
     
@@ -81,6 +80,5 @@ public class VideoTrackList extends EventTarget{
     
     @JsMethod(name = "getTrackById")
     public native VideoTrack getTrackById(String id);
-    
     
 }

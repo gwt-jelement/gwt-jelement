@@ -17,17 +17,21 @@
 package gwt.jelement.peerconnection;
 
 import gwt.jelement.peerconnection.RTCSdpType;
-import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="RTCSessionDescription", isNative = true)
 public class RTCSessionDescription{
-    
     @JsProperty(name="type")
     private String type;
+    
+    @JsProperty(name="sdp")
+    public native String getSdp();
+    
+    @JsProperty(name="sdp")
+    public native void setSdp(String sdp);
     
     @JsOverlay
     public final RTCSdpType getType(){
@@ -38,15 +42,5 @@ public class RTCSessionDescription{
     public final void setType(RTCSdpType type){
        this.type = type.getInternalValue();
     }
-    
-    @JsProperty(name="sdp")
-    public native String getSdp();
-    
-    @JsProperty(name="sdp")
-    public native void setSdp(String sdp);
-    
-    @JsMethod(name = "toJSON")
-    public native Object toJSON();
-    
     
 }

@@ -23,9 +23,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="Location", isNative = true)
 public class Location{
-    
     @JsProperty(name="ancestorOrigins")
     public native DOMStringList getAncestorOrigins();
     
@@ -83,21 +82,16 @@ public class Location{
     @JsMethod(name = "assign")
     public native void assign(String url);
     
-    
     @JsMethod(name = "reload")
     public native void reload();
-    
     
     @JsMethod(name = "replace")
     public native void replace(String url);
     
-    
     @JsMethod(name = "toString")
     public native String toString();
     
-    
     @JsMethod(name = "valueOf")
     public native Object valueOf();
-    
     
 }

@@ -20,11 +20,9 @@ import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="WebGLDebugRendererInfo", isNative = true)
 public class WebGLDebugRendererInfo{
-    public static int UNMASKED_VENDOR_WEBGL;
-    public static int UNMASKED_RENDERER_WEBGL;
-    
-    
+    public static double UNMASKED_VENDOR_WEBGL;
+    public static double UNMASKED_RENDERER_WEBGL;
     
 }

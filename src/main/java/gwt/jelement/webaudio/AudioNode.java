@@ -29,9 +29,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="AudioNode", isNative = true)
 public class AudioNode extends EventTarget{
-    
     @JsProperty(name="channelCountMode")
     private String channelCountMode;
     
@@ -81,49 +80,37 @@ public class AudioNode extends EventTarget{
     @JsMethod(name = "connect")
     public native AudioNode connect(AudioNode destination);
     
-    
     @JsMethod(name = "connect")
     public native void connect(AudioParam destination);
-    
     
     @JsMethod(name = "connect")
     public native AudioNode connect(AudioNode destination, double output);
     
-    
     @JsMethod(name = "connect")
     public native void connect(AudioParam destination, double output);
-    
     
     @JsMethod(name = "connect")
     public native AudioNode connect(AudioNode destination, double output, double input);
     
-    
     @JsMethod(name = "disconnect")
     public native void disconnect();
-    
     
     @JsMethod(name = "disconnect")
     public native void disconnect(double output);
     
-    
     @JsMethod(name = "disconnect")
     public native void disconnect(AudioNode destination);
-    
     
     @JsMethod(name = "disconnect")
     public native void disconnect(AudioParam destination);
     
-    
     @JsMethod(name = "disconnect")
     public native void disconnect(AudioNode destination, double output);
-    
     
     @JsMethod(name = "disconnect")
     public native void disconnect(AudioParam destination, double output);
     
-    
     @JsMethod(name = "disconnect")
     public native void disconnect(AudioNode destination, double output, double input);
-    
     
 }

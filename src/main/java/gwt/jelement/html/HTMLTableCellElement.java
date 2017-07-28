@@ -23,9 +23,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="HTMLTableCellElement", isNative = true)
 public class HTMLTableCellElement extends HTMLElement{
-    
     @JsConstructor
     public HTMLTableCellElement(){
         super();
@@ -117,6 +116,5 @@ public class HTMLTableCellElement extends HTMLElement{
     
     @JsProperty(name="scope")
     public native void setScope(String scope);
-    
     
 }

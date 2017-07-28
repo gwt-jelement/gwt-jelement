@@ -24,9 +24,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="HTMLProgressElement", isNative = true)
 public class HTMLProgressElement extends HTMLElement{
-    
     @JsConstructor
     public HTMLProgressElement(){
         super();
@@ -49,6 +48,5 @@ public class HTMLProgressElement extends HTMLElement{
     
     @JsProperty(name="labels")
     public native NodeList getLabels();
-    
     
 }

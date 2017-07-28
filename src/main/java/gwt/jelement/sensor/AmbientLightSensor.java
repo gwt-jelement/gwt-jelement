@@ -24,9 +24,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="AmbientLightSensor", isNative = true)
 public class AmbientLightSensor extends Sensor{
-    
     @JsConstructor
     public AmbientLightSensor(){
         super();
@@ -39,6 +38,5 @@ public class AmbientLightSensor extends Sensor{
     
     @JsProperty(name="illuminance")
     public native double getIlluminance();
-    
     
 }

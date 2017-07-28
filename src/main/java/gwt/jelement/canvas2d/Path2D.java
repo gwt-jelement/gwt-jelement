@@ -24,9 +24,8 @@ import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="Path2D", isNative = true)
 public class Path2D{
-    
     @JsConstructor
     public Path2D(){
     }
@@ -42,53 +41,40 @@ public class Path2D{
     @JsMethod(name = "addPath")
     public native void addPath(Path2D path);
     
-    
     @JsMethod(name = "addPath")
     public native void addPath(Path2D path, SVGMatrix transform);
-    
     
     @JsMethod(name = "arc")
     public native void arc(float x, float y, float radius, float startAngle, float endAngle);
     
-    
     @JsMethod(name = "arc")
     public native void arc(float x, float y, float radius, float startAngle, float endAngle, boolean anticlockwise);
-    
     
     @JsMethod(name = "arcTo")
     public native void arcTo(float x1, float y1, float x2, float y2, float radius);
     
-    
     @JsMethod(name = "bezierCurveTo")
     public native void bezierCurveTo(float cp1x, float cp1y, float cp2x, float cp2y, float x, float y);
-    
     
     @JsMethod(name = "closePath")
     public native void closePath();
     
-    
     @JsMethod(name = "ellipse")
     public native void ellipse(float x, float y, float radiusX, float radiusY, float rotation, float startAngle, float endAngle);
-    
     
     @JsMethod(name = "ellipse")
     public native void ellipse(float x, float y, float radiusX, float radiusY, float rotation, float startAngle, float endAngle, boolean anticlockwise);
     
-    
     @JsMethod(name = "lineTo")
     public native void lineTo(float x, float y);
-    
     
     @JsMethod(name = "moveTo")
     public native void moveTo(float x, float y);
     
-    
     @JsMethod(name = "quadraticCurveTo")
     public native void quadraticCurveTo(float cpx, float cpy, float x, float y);
     
-    
     @JsMethod(name = "rect")
     public native void rect(float x, float y, float width, float height);
-    
     
 }

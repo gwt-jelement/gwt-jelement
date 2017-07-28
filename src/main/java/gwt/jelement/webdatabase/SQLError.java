@@ -21,23 +21,21 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="SQLError", isNative = true)
 public class SQLError{
-    public static int UNKNOWN_ERR;
-    public static int DATABASE_ERR;
-    public static int VERSION_ERR;
-    public static int TOO_LARGE_ERR;
-    public static int QUOTA_ERR;
-    public static int SYNTAX_ERR;
-    public static int CONSTRAINT_ERR;
-    public static int TIMEOUT_ERR;
-    
+    public static short UNKNOWN_ERR;
+    public static short DATABASE_ERR;
+    public static short VERSION_ERR;
+    public static short TOO_LARGE_ERR;
+    public static short QUOTA_ERR;
+    public static short SYNTAX_ERR;
+    public static short CONSTRAINT_ERR;
+    public static short TIMEOUT_ERR;
     
     @JsProperty(name="code")
     public native double getCode();
     
     @JsProperty(name="message")
     public native String getMessage();
-    
     
 }

@@ -24,31 +24,24 @@ import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="DOMImplementation", isNative = true)
 public class DOMImplementation{
-    
     @JsMethod(name = "createDocument")
     public native XMLDocument createDocument(String namespaceURI, String qualifiedName);
-    
     
     @JsMethod(name = "createDocument")
     public native XMLDocument createDocument(String namespaceURI, String qualifiedName, DocumentType doctype);
     
-    
     @JsMethod(name = "createDocumentType")
     public native DocumentType createDocumentType(String qualifiedName, String publicId, String systemId);
-    
     
     @JsMethod(name = "createHTMLDocument")
     public native HTMLDocument createHTMLDocument();
     
-    
     @JsMethod(name = "createHTMLDocument")
     public native HTMLDocument createHTMLDocument(String title);
     
-    
     @JsMethod(name = "hasFeature")
     public native boolean hasFeature();
-    
     
 }

@@ -26,13 +26,12 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="KeyboardEvent", isNative = true)
 public class KeyboardEvent extends UIEvent{
-    public static int DOM_KEY_LOCATION_STANDARD;
-    public static int DOM_KEY_LOCATION_LEFT;
-    public static int DOM_KEY_LOCATION_RIGHT;
-    public static int DOM_KEY_LOCATION_NUMPAD;
-    
+    public static double DOM_KEY_LOCATION_STANDARD;
+    public static double DOM_KEY_LOCATION_LEFT;
+    public static double DOM_KEY_LOCATION_RIGHT;
+    public static double DOM_KEY_LOCATION_NUMPAD;
     
     @JsConstructor
     public KeyboardEvent(String type){
@@ -80,49 +79,37 @@ public class KeyboardEvent extends UIEvent{
     @JsMethod(name = "getModifierState")
     public native boolean getModifierState(String keyArg);
     
-    
     @JsMethod(name = "initKeyboardEvent")
     public native void initKeyboardEvent();
-    
     
     @JsMethod(name = "initKeyboardEvent")
     public native void initKeyboardEvent(String type);
     
-    
     @JsMethod(name = "initKeyboardEvent")
     public native void initKeyboardEvent(String type, boolean bubbles);
-    
     
     @JsMethod(name = "initKeyboardEvent")
     public native void initKeyboardEvent(String type, boolean bubbles, boolean cancelable);
     
-    
     @JsMethod(name = "initKeyboardEvent")
     public native void initKeyboardEvent(String type, boolean bubbles, boolean cancelable, Window view);
-    
     
     @JsMethod(name = "initKeyboardEvent")
     public native void initKeyboardEvent(String type, boolean bubbles, boolean cancelable, Window view, String keyIdentifier);
     
-    
     @JsMethod(name = "initKeyboardEvent")
     public native void initKeyboardEvent(String type, boolean bubbles, boolean cancelable, Window view, String keyIdentifier, double location);
-    
     
     @JsMethod(name = "initKeyboardEvent")
     public native void initKeyboardEvent(String type, boolean bubbles, boolean cancelable, Window view, String keyIdentifier, double location, boolean ctrlKey);
     
-    
     @JsMethod(name = "initKeyboardEvent")
     public native void initKeyboardEvent(String type, boolean bubbles, boolean cancelable, Window view, String keyIdentifier, double location, boolean ctrlKey, boolean altKey);
-    
     
     @JsMethod(name = "initKeyboardEvent")
     public native void initKeyboardEvent(String type, boolean bubbles, boolean cancelable, Window view, String keyIdentifier, double location, boolean ctrlKey, boolean altKey, boolean shiftKey);
     
-    
     @JsMethod(name = "initKeyboardEvent")
     public native void initKeyboardEvent(String type, boolean bubbles, boolean cancelable, Window view, String keyIdentifier, double location, boolean ctrlKey, boolean altKey, boolean shiftKey, boolean metaKey);
-    
     
 }

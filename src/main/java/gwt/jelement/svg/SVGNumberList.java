@@ -23,9 +23,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="SVGNumberList", isNative = true)
 public class SVGNumberList{
-    
     @JsProperty(name="length")
     public native double getLength();
     
@@ -35,25 +34,19 @@ public class SVGNumberList{
     @JsMethod(name = "appendItem")
     public native SVGNumber appendItem(SVGNumber newItem);
     
-    
     @JsMethod(name = "clear")
     public native void clear();
-    
     
     @JsMethod(name = "initialize")
     public native SVGNumber initialize(SVGNumber newItem);
     
-    
     @JsMethod(name = "insertItemBefore")
     public native SVGNumber insertItemBefore(SVGNumber newItem, double index);
-    
     
     @JsMethod(name = "removeItem")
     public native SVGNumber removeItem(double index);
     
-    
     @JsMethod(name = "replaceItem")
     public native SVGNumber replaceItem(SVGNumber newItem, double index);
-    
     
 }

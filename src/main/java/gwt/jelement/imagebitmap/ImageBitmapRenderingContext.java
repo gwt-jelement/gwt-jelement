@@ -24,14 +24,12 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="ImageBitmapRenderingContext", isNative = true)
 public class ImageBitmapRenderingContext{
-    
     @JsProperty(name="canvas")
     public native HTMLCanvasElement getCanvas();
     
     @JsMethod(name = "transferFromImageBitmap")
     public native void transferFromImageBitmap(ImageBitmap bitmap);
-    
     
 }

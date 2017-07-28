@@ -16,8 +16,8 @@
  */
 package gwt.jelement.webmidi;
 
+import gwt.jelement.core.Uint8Array;
 import gwt.jelement.events.EventInit;
-import elemental2.core.Uint8Array;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;

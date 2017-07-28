@@ -28,9 +28,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="HTMLOutputElement", isNative = true)
 public class HTMLOutputElement extends HTMLElement{
-    
     @JsConstructor
     public HTMLOutputElement(){
         super();
@@ -78,13 +77,10 @@ public class HTMLOutputElement extends HTMLElement{
     @JsMethod(name = "checkValidity")
     public native boolean checkValidity();
     
-    
     @JsMethod(name = "reportValidity")
     public native boolean reportValidity();
     
-    
     @JsMethod(name = "setCustomValidity")
     public native void setCustomValidity(String error);
-    
     
 }

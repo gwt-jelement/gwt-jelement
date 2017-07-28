@@ -23,19 +23,15 @@ import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="XPathExpression", isNative = true)
 public class XPathExpression{
-    
     @JsMethod(name = "evaluate")
     public native XPathResult evaluate(Node contextNode);
-    
     
     @JsMethod(name = "evaluate")
     public native XPathResult evaluate(Node contextNode, short type);
     
-    
     @JsMethod(name = "evaluate")
     public native XPathResult evaluate(Node contextNode, short type, Object inResult);
-    
     
 }

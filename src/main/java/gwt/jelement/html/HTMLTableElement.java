@@ -28,9 +28,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="HTMLTableElement", isNative = true)
 public class HTMLTableElement extends HTMLElement{
-    
     @JsConstructor
     public HTMLTableElement(){
         super();
@@ -117,41 +116,31 @@ public class HTMLTableElement extends HTMLElement{
     @JsMethod(name = "createCaption")
     public native HTMLTableCaptionElement createCaption();
     
-    
     @JsMethod(name = "createTBody")
     public native HTMLTableSectionElement createTBody();
-    
     
     @JsMethod(name = "createTFoot")
     public native HTMLTableSectionElement createTFoot();
     
-    
     @JsMethod(name = "createTHead")
     public native HTMLTableSectionElement createTHead();
-    
     
     @JsMethod(name = "deleteCaption")
     public native void deleteCaption();
     
-    
     @JsMethod(name = "deleteRow")
     public native void deleteRow(double index);
-    
     
     @JsMethod(name = "deleteTFoot")
     public native void deleteTFoot();
     
-    
     @JsMethod(name = "deleteTHead")
     public native void deleteTHead();
-    
     
     @JsMethod(name = "insertRow")
     public native HTMLTableRowElement insertRow();
     
-    
     @JsMethod(name = "insertRow")
     public native HTMLTableRowElement insertRow(double index);
-    
     
 }

@@ -24,9 +24,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="ProcessingInstruction", isNative = true)
 public class ProcessingInstruction extends CharacterData{
-    
     @JsConstructor
     public ProcessingInstruction(){
         super();
@@ -37,6 +36,5 @@ public class ProcessingInstruction extends CharacterData{
     
     @JsProperty(name="sheet")
     public native StyleSheet getSheet();
-    
     
 }

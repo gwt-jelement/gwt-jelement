@@ -25,9 +25,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="Client", isNative = true)
 public class Client{
-    
     @JsProperty(name="type")
     private String type;
     
@@ -53,9 +52,7 @@ public class Client{
     @JsMethod(name = "postMessage")
     public native void postMessage(Object message);
     
-    
     @JsMethod(name = "postMessage")
     public native void postMessage(Object message, MessagePort[] transfer);
-    
     
 }

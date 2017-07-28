@@ -26,9 +26,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="SVGAnimationElement", isNative = true)
 public class SVGAnimationElement extends SVGElement{
-    
     @JsProperty(name="onbegin")
     private EventHandlerNonNull onbegin;
     
@@ -85,29 +84,22 @@ public class SVGAnimationElement extends SVGElement{
     @JsMethod(name = "beginElement")
     public native void beginElement();
     
-    
     @JsMethod(name = "beginElementAt")
     public native void beginElementAt(float offset);
-    
     
     @JsMethod(name = "endElement")
     public native void endElement();
     
-    
     @JsMethod(name = "endElementAt")
     public native void endElementAt(float offset);
-    
     
     @JsMethod(name = "getCurrentTime")
     public native float getCurrentTime();
     
-    
     @JsMethod(name = "getSimpleDuration")
     public native float getSimpleDuration();
     
-    
     @JsMethod(name = "getStartTime")
     public native float getStartTime();
-    
     
 }

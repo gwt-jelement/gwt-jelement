@@ -23,9 +23,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="HTMLFontElement", isNative = true)
 public class HTMLFontElement extends HTMLElement{
-    
     @JsConstructor
     public HTMLFontElement(){
         super();
@@ -48,6 +47,5 @@ public class HTMLFontElement extends HTMLElement{
     
     @JsProperty(name="size")
     public native void setSize(String size);
-    
     
 }

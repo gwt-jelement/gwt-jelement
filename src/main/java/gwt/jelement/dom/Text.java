@@ -27,9 +27,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="Text", isNative = true)
 public class Text extends CharacterData{
-    
     @JsConstructor
     public Text(){
         super();
@@ -49,9 +48,7 @@ public class Text extends CharacterData{
     @JsMethod(name = "getDestinationInsertionPoints")
     public native NodeList getDestinationInsertionPoints();
     
-    
     @JsMethod(name = "splitText")
     public native Text splitText(double offset);
-    
     
 }

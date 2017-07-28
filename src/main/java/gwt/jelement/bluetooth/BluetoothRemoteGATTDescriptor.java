@@ -17,9 +17,9 @@
 package gwt.jelement.bluetooth;
 
 import gwt.jelement.bluetooth.BluetoothRemoteGATTCharacteristic;
-import gwt.jelement.dom.DataView;
-import elemental2.core.ArrayBuffer;
-import elemental2.core.ArrayBufferView;
+import gwt.jelement.core.ArrayBuffer;
+import gwt.jelement.core.ArrayBufferView;
+import gwt.jelement.core.DataView;
 import elemental2.promise.Promise;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
@@ -27,9 +27,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="BluetoothRemoteGATTDescriptor", isNative = true)
 public class BluetoothRemoteGATTDescriptor{
-    
     @JsProperty(name="characteristic")
     public native BluetoothRemoteGATTCharacteristic getCharacteristic();
     
@@ -42,13 +41,10 @@ public class BluetoothRemoteGATTDescriptor{
     @JsMethod(name = "readValue")
     public native Promise<DataView> readValue();
     
-    
     @JsMethod(name = "writeValue")
     public native Promise<Void> writeValue(ArrayBuffer value);
     
-    
     @JsMethod(name = "writeValue")
     public native Promise<Void> writeValue(ArrayBufferView value);
-    
     
 }

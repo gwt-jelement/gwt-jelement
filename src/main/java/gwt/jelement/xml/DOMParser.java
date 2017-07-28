@@ -24,9 +24,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 import jsinterop.base.Any;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="DOMParser", isNative = true)
 public class DOMParser{
-    
     @JsOverlay
     public final Document parseFromString(String str, SupportedType type){
         return parseFromString(str, type.getInternalValue());
@@ -34,6 +33,5 @@ public class DOMParser{
     
     @JsMethod(name = "parseFromString")
     public native Document parseFromString(String str, String type);
-    
     
 }

@@ -27,9 +27,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="HTMLIFrameElement", isNative = true)
 public class HTMLIFrameElement extends HTMLElement{
-    
     @JsConstructor
     public HTMLIFrameElement(){
         super();
@@ -133,6 +132,5 @@ public class HTMLIFrameElement extends HTMLElement{
     
     @JsMethod(name = "getSVGDocument")
     public native Document getSVGDocument();
-    
     
 }

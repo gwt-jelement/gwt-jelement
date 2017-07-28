@@ -23,14 +23,12 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="ClientRectList", isNative = true)
 public class ClientRectList{
-    
     @JsProperty(name="length")
     public native double getLength();
     
     @JsMethod(name = "item")
     public native ClientRect item(double index);
-    
     
 }

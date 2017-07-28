@@ -26,9 +26,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="DynamicsCompressorNode", isNative = true)
 public class DynamicsCompressorNode extends AudioNode{
-    
     @JsConstructor
     public DynamicsCompressorNode(BaseAudioContext context){
         super();
@@ -56,6 +55,5 @@ public class DynamicsCompressorNode extends AudioNode{
     
     @JsProperty(name="release")
     public native AudioParam getRelease();
-    
     
 }

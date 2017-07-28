@@ -23,9 +23,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="HTMLParagraphElement", isNative = true)
 public class HTMLParagraphElement extends HTMLElement{
-    
     @JsConstructor
     public HTMLParagraphElement(){
         super();
@@ -36,6 +35,5 @@ public class HTMLParagraphElement extends HTMLElement{
     
     @JsProperty(name="align")
     public native void setAlign(String align);
-    
     
 }

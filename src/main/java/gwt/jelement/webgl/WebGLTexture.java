@@ -21,9 +21,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="WebGLTexture", isNative = true)
 public class WebGLTexture{
-    
     @JsProperty(name="lastUploadedVideoWidth")
     public native double getLastUploadedVideoWidth();
     
@@ -32,6 +31,5 @@ public class WebGLTexture{
     
     @JsProperty(name="lastUploadedVideoTimestamp")
     public native double getLastUploadedVideoTimestamp();
-    
     
 }

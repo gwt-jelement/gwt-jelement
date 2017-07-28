@@ -29,9 +29,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="FontFaceSet", isNative = true)
 public class FontFaceSet extends EventTarget{
-    
     @JsProperty(name="onloading")
     private EventHandlerNonNull onloading;
     
@@ -90,17 +89,13 @@ public class FontFaceSet extends EventTarget{
     @JsMethod(name = "check")
     public native boolean check(String font);
     
-    
     @JsMethod(name = "check")
     public native boolean check(String font, String text);
-    
     
     @JsMethod(name = "load")
     public native Promise<FontFace[]> load(String font);
     
-    
     @JsMethod(name = "load")
     public native Promise<FontFace[]> load(String font, String text);
-    
     
 }

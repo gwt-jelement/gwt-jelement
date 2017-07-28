@@ -16,18 +16,17 @@
  */
 package gwt.jelement.webaudio;
 
+import gwt.jelement.core.Float32Array;
 import gwt.jelement.webaudio.AudioNode;
 import gwt.jelement.webaudio.OverSampleType;
-import elemental2.core.Float32Array;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="WaveShaperNode", isNative = true)
 public class WaveShaperNode extends AudioNode{
-    
     @JsProperty(name="oversample")
     private String oversample;
     
@@ -51,6 +50,5 @@ public class WaveShaperNode extends AudioNode{
     public final void setOversample(OverSampleType oversample){
        this.oversample = oversample.getInternalValue();
     }
-    
     
 }

@@ -24,9 +24,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="TransitionEvent", isNative = true)
 public class TransitionEvent extends Event{
-    
     @JsConstructor
     public TransitionEvent(String type){
         super((String) null);
@@ -45,6 +44,5 @@ public class TransitionEvent extends Event{
     
     @JsProperty(name="pseudoElement")
     public native String getPseudoElement();
-    
     
 }

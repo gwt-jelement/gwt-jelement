@@ -28,9 +28,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="HTMLObjectElement", isNative = true)
 public class HTMLObjectElement extends HTMLElement{
-    
     @JsConstructor
     public HTMLObjectElement(){
         super();
@@ -153,17 +152,13 @@ public class HTMLObjectElement extends HTMLElement{
     @JsMethod(name = "checkValidity")
     public native boolean checkValidity();
     
-    
     @JsMethod(name = "getSVGDocument")
     public native Document getSVGDocument();
-    
     
     @JsMethod(name = "reportValidity")
     public native boolean reportValidity();
     
-    
     @JsMethod(name = "setCustomValidity")
     public native void setCustomValidity(String error);
-    
     
 }

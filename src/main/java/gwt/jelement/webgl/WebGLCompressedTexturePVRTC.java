@@ -20,13 +20,11 @@ import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="WebGLCompressedTexturePVRTC", isNative = true)
 public class WebGLCompressedTexturePVRTC{
-    public static int COMPRESSED_RGB_PVRTC_4BPPV1_IMG;
-    public static int COMPRESSED_RGB_PVRTC_2BPPV1_IMG;
-    public static int COMPRESSED_RGBA_PVRTC_4BPPV1_IMG;
-    public static int COMPRESSED_RGBA_PVRTC_2BPPV1_IMG;
-    
-    
+    public static double COMPRESSED_RGB_PVRTC_4BPPV1_IMG;
+    public static double COMPRESSED_RGB_PVRTC_2BPPV1_IMG;
+    public static double COMPRESSED_RGBA_PVRTC_4BPPV1_IMG;
+    public static double COMPRESSED_RGBA_PVRTC_2BPPV1_IMG;
     
 }

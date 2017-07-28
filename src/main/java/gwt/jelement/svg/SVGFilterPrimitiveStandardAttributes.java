@@ -23,9 +23,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="SVGFilterPrimitiveStandardAttributes", isNative = true)
 public class SVGFilterPrimitiveStandardAttributes{
-    
     @JsProperty(name="x")
     public native SVGAnimatedLength getX();
     
@@ -40,6 +39,5 @@ public class SVGFilterPrimitiveStandardAttributes{
     
     @JsProperty(name="result")
     public native SVGAnimatedString getResult();
-    
     
 }

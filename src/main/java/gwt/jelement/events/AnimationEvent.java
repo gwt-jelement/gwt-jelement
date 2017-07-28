@@ -24,9 +24,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="AnimationEvent", isNative = true)
 public class AnimationEvent extends Event{
-    
     @JsConstructor
     public AnimationEvent(String type){
         super((String) null);
@@ -42,6 +41,5 @@ public class AnimationEvent extends Event{
     
     @JsProperty(name="elapsedTime")
     public native double getElapsedTime();
-    
     
 }

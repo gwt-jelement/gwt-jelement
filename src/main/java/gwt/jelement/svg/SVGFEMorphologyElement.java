@@ -27,12 +27,11 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="SVGFEMorphologyElement", isNative = true)
 public class SVGFEMorphologyElement extends SVGElement{
-    public static int SVG_MORPHOLOGY_OPERATOR_UNKNOWN;
-    public static int SVG_MORPHOLOGY_OPERATOR_ERODE;
-    public static int SVG_MORPHOLOGY_OPERATOR_DILATE;
-    
+    public static short SVG_MORPHOLOGY_OPERATOR_UNKNOWN;
+    public static short SVG_MORPHOLOGY_OPERATOR_ERODE;
+    public static short SVG_MORPHOLOGY_OPERATOR_DILATE;
     
     @JsConstructor
     public SVGFEMorphologyElement(){
@@ -65,6 +64,5 @@ public class SVGFEMorphologyElement extends SVGElement{
     
     @JsProperty(name="result")
     public native SVGAnimatedString getResult();
-    
     
 }

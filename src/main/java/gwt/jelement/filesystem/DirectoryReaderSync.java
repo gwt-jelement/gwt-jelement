@@ -22,11 +22,9 @@ import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="DirectoryReaderSync", isNative = true)
 public class DirectoryReaderSync{
-    
     @JsMethod(name = "readEntries")
     public native EntrySync[] readEntries();
-    
     
 }

@@ -23,9 +23,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="ResourceProgressEvent", isNative = true)
 public class ResourceProgressEvent extends ProgressEvent{
-    
     @JsConstructor
     public ResourceProgressEvent(){
         super((String) null);
@@ -33,6 +32,5 @@ public class ResourceProgressEvent extends ProgressEvent{
     
     @JsProperty(name="url")
     public native String getUrl();
-    
     
 }

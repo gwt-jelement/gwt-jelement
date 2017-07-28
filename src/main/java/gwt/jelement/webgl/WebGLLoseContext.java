@@ -21,15 +21,12 @@ import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="WebGLLoseContext", isNative = true)
 public class WebGLLoseContext{
-    
     @JsMethod(name = "loseContext")
     public native void loseContext();
     
-    
     @JsMethod(name = "restoreContext")
     public native void restoreContext();
-    
     
 }

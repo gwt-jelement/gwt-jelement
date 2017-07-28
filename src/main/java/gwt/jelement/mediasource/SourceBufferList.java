@@ -24,9 +24,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="SourceBufferList", isNative = true)
 public class SourceBufferList extends EventTarget{
-    
     @JsProperty(name="onaddsourcebuffer")
     private EventHandlerNonNull onaddsourcebuffer;
     
@@ -60,6 +59,5 @@ public class SourceBufferList extends EventTarget{
     public final void setOnRemovesourcebuffer(EventHandlerNonNull onremovesourcebuffer){
         this.onremovesourcebuffer = onremovesourcebuffer;
     }
-    
     
 }

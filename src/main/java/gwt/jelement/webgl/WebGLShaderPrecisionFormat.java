@@ -21,9 +21,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="WebGLShaderPrecisionFormat", isNative = true)
 public class WebGLShaderPrecisionFormat{
-    
     @JsProperty(name="rangeMin")
     public native double getRangeMin();
     
@@ -32,6 +31,5 @@ public class WebGLShaderPrecisionFormat{
     
     @JsProperty(name="precision")
     public native double getPrecision();
-    
     
 }

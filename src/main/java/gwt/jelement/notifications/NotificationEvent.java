@@ -25,9 +25,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="NotificationEvent", isNative = true)
 public class NotificationEvent extends ExtendableEvent{
-    
     @JsConstructor
     public NotificationEvent(String type, NotificationEventInit eventInitDict){
         super((String) null);
@@ -41,6 +40,5 @@ public class NotificationEvent extends ExtendableEvent{
     
     @JsProperty(name="reply")
     public native String getReply();
-    
     
 }

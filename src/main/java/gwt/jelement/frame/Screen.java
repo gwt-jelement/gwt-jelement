@@ -22,9 +22,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="Screen", isNative = true)
 public class Screen{
-    
     @JsProperty(name="availWidth")
     public native double getAvailWidth();
     
@@ -57,6 +56,5 @@ public class Screen{
     
     @JsProperty(name="keepAwake")
     public native void setKeepAwake(boolean keepAwake);
-    
     
 }

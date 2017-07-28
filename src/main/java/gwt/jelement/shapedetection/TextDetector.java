@@ -32,9 +32,8 @@ import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="TextDetector", isNative = true)
 public class TextDetector{
-    
     @JsConstructor
     public TextDetector(){
     }
@@ -42,33 +41,25 @@ public class TextDetector{
     @JsMethod(name = "detect")
     public native Promise<DetectedText[]> detect(HTMLImageElement image);
     
-    
     @JsMethod(name = "detect")
     public native Promise<DetectedText[]> detect(SVGImageElement image);
-    
     
     @JsMethod(name = "detect")
     public native Promise<DetectedText[]> detect(HTMLVideoElement image);
     
-    
     @JsMethod(name = "detect")
     public native Promise<DetectedText[]> detect(HTMLCanvasElement image);
-    
     
     @JsMethod(name = "detect")
     public native Promise<DetectedText[]> detect(Blob image);
     
-    
     @JsMethod(name = "detect")
     public native Promise<DetectedText[]> detect(ImageData image);
-    
     
     @JsMethod(name = "detect")
     public native Promise<DetectedText[]> detect(ImageBitmap image);
     
-    
     @JsMethod(name = "detect")
     public native Promise<DetectedText[]> detect(OffscreenCanvas image);
-    
     
 }

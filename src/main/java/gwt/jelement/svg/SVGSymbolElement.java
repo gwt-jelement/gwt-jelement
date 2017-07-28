@@ -25,9 +25,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="SVGSymbolElement", isNative = true)
 public class SVGSymbolElement extends SVGElement{
-    
     @JsConstructor
     public SVGSymbolElement(){
         super();
@@ -38,6 +37,5 @@ public class SVGSymbolElement extends SVGElement{
     
     @JsProperty(name="preserveAspectRatio")
     public native SVGAnimatedPreserveAspectRatio getPreserveAspectRatio();
-    
     
 }

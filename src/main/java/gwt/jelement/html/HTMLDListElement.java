@@ -23,9 +23,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="HTMLDListElement", isNative = true)
 public class HTMLDListElement extends HTMLElement{
-    
     @JsConstructor
     public HTMLDListElement(){
         super();
@@ -36,6 +35,5 @@ public class HTMLDListElement extends HTMLElement{
     
     @JsProperty(name="compact")
     public native void setCompact(boolean compact);
-    
     
 }

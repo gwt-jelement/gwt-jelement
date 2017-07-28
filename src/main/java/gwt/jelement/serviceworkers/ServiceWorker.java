@@ -27,17 +27,16 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="ServiceWorker", isNative = true)
 public class ServiceWorker extends EventTarget{
-    
-    @JsProperty(name="state")
-    private String state;
-    
     @JsProperty(name="onstatechange")
     private EventHandlerNonNull onstatechange;
     
     @JsProperty(name="onerror")
     private EventHandlerNonNull onerror;
+    
+    @JsProperty(name="state")
+    private String state;
     
     @JsConstructor
     public ServiceWorker(){
@@ -46,11 +45,6 @@ public class ServiceWorker extends EventTarget{
     
     @JsProperty(name="scriptURL")
     public native String getScriptURL();
-    
-    @JsOverlay
-    public final ServiceWorkerState getState(){
-       return ServiceWorkerState.of(state);
-    }
     
     @JsOverlay
     public final EventHandlerNonNull getOnStatechange(){
@@ -72,12 +66,15 @@ public class ServiceWorker extends EventTarget{
         this.onerror = onerror;
     }
     
+    @JsOverlay
+    public final ServiceWorkerState getState(){
+       return ServiceWorkerState.of(state);
+    }
+    
     @JsMethod(name = "postMessage")
     public native void postMessage(Object message);
     
-    
     @JsMethod(name = "postMessage")
     public native void postMessage(Object message, MessagePort[] transfer);
-    
     
 }

@@ -25,9 +25,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="SVGFEFloodElement", isNative = true)
 public class SVGFEFloodElement extends SVGElement{
-    
     @JsConstructor
     public SVGFEFloodElement(){
         super();
@@ -47,6 +46,5 @@ public class SVGFEFloodElement extends SVGElement{
     
     @JsProperty(name="result")
     public native SVGAnimatedString getResult();
-    
     
 }

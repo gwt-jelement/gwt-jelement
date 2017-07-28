@@ -16,15 +16,13 @@
  */
 package gwt.jelement.timing;
 
-import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="PerformanceTiming", isNative = true)
 public class PerformanceTiming{
-    
     @JsProperty(name="navigationStart")
     public native double getNavigationStart();
     
@@ -87,9 +85,5 @@ public class PerformanceTiming{
     
     @JsProperty(name="loadEventEnd")
     public native double getLoadEventEnd();
-    
-    @JsMethod(name = "toJSON")
-    public native Object toJSON();
-    
     
 }

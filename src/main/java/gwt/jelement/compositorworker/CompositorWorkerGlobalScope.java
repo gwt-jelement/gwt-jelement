@@ -27,9 +27,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="CompositorWorkerGlobalScope", isNative = true)
 public class CompositorWorkerGlobalScope extends WorkerGlobalScope{
-    
     @JsProperty(name="onmessage")
     private EventHandlerNonNull onmessage;
     
@@ -51,17 +50,13 @@ public class CompositorWorkerGlobalScope extends WorkerGlobalScope{
     @JsMethod(name = "cancelAnimationFrame")
     public native void cancelAnimationFrame(double handle);
     
-    
     @JsMethod(name = "postMessage")
     public native void postMessage(Object message);
-    
     
     @JsMethod(name = "postMessage")
     public native void postMessage(Object message, MessagePort[] transfer);
     
-    
     @JsMethod(name = "requestAnimationFrame")
     public native double requestAnimationFrame(FrameRequestCallback callback);
-    
     
 }

@@ -22,13 +22,11 @@ import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="SVGDiscardElement", isNative = true)
 public class SVGDiscardElement extends SVGElement{
-    
     @JsConstructor
     public SVGDiscardElement(){
         super();
     }
-    
     
 }

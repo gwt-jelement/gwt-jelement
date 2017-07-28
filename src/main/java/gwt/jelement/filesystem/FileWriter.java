@@ -27,12 +27,11 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="FileWriter", isNative = true)
 public class FileWriter extends EventTarget{
-    public static int INIT;
-    public static int WRITING;
-    public static int DONE;
-    
+    public static short INIT;
+    public static short WRITING;
+    public static short DONE;
     
     @JsProperty(name="onwritestart")
     private EventHandlerNonNull onwritestart;
@@ -132,17 +131,13 @@ public class FileWriter extends EventTarget{
     @JsMethod(name = "abort")
     public native void abort();
     
-    
     @JsMethod(name = "seek")
     public native void seek(double position);
-    
     
     @JsMethod(name = "truncate")
     public native void truncate(double size);
     
-    
     @JsMethod(name = "write")
     public native void write(Blob data);
-    
     
 }

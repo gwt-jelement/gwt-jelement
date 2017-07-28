@@ -26,9 +26,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="HTMLSlotElement", isNative = true)
 public class HTMLSlotElement extends HTMLElement{
-    
     @JsConstructor
     public HTMLSlotElement(){
         super();
@@ -43,9 +42,7 @@ public class HTMLSlotElement extends HTMLElement{
     @JsMethod(name = "assignedNodes")
     public native Node[] assignedNodes();
     
-    
     @JsMethod(name = "assignedNodes")
     public native Node[] assignedNodes(AssignedNodesOptions options);
-    
     
 }

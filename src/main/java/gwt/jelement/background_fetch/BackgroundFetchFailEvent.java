@@ -25,9 +25,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="BackgroundFetchFailEvent", isNative = true)
 public class BackgroundFetchFailEvent extends BackgroundFetchEvent{
-    
     @JsConstructor
     public BackgroundFetchFailEvent(String type, BackgroundFetchFailEventInit init){
         super((String) null, (BackgroundFetchEventInit) null);
@@ -35,6 +34,5 @@ public class BackgroundFetchFailEvent extends BackgroundFetchEvent{
     
     @JsProperty(name="fetches")
     public native BackgroundFetchSettledFetch[] getFetches();
-    
     
 }

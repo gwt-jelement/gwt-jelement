@@ -16,19 +16,18 @@
  */
 package gwt.jelement.webaudio;
 
+import gwt.jelement.core.Float32Array;
 import gwt.jelement.webaudio.AudioNode;
 import gwt.jelement.webaudio.BaseAudioContext;
 import gwt.jelement.webaudio.IIRFilterOptions;
-import elemental2.core.Float32Array;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="IIRFilterNode", isNative = true)
 public class IIRFilterNode extends AudioNode{
-    
     @JsConstructor
     public IIRFilterNode(BaseAudioContext context, IIRFilterOptions options){
         super();
@@ -36,6 +35,5 @@ public class IIRFilterNode extends AudioNode{
     
     @JsMethod(name = "getFrequencyResponse")
     public native void getFrequencyResponse(Float32Array frequencyHz, Float32Array magResponse, Float32Array phaseResponse);
-    
     
 }

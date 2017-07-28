@@ -25,9 +25,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="MediaStreamEvent", isNative = true)
 public class MediaStreamEvent extends Event{
-    
     @JsConstructor
     public MediaStreamEvent(String type){
         super((String) null);
@@ -40,6 +39,5 @@ public class MediaStreamEvent extends Event{
     
     @JsProperty(name="stream")
     public native MediaStream getStream();
-    
     
 }

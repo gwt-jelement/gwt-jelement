@@ -39,18 +39,17 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 import jsinterop.base.Any;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="HTMLMediaElement", isNative = true)
 public class HTMLMediaElement extends HTMLElement{
-    public static int NETWORK_EMPTY;
-    public static int NETWORK_IDLE;
-    public static int NETWORK_LOADING;
-    public static int NETWORK_NO_SOURCE;
-    public static int HAVE_NOTHING;
-    public static int HAVE_METADATA;
-    public static int HAVE_CURRENT_DATA;
-    public static int HAVE_FUTURE_DATA;
-    public static int HAVE_ENOUGH_DATA;
-    
+    public static short NETWORK_EMPTY;
+    public static short NETWORK_IDLE;
+    public static short NETWORK_LOADING;
+    public static short NETWORK_NO_SOURCE;
+    public static short HAVE_NOTHING;
+    public static short HAVE_METADATA;
+    public static short HAVE_CURRENT_DATA;
+    public static short HAVE_FUTURE_DATA;
+    public static short HAVE_ENOUGH_DATA;
     
     @JsProperty(name="onencrypted")
     private EventHandlerNonNull onencrypted;
@@ -235,7 +234,6 @@ public class HTMLMediaElement extends HTMLElement{
     @JsMethod(name = "addTextTrack")
     public native TextTrack addTextTrack(String kind);
     
-    
     @JsOverlay
     public final TextTrack addTextTrack(TextTrackKind kind, String label){
         return addTextTrack(kind.getInternalValue(), label);
@@ -243,7 +241,6 @@ public class HTMLMediaElement extends HTMLElement{
     
     @JsMethod(name = "addTextTrack")
     public native TextTrack addTextTrack(String kind, String label);
-    
     
     @JsOverlay
     public final TextTrack addTextTrack(TextTrackKind kind, String label, String language){
@@ -253,7 +250,6 @@ public class HTMLMediaElement extends HTMLElement{
     @JsMethod(name = "addTextTrack")
     public native TextTrack addTextTrack(String kind, String label, String language);
     
-    
     @JsOverlay
     public final CanPlayTypeResult canPlayTypeAsCanPlayTypeResult(String type){
         return CanPlayTypeResult.of(canPlayType(type));
@@ -262,29 +258,22 @@ public class HTMLMediaElement extends HTMLElement{
     @JsMethod(name = "canPlayType")
     public native String canPlayType(String type);
     
-    
     @JsMethod(name = "captureStream")
     public native MediaStream captureStream();
-    
     
     @JsMethod(name = "load")
     public native void load();
     
-    
     @JsMethod(name = "pause")
     public native void pause();
-    
     
     @JsMethod(name = "play")
     public native Promise<Void> play();
     
-    
     @JsMethod(name = "setMediaKeys")
     public native Promise setMediaKeys(MediaKeys mediaKeys);
     
-    
     @JsMethod(name = "setSinkId")
     public native Promise<Void> setSinkId(String sinkId);
-    
     
 }

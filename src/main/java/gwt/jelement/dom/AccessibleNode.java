@@ -23,9 +23,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="AccessibleNode", isNative = true)
 public class AccessibleNode{
-    
     @JsProperty(name="activeDescendant")
     public native AccessibleNode getActiveDescendant();
     
@@ -301,6 +300,5 @@ public class AccessibleNode{
     
     @JsProperty(name="valueText")
     public native void setValueText(String valueText);
-    
     
 }

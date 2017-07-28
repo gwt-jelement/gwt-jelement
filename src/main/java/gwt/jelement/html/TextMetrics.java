@@ -21,9 +21,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="TextMetrics", isNative = true)
 public class TextMetrics{
-    
     @JsProperty(name="width")
     public native float getWidth();
     
@@ -59,6 +58,5 @@ public class TextMetrics{
     
     @JsProperty(name="ideographicBaseline")
     public native float getIdeographicBaseline();
-    
     
 }

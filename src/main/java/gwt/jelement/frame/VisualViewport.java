@@ -23,9 +23,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="VisualViewport", isNative = true)
 public class VisualViewport extends EventTarget{
-    
     @JsConstructor
     public VisualViewport(){
         super();
@@ -51,6 +50,5 @@ public class VisualViewport extends EventTarget{
     
     @JsProperty(name="scale")
     public native double getScale();
-    
     
 }

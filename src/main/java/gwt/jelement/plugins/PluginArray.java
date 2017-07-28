@@ -23,22 +23,18 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="PluginArray", isNative = true)
 public class PluginArray{
-    
     @JsProperty(name="length")
     public native double getLength();
     
     @JsMethod(name = "namedItem")
     public native Plugin namedItem(String name);
     
-    
     @JsMethod(name = "refresh")
     public native void refresh();
     
-    
     @JsMethod(name = "refresh")
     public native void refresh(boolean reload);
-    
     
 }

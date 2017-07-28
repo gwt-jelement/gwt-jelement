@@ -26,9 +26,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="ConvolverNode", isNative = true)
 public class ConvolverNode extends AudioNode{
-    
     @JsConstructor
     public ConvolverNode(BaseAudioContext context){
         super();
@@ -50,6 +49,5 @@ public class ConvolverNode extends AudioNode{
     
     @JsProperty(name="normalize")
     public native void setNormalize(boolean normalize);
-    
     
 }

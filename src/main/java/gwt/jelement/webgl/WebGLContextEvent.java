@@ -24,9 +24,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="WebGLContextEvent", isNative = true)
 public class WebGLContextEvent extends Event{
-    
     @JsConstructor
     public WebGLContextEvent(String type){
         super((String) null);
@@ -39,6 +38,5 @@ public class WebGLContextEvent extends Event{
     
     @JsProperty(name="statusMessage")
     public native String getStatusMessage();
-    
     
 }

@@ -23,9 +23,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="HTMLHtmlElement", isNative = true)
 public class HTMLHtmlElement extends HTMLElement{
-    
     @JsConstructor
     public HTMLHtmlElement(){
         super();
@@ -36,6 +35,5 @@ public class HTMLHtmlElement extends HTMLElement{
     
     @JsProperty(name="version")
     public native void setVersion(String version);
-    
     
 }

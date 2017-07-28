@@ -22,18 +22,15 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="StyleMedia", isNative = true)
 public class StyleMedia{
-    
     @JsProperty(name="type")
     public native String getType();
     
     @JsMethod(name = "matchMedium")
     public native boolean matchMedium();
     
-    
     @JsMethod(name = "matchMedium")
     public native boolean matchMedium(String mediaquery);
-    
     
 }

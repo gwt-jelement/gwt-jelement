@@ -24,34 +24,27 @@ import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="DeprecatedStorageInfo", isNative = true)
 public class DeprecatedStorageInfo{
-    public static int TEMPORARY;
-    public static int PERSISTENT;
-    
+    public static short TEMPORARY;
+    public static short PERSISTENT;
     
     @JsMethod(name = "queryUsageAndQuota")
     public native void queryUsageAndQuota(short storageType);
     
-    
     @JsMethod(name = "queryUsageAndQuota")
     public native void queryUsageAndQuota(short storageType, StorageUsageCallback usageCallback);
-    
     
     @JsMethod(name = "queryUsageAndQuota")
     public native void queryUsageAndQuota(short storageType, StorageUsageCallback usageCallback, StorageErrorCallback errorCallback);
     
-    
     @JsMethod(name = "requestQuota")
     public native void requestQuota(short storageType, double newQuotaInBytes);
-    
     
     @JsMethod(name = "requestQuota")
     public native void requestQuota(short storageType, double newQuotaInBytes, StorageQuotaCallback quotaCallback);
     
-    
     @JsMethod(name = "requestQuota")
     public native void requestQuota(short storageType, double newQuotaInBytes, StorageQuotaCallback quotaCallback, StorageErrorCallback errorCallback);
-    
     
 }

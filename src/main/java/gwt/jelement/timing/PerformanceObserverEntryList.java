@@ -22,23 +22,18 @@ import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="PerformanceObserverEntryList", isNative = true)
 public class PerformanceObserverEntryList{
-    
     @JsMethod(name = "getEntries")
     public native PerformanceEntry[] getEntries();
-    
     
     @JsMethod(name = "getEntriesByName")
     public native PerformanceEntry[] getEntriesByName(String name);
     
-    
     @JsMethod(name = "getEntriesByName")
     public native PerformanceEntry[] getEntriesByName(String name, String entryType);
     
-    
     @JsMethod(name = "getEntriesByType")
     public native PerformanceEntry[] getEntriesByType(String entryType);
-    
     
 }

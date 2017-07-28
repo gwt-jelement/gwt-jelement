@@ -21,9 +21,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="SVGRect", isNative = true)
 public class SVGRect{
-    
     @JsProperty(name="x")
     public native float getX();
     
@@ -47,6 +46,5 @@ public class SVGRect{
     
     @JsProperty(name="height")
     public native void setHeight(float height);
-    
     
 }

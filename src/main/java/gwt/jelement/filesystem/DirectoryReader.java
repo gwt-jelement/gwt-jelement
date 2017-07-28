@@ -23,15 +23,12 @@ import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="DirectoryReader", isNative = true)
 public class DirectoryReader{
-    
     @JsMethod(name = "readEntries")
     public native void readEntries(EntriesCallback successCallback);
     
-    
     @JsMethod(name = "readEntries")
     public native void readEntries(EntriesCallback successCallback, ErrorCallback errorCallback);
-    
     
 }

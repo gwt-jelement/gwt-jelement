@@ -23,23 +23,18 @@ import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="SQLTransaction", isNative = true)
 public class SQLTransaction{
-    
     @JsMethod(name = "executeSql")
     public native void executeSql(String sqlStatement);
-    
     
     @JsMethod(name = "executeSql")
     public native void executeSql(String sqlStatement, Object[] arguments);
     
-    
     @JsMethod(name = "executeSql")
     public native void executeSql(String sqlStatement, Object[] arguments, SQLStatementCallback callback);
     
-    
     @JsMethod(name = "executeSql")
     public native void executeSql(String sqlStatement, Object[] arguments, SQLStatementCallback callback, SQLStatementErrorCallback errorCallback);
-    
     
 }

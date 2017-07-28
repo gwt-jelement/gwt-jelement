@@ -21,9 +21,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="MediaCapabilitiesInfo", isNative = true)
 public class MediaCapabilitiesInfo{
-    
     @JsProperty(name="supported")
     public native boolean getSupported();
     
@@ -32,6 +31,5 @@ public class MediaCapabilitiesInfo{
     
     @JsProperty(name="powerEfficient")
     public native boolean getPowerEfficient();
-    
     
 }

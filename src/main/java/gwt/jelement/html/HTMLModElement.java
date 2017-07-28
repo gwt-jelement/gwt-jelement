@@ -23,9 +23,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="HTMLModElement", isNative = true)
 public class HTMLModElement extends HTMLElement{
-    
     @JsConstructor
     public HTMLModElement(){
         super();
@@ -42,6 +41,5 @@ public class HTMLModElement extends HTMLElement{
     
     @JsProperty(name="dateTime")
     public native void setDateTime(String dateTime);
-    
     
 }

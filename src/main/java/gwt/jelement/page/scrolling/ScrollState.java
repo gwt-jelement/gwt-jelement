@@ -24,9 +24,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="ScrollState", isNative = true)
 public class ScrollState{
-    
     @JsConstructor
     public ScrollState(){
     }
@@ -77,9 +76,7 @@ public class ScrollState{
     @JsMethod(name = "consumeDelta")
     public native void consumeDelta(double x, double y);
     
-    
     @JsMethod(name = "distributeToScrollChainDescendant")
     public native void distributeToScrollChainDescendant();
-    
     
 }

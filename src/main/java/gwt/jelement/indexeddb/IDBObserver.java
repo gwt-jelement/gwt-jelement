@@ -24,15 +24,12 @@ import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="IDBObserver", isNative = true)
 public class IDBObserver{
-    
     @JsMethod(name = "observe")
     public native void observe(IDBDatabase db, IDBTransaction tx, IDBObserverInit options);
     
-    
     @JsMethod(name = "unobserve")
     public native void unobserve(IDBDatabase db);
-    
     
 }

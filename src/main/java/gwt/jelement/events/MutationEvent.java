@@ -25,12 +25,11 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="MutationEvent", isNative = true)
 public class MutationEvent extends Event{
-    public static int MODIFICATION;
-    public static int ADDITION;
-    public static int REMOVAL;
-    
+    public static short MODIFICATION;
+    public static short ADDITION;
+    public static short REMOVAL;
     
     @JsConstructor
     public MutationEvent(){
@@ -55,37 +54,28 @@ public class MutationEvent extends Event{
     @JsMethod(name = "initMutationEvent")
     public native void initMutationEvent();
     
-    
     @JsMethod(name = "initMutationEvent")
     public native void initMutationEvent(String type);
-    
     
     @JsMethod(name = "initMutationEvent")
     public native void initMutationEvent(String type, boolean bubbles);
     
-    
     @JsMethod(name = "initMutationEvent")
     public native void initMutationEvent(String type, boolean bubbles, boolean cancelable);
-    
     
     @JsMethod(name = "initMutationEvent")
     public native void initMutationEvent(String type, boolean bubbles, boolean cancelable, Node relatedNode);
     
-    
     @JsMethod(name = "initMutationEvent")
     public native void initMutationEvent(String type, boolean bubbles, boolean cancelable, Node relatedNode, String prevValue);
-    
     
     @JsMethod(name = "initMutationEvent")
     public native void initMutationEvent(String type, boolean bubbles, boolean cancelable, Node relatedNode, String prevValue, String newValue);
     
-    
     @JsMethod(name = "initMutationEvent")
     public native void initMutationEvent(String type, boolean bubbles, boolean cancelable, Node relatedNode, String prevValue, String newValue, String attrName);
     
-    
     @JsMethod(name = "initMutationEvent")
     public native void initMutationEvent(String type, boolean bubbles, boolean cancelable, Node relatedNode, String prevValue, String newValue, String attrName, short attrChange);
-    
     
 }

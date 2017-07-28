@@ -23,9 +23,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="HTMLAreaElement", isNative = true)
 public class HTMLAreaElement extends HTMLElement{
-    
     @JsConstructor
     public HTMLAreaElement(){
         super();
@@ -147,6 +146,5 @@ public class HTMLAreaElement extends HTMLElement{
     
     @JsProperty(name="hash")
     public native void setHash(String hash);
-    
     
 }

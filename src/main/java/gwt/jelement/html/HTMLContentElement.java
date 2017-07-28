@@ -25,9 +25,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="HTMLContentElement", isNative = true)
 public class HTMLContentElement extends HTMLElement{
-    
     @JsConstructor
     public HTMLContentElement(){
         super();
@@ -41,6 +40,5 @@ public class HTMLContentElement extends HTMLElement{
     
     @JsMethod(name = "getDistributedNodes")
     public native NodeList getDistributedNodes();
-    
     
 }

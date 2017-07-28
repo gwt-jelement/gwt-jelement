@@ -22,47 +22,38 @@ import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="EXTDisjointTimerQuery", isNative = true)
 public class EXTDisjointTimerQuery{
-    public static int QUERY_COUNTER_BITS_EXT;
-    public static int CURRENT_QUERY_EXT;
-    public static int QUERY_RESULT_EXT;
-    public static int QUERY_RESULT_AVAILABLE_EXT;
-    public static int TIME_ELAPSED_EXT;
-    public static int TIMESTAMP_EXT;
-    public static int GPU_DISJOINT_EXT;
-    
+    public static double QUERY_COUNTER_BITS_EXT;
+    public static double CURRENT_QUERY_EXT;
+    public static double QUERY_RESULT_EXT;
+    public static double QUERY_RESULT_AVAILABLE_EXT;
+    public static double TIME_ELAPSED_EXT;
+    public static double TIMESTAMP_EXT;
+    public static double GPU_DISJOINT_EXT;
     
     @JsMethod(name = "beginQueryEXT")
     public native void beginQueryEXT(double target, WebGLTimerQueryEXT query);
     
-    
     @JsMethod(name = "createQueryEXT")
     public native WebGLTimerQueryEXT createQueryEXT();
-    
     
     @JsMethod(name = "deleteQueryEXT")
     public native void deleteQueryEXT(WebGLTimerQueryEXT query);
     
-    
     @JsMethod(name = "endQueryEXT")
     public native void endQueryEXT(double target);
-    
     
     @JsMethod(name = "getQueryEXT")
     public native Object getQueryEXT(double target, double pname);
     
-    
     @JsMethod(name = "getQueryObjectEXT")
     public native Object getQueryObjectEXT(WebGLTimerQueryEXT query, double pname);
-    
     
     @JsMethod(name = "isQueryEXT")
     public native boolean isQueryEXT(WebGLTimerQueryEXT query);
     
-    
     @JsMethod(name = "queryCounterEXT")
     public native void queryCounterEXT(WebGLTimerQueryEXT query, double target);
-    
     
 }

@@ -24,9 +24,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="IntersectionObserver", isNative = true)
 public class IntersectionObserver{
-    
     @JsProperty(name="root")
     public native Element getRoot();
     
@@ -39,17 +38,13 @@ public class IntersectionObserver{
     @JsMethod(name = "disconnect")
     public native void disconnect();
     
-    
     @JsMethod(name = "observe")
     public native void observe(Element target);
-    
     
     @JsMethod(name = "takeRecords")
     public native IntersectionObserverEntry[] takeRecords();
     
-    
     @JsMethod(name = "unobserve")
     public native void unobserve(Element target);
-    
     
 }

@@ -22,9 +22,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="SVGStringList", isNative = true)
 public class SVGStringList{
-    
     @JsProperty(name="length")
     public native double getLength();
     
@@ -34,25 +33,19 @@ public class SVGStringList{
     @JsMethod(name = "appendItem")
     public native String appendItem(String newItem);
     
-    
     @JsMethod(name = "clear")
     public native void clear();
-    
     
     @JsMethod(name = "initialize")
     public native String initialize(String newItem);
     
-    
     @JsMethod(name = "insertItemBefore")
     public native String insertItemBefore(String item, double index);
-    
     
     @JsMethod(name = "removeItem")
     public native String removeItem(double index);
     
-    
     @JsMethod(name = "replaceItem")
     public native String replaceItem(String newItem, double index);
-    
     
 }

@@ -23,9 +23,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="CSSStyleDeclaration", isNative = true)
 public class CSSStyleDeclaration{
-    
     @JsProperty(name="cssText")
     public native String getCssText();
     
@@ -47,21 +46,16 @@ public class CSSStyleDeclaration{
     @JsMethod(name = "getPropertyPriority")
     public native String getPropertyPriority(String property);
     
-    
     @JsMethod(name = "getPropertyValue")
     public native String getPropertyValue(String property);
-    
     
     @JsMethod(name = "removeProperty")
     public native String removeProperty(String property);
     
-    
     @JsMethod(name = "setProperty")
     public native void setProperty(String property, String value);
     
-    
     @JsMethod(name = "setProperty")
     public native void setProperty(String property, String value, String priority);
-    
     
 }

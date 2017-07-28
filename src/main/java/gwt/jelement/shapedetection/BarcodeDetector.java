@@ -32,9 +32,8 @@ import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="BarcodeDetector", isNative = true)
 public class BarcodeDetector{
-    
     @JsConstructor
     public BarcodeDetector(){
     }
@@ -42,33 +41,25 @@ public class BarcodeDetector{
     @JsMethod(name = "detect")
     public native Promise<DetectedBarcode[]> detect(HTMLImageElement image);
     
-    
     @JsMethod(name = "detect")
     public native Promise<DetectedBarcode[]> detect(SVGImageElement image);
-    
     
     @JsMethod(name = "detect")
     public native Promise<DetectedBarcode[]> detect(HTMLVideoElement image);
     
-    
     @JsMethod(name = "detect")
     public native Promise<DetectedBarcode[]> detect(HTMLCanvasElement image);
-    
     
     @JsMethod(name = "detect")
     public native Promise<DetectedBarcode[]> detect(Blob image);
     
-    
     @JsMethod(name = "detect")
     public native Promise<DetectedBarcode[]> detect(ImageData image);
-    
     
     @JsMethod(name = "detect")
     public native Promise<DetectedBarcode[]> detect(ImageBitmap image);
     
-    
     @JsMethod(name = "detect")
     public native Promise<DetectedBarcode[]> detect(OffscreenCanvas image);
-    
     
 }

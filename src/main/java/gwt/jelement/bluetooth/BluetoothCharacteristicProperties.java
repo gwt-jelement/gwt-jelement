@@ -21,9 +21,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="BluetoothCharacteristicProperties", isNative = true)
 public class BluetoothCharacteristicProperties{
-    
     @JsProperty(name="broadcast")
     public native boolean getBroadcast();
     
@@ -50,6 +49,5 @@ public class BluetoothCharacteristicProperties{
     
     @JsProperty(name="writableAuxiliaries")
     public native boolean getWritableAuxiliaries();
-    
     
 }

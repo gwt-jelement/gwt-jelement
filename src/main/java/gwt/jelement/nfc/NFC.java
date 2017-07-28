@@ -16,12 +16,12 @@
  */
 package gwt.jelement.nfc;
 
+import gwt.jelement.core.ArrayBuffer;
 import gwt.jelement.nfc.MessageCallback;
 import gwt.jelement.nfc.NFCMessage;
 import gwt.jelement.nfc.NFCPushOptions;
 import gwt.jelement.nfc.NFCPushTarget;
 import gwt.jelement.nfc.NFCWatchOptions;
-import elemental2.core.ArrayBuffer;
 import elemental2.promise.Promise;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
@@ -29,12 +29,10 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 import jsinterop.base.Any;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="NFC", isNative = true)
 public class NFC{
-    
     @JsMethod(name = "cancelPush")
     public native Promise<Void> cancelPush();
-    
     
     @JsOverlay
     public final Promise<Void> cancelPush(NFCPushTarget target){
@@ -44,45 +42,34 @@ public class NFC{
     @JsMethod(name = "cancelPush")
     public native Promise<Void> cancelPush(String target);
     
-    
     @JsMethod(name = "cancelWatch")
     public native Promise<Void> cancelWatch();
-    
     
     @JsMethod(name = "cancelWatch")
     public native Promise<Void> cancelWatch(double id);
     
-    
     @JsMethod(name = "push")
     public native Promise<Void> push(String message);
-    
     
     @JsMethod(name = "push")
     public native Promise<Void> push(ArrayBuffer message);
     
-    
     @JsMethod(name = "push")
     public native Promise<Void> push(NFCMessage message);
-    
     
     @JsMethod(name = "push")
     public native Promise<Void> push(String message, NFCPushOptions options);
     
-    
     @JsMethod(name = "push")
     public native Promise<Void> push(ArrayBuffer message, NFCPushOptions options);
-    
     
     @JsMethod(name = "push")
     public native Promise<Void> push(NFCMessage message, NFCPushOptions options);
     
-    
     @JsMethod(name = "watch")
     public native Promise<Double> watch(MessageCallback callback);
     
-    
     @JsMethod(name = "watch")
     public native Promise<Double> watch(MessageCallback callback, NFCWatchOptions options);
-    
     
 }

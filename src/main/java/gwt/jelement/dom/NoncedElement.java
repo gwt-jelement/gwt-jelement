@@ -21,14 +21,12 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="NoncedElement", isNative = true)
 public class NoncedElement{
-    
     @JsProperty(name="nonce")
     public native String getNonce();
     
     @JsProperty(name="nonce")
     public native void setNonce(String nonce);
-    
     
 }

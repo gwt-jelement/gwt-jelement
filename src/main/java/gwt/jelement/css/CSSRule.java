@@ -23,20 +23,19 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="CSSRule", isNative = true)
 public class CSSRule{
-    public static int STYLE_RULE;
-    public static int CHARSET_RULE;
-    public static int IMPORT_RULE;
-    public static int MEDIA_RULE;
-    public static int FONT_FACE_RULE;
-    public static int PAGE_RULE;
-    public static int NAMESPACE_RULE;
-    public static int KEYFRAMES_RULE;
-    public static int KEYFRAME_RULE;
-    public static int SUPPORTS_RULE;
-    public static int VIEWPORT_RULE;
-    
+    public static short STYLE_RULE;
+    public static short CHARSET_RULE;
+    public static short IMPORT_RULE;
+    public static short MEDIA_RULE;
+    public static short FONT_FACE_RULE;
+    public static short PAGE_RULE;
+    public static short NAMESPACE_RULE;
+    public static short KEYFRAMES_RULE;
+    public static short KEYFRAME_RULE;
+    public static short SUPPORTS_RULE;
+    public static short VIEWPORT_RULE;
     
     @JsProperty(name="type")
     public native short getType();
@@ -52,6 +51,5 @@ public class CSSRule{
     
     @JsProperty(name="parentStyleSheet")
     public native CSSStyleSheet getParentStyleSheet();
-    
     
 }

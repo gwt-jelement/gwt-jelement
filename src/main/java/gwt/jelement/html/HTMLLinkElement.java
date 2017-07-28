@@ -26,9 +26,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="HTMLLinkElement", isNative = true)
 public class HTMLLinkElement extends HTMLElement{
-    
     @JsConstructor
     public HTMLLinkElement(){
         super();
@@ -129,6 +128,5 @@ public class HTMLLinkElement extends HTMLElement{
     
     @JsProperty(name="scope")
     public native void setScope(String scope);
-    
     
 }

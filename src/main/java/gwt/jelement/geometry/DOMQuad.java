@@ -29,9 +29,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="DOMQuad", isNative = true)
 public class DOMQuad{
-    
     @JsConstructor
     public DOMQuad(){
     }
@@ -65,27 +64,18 @@ public class DOMQuad{
     public native DOMPoint getP4();
     
     @JsMethod(name = "fromQuad")
-    public native DOMQuad fromQuad();
-    
+    public static native DOMQuad fromQuad();
     
     @JsMethod(name = "fromQuad")
-    public native DOMQuad fromQuad(DOMQuadInit other);
-    
-    
-    @JsMethod(name = "fromRect")
-    public native DOMQuad fromRect();
-    
+    public static native DOMQuad fromQuad(DOMQuadInit other);
     
     @JsMethod(name = "fromRect")
-    public native DOMQuad fromRect(DOMRectInit other);
+    public static native DOMQuad fromRect();
     
+    @JsMethod(name = "fromRect")
+    public static native DOMQuad fromRect(DOMRectInit other);
     
     @JsMethod(name = "getBounds")
     public native DOMRect getBounds();
-    
-    
-    @JsMethod(name = "toJSON")
-    public native Object toJSON();
-    
     
 }

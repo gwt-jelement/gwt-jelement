@@ -22,9 +22,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="MediaList", isNative = true)
 public class MediaList{
-    
     @JsProperty(name="mediaText")
     public native String getMediaText();
     
@@ -37,9 +36,7 @@ public class MediaList{
     @JsMethod(name = "appendMedium")
     public native void appendMedium(String medium);
     
-    
     @JsMethod(name = "deleteMedium")
     public native void deleteMedium(String medium);
-    
     
 }

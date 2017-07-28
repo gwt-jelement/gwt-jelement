@@ -16,12 +16,12 @@
  */
 package gwt.jelement.peerconnection;
 
+import gwt.jelement.core.ArrayBuffer;
+import gwt.jelement.core.ArrayBufferView;
 import gwt.jelement.events.EventHandlerNonNull;
 import gwt.jelement.events.EventTarget;
 import gwt.jelement.fileapi.Blob;
 import gwt.jelement.peerconnection.RTCDataChannelState;
-import elemental2.core.ArrayBuffer;
-import elemental2.core.ArrayBufferView;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
@@ -29,12 +29,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="RTCDataChannel", isNative = true)
 public class RTCDataChannel extends EventTarget{
-    
-    @JsProperty(name="readyState")
-    private String readyState;
-    
     @JsProperty(name="onopen")
     private EventHandlerNonNull onopen;
     
@@ -49,6 +45,9 @@ public class RTCDataChannel extends EventTarget{
     
     @JsProperty(name="onmessage")
     private EventHandlerNonNull onmessage;
+    
+    @JsProperty(name="readyState")
+    private String readyState;
     
     @JsConstructor
     public RTCDataChannel(){
@@ -75,11 +74,6 @@ public class RTCDataChannel extends EventTarget{
     
     @JsProperty(name="id")
     public native short getId();
-    
-    @JsOverlay
-    public final RTCDataChannelState getReadyState(){
-       return RTCDataChannelState.of(readyState);
-    }
     
     @JsProperty(name="bufferedAmount")
     public native double getBufferedAmount();
@@ -149,24 +143,24 @@ public class RTCDataChannel extends EventTarget{
     @JsProperty(name="reliable")
     public native boolean getReliable();
     
+    @JsOverlay
+    public final RTCDataChannelState getReadyState(){
+       return RTCDataChannelState.of(readyState);
+    }
+    
     @JsMethod(name = "close")
     public native void close();
-    
     
     @JsMethod(name = "send")
     public native void send(String data);
     
-    
     @JsMethod(name = "send")
     public native void send(Blob data);
-    
     
     @JsMethod(name = "send")
     public native void send(ArrayBuffer data);
     
-    
     @JsMethod(name = "send")
     public native void send(ArrayBufferView data);
-    
     
 }

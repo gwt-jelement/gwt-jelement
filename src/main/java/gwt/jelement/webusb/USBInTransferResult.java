@@ -16,7 +16,7 @@
  */
 package gwt.jelement.webusb;
 
-import gwt.jelement.dom.DataView;
+import gwt.jelement.core.DataView;
 import gwt.jelement.webusb.USBTransferStatus;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsOverlay;
@@ -24,9 +24,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="USBInTransferResult", isNative = true)
 public class USBInTransferResult{
-    
     @JsProperty(name="status")
     private String status;
     
@@ -45,6 +44,5 @@ public class USBInTransferResult{
     public final USBTransferStatus getStatus(){
        return USBTransferStatus.of(status);
     }
-    
     
 }

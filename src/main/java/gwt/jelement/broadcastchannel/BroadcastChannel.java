@@ -25,9 +25,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="BroadcastChannel", isNative = true)
 public class BroadcastChannel extends EventTarget{
-    
     @JsProperty(name="onmessage")
     private EventHandlerNonNull onmessage;
     
@@ -65,9 +64,7 @@ public class BroadcastChannel extends EventTarget{
     @JsMethod(name = "close")
     public native void close();
     
-    
     @JsMethod(name = "postMessage")
     public native void postMessage(Object message);
-    
     
 }

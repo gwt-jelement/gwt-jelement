@@ -28,15 +28,14 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="SVGFETurbulenceElement", isNative = true)
 public class SVGFETurbulenceElement extends SVGElement{
-    public static int SVG_TURBULENCE_TYPE_UNKNOWN;
-    public static int SVG_TURBULENCE_TYPE_FRACTALNOISE;
-    public static int SVG_TURBULENCE_TYPE_TURBULENCE;
-    public static int SVG_STITCHTYPE_UNKNOWN;
-    public static int SVG_STITCHTYPE_STITCH;
-    public static int SVG_STITCHTYPE_NOSTITCH;
-    
+    public static short SVG_TURBULENCE_TYPE_UNKNOWN;
+    public static short SVG_TURBULENCE_TYPE_FRACTALNOISE;
+    public static short SVG_TURBULENCE_TYPE_TURBULENCE;
+    public static short SVG_STITCHTYPE_UNKNOWN;
+    public static short SVG_STITCHTYPE_STITCH;
+    public static short SVG_STITCHTYPE_NOSTITCH;
     
     @JsConstructor
     public SVGFETurbulenceElement(){
@@ -75,6 +74,5 @@ public class SVGFETurbulenceElement extends SVGElement{
     
     @JsProperty(name="result")
     public native SVGAnimatedString getResult();
-    
     
 }

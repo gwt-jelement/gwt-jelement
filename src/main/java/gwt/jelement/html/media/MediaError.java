@@ -21,19 +21,17 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="MediaError", isNative = true)
 public class MediaError{
-    public static int MEDIA_ERR_ABORTED;
-    public static int MEDIA_ERR_NETWORK;
-    public static int MEDIA_ERR_DECODE;
-    public static int MEDIA_ERR_SRC_NOT_SUPPORTED;
-    
+    public static short MEDIA_ERR_ABORTED;
+    public static short MEDIA_ERR_NETWORK;
+    public static short MEDIA_ERR_DECODE;
+    public static short MEDIA_ERR_SRC_NOT_SUPPORTED;
     
     @JsProperty(name="code")
     public native short getCode();
     
     @JsProperty(name="message")
     public native String getMessage();
-    
     
 }

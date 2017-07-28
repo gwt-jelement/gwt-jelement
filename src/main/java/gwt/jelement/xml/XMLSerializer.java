@@ -23,15 +23,13 @@ import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="XMLSerializer", isNative = true)
 public class XMLSerializer{
-    
     @JsConstructor
     public XMLSerializer(){
     }
     
     @JsMethod(name = "serializeToString")
     public native String serializeToString(Node root);
-    
     
 }

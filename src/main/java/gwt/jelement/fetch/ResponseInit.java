@@ -16,12 +16,12 @@
  */
 package gwt.jelement.fetch;
 
+import gwt.jelement.core.JsObject;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 import jsinterop.base.Js;
-import jsinterop.base.JsPropertyMap;
 
 @JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class ResponseInit{
@@ -43,7 +43,7 @@ public class ResponseInit{
         }
     
         @JsOverlay
-        static HeadersInit of(JsPropertyMap<String> value){
+        static HeadersInit of(JsObject<String> value){
             return Js.cast(value);
         }
     
@@ -53,7 +53,7 @@ public class ResponseInit{
         }
     
         @JsOverlay
-        default JsPropertyMap<String> asJsPropertyMap(){
+        default JsObject<String> asJsObject(){
             return Js.cast(this);
         }
     
@@ -63,8 +63,8 @@ public class ResponseInit{
         }
     
         @JsOverlay
-        default boolean isJsPropertyMap(){
-            return (Object) this instanceof JsPropertyMap;
+        default boolean isJsObject(){
+            return (Object) this instanceof JsObject;
         }
     
     }
@@ -98,7 +98,7 @@ public class ResponseInit{
     }
 
     @JsOverlay
-    public final void setHeaders(JsPropertyMap<String> headers){
+    public final void setHeaders(JsObject<String> headers){
         this.headers = ResponseInit.HeadersInit.of(headers);
     }
 

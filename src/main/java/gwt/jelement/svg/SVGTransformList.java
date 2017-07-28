@@ -24,9 +24,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="SVGTransformList", isNative = true)
 public class SVGTransformList{
-    
     @JsProperty(name="length")
     public native double getLength();
     
@@ -36,33 +35,25 @@ public class SVGTransformList{
     @JsMethod(name = "appendItem")
     public native SVGTransform appendItem(SVGTransform newItem);
     
-    
     @JsMethod(name = "clear")
     public native void clear();
-    
     
     @JsMethod(name = "consolidate")
     public native SVGTransform consolidate();
     
-    
     @JsMethod(name = "createSVGTransformFromMatrix")
     public native SVGTransform createSVGTransformFromMatrix(SVGMatrix matrix);
-    
     
     @JsMethod(name = "initialize")
     public native SVGTransform initialize(SVGTransform newItem);
     
-    
     @JsMethod(name = "insertItemBefore")
     public native SVGTransform insertItemBefore(SVGTransform newItem, double index);
-    
     
     @JsMethod(name = "removeItem")
     public native SVGTransform removeItem(double index);
     
-    
     @JsMethod(name = "replaceItem")
     public native SVGTransform replaceItem(SVGTransform newItem, double index);
-    
     
 }

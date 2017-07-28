@@ -22,19 +22,15 @@ import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="RTCStatsResponse", isNative = true)
 public class RTCStatsResponse{
-    
     @JsMethod(name = "namedItem")
     public native RTCLegacyStatsReport namedItem();
-    
     
     @JsMethod(name = "namedItem")
     public native RTCLegacyStatsReport namedItem(String name);
     
-    
     @JsMethod(name = "result")
     public native RTCLegacyStatsReport[] result();
-    
     
 }

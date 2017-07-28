@@ -27,9 +27,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="BeforeInstallPromptEvent", isNative = true)
 public class BeforeInstallPromptEvent extends Event{
-    
     @JsConstructor
     public BeforeInstallPromptEvent(String type){
         super((String) null);
@@ -48,6 +47,5 @@ public class BeforeInstallPromptEvent extends Event{
     
     @JsMethod(name = "prompt")
     public native Promise<Void> prompt();
-    
     
 }

@@ -26,9 +26,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="StereoPannerNode", isNative = true)
 public class StereoPannerNode extends AudioNode{
-    
     @JsConstructor
     public StereoPannerNode(BaseAudioContext context){
         super();
@@ -41,6 +40,5 @@ public class StereoPannerNode extends AudioNode{
     
     @JsProperty(name="pan")
     public native AudioParam getPan();
-    
     
 }

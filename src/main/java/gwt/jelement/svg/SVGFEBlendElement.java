@@ -26,15 +26,14 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="SVGFEBlendElement", isNative = true)
 public class SVGFEBlendElement extends SVGElement{
-    public static int SVG_FEBLEND_MODE_UNKNOWN;
-    public static int SVG_FEBLEND_MODE_NORMAL;
-    public static int SVG_FEBLEND_MODE_MULTIPLY;
-    public static int SVG_FEBLEND_MODE_SCREEN;
-    public static int SVG_FEBLEND_MODE_DARKEN;
-    public static int SVG_FEBLEND_MODE_LIGHTEN;
-    
+    public static short SVG_FEBLEND_MODE_UNKNOWN;
+    public static short SVG_FEBLEND_MODE_NORMAL;
+    public static short SVG_FEBLEND_MODE_MULTIPLY;
+    public static short SVG_FEBLEND_MODE_SCREEN;
+    public static short SVG_FEBLEND_MODE_DARKEN;
+    public static short SVG_FEBLEND_MODE_LIGHTEN;
     
     @JsConstructor
     public SVGFEBlendElement(){
@@ -64,6 +63,5 @@ public class SVGFEBlendElement extends SVGElement{
     
     @JsProperty(name="result")
     public native SVGAnimatedString getResult();
-    
     
 }

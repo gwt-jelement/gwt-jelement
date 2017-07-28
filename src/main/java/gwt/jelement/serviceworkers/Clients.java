@@ -25,27 +25,21 @@ import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="Clients", isNative = true)
 public class Clients{
-    
     @JsMethod(name = "claim")
     public native Promise<Void> claim();
-    
     
     @JsMethod(name = "get")
     public native Promise<Object> get(String id);
     
-    
     @JsMethod(name = "matchAll")
     public native Promise<Client[]> matchAll();
-    
     
     @JsMethod(name = "matchAll")
     public native Promise<Client[]> matchAll(ClientQueryOptions options);
     
-    
     @JsMethod(name = "openWindow")
     public native Promise<WindowClient> openWindow(String url);
-    
     
 }

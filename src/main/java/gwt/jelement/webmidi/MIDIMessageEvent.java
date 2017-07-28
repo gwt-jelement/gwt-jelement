@@ -16,18 +16,17 @@
  */
 package gwt.jelement.webmidi;
 
+import gwt.jelement.core.Uint8Array;
 import gwt.jelement.events.Event;
 import gwt.jelement.webmidi.MIDIMessageEventInit;
-import elemental2.core.Uint8Array;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="MIDIMessageEvent", isNative = true)
 public class MIDIMessageEvent extends Event{
-    
     @JsConstructor
     public MIDIMessageEvent(String type){
         super((String) null);
@@ -40,6 +39,5 @@ public class MIDIMessageEvent extends Event{
     
     @JsProperty(name="data")
     public native Uint8Array getData();
-    
     
 }

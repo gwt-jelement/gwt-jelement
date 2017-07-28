@@ -22,16 +22,10 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="IDBObservation", isNative = true)
 public class IDBObservation{
-    
     @JsProperty(name="type")
     private String type;
-    
-    @JsOverlay
-    public final IDBObservationType getType(){
-       return IDBObservationType.of(type);
-    }
     
     @JsProperty(name="key")
     public native Object getKey();
@@ -39,5 +33,9 @@ public class IDBObservation{
     @JsProperty(name="value")
     public native Object getValue();
     
+    @JsOverlay
+    public final IDBObservationType getType(){
+       return IDBObservationType.of(type);
+    }
     
 }

@@ -23,9 +23,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="IntersectionObserverEntry", isNative = true)
 public class IntersectionObserverEntry{
-    
     @JsProperty(name="time")
     public native double getTime();
     
@@ -46,6 +45,5 @@ public class IntersectionObserverEntry{
     
     @JsProperty(name="target")
     public native Element getTarget();
-    
     
 }

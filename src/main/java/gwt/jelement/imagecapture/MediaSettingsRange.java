@@ -21,9 +21,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="MediaSettingsRange", isNative = true)
 public class MediaSettingsRange{
-    
     @JsProperty(name="max")
     public native double getMax();
     
@@ -32,6 +31,5 @@ public class MediaSettingsRange{
     
     @JsProperty(name="step")
     public native double getStep();
-    
     
 }

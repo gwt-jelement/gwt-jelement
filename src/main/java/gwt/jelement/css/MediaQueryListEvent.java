@@ -24,9 +24,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="MediaQueryListEvent", isNative = true)
 public class MediaQueryListEvent extends Event{
-    
     @JsConstructor
     public MediaQueryListEvent(String type){
         super((String) null);
@@ -42,6 +41,5 @@ public class MediaQueryListEvent extends Event{
     
     @JsProperty(name="matches")
     public native boolean getMatches();
-    
     
 }

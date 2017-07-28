@@ -21,18 +21,16 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="PositionError", isNative = true)
 public class PositionError{
-    public static int PERMISSION_DENIED;
-    public static int POSITION_UNAVAILABLE;
-    public static int TIMEOUT;
-    
+    public static short PERMISSION_DENIED;
+    public static short POSITION_UNAVAILABLE;
+    public static short TIMEOUT;
     
     @JsProperty(name="code")
     public native short getCode();
     
     @JsProperty(name="message")
     public native String getMessage();
-    
     
 }

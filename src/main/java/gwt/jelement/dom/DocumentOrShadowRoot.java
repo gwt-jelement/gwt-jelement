@@ -25,9 +25,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="DocumentOrShadowRoot", isNative = true)
 public class DocumentOrShadowRoot{
-    
     @JsProperty(name="activeElement")
     public native Element getActiveElement();
     
@@ -43,13 +42,10 @@ public class DocumentOrShadowRoot{
     @JsMethod(name = "elementFromPoint")
     public native Element elementFromPoint(double x, double y);
     
-    
     @JsMethod(name = "elementsFromPoint")
     public native Element[] elementsFromPoint(double x, double y);
     
-    
     @JsMethod(name = "getSelection")
     public native Selection getSelection();
-    
     
 }

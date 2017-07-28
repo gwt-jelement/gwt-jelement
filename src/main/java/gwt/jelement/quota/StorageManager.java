@@ -23,19 +23,15 @@ import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="StorageManager", isNative = true)
 public class StorageManager{
-    
     @JsMethod(name = "estimate")
     public native Promise<StorageEstimate> estimate();
-    
     
     @JsMethod(name = "persist")
     public native Promise<Boolean> persist();
     
-    
     @JsMethod(name = "persisted")
     public native Promise<Boolean> persisted();
-    
     
 }

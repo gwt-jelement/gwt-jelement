@@ -16,9 +16,9 @@
  */
 package gwt.jelement.fetch;
 
+import gwt.jelement.core.ArrayBuffer;
 import gwt.jelement.fileapi.Blob;
 import gwt.jelement.html.FormData;
-import elemental2.core.ArrayBuffer;
 import elemental2.promise.Promise;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
@@ -26,30 +26,24 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="Body", isNative = true)
 public class Body{
-    
     @JsProperty(name="bodyUsed")
     public native boolean getBodyUsed();
     
     @JsMethod(name = "arrayBuffer")
     public native Promise<ArrayBuffer> arrayBuffer();
     
-    
     @JsMethod(name = "blob")
     public native Promise<Blob> blob();
-    
     
     @JsMethod(name = "formData")
     public native Promise<FormData> formData();
     
-    
     @JsMethod(name = "json")
     public native Promise<Object> json();
     
-    
     @JsMethod(name = "text")
     public native Promise<String> text();
-    
     
 }

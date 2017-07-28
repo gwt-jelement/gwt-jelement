@@ -25,9 +25,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="HTMLFrameElement", isNative = true)
 public class HTMLFrameElement extends HTMLElement{
-    
     @JsConstructor
     public HTMLFrameElement(){
         super();
@@ -86,6 +85,5 @@ public class HTMLFrameElement extends HTMLElement{
     
     @JsProperty(name="marginWidth")
     public native void setMarginWidth(String marginWidth);
-    
     
 }

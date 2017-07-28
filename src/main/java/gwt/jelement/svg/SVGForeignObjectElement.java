@@ -24,9 +24,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="SVGForeignObjectElement", isNative = true)
 public class SVGForeignObjectElement extends SVGGraphicsElement{
-    
     @JsConstructor
     public SVGForeignObjectElement(){
         super();
@@ -43,6 +42,5 @@ public class SVGForeignObjectElement extends SVGGraphicsElement{
     
     @JsProperty(name="height")
     public native SVGAnimatedLength getHeight();
-    
     
 }

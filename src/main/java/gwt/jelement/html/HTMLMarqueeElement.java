@@ -24,9 +24,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="HTMLMarqueeElement", isNative = true)
 public class HTMLMarqueeElement extends HTMLElement{
-    
     @JsConstructor
     public HTMLMarqueeElement(){
         super();
@@ -101,9 +100,7 @@ public class HTMLMarqueeElement extends HTMLElement{
     @JsMethod(name = "start")
     public native void start();
     
-    
     @JsMethod(name = "stop")
     public native void stop();
-    
     
 }

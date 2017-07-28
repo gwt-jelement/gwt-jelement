@@ -24,14 +24,12 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="RTCRtpReceiver", isNative = true)
 public class RTCRtpReceiver{
-    
     @JsProperty(name="track")
     public native MediaStreamTrack getTrack();
     
     @JsMethod(name = "getContributingSources")
     public native RTCRtpContributingSource[] getContributingSources();
-    
     
 }

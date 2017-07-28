@@ -23,9 +23,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="USBEndpoint", isNative = true)
 public class USBEndpoint{
-    
     @JsProperty(name="direction")
     private String direction;
     
@@ -34,6 +33,9 @@ public class USBEndpoint{
     
     @JsProperty(name="endpointNumber")
     public native byte getEndpointNumber();
+    
+    @JsProperty(name="packetSize")
+    public native double getPacketSize();
     
     @JsOverlay
     public final USBDirection getDirection(){
@@ -44,9 +46,5 @@ public class USBEndpoint{
     public final USBEndpointType getType(){
        return USBEndpointType.of(type);
     }
-    
-    @JsProperty(name="packetSize")
-    public native double getPacketSize();
-    
     
 }

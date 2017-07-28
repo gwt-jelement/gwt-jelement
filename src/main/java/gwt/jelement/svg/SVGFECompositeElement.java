@@ -27,16 +27,15 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="SVGFECompositeElement", isNative = true)
 public class SVGFECompositeElement extends SVGElement{
-    public static int SVG_FECOMPOSITE_OPERATOR_UNKNOWN;
-    public static int SVG_FECOMPOSITE_OPERATOR_OVER;
-    public static int SVG_FECOMPOSITE_OPERATOR_IN;
-    public static int SVG_FECOMPOSITE_OPERATOR_OUT;
-    public static int SVG_FECOMPOSITE_OPERATOR_ATOP;
-    public static int SVG_FECOMPOSITE_OPERATOR_XOR;
-    public static int SVG_FECOMPOSITE_OPERATOR_ARITHMETIC;
-    
+    public static short SVG_FECOMPOSITE_OPERATOR_UNKNOWN;
+    public static short SVG_FECOMPOSITE_OPERATOR_OVER;
+    public static short SVG_FECOMPOSITE_OPERATOR_IN;
+    public static short SVG_FECOMPOSITE_OPERATOR_OUT;
+    public static short SVG_FECOMPOSITE_OPERATOR_ATOP;
+    public static short SVG_FECOMPOSITE_OPERATOR_XOR;
+    public static short SVG_FECOMPOSITE_OPERATOR_ARITHMETIC;
     
     @JsConstructor
     public SVGFECompositeElement(){
@@ -78,6 +77,5 @@ public class SVGFECompositeElement extends SVGElement{
     
     @JsProperty(name="result")
     public native SVGAnimatedString getResult();
-    
     
 }

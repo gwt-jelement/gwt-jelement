@@ -25,9 +25,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="USBConnectionEvent", isNative = true)
 public class USBConnectionEvent extends Event{
-    
     @JsConstructor
     public USBConnectionEvent(String type, USBConnectionEventInit eventInitDict){
         super((String) null);
@@ -35,6 +34,5 @@ public class USBConnectionEvent extends Event{
     
     @JsProperty(name="device")
     public native USBDevice getDevice();
-    
     
 }

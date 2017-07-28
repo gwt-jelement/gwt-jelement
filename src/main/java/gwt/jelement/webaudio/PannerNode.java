@@ -27,9 +27,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="PannerNode", isNative = true)
 public class PannerNode extends AudioNode{
-    
     @JsProperty(name="panningModel")
     private String panningModel;
     
@@ -39,16 +38,6 @@ public class PannerNode extends AudioNode{
     @JsConstructor
     public PannerNode(){
         super();
-    }
-    
-    @JsOverlay
-    public final PanningModelType getPanningModel(){
-       return PanningModelType.of(panningModel);
-    }
-    
-    @JsOverlay
-    public final void setPanningModel(PanningModelType panningModel){
-       this.panningModel = panningModel.getInternalValue();
     }
     
     @JsProperty(name="positionX")
@@ -68,16 +57,6 @@ public class PannerNode extends AudioNode{
     
     @JsProperty(name="orientationZ")
     public native AudioParam getOrientationZ();
-    
-    @JsOverlay
-    public final DistanceModelType getDistanceModel(){
-       return DistanceModelType.of(distanceModel);
-    }
-    
-    @JsOverlay
-    public final void setDistanceModel(DistanceModelType distanceModel){
-       this.distanceModel = distanceModel.getInternalValue();
-    }
     
     @JsProperty(name="refDistance")
     public native double getRefDistance();
@@ -115,12 +94,30 @@ public class PannerNode extends AudioNode{
     @JsProperty(name="coneOuterGain")
     public native void setConeOuterGain(double coneOuterGain);
     
+    @JsOverlay
+    public final PanningModelType getPanningModel(){
+       return PanningModelType.of(panningModel);
+    }
+    
+    @JsOverlay
+    public final void setPanningModel(PanningModelType panningModel){
+       this.panningModel = panningModel.getInternalValue();
+    }
+    
+    @JsOverlay
+    public final DistanceModelType getDistanceModel(){
+       return DistanceModelType.of(distanceModel);
+    }
+    
+    @JsOverlay
+    public final void setDistanceModel(DistanceModelType distanceModel){
+       this.distanceModel = distanceModel.getInternalValue();
+    }
+    
     @JsMethod(name = "setOrientation")
     public native void setOrientation(float x, float y, float z);
     
-    
     @JsMethod(name = "setPosition")
     public native void setPosition(float x, float y, float z);
-    
     
 }

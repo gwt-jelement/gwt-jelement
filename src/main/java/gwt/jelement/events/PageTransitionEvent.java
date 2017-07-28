@@ -24,9 +24,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="PageTransitionEvent", isNative = true)
 public class PageTransitionEvent extends Event{
-    
     @JsConstructor
     public PageTransitionEvent(String type){
         super((String) null);
@@ -39,6 +38,5 @@ public class PageTransitionEvent extends Event{
     
     @JsProperty(name="persisted")
     public native boolean getPersisted();
-    
     
 }

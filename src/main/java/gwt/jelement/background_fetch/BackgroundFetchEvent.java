@@ -24,9 +24,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="BackgroundFetchEvent", isNative = true)
 public class BackgroundFetchEvent extends ExtendableEvent{
-    
     @JsConstructor
     public BackgroundFetchEvent(String type, BackgroundFetchEventInit init){
         super((String) null);
@@ -34,6 +33,5 @@ public class BackgroundFetchEvent extends ExtendableEvent{
     
     @JsProperty(name="tag")
     public native String getTag();
-    
     
 }

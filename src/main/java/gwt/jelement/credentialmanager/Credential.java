@@ -21,14 +21,12 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="Credential", isNative = true)
 public class Credential{
-    
     @JsProperty(name="id")
     public native String getId();
     
     @JsProperty(name="type")
     public native String getType();
-    
     
 }

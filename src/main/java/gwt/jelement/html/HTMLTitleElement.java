@@ -23,9 +23,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="HTMLTitleElement", isNative = true)
 public class HTMLTitleElement extends HTMLElement{
-    
     @JsConstructor
     public HTMLTitleElement(){
         super();
@@ -36,6 +35,5 @@ public class HTMLTitleElement extends HTMLElement{
     
     @JsProperty(name="text")
     public native void setText(String text);
-    
     
 }

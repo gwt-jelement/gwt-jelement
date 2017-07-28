@@ -21,9 +21,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="SVGAnimatedBoolean", isNative = true)
 public class SVGAnimatedBoolean{
-    
     @JsProperty(name="baseVal")
     public native boolean getBaseVal();
     
@@ -32,6 +31,5 @@ public class SVGAnimatedBoolean{
     
     @JsProperty(name="animVal")
     public native boolean getAnimVal();
-    
     
 }

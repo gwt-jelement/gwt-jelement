@@ -24,9 +24,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="FederatedCredential", isNative = true)
 public class FederatedCredential extends Credential{
-    
     @JsConstructor
     public FederatedCredential(FederatedCredentialInit data){
         super();
@@ -43,6 +42,5 @@ public class FederatedCredential extends Credential{
     
     @JsProperty(name="iconURL")
     public native String getIconURL();
-    
     
 }

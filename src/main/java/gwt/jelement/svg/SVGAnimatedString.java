@@ -21,9 +21,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="SVGAnimatedString", isNative = true)
 public class SVGAnimatedString{
-    
     @JsProperty(name="baseVal")
     public native String getBaseVal();
     
@@ -32,6 +31,5 @@ public class SVGAnimatedString{
     
     @JsProperty(name="animVal")
     public native String getAnimVal();
-    
     
 }

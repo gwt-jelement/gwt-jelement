@@ -23,9 +23,8 @@ import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="RelativeOrientationSensor", isNative = true)
 public class RelativeOrientationSensor extends OrientationSensor{
-    
     @JsConstructor
     public RelativeOrientationSensor(){
         super();
@@ -35,6 +34,5 @@ public class RelativeOrientationSensor extends OrientationSensor{
     public RelativeOrientationSensor(SensorOptions sensorOptions){
         super();
     }
-    
     
 }

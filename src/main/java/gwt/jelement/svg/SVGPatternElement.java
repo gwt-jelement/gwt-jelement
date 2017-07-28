@@ -30,9 +30,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="SVGPatternElement", isNative = true)
 public class SVGPatternElement extends SVGElement{
-    
     @JsConstructor
     public SVGPatternElement(){
         super();
@@ -73,6 +72,5 @@ public class SVGPatternElement extends SVGElement{
     
     @JsProperty(name="systemLanguage")
     public native SVGStringList getSystemLanguage();
-    
     
 }

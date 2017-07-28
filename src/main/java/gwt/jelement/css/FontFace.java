@@ -25,9 +25,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="FontFace", isNative = true)
 public class FontFace{
-    
     @JsProperty(name="status")
     private String status;
     
@@ -79,16 +78,15 @@ public class FontFace{
     @JsProperty(name="display")
     public native void setDisplay(String display);
     
+    @JsProperty(name="loaded")
+    public native Promise<FontFace> getLoaded();
+    
     @JsOverlay
     public final FontFaceLoadStatus getStatus(){
        return FontFaceLoadStatus.of(status);
     }
     
-    @JsProperty(name="loaded")
-    public native Promise<FontFace> getLoaded();
-    
     @JsMethod(name = "load")
     public native Promise<FontFace> load();
-    
     
 }

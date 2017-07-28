@@ -28,12 +28,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="RemotePlayback", isNative = true)
 public class RemotePlayback extends EventTarget{
-    
-    @JsProperty(name="state")
-    private String state;
-    
     @JsProperty(name="onconnecting")
     private EventHandlerNonNull onconnecting;
     
@@ -43,14 +39,12 @@ public class RemotePlayback extends EventTarget{
     @JsProperty(name="ondisconnect")
     private EventHandlerNonNull ondisconnect;
     
+    @JsProperty(name="state")
+    private String state;
+    
     @JsConstructor
     public RemotePlayback(){
         super();
-    }
-    
-    @JsOverlay
-    public final RemotePlaybackState getState(){
-       return RemotePlaybackState.of(state);
     }
     
     @JsOverlay
@@ -83,20 +77,21 @@ public class RemotePlayback extends EventTarget{
         this.ondisconnect = ondisconnect;
     }
     
+    @JsOverlay
+    public final RemotePlaybackState getState(){
+       return RemotePlaybackState.of(state);
+    }
+    
     @JsMethod(name = "cancelWatchAvailability")
     public native Promise<Void> cancelWatchAvailability();
-    
     
     @JsMethod(name = "cancelWatchAvailability")
     public native Promise<Void> cancelWatchAvailability(double id);
     
-    
     @JsMethod(name = "prompt")
     public native Promise<Void> prompt();
     
-    
     @JsMethod(name = "watchAvailability")
     public native Promise<Double> watchAvailability(RemotePlaybackAvailabilityCallback callback);
-    
     
 }

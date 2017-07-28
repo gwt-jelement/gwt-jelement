@@ -16,11 +16,11 @@
  */
 package gwt.jelement.encryptedmedia;
 
+import gwt.jelement.core.ArrayBuffer;
+import gwt.jelement.core.ArrayBufferView;
 import gwt.jelement.encryptedmedia.MediaKeyStatusMap;
 import gwt.jelement.events.EventHandlerNonNull;
 import gwt.jelement.events.EventTarget;
-import elemental2.core.ArrayBuffer;
-import elemental2.core.ArrayBufferView;
 import elemental2.promise.Promise;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
@@ -29,9 +29,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="MediaKeySession", isNative = true)
 public class MediaKeySession extends EventTarget{
-    
     @JsProperty(name="onkeystatuseschange")
     private EventHandlerNonNull onkeystatuseschange;
     
@@ -78,29 +77,22 @@ public class MediaKeySession extends EventTarget{
     @JsMethod(name = "close")
     public native Promise<Void> close();
     
-    
     @JsMethod(name = "generateRequest")
     public native Promise<Void> generateRequest(String initDataType, ArrayBuffer initData);
-    
     
     @JsMethod(name = "generateRequest")
     public native Promise<Void> generateRequest(String initDataType, ArrayBufferView initData);
     
-    
     @JsMethod(name = "load")
     public native Promise<Boolean> load(String sessionId);
-    
     
     @JsMethod(name = "remove")
     public native Promise<Void> remove();
     
-    
     @JsMethod(name = "update")
     public native Promise<Void> update(ArrayBuffer response);
     
-    
     @JsMethod(name = "update")
     public native Promise<Void> update(ArrayBufferView response);
-    
     
 }

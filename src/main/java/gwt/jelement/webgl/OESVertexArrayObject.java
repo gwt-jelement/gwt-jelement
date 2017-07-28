@@ -22,37 +22,29 @@ import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="OESVertexArrayObject", isNative = true)
 public class OESVertexArrayObject{
-    public static int VERTEX_ARRAY_BINDING_OES;
-    
+    public static double VERTEX_ARRAY_BINDING_OES;
     
     @JsMethod(name = "bindVertexArrayOES")
     public native void bindVertexArrayOES();
     
-    
     @JsMethod(name = "bindVertexArrayOES")
     public native void bindVertexArrayOES(WebGLVertexArrayObjectOES arrayObject);
-    
     
     @JsMethod(name = "createVertexArrayOES")
     public native WebGLVertexArrayObjectOES createVertexArrayOES();
     
-    
     @JsMethod(name = "deleteVertexArrayOES")
     public native void deleteVertexArrayOES();
-    
     
     @JsMethod(name = "deleteVertexArrayOES")
     public native void deleteVertexArrayOES(WebGLVertexArrayObjectOES arrayObject);
     
-    
     @JsMethod(name = "isVertexArrayOES")
     public native boolean isVertexArrayOES();
     
-    
     @JsMethod(name = "isVertexArrayOES")
     public native boolean isVertexArrayOES(WebGLVertexArrayObjectOES arrayObject);
-    
     
 }

@@ -25,9 +25,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="ClipboardEvent", isNative = true)
 public class ClipboardEvent extends Event{
-    
     @JsConstructor
     public ClipboardEvent(String type){
         super((String) null);
@@ -40,6 +39,5 @@ public class ClipboardEvent extends Event{
     
     @JsProperty(name="clipboardData")
     public native DataTransfer getClipboardData();
-    
     
 }

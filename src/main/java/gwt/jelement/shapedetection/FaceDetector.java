@@ -33,9 +33,8 @@ import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="FaceDetector", isNative = true)
 public class FaceDetector{
-    
     @JsConstructor
     public FaceDetector(){
     }
@@ -47,33 +46,25 @@ public class FaceDetector{
     @JsMethod(name = "detect")
     public native Promise<DetectedFace[]> detect(HTMLImageElement image);
     
-    
     @JsMethod(name = "detect")
     public native Promise<DetectedFace[]> detect(SVGImageElement image);
-    
     
     @JsMethod(name = "detect")
     public native Promise<DetectedFace[]> detect(HTMLVideoElement image);
     
-    
     @JsMethod(name = "detect")
     public native Promise<DetectedFace[]> detect(HTMLCanvasElement image);
-    
     
     @JsMethod(name = "detect")
     public native Promise<DetectedFace[]> detect(Blob image);
     
-    
     @JsMethod(name = "detect")
     public native Promise<DetectedFace[]> detect(ImageData image);
-    
     
     @JsMethod(name = "detect")
     public native Promise<DetectedFace[]> detect(ImageBitmap image);
     
-    
     @JsMethod(name = "detect")
     public native Promise<DetectedFace[]> detect(OffscreenCanvas image);
-    
     
 }

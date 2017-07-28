@@ -24,9 +24,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="SVGStopElement", isNative = true)
 public class SVGStopElement extends SVGElement{
-    
     @JsConstructor
     public SVGStopElement(){
         super();
@@ -34,6 +33,5 @@ public class SVGStopElement extends SVGElement{
     
     @JsProperty(name="offset")
     public native SVGAnimatedNumber getOffset();
-    
     
 }

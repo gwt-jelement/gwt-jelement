@@ -20,12 +20,10 @@ import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="SVGUnitTypes", isNative = true)
 public class SVGUnitTypes{
-    public static int SVG_UNIT_TYPE_UNKNOWN;
-    public static int SVG_UNIT_TYPE_USERSPACEONUSE;
-    public static int SVG_UNIT_TYPE_OBJECTBOUNDINGBOX;
-    
-    
+    public static short SVG_UNIT_TYPE_UNKNOWN;
+    public static short SVG_UNIT_TYPE_USERSPACEONUSE;
+    public static short SVG_UNIT_TYPE_OBJECTBOUNDINGBOX;
     
 }

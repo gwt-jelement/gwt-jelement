@@ -21,11 +21,9 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="HTMLCollection", isNative = true)
 public class HTMLCollection{
-    
     @JsProperty(name="length")
     public native double getLength();
-    
     
 }

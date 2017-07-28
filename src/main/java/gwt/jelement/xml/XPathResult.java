@@ -23,19 +23,18 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="XPathResult", isNative = true)
 public class XPathResult{
-    public static int ANY_TYPE;
-    public static int NUMBER_TYPE;
-    public static int STRING_TYPE;
-    public static int BOOLEAN_TYPE;
-    public static int UNORDERED_NODE_ITERATOR_TYPE;
-    public static int ORDERED_NODE_ITERATOR_TYPE;
-    public static int UNORDERED_NODE_SNAPSHOT_TYPE;
-    public static int ORDERED_NODE_SNAPSHOT_TYPE;
-    public static int ANY_UNORDERED_NODE_TYPE;
-    public static int FIRST_ORDERED_NODE_TYPE;
-    
+    public static short ANY_TYPE;
+    public static short NUMBER_TYPE;
+    public static short STRING_TYPE;
+    public static short BOOLEAN_TYPE;
+    public static short UNORDERED_NODE_ITERATOR_TYPE;
+    public static short ORDERED_NODE_ITERATOR_TYPE;
+    public static short UNORDERED_NODE_SNAPSHOT_TYPE;
+    public static short ORDERED_NODE_SNAPSHOT_TYPE;
+    public static short ANY_UNORDERED_NODE_TYPE;
+    public static short FIRST_ORDERED_NODE_TYPE;
     
     @JsProperty(name="resultType")
     public native short getResultType();
@@ -61,9 +60,7 @@ public class XPathResult{
     @JsMethod(name = "iterateNext")
     public native Node iterateNext();
     
-    
     @JsMethod(name = "snapshotItem")
     public native Node snapshotItem(double index);
-    
     
 }

@@ -21,9 +21,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="PerformanceServerTiming", isNative = true)
 public class PerformanceServerTiming{
-    
     @JsProperty(name="metric")
     public native String getMetric();
     
@@ -32,6 +31,5 @@ public class PerformanceServerTiming{
     
     @JsProperty(name="description")
     public native String getDescription();
-    
     
 }

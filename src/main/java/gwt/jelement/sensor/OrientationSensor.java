@@ -16,10 +16,10 @@
  */
 package gwt.jelement.sensor;
 
+import gwt.jelement.core.Float32Array;
+import gwt.jelement.core.Float64Array;
 import gwt.jelement.geometry.DOMMatrix;
 import gwt.jelement.sensor.Sensor;
-import elemental2.core.Float32Array;
-import elemental2.core.Float64Array;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
@@ -27,9 +27,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="OrientationSensor", isNative = true)
 public class OrientationSensor extends Sensor{
-    
     @JsConstructor
     public OrientationSensor(){
         super();
@@ -41,13 +40,10 @@ public class OrientationSensor extends Sensor{
     @JsMethod(name = "populateMatrix")
     public native void populateMatrix(Float32Array targetBuffer);
     
-    
     @JsMethod(name = "populateMatrix")
     public native void populateMatrix(Float64Array targetBuffer);
     
-    
     @JsMethod(name = "populateMatrix")
     public native void populateMatrix(DOMMatrix targetBuffer);
-    
     
 }

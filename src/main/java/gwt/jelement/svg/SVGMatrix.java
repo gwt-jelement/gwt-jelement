@@ -23,9 +23,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="SVGMatrix", isNative = true)
 public class SVGMatrix{
-    
     @JsProperty(name="a")
     public native double getA();
     
@@ -65,45 +64,34 @@ public class SVGMatrix{
     @JsMethod(name = "flipX")
     public native SVGMatrix flipX();
     
-    
     @JsMethod(name = "flipY")
     public native SVGMatrix flipY();
-    
     
     @JsMethod(name = "inverse")
     public native SVGMatrix inverse();
     
-    
     @JsMethod(name = "multiply")
     public native SVGMatrix multiply(SVGMatrix secondMatrix);
-    
     
     @JsMethod(name = "rotate")
     public native SVGMatrix rotate(float angle);
     
-    
     @JsMethod(name = "rotateFromVector")
     public native SVGMatrix rotateFromVector(float x, float y);
-    
     
     @JsMethod(name = "scale")
     public native SVGMatrix scale(float scaleFactor);
     
-    
     @JsMethod(name = "scaleNonUniform")
     public native SVGMatrix scaleNonUniform(float scaleFactorX, float scaleFactorY);
-    
     
     @JsMethod(name = "skewX")
     public native SVGMatrix skewX(float angle);
     
-    
     @JsMethod(name = "skewY")
     public native SVGMatrix skewY(float angle);
     
-    
     @JsMethod(name = "translate")
     public native SVGMatrix translate(float x, float y);
-    
     
 }

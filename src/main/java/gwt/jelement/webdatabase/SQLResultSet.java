@@ -22,9 +22,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="SQLResultSet", isNative = true)
 public class SQLResultSet{
-    
     @JsProperty(name="rows")
     public native SQLResultSetRowList getRows();
     
@@ -33,6 +32,5 @@ public class SQLResultSet{
     
     @JsProperty(name="rowsAffected")
     public native double getRowsAffected();
-    
     
 }

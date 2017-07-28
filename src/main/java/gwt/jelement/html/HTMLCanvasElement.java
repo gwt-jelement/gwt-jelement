@@ -33,9 +33,8 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 import jsinterop.base.Js;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="HTMLCanvasElement", isNative = true)
 public class HTMLCanvasElement extends HTMLElement{
-    
     @JsType(isNative = true, name = "?", namespace = JsPackage.GLOBAL)
     public interface RenderingContext {
         @JsOverlay
@@ -120,45 +119,34 @@ public class HTMLCanvasElement extends HTMLElement{
     @JsMethod(name = "captureStream")
     public native MediaStream captureStream();
     
-    
     @JsMethod(name = "captureStream")
     public native MediaStream captureStream(double frameRate);
-    
     
     @JsMethod(name = "getContext")
     public native <T extends HTMLCanvasElement.RenderingContext> T getContext(String contextId);
     
-    
     @JsMethod(name = "getContext")
     public native <T extends HTMLCanvasElement.RenderingContext> T getContext(String contextId, CanvasContextCreationAttributes attributes);
-    
     
     @JsMethod(name = "toBlob")
     public native void toBlob(BlobCallback _callback);
     
-    
     @JsMethod(name = "toBlob")
     public native void toBlob(BlobCallback _callback, String type);
-    
     
     @JsMethod(name = "toBlob")
     public native void toBlob(BlobCallback _callback, String type, Object arguments);
     
-    
     @JsMethod(name = "toDataURL")
     public native String toDataURL();
-    
     
     @JsMethod(name = "toDataURL")
     public native String toDataURL(String type);
     
-    
     @JsMethod(name = "toDataURL")
     public native String toDataURL(String type, Object arguments);
     
-    
     @JsMethod(name = "transferControlToOffscreen")
     public native OffscreenCanvas transferControlToOffscreen();
-    
     
 }

@@ -23,9 +23,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="CSSUnparsedValue", isNative = true)
 public class CSSUnparsedValue extends CSSStyleValue{
-    
     @JsConstructor
     public CSSUnparsedValue(){
         super();
@@ -33,6 +32,5 @@ public class CSSUnparsedValue extends CSSStyleValue{
     
     @JsProperty(name="length")
     public native double getLength();
-    
     
 }

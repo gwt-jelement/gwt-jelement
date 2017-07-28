@@ -16,15 +16,14 @@
  */
 package gwt.jelement.vr;
 
-import elemental2.core.Float32Array;
+import gwt.jelement.core.Float32Array;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="VRPose", isNative = true)
 public class VRPose{
-    
     @JsProperty(name="position")
     public native Float32Array getPosition();
     
@@ -42,6 +41,5 @@ public class VRPose{
     
     @JsProperty(name="angularAcceleration")
     public native Float32Array getAngularAcceleration();
-    
     
 }

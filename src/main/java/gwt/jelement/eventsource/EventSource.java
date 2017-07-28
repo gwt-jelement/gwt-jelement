@@ -26,12 +26,11 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="EventSource", isNative = true)
 public class EventSource extends EventTarget{
-    public static int CONNECTING;
-    public static int OPEN;
-    public static int CLOSED;
-    
+    public static short CONNECTING;
+    public static short OPEN;
+    public static short CLOSED;
     
     @JsProperty(name="onopen")
     private EventHandlerNonNull onopen;
@@ -93,6 +92,5 @@ public class EventSource extends EventTarget{
     
     @JsMethod(name = "close")
     public native void close();
-    
     
 }

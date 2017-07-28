@@ -23,9 +23,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="HTMLAnchorElement", isNative = true)
 public class HTMLAnchorElement extends HTMLElement{
-    
     @JsConstructor
     public HTMLAnchorElement(){
         super();
@@ -171,6 +170,5 @@ public class HTMLAnchorElement extends HTMLElement{
     
     @JsProperty(name="hash")
     public native void setHash(String hash);
-    
     
 }

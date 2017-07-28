@@ -26,9 +26,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="SVGFEImageElement", isNative = true)
 public class SVGFEImageElement extends SVGElement{
-    
     @JsConstructor
     public SVGFEImageElement(){
         super();
@@ -54,6 +53,5 @@ public class SVGFEImageElement extends SVGElement{
     
     @JsProperty(name="href")
     public native SVGAnimatedString getHref();
-    
     
 }

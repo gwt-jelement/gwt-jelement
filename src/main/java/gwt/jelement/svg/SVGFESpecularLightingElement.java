@@ -26,9 +26,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="SVGFESpecularLightingElement", isNative = true)
 public class SVGFESpecularLightingElement extends SVGElement{
-    
     @JsConstructor
     public SVGFESpecularLightingElement(){
         super();
@@ -66,6 +65,5 @@ public class SVGFESpecularLightingElement extends SVGElement{
     
     @JsProperty(name="result")
     public native SVGAnimatedString getResult();
-    
     
 }

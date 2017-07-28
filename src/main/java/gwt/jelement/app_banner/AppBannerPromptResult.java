@@ -22,9 +22,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="AppBannerPromptResult", isNative = true)
 public class AppBannerPromptResult{
-    
     @JsProperty(name="outcome")
     private String outcome;
     
@@ -35,6 +34,5 @@ public class AppBannerPromptResult{
     public final AppBannerPromptOutcome getOutcome(){
        return AppBannerPromptOutcome.of(outcome);
     }
-    
     
 }

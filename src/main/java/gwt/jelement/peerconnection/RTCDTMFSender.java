@@ -26,9 +26,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="RTCDTMFSender", isNative = true)
 public class RTCDTMFSender extends EventTarget{
-    
     @JsProperty(name="ontonechange")
     private EventHandlerNonNull ontonechange;
     
@@ -65,13 +64,10 @@ public class RTCDTMFSender extends EventTarget{
     @JsMethod(name = "insertDTMF")
     public native void insertDTMF(String tones);
     
-    
     @JsMethod(name = "insertDTMF")
     public native void insertDTMF(String tones, double duration);
     
-    
     @JsMethod(name = "insertDTMF")
     public native void insertDTMF(String tones, double duration, double interToneGap);
-    
     
 }

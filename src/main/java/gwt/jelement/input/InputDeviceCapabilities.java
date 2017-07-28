@@ -23,9 +23,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="InputDeviceCapabilities", isNative = true)
 public class InputDeviceCapabilities{
-    
     @JsConstructor
     public InputDeviceCapabilities(){
     }
@@ -36,6 +35,5 @@ public class InputDeviceCapabilities{
     
     @JsProperty(name="firesTouchEvents")
     public native boolean getFiresTouchEvents();
-    
     
 }

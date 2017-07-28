@@ -24,9 +24,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="HTMLBodyElement", isNative = true)
 public class HTMLBodyElement extends HTMLElement{
-    
     @JsProperty(name="onorientationchange")
     private EventHandlerNonNull onorientationchange;
     
@@ -262,6 +261,5 @@ public class HTMLBodyElement extends HTMLElement{
     public final void setOnUnload(EventHandlerNonNull onunload){
         this.onunload = onunload;
     }
-    
     
 }

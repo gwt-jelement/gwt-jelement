@@ -24,9 +24,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="ErrorEvent", isNative = true)
 public class ErrorEvent extends Event{
-    
     @JsConstructor
     public ErrorEvent(String type){
         super((String) null);
@@ -51,6 +50,5 @@ public class ErrorEvent extends Event{
     
     @JsProperty(name="error")
     public native Object getError();
-    
     
 }

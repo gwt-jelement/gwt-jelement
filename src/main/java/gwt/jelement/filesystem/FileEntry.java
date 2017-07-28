@@ -26,9 +26,8 @@ import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="FileEntry", isNative = true)
 public class FileEntry extends Entry{
-    
     @JsConstructor
     public FileEntry(){
         super();
@@ -37,17 +36,13 @@ public class FileEntry extends Entry{
     @JsMethod(name = "createWriter")
     public native void createWriter(FileWriterCallback successCallback);
     
-    
     @JsMethod(name = "createWriter")
     public native void createWriter(FileWriterCallback successCallback, ErrorCallback errorCallback);
-    
     
     @JsMethod(name = "file")
     public native void file(BlobCallback successCallback);
     
-    
     @JsMethod(name = "file")
     public native void file(BlobCallback successCallback, ErrorCallback errorCallback);
-    
     
 }

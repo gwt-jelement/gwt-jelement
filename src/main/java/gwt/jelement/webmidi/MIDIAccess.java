@@ -26,9 +26,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="MIDIAccess", isNative = true)
 public class MIDIAccess extends EventTarget{
-    
     @JsProperty(name="onstatechange")
     private EventHandlerNonNull onstatechange;
     
@@ -55,6 +54,5 @@ public class MIDIAccess extends EventTarget{
     public final void setOnStatechange(EventHandlerNonNull onstatechange){
         this.onstatechange = onstatechange;
     }
-    
     
 }
