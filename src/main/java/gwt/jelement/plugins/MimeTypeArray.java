@@ -16,17 +16,19 @@
  */
 package gwt.jelement.plugins;
 
-import gwt.jelement.plugins.MimeType;
+import gwt.jelement.core.JsObject;
+import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
-import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="MimeTypeArray", isNative = true)
-public class MimeTypeArray{
-    @JsProperty(name="length")
-    public native double getLength();
+public class MimeTypeArray extends JsObject{
+    @JsConstructor
+    public MimeTypeArray(){
+        super();
+    }
     
     @JsMethod(name = "namedItem")
     public native MimeType namedItem(String name);

@@ -18,9 +18,6 @@ package gwt.jelement.notifications;
 
 import gwt.jelement.events.EventHandlerNonNull;
 import gwt.jelement.events.EventTarget;
-import gwt.jelement.notifications.NotificationAction;
-import gwt.jelement.notifications.NotificationPermission;
-import gwt.jelement.notifications.NotificationPermissionCallback;
 import elemental2.promise.Promise;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
@@ -50,7 +47,12 @@ public class Notification extends EventTarget{
     private static String permission;
     
     @JsConstructor
-    public Notification(){
+    public Notification(String title){
+        super();
+    }
+    
+    @JsConstructor
+    public Notification(String title, NotificationOptions options){
         super();
     }
     

@@ -18,12 +18,6 @@ package gwt.jelement.vr;
 
 import gwt.jelement.dom.FrameRequestCallback;
 import gwt.jelement.events.EventTarget;
-import gwt.jelement.vr.VRDisplayCapabilities;
-import gwt.jelement.vr.VREye;
-import gwt.jelement.vr.VREyeParameters;
-import gwt.jelement.vr.VRFrameData;
-import gwt.jelement.vr.VRLayer;
-import gwt.jelement.vr.VRStageParameters;
 import elemental2.promise.Promise;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;

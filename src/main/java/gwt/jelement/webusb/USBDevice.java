@@ -18,14 +18,9 @@ package gwt.jelement.webusb;
 
 import gwt.jelement.core.ArrayBuffer;
 import gwt.jelement.core.ArrayBufferView;
-import gwt.jelement.webusb.USBConfiguration;
-import gwt.jelement.webusb.USBControlTransferParameters;
-import gwt.jelement.webusb.USBDirection;
-import gwt.jelement.webusb.USBInTransferResult;
-import gwt.jelement.webusb.USBIsochronousInTransferResult;
-import gwt.jelement.webusb.USBIsochronousOutTransferResult;
-import gwt.jelement.webusb.USBOutTransferResult;
+import gwt.jelement.core.JsObject;
 import elemental2.promise.Promise;
+import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
@@ -34,7 +29,12 @@ import jsinterop.annotations.JsType;
 import jsinterop.base.Any;
 
 @JsType(namespace = JsPackage.GLOBAL, name="USBDevice", isNative = true)
-public class USBDevice{
+public class USBDevice extends JsObject{
+    @JsConstructor
+    public USBDevice(){
+        super();
+    }
+    
     @JsProperty(name="usbVersionMajor")
     public native byte getUsbVersionMajor();
     

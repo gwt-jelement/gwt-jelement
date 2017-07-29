@@ -16,8 +16,8 @@
  */
 package gwt.jelement.svg;
 
-import gwt.jelement.svg.SVGMatrix;
-import gwt.jelement.svg.SVGTransform;
+import gwt.jelement.core.JsObject;
+import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
@@ -25,9 +25,11 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="SVGTransformList", isNative = true)
-public class SVGTransformList{
-    @JsProperty(name="length")
-    public native double getLength();
+public class SVGTransformList extends JsObject{
+    @JsConstructor
+    public SVGTransformList(){
+        super();
+    }
     
     @JsProperty(name="numberOfItems")
     public native double getNumberOfItems();

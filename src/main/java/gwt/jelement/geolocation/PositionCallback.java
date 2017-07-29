@@ -17,7 +17,6 @@
 package gwt.jelement.geolocation;
 
 import jsinterop.annotations.JsFunction;
-import gwt.jelement.geolocation.Position;
 
 @JsFunction
 public interface PositionCallback{

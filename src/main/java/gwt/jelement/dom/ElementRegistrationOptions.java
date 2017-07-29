@@ -16,13 +16,14 @@
  */
 package gwt.jelement.dom;
 
+import gwt.jelement.core.JsObject;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
-public class ElementRegistrationOptions{
+public class ElementRegistrationOptions extends JsObject{
 
     @JsProperty(name="prototype")
     private Object prototype;

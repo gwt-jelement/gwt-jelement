@@ -16,7 +16,8 @@
  */
 package gwt.jelement.webaudio;
 
-import gwt.jelement.webaudio.AudioParam;
+import gwt.jelement.core.JsObject;
+import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
@@ -24,7 +25,12 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="AudioListener", isNative = true)
-public class AudioListener{
+public class AudioListener extends JsObject{
+    @JsConstructor
+    public AudioListener(){
+        super();
+    }
+    
     @JsProperty(name="positionX")
     public native AudioParam getPositionX();
     

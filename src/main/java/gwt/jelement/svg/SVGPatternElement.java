@@ -16,14 +16,6 @@
  */
 package gwt.jelement.svg;
 
-import gwt.jelement.svg.SVGAnimatedEnumeration;
-import gwt.jelement.svg.SVGAnimatedLength;
-import gwt.jelement.svg.SVGAnimatedPreserveAspectRatio;
-import gwt.jelement.svg.SVGAnimatedRect;
-import gwt.jelement.svg.SVGAnimatedString;
-import gwt.jelement.svg.SVGAnimatedTransformList;
-import gwt.jelement.svg.SVGElement;
-import gwt.jelement.svg.SVGStringList;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;

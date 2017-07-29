@@ -16,13 +16,20 @@
  */
 package gwt.jelement.bluetooth;
 
+import gwt.jelement.core.JsObject;
+import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="BluetoothUUID", isNative = true)
-public class BluetoothUUID{
+public class BluetoothUUID extends JsObject{
+    @JsConstructor
+    public BluetoothUUID(){
+        super();
+    }
+    
     @JsMethod(name = "canonicalUUID")
     public static native String canonicalUUID(double alias);
     

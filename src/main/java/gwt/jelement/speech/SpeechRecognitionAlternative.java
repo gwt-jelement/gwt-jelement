@@ -16,13 +16,20 @@
  */
 package gwt.jelement.speech;
 
+import gwt.jelement.core.JsObject;
+import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="SpeechRecognitionAlternative", isNative = true)
-public class SpeechRecognitionAlternative{
+public class SpeechRecognitionAlternative extends JsObject{
+    @JsConstructor
+    public SpeechRecognitionAlternative(){
+        super();
+    }
+    
     @JsProperty(name="transcript")
     public native String getTranscript();
     

@@ -16,7 +16,8 @@
  */
 package gwt.jelement.svg;
 
-import gwt.jelement.svg.SVGMatrix;
+import gwt.jelement.core.JsObject;
+import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
@@ -24,7 +25,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="SVGTransform", isNative = true)
-public class SVGTransform{
+public class SVGTransform extends JsObject{
     public static short SVG_TRANSFORM_UNKNOWN;
     public static short SVG_TRANSFORM_MATRIX;
     public static short SVG_TRANSFORM_TRANSLATE;
@@ -32,6 +33,11 @@ public class SVGTransform{
     public static short SVG_TRANSFORM_ROTATE;
     public static short SVG_TRANSFORM_SKEWX;
     public static short SVG_TRANSFORM_SKEWY;
+    
+    @JsConstructor
+    public SVGTransform(){
+        super();
+    }
     
     @JsProperty(name="type")
     public native short getType();

@@ -17,8 +17,6 @@
 package gwt.jelement.serviceworkers;
 
 import gwt.jelement.dom.VisibilityState;
-import gwt.jelement.serviceworkers.Client;
-import gwt.jelement.serviceworkers.WindowClient;
 import elemental2.promise.Promise;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;

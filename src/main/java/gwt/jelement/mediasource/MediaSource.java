@@ -18,9 +18,6 @@ package gwt.jelement.mediasource;
 
 import gwt.jelement.events.EventHandlerNonNull;
 import gwt.jelement.events.EventTarget;
-import gwt.jelement.mediasource.EndOfStreamError;
-import gwt.jelement.mediasource.SourceBuffer;
-import gwt.jelement.mediasource.SourceBufferList;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;

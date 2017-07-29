@@ -16,7 +16,6 @@
  */
 package gwt.jelement.events;
 
-import gwt.jelement.events.EventInit;
 import elemental2.promise.Promise;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;

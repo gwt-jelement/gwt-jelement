@@ -23,7 +23,6 @@ import gwt.jelement.filesystem.EntryCallback;
 import gwt.jelement.filesystem.EntrySync;
 import gwt.jelement.filesystem.ErrorCallback;
 import gwt.jelement.filesystem.FileSystemCallback;
-import gwt.jelement.workers.WorkerGlobalScope;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;

@@ -17,7 +17,6 @@
 package gwt.jelement.serviceworkers;
 
 import gwt.jelement.fetch.Request;
-import gwt.jelement.serviceworkers.ExtendableEventInit;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;

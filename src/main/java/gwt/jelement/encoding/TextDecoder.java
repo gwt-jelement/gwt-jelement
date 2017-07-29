@@ -18,8 +18,7 @@ package gwt.jelement.encoding;
 
 import gwt.jelement.core.ArrayBuffer;
 import gwt.jelement.core.ArrayBufferView;
-import gwt.jelement.encoding.TextDecodeOptions;
-import gwt.jelement.encoding.TextDecoderOptions;
+import gwt.jelement.core.JsObject;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
@@ -28,17 +27,20 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="TextDecoder", isNative = true)
-public class TextDecoder{
+public class TextDecoder extends JsObject{
     @JsConstructor
     public TextDecoder(){
+        super();
     }
     
     @JsConstructor
     public TextDecoder(String label){
+        super();
     }
     
     @JsConstructor
     public TextDecoder(String label, TextDecoderOptions options){
+        super();
     }
     
     @JsProperty(name="encoding")

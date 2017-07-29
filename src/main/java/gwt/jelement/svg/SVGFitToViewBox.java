@@ -16,15 +16,20 @@
  */
 package gwt.jelement.svg;
 
-import gwt.jelement.svg.SVGAnimatedPreserveAspectRatio;
-import gwt.jelement.svg.SVGAnimatedRect;
+import gwt.jelement.core.JsObject;
+import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="SVGFitToViewBox", isNative = true)
-public class SVGFitToViewBox{
+public class SVGFitToViewBox extends JsObject{
+    @JsConstructor
+    public SVGFitToViewBox(){
+        super();
+    }
+    
     @JsProperty(name="viewBox")
     public native SVGAnimatedRect getViewBox();
     

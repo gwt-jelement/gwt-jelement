@@ -17,7 +17,6 @@
 package gwt.jelement.gamepad;
 
 import gwt.jelement.events.EventInit;
-import gwt.jelement.gamepad.Gamepad;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;

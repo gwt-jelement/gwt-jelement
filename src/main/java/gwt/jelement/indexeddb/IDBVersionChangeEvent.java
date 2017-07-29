@@ -17,7 +17,6 @@
 package gwt.jelement.indexeddb;
 
 import gwt.jelement.events.Event;
-import gwt.jelement.indexeddb.IDBDataLossAmount;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
@@ -30,7 +29,12 @@ public class IDBVersionChangeEvent extends Event{
     private String dataLoss;
     
     @JsConstructor
-    public IDBVersionChangeEvent(){
+    public IDBVersionChangeEvent(String type){
+        super((String) null);
+    }
+    
+    @JsConstructor
+    public IDBVersionChangeEvent(String type, IDBVersionChangeEventInit eventInitDict){
         super((String) null);
     }
     

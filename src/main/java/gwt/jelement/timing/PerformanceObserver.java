@@ -16,14 +16,20 @@
  */
 package gwt.jelement.timing;
 
-import gwt.jelement.timing.PerformanceObserverInit;
+import gwt.jelement.core.JsObject;
+import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="PerformanceObserver", isNative = true)
-public class PerformanceObserver{
+public class PerformanceObserver extends JsObject{
+    @JsConstructor
+    public PerformanceObserver(){
+        super();
+    }
+    
     @JsMethod(name = "disconnect")
     public native void disconnect();
     

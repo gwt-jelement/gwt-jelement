@@ -16,7 +16,6 @@
  */
 package gwt.jelement.peerconnection;
 
-import gwt.jelement.peerconnection.RTCOfferAnswerOptions;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;

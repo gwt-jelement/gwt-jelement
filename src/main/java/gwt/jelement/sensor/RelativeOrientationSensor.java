@@ -16,8 +16,6 @@
  */
 package gwt.jelement.sensor;
 
-import gwt.jelement.sensor.OrientationSensor;
-import gwt.jelement.sensor.SensorOptions;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;

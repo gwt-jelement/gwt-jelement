@@ -16,30 +16,40 @@
  */
 package gwt.jelement.dom;
 
+import gwt.jelement.core.JsObject;
+import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="URLSearchParams", isNative = true)
-public class URLSearchParams{
+public class URLSearchParams extends JsObject<String>{
+    @JsConstructor
+    public URLSearchParams(){
+        super();
+    }
+    
+    @JsConstructor
+    public URLSearchParams(String[][] init){
+        super();
+    }
+    
+    @JsConstructor
+    public URLSearchParams(JsObject<String> init){
+        super();
+    }
+    
+    @JsConstructor
+    public URLSearchParams(String init){
+        super();
+    }
+    
     @JsMethod(name = "append")
     public native void append(String name, String value);
     
-    @JsMethod(name = "delete")
-    public native void delete(String name);
-    
-    @JsMethod(name = "get")
-    public native String get(String name);
-    
     @JsMethod(name = "getAll")
     public native String[] getAll(String name);
-    
-    @JsMethod(name = "has")
-    public native boolean has(String name);
-    
-    @JsMethod(name = "set")
-    public native void set(String name, String value);
     
     @JsMethod(name = "sort")
     public native void sort();

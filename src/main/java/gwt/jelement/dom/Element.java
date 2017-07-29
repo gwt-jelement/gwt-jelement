@@ -19,18 +19,6 @@ package gwt.jelement.dom;
 import gwt.jelement.animation.Animation;
 import gwt.jelement.animation.KeyframeAnimationOptions;
 import gwt.jelement.css.cssom.StylePropertyMap;
-import gwt.jelement.dom.AccessibleNode;
-import gwt.jelement.dom.Attr;
-import gwt.jelement.dom.ClientRect;
-import gwt.jelement.dom.ClientRectList;
-import gwt.jelement.dom.DOMTokenList;
-import gwt.jelement.dom.Element;
-import gwt.jelement.dom.NamedNodeMap;
-import gwt.jelement.dom.NativeScrollBehavior;
-import gwt.jelement.dom.Node;
-import gwt.jelement.dom.NodeList;
-import gwt.jelement.dom.ShadowRoot;
-import gwt.jelement.dom.ShadowRootInit;
 import gwt.jelement.events.EventHandlerNonNull;
 import gwt.jelement.frame.ScrollIntoViewOptions;
 import gwt.jelement.frame.ScrollToOptions;
@@ -447,7 +435,7 @@ public class Element extends Node{
     public native void prepend(String... nodes);
     
     @JsMethod(name = "querySelector")
-    public native <T extends Element> T querySelector(String selectors);
+    public native <T> T querySelector(String selectors);
     
     @JsMethod(name = "querySelectorAll")
     public native NodeList querySelectorAll(String selectors);

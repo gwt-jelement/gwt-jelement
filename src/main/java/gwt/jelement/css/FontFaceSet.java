@@ -16,9 +16,6 @@
  */
 package gwt.jelement.css;
 
-import gwt.jelement.css.FontFace;
-import gwt.jelement.css.FontFaceSet;
-import gwt.jelement.css.FontFaceSetLoadStatus;
 import gwt.jelement.events.EventHandlerNonNull;
 import gwt.jelement.events.EventTarget;
 import elemental2.promise.Promise;

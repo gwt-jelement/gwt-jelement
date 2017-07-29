@@ -16,15 +16,20 @@
  */
 package gwt.jelement.indexeddb;
 
-import gwt.jelement.indexeddb.IDBDatabase;
-import gwt.jelement.indexeddb.IDBTransaction;
+import gwt.jelement.core.JsObject;
+import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="IDBObserverChanges", isNative = true)
-public class IDBObserverChanges{
+public class IDBObserverChanges extends JsObject{
+    @JsConstructor
+    public IDBObserverChanges(){
+        super();
+    }
+    
     @JsProperty(name="database")
     public native IDBDatabase getDatabase();
     

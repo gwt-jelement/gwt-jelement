@@ -17,7 +17,6 @@
 package gwt.jelement.webaudio;
 
 import jsinterop.annotations.JsFunction;
-import gwt.jelement.webaudio.AudioBuffer;
 
 @JsFunction
 public interface DecodeSuccessCallback{

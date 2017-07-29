@@ -16,15 +16,20 @@
  */
 package gwt.jelement.dom;
 
-import gwt.jelement.dom.AccessibleNode;
-import gwt.jelement.dom.AccessibleNodeList;
+import gwt.jelement.core.JsObject;
+import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="AccessibleNode", isNative = true)
-public class AccessibleNode{
+public class AccessibleNode extends JsObject{
+    @JsConstructor
+    public AccessibleNode(){
+        super();
+    }
+    
     @JsProperty(name="activeDescendant")
     public native AccessibleNode getActiveDescendant();
     

@@ -16,7 +16,6 @@
  */
 package gwt.jelement.credentialmanager;
 
-import gwt.jelement.credentialmanager.CredentialData;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;

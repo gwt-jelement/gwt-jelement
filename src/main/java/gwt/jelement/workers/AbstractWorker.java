@@ -16,16 +16,23 @@
  */
 package gwt.jelement.workers;
 
+import gwt.jelement.core.JsObject;
 import gwt.jelement.events.EventHandlerNonNull;
+import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="AbstractWorker", isNative = true)
-public class AbstractWorker{
+public class AbstractWorker extends JsObject{
     @JsProperty(name="onerror")
     private EventHandlerNonNull onerror;
+    
+    @JsConstructor
+    public AbstractWorker(){
+        super();
+    }
     
     @JsOverlay
     public final EventHandlerNonNull getOnError(){

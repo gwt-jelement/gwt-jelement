@@ -16,13 +16,20 @@
  */
 package gwt.jelement.webgl;
 
+import gwt.jelement.core.JsObject;
+import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="EXTTextureFilterAnisotropic", isNative = true)
-public class EXTTextureFilterAnisotropic{
+public class EXTTextureFilterAnisotropic extends JsObject{
     public static double TEXTURE_MAX_ANISOTROPY_EXT;
     public static double MAX_TEXTURE_MAX_ANISOTROPY_EXT;
+    
+    @JsConstructor
+    public EXTTextureFilterAnisotropic(){
+        super();
+    }
     
 }

@@ -16,12 +16,9 @@
  */
 package gwt.jelement.mediastream;
 
+import gwt.jelement.core.JsObject;
 import gwt.jelement.imagecapture.ConstrainPoint2DParameters;
 import gwt.jelement.imagecapture.Point2D;
-import gwt.jelement.mediastream.ConstrainBooleanParameters;
-import gwt.jelement.mediastream.ConstrainDOMStringParameters;
-import gwt.jelement.mediastream.ConstrainDoubleRange;
-import gwt.jelement.mediastream.ConstrainLongRange;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -29,7 +26,7 @@ import jsinterop.annotations.JsType;
 import jsinterop.base.Js;
 
 @JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
-public class MediaTrackConstraintSet{
+public class MediaTrackConstraintSet extends JsObject{
 
     @JsProperty(name="width")
     private ConstrainLong width;

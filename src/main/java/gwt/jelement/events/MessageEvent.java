@@ -17,9 +17,6 @@
 package gwt.jelement.events;
 
 import gwt.jelement.dom.MessagePort;
-import gwt.jelement.events.Event;
-import gwt.jelement.events.EventTarget;
-import gwt.jelement.events.MessageEventInit;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;

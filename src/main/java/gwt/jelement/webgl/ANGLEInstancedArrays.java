@@ -16,14 +16,21 @@
  */
 package gwt.jelement.webgl;
 
+import gwt.jelement.core.JsObject;
+import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="ANGLEInstancedArrays", isNative = true)
-public class ANGLEInstancedArrays{
+public class ANGLEInstancedArrays extends JsObject{
     public static double VERTEX_ATTRIB_ARRAY_DIVISOR_ANGLE;
+    
+    @JsConstructor
+    public ANGLEInstancedArrays(){
+        super();
+    }
     
     @JsMethod(name = "drawArraysInstancedANGLE")
     public native void drawArraysInstancedANGLE(double mode, double first, double count, double primcount);

@@ -16,13 +16,20 @@
  */
 package gwt.jelement.svg;
 
+import gwt.jelement.core.JsObject;
+import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="SVGAnimatedNumber", isNative = true)
-public class SVGAnimatedNumber{
+public class SVGAnimatedNumber extends JsObject{
+    @JsConstructor
+    public SVGAnimatedNumber(){
+        super();
+    }
+    
     @JsProperty(name="baseVal")
     public native float getBaseVal();
     

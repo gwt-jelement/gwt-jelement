@@ -24,7 +24,7 @@ import jsinterop.annotations.JsType;
 import jsinterop.base.Js;
 
 @JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
-public class ResponseInit{
+public class ResponseInit extends JsObject{
 
     @JsProperty(name="status")
     private short status;

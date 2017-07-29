@@ -16,7 +16,8 @@
  */
 package gwt.jelement.svg;
 
-import gwt.jelement.svg.SVGLength;
+import gwt.jelement.core.JsObject;
+import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
@@ -24,9 +25,11 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="SVGLengthList", isNative = true)
-public class SVGLengthList{
-    @JsProperty(name="length")
-    public native double getLength();
+public class SVGLengthList extends JsObject{
+    @JsConstructor
+    public SVGLengthList(){
+        super();
+    }
     
     @JsProperty(name="numberOfItems")
     public native double getNumberOfItems();

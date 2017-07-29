@@ -16,15 +16,21 @@
  */
 package gwt.jelement.xml;
 
+import gwt.jelement.core.JsObject;
 import gwt.jelement.dom.Node;
-import gwt.jelement.xml.XPathResult;
+import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="XPathExpression", isNative = true)
-public class XPathExpression{
+public class XPathExpression extends JsObject{
+    @JsConstructor
+    public XPathExpression(){
+        super();
+    }
+    
     @JsMethod(name = "evaluate")
     public native XPathResult evaluate(Node contextNode);
     

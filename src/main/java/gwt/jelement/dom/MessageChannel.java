@@ -16,14 +16,20 @@
  */
 package gwt.jelement.dom;
 
-import gwt.jelement.dom.MessagePort;
+import gwt.jelement.core.JsObject;
+import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="MessageChannel", isNative = true)
-public class MessageChannel{
+public class MessageChannel extends JsObject{
+    @JsConstructor
+    public MessageChannel(){
+        super();
+    }
+    
     @JsProperty(name="port1")
     public native MessagePort getPort1();
     

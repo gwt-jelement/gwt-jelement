@@ -16,7 +16,8 @@
  */
 package gwt.jelement.peerconnection;
 
-import gwt.jelement.peerconnection.RTCDtlsFingerprint;
+import gwt.jelement.core.JsObject;
+import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
@@ -24,7 +25,12 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="RTCCertificate", isNative = true)
-public class RTCCertificate{
+public class RTCCertificate extends JsObject{
+    @JsConstructor
+    public RTCCertificate(){
+        super();
+    }
+    
     @JsProperty(name="expires")
     public native double getExpires();
     

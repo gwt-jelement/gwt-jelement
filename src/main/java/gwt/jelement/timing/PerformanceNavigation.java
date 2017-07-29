@@ -16,17 +16,24 @@
  */
 package gwt.jelement.timing;
 
+import gwt.jelement.core.JsObject;
+import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="PerformanceNavigation", isNative = true)
-public class PerformanceNavigation{
+public class PerformanceNavigation extends JsObject{
     public static short TYPE_NAVIGATE;
     public static short TYPE_RELOAD;
     public static short TYPE_BACK_FORWARD;
     public static short TYPE_RESERVED;
+    
+    @JsConstructor
+    public PerformanceNavigation(){
+        super();
+    }
     
     @JsProperty(name="type")
     public native short getType();

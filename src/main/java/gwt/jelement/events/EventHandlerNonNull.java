@@ -17,7 +17,6 @@
 package gwt.jelement.events;
 
 import jsinterop.annotations.JsFunction;
-import gwt.jelement.events.Event;
 
 @JsFunction
 public interface EventHandlerNonNull{

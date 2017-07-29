@@ -16,7 +16,6 @@
  */
 package gwt.jelement.animation;
 
-import gwt.jelement.animation.AnimationEffectTimingProperties;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;

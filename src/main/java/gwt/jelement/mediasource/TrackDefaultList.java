@@ -16,24 +16,22 @@
  */
 package gwt.jelement.mediasource;
 
-import gwt.jelement.mediasource.TrackDefault;
+import gwt.jelement.core.JsObject;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
-import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="TrackDefaultList", isNative = true)
-public class TrackDefaultList{
+public class TrackDefaultList extends JsObject{
     @JsConstructor
     public TrackDefaultList(){
+        super();
     }
     
     @JsConstructor
     public TrackDefaultList(TrackDefault[] trackDefaults){
+        super();
     }
-    
-    @JsProperty(name="length")
-    public native double getLength();
     
 }

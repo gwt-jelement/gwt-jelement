@@ -16,17 +16,20 @@
  */
 package gwt.jelement.events;
 
-import gwt.jelement.events.AddEventListenerOptions;
-import gwt.jelement.events.Event;
-import gwt.jelement.events.EventListener;
-import gwt.jelement.events.EventListenerOptions;
+import gwt.jelement.core.JsObject;
+import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="EventTarget", isNative = true)
-public class EventTarget{
+public class EventTarget extends JsObject{
+    @JsConstructor
+    public EventTarget(){
+        super();
+    }
+    
     @JsMethod(name = "addEventListener")
     public native void addEventListener(String type, EventListener listener);
     

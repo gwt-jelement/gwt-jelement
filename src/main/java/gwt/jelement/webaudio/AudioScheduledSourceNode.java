@@ -17,7 +17,6 @@
 package gwt.jelement.webaudio;
 
 import gwt.jelement.events.EventHandlerNonNull;
-import gwt.jelement.webaudio.AudioNode;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;

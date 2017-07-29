@@ -16,29 +16,24 @@
  */
 package gwt.jelement.dom;
 
-import gwt.jelement.dom.AccessibleNode;
+import gwt.jelement.core.JsObject;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
-import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="AccessibleNodeList", isNative = true)
-public class AccessibleNodeList{
+public class AccessibleNodeList extends JsObject{
     @JsConstructor
     public AccessibleNodeList(){
+        super();
     }
     
     @JsConstructor
     public AccessibleNodeList(AccessibleNode[] nodes){
+        super();
     }
-    
-    @JsProperty(name="length")
-    public native double getLength();
-    
-    @JsProperty(name="length")
-    public native void setLength(double length);
     
     @JsMethod(name = "add")
     public native void add(AccessibleNode node);

@@ -18,8 +18,6 @@ package gwt.jelement.presentation;
 
 import gwt.jelement.events.EventHandlerNonNull;
 import gwt.jelement.events.EventTarget;
-import gwt.jelement.presentation.PresentationAvailability;
-import gwt.jelement.presentation.PresentationConnection;
 import elemental2.promise.Promise;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;

@@ -17,16 +17,23 @@
 package gwt.jelement.workers;
 
 import gwt.jelement.budget.BudgetService;
+import gwt.jelement.core.JsObject;
 import gwt.jelement.netinfo.NetworkInformation;
 import gwt.jelement.permissions.Permissions;
 import gwt.jelement.quota.StorageManager;
+import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="WorkerNavigator", isNative = true)
-public class WorkerNavigator{
+public class WorkerNavigator extends JsObject{
+    @JsConstructor
+    public WorkerNavigator(){
+        super();
+    }
+    
     @JsProperty(name="budget")
     public native BudgetService getBudget();
     

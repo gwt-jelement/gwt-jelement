@@ -16,6 +16,7 @@
  */
 package gwt.jelement.webaudio;
 
+import gwt.jelement.core.JsObject;
 import gwt.jelement.mediastream.MediaStream;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
@@ -23,7 +24,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
-public class MediaStreamAudioSourceOptions{
+public class MediaStreamAudioSourceOptions extends JsObject{
 
     @JsProperty(name="mediaStream")
     private MediaStream mediaStream;

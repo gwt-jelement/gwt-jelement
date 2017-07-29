@@ -16,16 +16,23 @@
  */
 package gwt.jelement.svg;
 
+import gwt.jelement.core.JsObject;
+import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="SVGZoomAndPan", isNative = true)
-public class SVGZoomAndPan{
+public class SVGZoomAndPan extends JsObject{
     public static short SVG_ZOOMANDPAN_UNKNOWN;
     public static short SVG_ZOOMANDPAN_DISABLE;
     public static short SVG_ZOOMANDPAN_MAGNIFY;
+    
+    @JsConstructor
+    public SVGZoomAndPan(){
+        super();
+    }
     
     @JsProperty(name="zoomAndPan")
     public native short getZoomAndPan();

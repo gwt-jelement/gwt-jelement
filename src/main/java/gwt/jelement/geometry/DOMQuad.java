@@ -16,12 +16,7 @@
  */
 package gwt.jelement.geometry;
 
-import gwt.jelement.geometry.DOMPoint;
-import gwt.jelement.geometry.DOMPointInit;
-import gwt.jelement.geometry.DOMQuad;
-import gwt.jelement.geometry.DOMQuadInit;
-import gwt.jelement.geometry.DOMRect;
-import gwt.jelement.geometry.DOMRectInit;
+import gwt.jelement.core.JsObject;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
@@ -30,25 +25,30 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="DOMQuad", isNative = true)
-public class DOMQuad{
+public class DOMQuad extends JsObject{
     @JsConstructor
     public DOMQuad(){
+        super();
     }
     
     @JsConstructor
     public DOMQuad(DOMPointInit p1){
+        super();
     }
     
     @JsConstructor
     public DOMQuad(DOMPointInit p1, DOMPointInit p2){
+        super();
     }
     
     @JsConstructor
     public DOMQuad(DOMPointInit p1, DOMPointInit p2, DOMPointInit p3){
+        super();
     }
     
     @JsConstructor
     public DOMQuad(DOMPointInit p1, DOMPointInit p2, DOMPointInit p3, DOMPointInit p4){
+        super();
     }
     
     @JsProperty(name="p1")

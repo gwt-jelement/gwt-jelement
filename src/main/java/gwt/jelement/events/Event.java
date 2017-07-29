@@ -16,8 +16,7 @@
  */
 package gwt.jelement.events;
 
-import gwt.jelement.events.EventInit;
-import gwt.jelement.events.EventTarget;
+import gwt.jelement.core.JsObject;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
@@ -26,7 +25,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="Event", isNative = true)
-public class Event{
+public class Event extends JsObject{
     public static short NONE;
     public static short CAPTURING_PHASE;
     public static short AT_TARGET;
@@ -34,10 +33,12 @@ public class Event{
     
     @JsConstructor
     public Event(String type){
+        super();
     }
     
     @JsConstructor
     public Event(String type, EventInit eventInitDict){
+        super();
     }
     
     @JsProperty(name="type")

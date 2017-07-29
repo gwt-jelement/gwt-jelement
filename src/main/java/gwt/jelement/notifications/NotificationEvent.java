@@ -16,8 +16,6 @@
  */
 package gwt.jelement.notifications;
 
-import gwt.jelement.notifications.Notification;
-import gwt.jelement.notifications.NotificationEventInit;
 import gwt.jelement.serviceworkers.ExtendableEvent;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsOverlay;

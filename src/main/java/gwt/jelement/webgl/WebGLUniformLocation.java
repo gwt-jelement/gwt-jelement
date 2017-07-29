@@ -16,10 +16,17 @@
  */
 package gwt.jelement.webgl;
 
+import gwt.jelement.core.JsObject;
+import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="WebGLUniformLocation", isNative = true)
-public class WebGLUniformLocation{
+public class WebGLUniformLocation extends JsObject{
+    @JsConstructor
+    public WebGLUniformLocation(){
+        super();
+    }
+    
 }

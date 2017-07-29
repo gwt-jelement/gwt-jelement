@@ -16,13 +16,20 @@
  */
 package gwt.jelement.workers;
 
+import gwt.jelement.core.JsObject;
+import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="WorkerLocation", isNative = true)
-public class WorkerLocation{
+public class WorkerLocation extends JsObject{
+    @JsConstructor
+    public WorkerLocation(){
+        super();
+    }
+    
     @JsProperty(name="href")
     public native String getHref();
     

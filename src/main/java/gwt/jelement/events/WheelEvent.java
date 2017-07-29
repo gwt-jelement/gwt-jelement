@@ -16,8 +16,6 @@
  */
 package gwt.jelement.events;
 
-import gwt.jelement.events.MouseEvent;
-import gwt.jelement.events.WheelEventInit;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;

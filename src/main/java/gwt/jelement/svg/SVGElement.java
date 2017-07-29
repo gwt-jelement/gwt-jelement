@@ -20,8 +20,6 @@ import gwt.jelement.css.CSSStyleDeclaration;
 import gwt.jelement.dom.DOMStringMap;
 import gwt.jelement.dom.Element;
 import gwt.jelement.events.EventHandlerNonNull;
-import gwt.jelement.svg.SVGElement;
-import gwt.jelement.svg.SVGSVGElement;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;

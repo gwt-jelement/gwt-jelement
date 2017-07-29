@@ -18,7 +18,6 @@ package gwt.jelement.mediarecorder;
 
 import gwt.jelement.events.EventHandlerNonNull;
 import gwt.jelement.events.EventTarget;
-import gwt.jelement.mediarecorder.RecordingState;
 import gwt.jelement.mediastream.MediaStream;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
@@ -51,7 +50,12 @@ public class MediaRecorder extends EventTarget{
     private String state;
     
     @JsConstructor
-    public MediaRecorder(){
+    public MediaRecorder(MediaStream stream){
+        super();
+    }
+    
+    @JsConstructor
+    public MediaRecorder(MediaStream stream, MediaRecorderOptions options){
         super();
     }
     

@@ -16,8 +16,6 @@
  */
 package gwt.jelement.css.cssom;
 
-import gwt.jelement.css.cssom.CSSResourceState;
-import gwt.jelement.css.cssom.CSSStyleValue;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;

@@ -16,7 +16,6 @@
  */
 package gwt.jelement.mediastream;
 
-import gwt.jelement.mediastream.MediaTrackConstraintSet;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;

@@ -16,7 +16,7 @@
  */
 package gwt.jelement.input;
 
-import gwt.jelement.input.InputDeviceCapabilitiesInit;
+import gwt.jelement.core.JsObject;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
@@ -24,13 +24,15 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="InputDeviceCapabilities", isNative = true)
-public class InputDeviceCapabilities{
+public class InputDeviceCapabilities extends JsObject{
     @JsConstructor
     public InputDeviceCapabilities(){
+        super();
     }
     
     @JsConstructor
     public InputDeviceCapabilities(InputDeviceCapabilitiesInit deviceInitDict){
+        super();
     }
     
     @JsProperty(name="firesTouchEvents")

@@ -16,13 +16,14 @@
  */
 package gwt.jelement.css;
 
+import gwt.jelement.core.JsObject;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
-public class FontFaceDescriptors{
+public class FontFaceDescriptors extends JsObject{
 
     @JsProperty(name="style")
     private String style;

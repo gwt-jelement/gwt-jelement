@@ -16,13 +16,14 @@
  */
 package gwt.jelement.serviceworkers;
 
+import gwt.jelement.core.JsObject;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
-public class RegistrationOptions{
+public class RegistrationOptions extends JsObject{
 
     @JsProperty(name="scope")
     private String scope;

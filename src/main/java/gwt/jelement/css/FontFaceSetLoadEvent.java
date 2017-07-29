@@ -16,8 +16,6 @@
  */
 package gwt.jelement.css;
 
-import gwt.jelement.css.FontFace;
-import gwt.jelement.css.FontFaceSetLoadEventInit;
 import gwt.jelement.events.Event;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsOverlay;

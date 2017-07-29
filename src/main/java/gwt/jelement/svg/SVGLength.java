@@ -16,6 +16,8 @@
  */
 package gwt.jelement.svg;
 
+import gwt.jelement.core.JsObject;
+import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
@@ -23,7 +25,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="SVGLength", isNative = true)
-public class SVGLength{
+public class SVGLength extends JsObject{
     public static short SVG_LENGTHTYPE_UNKNOWN;
     public static short SVG_LENGTHTYPE_NUMBER;
     public static short SVG_LENGTHTYPE_PERCENTAGE;
@@ -35,6 +37,11 @@ public class SVGLength{
     public static short SVG_LENGTHTYPE_IN;
     public static short SVG_LENGTHTYPE_PT;
     public static short SVG_LENGTHTYPE_PC;
+    
+    @JsConstructor
+    public SVGLength(){
+        super();
+    }
     
     @JsProperty(name="unitType")
     public native short getUnitType();

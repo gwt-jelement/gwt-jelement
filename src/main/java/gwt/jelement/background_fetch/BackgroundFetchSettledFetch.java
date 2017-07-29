@@ -16,7 +16,6 @@
  */
 package gwt.jelement.background_fetch;
 
-import gwt.jelement.background_fetch.BackgroundFetchFetch;
 import gwt.jelement.fetch.Request;
 import gwt.jelement.fetch.Response;
 import jsinterop.annotations.JsConstructor;

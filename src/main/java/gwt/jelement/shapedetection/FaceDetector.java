@@ -16,6 +16,7 @@
  */
 package gwt.jelement.shapedetection;
 
+import gwt.jelement.core.JsObject;
 import gwt.jelement.fileapi.Blob;
 import gwt.jelement.html.HTMLCanvasElement;
 import gwt.jelement.html.HTMLImageElement;
@@ -23,8 +24,6 @@ import gwt.jelement.html.HTMLVideoElement;
 import gwt.jelement.html.ImageData;
 import gwt.jelement.imagebitmap.ImageBitmap;
 import gwt.jelement.offscreencanvas.OffscreenCanvas;
-import gwt.jelement.shapedetection.DetectedFace;
-import gwt.jelement.shapedetection.FaceDetectorOptions;
 import gwt.jelement.svg.SVGImageElement;
 import elemental2.promise.Promise;
 import jsinterop.annotations.JsConstructor;
@@ -34,13 +33,15 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="FaceDetector", isNative = true)
-public class FaceDetector{
+public class FaceDetector extends JsObject{
     @JsConstructor
     public FaceDetector(){
+        super();
     }
     
     @JsConstructor
     public FaceDetector(FaceDetectorOptions faceDetectorOptions){
+        super();
     }
     
     @JsMethod(name = "detect")

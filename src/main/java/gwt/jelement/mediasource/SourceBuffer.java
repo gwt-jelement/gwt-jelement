@@ -23,8 +23,6 @@ import gwt.jelement.events.EventTarget;
 import gwt.jelement.html.TimeRanges;
 import gwt.jelement.html.track.AudioTrackList;
 import gwt.jelement.html.track.VideoTrackList;
-import gwt.jelement.mediasource.AppendMode;
-import gwt.jelement.mediasource.TrackDefaultList;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;

@@ -16,15 +16,14 @@
  */
 package gwt.jelement.credentialmanager;
 
-import gwt.jelement.credentialmanager.CredentialMediationRequirement;
-import gwt.jelement.credentialmanager.FederatedCredentialRequestOptions;
+import gwt.jelement.core.JsObject;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
-public class CredentialRequestOptions{
+public class CredentialRequestOptions extends JsObject{
 
     @JsProperty(name="federated")
     private FederatedCredentialRequestOptions federated;

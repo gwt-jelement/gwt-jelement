@@ -16,8 +16,6 @@
  */
 package gwt.jelement.html;
 
-import gwt.jelement.html.HTMLElement;
-import gwt.jelement.html.HTMLFormElement;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;

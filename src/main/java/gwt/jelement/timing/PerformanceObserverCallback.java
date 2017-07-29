@@ -17,8 +17,6 @@
 package gwt.jelement.timing;
 
 import jsinterop.annotations.JsFunction;
-import gwt.jelement.timing.PerformanceObserver;
-import gwt.jelement.timing.PerformanceObserverEntryList;
 
 @JsFunction
 public interface PerformanceObserverCallback{

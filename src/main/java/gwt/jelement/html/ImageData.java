@@ -17,9 +17,10 @@
 package gwt.jelement.html;
 
 import gwt.jelement.core.Float32Array;
+import gwt.jelement.core.JsObject;
 import gwt.jelement.core.Uint16Array;
 import gwt.jelement.core.Uint8ClampedArray;
-import gwt.jelement.html.ImageDataColorSettings;
+import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
@@ -28,7 +29,7 @@ import jsinterop.annotations.JsType;
 import jsinterop.base.Js;
 
 @JsType(namespace = JsPackage.GLOBAL, name="ImageData", isNative = true)
-public class ImageData{
+public class ImageData extends JsObject{
     @JsType(isNative = true, name = "?", namespace = JsPackage.GLOBAL)
     public interface ImageDataArray {
         @JsOverlay
@@ -80,6 +81,21 @@ public class ImageData{
     
     @JsProperty(name="dataUnion")
     private ImageDataArray dataUnion;
+    
+    @JsConstructor
+    public ImageData(double sw, double sh){
+        super();
+    }
+    
+    @JsConstructor
+    public ImageData(Uint8ClampedArray data, double sw){
+        super();
+    }
+    
+    @JsConstructor
+    public ImageData(Uint8ClampedArray data, double sw, double sh){
+        super();
+    }
     
     @JsProperty(name="width")
     public native double getWidth();

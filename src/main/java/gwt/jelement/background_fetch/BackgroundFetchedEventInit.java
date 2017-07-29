@@ -16,8 +16,6 @@
  */
 package gwt.jelement.background_fetch;
 
-import gwt.jelement.background_fetch.BackgroundFetchEventInit;
-import gwt.jelement.background_fetch.BackgroundFetchSettledFetch;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;

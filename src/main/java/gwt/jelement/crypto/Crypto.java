@@ -17,7 +17,8 @@
 package gwt.jelement.crypto;
 
 import gwt.jelement.core.ArrayBufferView;
-import gwt.jelement.crypto.SubtleCrypto;
+import gwt.jelement.core.JsObject;
+import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
@@ -25,7 +26,12 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="Crypto", isNative = true)
-public class Crypto{
+public class Crypto extends JsObject{
+    @JsConstructor
+    public Crypto(){
+        super();
+    }
+    
     @JsProperty(name="subtle")
     public native SubtleCrypto getSubtle();
     

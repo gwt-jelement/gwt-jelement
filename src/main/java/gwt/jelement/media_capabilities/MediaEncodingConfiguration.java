@@ -16,8 +16,6 @@
  */
 package gwt.jelement.media_capabilities;
 
-import gwt.jelement.media_capabilities.MediaConfiguration;
-import gwt.jelement.media_capabilities.MediaEncodingType;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;

@@ -16,6 +16,7 @@
  */
 package gwt.jelement.shapedetection;
 
+import gwt.jelement.core.JsObject;
 import gwt.jelement.geometry.DOMRect;
 import gwt.jelement.imagecapture.Point2D;
 import jsinterop.annotations.JsConstructor;
@@ -25,9 +26,10 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="DetectedBarcode", isNative = true)
-public class DetectedBarcode{
+public class DetectedBarcode extends JsObject{
     @JsConstructor
     public DetectedBarcode(){
+        super();
     }
     
     @JsProperty(name="rawValue")

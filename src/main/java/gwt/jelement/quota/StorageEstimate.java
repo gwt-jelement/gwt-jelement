@@ -16,13 +16,14 @@
  */
 package gwt.jelement.quota;
 
+import gwt.jelement.core.JsObject;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
-public class StorageEstimate{
+public class StorageEstimate extends JsObject{
 
     @JsProperty(name="usage")
     private double usage;

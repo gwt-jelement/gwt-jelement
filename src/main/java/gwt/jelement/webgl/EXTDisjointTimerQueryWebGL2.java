@@ -16,18 +16,24 @@
  */
 package gwt.jelement.webgl;
 
-import gwt.jelement.webgl.WebGLQuery;
+import gwt.jelement.core.JsObject;
+import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="EXTDisjointTimerQueryWebGL2", isNative = true)
-public class EXTDisjointTimerQueryWebGL2{
+public class EXTDisjointTimerQueryWebGL2 extends JsObject{
     public static double QUERY_COUNTER_BITS_EXT;
     public static double TIME_ELAPSED_EXT;
     public static double TIMESTAMP_EXT;
     public static double GPU_DISJOINT_EXT;
+    
+    @JsConstructor
+    public EXTDisjointTimerQueryWebGL2(){
+        super();
+    }
     
     @JsMethod(name = "queryCounterEXT")
     public native void queryCounterEXT(WebGLQuery query, double target);

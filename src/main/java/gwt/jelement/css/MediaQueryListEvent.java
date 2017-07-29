@@ -16,7 +16,6 @@
  */
 package gwt.jelement.css;
 
-import gwt.jelement.css.MediaQueryListEventInit;
 import gwt.jelement.events.Event;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsOverlay;

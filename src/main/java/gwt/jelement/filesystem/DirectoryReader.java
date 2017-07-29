@@ -16,15 +16,20 @@
  */
 package gwt.jelement.filesystem;
 
-import gwt.jelement.filesystem.EntriesCallback;
-import gwt.jelement.filesystem.ErrorCallback;
+import gwt.jelement.core.JsObject;
+import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="DirectoryReader", isNative = true)
-public class DirectoryReader{
+public class DirectoryReader extends JsObject{
+    @JsConstructor
+    public DirectoryReader(){
+        super();
+    }
+    
     @JsMethod(name = "readEntries")
     public native void readEntries(EntriesCallback successCallback);
     

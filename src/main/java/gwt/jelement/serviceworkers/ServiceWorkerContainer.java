@@ -18,9 +18,6 @@ package gwt.jelement.serviceworkers;
 
 import gwt.jelement.events.EventHandlerNonNull;
 import gwt.jelement.events.EventTarget;
-import gwt.jelement.serviceworkers.RegistrationOptions;
-import gwt.jelement.serviceworkers.ServiceWorker;
-import gwt.jelement.serviceworkers.ServiceWorkerRegistration;
 import elemental2.promise.Promise;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;

@@ -16,14 +16,17 @@
  */
 package gwt.jelement.gamepad;
 
+import gwt.jelement.core.JsObject;
+import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
-import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="GamepadList", isNative = true)
-public class GamepadList{
-    @JsProperty(name="length")
-    public native double getLength();
+public class GamepadList extends JsObject{
+    @JsConstructor
+    public GamepadList(){
+        super();
+    }
     
 }

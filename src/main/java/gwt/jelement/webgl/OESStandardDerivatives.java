@@ -16,12 +16,19 @@
  */
 package gwt.jelement.webgl;
 
+import gwt.jelement.core.JsObject;
+import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="OESStandardDerivatives", isNative = true)
-public class OESStandardDerivatives{
+public class OESStandardDerivatives extends JsObject{
     public static double FRAGMENT_SHADER_DERIVATIVE_HINT_OES;
+    
+    @JsConstructor
+    public OESStandardDerivatives(){
+        super();
+    }
     
 }

@@ -17,7 +17,6 @@
 package gwt.jelement.events;
 
 import gwt.jelement.dom.Touch;
-import gwt.jelement.events.EventModifierInit;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;

@@ -16,8 +16,7 @@
  */
 package gwt.jelement.webusb;
 
-import gwt.jelement.webusb.USBEndpoint;
-import gwt.jelement.webusb.USBInterface;
+import gwt.jelement.core.JsObject;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
@@ -25,9 +24,10 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="USBAlternateInterface", isNative = true)
-public class USBAlternateInterface{
+public class USBAlternateInterface extends JsObject{
     @JsConstructor
     public USBAlternateInterface(USBInterface deviceInterface, byte alternateSetting){
+        super();
     }
     
     @JsProperty(name="alternateSetting")

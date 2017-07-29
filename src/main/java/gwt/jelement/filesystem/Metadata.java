@@ -17,13 +17,20 @@
 package gwt.jelement.filesystem;
 
 import gwt.jelement.core.Date;
+import gwt.jelement.core.JsObject;
+import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="Metadata", isNative = true)
-public class Metadata{
+public class Metadata extends JsObject{
+    @JsConstructor
+    public Metadata(){
+        super();
+    }
+    
     @JsProperty(name="modificationTime")
     public native Date getModificationTime();
     

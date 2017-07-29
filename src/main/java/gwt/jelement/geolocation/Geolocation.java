@@ -16,16 +16,20 @@
  */
 package gwt.jelement.geolocation;
 
-import gwt.jelement.geolocation.PositionCallback;
-import gwt.jelement.geolocation.PositionErrorCallback;
-import gwt.jelement.geolocation.PositionOptions;
+import gwt.jelement.core.JsObject;
+import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="Geolocation", isNative = true)
-public class Geolocation{
+public class Geolocation extends JsObject{
+    @JsConstructor
+    public Geolocation(){
+        super();
+    }
+    
     @JsMethod(name = "clearWatch")
     public native void clearWatch(double watchID);
     

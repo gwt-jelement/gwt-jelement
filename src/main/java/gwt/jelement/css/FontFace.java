@@ -16,9 +16,11 @@
  */
 package gwt.jelement.css;
 
-import gwt.jelement.css.FontFace;
-import gwt.jelement.css.FontFaceLoadStatus;
+import gwt.jelement.core.ArrayBuffer;
+import gwt.jelement.core.ArrayBufferView;
+import gwt.jelement.core.JsObject;
 import elemental2.promise.Promise;
+import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
@@ -26,9 +28,39 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="FontFace", isNative = true)
-public class FontFace{
+public class FontFace extends JsObject{
     @JsProperty(name="status")
     private String status;
+    
+    @JsConstructor
+    public FontFace(String family, String source){
+        super();
+    }
+    
+    @JsConstructor
+    public FontFace(String family, String source, FontFaceDescriptors descriptors){
+        super();
+    }
+    
+    @JsConstructor
+    public FontFace(String family, ArrayBuffer source){
+        super();
+    }
+    
+    @JsConstructor
+    public FontFace(String family, ArrayBuffer source, FontFaceDescriptors descriptors){
+        super();
+    }
+    
+    @JsConstructor
+    public FontFace(String family, ArrayBufferView source){
+        super();
+    }
+    
+    @JsConstructor
+    public FontFace(String family, ArrayBufferView source, FontFaceDescriptors descriptors){
+        super();
+    }
     
     @JsProperty(name="family")
     public native String getFamily();

@@ -17,7 +17,6 @@
 package gwt.jelement.indexeddb;
 
 import gwt.jelement.events.EventHandlerNonNull;
-import gwt.jelement.indexeddb.IDBRequest;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;

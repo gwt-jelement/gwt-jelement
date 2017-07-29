@@ -16,8 +16,6 @@
  */
 package gwt.jelement.push_messaging;
 
-import gwt.jelement.push_messaging.PushEventInit;
-import gwt.jelement.push_messaging.PushMessageData;
 import gwt.jelement.serviceworkers.ExtendableEvent;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsOverlay;

@@ -16,9 +16,6 @@
  */
 package gwt.jelement.svg;
 
-import gwt.jelement.svg.SVGAnimatedLengthList;
-import gwt.jelement.svg.SVGAnimatedNumberList;
-import gwt.jelement.svg.SVGTextContentElement;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;

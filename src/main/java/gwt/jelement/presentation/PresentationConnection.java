@@ -21,7 +21,6 @@ import gwt.jelement.core.ArrayBufferView;
 import gwt.jelement.events.EventHandlerNonNull;
 import gwt.jelement.events.EventTarget;
 import gwt.jelement.fileapi.Blob;
-import gwt.jelement.presentation.PresentationConnectionState;
 import gwt.jelement.websockets.BinaryType;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;

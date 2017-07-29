@@ -17,8 +17,6 @@
 package gwt.jelement.events;
 
 import gwt.jelement.clipboard.DataTransfer;
-import gwt.jelement.events.ClipboardEventInit;
-import gwt.jelement.events.Event;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;

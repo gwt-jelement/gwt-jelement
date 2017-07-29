@@ -16,6 +16,7 @@
  */
 package gwt.jelement.vr;
 
+import gwt.jelement.core.JsObject;
 import gwt.jelement.html.HTMLCanvasElement;
 import gwt.jelement.offscreencanvas.OffscreenCanvas;
 import gwt.jelement.webgl.WebGL2RenderingContext;
@@ -26,7 +27,7 @@ import jsinterop.annotations.JsType;
 import jsinterop.base.Js;
 
 @JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
-public class VRLayer{
+public class VRLayer extends JsObject{
 
     @JsProperty(name="source")
     private WebGL2RenderingContext.VRSource source;

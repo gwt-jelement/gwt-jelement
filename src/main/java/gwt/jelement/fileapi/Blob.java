@@ -16,7 +16,10 @@
  */
 package gwt.jelement.fileapi;
 
-import gwt.jelement.fileapi.Blob;
+import gwt.jelement.core.ArrayBuffer;
+import gwt.jelement.core.ArrayBufferView;
+import gwt.jelement.core.JsObject;
+import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
@@ -24,7 +27,52 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="Blob", isNative = true)
-public class Blob{
+public class Blob extends JsObject{
+    @JsConstructor
+    public Blob(){
+        super();
+    }
+    
+    @JsConstructor
+    public Blob(ArrayBuffer[] blobParts){
+        super();
+    }
+    
+    @JsConstructor
+    public Blob(ArrayBuffer[] blobParts, BlobPropertyBag options){
+        super();
+    }
+    
+    @JsConstructor
+    public Blob(ArrayBufferView[] blobParts){
+        super();
+    }
+    
+    @JsConstructor
+    public Blob(ArrayBufferView[] blobParts, BlobPropertyBag options){
+        super();
+    }
+    
+    @JsConstructor
+    public Blob(Blob[] blobParts){
+        super();
+    }
+    
+    @JsConstructor
+    public Blob(Blob[] blobParts, BlobPropertyBag options){
+        super();
+    }
+    
+    @JsConstructor
+    public Blob(String[] blobParts){
+        super();
+    }
+    
+    @JsConstructor
+    public Blob(String[] blobParts, BlobPropertyBag options){
+        super();
+    }
+    
     @JsProperty(name="size")
     public native double getSize();
     

@@ -16,14 +16,20 @@
  */
 package gwt.jelement.geolocation;
 
-import gwt.jelement.geolocation.Coordinates;
+import gwt.jelement.core.JsObject;
+import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="Position", isNative = true)
-public class Position{
+public class Position extends JsObject{
+    @JsConstructor
+    public Position(){
+        super();
+    }
+    
     @JsProperty(name="coords")
     public native Coordinates getCoords();
     

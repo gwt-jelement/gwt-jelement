@@ -16,8 +16,7 @@
  */
 package gwt.jelement.geometry;
 
-import gwt.jelement.geometry.DOMRectInit;
-import gwt.jelement.geometry.DOMRectReadOnly;
+import gwt.jelement.core.JsObject;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
@@ -26,25 +25,30 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="DOMRectReadOnly", isNative = true)
-public class DOMRectReadOnly{
+public class DOMRectReadOnly extends JsObject{
     @JsConstructor
     public DOMRectReadOnly(){
+        super();
     }
     
     @JsConstructor
     public DOMRectReadOnly(double x){
+        super();
     }
     
     @JsConstructor
     public DOMRectReadOnly(double x, double y){
+        super();
     }
     
     @JsConstructor
     public DOMRectReadOnly(double x, double y, double width){
+        super();
     }
     
     @JsConstructor
     public DOMRectReadOnly(double x, double y, double width, double height){
+        super();
     }
     
     @JsProperty(name="x")

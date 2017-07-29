@@ -17,7 +17,6 @@
 package gwt.jelement.quota;
 
 import jsinterop.annotations.JsFunction;
-import gwt.jelement.quota.DOMError;
 
 @JsFunction
 public interface StorageErrorCallback{

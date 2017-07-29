@@ -16,7 +16,6 @@
  */
 package gwt.jelement.html;
 
-import gwt.jelement.html.HTMLElement;
 import gwt.jelement.html.track.TextTrack;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsOverlay;

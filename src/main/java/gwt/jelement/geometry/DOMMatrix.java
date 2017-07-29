@@ -18,9 +18,6 @@ package gwt.jelement.geometry;
 
 import gwt.jelement.core.Float32Array;
 import gwt.jelement.core.Float64Array;
-import gwt.jelement.geometry.DOMMatrix;
-import gwt.jelement.geometry.DOMMatrixInit;
-import gwt.jelement.geometry.DOMMatrixReadOnly;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;

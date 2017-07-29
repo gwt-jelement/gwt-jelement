@@ -16,7 +16,8 @@
  */
 package gwt.jelement.indexeddb;
 
-import gwt.jelement.indexeddb.IDBKeyRange;
+import gwt.jelement.core.JsObject;
+import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
@@ -24,7 +25,12 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="IDBKeyRange", isNative = true)
-public class IDBKeyRange{
+public class IDBKeyRange extends JsObject{
+    @JsConstructor
+    public IDBKeyRange(){
+        super();
+    }
+    
     @JsProperty(name="lower")
     public native Object getLower();
     

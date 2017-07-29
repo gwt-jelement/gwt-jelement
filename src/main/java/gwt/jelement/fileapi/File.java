@@ -19,8 +19,6 @@ package gwt.jelement.fileapi;
 import gwt.jelement.core.ArrayBuffer;
 import gwt.jelement.core.ArrayBufferView;
 import gwt.jelement.core.Date;
-import gwt.jelement.fileapi.Blob;
-import gwt.jelement.fileapi.FilePropertyBag;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;

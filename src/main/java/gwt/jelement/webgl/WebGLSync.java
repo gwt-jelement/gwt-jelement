@@ -16,10 +16,17 @@
  */
 package gwt.jelement.webgl;
 
+import gwt.jelement.core.JsObject;
+import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="WebGLSync", isNative = true)
-public class WebGLSync{
+public class WebGLSync extends JsObject{
+    @JsConstructor
+    public WebGLSync(){
+        super();
+    }
+    
 }

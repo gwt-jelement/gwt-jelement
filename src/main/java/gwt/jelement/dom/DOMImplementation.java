@@ -16,16 +16,21 @@
  */
 package gwt.jelement.dom;
 
-import gwt.jelement.dom.DocumentType;
-import gwt.jelement.dom.XMLDocument;
+import gwt.jelement.core.JsObject;
 import gwt.jelement.html.HTMLDocument;
+import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="DOMImplementation", isNative = true)
-public class DOMImplementation{
+public class DOMImplementation extends JsObject{
+    @JsConstructor
+    public DOMImplementation(){
+        super();
+    }
+    
     @JsMethod(name = "createDocument")
     public native XMLDocument createDocument(String namespaceURI, String qualifiedName);
     

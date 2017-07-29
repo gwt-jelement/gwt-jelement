@@ -16,10 +16,6 @@
  */
 package gwt.jelement.bluetooth;
 
-import gwt.jelement.bluetooth.BluetoothCharacteristicProperties;
-import gwt.jelement.bluetooth.BluetoothRemoteGATTCharacteristic;
-import gwt.jelement.bluetooth.BluetoothRemoteGATTDescriptor;
-import gwt.jelement.bluetooth.BluetoothRemoteGATTService;
 import gwt.jelement.core.ArrayBuffer;
 import gwt.jelement.core.ArrayBufferView;
 import gwt.jelement.core.DataView;

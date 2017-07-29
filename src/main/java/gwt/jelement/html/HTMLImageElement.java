@@ -16,7 +16,6 @@
  */
 package gwt.jelement.html;
 
-import gwt.jelement.html.HTMLElement;
 import elemental2.promise.Promise;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;

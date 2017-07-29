@@ -17,7 +17,6 @@
 package gwt.jelement.indexeddb;
 
 import gwt.jelement.events.EventInit;
-import gwt.jelement.indexeddb.IDBDataLossAmount;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;

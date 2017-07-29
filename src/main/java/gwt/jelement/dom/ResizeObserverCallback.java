@@ -17,8 +17,6 @@
 package gwt.jelement.dom;
 
 import jsinterop.annotations.JsFunction;
-import gwt.jelement.dom.ResizeObserver;
-import gwt.jelement.dom.ResizeObserverEntry;
 
 @JsFunction
 public interface ResizeObserverCallback{

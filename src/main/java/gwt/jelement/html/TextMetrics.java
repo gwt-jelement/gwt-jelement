@@ -16,13 +16,20 @@
  */
 package gwt.jelement.html;
 
+import gwt.jelement.core.JsObject;
+import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="TextMetrics", isNative = true)
-public class TextMetrics{
+public class TextMetrics extends JsObject{
+    @JsConstructor
+    public TextMetrics(){
+        super();
+    }
+    
     @JsProperty(name="width")
     public native float getWidth();
     

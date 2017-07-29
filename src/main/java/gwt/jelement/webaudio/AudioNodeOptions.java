@@ -16,15 +16,14 @@
  */
 package gwt.jelement.webaudio;
 
-import gwt.jelement.webaudio.ChannelCountMode;
-import gwt.jelement.webaudio.ChannelInterpretation;
+import gwt.jelement.core.JsObject;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
-public class AudioNodeOptions{
+public class AudioNodeOptions extends JsObject{
 
     @JsProperty(name="channelCount")
     private double channelCount;

@@ -16,9 +16,9 @@
  */
 package gwt.jelement.bluetooth;
 
-import gwt.jelement.bluetooth.BluetoothDevice;
-import gwt.jelement.bluetooth.BluetoothRemoteGATTCharacteristic;
+import gwt.jelement.core.JsObject;
 import elemental2.promise.Promise;
+import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
@@ -26,7 +26,12 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="BluetoothRemoteGATTService", isNative = true)
-public class BluetoothRemoteGATTService{
+public class BluetoothRemoteGATTService extends JsObject{
+    @JsConstructor
+    public BluetoothRemoteGATTService(){
+        super();
+    }
+    
     @JsProperty(name="device")
     public native BluetoothDevice getDevice();
     

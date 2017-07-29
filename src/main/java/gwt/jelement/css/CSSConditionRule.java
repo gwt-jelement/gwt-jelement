@@ -16,7 +16,6 @@
  */
 package gwt.jelement.css;
 
-import gwt.jelement.css.CSSGroupingRule;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;

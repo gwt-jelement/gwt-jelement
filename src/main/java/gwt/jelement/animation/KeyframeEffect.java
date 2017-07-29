@@ -16,8 +16,6 @@
  */
 package gwt.jelement.animation;
 
-import gwt.jelement.animation.KeyframeEffectOptions;
-import gwt.jelement.animation.KeyframeEffectReadOnly;
 import gwt.jelement.dom.Element;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsOverlay;

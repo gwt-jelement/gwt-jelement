@@ -16,16 +16,20 @@
  */
 package gwt.jelement.indexeddb;
 
-import gwt.jelement.indexeddb.IDBDatabase;
-import gwt.jelement.indexeddb.IDBObserverInit;
-import gwt.jelement.indexeddb.IDBTransaction;
+import gwt.jelement.core.JsObject;
+import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="IDBObserver", isNative = true)
-public class IDBObserver{
+public class IDBObserver extends JsObject{
+    @JsConstructor
+    public IDBObserver(){
+        super();
+    }
+    
     @JsMethod(name = "observe")
     public native void observe(IDBDatabase db, IDBTransaction tx, IDBObserverInit options);
     

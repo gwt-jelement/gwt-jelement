@@ -17,11 +17,6 @@
 package gwt.jelement.webaudio;
 
 import gwt.jelement.events.EventTarget;
-import gwt.jelement.webaudio.AudioNode;
-import gwt.jelement.webaudio.AudioParam;
-import gwt.jelement.webaudio.BaseAudioContext;
-import gwt.jelement.webaudio.ChannelCountMode;
-import gwt.jelement.webaudio.ChannelInterpretation;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;

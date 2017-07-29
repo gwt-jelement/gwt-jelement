@@ -16,14 +16,17 @@
  */
 package gwt.jelement.webdatabase;
 
+import gwt.jelement.core.JsObject;
+import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
-import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="SQLResultSetRowList", isNative = true)
-public class SQLResultSetRowList{
-    @JsProperty(name="length")
-    public native double getLength();
+public class SQLResultSetRowList extends JsObject{
+    @JsConstructor
+    public SQLResultSetRowList(){
+        super();
+    }
     
 }

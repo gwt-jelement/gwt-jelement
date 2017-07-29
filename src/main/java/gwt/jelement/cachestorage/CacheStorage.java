@@ -16,25 +16,30 @@
  */
 package gwt.jelement.cachestorage;
 
-import gwt.jelement.cachestorage.Cache;
-import gwt.jelement.cachestorage.CacheQueryOptions;
+import gwt.jelement.core.JsObject;
 import gwt.jelement.fetch.Request;
 import elemental2.promise.Promise;
+import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="CacheStorage", isNative = true)
-public class CacheStorage{
+public class CacheStorage extends JsObject{
+    @JsConstructor
+    public CacheStorage(){
+        super();
+    }
+    
     @JsMethod(name = "delete")
-    public native Promise<Boolean> delete(String cacheName);
+    public native Promise<Boolean> delete_(String cacheName);
     
     @JsMethod(name = "has")
-    public native Promise<Boolean> has(String cacheName);
+    public native Promise<Boolean> has_(String cacheName);
     
     @JsMethod(name = "keys")
-    public native Promise<String[]> keys();
+    public native Promise<String[]> keys_();
     
     @JsMethod(name = "match")
     public native Promise<Object> match(Request request);

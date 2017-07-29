@@ -16,14 +16,21 @@
  */
 package gwt.jelement.svg;
 
+import gwt.jelement.core.JsObject;
+import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="SVGUnitTypes", isNative = true)
-public class SVGUnitTypes{
+public class SVGUnitTypes extends JsObject{
     public static short SVG_UNIT_TYPE_UNKNOWN;
     public static short SVG_UNIT_TYPE_USERSPACEONUSE;
     public static short SVG_UNIT_TYPE_OBJECTBOUNDINGBOX;
+    
+    @JsConstructor
+    public SVGUnitTypes(){
+        super();
+    }
     
 }

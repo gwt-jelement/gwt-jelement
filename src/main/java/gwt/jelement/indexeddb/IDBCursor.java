@@ -16,8 +16,8 @@
  */
 package gwt.jelement.indexeddb;
 
-import gwt.jelement.indexeddb.IDBCursorDirection;
-import gwt.jelement.indexeddb.IDBRequest;
+import gwt.jelement.core.JsObject;
+import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
@@ -25,9 +25,14 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="IDBCursor", isNative = true)
-public class IDBCursor{
+public class IDBCursor extends JsObject{
     @JsProperty(name="direction")
     private String direction;
+    
+    @JsConstructor
+    public IDBCursor(){
+        super();
+    }
     
     @JsProperty(name="source")
     public native Object getSource();

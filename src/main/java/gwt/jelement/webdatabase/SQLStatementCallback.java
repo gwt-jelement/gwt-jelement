@@ -17,8 +17,6 @@
 package gwt.jelement.webdatabase;
 
 import jsinterop.annotations.JsFunction;
-import gwt.jelement.webdatabase.SQLResultSet;
-import gwt.jelement.webdatabase.SQLTransaction;
 
 @JsFunction
 public interface SQLStatementCallback{

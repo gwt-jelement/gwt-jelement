@@ -16,13 +16,20 @@
  */
 package gwt.jelement.svg;
 
+import gwt.jelement.core.JsObject;
+import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="SVGAnimatedEnumeration", isNative = true)
-public class SVGAnimatedEnumeration{
+public class SVGAnimatedEnumeration extends JsObject{
+    @JsConstructor
+    public SVGAnimatedEnumeration(){
+        super();
+    }
+    
     @JsProperty(name="baseVal")
     public native short getBaseVal();
     

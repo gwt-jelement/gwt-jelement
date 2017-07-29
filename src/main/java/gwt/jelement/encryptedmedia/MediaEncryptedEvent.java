@@ -17,7 +17,6 @@
 package gwt.jelement.encryptedmedia;
 
 import gwt.jelement.core.ArrayBuffer;
-import gwt.jelement.encryptedmedia.MediaEncryptedEventInit;
 import gwt.jelement.events.Event;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsOverlay;

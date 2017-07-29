@@ -16,9 +16,6 @@
  */
 package gwt.jelement.events;
 
-import gwt.jelement.events.MouseEvent;
-import gwt.jelement.events.PointerEvent;
-import gwt.jelement.events.PointerEventInit;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;

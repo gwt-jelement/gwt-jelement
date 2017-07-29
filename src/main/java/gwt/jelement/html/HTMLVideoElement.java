@@ -16,7 +16,6 @@
  */
 package gwt.jelement.html;
 
-import gwt.jelement.html.HTMLMediaElement;
 import gwt.jelement.mediasource.VideoPlaybackQuality;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;

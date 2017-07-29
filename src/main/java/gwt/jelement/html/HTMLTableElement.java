@@ -16,11 +16,6 @@
  */
 package gwt.jelement.html;
 
-import gwt.jelement.html.HTMLCollection;
-import gwt.jelement.html.HTMLElement;
-import gwt.jelement.html.HTMLTableCaptionElement;
-import gwt.jelement.html.HTMLTableRowElement;
-import gwt.jelement.html.HTMLTableSectionElement;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;

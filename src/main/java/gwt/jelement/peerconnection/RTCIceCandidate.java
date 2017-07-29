@@ -16,7 +16,7 @@
  */
 package gwt.jelement.peerconnection;
 
-import gwt.jelement.peerconnection.RTCIceCandidateInit;
+import gwt.jelement.core.JsObject;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
@@ -24,9 +24,10 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="RTCIceCandidate", isNative = true)
-public class RTCIceCandidate{
+public class RTCIceCandidate extends JsObject{
     @JsConstructor
     public RTCIceCandidate(RTCIceCandidateInit candidateInitDict){
+        super();
     }
     
     @JsProperty(name="candidate")

@@ -16,10 +16,9 @@
  */
 package gwt.jelement.dom;
 
-import gwt.jelement.dom.Element;
-import gwt.jelement.dom.Node;
-import gwt.jelement.dom.NodeList;
+import gwt.jelement.core.JsObject;
 import gwt.jelement.html.HTMLCollection;
+import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
@@ -27,7 +26,12 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="ParentNode", isNative = true)
-public class ParentNode{
+public class ParentNode extends JsObject{
+    @JsConstructor
+    public ParentNode(){
+        super();
+    }
+    
     @JsProperty(name="children")
     public native HTMLCollection getChildren();
     
@@ -53,7 +57,7 @@ public class ParentNode{
     public native void prepend(String... nodes);
     
     @JsMethod(name = "querySelector")
-    public native <T extends Element> T querySelector(String selectors);
+    public native <T> T querySelector(String selectors);
     
     @JsMethod(name = "querySelectorAll")
     public native NodeList querySelectorAll(String selectors);

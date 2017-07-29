@@ -17,7 +17,6 @@
 package gwt.jelement.webdatabase;
 
 import jsinterop.annotations.JsFunction;
-import gwt.jelement.webdatabase.SQLError;
 
 @JsFunction
 public interface SQLTransactionErrorCallback{

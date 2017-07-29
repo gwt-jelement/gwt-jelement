@@ -16,13 +16,20 @@
  */
 package gwt.jelement.dom;
 
+import gwt.jelement.core.JsObject;
+import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="NoncedElement", isNative = true)
-public class NoncedElement{
+public class NoncedElement extends JsObject{
+    @JsConstructor
+    public NoncedElement(){
+        super();
+    }
+    
     @JsProperty(name="nonce")
     public native String getNonce();
     

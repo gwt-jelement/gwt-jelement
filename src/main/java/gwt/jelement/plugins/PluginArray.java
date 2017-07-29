@@ -16,17 +16,19 @@
  */
 package gwt.jelement.plugins;
 
-import gwt.jelement.plugins.Plugin;
+import gwt.jelement.core.JsObject;
+import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
-import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="PluginArray", isNative = true)
-public class PluginArray{
-    @JsProperty(name="length")
-    public native double getLength();
+public class PluginArray extends JsObject{
+    @JsConstructor
+    public PluginArray(){
+        super();
+    }
     
     @JsMethod(name = "namedItem")
     public native Plugin namedItem(String name);

@@ -16,7 +16,8 @@
  */
 package gwt.jelement.animation;
 
-import gwt.jelement.animation.PlaybackDirection;
+import gwt.jelement.core.JsObject;
+import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -24,7 +25,7 @@ import jsinterop.annotations.JsType;
 import jsinterop.base.Js;
 
 @JsType(namespace = JsPackage.GLOBAL, name="AnimationEffectTimingReadOnly", isNative = true)
-public class AnimationEffectTimingReadOnly{
+public class AnimationEffectTimingReadOnly extends JsObject{
     @JsType(isNative = true, name = "?", namespace = JsPackage.GLOBAL)
     public interface DurationUnion {
         @JsOverlay
@@ -64,6 +65,11 @@ public class AnimationEffectTimingReadOnly{
     
     @JsProperty(name="direction")
     private String direction;
+    
+    @JsConstructor
+    public AnimationEffectTimingReadOnly(){
+        super();
+    }
     
     @JsProperty(name="delay")
     public native double getDelay();

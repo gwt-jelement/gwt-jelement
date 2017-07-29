@@ -17,8 +17,6 @@
 package gwt.jelement.mediastream;
 
 import gwt.jelement.events.Event;
-import gwt.jelement.mediastream.MediaStream;
-import gwt.jelement.mediastream.MediaStreamEventInit;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;

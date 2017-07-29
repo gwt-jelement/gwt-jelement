@@ -16,16 +16,22 @@
  */
 package gwt.jelement.indexeddb;
 
-import gwt.jelement.indexeddb.IDBObservationType;
+import gwt.jelement.core.JsObject;
+import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="IDBObservation", isNative = true)
-public class IDBObservation{
+public class IDBObservation extends JsObject{
     @JsProperty(name="type")
     private String type;
+    
+    @JsConstructor
+    public IDBObservation(){
+        super();
+    }
     
     @JsProperty(name="key")
     public native Object getKey();

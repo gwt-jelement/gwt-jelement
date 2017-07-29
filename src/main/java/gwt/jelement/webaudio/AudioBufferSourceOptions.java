@@ -16,14 +16,14 @@
  */
 package gwt.jelement.webaudio;
 
-import gwt.jelement.webaudio.AudioBuffer;
+import gwt.jelement.core.JsObject;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
-public class AudioBufferSourceOptions{
+public class AudioBufferSourceOptions extends JsObject{
 
     @JsProperty(name="buffer")
     private AudioBuffer buffer;

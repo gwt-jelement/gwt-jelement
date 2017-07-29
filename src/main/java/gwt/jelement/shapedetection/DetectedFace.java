@@ -16,8 +16,8 @@
  */
 package gwt.jelement.shapedetection;
 
+import gwt.jelement.core.JsObject;
 import gwt.jelement.geometry.DOMRect;
-import gwt.jelement.shapedetection.Landmark;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
@@ -25,9 +25,10 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="DetectedFace", isNative = true)
-public class DetectedFace{
+public class DetectedFace extends JsObject{
     @JsConstructor
     public DetectedFace(){
+        super();
     }
     
     @JsProperty(name="boundingBox")

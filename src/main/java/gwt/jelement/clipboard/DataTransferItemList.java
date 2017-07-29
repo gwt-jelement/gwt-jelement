@@ -16,18 +16,20 @@
  */
 package gwt.jelement.clipboard;
 
-import gwt.jelement.clipboard.DataTransferItem;
+import gwt.jelement.core.JsObject;
 import gwt.jelement.fileapi.File;
+import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
-import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="DataTransferItemList", isNative = true)
-public class DataTransferItemList{
-    @JsProperty(name="length")
-    public native double getLength();
+public class DataTransferItemList extends JsObject{
+    @JsConstructor
+    public DataTransferItemList(){
+        super();
+    }
     
     @JsMethod(name = "add")
     public native DataTransferItem add(File file);

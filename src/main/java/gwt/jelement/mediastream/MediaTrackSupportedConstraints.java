@@ -16,13 +16,14 @@
  */
 package gwt.jelement.mediastream;
 
+import gwt.jelement.core.JsObject;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
-public class MediaTrackSupportedConstraints{
+public class MediaTrackSupportedConstraints extends JsObject{
 
     @JsProperty(name="width")
     private boolean width;

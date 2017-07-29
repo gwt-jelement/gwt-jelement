@@ -16,13 +16,15 @@
  */
 package gwt.jelement.webgl;
 
+import gwt.jelement.core.JsObject;
+import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="WebGLDrawBuffers", isNative = true)
-public class WebGLDrawBuffers{
+public class WebGLDrawBuffers extends JsObject{
     public static double COLOR_ATTACHMENT0_WEBGL;
     public static double COLOR_ATTACHMENT1_WEBGL;
     public static double COLOR_ATTACHMENT2_WEBGL;
@@ -57,6 +59,11 @@ public class WebGLDrawBuffers{
     public static double DRAW_BUFFER15_WEBGL;
     public static double MAX_COLOR_ATTACHMENTS_WEBGL;
     public static double MAX_DRAW_BUFFERS_WEBGL;
+    
+    @JsConstructor
+    public WebGLDrawBuffers(){
+        super();
+    }
     
     @JsMethod(name = "drawBuffersWEBGL")
     public native void drawBuffersWEBGL(double[] buffers);

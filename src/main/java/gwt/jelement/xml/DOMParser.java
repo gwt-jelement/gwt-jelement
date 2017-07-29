@@ -16,8 +16,9 @@
  */
 package gwt.jelement.xml;
 
+import gwt.jelement.core.JsObject;
 import gwt.jelement.dom.Document;
-import gwt.jelement.xml.SupportedType;
+import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
@@ -25,7 +26,12 @@ import jsinterop.annotations.JsType;
 import jsinterop.base.Any;
 
 @JsType(namespace = JsPackage.GLOBAL, name="DOMParser", isNative = true)
-public class DOMParser{
+public class DOMParser extends JsObject{
+    @JsConstructor
+    public DOMParser(){
+        super();
+    }
+    
     @JsOverlay
     public final Document parseFromString(String str, SupportedType type){
         return parseFromString(str, type.getInternalValue());

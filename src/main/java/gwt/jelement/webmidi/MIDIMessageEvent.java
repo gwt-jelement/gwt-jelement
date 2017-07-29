@@ -18,7 +18,6 @@ package gwt.jelement.webmidi;
 
 import gwt.jelement.core.Uint8Array;
 import gwt.jelement.events.Event;
-import gwt.jelement.webmidi.MIDIMessageEventInit;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;

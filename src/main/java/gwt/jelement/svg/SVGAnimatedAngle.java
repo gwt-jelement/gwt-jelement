@@ -16,14 +16,20 @@
  */
 package gwt.jelement.svg;
 
-import gwt.jelement.svg.SVGAngle;
+import gwt.jelement.core.JsObject;
+import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="SVGAnimatedAngle", isNative = true)
-public class SVGAnimatedAngle{
+public class SVGAnimatedAngle extends JsObject{
+    @JsConstructor
+    public SVGAnimatedAngle(){
+        super();
+    }
+    
     @JsProperty(name="baseVal")
     public native SVGAngle getBaseVal();
     

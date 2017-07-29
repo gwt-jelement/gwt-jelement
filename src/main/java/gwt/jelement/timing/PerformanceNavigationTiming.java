@@ -16,8 +16,6 @@
  */
 package gwt.jelement.timing;
 
-import gwt.jelement.timing.NavigationType;
-import gwt.jelement.timing.PerformanceResourceTiming;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;

@@ -16,7 +16,6 @@
  */
 package gwt.jelement.bluetooth;
 
-import gwt.jelement.bluetooth.BluetoothRemoteGATTServer;
 import gwt.jelement.events.EventHandlerNonNull;
 import gwt.jelement.events.EventTarget;
 import jsinterop.annotations.JsConstructor;

@@ -17,9 +17,6 @@
 package gwt.jelement.filesystem;
 
 import gwt.jelement.fileapi.BlobCallback;
-import gwt.jelement.filesystem.Entry;
-import gwt.jelement.filesystem.ErrorCallback;
-import gwt.jelement.filesystem.FileWriterCallback;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;

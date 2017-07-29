@@ -16,8 +16,6 @@
  */
 package gwt.jelement.css.cssom;
 
-import gwt.jelement.css.cssom.CSSStyleValue;
-import gwt.jelement.css.cssom.StylePropertyMapReadonly;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
@@ -39,17 +37,5 @@ public class StylePropertyMap extends StylePropertyMapReadonly{
     
     @JsMethod(name = "append")
     public native void append(String property, String value);
-    
-    @JsMethod(name = "delete")
-    public native void delete(String property);
-    
-    @JsMethod(name = "set")
-    public native void set(String property, CSSStyleValue value);
-    
-    @JsMethod(name = "set")
-    public native void set(String property, CSSStyleValue[] value);
-    
-    @JsMethod(name = "set")
-    public native void set(String property, String value);
     
 }

@@ -16,8 +16,7 @@
  */
 package gwt.jelement.canvas2d;
 
-import gwt.jelement.canvas2d.CanvasFillRule;
-import gwt.jelement.canvas2d.Path2D;
+import gwt.jelement.core.JsObject;
 import gwt.jelement.dom.Element;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
@@ -25,7 +24,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
-public class HitRegionOptions{
+public class HitRegionOptions extends JsObject{
 
     @JsProperty(name="path")
     private Path2D path;

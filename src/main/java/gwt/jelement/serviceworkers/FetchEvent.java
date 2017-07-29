@@ -18,8 +18,6 @@ package gwt.jelement.serviceworkers;
 
 import gwt.jelement.fetch.Request;
 import gwt.jelement.fetch.Response;
-import gwt.jelement.serviceworkers.ExtendableEvent;
-import gwt.jelement.serviceworkers.FetchEventInit;
 import elemental2.promise.Promise;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;

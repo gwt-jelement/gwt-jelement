@@ -17,7 +17,6 @@
 package gwt.jelement.svg;
 
 import gwt.jelement.css.StyleSheet;
-import gwt.jelement.svg.SVGElement;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;

@@ -16,13 +16,20 @@
  */
 package gwt.jelement.svg;
 
+import gwt.jelement.core.JsObject;
+import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="SVGAnimatedBoolean", isNative = true)
-public class SVGAnimatedBoolean{
+public class SVGAnimatedBoolean extends JsObject{
+    @JsConstructor
+    public SVGAnimatedBoolean(){
+        super();
+    }
+    
     @JsProperty(name="baseVal")
     public native boolean getBaseVal();
     

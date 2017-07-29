@@ -24,8 +24,6 @@ import gwt.jelement.notifications.GetNotificationOptions;
 import gwt.jelement.notifications.Notification;
 import gwt.jelement.notifications.NotificationOptions;
 import gwt.jelement.push_messaging.PushManager;
-import gwt.jelement.serviceworkers.NavigationPreloadManager;
-import gwt.jelement.serviceworkers.ServiceWorker;
 import elemental2.promise.Promise;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;

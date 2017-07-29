@@ -16,14 +16,14 @@
  */
 package gwt.jelement.serviceworkers;
 
-import gwt.jelement.serviceworkers.ClientType;
+import gwt.jelement.core.JsObject;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
-public class ClientQueryOptions{
+public class ClientQueryOptions extends JsObject{
 
     @JsProperty(name="includeUncontrolled")
     private boolean includeUncontrolled;

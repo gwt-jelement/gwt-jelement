@@ -16,13 +16,20 @@
  */
 package gwt.jelement.webgl;
 
+import gwt.jelement.core.JsObject;
+import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="WebGLDebugRendererInfo", isNative = true)
-public class WebGLDebugRendererInfo{
+public class WebGLDebugRendererInfo extends JsObject{
     public static double UNMASKED_VENDOR_WEBGL;
     public static double UNMASKED_RENDERER_WEBGL;
+    
+    @JsConstructor
+    public WebGLDebugRendererInfo(){
+        super();
+    }
     
 }

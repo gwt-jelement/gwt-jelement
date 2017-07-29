@@ -16,8 +16,7 @@
  */
 package gwt.jelement.notifications;
 
-import gwt.jelement.notifications.NotificationAction;
-import gwt.jelement.notifications.NotificationDirection;
+import gwt.jelement.core.JsObject;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -25,7 +24,7 @@ import jsinterop.annotations.JsType;
 import jsinterop.base.Js;
 
 @JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
-public class NotificationOptions{
+public class NotificationOptions extends JsObject{
 
     @JsProperty(name="dir")
     private String dir;

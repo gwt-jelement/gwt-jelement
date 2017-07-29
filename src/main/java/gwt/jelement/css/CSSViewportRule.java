@@ -16,8 +16,6 @@
  */
 package gwt.jelement.css;
 
-import gwt.jelement.css.CSSRule;
-import gwt.jelement.css.CSSStyleDeclaration;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;

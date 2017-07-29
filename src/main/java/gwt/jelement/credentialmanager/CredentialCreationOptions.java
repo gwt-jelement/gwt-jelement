@@ -16,8 +16,7 @@
  */
 package gwt.jelement.credentialmanager;
 
-import gwt.jelement.credentialmanager.FederatedCredentialInit;
-import gwt.jelement.credentialmanager.PasswordCredentialData;
+import gwt.jelement.core.JsObject;
 import gwt.jelement.html.HTMLFormElement;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
@@ -26,7 +25,7 @@ import jsinterop.annotations.JsType;
 import jsinterop.base.Js;
 
 @JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
-public class CredentialCreationOptions{
+public class CredentialCreationOptions extends JsObject{
 
     @JsProperty(name="password")
     private PasswordCredentialInit password;

@@ -17,8 +17,6 @@
 package gwt.jelement.webaudio;
 
 import gwt.jelement.events.EventHandlerNonNull;
-import gwt.jelement.webaudio.AudioBuffer;
-import gwt.jelement.webaudio.BaseAudioContext;
 import elemental2.promise.Promise;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;

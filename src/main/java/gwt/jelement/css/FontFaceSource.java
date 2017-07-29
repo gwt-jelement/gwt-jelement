@@ -16,14 +16,20 @@
  */
 package gwt.jelement.css;
 
-import gwt.jelement.css.FontFaceSet;
+import gwt.jelement.core.JsObject;
+import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="FontFaceSource", isNative = true)
-public class FontFaceSource{
+public class FontFaceSource extends JsObject{
+    @JsConstructor
+    public FontFaceSource(){
+        super();
+    }
+    
     @JsProperty(name="fonts")
     public native FontFaceSet getFonts();
     

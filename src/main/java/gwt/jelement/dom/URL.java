@@ -16,7 +16,7 @@
  */
 package gwt.jelement.dom;
 
-import gwt.jelement.dom.URLSearchParams;
+import gwt.jelement.core.JsObject;
 import gwt.jelement.fileapi.Blob;
 import gwt.jelement.mediasource.MediaSource;
 import gwt.jelement.mediastream.MediaStream;
@@ -28,13 +28,15 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="URL", isNative = true)
-public class URL{
+public class URL extends JsObject{
     @JsConstructor
     public URL(String url){
+        super();
     }
     
     @JsConstructor
     public URL(String url, String base){
+        super();
     }
     
     @JsProperty(name="href")

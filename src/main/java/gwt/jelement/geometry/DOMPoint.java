@@ -16,9 +16,6 @@
  */
 package gwt.jelement.geometry;
 
-import gwt.jelement.geometry.DOMPoint;
-import gwt.jelement.geometry.DOMPointInit;
-import gwt.jelement.geometry.DOMPointReadOnly;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;

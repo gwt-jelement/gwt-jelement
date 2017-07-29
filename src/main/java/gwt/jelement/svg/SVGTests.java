@@ -16,14 +16,20 @@
  */
 package gwt.jelement.svg;
 
-import gwt.jelement.svg.SVGStringList;
+import gwt.jelement.core.JsObject;
+import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="SVGTests", isNative = true)
-public class SVGTests{
+public class SVGTests extends JsObject{
+    @JsConstructor
+    public SVGTests(){
+        super();
+    }
+    
     @JsProperty(name="requiredExtensions")
     public native SVGStringList getRequiredExtensions();
     

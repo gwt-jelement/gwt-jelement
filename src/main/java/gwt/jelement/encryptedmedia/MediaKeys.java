@@ -18,10 +18,9 @@ package gwt.jelement.encryptedmedia;
 
 import gwt.jelement.core.ArrayBuffer;
 import gwt.jelement.core.ArrayBufferView;
-import gwt.jelement.encryptedmedia.MediaKeySession;
-import gwt.jelement.encryptedmedia.MediaKeySessionType;
-import gwt.jelement.encryptedmedia.MediaKeysPolicy;
+import gwt.jelement.core.JsObject;
 import elemental2.promise.Promise;
+import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
@@ -29,7 +28,12 @@ import jsinterop.annotations.JsType;
 import jsinterop.base.Any;
 
 @JsType(namespace = JsPackage.GLOBAL, name="MediaKeys", isNative = true)
-public class MediaKeys{
+public class MediaKeys extends JsObject{
+    @JsConstructor
+    public MediaKeys(){
+        super();
+    }
+    
     @JsMethod(name = "createSession")
     public native MediaKeySession createSession();
     

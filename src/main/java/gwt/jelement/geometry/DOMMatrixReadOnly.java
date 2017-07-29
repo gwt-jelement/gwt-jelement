@@ -18,11 +18,7 @@ package gwt.jelement.geometry;
 
 import gwt.jelement.core.Float32Array;
 import gwt.jelement.core.Float64Array;
-import gwt.jelement.geometry.DOMMatrix;
-import gwt.jelement.geometry.DOMMatrixInit;
-import gwt.jelement.geometry.DOMMatrixReadOnly;
-import gwt.jelement.geometry.DOMPoint;
-import gwt.jelement.geometry.DOMPointInit;
+import gwt.jelement.core.JsObject;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
@@ -31,17 +27,20 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="DOMMatrixReadOnly", isNative = true)
-public class DOMMatrixReadOnly{
+public class DOMMatrixReadOnly extends JsObject{
     @JsConstructor
     public DOMMatrixReadOnly(){
+        super();
     }
     
     @JsConstructor
     public DOMMatrixReadOnly(String init){
+        super();
     }
     
     @JsConstructor
     public DOMMatrixReadOnly(double[] init){
+        super();
     }
     
     @JsProperty(name="a")

@@ -16,11 +16,6 @@
  */
 package gwt.jelement.filesystem;
 
-import gwt.jelement.filesystem.DirectoryReader;
-import gwt.jelement.filesystem.Entry;
-import gwt.jelement.filesystem.EntryCallback;
-import gwt.jelement.filesystem.ErrorCallback;
-import gwt.jelement.filesystem.FileSystemFlags;
 import gwt.jelement.html.VoidCallback;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;

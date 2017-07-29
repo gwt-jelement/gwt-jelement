@@ -18,7 +18,6 @@ package gwt.jelement.events;
 
 import gwt.jelement.clipboard.DataTransfer;
 import gwt.jelement.dom.StaticRange;
-import gwt.jelement.events.UIEventInit;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;

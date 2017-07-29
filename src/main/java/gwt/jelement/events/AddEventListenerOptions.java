@@ -16,7 +16,6 @@
  */
 package gwt.jelement.events;
 
-import gwt.jelement.events.EventListenerOptions;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;

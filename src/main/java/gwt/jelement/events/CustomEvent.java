@@ -16,8 +16,6 @@
  */
 package gwt.jelement.events;
 
-import gwt.jelement.events.CustomEventInit;
-import gwt.jelement.events.Event;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;

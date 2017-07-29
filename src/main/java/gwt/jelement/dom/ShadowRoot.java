@@ -17,10 +17,6 @@
 package gwt.jelement.dom;
 
 import gwt.jelement.css.StyleSheetList;
-import gwt.jelement.dom.DocumentFragment;
-import gwt.jelement.dom.Element;
-import gwt.jelement.dom.ShadowRoot;
-import gwt.jelement.dom.ShadowRootMode;
 import gwt.jelement.editing.Selection;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;

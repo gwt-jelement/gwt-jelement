@@ -16,7 +16,6 @@
  */
 package gwt.jelement.clipboard;
 
-import gwt.jelement.clipboard.DataTransfer;
 import gwt.jelement.events.EventTarget;
 import elemental2.promise.Promise;
 import jsinterop.annotations.JsConstructor;

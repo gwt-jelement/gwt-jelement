@@ -16,23 +16,28 @@
  */
 package gwt.jelement.imagebitmap;
 
+import gwt.jelement.core.JsObject;
 import gwt.jelement.fileapi.Blob;
 import gwt.jelement.html.HTMLCanvasElement;
 import gwt.jelement.html.HTMLImageElement;
 import gwt.jelement.html.HTMLVideoElement;
 import gwt.jelement.html.ImageData;
-import gwt.jelement.imagebitmap.ImageBitmap;
-import gwt.jelement.imagebitmap.ImageBitmapOptions;
 import gwt.jelement.offscreencanvas.OffscreenCanvas;
 import gwt.jelement.svg.SVGImageElement;
 import elemental2.promise.Promise;
+import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="ImageBitmapFactories", isNative = true)
-public class ImageBitmapFactories{
+public class ImageBitmapFactories extends JsObject{
+    @JsConstructor
+    public ImageBitmapFactories(){
+        super();
+    }
+    
     @JsMethod(name = "createImageBitmap")
     public native Promise createImageBitmap(HTMLImageElement imageBitmap);
     

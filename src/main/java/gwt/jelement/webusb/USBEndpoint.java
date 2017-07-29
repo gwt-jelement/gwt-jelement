@@ -16,20 +16,25 @@
  */
 package gwt.jelement.webusb;
 
-import gwt.jelement.webusb.USBDirection;
-import gwt.jelement.webusb.USBEndpointType;
+import gwt.jelement.core.JsObject;
+import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="USBEndpoint", isNative = true)
-public class USBEndpoint{
+public class USBEndpoint extends JsObject{
     @JsProperty(name="direction")
     private String direction;
     
     @JsProperty(name="type")
     private String type;
+    
+    @JsConstructor
+    public USBEndpoint(USBAlternateInterface alternate, byte endpointNumber, USBDirection direction){
+        super();
+    }
     
     @JsProperty(name="endpointNumber")
     public native byte getEndpointNumber();

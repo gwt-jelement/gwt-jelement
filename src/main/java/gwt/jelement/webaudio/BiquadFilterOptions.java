@@ -16,8 +16,6 @@
  */
 package gwt.jelement.webaudio;
 
-import gwt.jelement.webaudio.AudioNodeOptions;
-import gwt.jelement.webaudio.BiquadFilterType;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;

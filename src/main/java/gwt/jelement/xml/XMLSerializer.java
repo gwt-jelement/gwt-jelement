@@ -16,6 +16,7 @@
  */
 package gwt.jelement.xml;
 
+import gwt.jelement.core.JsObject;
 import gwt.jelement.dom.Node;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
@@ -24,9 +25,10 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="XMLSerializer", isNative = true)
-public class XMLSerializer{
+public class XMLSerializer extends JsObject{
     @JsConstructor
     public XMLSerializer(){
+        super();
     }
     
     @JsMethod(name = "serializeToString")

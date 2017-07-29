@@ -16,11 +16,6 @@
  */
 package gwt.jelement.webaudio;
 
-import gwt.jelement.webaudio.AudioBuffer;
-import gwt.jelement.webaudio.AudioBufferSourceOptions;
-import gwt.jelement.webaudio.AudioParam;
-import gwt.jelement.webaudio.AudioScheduledSourceNode;
-import gwt.jelement.webaudio.BaseAudioContext;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;

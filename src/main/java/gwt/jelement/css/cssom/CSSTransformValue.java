@@ -16,8 +16,6 @@
  */
 package gwt.jelement.css.cssom;
 
-import gwt.jelement.css.cssom.CSSStyleValue;
-import gwt.jelement.css.cssom.CSSTransformComponent;
 import gwt.jelement.geometry.DOMMatrix;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;

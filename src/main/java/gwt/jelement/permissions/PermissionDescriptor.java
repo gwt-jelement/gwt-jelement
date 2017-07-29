@@ -16,14 +16,14 @@
  */
 package gwt.jelement.permissions;
 
-import gwt.jelement.permissions.PermissionName;
+import gwt.jelement.core.JsObject;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
-public class PermissionDescriptor{
+public class PermissionDescriptor extends JsObject{
 
     @JsProperty(name="name")
     private String name;

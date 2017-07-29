@@ -16,8 +16,6 @@
  */
 package gwt.jelement.events;
 
-import gwt.jelement.events.Event;
-import gwt.jelement.events.ProgressEventInit;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;

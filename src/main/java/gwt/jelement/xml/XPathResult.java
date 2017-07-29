@@ -16,7 +16,9 @@
  */
 package gwt.jelement.xml;
 
+import gwt.jelement.core.JsObject;
 import gwt.jelement.dom.Node;
+import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
@@ -24,7 +26,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="XPathResult", isNative = true)
-public class XPathResult{
+public class XPathResult extends JsObject{
     public static short ANY_TYPE;
     public static short NUMBER_TYPE;
     public static short STRING_TYPE;
@@ -35,6 +37,11 @@ public class XPathResult{
     public static short ORDERED_NODE_SNAPSHOT_TYPE;
     public static short ANY_UNORDERED_NODE_TYPE;
     public static short FIRST_ORDERED_NODE_TYPE;
+    
+    @JsConstructor
+    public XPathResult(){
+        super();
+    }
     
     @JsProperty(name="resultType")
     public native short getResultType();

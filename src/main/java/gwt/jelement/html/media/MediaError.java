@@ -16,17 +16,24 @@
  */
 package gwt.jelement.html.media;
 
+import gwt.jelement.core.JsObject;
+import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="MediaError", isNative = true)
-public class MediaError{
+public class MediaError extends JsObject{
     public static short MEDIA_ERR_ABORTED;
     public static short MEDIA_ERR_NETWORK;
     public static short MEDIA_ERR_DECODE;
     public static short MEDIA_ERR_SRC_NOT_SUPPORTED;
+    
+    @JsConstructor
+    public MediaError(){
+        super();
+    }
     
     @JsProperty(name="code")
     public native short getCode();

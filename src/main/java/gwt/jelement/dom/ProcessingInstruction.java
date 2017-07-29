@@ -17,7 +17,6 @@
 package gwt.jelement.dom;
 
 import gwt.jelement.css.StyleSheet;
-import gwt.jelement.dom.CharacterData;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;

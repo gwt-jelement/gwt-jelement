@@ -17,7 +17,6 @@
 package gwt.jelement.presentation;
 
 import gwt.jelement.events.Event;
-import gwt.jelement.presentation.PresentationConnectionCloseReason;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
@@ -30,7 +29,7 @@ public class PresentationConnectionCloseEvent extends Event{
     private String reason;
     
     @JsConstructor
-    public PresentationConnectionCloseEvent(){
+    public PresentationConnectionCloseEvent(String type, PresentationConnectionCloseEventInit eventInitDict){
         super((String) null);
     }
     

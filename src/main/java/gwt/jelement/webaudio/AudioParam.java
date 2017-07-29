@@ -16,7 +16,8 @@
  */
 package gwt.jelement.webaudio;
 
-import gwt.jelement.webaudio.AudioParam;
+import gwt.jelement.core.JsObject;
+import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
@@ -24,7 +25,12 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="AudioParam", isNative = true)
-public class AudioParam{
+public class AudioParam extends JsObject{
+    @JsConstructor
+    public AudioParam(){
+        super();
+    }
+    
     @JsProperty(name="value")
     public native float getValue();
     

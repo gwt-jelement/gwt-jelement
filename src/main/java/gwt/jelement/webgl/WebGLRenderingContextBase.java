@@ -20,24 +20,15 @@ import gwt.jelement.core.ArrayBuffer;
 import gwt.jelement.core.ArrayBufferView;
 import gwt.jelement.core.Float32Array;
 import gwt.jelement.core.Int32Array;
+import gwt.jelement.core.JsObject;
 import gwt.jelement.html.HTMLCanvasElement;
 import gwt.jelement.html.HTMLImageElement;
 import gwt.jelement.html.HTMLVideoElement;
 import gwt.jelement.html.ImageData;
 import gwt.jelement.imagebitmap.ImageBitmap;
 import gwt.jelement.offscreencanvas.OffscreenCanvas;
-import gwt.jelement.webgl.WebGL2RenderingContext;
-import gwt.jelement.webgl.WebGLActiveInfo;
-import gwt.jelement.webgl.WebGLBuffer;
-import gwt.jelement.webgl.WebGLContextAttributes;
-import gwt.jelement.webgl.WebGLFramebuffer;
-import gwt.jelement.webgl.WebGLProgram;
-import gwt.jelement.webgl.WebGLRenderbuffer;
-import gwt.jelement.webgl.WebGLShader;
-import gwt.jelement.webgl.WebGLShaderPrecisionFormat;
-import gwt.jelement.webgl.WebGLTexture;
-import gwt.jelement.webgl.WebGLUniformLocation;
 import elemental2.promise.Promise;
+import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
@@ -46,7 +37,7 @@ import jsinterop.annotations.JsType;
 import jsinterop.base.Js;
 
 @JsType(namespace = JsPackage.GLOBAL, name="WebGLRenderingContextBase", isNative = true)
-public class WebGLRenderingContextBase{
+public class WebGLRenderingContextBase extends JsObject{
     public static double DEPTH_BUFFER_BIT;
     public static double STENCIL_BUFFER_BIT;
     public static double COLOR_BUFFER_BIT;
@@ -346,6 +337,11 @@ public class WebGLRenderingContextBase{
     
     @JsProperty(name="canvas")
     private WebGL2RenderingContext.VRSource canvas;
+    
+    @JsConstructor
+    public WebGLRenderingContextBase(){
+        super();
+    }
     
     @JsOverlay
     public final WebGL2RenderingContext.VRSource getCanvas(){

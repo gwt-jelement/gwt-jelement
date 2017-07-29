@@ -16,10 +16,6 @@
  */
 package gwt.jelement.webaudio;
 
-import gwt.jelement.webaudio.AudioParam;
-import gwt.jelement.webaudio.AudioScheduledSourceNode;
-import gwt.jelement.webaudio.OscillatorType;
-import gwt.jelement.webaudio.PeriodicWave;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
@@ -33,7 +29,12 @@ public class OscillatorNode extends AudioScheduledSourceNode{
     private String type;
     
     @JsConstructor
-    public OscillatorNode(){
+    public OscillatorNode(BaseAudioContext context){
+        super();
+    }
+    
+    @JsConstructor
+    public OscillatorNode(BaseAudioContext context, OscillatorOptions options){
         super();
     }
     

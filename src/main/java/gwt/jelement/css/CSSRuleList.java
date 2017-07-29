@@ -16,14 +16,17 @@
  */
 package gwt.jelement.css;
 
+import gwt.jelement.core.JsObject;
+import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
-import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="CSSRuleList", isNative = true)
-public class CSSRuleList{
-    @JsProperty(name="length")
-    public native double getLength();
+public class CSSRuleList extends JsObject{
+    @JsConstructor
+    public CSSRuleList(){
+        super();
+    }
     
 }

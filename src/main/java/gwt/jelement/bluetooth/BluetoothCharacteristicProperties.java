@@ -16,13 +16,20 @@
  */
 package gwt.jelement.bluetooth;
 
+import gwt.jelement.core.JsObject;
+import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="BluetoothCharacteristicProperties", isNative = true)
-public class BluetoothCharacteristicProperties{
+public class BluetoothCharacteristicProperties extends JsObject{
+    @JsConstructor
+    public BluetoothCharacteristicProperties(){
+        super();
+    }
+    
     @JsProperty(name="broadcast")
     public native boolean getBroadcast();
     

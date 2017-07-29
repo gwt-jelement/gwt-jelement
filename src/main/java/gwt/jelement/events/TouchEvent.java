@@ -17,8 +17,6 @@
 package gwt.jelement.events;
 
 import gwt.jelement.dom.TouchList;
-import gwt.jelement.events.TouchEventInit;
-import gwt.jelement.events.UIEvent;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;

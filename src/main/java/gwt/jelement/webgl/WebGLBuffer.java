@@ -16,10 +16,17 @@
  */
 package gwt.jelement.webgl;
 
+import gwt.jelement.core.JsObject;
+import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="WebGLBuffer", isNative = true)
-public class WebGLBuffer{
+public class WebGLBuffer extends JsObject{
+    @JsConstructor
+    public WebGLBuffer(){
+        super();
+    }
+    
 }

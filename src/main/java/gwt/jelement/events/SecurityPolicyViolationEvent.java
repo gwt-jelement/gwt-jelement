@@ -16,8 +16,6 @@
  */
 package gwt.jelement.events;
 
-import gwt.jelement.events.Event;
-import gwt.jelement.events.SecurityPolicyViolationEventDisposition;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
@@ -30,7 +28,12 @@ public class SecurityPolicyViolationEvent extends Event{
     private String disposition;
     
     @JsConstructor
-    public SecurityPolicyViolationEvent(){
+    public SecurityPolicyViolationEvent(String type){
+        super((String) null);
+    }
+    
+    @JsConstructor
+    public SecurityPolicyViolationEvent(String type, SecurityPolicyViolationEventInit eventInitDict){
         super((String) null);
     }
     

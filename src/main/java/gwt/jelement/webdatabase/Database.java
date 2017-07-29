@@ -16,9 +16,9 @@
  */
 package gwt.jelement.webdatabase;
 
+import gwt.jelement.core.JsObject;
 import gwt.jelement.html.VoidCallback;
-import gwt.jelement.webdatabase.SQLTransactionCallback;
-import gwt.jelement.webdatabase.SQLTransactionErrorCallback;
+import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
@@ -26,7 +26,12 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="Database", isNative = true)
-public class Database{
+public class Database extends JsObject{
+    @JsConstructor
+    public Database(){
+        super();
+    }
+    
     @JsProperty(name="version")
     public native String getVersion();
     

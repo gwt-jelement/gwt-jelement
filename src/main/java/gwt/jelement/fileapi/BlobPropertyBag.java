@@ -16,14 +16,14 @@
  */
 package gwt.jelement.fileapi;
 
-import gwt.jelement.fileapi.NormalizeLineEndings;
+import gwt.jelement.core.JsObject;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
-public class BlobPropertyBag{
+public class BlobPropertyBag extends JsObject{
 
     @JsProperty(name="type")
     private String type;

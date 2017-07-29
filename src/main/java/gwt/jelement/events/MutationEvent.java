@@ -17,7 +17,6 @@
 package gwt.jelement.events;
 
 import gwt.jelement.dom.Node;
-import gwt.jelement.events.Event;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;

@@ -16,11 +16,6 @@
  */
 package gwt.jelement.svg;
 
-import gwt.jelement.svg.SVGAnimatedTransformList;
-import gwt.jelement.svg.SVGElement;
-import gwt.jelement.svg.SVGMatrix;
-import gwt.jelement.svg.SVGRect;
-import gwt.jelement.svg.SVGStringList;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;

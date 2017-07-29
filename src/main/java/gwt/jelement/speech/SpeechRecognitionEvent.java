@@ -18,8 +18,6 @@ package gwt.jelement.speech;
 
 import gwt.jelement.dom.Document;
 import gwt.jelement.events.Event;
-import gwt.jelement.speech.SpeechRecognitionEventInit;
-import gwt.jelement.speech.SpeechRecognitionResultList;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;

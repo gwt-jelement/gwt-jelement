@@ -16,13 +16,20 @@
  */
 package gwt.jelement.html;
 
+import gwt.jelement.core.JsObject;
+import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="ValidityState", isNative = true)
-public class ValidityState{
+public class ValidityState extends JsObject{
+    @JsConstructor
+    public ValidityState(){
+        super();
+    }
+    
     @JsProperty(name="valueMissing")
     public native boolean getValueMissing();
     

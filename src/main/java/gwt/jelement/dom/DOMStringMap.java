@@ -16,10 +16,17 @@
  */
 package gwt.jelement.dom;
 
+import gwt.jelement.core.JsObject;
+import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="DOMStringMap", isNative = true)
-public class DOMStringMap{
+public class DOMStringMap extends JsObject{
+    @JsConstructor
+    public DOMStringMap(){
+        super();
+    }
+    
 }

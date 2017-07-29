@@ -16,14 +16,20 @@
  */
 package gwt.jelement.dom;
 
-import gwt.jelement.dom.Node;
+import gwt.jelement.core.JsObject;
+import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="StaticRange", isNative = true)
-public class StaticRange{
+public class StaticRange extends JsObject{
+    @JsConstructor
+    public StaticRange(){
+        super();
+    }
+    
     @JsProperty(name="startContainer")
     public native Node getStartContainer();
     

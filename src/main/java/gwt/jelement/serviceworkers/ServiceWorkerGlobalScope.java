@@ -17,10 +17,6 @@
 package gwt.jelement.serviceworkers;
 
 import gwt.jelement.events.EventHandlerNonNull;
-import gwt.jelement.fetch.Request;
-import gwt.jelement.fetch.Response;
-import gwt.jelement.serviceworkers.Clients;
-import gwt.jelement.serviceworkers.ServiceWorkerRegistration;
 import gwt.jelement.workers.WorkerGlobalScope;
 import elemental2.promise.Promise;
 import jsinterop.annotations.JsConstructor;
@@ -211,18 +207,6 @@ public class ServiceWorkerGlobalScope extends WorkerGlobalScope{
     public final void setOnPush(EventHandlerNonNull onpush){
         this.onpush = onpush;
     }
-    
-    @JsMethod(name = "fetch")
-    public native Promise<Response> fetch(Request input);
-    
-    @JsMethod(name = "fetch")
-    public native Promise<Response> fetch(String input);
-    
-    @JsMethod(name = "fetch")
-    public native Promise<Response> fetch(Request input, Object init);
-    
-    @JsMethod(name = "fetch")
-    public native Promise<Response> fetch(String input, Object init);
     
     @JsMethod(name = "skipWaiting")
     public native Promise<Void> skipWaiting();

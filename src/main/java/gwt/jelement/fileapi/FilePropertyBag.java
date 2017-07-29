@@ -16,7 +16,6 @@
  */
 package gwt.jelement.fileapi;
 
-import gwt.jelement.fileapi.BlobPropertyBag;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;

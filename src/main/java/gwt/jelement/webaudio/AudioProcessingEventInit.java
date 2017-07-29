@@ -17,7 +17,6 @@
 package gwt.jelement.webaudio;
 
 import gwt.jelement.events.EventInit;
-import gwt.jelement.webaudio.AudioBuffer;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;

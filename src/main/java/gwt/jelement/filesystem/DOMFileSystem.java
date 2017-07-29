@@ -16,16 +16,19 @@
  */
 package gwt.jelement.filesystem;
 
-import gwt.jelement.filesystem.DirectoryEntry;
+import gwt.jelement.core.JsObject;
+import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="DOMFileSystem", isNative = true)
-public class DOMFileSystem{
-    @JsProperty(name="name")
-    public native String getName();
+public class DOMFileSystem extends JsObject{
+    @JsConstructor
+    public DOMFileSystem(){
+        super();
+    }
     
     @JsProperty(name="root")
     public native DirectoryEntry getRoot();

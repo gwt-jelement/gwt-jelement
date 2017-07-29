@@ -16,14 +16,14 @@
  */
 package gwt.jelement.imagecapture;
 
-import gwt.jelement.imagecapture.Point2D;
+import gwt.jelement.core.JsObject;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
-public class ConstrainPoint2DParameters{
+public class ConstrainPoint2DParameters extends JsObject{
 
     @JsProperty(name="exact")
     private Point2D[] exact;

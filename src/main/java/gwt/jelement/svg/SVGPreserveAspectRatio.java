@@ -16,13 +16,15 @@
  */
 package gwt.jelement.svg;
 
+import gwt.jelement.core.JsObject;
+import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="SVGPreserveAspectRatio", isNative = true)
-public class SVGPreserveAspectRatio{
+public class SVGPreserveAspectRatio extends JsObject{
     public static short SVG_PRESERVEASPECTRATIO_UNKNOWN;
     public static short SVG_PRESERVEASPECTRATIO_NONE;
     public static short SVG_PRESERVEASPECTRATIO_XMINYMIN;
@@ -37,6 +39,11 @@ public class SVGPreserveAspectRatio{
     public static short SVG_MEETORSLICE_UNKNOWN;
     public static short SVG_MEETORSLICE_MEET;
     public static short SVG_MEETORSLICE_SLICE;
+    
+    @JsConstructor
+    public SVGPreserveAspectRatio(){
+        super();
+    }
     
     @JsProperty(name="align")
     public native short getAlign();

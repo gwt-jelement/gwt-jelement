@@ -17,7 +17,6 @@
 package gwt.jelement.nfc;
 
 import jsinterop.annotations.JsFunction;
-import gwt.jelement.nfc.NFCMessage;
 
 @JsFunction
 public interface MessageCallback{

@@ -16,13 +16,20 @@
  */
 package gwt.jelement.html;
 
+import gwt.jelement.core.JsObject;
+import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="HTMLHyperlinkElementUtils", isNative = true)
-public class HTMLHyperlinkElementUtils{
+public class HTMLHyperlinkElementUtils extends JsObject{
+    @JsConstructor
+    public HTMLHyperlinkElementUtils(){
+        super();
+    }
+    
     @JsProperty(name="href")
     public native String getHref();
     

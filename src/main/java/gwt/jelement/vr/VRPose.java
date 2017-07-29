@@ -17,13 +17,20 @@
 package gwt.jelement.vr;
 
 import gwt.jelement.core.Float32Array;
+import gwt.jelement.core.JsObject;
+import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="VRPose", isNative = true)
-public class VRPose{
+public class VRPose extends JsObject{
+    @JsConstructor
+    public VRPose(){
+        super();
+    }
+    
     @JsProperty(name="position")
     public native Float32Array getPosition();
     

@@ -16,16 +16,19 @@
  */
 package gwt.jelement.dom;
 
+import gwt.jelement.core.JsObject;
+import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
-import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="DOMStringList", isNative = true)
-public class DOMStringList{
-    @JsProperty(name="length")
-    public native double getLength();
+public class DOMStringList extends JsObject{
+    @JsConstructor
+    public DOMStringList(){
+        super();
+    }
     
     @JsMethod(name = "contains")
     public native boolean contains(String string);

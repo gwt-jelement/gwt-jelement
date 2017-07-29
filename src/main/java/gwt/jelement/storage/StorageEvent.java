@@ -17,8 +17,6 @@
 package gwt.jelement.storage;
 
 import gwt.jelement.events.Event;
-import gwt.jelement.storage.Storage;
-import gwt.jelement.storage.StorageEventInit;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;

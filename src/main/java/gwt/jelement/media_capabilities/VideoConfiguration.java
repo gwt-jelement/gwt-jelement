@@ -16,13 +16,14 @@
  */
 package gwt.jelement.media_capabilities;
 
+import gwt.jelement.core.JsObject;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
-public class VideoConfiguration{
+public class VideoConfiguration extends JsObject{
 
     @JsProperty(name="contentType")
     private String contentType;

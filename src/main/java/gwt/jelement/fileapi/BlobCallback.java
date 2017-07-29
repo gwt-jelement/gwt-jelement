@@ -17,7 +17,6 @@
 package gwt.jelement.fileapi;
 
 import jsinterop.annotations.JsFunction;
-import gwt.jelement.fileapi.Blob;
 
 @JsFunction
 public interface BlobCallback{

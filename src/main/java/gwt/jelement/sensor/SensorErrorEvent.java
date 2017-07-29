@@ -18,7 +18,6 @@ package gwt.jelement.sensor;
 
 import gwt.jelement.dom.DOMException;
 import gwt.jelement.events.Event;
-import gwt.jelement.sensor.SensorErrorEventInit;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;

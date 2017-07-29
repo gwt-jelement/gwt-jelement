@@ -16,9 +16,6 @@
  */
 package gwt.jelement.dom;
 
-import gwt.jelement.dom.CharacterData;
-import gwt.jelement.dom.NodeList;
-import gwt.jelement.dom.Text;
 import gwt.jelement.html.HTMLSlotElement;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;

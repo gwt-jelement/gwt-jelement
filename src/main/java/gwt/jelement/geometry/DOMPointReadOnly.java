@@ -16,10 +16,7 @@
  */
 package gwt.jelement.geometry;
 
-import gwt.jelement.geometry.DOMMatrixInit;
-import gwt.jelement.geometry.DOMPoint;
-import gwt.jelement.geometry.DOMPointInit;
-import gwt.jelement.geometry.DOMPointReadOnly;
+import gwt.jelement.core.JsObject;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
@@ -28,25 +25,30 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="DOMPointReadOnly", isNative = true)
-public class DOMPointReadOnly{
+public class DOMPointReadOnly extends JsObject{
     @JsConstructor
     public DOMPointReadOnly(){
+        super();
     }
     
     @JsConstructor
     public DOMPointReadOnly(double x){
+        super();
     }
     
     @JsConstructor
     public DOMPointReadOnly(double x, double y){
+        super();
     }
     
     @JsConstructor
     public DOMPointReadOnly(double x, double y, double z){
+        super();
     }
     
     @JsConstructor
     public DOMPointReadOnly(double x, double y, double z, double w){
+        super();
     }
     
     @JsProperty(name="x")

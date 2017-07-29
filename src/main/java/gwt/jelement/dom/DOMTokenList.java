@@ -16,6 +16,8 @@
  */
 package gwt.jelement.dom;
 
+import gwt.jelement.core.JsObject;
+import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
@@ -23,9 +25,11 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="DOMTokenList", isNative = true)
-public class DOMTokenList{
-    @JsProperty(name="length")
-    public native double getLength();
+public class DOMTokenList extends JsObject{
+    @JsConstructor
+    public DOMTokenList(){
+        super();
+    }
     
     @JsProperty(name="value")
     public native String getValue();

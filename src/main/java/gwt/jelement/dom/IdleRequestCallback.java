@@ -17,7 +17,6 @@
 package gwt.jelement.dom;
 
 import jsinterop.annotations.JsFunction;
-import gwt.jelement.dom.IdleDeadline;
 
 @JsFunction
 public interface IdleRequestCallback{

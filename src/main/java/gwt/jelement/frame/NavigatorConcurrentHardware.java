@@ -16,13 +16,20 @@
  */
 package gwt.jelement.frame;
 
+import gwt.jelement.core.JsObject;
+import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="NavigatorConcurrentHardware", isNative = true)
-public class NavigatorConcurrentHardware{
+public class NavigatorConcurrentHardware extends JsObject{
+    @JsConstructor
+    public NavigatorConcurrentHardware(){
+        super();
+    }
+    
     @JsProperty(name="hardwareConcurrency")
     public native double getHardwareConcurrency();
     

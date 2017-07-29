@@ -17,8 +17,6 @@
 package gwt.jelement.webaudio;
 
 import gwt.jelement.core.Float32Array;
-import gwt.jelement.webaudio.AudioNode;
-import gwt.jelement.webaudio.OverSampleType;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
@@ -31,7 +29,12 @@ public class WaveShaperNode extends AudioNode{
     private String oversample;
     
     @JsConstructor
-    public WaveShaperNode(){
+    public WaveShaperNode(BaseAudioContext context){
+        super();
+    }
+    
+    @JsConstructor
+    public WaveShaperNode(BaseAudioContext context, WaveShaperOptions options){
         super();
     }
     

@@ -16,10 +16,8 @@
  */
 package gwt.jelement.filesystem;
 
-import gwt.jelement.filesystem.DOMFileSystemSync;
-import gwt.jelement.filesystem.DirectoryEntrySync;
-import gwt.jelement.filesystem.EntrySync;
-import gwt.jelement.filesystem.Metadata;
+import gwt.jelement.core.JsObject;
+import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
@@ -27,15 +25,17 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="EntrySync", isNative = true)
-public class EntrySync{
+public class EntrySync extends JsObject{
+    @JsConstructor
+    public EntrySync(){
+        super();
+    }
+    
     @JsProperty(name="isFile")
     public native boolean getIsFile();
     
     @JsProperty(name="isDirectory")
     public native boolean getIsDirectory();
-    
-    @JsProperty(name="name")
-    public native String getName();
     
     @JsProperty(name="fullPath")
     public native String getFullPath();

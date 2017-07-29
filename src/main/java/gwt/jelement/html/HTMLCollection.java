@@ -16,14 +16,17 @@
  */
 package gwt.jelement.html;
 
+import gwt.jelement.core.JsObject;
+import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
-import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="HTMLCollection", isNative = true)
-public class HTMLCollection{
-    @JsProperty(name="length")
-    public native double getLength();
+public class HTMLCollection extends JsObject{
+    @JsConstructor
+    public HTMLCollection(){
+        super();
+    }
     
 }

@@ -16,18 +16,14 @@
  */
 package gwt.jelement.peerconnection;
 
-import gwt.jelement.peerconnection.RTCBundlePolicy;
-import gwt.jelement.peerconnection.RTCCertificate;
-import gwt.jelement.peerconnection.RTCIceServer;
-import gwt.jelement.peerconnection.RTCIceTransportPolicy;
-import gwt.jelement.peerconnection.RTCRtcpMuxPolicy;
+import gwt.jelement.core.JsObject;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
-public class RTCConfiguration{
+public class RTCConfiguration extends JsObject{
 
     @JsProperty(name="iceServers")
     private RTCIceServer[] iceServers;

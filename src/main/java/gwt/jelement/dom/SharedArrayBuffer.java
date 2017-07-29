@@ -16,13 +16,20 @@
  */
 package gwt.jelement.dom;
 
+import gwt.jelement.core.JsObject;
+import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="SharedArrayBuffer", isNative = true)
-public class SharedArrayBuffer{
+public class SharedArrayBuffer extends JsObject{
+    @JsConstructor
+    public SharedArrayBuffer(){
+        super();
+    }
+    
     @JsProperty(name="byteLength")
     public native double getByteLength();
     

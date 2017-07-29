@@ -17,13 +17,6 @@
 package gwt.jelement.html;
 
 import gwt.jelement.dom.NodeList;
-import gwt.jelement.html.HTMLCollection;
-import gwt.jelement.html.HTMLElement;
-import gwt.jelement.html.HTMLFormElement;
-import gwt.jelement.html.HTMLOptGroupElement;
-import gwt.jelement.html.HTMLOptionElement;
-import gwt.jelement.html.HTMLOptionsCollection;
-import gwt.jelement.html.ValidityState;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
@@ -139,9 +132,6 @@ public class HTMLSelectElement extends HTMLElement{
     
     @JsMethod(name = "namedItem")
     public native HTMLOptionElement namedItem(String name);
-    
-    @JsMethod(name = "remove")
-    public native void remove();
     
     @JsMethod(name = "remove")
     public native void remove(double index);

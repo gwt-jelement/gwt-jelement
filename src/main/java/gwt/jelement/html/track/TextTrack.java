@@ -18,10 +18,6 @@ package gwt.jelement.html.track;
 
 import gwt.jelement.events.EventHandlerNonNull;
 import gwt.jelement.events.EventTarget;
-import gwt.jelement.html.track.TextTrackCue;
-import gwt.jelement.html.track.TextTrackCueList;
-import gwt.jelement.html.track.TextTrackKind;
-import gwt.jelement.html.track.TextTrackMode;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;

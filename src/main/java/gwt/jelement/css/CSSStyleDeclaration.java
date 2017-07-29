@@ -16,7 +16,8 @@
  */
 package gwt.jelement.css;
 
-import gwt.jelement.css.CSSRule;
+import gwt.jelement.core.JsObject;
+import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
@@ -24,15 +25,17 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="CSSStyleDeclaration", isNative = true)
-public class CSSStyleDeclaration{
+public class CSSStyleDeclaration extends JsObject{
+    @JsConstructor
+    public CSSStyleDeclaration(){
+        super();
+    }
+    
     @JsProperty(name="cssText")
     public native String getCssText();
     
     @JsProperty(name="cssText")
     public native void setCssText(String cssText);
-    
-    @JsProperty(name="length")
-    public native double getLength();
     
     @JsProperty(name="parentRule")
     public native CSSRule getParentRule();

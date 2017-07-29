@@ -17,7 +17,6 @@
 package gwt.jelement.presentation;
 
 import gwt.jelement.events.EventInit;
-import gwt.jelement.presentation.PresentationConnection;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;

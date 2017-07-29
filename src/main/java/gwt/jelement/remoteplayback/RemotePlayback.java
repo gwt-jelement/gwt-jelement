@@ -18,8 +18,6 @@ package gwt.jelement.remoteplayback;
 
 import gwt.jelement.events.EventHandlerNonNull;
 import gwt.jelement.events.EventTarget;
-import gwt.jelement.remoteplayback.RemotePlaybackAvailabilityCallback;
-import gwt.jelement.remoteplayback.RemotePlaybackState;
 import elemental2.promise.Promise;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;

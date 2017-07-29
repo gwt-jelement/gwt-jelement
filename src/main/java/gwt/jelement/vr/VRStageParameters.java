@@ -17,13 +17,20 @@
 package gwt.jelement.vr;
 
 import gwt.jelement.core.Float32Array;
+import gwt.jelement.core.JsObject;
+import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="VRStageParameters", isNative = true)
-public class VRStageParameters{
+public class VRStageParameters extends JsObject{
+    @JsConstructor
+    public VRStageParameters(){
+        super();
+    }
+    
     @JsProperty(name="sittingToStandingTransform")
     public native Float32Array getSittingToStandingTransform();
     

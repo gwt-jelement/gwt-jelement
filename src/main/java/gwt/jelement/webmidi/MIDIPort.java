@@ -18,9 +18,6 @@ package gwt.jelement.webmidi;
 
 import gwt.jelement.events.EventHandlerNonNull;
 import gwt.jelement.events.EventTarget;
-import gwt.jelement.webmidi.MIDIPortConnectionState;
-import gwt.jelement.webmidi.MIDIPortDeviceState;
-import gwt.jelement.webmidi.MIDIPortType;
 import elemental2.promise.Promise;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;

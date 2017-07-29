@@ -16,8 +16,6 @@
  */
 package gwt.jelement.dom;
 
-import gwt.jelement.dom.Element;
-import gwt.jelement.dom.Node;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;

@@ -17,8 +17,6 @@
 package gwt.jelement.vr;
 
 import gwt.jelement.events.Event;
-import gwt.jelement.vr.VRDisplay;
-import gwt.jelement.vr.VRDisplayEventReason;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
@@ -31,7 +29,12 @@ public class VRDisplayEvent extends Event{
     private String reason;
     
     @JsConstructor
-    public VRDisplayEvent(){
+    public VRDisplayEvent(String type){
+        super((String) null);
+    }
+    
+    @JsConstructor
+    public VRDisplayEvent(String type, VRDisplayEventInit eventInitDict){
         super((String) null);
     }
     

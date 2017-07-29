@@ -16,13 +16,20 @@
  */
 package gwt.jelement.frame;
 
+import gwt.jelement.core.JsObject;
+import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="NavigatorLanguage", isNative = true)
-public class NavigatorLanguage{
+public class NavigatorLanguage extends JsObject{
+    @JsConstructor
+    public NavigatorLanguage(){
+        super();
+    }
+    
     @JsProperty(name="language")
     public native String getLanguage();
     

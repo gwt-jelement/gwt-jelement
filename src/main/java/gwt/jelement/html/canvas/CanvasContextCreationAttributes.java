@@ -16,15 +16,14 @@
  */
 package gwt.jelement.html.canvas;
 
-import gwt.jelement.html.canvas.CanvasColorSpace;
-import gwt.jelement.html.canvas.CanvasPixelFormat;
+import gwt.jelement.core.JsObject;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
-public class CanvasContextCreationAttributes{
+public class CanvasContextCreationAttributes extends JsObject{
 
     @JsProperty(name="alpha")
     private boolean alpha;

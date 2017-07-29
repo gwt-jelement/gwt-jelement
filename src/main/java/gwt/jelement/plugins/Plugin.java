@@ -16,7 +16,8 @@
  */
 package gwt.jelement.plugins;
 
-import gwt.jelement.plugins.MimeType;
+import gwt.jelement.core.JsObject;
+import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
@@ -24,18 +25,17 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="Plugin", isNative = true)
-public class Plugin{
-    @JsProperty(name="name")
-    public native String getName();
+public class Plugin extends JsObject{
+    @JsConstructor
+    public Plugin(){
+        super();
+    }
     
     @JsProperty(name="filename")
     public native String getFilename();
     
     @JsProperty(name="description")
     public native String getDescription();
-    
-    @JsProperty(name="length")
-    public native double getLength();
     
     @JsMethod(name = "namedItem")
     public native MimeType namedItem(String name);

@@ -17,8 +17,6 @@
 package gwt.jelement.peerconnection;
 
 import gwt.jelement.events.Event;
-import gwt.jelement.peerconnection.RTCDataChannel;
-import gwt.jelement.peerconnection.RTCDataChannelEventInit;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;

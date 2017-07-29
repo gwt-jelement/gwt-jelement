@@ -16,16 +16,22 @@
  */
 package gwt.jelement.app_banner;
 
-import gwt.jelement.app_banner.AppBannerPromptOutcome;
+import gwt.jelement.core.JsObject;
+import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="AppBannerPromptResult", isNative = true)
-public class AppBannerPromptResult{
+public class AppBannerPromptResult extends JsObject{
     @JsProperty(name="outcome")
     private String outcome;
+    
+    @JsConstructor
+    public AppBannerPromptResult(){
+        super();
+    }
     
     @JsProperty(name="platform")
     public native String getPlatform();

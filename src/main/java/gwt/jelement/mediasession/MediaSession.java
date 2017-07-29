@@ -16,10 +16,8 @@
  */
 package gwt.jelement.mediasession;
 
-import gwt.jelement.mediasession.MediaMetadata;
-import gwt.jelement.mediasession.MediaSessionAction;
-import gwt.jelement.mediasession.MediaSessionActionHandler;
-import gwt.jelement.mediasession.MediaSessionPlaybackState;
+import gwt.jelement.core.JsObject;
+import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
@@ -28,9 +26,14 @@ import jsinterop.annotations.JsType;
 import jsinterop.base.Any;
 
 @JsType(namespace = JsPackage.GLOBAL, name="MediaSession", isNative = true)
-public class MediaSession{
+public class MediaSession extends JsObject{
     @JsProperty(name="playbackState")
     private String playbackState;
+    
+    @JsConstructor
+    public MediaSession(){
+        super();
+    }
     
     @JsProperty(name="metadata")
     public native MediaMetadata getMetadata();

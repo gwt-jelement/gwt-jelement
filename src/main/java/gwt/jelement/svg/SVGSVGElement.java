@@ -16,20 +16,7 @@
  */
 package gwt.jelement.svg;
 
-import gwt.jelement.dom.Element;
 import gwt.jelement.dom.NodeList;
-import gwt.jelement.svg.SVGAngle;
-import gwt.jelement.svg.SVGAnimatedLength;
-import gwt.jelement.svg.SVGAnimatedPreserveAspectRatio;
-import gwt.jelement.svg.SVGAnimatedRect;
-import gwt.jelement.svg.SVGElement;
-import gwt.jelement.svg.SVGGraphicsElement;
-import gwt.jelement.svg.SVGLength;
-import gwt.jelement.svg.SVGMatrix;
-import gwt.jelement.svg.SVGNumber;
-import gwt.jelement.svg.SVGPoint;
-import gwt.jelement.svg.SVGRect;
-import gwt.jelement.svg.SVGTransform;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
@@ -124,7 +111,7 @@ public class SVGSVGElement extends SVGGraphicsElement{
     public native float getCurrentTime();
     
     @JsMethod(name = "getElementById")
-    public native <T extends Element> T getElementById(String elementId);
+    public native <T> T getElementById(String elementId);
     
     @JsMethod(name = "getEnclosureList")
     public native NodeList getEnclosureList(SVGRect rect, SVGElement referenceElement);

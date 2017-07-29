@@ -16,9 +16,6 @@
  */
 package gwt.jelement.dom;
 
-import gwt.jelement.dom.Element;
-import gwt.jelement.dom.Node;
-import gwt.jelement.dom.NodeList;
 import gwt.jelement.html.HTMLCollection;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
@@ -53,7 +50,7 @@ public class DocumentFragment extends Node{
     public native void append(String... nodes);
     
     @JsMethod(name = "getElementById")
-    public native <T extends Element> T getElementById(String elementId);
+    public native <T> T getElementById(String elementId);
     
     @JsMethod(name = "prepend")
     public native void prepend(Node... nodes);
@@ -62,7 +59,7 @@ public class DocumentFragment extends Node{
     public native void prepend(String... nodes);
     
     @JsMethod(name = "querySelector")
-    public native <T extends Element> T querySelector(String selectors);
+    public native <T> T querySelector(String selectors);
     
     @JsMethod(name = "querySelectorAll")
     public native NodeList querySelectorAll(String selectors);

@@ -16,16 +16,27 @@
  */
 package gwt.jelement.mediasource;
 
-import gwt.jelement.mediasource.TrackDefaultType;
+import gwt.jelement.core.JsObject;
+import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="TrackDefault", isNative = true)
-public class TrackDefault{
+public class TrackDefault extends JsObject{
     @JsProperty(name="type")
     private String type;
+    
+    @JsConstructor
+    public TrackDefault(TrackDefaultType type, String language, String label, String[] kinds){
+        super();
+    }
+    
+    @JsConstructor
+    public TrackDefault(TrackDefaultType type, String language, String label, String[] kinds, String byteStreamTrackID){
+        super();
+    }
     
     @JsProperty(name="byteStreamTrackID")
     public native String getByteStreamTrackID();

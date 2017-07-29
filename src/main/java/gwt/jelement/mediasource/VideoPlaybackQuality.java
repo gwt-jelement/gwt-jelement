@@ -16,13 +16,20 @@
  */
 package gwt.jelement.mediasource;
 
+import gwt.jelement.core.JsObject;
+import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="VideoPlaybackQuality", isNative = true)
-public class VideoPlaybackQuality{
+public class VideoPlaybackQuality extends JsObject{
+    @JsConstructor
+    public VideoPlaybackQuality(){
+        super();
+    }
+    
     @JsProperty(name="creationTime")
     public native double getCreationTime();
     

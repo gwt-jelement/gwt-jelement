@@ -16,13 +16,20 @@
  */
 package gwt.jelement.frame;
 
+import gwt.jelement.core.JsObject;
+import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="NavigatorOnLine", isNative = true)
-public class NavigatorOnLine{
+public class NavigatorOnLine extends JsObject{
+    @JsConstructor
+    public NavigatorOnLine(){
+        super();
+    }
+    
     @JsProperty(name="onLine")
     public native boolean getOnLine();
     

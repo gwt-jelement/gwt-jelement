@@ -17,16 +17,11 @@
 package gwt.jelement.fetch;
 
 import gwt.jelement.core.ArrayBuffer;
-import gwt.jelement.fetch.Headers;
-import gwt.jelement.fetch.ReferrerPolicy;
-import gwt.jelement.fetch.Request;
-import gwt.jelement.fetch.RequestCache;
-import gwt.jelement.fetch.RequestMode;
-import gwt.jelement.fetch.RequestRedirect;
+import gwt.jelement.core.JsObject;
 import gwt.jelement.fileapi.Blob;
 import gwt.jelement.html.FormData;
-import gwt.jelement.workers.RequestCredentials;
 import elemental2.promise.Promise;
+import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
@@ -34,7 +29,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="Request", isNative = true)
-public class Request{
+public class Request extends JsObject{
     @JsProperty(name="referrerPolicy")
     private String referrerPolicy;
     
@@ -49,6 +44,26 @@ public class Request{
     
     @JsProperty(name="redirect")
     private String redirect;
+    
+    @JsConstructor
+    public Request(Request input){
+        super();
+    }
+    
+    @JsConstructor
+    public Request(Request input, Object requestInitDict){
+        super();
+    }
+    
+    @JsConstructor
+    public Request(String input){
+        super();
+    }
+    
+    @JsConstructor
+    public Request(String input, Object requestInitDict){
+        super();
+    }
     
     @JsProperty(name="method")
     public native String getMethod();

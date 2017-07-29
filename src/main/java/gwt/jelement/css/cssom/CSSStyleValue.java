@@ -16,13 +16,20 @@
  */
 package gwt.jelement.css.cssom;
 
+import gwt.jelement.core.JsObject;
+import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="CSSStyleValue", isNative = true)
-public class CSSStyleValue{
+public class CSSStyleValue extends JsObject{
+    @JsConstructor
+    public CSSStyleValue(){
+        super();
+    }
+    
     @JsMethod(name = "parse")
     public static native Object parse(String property, String cssText);
     

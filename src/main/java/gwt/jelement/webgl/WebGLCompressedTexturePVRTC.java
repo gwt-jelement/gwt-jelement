@@ -16,15 +16,22 @@
  */
 package gwt.jelement.webgl;
 
+import gwt.jelement.core.JsObject;
+import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="WebGLCompressedTexturePVRTC", isNative = true)
-public class WebGLCompressedTexturePVRTC{
+public class WebGLCompressedTexturePVRTC extends JsObject{
     public static double COMPRESSED_RGB_PVRTC_4BPPV1_IMG;
     public static double COMPRESSED_RGB_PVRTC_2BPPV1_IMG;
     public static double COMPRESSED_RGBA_PVRTC_4BPPV1_IMG;
     public static double COMPRESSED_RGBA_PVRTC_2BPPV1_IMG;
+    
+    @JsConstructor
+    public WebGLCompressedTexturePVRTC(){
+        super();
+    }
     
 }

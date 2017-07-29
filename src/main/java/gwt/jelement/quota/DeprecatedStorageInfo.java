@@ -16,18 +16,22 @@
  */
 package gwt.jelement.quota;
 
-import gwt.jelement.quota.StorageErrorCallback;
-import gwt.jelement.quota.StorageQuotaCallback;
-import gwt.jelement.quota.StorageUsageCallback;
+import gwt.jelement.core.JsObject;
+import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="DeprecatedStorageInfo", isNative = true)
-public class DeprecatedStorageInfo{
+public class DeprecatedStorageInfo extends JsObject{
     public static short TEMPORARY;
     public static short PERSISTENT;
+    
+    @JsConstructor
+    public DeprecatedStorageInfo(){
+        super();
+    }
     
     @JsMethod(name = "queryUsageAndQuota")
     public native void queryUsageAndQuota(short storageType);

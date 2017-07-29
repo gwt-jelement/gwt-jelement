@@ -16,13 +16,20 @@
  */
 package gwt.jelement.canvas2d;
 
+import gwt.jelement.core.JsObject;
+import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="CanvasPath", isNative = true)
-public class CanvasPath{
+public class CanvasPath extends JsObject{
+    @JsConstructor
+    public CanvasPath(){
+        super();
+    }
+    
     @JsMethod(name = "arc")
     public native void arc(float x, float y, float radius, float startAngle, float endAngle);
     

@@ -16,11 +16,6 @@
  */
 package gwt.jelement.dom;
 
-import gwt.jelement.dom.Document;
-import gwt.jelement.dom.Element;
-import gwt.jelement.dom.GetRootNodeOptions;
-import gwt.jelement.dom.Node;
-import gwt.jelement.dom.NodeList;
 import gwt.jelement.events.EventTarget;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;

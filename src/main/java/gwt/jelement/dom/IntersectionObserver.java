@@ -16,8 +16,8 @@
  */
 package gwt.jelement.dom;
 
-import gwt.jelement.dom.Element;
-import gwt.jelement.dom.IntersectionObserverEntry;
+import gwt.jelement.core.JsObject;
+import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
@@ -25,7 +25,12 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="IntersectionObserver", isNative = true)
-public class IntersectionObserver{
+public class IntersectionObserver extends JsObject{
+    @JsConstructor
+    public IntersectionObserver(){
+        super();
+    }
+    
     @JsProperty(name="root")
     public native Element getRoot();
     

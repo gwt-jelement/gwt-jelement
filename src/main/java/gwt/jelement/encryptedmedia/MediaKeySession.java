@@ -18,7 +18,6 @@ package gwt.jelement.encryptedmedia;
 
 import gwt.jelement.core.ArrayBuffer;
 import gwt.jelement.core.ArrayBufferView;
-import gwt.jelement.encryptedmedia.MediaKeyStatusMap;
 import gwt.jelement.events.EventHandlerNonNull;
 import gwt.jelement.events.EventTarget;
 import elemental2.promise.Promise;

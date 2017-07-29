@@ -17,7 +17,6 @@
 package gwt.jelement.page.scrolling;
 
 import jsinterop.annotations.JsFunction;
-import gwt.jelement.page.scrolling.ScrollState;
 
 @JsFunction
 public interface ScrollStateCallback{

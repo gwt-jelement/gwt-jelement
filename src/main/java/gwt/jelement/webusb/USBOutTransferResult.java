@@ -16,7 +16,7 @@
  */
 package gwt.jelement.webusb;
 
-import gwt.jelement.webusb.USBTransferStatus;
+import gwt.jelement.core.JsObject;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
@@ -24,16 +24,18 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="USBOutTransferResult", isNative = true)
-public class USBOutTransferResult{
+public class USBOutTransferResult extends JsObject{
     @JsProperty(name="status")
     private String status;
     
     @JsConstructor
     public USBOutTransferResult(USBTransferStatus status){
+        super();
     }
     
     @JsConstructor
     public USBOutTransferResult(USBTransferStatus status, double bytesWritten){
+        super();
     }
     
     @JsProperty(name="bytesWritten")

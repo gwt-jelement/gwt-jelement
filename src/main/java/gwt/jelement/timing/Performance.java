@@ -18,10 +18,6 @@ package gwt.jelement.timing;
 
 import gwt.jelement.events.EventHandlerNonNull;
 import gwt.jelement.events.EventTarget;
-import gwt.jelement.timing.MemoryInfo;
-import gwt.jelement.timing.PerformanceEntry;
-import gwt.jelement.timing.PerformanceNavigation;
-import gwt.jelement.timing.PerformanceTiming;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;

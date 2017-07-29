@@ -16,7 +16,7 @@
  */
 package gwt.jelement.bluetooth;
 
-import gwt.jelement.bluetooth.BluetoothLEScanFilterInit;
+import gwt.jelement.core.JsObject;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -24,7 +24,7 @@ import jsinterop.annotations.JsType;
 import jsinterop.base.Js;
 
 @JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
-public class RequestDeviceOptions{
+public class RequestDeviceOptions extends JsObject{
 
     @JsProperty(name="filters")
     private BluetoothLEScanFilterInit[] filters;

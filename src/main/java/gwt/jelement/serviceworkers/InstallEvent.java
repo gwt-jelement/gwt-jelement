@@ -16,9 +16,6 @@
  */
 package gwt.jelement.serviceworkers;
 
-import gwt.jelement.serviceworkers.ExtendableEvent;
-import gwt.jelement.serviceworkers.ExtendableEventInit;
-import gwt.jelement.serviceworkers.ForeignFetchOptions;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;

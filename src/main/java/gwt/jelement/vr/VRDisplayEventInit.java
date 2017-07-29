@@ -17,8 +17,6 @@
 package gwt.jelement.vr;
 
 import gwt.jelement.events.EventInit;
-import gwt.jelement.vr.VRDisplay;
-import gwt.jelement.vr.VRDisplayEventReason;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;

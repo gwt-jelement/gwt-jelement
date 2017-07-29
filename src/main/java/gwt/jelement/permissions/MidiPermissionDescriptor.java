@@ -16,7 +16,6 @@
  */
 package gwt.jelement.permissions;
 
-import gwt.jelement.permissions.PermissionDescriptor;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;

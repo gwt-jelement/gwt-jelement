@@ -21,27 +21,6 @@ import gwt.jelement.animation.DocumentTimeline;
 import gwt.jelement.core.Function;
 import gwt.jelement.css.FontFaceSet;
 import gwt.jelement.css.StyleSheetList;
-import gwt.jelement.dom.AddressSpace;
-import gwt.jelement.dom.Attr;
-import gwt.jelement.dom.CDATASection;
-import gwt.jelement.dom.Comment;
-import gwt.jelement.dom.DOMImplementation;
-import gwt.jelement.dom.DocumentFragment;
-import gwt.jelement.dom.DocumentReadyState;
-import gwt.jelement.dom.DocumentType;
-import gwt.jelement.dom.Element;
-import gwt.jelement.dom.ElementRegistrationOptions;
-import gwt.jelement.dom.Node;
-import gwt.jelement.dom.NodeFilter;
-import gwt.jelement.dom.NodeIterator;
-import gwt.jelement.dom.NodeList;
-import gwt.jelement.dom.ProcessingInstruction;
-import gwt.jelement.dom.Range;
-import gwt.jelement.dom.Text;
-import gwt.jelement.dom.Touch;
-import gwt.jelement.dom.TouchList;
-import gwt.jelement.dom.TreeWalker;
-import gwt.jelement.dom.VisibilityState;
 import gwt.jelement.editing.Selection;
 import gwt.jelement.events.Event;
 import gwt.jelement.events.EventHandlerNonNull;
@@ -1559,22 +1538,22 @@ public class Document extends Node{
     public native DocumentFragment createDocumentFragment();
     
     @JsMethod(name = "createElement")
-    public native <T extends Element> T createElement(String localName);
+    public native <T> T createElement(String localName);
     
     @JsMethod(name = "createElement")
-    public native <T extends Element> T createElement(String localName, String options);
+    public native <T> T createElement(String localName, String options);
     
     @JsMethod(name = "createElement")
-    public native <T extends Element> T createElement(String localName, Object options);
+    public native <T> T createElement(String localName, Object options);
     
     @JsMethod(name = "createElementNS")
-    public native <T extends Element> T createElementNS(String namespaceURI, String qualifiedName);
+    public native <T> T createElementNS(String namespaceURI, String qualifiedName);
     
     @JsMethod(name = "createElementNS")
-    public native <T extends Element> T createElementNS(String namespaceURI, String qualifiedName, String options);
+    public native <T> T createElementNS(String namespaceURI, String qualifiedName, String options);
     
     @JsMethod(name = "createElementNS")
-    public native <T extends Element> T createElementNS(String namespaceURI, String qualifiedName, Object options);
+    public native <T> T createElementNS(String namespaceURI, String qualifiedName, Object options);
     
     @JsMethod(name = "createEvent")
     public native Event createEvent(String eventType);
@@ -1670,7 +1649,7 @@ public class Document extends Node{
     public native Animation[] getAnimations();
     
     @JsMethod(name = "getElementById")
-    public native <T extends Element> T getElementById(String elementId);
+    public native <T> T getElementById(String elementId);
     
     @JsMethod(name = "getElementsByClassName")
     public native HTMLCollection getElementsByClassName(String classNames);
@@ -1721,7 +1700,7 @@ public class Document extends Node{
     public native String queryCommandValue(String commandId);
     
     @JsMethod(name = "querySelector")
-    public native <T extends Element> T querySelector(String selectors);
+    public native <T> T querySelector(String selectors);
     
     @JsMethod(name = "querySelectorAll")
     public native NodeList querySelectorAll(String selectors);

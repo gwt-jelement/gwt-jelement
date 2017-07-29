@@ -16,7 +16,6 @@
  */
 package gwt.jelement.webaudio;
 
-import gwt.jelement.webaudio.PeriodicWaveConstraints;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;

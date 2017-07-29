@@ -20,8 +20,6 @@ import gwt.jelement.events.EventTarget;
 import gwt.jelement.fileapi.Blob;
 import gwt.jelement.html.canvas.CanvasContextCreationAttributes;
 import gwt.jelement.imagebitmap.ImageBitmap;
-import gwt.jelement.offscreencanvas.ImageEncodeOptions;
-import gwt.jelement.offscreencanvas.OffscreenRenderingContextType;
 import gwt.jelement.offscreencanvas2d.OffscreenCanvasRenderingContext2D;
 import gwt.jelement.webgl.WebGL2RenderingContext;
 import gwt.jelement.webgl.WebGLRenderingContext;

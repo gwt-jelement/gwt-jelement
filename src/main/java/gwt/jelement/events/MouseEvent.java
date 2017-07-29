@@ -17,9 +17,6 @@
 package gwt.jelement.events;
 
 import gwt.jelement.dom.Node;
-import gwt.jelement.events.EventTarget;
-import gwt.jelement.events.MouseEventInit;
-import gwt.jelement.events.UIEvent;
 import gwt.jelement.frame.Window;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;

@@ -16,14 +16,17 @@
  */
 package gwt.jelement.fileapi;
 
+import gwt.jelement.core.JsObject;
+import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
-import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="FileList", isNative = true)
-public class FileList{
-    @JsProperty(name="length")
-    public native double getLength();
+public class FileList extends JsObject{
+    @JsConstructor
+    public FileList(){
+        super();
+    }
     
 }

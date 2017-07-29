@@ -16,8 +16,6 @@
  */
 package gwt.jelement.animation;
 
-import gwt.jelement.animation.AnimationTimeline;
-import gwt.jelement.animation.DocumentTimelineOptions;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;

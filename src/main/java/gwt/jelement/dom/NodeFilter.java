@@ -17,7 +17,6 @@
 package gwt.jelement.dom;
 
 import jsinterop.annotations.JsFunction;
-import gwt.jelement.dom.Node;
 
 @JsFunction
 public interface NodeFilter{

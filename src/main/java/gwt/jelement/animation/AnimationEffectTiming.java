@@ -16,8 +16,6 @@
  */
 package gwt.jelement.animation;
 
-import gwt.jelement.animation.AnimationEffectTimingReadOnly;
-import gwt.jelement.animation.PlaybackDirection;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;

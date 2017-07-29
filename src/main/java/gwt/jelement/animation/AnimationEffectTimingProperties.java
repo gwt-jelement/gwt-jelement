@@ -16,9 +16,7 @@
  */
 package gwt.jelement.animation;
 
-import gwt.jelement.animation.AnimationEffectTimingReadOnly;
-import gwt.jelement.animation.FillMode;
-import gwt.jelement.animation.PlaybackDirection;
+import gwt.jelement.core.JsObject;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -26,7 +24,7 @@ import jsinterop.annotations.JsType;
 import jsinterop.base.Js;
 
 @JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
-public class AnimationEffectTimingProperties{
+public class AnimationEffectTimingProperties extends JsObject{
 
     @JsProperty(name="delay")
     private double delay;

@@ -16,9 +16,6 @@
  */
 package gwt.jelement.background_fetch;
 
-import gwt.jelement.background_fetch.BackgroundFetchEvent;
-import gwt.jelement.background_fetch.BackgroundFetchSettledFetch;
-import gwt.jelement.background_fetch.BackgroundFetchedEventInit;
 import elemental2.promise.Promise;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;

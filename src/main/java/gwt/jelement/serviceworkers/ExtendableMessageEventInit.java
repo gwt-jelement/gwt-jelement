@@ -17,10 +17,6 @@
 package gwt.jelement.serviceworkers;
 
 import gwt.jelement.dom.MessagePort;
-import gwt.jelement.serviceworkers.Client;
-import gwt.jelement.serviceworkers.ExtendableEventInit;
-import gwt.jelement.serviceworkers.ExtendableMessageEvent;
-import gwt.jelement.serviceworkers.ServiceWorker;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;

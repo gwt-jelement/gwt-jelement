@@ -16,13 +16,20 @@
  */
 package gwt.jelement.frame;
 
+import gwt.jelement.core.JsObject;
+import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="External", isNative = true)
-public class External{
+public class External extends JsObject{
+    @JsConstructor
+    public External(){
+        super();
+    }
+    
     @JsMethod(name = "AddSearchProvider")
     public native void AddSearchProvider();
     

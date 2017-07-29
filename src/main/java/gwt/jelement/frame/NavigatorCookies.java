@@ -16,13 +16,20 @@
  */
 package gwt.jelement.frame;
 
+import gwt.jelement.core.JsObject;
+import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="NavigatorCookies", isNative = true)
-public class NavigatorCookies{
+public class NavigatorCookies extends JsObject{
+    @JsConstructor
+    public NavigatorCookies(){
+        super();
+    }
+    
     @JsProperty(name="cookieEnabled")
     public native boolean getCookieEnabled();
     

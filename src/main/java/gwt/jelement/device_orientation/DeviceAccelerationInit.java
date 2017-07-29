@@ -16,13 +16,14 @@
  */
 package gwt.jelement.device_orientation;
 
+import gwt.jelement.core.JsObject;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
-public class DeviceAccelerationInit{
+public class DeviceAccelerationInit extends JsObject{
 
     @JsProperty(name="x")
     private double x;

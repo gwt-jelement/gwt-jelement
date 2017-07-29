@@ -16,13 +16,20 @@
  */
 package gwt.jelement.frame;
 
+import gwt.jelement.core.JsObject;
+import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="Console", isNative = true)
-public class Console{
+public class Console extends JsObject{
+    @JsConstructor
+    public Console(){
+        super();
+    }
+    
     @JsMethod(name = "assert")
     public native void assert_();
     

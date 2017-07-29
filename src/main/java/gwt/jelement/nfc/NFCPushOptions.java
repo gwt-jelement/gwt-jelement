@@ -16,14 +16,14 @@
  */
 package gwt.jelement.nfc;
 
-import gwt.jelement.nfc.NFCPushTarget;
+import gwt.jelement.core.JsObject;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
-public class NFCPushOptions{
+public class NFCPushOptions extends JsObject{
 
     @JsProperty(name="target")
     private String target;

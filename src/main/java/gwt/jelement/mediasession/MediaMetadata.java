@@ -16,8 +16,7 @@
  */
 package gwt.jelement.mediasession;
 
-import gwt.jelement.mediasession.MediaImage;
-import gwt.jelement.mediasession.MediaMetadataInit;
+import gwt.jelement.core.JsObject;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
@@ -25,13 +24,15 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="MediaMetadata", isNative = true)
-public class MediaMetadata{
+public class MediaMetadata extends JsObject{
     @JsConstructor
     public MediaMetadata(){
+        super();
     }
     
     @JsConstructor
     public MediaMetadata(MediaMetadataInit metadata){
+        super();
     }
     
     @JsProperty(name="title")

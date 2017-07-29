@@ -16,6 +16,8 @@
  */
 package gwt.jelement.imagebitmap;
 
+import gwt.jelement.core.JsObject;
+import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
@@ -23,7 +25,12 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="ImageBitmap", isNative = true)
-public class ImageBitmap{
+public class ImageBitmap extends JsObject{
+    @JsConstructor
+    public ImageBitmap(){
+        super();
+    }
+    
     @JsProperty(name="width")
     public native double getWidth();
     

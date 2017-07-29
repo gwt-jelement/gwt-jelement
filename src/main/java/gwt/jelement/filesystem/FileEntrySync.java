@@ -17,8 +17,6 @@
 package gwt.jelement.filesystem;
 
 import gwt.jelement.fileapi.File;
-import gwt.jelement.filesystem.EntrySync;
-import gwt.jelement.filesystem.FileWriterSync;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;

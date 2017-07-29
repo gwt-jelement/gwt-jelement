@@ -16,9 +16,9 @@
  */
 package gwt.jelement.serviceworkers;
 
+import gwt.jelement.core.JsObject;
 import gwt.jelement.dom.MessagePort;
-import gwt.jelement.serviceworkers.ClientType;
-import gwt.jelement.serviceworkers.ContextFrameType;
+import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
@@ -26,12 +26,17 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="Client", isNative = true)
-public class Client{
+public class Client extends JsObject{
     @JsProperty(name="type")
     private String type;
     
     @JsProperty(name="frameType")
     private String frameType;
+    
+    @JsConstructor
+    public Client(){
+        super();
+    }
     
     @JsProperty(name="url")
     public native String getUrl();

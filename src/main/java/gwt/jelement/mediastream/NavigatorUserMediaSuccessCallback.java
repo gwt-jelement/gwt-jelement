@@ -17,7 +17,6 @@
 package gwt.jelement.mediastream;
 
 import jsinterop.annotations.JsFunction;
-import gwt.jelement.mediastream.MediaStream;
 
 @JsFunction
 public interface NavigatorUserMediaSuccessCallback{

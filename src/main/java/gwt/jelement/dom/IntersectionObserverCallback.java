@@ -17,8 +17,6 @@
 package gwt.jelement.dom;
 
 import jsinterop.annotations.JsFunction;
-import gwt.jelement.dom.IntersectionObserver;
-import gwt.jelement.dom.IntersectionObserverEntry;
 
 @JsFunction
 public interface IntersectionObserverCallback{

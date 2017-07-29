@@ -16,13 +16,20 @@
  */
 package gwt.jelement.timing;
 
+import gwt.jelement.core.JsObject;
+import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="PerformanceTiming", isNative = true)
-public class PerformanceTiming{
+public class PerformanceTiming extends JsObject{
+    @JsConstructor
+    public PerformanceTiming(){
+        super();
+    }
+    
     @JsProperty(name="navigationStart")
     public native double getNavigationStart();
     

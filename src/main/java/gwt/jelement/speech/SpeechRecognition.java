@@ -19,7 +19,6 @@ package gwt.jelement.speech;
 import gwt.jelement.events.EventHandlerNonNull;
 import gwt.jelement.events.EventTarget;
 import gwt.jelement.mediastream.MediaStreamTrack;
-import gwt.jelement.speech.SpeechGrammarList;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;

@@ -16,14 +16,20 @@
  */
 package gwt.jelement.filesystem;
 
-import gwt.jelement.filesystem.EntrySync;
+import gwt.jelement.core.JsObject;
+import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="DirectoryReaderSync", isNative = true)
-public class DirectoryReaderSync{
+public class DirectoryReaderSync extends JsObject{
+    @JsConstructor
+    public DirectoryReaderSync(){
+        super();
+    }
+    
     @JsMethod(name = "readEntries")
     public native EntrySync[] readEntries();
     

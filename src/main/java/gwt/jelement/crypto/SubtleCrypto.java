@@ -18,15 +18,21 @@ package gwt.jelement.crypto;
 
 import gwt.jelement.core.ArrayBuffer;
 import gwt.jelement.core.ArrayBufferView;
-import gwt.jelement.crypto.CryptoKey;
+import gwt.jelement.core.JsObject;
 import elemental2.promise.Promise;
+import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="SubtleCrypto", isNative = true)
-public class SubtleCrypto{
+public class SubtleCrypto extends JsObject{
+    @JsConstructor
+    public SubtleCrypto(){
+        super();
+    }
+    
     @JsMethod(name = "decrypt")
     public native Promise decrypt(Object algorithm, CryptoKey key, ArrayBuffer data);
     

@@ -16,13 +16,20 @@
  */
 package gwt.jelement.vr;
 
+import gwt.jelement.core.JsObject;
+import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="VRDisplayCapabilities", isNative = true)
-public class VRDisplayCapabilities{
+public class VRDisplayCapabilities extends JsObject{
+    @JsConstructor
+    public VRDisplayCapabilities(){
+        super();
+    }
+    
     @JsProperty(name="hasPosition")
     public native boolean getHasPosition();
     

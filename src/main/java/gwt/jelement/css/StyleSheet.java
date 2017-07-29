@@ -16,16 +16,21 @@
  */
 package gwt.jelement.css;
 
-import gwt.jelement.css.MediaList;
-import gwt.jelement.css.StyleSheet;
+import gwt.jelement.core.JsObject;
 import gwt.jelement.dom.Node;
+import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="StyleSheet", isNative = true)
-public class StyleSheet{
+public class StyleSheet extends JsObject{
+    @JsConstructor
+    public StyleSheet(){
+        super();
+    }
+    
     @JsProperty(name="type")
     public native String getType();
     

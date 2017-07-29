@@ -18,9 +18,6 @@ package gwt.jelement.html;
 
 import gwt.jelement.dom.DOMTokenList;
 import gwt.jelement.dom.NodeList;
-import gwt.jelement.html.HTMLElement;
-import gwt.jelement.html.HTMLFormElement;
-import gwt.jelement.html.ValidityState;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;

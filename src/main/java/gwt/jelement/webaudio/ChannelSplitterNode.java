@@ -16,9 +16,6 @@
  */
 package gwt.jelement.webaudio;
 
-import gwt.jelement.webaudio.AudioNode;
-import gwt.jelement.webaudio.BaseAudioContext;
-import gwt.jelement.webaudio.ChannelSplitterOptions;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;

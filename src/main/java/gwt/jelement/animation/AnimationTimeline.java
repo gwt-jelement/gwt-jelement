@@ -16,13 +16,20 @@
  */
 package gwt.jelement.animation;
 
+import gwt.jelement.core.JsObject;
+import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="AnimationTimeline", isNative = true)
-public class AnimationTimeline{
+public class AnimationTimeline extends JsObject{
+    @JsConstructor
+    public AnimationTimeline(){
+        super();
+    }
+    
     @JsProperty(name="currentTime")
     public native double getCurrentTime();
     

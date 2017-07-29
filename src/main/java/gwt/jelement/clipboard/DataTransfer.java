@@ -16,7 +16,7 @@
  */
 package gwt.jelement.clipboard;
 
-import gwt.jelement.clipboard.DataTransferItemList;
+import gwt.jelement.core.JsObject;
 import gwt.jelement.dom.Element;
 import gwt.jelement.fileapi.FileList;
 import jsinterop.annotations.JsConstructor;
@@ -27,9 +27,10 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="DataTransfer", isNative = true)
-public class DataTransfer{
+public class DataTransfer extends JsObject{
     @JsConstructor
     public DataTransfer(){
+        super();
     }
     
     @JsProperty(name="dropEffect")

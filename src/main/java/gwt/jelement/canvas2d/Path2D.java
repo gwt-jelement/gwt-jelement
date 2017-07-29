@@ -16,7 +16,7 @@
  */
 package gwt.jelement.canvas2d;
 
-import gwt.jelement.canvas2d.Path2D;
+import gwt.jelement.core.JsObject;
 import gwt.jelement.svg.SVGMatrix;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
@@ -25,17 +25,20 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="Path2D", isNative = true)
-public class Path2D{
+public class Path2D extends JsObject{
     @JsConstructor
     public Path2D(){
+        super();
     }
     
     @JsConstructor
     public Path2D(Path2D path){
+        super();
     }
     
     @JsConstructor
     public Path2D(String text){
+        super();
     }
     
     @JsMethod(name = "addPath")

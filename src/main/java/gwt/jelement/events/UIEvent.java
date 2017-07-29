@@ -16,8 +16,6 @@
  */
 package gwt.jelement.events;
 
-import gwt.jelement.events.Event;
-import gwt.jelement.events.UIEventInit;
 import gwt.jelement.frame.Window;
 import gwt.jelement.input.InputDeviceCapabilities;
 import jsinterop.annotations.JsConstructor;

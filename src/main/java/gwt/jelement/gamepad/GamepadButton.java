@@ -16,13 +16,20 @@
  */
 package gwt.jelement.gamepad;
 
+import gwt.jelement.core.JsObject;
+import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="GamepadButton", isNative = true)
-public class GamepadButton{
+public class GamepadButton extends JsObject{
+    @JsConstructor
+    public GamepadButton(){
+        super();
+    }
+    
     @JsProperty(name="pressed")
     public native boolean getPressed();
     

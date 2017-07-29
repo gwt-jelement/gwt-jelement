@@ -16,8 +16,7 @@
  */
 package gwt.jelement.animation;
 
-import gwt.jelement.animation.ScrollDirection;
-import gwt.jelement.animation.ScrollTimeline;
+import gwt.jelement.core.JsObject;
 import gwt.jelement.dom.Element;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
@@ -26,7 +25,7 @@ import jsinterop.annotations.JsType;
 import jsinterop.base.Js;
 
 @JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
-public class ScrollTimelineOptions{
+public class ScrollTimelineOptions extends JsObject{
 
     @JsProperty(name="scrollSource")
     private Element scrollSource;

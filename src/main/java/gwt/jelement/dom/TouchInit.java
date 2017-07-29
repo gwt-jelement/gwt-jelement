@@ -16,6 +16,7 @@
  */
 package gwt.jelement.dom;
 
+import gwt.jelement.core.JsObject;
 import gwt.jelement.events.EventTarget;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
@@ -23,7 +24,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
-public class TouchInit{
+public class TouchInit extends JsObject{
 
     @JsProperty(name="identifier")
     private double identifier;

@@ -16,6 +16,7 @@
  */
 package gwt.jelement.xml;
 
+import gwt.jelement.core.JsObject;
 import gwt.jelement.dom.Document;
 import gwt.jelement.dom.DocumentFragment;
 import gwt.jelement.dom.Node;
@@ -26,9 +27,10 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="XSLTProcessor", isNative = true)
-public class XSLTProcessor{
+public class XSLTProcessor extends JsObject{
     @JsConstructor
     public XSLTProcessor(){
+        super();
     }
     
     @JsMethod(name = "clearParameters")

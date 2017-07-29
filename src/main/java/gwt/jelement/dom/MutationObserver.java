@@ -16,16 +16,20 @@
  */
 package gwt.jelement.dom;
 
-import gwt.jelement.dom.MutationObserverInit;
-import gwt.jelement.dom.MutationRecord;
-import gwt.jelement.dom.Node;
+import gwt.jelement.core.JsObject;
+import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="MutationObserver", isNative = true)
-public class MutationObserver{
+public class MutationObserver extends JsObject{
+    @JsConstructor
+    public MutationObserver(){
+        super();
+    }
+    
     @JsMethod(name = "disconnect")
     public native void disconnect();
     

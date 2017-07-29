@@ -16,15 +16,20 @@
  */
 package gwt.jelement.svg;
 
-import gwt.jelement.svg.SVGAnimatedLength;
-import gwt.jelement.svg.SVGAnimatedString;
+import gwt.jelement.core.JsObject;
+import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="SVGFilterPrimitiveStandardAttributes", isNative = true)
-public class SVGFilterPrimitiveStandardAttributes{
+public class SVGFilterPrimitiveStandardAttributes extends JsObject{
+    @JsConstructor
+    public SVGFilterPrimitiveStandardAttributes(){
+        super();
+    }
+    
     @JsProperty(name="x")
     public native SVGAnimatedLength getX();
     

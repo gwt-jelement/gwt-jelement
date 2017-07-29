@@ -16,13 +16,20 @@
  */
 package gwt.jelement.peerconnection;
 
+import gwt.jelement.core.JsObject;
+import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="RTCRtpContributingSource", isNative = true)
-public class RTCRtpContributingSource{
+public class RTCRtpContributingSource extends JsObject{
+    @JsConstructor
+    public RTCRtpContributingSource(){
+        super();
+    }
+    
     @JsProperty(name="timestamp")
     public native double getTimestamp();
     

@@ -16,13 +16,14 @@
  */
 package gwt.jelement.webusb;
 
+import gwt.jelement.core.JsObject;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
-public class USBDeviceFilter{
+public class USBDeviceFilter extends JsObject{
 
     @JsProperty(name="vendorId")
     private short vendorId;

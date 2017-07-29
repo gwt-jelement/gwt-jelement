@@ -16,15 +16,21 @@
  */
 package gwt.jelement.presentation;
 
-import gwt.jelement.presentation.PresentationConnectionList;
+import gwt.jelement.core.JsObject;
 import elemental2.promise.Promise;
+import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="PresentationReceiver", isNative = true)
-public class PresentationReceiver{
+public class PresentationReceiver extends JsObject{
+    @JsConstructor
+    public PresentationReceiver(){
+        super();
+    }
+    
     @JsProperty(name="connectionList")
     public native Promise<PresentationConnectionList> getConnectionList();
     

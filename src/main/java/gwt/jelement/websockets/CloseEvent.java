@@ -17,7 +17,6 @@
 package gwt.jelement.websockets;
 
 import gwt.jelement.events.Event;
-import gwt.jelement.websockets.CloseEventInit;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;

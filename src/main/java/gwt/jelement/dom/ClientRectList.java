@@ -16,17 +16,19 @@
  */
 package gwt.jelement.dom;
 
-import gwt.jelement.dom.ClientRect;
+import gwt.jelement.core.JsObject;
+import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
-import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="ClientRectList", isNative = true)
-public class ClientRectList{
-    @JsProperty(name="length")
-    public native double getLength();
+public class ClientRectList extends JsObject{
+    @JsConstructor
+    public ClientRectList(){
+        super();
+    }
     
     @JsMethod(name = "item")
     public native ClientRect item(double index);

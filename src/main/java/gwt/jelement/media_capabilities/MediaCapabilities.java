@@ -16,17 +16,21 @@
  */
 package gwt.jelement.media_capabilities;
 
-import gwt.jelement.media_capabilities.MediaCapabilitiesInfo;
-import gwt.jelement.media_capabilities.MediaDecodingConfiguration;
-import gwt.jelement.media_capabilities.MediaEncodingConfiguration;
+import gwt.jelement.core.JsObject;
 import elemental2.promise.Promise;
+import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="MediaCapabilities", isNative = true)
-public class MediaCapabilities{
+public class MediaCapabilities extends JsObject{
+    @JsConstructor
+    public MediaCapabilities(){
+        super();
+    }
+    
     @JsMethod(name = "decodingInfo")
     public native Promise<MediaCapabilitiesInfo> decodingInfo(MediaDecodingConfiguration configuration);
     

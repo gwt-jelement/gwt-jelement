@@ -16,12 +16,19 @@
  */
 package gwt.jelement.webgl;
 
+import gwt.jelement.core.JsObject;
+import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="OESTextureHalfFloat", isNative = true)
-public class OESTextureHalfFloat{
+public class OESTextureHalfFloat extends JsObject{
     public static double HALF_FLOAT_OES;
+    
+    @JsConstructor
+    public OESTextureHalfFloat(){
+        super();
+    }
     
 }

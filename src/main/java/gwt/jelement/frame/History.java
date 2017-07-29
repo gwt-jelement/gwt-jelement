@@ -16,7 +16,8 @@
  */
 package gwt.jelement.frame;
 
-import gwt.jelement.frame.ScrollRestoration;
+import gwt.jelement.core.JsObject;
+import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
@@ -24,12 +25,14 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="History", isNative = true)
-public class History{
+public class History extends JsObject{
     @JsProperty(name="scrollRestoration")
     private String scrollRestoration;
     
-    @JsProperty(name="length")
-    public native double getLength();
+    @JsConstructor
+    public History(){
+        super();
+    }
     
     @JsProperty(name="state")
     public native Object getState();

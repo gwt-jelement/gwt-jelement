@@ -16,10 +16,8 @@
  */
 package gwt.jelement.xml;
 
+import gwt.jelement.core.JsObject;
 import gwt.jelement.dom.Node;
-import gwt.jelement.xml.XPathExpression;
-import gwt.jelement.xml.XPathNSResolver;
-import gwt.jelement.xml.XPathResult;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
@@ -27,9 +25,10 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="XPathEvaluator", isNative = true)
-public class XPathEvaluator{
+public class XPathEvaluator extends JsObject{
     @JsConstructor
     public XPathEvaluator(){
+        super();
     }
     
     @JsMethod(name = "createExpression")

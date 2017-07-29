@@ -17,10 +17,6 @@
 package gwt.jelement.html.track;
 
 import gwt.jelement.events.EventInit;
-import gwt.jelement.html.track.AudioTrack;
-import gwt.jelement.html.track.TextTrack;
-import gwt.jelement.html.track.TrackEvent;
-import gwt.jelement.html.track.VideoTrack;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;

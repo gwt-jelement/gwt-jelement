@@ -16,6 +16,7 @@
  */
 package gwt.jelement.peerconnection;
 
+import gwt.jelement.core.JsObject;
 import gwt.jelement.indexeddb.IDBObjectStoreParameters;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
@@ -24,7 +25,7 @@ import jsinterop.annotations.JsType;
 import jsinterop.base.Js;
 
 @JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
-public class RTCIceServer{
+public class RTCIceServer extends JsObject{
 
     @JsProperty(name="urls")
     private IDBObjectStoreParameters.KeyPathUnion urls;

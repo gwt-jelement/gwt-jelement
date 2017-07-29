@@ -16,12 +16,14 @@
  */
 package gwt.jelement.webgl;
 
+import gwt.jelement.core.JsObject;
+import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="WebGLCompressedTextureETC", isNative = true)
-public class WebGLCompressedTextureETC{
+public class WebGLCompressedTextureETC extends JsObject{
     public static double COMPRESSED_R11_EAC;
     public static double COMPRESSED_SIGNED_R11_EAC;
     public static double COMPRESSED_RG11_EAC;
@@ -32,5 +34,10 @@ public class WebGLCompressedTextureETC{
     public static double COMPRESSED_SRGB8_PUNCHTHROUGH_ALPHA1_ETC2;
     public static double COMPRESSED_RGBA8_ETC2_EAC;
     public static double COMPRESSED_SRGB8_ALPHA8_ETC2_EAC;
+    
+    @JsConstructor
+    public WebGLCompressedTextureETC(){
+        super();
+    }
     
 }

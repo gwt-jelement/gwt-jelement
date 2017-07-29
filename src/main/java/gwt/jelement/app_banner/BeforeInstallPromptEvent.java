@@ -16,8 +16,6 @@
  */
 package gwt.jelement.app_banner;
 
-import gwt.jelement.app_banner.AppBannerPromptResult;
-import gwt.jelement.app_banner.BeforeInstallPromptEventInit;
 import gwt.jelement.events.Event;
 import elemental2.promise.Promise;
 import jsinterop.annotations.JsConstructor;

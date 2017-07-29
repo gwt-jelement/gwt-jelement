@@ -16,9 +16,8 @@
  */
 package gwt.jelement.indexeddb;
 
-import gwt.jelement.indexeddb.IDBCursorDirection;
-import gwt.jelement.indexeddb.IDBObjectStore;
-import gwt.jelement.indexeddb.IDBRequest;
+import gwt.jelement.core.JsObject;
+import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
@@ -27,12 +26,11 @@ import jsinterop.annotations.JsType;
 import jsinterop.base.Any;
 
 @JsType(namespace = JsPackage.GLOBAL, name="IDBIndex", isNative = true)
-public class IDBIndex{
-    @JsProperty(name="name")
-    public native String getName();
-    
-    @JsProperty(name="name")
-    public native void setName(String name);
+public class IDBIndex extends JsObject{
+    @JsConstructor
+    public IDBIndex(){
+        super();
+    }
     
     @JsProperty(name="objectStore")
     public native IDBObjectStore getObjectStore();

@@ -16,6 +16,7 @@
  */
 package gwt.jelement.dom;
 
+import gwt.jelement.core.JsObject;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
@@ -24,7 +25,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="DOMException", isNative = true)
-public class DOMException{
+public class DOMException extends JsObject{
     public static short INDEX_SIZE_ERR;
     public static short DOMSTRING_SIZE_ERR;
     public static short HIERARCHY_REQUEST_ERR;
@@ -53,21 +54,21 @@ public class DOMException{
     
     @JsConstructor
     public DOMException(){
+        super();
     }
     
     @JsConstructor
     public DOMException(String message){
+        super();
     }
     
     @JsConstructor
     public DOMException(String message, String name){
+        super();
     }
     
     @JsProperty(name="code")
     public native short getCode();
-    
-    @JsProperty(name="name")
-    public native String getName();
     
     @JsProperty(name="message")
     public native String getMessage();

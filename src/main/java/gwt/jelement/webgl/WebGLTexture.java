@@ -16,13 +16,20 @@
  */
 package gwt.jelement.webgl;
 
+import gwt.jelement.core.JsObject;
+import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="WebGLTexture", isNative = true)
-public class WebGLTexture{
+public class WebGLTexture extends JsObject{
+    @JsConstructor
+    public WebGLTexture(){
+        super();
+    }
+    
     @JsProperty(name="lastUploadedVideoWidth")
     public native double getLastUploadedVideoWidth();
     

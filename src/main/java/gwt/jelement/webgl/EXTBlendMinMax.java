@@ -16,13 +16,20 @@
  */
 package gwt.jelement.webgl;
 
+import gwt.jelement.core.JsObject;
+import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="EXTBlendMinMax", isNative = true)
-public class EXTBlendMinMax{
+public class EXTBlendMinMax extends JsObject{
     public static double MIN_EXT;
     public static double MAX_EXT;
+    
+    @JsConstructor
+    public EXTBlendMinMax(){
+        super();
+    }
     
 }

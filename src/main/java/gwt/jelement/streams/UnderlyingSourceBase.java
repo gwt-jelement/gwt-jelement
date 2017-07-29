@@ -16,14 +16,21 @@
  */
 package gwt.jelement.streams;
 
+import gwt.jelement.core.JsObject;
 import elemental2.promise.Promise;
+import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="UnderlyingSourceBase", isNative = true)
-public class UnderlyingSourceBase{
+public class UnderlyingSourceBase extends JsObject{
+    @JsConstructor
+    public UnderlyingSourceBase(){
+        super();
+    }
+    
     @JsMethod(name = "cancel")
     public native Promise<Void> cancel();
     

@@ -18,9 +18,6 @@ package gwt.jelement.html.track.vtt;
 
 import gwt.jelement.dom.DocumentFragment;
 import gwt.jelement.html.track.TextTrackCue;
-import gwt.jelement.html.track.vtt.AlignSetting;
-import gwt.jelement.html.track.vtt.DirectionSetting;
-import gwt.jelement.html.track.vtt.VTTRegion;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
@@ -78,7 +75,7 @@ public class VTTCue extends TextTrackCue{
     private String align;
     
     @JsConstructor
-    public VTTCue(){
+    public VTTCue(double startTime, double endTime, String text){
         super();
     }
     

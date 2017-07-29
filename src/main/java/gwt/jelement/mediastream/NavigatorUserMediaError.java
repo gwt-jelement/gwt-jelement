@@ -16,15 +16,19 @@
  */
 package gwt.jelement.mediastream;
 
+import gwt.jelement.core.JsObject;
+import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="NavigatorUserMediaError", isNative = true)
-public class NavigatorUserMediaError{
-    @JsProperty(name="name")
-    public native String getName();
+public class NavigatorUserMediaError extends JsObject{
+    @JsConstructor
+    public NavigatorUserMediaError(){
+        super();
+    }
     
     @JsProperty(name="message")
     public native String getMessage();

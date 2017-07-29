@@ -16,13 +16,20 @@
  */
 package gwt.jelement.timing;
 
+import gwt.jelement.core.JsObject;
+import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="PerformanceServerTiming", isNative = true)
-public class PerformanceServerTiming{
+public class PerformanceServerTiming extends JsObject{
+    @JsConstructor
+    public PerformanceServerTiming(){
+        super();
+    }
+    
     @JsProperty(name="metric")
     public native String getMetric();
     

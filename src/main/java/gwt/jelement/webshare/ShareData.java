@@ -16,13 +16,14 @@
  */
 package gwt.jelement.webshare;
 
+import gwt.jelement.core.JsObject;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
-public class ShareData{
+public class ShareData extends JsObject{
 
     @JsProperty(name="title")
     private String title;

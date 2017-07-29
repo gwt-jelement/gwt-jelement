@@ -16,12 +16,9 @@
  */
 package gwt.jelement.filesystem;
 
-import gwt.jelement.filesystem.DOMFileSystem;
-import gwt.jelement.filesystem.DirectoryEntry;
-import gwt.jelement.filesystem.EntryCallback;
-import gwt.jelement.filesystem.ErrorCallback;
-import gwt.jelement.filesystem.MetadataCallback;
+import gwt.jelement.core.JsObject;
 import gwt.jelement.html.VoidCallback;
+import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
@@ -29,15 +26,17 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="Entry", isNative = true)
-public class Entry{
+public class Entry extends JsObject{
+    @JsConstructor
+    public Entry(){
+        super();
+    }
+    
     @JsProperty(name="isFile")
     public native boolean getIsFile();
     
     @JsProperty(name="isDirectory")
     public native boolean getIsDirectory();
-    
-    @JsProperty(name="name")
-    public native String getName();
     
     @JsProperty(name="fullPath")
     public native String getFullPath();

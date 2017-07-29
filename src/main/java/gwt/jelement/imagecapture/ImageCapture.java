@@ -16,10 +16,9 @@
  */
 package gwt.jelement.imagecapture;
 
+import gwt.jelement.core.JsObject;
 import gwt.jelement.fileapi.Blob;
 import gwt.jelement.imagebitmap.ImageBitmap;
-import gwt.jelement.imagecapture.PhotoCapabilities;
-import gwt.jelement.imagecapture.PhotoSettings;
 import gwt.jelement.mediastream.MediaStreamTrack;
 import elemental2.promise.Promise;
 import jsinterop.annotations.JsConstructor;
@@ -30,9 +29,10 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="ImageCapture", isNative = true)
-public class ImageCapture{
+public class ImageCapture extends JsObject{
     @JsConstructor
     public ImageCapture(MediaStreamTrack track){
+        super();
     }
     
     @JsProperty(name="track")

@@ -16,15 +16,14 @@
  */
 package gwt.jelement.encryptedmedia;
 
-import gwt.jelement.encryptedmedia.MediaKeySystemMediaCapability;
-import gwt.jelement.encryptedmedia.MediaKeysRequirement;
+import gwt.jelement.core.JsObject;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
-public class MediaKeySystemConfiguration{
+public class MediaKeySystemConfiguration extends JsObject{
 
     @JsProperty(name="label")
     private String label;

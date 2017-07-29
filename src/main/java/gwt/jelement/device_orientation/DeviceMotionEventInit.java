@@ -16,8 +16,6 @@
  */
 package gwt.jelement.device_orientation;
 
-import gwt.jelement.device_orientation.DeviceAccelerationInit;
-import gwt.jelement.device_orientation.DeviceRotationRateInit;
 import gwt.jelement.events.EventInit;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;

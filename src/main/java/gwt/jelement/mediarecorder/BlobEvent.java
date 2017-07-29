@@ -18,7 +18,6 @@ package gwt.jelement.mediarecorder;
 
 import gwt.jelement.events.Event;
 import gwt.jelement.fileapi.Blob;
-import gwt.jelement.mediarecorder.BlobEventInit;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;

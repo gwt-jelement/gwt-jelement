@@ -17,9 +17,6 @@
 package gwt.jelement.webaudio;
 
 import gwt.jelement.core.Float32Array;
-import gwt.jelement.webaudio.AudioNode;
-import gwt.jelement.webaudio.AudioParam;
-import gwt.jelement.webaudio.BiquadFilterType;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
@@ -33,7 +30,12 @@ public class BiquadFilterNode extends AudioNode{
     private String type;
     
     @JsConstructor
-    public BiquadFilterNode(){
+    public BiquadFilterNode(BaseAudioContext context){
+        super();
+    }
+    
+    @JsConstructor
+    public BiquadFilterNode(BaseAudioContext context, BiquadFilterOptions options){
         super();
     }
     

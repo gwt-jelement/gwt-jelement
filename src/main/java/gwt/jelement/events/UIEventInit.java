@@ -16,7 +16,6 @@
  */
 package gwt.jelement.events;
 
-import gwt.jelement.events.EventInit;
 import gwt.jelement.frame.Window;
 import gwt.jelement.input.InputDeviceCapabilities;
 import jsinterop.annotations.JsOverlay;

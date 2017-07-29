@@ -16,17 +16,14 @@
  */
 package gwt.jelement.imagebitmap;
 
-import gwt.jelement.imagebitmap.ColorSpaceConversion;
-import gwt.jelement.imagebitmap.ImageOrientation;
-import gwt.jelement.imagebitmap.PremultiplyAlpha;
-import gwt.jelement.imagebitmap.ResizeQuality;
+import gwt.jelement.core.JsObject;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
-public class ImageBitmapOptions{
+public class ImageBitmapOptions extends JsObject{
 
     @JsProperty(name="imageOrientation")
     private String imageOrientation;

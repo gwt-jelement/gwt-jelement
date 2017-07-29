@@ -16,15 +16,20 @@
  */
 package gwt.jelement.dom;
 
-import gwt.jelement.dom.ClientRect;
-import gwt.jelement.dom.Element;
+import gwt.jelement.core.JsObject;
+import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="IntersectionObserverEntry", isNative = true)
-public class IntersectionObserverEntry{
+public class IntersectionObserverEntry extends JsObject{
+    @JsConstructor
+    public IntersectionObserverEntry(){
+        super();
+    }
+    
     @JsProperty(name="time")
     public native double getTime();
     

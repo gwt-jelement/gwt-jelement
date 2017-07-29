@@ -16,7 +16,7 @@
  */
 package gwt.jelement.indexeddb;
 
-import gwt.jelement.indexeddb.IDBObservationType;
+import gwt.jelement.core.JsObject;
 import java.util.Arrays;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
@@ -24,7 +24,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
-public class IDBObserverInit{
+public class IDBObserverInit extends JsObject{
 
     @JsProperty(name="transaction")
     private boolean transaction;

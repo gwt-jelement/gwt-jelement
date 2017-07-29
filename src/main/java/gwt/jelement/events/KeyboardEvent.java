@@ -16,8 +16,6 @@
  */
 package gwt.jelement.events;
 
-import gwt.jelement.events.KeyboardEventInit;
-import gwt.jelement.events.UIEvent;
 import gwt.jelement.frame.Window;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;

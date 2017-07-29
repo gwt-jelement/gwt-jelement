@@ -16,9 +16,9 @@
  */
 package gwt.jelement.credentialmanager;
 
-import gwt.jelement.credentialmanager.Credential;
 import gwt.jelement.dom.URLSearchParams;
 import gwt.jelement.html.FormData;
+import gwt.jelement.html.HTMLFormElement;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
@@ -66,7 +66,12 @@ public class PasswordCredential extends Credential{
     private CredentialBodyType additionalData;
     
     @JsConstructor
-    public PasswordCredential(){
+    public PasswordCredential(PasswordCredentialData data){
+        super();
+    }
+    
+    @JsConstructor
+    public PasswordCredential(HTMLFormElement form){
         super();
     }
     

@@ -18,11 +18,6 @@ package gwt.jelement.mediastream;
 
 import gwt.jelement.events.EventHandlerNonNull;
 import gwt.jelement.events.EventTarget;
-import gwt.jelement.mediastream.MediaStreamTrack;
-import gwt.jelement.mediastream.MediaStreamTrackState;
-import gwt.jelement.mediastream.MediaTrackCapabilities;
-import gwt.jelement.mediastream.MediaTrackConstraints;
-import gwt.jelement.mediastream.MediaTrackSettings;
 import elemental2.promise.Promise;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;

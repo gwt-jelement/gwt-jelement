@@ -16,10 +16,6 @@
  */
 package gwt.jelement.webaudio;
 
-import gwt.jelement.webaudio.AudioNode;
-import gwt.jelement.webaudio.AudioParam;
-import gwt.jelement.webaudio.DistanceModelType;
-import gwt.jelement.webaudio.PanningModelType;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
@@ -36,7 +32,12 @@ public class PannerNode extends AudioNode{
     private String distanceModel;
     
     @JsConstructor
-    public PannerNode(){
+    public PannerNode(BaseAudioContext context){
+        super();
+    }
+    
+    @JsConstructor
+    public PannerNode(BaseAudioContext context, PannerOptions options){
         super();
     }
     

@@ -16,15 +16,21 @@
  */
 package gwt.jelement.workers;
 
-import gwt.jelement.workers.WorkletOptions;
+import gwt.jelement.core.JsObject;
 import elemental2.promise.Promise;
+import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="Worklet", isNative = true)
-public class Worklet{
+public class Worklet extends JsObject{
+    @JsConstructor
+    public Worklet(){
+        super();
+    }
+    
     @JsMethod(name = "addModule")
     public native Promise<Void> addModule(String url);
     

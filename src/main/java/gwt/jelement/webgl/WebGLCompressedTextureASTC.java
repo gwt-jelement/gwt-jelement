@@ -16,12 +16,14 @@
  */
 package gwt.jelement.webgl;
 
+import gwt.jelement.core.JsObject;
+import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="WebGLCompressedTextureASTC", isNative = true)
-public class WebGLCompressedTextureASTC{
+public class WebGLCompressedTextureASTC extends JsObject{
     public static double COMPRESSED_RGBA_ASTC_4x4_KHR;
     public static double COMPRESSED_RGBA_ASTC_5x4_KHR;
     public static double COMPRESSED_RGBA_ASTC_5x5_KHR;
@@ -50,5 +52,10 @@ public class WebGLCompressedTextureASTC{
     public static double COMPRESSED_SRGB8_ALPHA8_ASTC_10x10_KHR;
     public static double COMPRESSED_SRGB8_ALPHA8_ASTC_12x10_KHR;
     public static double COMPRESSED_SRGB8_ALPHA8_ASTC_12x12_KHR;
+    
+    @JsConstructor
+    public WebGLCompressedTextureASTC(){
+        super();
+    }
     
 }

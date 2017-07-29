@@ -16,18 +16,22 @@
  */
 package gwt.jelement.gamepad;
 
-import gwt.jelement.gamepad.GamepadButton;
-import gwt.jelement.gamepad.GamepadHand;
-import gwt.jelement.gamepad.GamepadPose;
+import gwt.jelement.core.JsObject;
+import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="Gamepad", isNative = true)
-public class Gamepad{
+public class Gamepad extends JsObject{
     @JsProperty(name="hand")
     private String hand;
+    
+    @JsConstructor
+    public Gamepad(){
+        super();
+    }
     
     @JsProperty(name="id")
     public native String getId();

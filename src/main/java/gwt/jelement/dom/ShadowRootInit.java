@@ -16,14 +16,14 @@
  */
 package gwt.jelement.dom;
 
-import gwt.jelement.dom.ShadowRootMode;
+import gwt.jelement.core.JsObject;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
-public class ShadowRootInit{
+public class ShadowRootInit extends JsObject{
 
     @JsProperty(name="mode")
     private String mode;

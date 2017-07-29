@@ -17,13 +17,20 @@
 package gwt.jelement.vr;
 
 import gwt.jelement.core.Float32Array;
+import gwt.jelement.core.JsObject;
+import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="VREyeParameters", isNative = true)
-public class VREyeParameters{
+public class VREyeParameters extends JsObject{
+    @JsConstructor
+    public VREyeParameters(){
+        super();
+    }
+    
     @JsProperty(name="offset")
     public native Float32Array getOffset();
     

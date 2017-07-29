@@ -21,26 +21,6 @@ import gwt.jelement.events.EventTarget;
 import gwt.jelement.html.VoidCallback;
 import gwt.jelement.mediastream.MediaStream;
 import gwt.jelement.mediastream.MediaStreamTrack;
-import gwt.jelement.peerconnection.RTCAnswerOptions;
-import gwt.jelement.peerconnection.RTCCertificate;
-import gwt.jelement.peerconnection.RTCConfiguration;
-import gwt.jelement.peerconnection.RTCDTMFSender;
-import gwt.jelement.peerconnection.RTCDataChannel;
-import gwt.jelement.peerconnection.RTCDataChannelInit;
-import gwt.jelement.peerconnection.RTCIceCandidate;
-import gwt.jelement.peerconnection.RTCIceCandidateInit;
-import gwt.jelement.peerconnection.RTCIceConnectionState;
-import gwt.jelement.peerconnection.RTCIceGatheringState;
-import gwt.jelement.peerconnection.RTCOfferOptions;
-import gwt.jelement.peerconnection.RTCPeerConnectionErrorCallback;
-import gwt.jelement.peerconnection.RTCRtpReceiver;
-import gwt.jelement.peerconnection.RTCRtpSender;
-import gwt.jelement.peerconnection.RTCSessionDescription;
-import gwt.jelement.peerconnection.RTCSessionDescriptionCallback;
-import gwt.jelement.peerconnection.RTCSessionDescriptionInit;
-import gwt.jelement.peerconnection.RTCSignalingState;
-import gwt.jelement.peerconnection.RTCStatsCallback;
-import gwt.jelement.peerconnection.RTCStatsReport;
 import elemental2.promise.Promise;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
@@ -86,6 +66,16 @@ public class RTCPeerConnection extends EventTarget{
     
     @JsConstructor
     public RTCPeerConnection(){
+        super();
+    }
+    
+    @JsConstructor
+    public RTCPeerConnection(RTCConfiguration configuration){
+        super();
+    }
+    
+    @JsConstructor
+    public RTCPeerConnection(RTCConfiguration configuration, Object mediaConstraints){
         super();
     }
     

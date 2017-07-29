@@ -17,7 +17,6 @@
 package gwt.jelement.webgl;
 
 import gwt.jelement.events.Event;
-import gwt.jelement.webgl.WebGLContextEventInit;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;

@@ -16,7 +16,6 @@
  */
 package gwt.jelement.device_orientation;
 
-import gwt.jelement.device_orientation.DeviceOrientationEventInit;
 import gwt.jelement.events.Event;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsOverlay;

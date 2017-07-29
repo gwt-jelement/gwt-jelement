@@ -16,6 +16,7 @@
  */
 package gwt.jelement.serviceworkers;
 
+import gwt.jelement.core.JsObject;
 import gwt.jelement.fetch.Response;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
@@ -23,7 +24,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
-public class ForeignFetchResponse{
+public class ForeignFetchResponse extends JsObject{
 
     @JsProperty(name="response")
     private Response response;

@@ -16,14 +16,21 @@
  */
 package gwt.jelement.background_fetch;
 
+import gwt.jelement.core.JsObject;
 import gwt.jelement.fetch.Request;
+import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="BackgroundFetchFetch", isNative = true)
-public class BackgroundFetchFetch{
+public class BackgroundFetchFetch extends JsObject{
+    @JsConstructor
+    public BackgroundFetchFetch(){
+        super();
+    }
+    
     @JsProperty(name="request")
     public native Request getRequest();
     

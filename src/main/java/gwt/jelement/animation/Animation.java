@@ -16,10 +16,6 @@
  */
 package gwt.jelement.animation;
 
-import gwt.jelement.animation.Animation;
-import gwt.jelement.animation.AnimationEffectReadOnly;
-import gwt.jelement.animation.AnimationPlayState;
-import gwt.jelement.animation.AnimationTimeline;
 import gwt.jelement.events.EventHandlerNonNull;
 import gwt.jelement.events.EventTarget;
 import elemental2.promise.Promise;
@@ -43,6 +39,16 @@ public class Animation extends EventTarget{
     
     @JsConstructor
     public Animation(){
+        super();
+    }
+    
+    @JsConstructor
+    public Animation(AnimationEffectReadOnly effect){
+        super();
+    }
+    
+    @JsConstructor
+    public Animation(AnimationEffectReadOnly effect, AnimationTimeline timeline){
         super();
     }
     

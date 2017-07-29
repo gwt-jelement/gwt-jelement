@@ -16,8 +16,8 @@
  */
 package gwt.jelement.dom;
 
-import gwt.jelement.dom.Node;
-import gwt.jelement.dom.NodeFilter;
+import gwt.jelement.core.JsObject;
+import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
@@ -25,7 +25,12 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="TreeWalker", isNative = true)
-public class TreeWalker{
+public class TreeWalker extends JsObject{
+    @JsConstructor
+    public TreeWalker(){
+        super();
+    }
+    
     @JsProperty(name="root")
     public native Node getRoot();
     

@@ -16,14 +16,17 @@
  */
 package gwt.jelement.dom;
 
+import gwt.jelement.core.JsObject;
+import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
-import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="NodeList", isNative = true)
-public class NodeList{
-    @JsProperty(name="length")
-    public native double getLength();
+public class NodeList extends JsObject{
+    @JsConstructor
+    public NodeList(){
+        super();
+    }
     
 }

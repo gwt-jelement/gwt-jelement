@@ -17,8 +17,6 @@
 package gwt.jelement.webmidi;
 
 import gwt.jelement.events.Event;
-import gwt.jelement.webmidi.MIDIConnectionEventInit;
-import gwt.jelement.webmidi.MIDIPort;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;

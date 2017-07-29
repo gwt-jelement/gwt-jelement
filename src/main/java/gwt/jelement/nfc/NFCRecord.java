@@ -16,14 +16,14 @@
  */
 package gwt.jelement.nfc;
 
-import gwt.jelement.nfc.NFCRecordType;
+import gwt.jelement.core.JsObject;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
-public class NFCRecord{
+public class NFCRecord extends JsObject{
 
     @JsProperty(name="recordType")
     private String recordType;

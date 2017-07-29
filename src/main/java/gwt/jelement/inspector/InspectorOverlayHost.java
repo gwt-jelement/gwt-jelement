@@ -16,13 +16,20 @@
  */
 package gwt.jelement.inspector;
 
+import gwt.jelement.core.JsObject;
+import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="InspectorOverlayHost", isNative = true)
-public class InspectorOverlayHost{
+public class InspectorOverlayHost extends JsObject{
+    @JsConstructor
+    public InspectorOverlayHost(){
+        super();
+    }
+    
     @JsMethod(name = "resume")
     public native void resume();
     

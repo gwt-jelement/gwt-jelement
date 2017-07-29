@@ -16,7 +16,6 @@
  */
 package gwt.jelement.frame;
 
-import gwt.jelement.frame.ScrollOptions;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;

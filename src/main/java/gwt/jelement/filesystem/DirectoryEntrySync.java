@@ -16,11 +16,6 @@
  */
 package gwt.jelement.filesystem;
 
-import gwt.jelement.filesystem.DirectoryEntrySync;
-import gwt.jelement.filesystem.DirectoryReaderSync;
-import gwt.jelement.filesystem.EntrySync;
-import gwt.jelement.filesystem.FileEntrySync;
-import gwt.jelement.filesystem.FileSystemFlags;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;

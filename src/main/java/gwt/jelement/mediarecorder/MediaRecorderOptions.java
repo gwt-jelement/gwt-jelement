@@ -16,13 +16,14 @@
  */
 package gwt.jelement.mediarecorder;
 
+import gwt.jelement.core.JsObject;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
-public class MediaRecorderOptions{
+public class MediaRecorderOptions extends JsObject{
 
     @JsProperty(name="mimeType")
     private String mimeType;

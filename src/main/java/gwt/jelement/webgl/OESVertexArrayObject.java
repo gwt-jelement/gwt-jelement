@@ -16,15 +16,21 @@
  */
 package gwt.jelement.webgl;
 
-import gwt.jelement.webgl.WebGLVertexArrayObjectOES;
+import gwt.jelement.core.JsObject;
+import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="OESVertexArrayObject", isNative = true)
-public class OESVertexArrayObject{
+public class OESVertexArrayObject extends JsObject{
     public static double VERTEX_ARRAY_BINDING_OES;
+    
+    @JsConstructor
+    public OESVertexArrayObject(){
+        super();
+    }
     
     @JsMethod(name = "bindVertexArrayOES")
     public native void bindVertexArrayOES();

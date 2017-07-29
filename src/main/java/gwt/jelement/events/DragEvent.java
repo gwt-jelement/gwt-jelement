@@ -17,8 +17,6 @@
 package gwt.jelement.events;
 
 import gwt.jelement.clipboard.DataTransfer;
-import gwt.jelement.events.DragEventInit;
-import gwt.jelement.events.MouseEvent;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;

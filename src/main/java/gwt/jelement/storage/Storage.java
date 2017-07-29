@@ -16,16 +16,19 @@
  */
 package gwt.jelement.storage;
 
+import gwt.jelement.core.JsObject;
+import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
-import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="Storage", isNative = true)
-public class Storage{
-    @JsProperty(name="length")
-    public native double getLength();
+public class Storage extends JsObject{
+    @JsConstructor
+    public Storage(){
+        super();
+    }
     
     @JsMethod(name = "clear")
     public native void clear();

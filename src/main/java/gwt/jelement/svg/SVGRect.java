@@ -16,13 +16,20 @@
  */
 package gwt.jelement.svg;
 
+import gwt.jelement.core.JsObject;
+import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="SVGRect", isNative = true)
-public class SVGRect{
+public class SVGRect extends JsObject{
+    @JsConstructor
+    public SVGRect(){
+        super();
+    }
+    
     @JsProperty(name="x")
     public native float getX();
     

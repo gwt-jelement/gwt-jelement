@@ -16,6 +16,8 @@
  */
 package gwt.jelement.css;
 
+import gwt.jelement.core.JsObject;
+import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
@@ -23,15 +25,17 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="MediaList", isNative = true)
-public class MediaList{
+public class MediaList extends JsObject{
+    @JsConstructor
+    public MediaList(){
+        super();
+    }
+    
     @JsProperty(name="mediaText")
     public native String getMediaText();
     
     @JsProperty(name="mediaText")
     public native void setMediaText(String mediaText);
-    
-    @JsProperty(name="length")
-    public native double getLength();
     
     @JsMethod(name = "appendMedium")
     public native void appendMedium(String medium);

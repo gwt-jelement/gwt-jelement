@@ -17,7 +17,7 @@
 package gwt.jelement.vr;
 
 import gwt.jelement.core.Float32Array;
-import gwt.jelement.vr.VRPose;
+import gwt.jelement.core.JsObject;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
@@ -25,9 +25,10 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="VRFrameData", isNative = true)
-public class VRFrameData{
+public class VRFrameData extends JsObject{
     @JsConstructor
     public VRFrameData(){
+        super();
     }
     
     @JsProperty(name="leftProjectionMatrix")

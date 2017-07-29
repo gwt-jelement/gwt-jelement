@@ -17,7 +17,6 @@
 package gwt.jelement.indexeddb;
 
 import jsinterop.annotations.JsFunction;
-import gwt.jelement.indexeddb.IDBObserverChanges;
 
 @JsFunction
 public interface IDBObserverCallback{

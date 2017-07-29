@@ -16,8 +16,6 @@
  */
 package gwt.jelement.background_fetch;
 
-import gwt.jelement.background_fetch.BackgroundFetchEvent;
-import gwt.jelement.background_fetch.BackgroundFetchState;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
@@ -30,7 +28,7 @@ public class BackgroundFetchClickEvent extends BackgroundFetchEvent{
     private String state;
     
     @JsConstructor
-    public BackgroundFetchClickEvent(){
+    public BackgroundFetchClickEvent(String type, BackgroundFetchClickEventInit init){
         super((String) null, (BackgroundFetchEventInit) null);
     }
     

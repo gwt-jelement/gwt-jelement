@@ -17,7 +17,6 @@
 package gwt.jelement.webusb;
 
 import gwt.jelement.events.EventInit;
-import gwt.jelement.webusb.USBDevice;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;

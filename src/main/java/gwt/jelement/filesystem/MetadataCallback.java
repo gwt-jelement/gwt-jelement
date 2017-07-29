@@ -17,7 +17,6 @@
 package gwt.jelement.filesystem;
 
 import jsinterop.annotations.JsFunction;
-import gwt.jelement.filesystem.Metadata;
 
 @JsFunction
 public interface MetadataCallback{

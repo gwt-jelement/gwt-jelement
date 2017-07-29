@@ -16,7 +16,9 @@
  */
 package gwt.jelement.filesystem;
 
+import gwt.jelement.core.JsObject;
 import gwt.jelement.fileapi.Blob;
+import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
@@ -24,12 +26,14 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="FileWriterSync", isNative = true)
-public class FileWriterSync{
+public class FileWriterSync extends JsObject{
+    @JsConstructor
+    public FileWriterSync(){
+        super();
+    }
+    
     @JsProperty(name="position")
     public native double getPosition();
-    
-    @JsProperty(name="length")
-    public native double getLength();
     
     @JsMethod(name = "seek")
     public native void seek(double position);

@@ -16,7 +16,7 @@
  */
 package gwt.jelement.encryptedmedia;
 
-import gwt.jelement.encryptedmedia.MediaKeysPolicyInit;
+import gwt.jelement.core.JsObject;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
@@ -24,9 +24,10 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="MediaKeysPolicy", isNative = true)
-public class MediaKeysPolicy{
+public class MediaKeysPolicy extends JsObject{
     @JsConstructor
     public MediaKeysPolicy(MediaKeysPolicyInit init){
+        super();
     }
     
     @JsProperty(name="minHdcpVersion")

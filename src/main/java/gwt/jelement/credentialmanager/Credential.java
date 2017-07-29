@@ -16,13 +16,20 @@
  */
 package gwt.jelement.credentialmanager;
 
+import gwt.jelement.core.JsObject;
+import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="Credential", isNative = true)
-public class Credential{
+public class Credential extends JsObject{
+    @JsConstructor
+    public Credential(){
+        super();
+    }
+    
     @JsProperty(name="id")
     public native String getId();
     

@@ -16,6 +16,7 @@
  */
 package gwt.jelement.canvas2d;
 
+import gwt.jelement.core.JsObject;
 import gwt.jelement.html.canvas.CanvasColorSpace;
 import gwt.jelement.html.canvas.CanvasPixelFormat;
 import jsinterop.annotations.JsOverlay;
@@ -24,7 +25,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
-public class CanvasRenderingContext2DSettings{
+public class CanvasRenderingContext2DSettings extends JsObject{
 
     @JsProperty(name="alpha")
     private boolean alpha;

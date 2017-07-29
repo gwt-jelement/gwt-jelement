@@ -17,23 +17,27 @@
 package gwt.jelement.html.custom;
 
 import gwt.jelement.core.Function;
+import gwt.jelement.core.JsObject;
 import gwt.jelement.dom.ElementDefinitionOptions;
 import elemental2.promise.Promise;
+import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="CustomElementRegistry", isNative = true)
-public class CustomElementRegistry{
+public class CustomElementRegistry extends JsObject{
+    @JsConstructor
+    public CustomElementRegistry(){
+        super();
+    }
+    
     @JsMethod(name = "define")
     public native void define(String name, Function constructor);
     
     @JsMethod(name = "define")
     public native void define(String name, Function constructor, ElementDefinitionOptions options);
-    
-    @JsMethod(name = "get")
-    public native Object get(String name);
     
     @JsMethod(name = "whenDefined")
     public native Promise<Void> whenDefined(String name);

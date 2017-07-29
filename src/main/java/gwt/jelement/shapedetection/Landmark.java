@@ -16,15 +16,15 @@
  */
 package gwt.jelement.shapedetection;
 
+import gwt.jelement.core.JsObject;
 import gwt.jelement.imagecapture.Point2D;
-import gwt.jelement.shapedetection.LandmarkType;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
-public class Landmark{
+public class Landmark extends JsObject{
 
     @JsProperty(name="location")
     private Point2D location;

@@ -16,15 +16,20 @@
  */
 package gwt.jelement.webdatabase;
 
-import gwt.jelement.webdatabase.SQLStatementCallback;
-import gwt.jelement.webdatabase.SQLStatementErrorCallback;
+import gwt.jelement.core.JsObject;
+import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="SQLTransaction", isNative = true)
-public class SQLTransaction{
+public class SQLTransaction extends JsObject{
+    @JsConstructor
+    public SQLTransaction(){
+        super();
+    }
+    
     @JsMethod(name = "executeSql")
     public native void executeSql(String sqlStatement);
     

@@ -16,13 +16,14 @@
  */
 package gwt.jelement.geometry;
 
+import gwt.jelement.core.JsObject;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
-public class DOMPointInit{
+public class DOMPointInit extends JsObject{
 
     @JsProperty(name="x")
     private double x;

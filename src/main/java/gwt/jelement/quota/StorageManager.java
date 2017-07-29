@@ -16,15 +16,21 @@
  */
 package gwt.jelement.quota;
 
-import gwt.jelement.quota.StorageEstimate;
+import gwt.jelement.core.JsObject;
 import elemental2.promise.Promise;
+import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="StorageManager", isNative = true)
-public class StorageManager{
+public class StorageManager extends JsObject{
+    @JsConstructor
+    public StorageManager(){
+        super();
+    }
+    
     @JsMethod(name = "estimate")
     public native Promise<StorageEstimate> estimate();
     

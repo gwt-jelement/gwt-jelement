@@ -18,8 +18,6 @@ package gwt.jelement.netinfo;
 
 import gwt.jelement.events.EventHandlerNonNull;
 import gwt.jelement.events.EventTarget;
-import gwt.jelement.netinfo.ConnectionType;
-import gwt.jelement.netinfo.EffectiveConnectionType;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;

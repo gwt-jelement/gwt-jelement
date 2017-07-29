@@ -16,16 +16,21 @@
  */
 package gwt.jelement.bluetooth;
 
-import gwt.jelement.bluetooth.BluetoothDevice;
-import gwt.jelement.bluetooth.RequestDeviceOptions;
+import gwt.jelement.core.JsObject;
 import elemental2.promise.Promise;
+import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="Bluetooth", isNative = true)
-public class Bluetooth{
+public class Bluetooth extends JsObject{
+    @JsConstructor
+    public Bluetooth(){
+        super();
+    }
+    
     @JsMethod(name = "requestDevice")
     public native Promise<BluetoothDevice> requestDevice();
     

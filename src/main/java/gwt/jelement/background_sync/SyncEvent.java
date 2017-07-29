@@ -16,7 +16,6 @@
  */
 package gwt.jelement.background_sync;
 
-import gwt.jelement.background_sync.SyncEventInit;
 import gwt.jelement.serviceworkers.ExtendableEvent;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsOverlay;

@@ -16,14 +16,20 @@
  */
 package gwt.jelement.svg;
 
-import gwt.jelement.svg.SVGAnimatedString;
+import gwt.jelement.core.JsObject;
+import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="SVGURIReference", isNative = true)
-public class SVGURIReference{
+public class SVGURIReference extends JsObject{
+    @JsConstructor
+    public SVGURIReference(){
+        super();
+    }
+    
     @JsProperty(name="href")
     public native SVGAnimatedString getHref();
     

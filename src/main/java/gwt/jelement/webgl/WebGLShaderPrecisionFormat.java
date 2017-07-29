@@ -16,13 +16,20 @@
  */
 package gwt.jelement.webgl;
 
+import gwt.jelement.core.JsObject;
+import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="WebGLShaderPrecisionFormat", isNative = true)
-public class WebGLShaderPrecisionFormat{
+public class WebGLShaderPrecisionFormat extends JsObject{
+    @JsConstructor
+    public WebGLShaderPrecisionFormat(){
+        super();
+    }
+    
     @JsProperty(name="rangeMin")
     public native double getRangeMin();
     

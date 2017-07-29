@@ -16,18 +16,22 @@
  */
 package gwt.jelement.speech;
 
+import gwt.jelement.core.JsObject;
+import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="SpeechSynthesisVoice", isNative = true)
-public class SpeechSynthesisVoice{
+public class SpeechSynthesisVoice extends JsObject{
+    @JsConstructor
+    public SpeechSynthesisVoice(){
+        super();
+    }
+    
     @JsProperty(name="voiceURI")
     public native String getVoiceURI();
-    
-    @JsProperty(name="name")
-    public native String getName();
     
     @JsProperty(name="lang")
     public native String getLang();

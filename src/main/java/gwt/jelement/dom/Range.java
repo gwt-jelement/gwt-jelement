@@ -16,11 +16,7 @@
  */
 package gwt.jelement.dom;
 
-import gwt.jelement.dom.ClientRect;
-import gwt.jelement.dom.ClientRectList;
-import gwt.jelement.dom.DocumentFragment;
-import gwt.jelement.dom.Node;
-import gwt.jelement.dom.Range;
+import gwt.jelement.core.JsObject;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
@@ -29,7 +25,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="Range", isNative = true)
-public class Range{
+public class Range extends JsObject{
     public static short START_TO_START;
     public static short START_TO_END;
     public static short END_TO_END;
@@ -37,6 +33,7 @@ public class Range{
     
     @JsConstructor
     public Range(){
+        super();
     }
     
     @JsProperty(name="startContainer")

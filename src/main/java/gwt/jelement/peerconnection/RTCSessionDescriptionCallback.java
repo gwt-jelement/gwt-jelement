@@ -17,7 +17,6 @@
 package gwt.jelement.peerconnection;
 
 import jsinterop.annotations.JsFunction;
-import gwt.jelement.peerconnection.RTCSessionDescription;
 
 @JsFunction
 public interface RTCSessionDescriptionCallback{

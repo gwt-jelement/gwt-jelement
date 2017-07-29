@@ -16,15 +16,20 @@
  */
 package gwt.jelement.presentation;
 
-import gwt.jelement.presentation.PresentationReceiver;
-import gwt.jelement.presentation.PresentationRequest;
+import gwt.jelement.core.JsObject;
+import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="Presentation", isNative = true)
-public class Presentation{
+public class Presentation extends JsObject{
+    @JsConstructor
+    public Presentation(){
+        super();
+    }
+    
     @JsProperty(name="defaultRequest")
     public native PresentationRequest getDefaultRequest();
     

@@ -16,8 +16,6 @@
  */
 package gwt.jelement.webaudio;
 
-import gwt.jelement.webaudio.AudioTimestamp;
-import gwt.jelement.webaudio.BaseAudioContext;
 import elemental2.promise.Promise;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
@@ -30,6 +28,11 @@ import jsinterop.annotations.JsType;
 public class AudioContext extends BaseAudioContext{
     @JsConstructor
     public AudioContext(){
+        super();
+    }
+    
+    @JsConstructor
+    public AudioContext(AudioContextOptions contextOptions){
         super();
     }
     

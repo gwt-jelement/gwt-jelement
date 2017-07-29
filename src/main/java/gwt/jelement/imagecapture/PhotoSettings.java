@@ -16,14 +16,14 @@
  */
 package gwt.jelement.imagecapture;
 
-import gwt.jelement.imagecapture.FillLightMode;
+import gwt.jelement.core.JsObject;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
-public class PhotoSettings{
+public class PhotoSettings extends JsObject{
 
     @JsProperty(name="redEyeReduction")
     private boolean redEyeReduction;

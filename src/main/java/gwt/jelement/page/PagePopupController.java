@@ -16,14 +16,21 @@
  */
 package gwt.jelement.page;
 
+import gwt.jelement.core.JsObject;
 import gwt.jelement.dom.Document;
+import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="PagePopupController", isNative = true)
-public class PagePopupController{
+public class PagePopupController extends JsObject{
+    @JsConstructor
+    public PagePopupController(){
+        super();
+    }
+    
     @JsMethod(name = "closePopup")
     public native void closePopup();
     

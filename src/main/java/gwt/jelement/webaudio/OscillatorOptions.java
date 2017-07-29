@@ -16,9 +16,6 @@
  */
 package gwt.jelement.webaudio;
 
-import gwt.jelement.webaudio.AudioNodeOptions;
-import gwt.jelement.webaudio.OscillatorType;
-import gwt.jelement.webaudio.PeriodicWave;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;

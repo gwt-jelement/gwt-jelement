@@ -16,16 +16,27 @@
  */
 package gwt.jelement.peerconnection;
 
-import gwt.jelement.peerconnection.RTCSdpType;
+import gwt.jelement.core.JsObject;
+import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="RTCSessionDescription", isNative = true)
-public class RTCSessionDescription{
+public class RTCSessionDescription extends JsObject{
     @JsProperty(name="type")
     private String type;
+    
+    @JsConstructor
+    public RTCSessionDescription(){
+        super();
+    }
+    
+    @JsConstructor
+    public RTCSessionDescription(RTCSessionDescriptionInit descriptionInitDict){
+        super();
+    }
     
     @JsProperty(name="sdp")
     public native String getSdp();
