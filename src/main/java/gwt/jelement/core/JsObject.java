@@ -88,16 +88,16 @@ public class JsObject<T>{
     public static native JsObject create(JsObject proto, JsObject propertiesObject);
     
     @JsMethod(name = "defineProperties")
-    public native <T> T defineProperties(T obj, JsObject<ObjectPropertyDescriptor> properties);
+    public native <T extends JsObject> T defineProperties(T obj, JsObject<ObjectPropertyDescriptor> properties);
     
     @JsMethod(name = "defineProperty")
-    public static native <T> T defineProperty(T obj, String propertyName, ObjectPropertyDescriptor<?> descriptor);
+    public static native <T extends JsObject> T defineProperty(T obj, String propertyName, ObjectPropertyDescriptor<?> descriptor);
     
     @JsMethod(name = "entries")
     public static native Object[][] entries(JsObject obj);
     
     @JsMethod(name = "freeze")
-    public static native <T> T freeze(T obj);
+    public static native <T extends JsObject> T freeze(T obj);
     
     @JsMethod(name = "getOwnPropertyDescriptor")
     public static native ObjectPropertyDescriptor getOwnPropertyDescriptor(JsObject obj, String propertyName);
@@ -142,7 +142,7 @@ public class JsObject<T>{
     public native boolean propertyIsEnumerable(String propertyName);
     
     @JsMethod(name = "seal")
-    public static native <T> T seal(T seal);
+    public static native <T extends JsObject> T seal(T seal);
     
     @JsMethod(name = "setPrototypeOf")
     public static native JsObject setPrototypeOf(JsObject obj, Object proto);
@@ -161,26 +161,257 @@ public class JsObject<T>{
     
     @JsOverlay
     public final T get(String propertyName){
-        return JsUtils.<T>get(this, propertyName);
+        return Js.<T>get(this, propertyName);
+    }
+
+    @JsOverlay
+    public final T get(double index){
+        return Js.<T>get(this, index);
+    }
+
+    @JsOverlay
+    public final boolean getBoolean(String propertyName){
+        return Js.getBoolean(this, propertyName);
+    }
+
+    @JsOverlay
+    public final boolean getBoolean(double index){
+        return Js.getBoolean(this, index);
+    }
+
+    @JsOverlay
+    public final char getChar(String propertyName){
+        return Js.getChar(this, propertyName);
+    }
+
+    @JsOverlay
+    public final char getChar(double index){
+        return Js.getChar(this, index);
+    }
+
+    @JsOverlay
+    public final byte getByte(String propertyName){
+        return Js.getByte(this, propertyName);
+    }
+
+    @JsOverlay
+    public final byte getByte(double index){
+        return Js.getByte(this, index);
+    }
+
+    @JsOverlay
+    public final short getShort(String propertyName){
+        return Js.getShort(this, propertyName);
+    }
+
+    @JsOverlay
+    public final short getShort(double index){
+        return Js.getShort(this, index);
+    }
+
+    @JsOverlay
+    public final int getInt(String propertyName){
+        return Js.getInt(this, propertyName);
+    }
+
+    @JsOverlay
+    public final int getInt(double index){
+        return Js.getInt(this, index);
+    }
+
+    @JsOverlay
+    public final float getFloat(String propertyName){
+        return Js.getFloat(this, propertyName);
+    }
+
+    @JsOverlay
+    public final float getFloat(double index){
+        return Js.getFloat(this, index);
+    }
+
+    @JsOverlay
+    public final double getDouble(String propertyName){
+        return Js.getDouble(this, propertyName);
+    }
+
+    @JsOverlay
+    public final double getDouble(double index){
+        return Js.getDouble(this, index);
+    }
+
+    @JsOverlay
+    public final long getLong(String propertyName){
+        return Js.getLong(this, propertyName);
+    }
+
+    @JsOverlay
+    public final long getLong(double index){
+        return Js.getLong(this, index);
     }
 
     @JsOverlay
     public final void set(String propertyName, T value){
-        JsUtils.<T>set(this, propertyName, value);
+        Js.<T>set(this, propertyName, value);
+    }
+
+    @JsOverlay
+    public final void set(double index , T value){
+        Js.<T>set(this, index, value);
+    }
+
+    @JsOverlay
+    public final void set(String propertyName, boolean value){
+        Js.<T>set(this, propertyName, value);
+    }
+
+    @JsOverlay
+    public final void set(double index , boolean value){
+        Js.<T>set(this, index, value);
+    }
+
+    @JsOverlay
+    public final void set(String propertyName, char value){
+        Js.<T>set(this, propertyName, value);
+    }
+
+    @JsOverlay
+    public final void set(double index , char value){
+        Js.<T>set(this, index, value);
+    }
+
+    @JsOverlay
+    public final void set(String propertyName, byte value){
+        Js.<T>set(this, propertyName, value);
+    }
+
+    @JsOverlay
+    public final void set(double index , byte value){
+        Js.<T>set(this, index, value);
+    }
+
+    @JsOverlay
+    public final void set(String propertyName, short value){
+        Js.<T>set(this, propertyName, value);
+    }
+
+    @JsOverlay
+    public final void set(double index , short value){
+        Js.<T>set(this, index, value);
+    }
+
+    @JsOverlay
+    public final void set(String propertyName, int value){
+        Js.<T>set(this, propertyName, value);
+    }
+
+    @JsOverlay
+    public final void set(double index , int value){
+        Js.<T>set(this, index, value);
+    }
+
+    @JsOverlay
+    public final void set(String propertyName, float value){
+        Js.<T>set(this, propertyName, value);
+    }
+
+    @JsOverlay
+    public final void set(double index , float value){
+        Js.<T>set(this, index, value);
+    }
+
+    @JsOverlay
+    public final void set(String propertyName, double value){
+        Js.<T>set(this, propertyName, value);
+    }
+
+    @JsOverlay
+    public final void set(double index , double value){
+        Js.<T>set(this, index, value);
+    }
+
+    @JsOverlay
+    public final void set(String propertyName, long value){
+        Js.set(this, propertyName, (double) value);
+    }
+
+    @JsOverlay
+    public final void set(double index, long value){
+        Js.set(this, index, (double) value);
     }
 
     @JsOverlay
     public final void delete(String propertyName){
-        JsUtils.<T>delete(this, propertyName);
+        Js.<T>delete(this, propertyName);
+    }
+
+    @JsOverlay
+    public final void delete(double index){
+        Js.<T>delete(this, index);
     }
 
     @JsOverlay
     public final boolean has(String propertyName){
-        return JsUtils.<T>has(this, propertyName);
+        return Js.<T>has(this, propertyName);
     }
 
     @JsOverlay
-    public static final <T> JsObject<T> of(String key, T value) {
-        return JsUtils.<T>of(key, value);
+    public final boolean has(double index){
+         return Js.<T>has(this, index);
     }
+
+    @JsOverlay
+    public JsObject<T> with(String propertyName, T value){
+        return Js.<T>with(this, propertyName, value);
+    }
+    
+    @JsOverlay
+    public JsObject<T> with(String propertyName, boolean value){
+        return Js.<T>with(this, propertyName, value);
+    }
+
+    @JsOverlay
+    public JsObject<T> with(String propertyName, char value){
+        return Js.<T>with(this, propertyName, value);
+    }
+
+    @JsOverlay
+    public JsObject<T> with(String propertyName, byte value){
+        return Js.<T>with(this, propertyName, value);
+    }
+
+    @JsOverlay
+    public JsObject<T> with(String propertyName, short value){
+        return Js.<T>with(this, propertyName, value);
+    }
+
+    @JsOverlay
+    public JsObject<T> with(String propertyName, int value){
+        return Js.<T>with(this, propertyName, value);
+    }
+
+    @JsOverlay
+    public JsObject<T> with(String propertyName, float value){
+        return Js.<T>with(this, propertyName, value);
+    }
+
+    @JsOverlay
+    public JsObject<T> with(String propertyName, double value){
+        return Js.<T>with(this, propertyName, value);
+    }
+
+    @JsOverlay
+    public JsObject<T> with(String propertyName, long value){
+        return Js.<T>with(this, propertyName, (double)value);
+    }
+
+    @JsOverlay
+    public boolean isEqualTo(Object object){
+        return Js.isEqual(this, object);
+    }
+
+    @JsOverlay
+    public boolean isStrictlyEqualTo(Object object){
+        return Js.isStrictlyEqual(this, object);
+    }
+
 }

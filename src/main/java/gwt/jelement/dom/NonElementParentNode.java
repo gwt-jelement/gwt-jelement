@@ -31,6 +31,6 @@ public class NonElementParentNode extends JsObject{
     }
     
     @JsMethod(name = "getElementById")
-    public native <T> T getElementById(String elementId);
+    public native <T extends Element> T getElementById(String elementId);
     
 }
