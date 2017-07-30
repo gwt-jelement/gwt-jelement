@@ -37,9 +37,9 @@ public class SpeechGrammar extends JsObject{
     public native void setSrc(String src);
     
     @JsProperty(name="weight")
-    public native float getWeight();
+    public native double getWeight();
     
     @JsProperty(name="weight")
-    public native void setWeight(float weight);
+    public native void setWeight(double weight);
     
 }

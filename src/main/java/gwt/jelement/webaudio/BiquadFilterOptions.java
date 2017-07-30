@@ -28,16 +28,16 @@ public class BiquadFilterOptions extends AudioNodeOptions{
     private String type;
 
     @JsProperty(name="Q")
-    private float Q;
+    private double Q;
 
     @JsProperty(name="detune")
-    private float detune;
+    private double detune;
 
     @JsProperty(name="frequency")
-    private float frequency;
+    private double frequency;
 
     @JsProperty(name="gain")
-    private float gain;
+    private double gain;
 
     public BiquadFilterOptions(){
     }
@@ -53,42 +53,42 @@ public class BiquadFilterOptions extends AudioNodeOptions{
     }
 
     @JsOverlay
-    public final float getQ(){
+    public final double getQ(){
         return this.Q;
     }
 
     @JsOverlay
-    public final void setQ(float Q){
+    public final void setQ(double Q){
         this.Q = Q;
     }
 
     @JsOverlay
-    public final float getDetune(){
+    public final double getDetune(){
         return this.detune;
     }
 
     @JsOverlay
-    public final void setDetune(float detune){
+    public final void setDetune(double detune){
         this.detune = detune;
     }
 
     @JsOverlay
-    public final float getFrequency(){
+    public final double getFrequency(){
         return this.frequency;
     }
 
     @JsOverlay
-    public final void setFrequency(float frequency){
+    public final void setFrequency(double frequency){
         this.frequency = frequency;
     }
 
     @JsOverlay
-    public final float getGain(){
+    public final double getGain(){
         return this.gain;
     }
 
     @JsOverlay
-    public final void setGain(float gain){
+    public final void setGain(double gain){
         this.gain = gain;
     }
 

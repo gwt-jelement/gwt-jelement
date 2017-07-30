@@ -31,12 +31,12 @@ public class SVGAnimatedNumber extends JsObject{
     }
     
     @JsProperty(name="baseVal")
-    public native float getBaseVal();
+    public native double getBaseVal();
     
     @JsProperty(name="baseVal")
-    public native void setBaseVal(float baseVal);
+    public native void setBaseVal(double baseVal);
     
     @JsProperty(name="animVal")
-    public native float getAnimVal();
+    public native double getAnimVal();
     
 }

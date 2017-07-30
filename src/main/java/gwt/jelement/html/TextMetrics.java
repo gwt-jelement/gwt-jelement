@@ -31,39 +31,39 @@ public class TextMetrics extends JsObject{
     }
     
     @JsProperty(name="width")
-    public native float getWidth();
+    public native double getWidth();
     
     @JsProperty(name="actualBoundingBoxLeft")
-    public native float getActualBoundingBoxLeft();
+    public native double getActualBoundingBoxLeft();
     
     @JsProperty(name="actualBoundingBoxRight")
-    public native float getActualBoundingBoxRight();
+    public native double getActualBoundingBoxRight();
     
     @JsProperty(name="fontBoundingBoxAscent")
-    public native float getFontBoundingBoxAscent();
+    public native double getFontBoundingBoxAscent();
     
     @JsProperty(name="fontBoundingBoxDescent")
-    public native float getFontBoundingBoxDescent();
+    public native double getFontBoundingBoxDescent();
     
     @JsProperty(name="actualBoundingBoxAscent")
-    public native float getActualBoundingBoxAscent();
+    public native double getActualBoundingBoxAscent();
     
     @JsProperty(name="actualBoundingBoxDescent")
-    public native float getActualBoundingBoxDescent();
+    public native double getActualBoundingBoxDescent();
     
     @JsProperty(name="emHeightAscent")
-    public native float getEmHeightAscent();
+    public native double getEmHeightAscent();
     
     @JsProperty(name="emHeightDescent")
-    public native float getEmHeightDescent();
+    public native double getEmHeightDescent();
     
     @JsProperty(name="hangingBaseline")
-    public native float getHangingBaseline();
+    public native double getHangingBaseline();
     
     @JsProperty(name="alphabeticBaseline")
-    public native float getAlphabeticBaseline();
+    public native double getAlphabeticBaseline();
     
     @JsProperty(name="ideographicBaseline")
-    public native float getIdeographicBaseline();
+    public native double getIdeographicBaseline();
     
 }

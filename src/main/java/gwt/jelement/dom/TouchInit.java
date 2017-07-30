@@ -51,16 +51,16 @@ public class TouchInit extends JsObject{
     private double pageY;
 
     @JsProperty(name="radiusX")
-    private float radiusX;
+    private double radiusX;
 
     @JsProperty(name="radiusY")
-    private float radiusY;
+    private double radiusY;
 
     @JsProperty(name="rotationAngle")
-    private float rotationAngle;
+    private double rotationAngle;
 
     @JsProperty(name="force")
-    private float force;
+    private double force;
 
     @JsProperty(name="region")
     private String region;
@@ -149,42 +149,42 @@ public class TouchInit extends JsObject{
     }
 
     @JsOverlay
-    public final float getRadiusX(){
+    public final double getRadiusX(){
         return this.radiusX;
     }
 
     @JsOverlay
-    public final void setRadiusX(float radiusX){
+    public final void setRadiusX(double radiusX){
         this.radiusX = radiusX;
     }
 
     @JsOverlay
-    public final float getRadiusY(){
+    public final double getRadiusY(){
         return this.radiusY;
     }
 
     @JsOverlay
-    public final void setRadiusY(float radiusY){
+    public final void setRadiusY(double radiusY){
         this.radiusY = radiusY;
     }
 
     @JsOverlay
-    public final float getRotationAngle(){
+    public final double getRotationAngle(){
         return this.rotationAngle;
     }
 
     @JsOverlay
-    public final void setRotationAngle(float rotationAngle){
+    public final void setRotationAngle(double rotationAngle){
         this.rotationAngle = rotationAngle;
     }
 
     @JsOverlay
-    public final float getForce(){
+    public final double getForce(){
         return this.force;
     }
 
     @JsOverlay
-    public final void setForce(float force){
+    public final void setForce(double force){
         this.force = force;
     }
 

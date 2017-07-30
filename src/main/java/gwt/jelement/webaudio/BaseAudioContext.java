@@ -49,7 +49,7 @@ public class BaseAudioContext extends EventTarget{
     public native double getCurrentTime();
     
     @JsProperty(name="sampleRate")
-    public native float getSampleRate();
+    public native double getSampleRate();
     
     @JsProperty(name="listener")
     public native AudioListener getListener();
@@ -76,7 +76,7 @@ public class BaseAudioContext extends EventTarget{
     public native BiquadFilterNode createBiquadFilter();
     
     @JsMethod(name = "createBuffer")
-    public native AudioBuffer createBuffer(double numberOfChannels, double numberOfFrames, float sampleRate);
+    public native AudioBuffer createBuffer(double numberOfChannels, double numberOfFrames, double sampleRate);
     
     @JsMethod(name = "createBufferSource")
     public native AudioBufferSourceNode createBufferSource();
@@ -130,10 +130,10 @@ public class BaseAudioContext extends EventTarget{
     public native PannerNode createPanner();
     
     @JsMethod(name = "createPeriodicWave")
-    public native PeriodicWave createPeriodicWave(float[] real, float[] imag);
+    public native PeriodicWave createPeriodicWave(double[] real, double[] imag);
     
     @JsMethod(name = "createPeriodicWave")
-    public native PeriodicWave createPeriodicWave(float[] real, float[] imag, PeriodicWaveConstraints options);
+    public native PeriodicWave createPeriodicWave(double[] real, double[] imag, PeriodicWaveConstraints options);
     
     @JsMethod(name = "createScriptProcessor")
     public native ScriptProcessorNode createScriptProcessor();

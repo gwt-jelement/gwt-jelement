@@ -38,7 +38,7 @@ public class Float32Array extends ArrayBufferView{
     }
     
     @JsConstructor
-    public Float32Array(float[] array){
+    public Float32Array(double[] array){
         super();
     }
     
@@ -64,13 +64,13 @@ public class Float32Array extends ArrayBufferView{
     public native void set(Float32Array array);
     
     @JsMethod(name = "set")
-    public native void set(float[] array);
+    public native void set(double[] array);
     
     @JsMethod(name = "set")
     public native void set(Float32Array array, double offset);
     
     @JsMethod(name = "set")
-    public native void set(float[] array, double offset);
+    public native void set(double[] array, double offset);
     
     @JsMethod(name = "subarray")
     public native Float32Array subarray(double begin);

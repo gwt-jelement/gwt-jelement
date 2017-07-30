@@ -36,7 +36,7 @@ public class AudioBuffer extends JsObject{
     public native double getDuration();
     
     @JsProperty(name="sampleRate")
-    public native float getSampleRate();
+    public native double getSampleRate();
     
     @JsProperty(name="numberOfChannels")
     public native double getNumberOfChannels();

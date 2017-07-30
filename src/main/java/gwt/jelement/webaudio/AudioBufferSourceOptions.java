@@ -29,7 +29,7 @@ public class AudioBufferSourceOptions extends JsObject{
     private AudioBuffer buffer;
 
     @JsProperty(name="detune")
-    private float detune;
+    private double detune;
 
     @JsProperty(name="loop")
     private boolean loop;
@@ -41,7 +41,7 @@ public class AudioBufferSourceOptions extends JsObject{
     private double loopStart;
 
     @JsProperty(name="playbackRate")
-    private float playbackRate;
+    private double playbackRate;
 
     public AudioBufferSourceOptions(){
     }
@@ -57,12 +57,12 @@ public class AudioBufferSourceOptions extends JsObject{
     }
 
     @JsOverlay
-    public final float getDetune(){
+    public final double getDetune(){
         return this.detune;
     }
 
     @JsOverlay
-    public final void setDetune(float detune){
+    public final void setDetune(double detune){
         this.detune = detune;
     }
 
@@ -97,12 +97,12 @@ public class AudioBufferSourceOptions extends JsObject{
     }
 
     @JsOverlay
-    public final float getPlaybackRate(){
+    public final double getPlaybackRate(){
         return this.playbackRate;
     }
 
     @JsOverlay
-    public final void setPlaybackRate(float playbackRate){
+    public final void setPlaybackRate(double playbackRate){
         this.playbackRate = playbackRate;
     }
 

@@ -31,27 +31,27 @@ public class SVGRect extends JsObject{
     }
     
     @JsProperty(name="x")
-    public native float getX();
+    public native double getX();
     
     @JsProperty(name="x")
-    public native void setX(float x);
+    public native void setX(double x);
     
     @JsProperty(name="y")
-    public native float getY();
+    public native double getY();
     
     @JsProperty(name="y")
-    public native void setY(float y);
+    public native void setY(double y);
     
     @JsProperty(name="width")
-    public native float getWidth();
+    public native double getWidth();
     
     @JsProperty(name="width")
-    public native void setWidth(float width);
+    public native void setWidth(double width);
     
     @JsProperty(name="height")
-    public native float getHeight();
+    public native double getHeight();
     
     @JsProperty(name="height")
-    public native void setHeight(float height);
+    public native void setHeight(double height);
     
 }

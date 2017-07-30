@@ -40,10 +40,10 @@ public class DataView extends ArrayBufferView{
     }
     
     @JsMethod(name = "getFloat32")
-    public native float getFloat32(double byteOffset);
+    public native double getFloat32(double byteOffset);
     
     @JsMethod(name = "getFloat32")
-    public native float getFloat32(double byteOffset, boolean littleEndian);
+    public native double getFloat32(double byteOffset, boolean littleEndian);
     
     @JsMethod(name = "getFloat64")
     public native double getFloat64(double byteOffset);
@@ -82,10 +82,10 @@ public class DataView extends ArrayBufferView{
     public native byte getUint8(double byteOffset);
     
     @JsMethod(name = "setFloat32")
-    public native void setFloat32(double byteOffset, float value);
+    public native void setFloat32(double byteOffset, double value);
     
     @JsMethod(name = "setFloat32")
-    public native void setFloat32(double byteOffset, float value, boolean littleEndian);
+    public native void setFloat32(double byteOffset, double value, boolean littleEndian);
     
     @JsMethod(name = "setFloat64")
     public native void setFloat64(double byteOffset, double value);

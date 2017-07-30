@@ -32,19 +32,19 @@ public class AudioParam extends JsObject{
     }
     
     @JsProperty(name="value")
-    public native float getValue();
+    public native double getValue();
     
     @JsProperty(name="value")
-    public native void setValue(float value);
+    public native void setValue(double value);
     
     @JsProperty(name="defaultValue")
-    public native float getDefaultValue();
+    public native double getDefaultValue();
     
     @JsProperty(name="minValue")
-    public native float getMinValue();
+    public native double getMinValue();
     
     @JsProperty(name="maxValue")
-    public native float getMaxValue();
+    public native double getMaxValue();
     
     @JsMethod(name = "cancelAndHoldAtTime")
     public native AudioParam cancelAndHoldAtTime(double startTime);
@@ -53,18 +53,18 @@ public class AudioParam extends JsObject{
     public native AudioParam cancelScheduledValues(double startTime);
     
     @JsMethod(name = "exponentialRampToValueAtTime")
-    public native AudioParam exponentialRampToValueAtTime(float value, double time);
+    public native AudioParam exponentialRampToValueAtTime(double value, double time);
     
     @JsMethod(name = "linearRampToValueAtTime")
-    public native AudioParam linearRampToValueAtTime(float value, double time);
+    public native AudioParam linearRampToValueAtTime(double value, double time);
     
     @JsMethod(name = "setTargetAtTime")
-    public native AudioParam setTargetAtTime(float target, double time, double timeConstant);
+    public native AudioParam setTargetAtTime(double target, double time, double timeConstant);
     
     @JsMethod(name = "setValueAtTime")
-    public native AudioParam setValueAtTime(float value, double time);
+    public native AudioParam setValueAtTime(double value, double time);
     
     @JsMethod(name = "setValueCurveAtTime")
-    public native AudioParam setValueCurveAtTime(float[] values, double time, double duration);
+    public native AudioParam setValueCurveAtTime(double[] values, double time, double duration);
     
 }

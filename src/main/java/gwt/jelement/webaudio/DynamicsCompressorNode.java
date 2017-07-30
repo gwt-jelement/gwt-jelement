@@ -44,7 +44,7 @@ public class DynamicsCompressorNode extends AudioNode{
     public native AudioParam getRatio();
     
     @JsProperty(name="reduction")
-    public native float getReduction();
+    public native double getReduction();
     
     @JsProperty(name="attack")
     public native AudioParam getAttack();

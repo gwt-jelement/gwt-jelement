@@ -28,10 +28,10 @@ public class OscillatorOptions extends AudioNodeOptions{
     private String type;
 
     @JsProperty(name="detune")
-    private float detune;
+    private double detune;
 
     @JsProperty(name="frequency")
-    private float frequency;
+    private double frequency;
 
     @JsProperty(name="periodicWave")
     private PeriodicWave periodicWave;
@@ -50,22 +50,22 @@ public class OscillatorOptions extends AudioNodeOptions{
     }
 
     @JsOverlay
-    public final float getDetune(){
+    public final double getDetune(){
         return this.detune;
     }
 
     @JsOverlay
-    public final void setDetune(float detune){
+    public final void setDetune(double detune){
         this.detune = detune;
     }
 
     @JsOverlay
-    public final float getFrequency(){
+    public final double getFrequency(){
         return this.frequency;
     }
 
     @JsOverlay
-    public final void setFrequency(float frequency){
+    public final void setFrequency(double frequency){
         this.frequency = frequency;
     }
 

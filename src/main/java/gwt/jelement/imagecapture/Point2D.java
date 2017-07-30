@@ -26,31 +26,31 @@ import jsinterop.annotations.JsType;
 public class Point2D extends JsObject{
 
     @JsProperty(name="x")
-    private float x;
+    private double x;
 
     @JsProperty(name="y")
-    private float y;
+    private double y;
 
     public Point2D(){
     }
 
     @JsOverlay
-    public final float getX(){
+    public final double getX(){
         return this.x;
     }
 
     @JsOverlay
-    public final void setX(float x){
+    public final void setX(double x){
         this.x = x;
     }
 
     @JsOverlay
-    public final float getY(){
+    public final double getY(){
         return this.y;
     }
 
     @JsOverlay
-    public final void setY(float y){
+    public final void setY(double y){
         this.y = y;
     }
 

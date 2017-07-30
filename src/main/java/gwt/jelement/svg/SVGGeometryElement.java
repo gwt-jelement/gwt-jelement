@@ -34,10 +34,10 @@ public class SVGGeometryElement extends SVGGraphicsElement{
     public native SVGAnimatedNumber getPathLength();
     
     @JsMethod(name = "getPointAtLength")
-    public native SVGPoint getPointAtLength(float distance);
+    public native SVGPoint getPointAtLength(double distance);
     
     @JsMethod(name = "getTotalLength")
-    public native float getTotalLength();
+    public native double getTotalLength();
     
     @JsMethod(name = "isPointInFill")
     public native boolean isPointInFill(SVGPoint point);

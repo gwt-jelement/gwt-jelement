@@ -25,18 +25,18 @@ import jsinterop.annotations.JsType;
 public class StereoPannerOptions extends AudioNodeOptions{
 
     @JsProperty(name="pan")
-    private float pan;
+    private double pan;
 
     public StereoPannerOptions(){
     }
 
     @JsOverlay
-    public final float getPan(){
+    public final double getPan(){
         return this.pan;
     }
 
     @JsOverlay
-    public final void setPan(float pan){
+    public final void setPan(double pan){
         this.pan = pan;
     }
 

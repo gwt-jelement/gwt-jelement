@@ -45,7 +45,7 @@ public class PointerEvent extends MouseEvent{
     public native double getHeight();
     
     @JsProperty(name="pressure")
-    public native float getPressure();
+    public native double getPressure();
     
     @JsProperty(name="tiltX")
     public native double getTiltX();
@@ -54,7 +54,7 @@ public class PointerEvent extends MouseEvent{
     public native double getTiltY();
     
     @JsProperty(name="tangentialPressure")
-    public native float getTangentialPressure();
+    public native double getTangentialPressure();
     
     @JsProperty(name="twist")
     public native double getTwist();

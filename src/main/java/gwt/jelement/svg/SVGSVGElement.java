@@ -49,10 +49,10 @@ public class SVGSVGElement extends SVGGraphicsElement{
     public native SVGAnimatedLength getHeight();
     
     @JsProperty(name="currentScale")
-    public native float getCurrentScale();
+    public native double getCurrentScale();
     
     @JsProperty(name="currentScale")
-    public native void setCurrentScale(float currentScale);
+    public native void setCurrentScale(double currentScale);
     
     @JsProperty(name="currentTranslate")
     public native SVGPoint getCurrentTranslate();
@@ -109,7 +109,7 @@ public class SVGSVGElement extends SVGGraphicsElement{
     public native void forceRedraw();
     
     @JsMethod(name = "getCurrentTime")
-    public native float getCurrentTime();
+    public native double getCurrentTime();
     
     @JsMethod(name = "getElementById")
     public native <T extends Element> T getElementById(String elementId);
@@ -124,7 +124,7 @@ public class SVGSVGElement extends SVGGraphicsElement{
     public native void pauseAnimations();
     
     @JsMethod(name = "setCurrentTime")
-    public native void setCurrentTime(float seconds);
+    public native void setCurrentTime(double seconds);
     
     @JsMethod(name = "suspendRedraw")
     public native double suspendRedraw(double maxWaitMilliseconds);

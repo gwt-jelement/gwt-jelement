@@ -28,13 +28,13 @@ public class AnalyserOptions extends AudioNodeOptions{
     private double fftSize;
 
     @JsProperty(name="maxDecibels")
-    private float maxDecibels;
+    private double maxDecibels;
 
     @JsProperty(name="minDecibels")
-    private float minDecibels;
+    private double minDecibels;
 
     @JsProperty(name="smoothingTimeConstant")
-    private float smoothingTimeConstant;
+    private double smoothingTimeConstant;
 
     public AnalyserOptions(){
     }
@@ -50,32 +50,32 @@ public class AnalyserOptions extends AudioNodeOptions{
     }
 
     @JsOverlay
-    public final float getMaxDecibels(){
+    public final double getMaxDecibels(){
         return this.maxDecibels;
     }
 
     @JsOverlay
-    public final void setMaxDecibels(float maxDecibels){
+    public final void setMaxDecibels(double maxDecibels){
         this.maxDecibels = maxDecibels;
     }
 
     @JsOverlay
-    public final float getMinDecibels(){
+    public final double getMinDecibels(){
         return this.minDecibels;
     }
 
     @JsOverlay
-    public final void setMinDecibels(float minDecibels){
+    public final void setMinDecibels(double minDecibels){
         this.minDecibels = minDecibels;
     }
 
     @JsOverlay
-    public final float getSmoothingTimeConstant(){
+    public final double getSmoothingTimeConstant(){
         return this.smoothingTimeConstant;
     }
 
     @JsOverlay
-    public final void setSmoothingTimeConstant(float smoothingTimeConstant){
+    public final void setSmoothingTimeConstant(double smoothingTimeConstant){
         this.smoothingTimeConstant = smoothingTimeConstant;
     }
 

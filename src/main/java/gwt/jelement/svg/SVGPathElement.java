@@ -30,6 +30,6 @@ public class SVGPathElement extends SVGGeometryElement{
     }
     
     @JsMethod(name = "getPathSegAtLength")
-    public native double getPathSegAtLength(float distance);
+    public native double getPathSegAtLength(double distance);
     
 }

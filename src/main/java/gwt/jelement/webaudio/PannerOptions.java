@@ -31,22 +31,22 @@ public class PannerOptions extends AudioNodeOptions{
     private String distanceModel;
 
     @JsProperty(name="positionX")
-    private float positionX;
+    private double positionX;
 
     @JsProperty(name="positionY")
-    private float positionY;
+    private double positionY;
 
     @JsProperty(name="positionZ")
-    private float positionZ;
+    private double positionZ;
 
     @JsProperty(name="orientationX")
-    private float orientationX;
+    private double orientationX;
 
     @JsProperty(name="orientationY")
-    private float orientationY;
+    private double orientationY;
 
     @JsProperty(name="orientationZ")
-    private float orientationZ;
+    private double orientationZ;
 
     @JsProperty(name="refDistance")
     private double refDistance;
@@ -90,62 +90,62 @@ public class PannerOptions extends AudioNodeOptions{
     }
 
     @JsOverlay
-    public final float getPositionX(){
+    public final double getPositionX(){
         return this.positionX;
     }
 
     @JsOverlay
-    public final void setPositionX(float positionX){
+    public final void setPositionX(double positionX){
         this.positionX = positionX;
     }
 
     @JsOverlay
-    public final float getPositionY(){
+    public final double getPositionY(){
         return this.positionY;
     }
 
     @JsOverlay
-    public final void setPositionY(float positionY){
+    public final void setPositionY(double positionY){
         this.positionY = positionY;
     }
 
     @JsOverlay
-    public final float getPositionZ(){
+    public final double getPositionZ(){
         return this.positionZ;
     }
 
     @JsOverlay
-    public final void setPositionZ(float positionZ){
+    public final void setPositionZ(double positionZ){
         this.positionZ = positionZ;
     }
 
     @JsOverlay
-    public final float getOrientationX(){
+    public final double getOrientationX(){
         return this.orientationX;
     }
 
     @JsOverlay
-    public final void setOrientationX(float orientationX){
+    public final void setOrientationX(double orientationX){
         this.orientationX = orientationX;
     }
 
     @JsOverlay
-    public final float getOrientationY(){
+    public final double getOrientationY(){
         return this.orientationY;
     }
 
     @JsOverlay
-    public final void setOrientationY(float orientationY){
+    public final void setOrientationY(double orientationY){
         this.orientationY = orientationY;
     }
 
     @JsOverlay
-    public final float getOrientationZ(){
+    public final double getOrientationZ(){
         return this.orientationZ;
     }
 
     @JsOverlay
-    public final void setOrientationZ(float orientationZ){
+    public final void setOrientationZ(double orientationZ){
         this.orientationZ = orientationZ;
     }
 

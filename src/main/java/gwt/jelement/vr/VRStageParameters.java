@@ -35,9 +35,9 @@ public class VRStageParameters extends JsObject{
     public native Float32Array getSittingToStandingTransform();
     
     @JsProperty(name="sizeX")
-    public native float getSizeX();
+    public native double getSizeX();
     
     @JsProperty(name="sizeZ")
-    public native float getSizeZ();
+    public native double getSizeZ();
     
 }

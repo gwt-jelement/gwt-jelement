@@ -29,13 +29,13 @@ public class AudioParamDescriptor extends JsObject{
     private String name;
 
     @JsProperty(name="defaultValue")
-    private float defaultValue;
+    private double defaultValue;
 
     @JsProperty(name="minValue")
-    private float minValue;
+    private double minValue;
 
     @JsProperty(name="maxValue")
-    private float maxValue;
+    private double maxValue;
 
     public AudioParamDescriptor(){
     }
@@ -51,32 +51,32 @@ public class AudioParamDescriptor extends JsObject{
     }
 
     @JsOverlay
-    public final float getDefaultValue(){
+    public final double getDefaultValue(){
         return this.defaultValue;
     }
 
     @JsOverlay
-    public final void setDefaultValue(float defaultValue){
+    public final void setDefaultValue(double defaultValue){
         this.defaultValue = defaultValue;
     }
 
     @JsOverlay
-    public final float getMinValue(){
+    public final double getMinValue(){
         return this.minValue;
     }
 
     @JsOverlay
-    public final void setMinValue(float minValue){
+    public final void setMinValue(double minValue){
         this.minValue = minValue;
     }
 
     @JsOverlay
-    public final float getMaxValue(){
+    public final double getMaxValue(){
         return this.maxValue;
     }
 
     @JsOverlay
-    public final void setMaxValue(float maxValue){
+    public final void setMaxValue(double maxValue){
         this.maxValue = maxValue;
     }
 

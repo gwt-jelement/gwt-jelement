@@ -55,6 +55,6 @@ public class SVGFEGaussianBlurElement extends SVGElement{
     public native SVGAnimatedString getResult();
     
     @JsMethod(name = "setStdDeviation")
-    public native void setStdDeviation(float stdDeviationX, float stdDeviationY);
+    public native void setStdDeviation(double stdDeviationX, double stdDeviationY);
     
 }

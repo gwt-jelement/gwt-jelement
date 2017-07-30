@@ -34,7 +34,7 @@ public class PointerEventInit extends MouseEventInit{
     private double height;
 
     @JsProperty(name="pressure")
-    private float pressure;
+    private double pressure;
 
     @JsProperty(name="tiltX")
     private double tiltX;
@@ -43,7 +43,7 @@ public class PointerEventInit extends MouseEventInit{
     private double tiltY;
 
     @JsProperty(name="tangentialPressure")
-    private float tangentialPressure;
+    private double tangentialPressure;
 
     @JsProperty(name="twist")
     private double twist;
@@ -91,12 +91,12 @@ public class PointerEventInit extends MouseEventInit{
     }
 
     @JsOverlay
-    public final float getPressure(){
+    public final double getPressure(){
         return this.pressure;
     }
 
     @JsOverlay
-    public final void setPressure(float pressure){
+    public final void setPressure(double pressure){
         this.pressure = pressure;
     }
 
@@ -121,12 +121,12 @@ public class PointerEventInit extends MouseEventInit{
     }
 
     @JsOverlay
-    public final float getTangentialPressure(){
+    public final double getTangentialPressure(){
         return this.tangentialPressure;
     }
 
     @JsOverlay
-    public final void setTangentialPressure(float tangentialPressure){
+    public final void setTangentialPressure(double tangentialPressure){
         this.tangentialPressure = tangentialPressure;
     }
 

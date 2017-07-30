@@ -46,24 +46,24 @@ public class SVGTransform extends JsObject{
     public native SVGMatrix getMatrix();
     
     @JsProperty(name="angle")
-    public native float getAngle();
+    public native double getAngle();
     
     @JsMethod(name = "setMatrix")
     public native void setMatrix(SVGMatrix matrix);
     
     @JsMethod(name = "setRotate")
-    public native void setRotate(float angle, float cx, float cy);
+    public native void setRotate(double angle, double cx, double cy);
     
     @JsMethod(name = "setScale")
-    public native void setScale(float sx, float sy);
+    public native void setScale(double sx, double sy);
     
     @JsMethod(name = "setSkewX")
-    public native void setSkewX(float angle);
+    public native void setSkewX(double angle);
     
     @JsMethod(name = "setSkewY")
-    public native void setSkewY(float angle);
+    public native void setSkewY(double angle);
     
     @JsMethod(name = "setTranslate")
-    public native void setTranslate(float tx, float ty);
+    public native void setTranslate(double tx, double ty);
     
 }

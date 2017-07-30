@@ -76,22 +76,22 @@ public class SpeechSynthesisUtterance extends EventTarget{
     public native void setVoice(SpeechSynthesisVoice voice);
     
     @JsProperty(name="volume")
-    public native float getVolume();
+    public native double getVolume();
     
     @JsProperty(name="volume")
-    public native void setVolume(float volume);
+    public native void setVolume(double volume);
     
     @JsProperty(name="rate")
-    public native float getRate();
+    public native double getRate();
     
     @JsProperty(name="rate")
-    public native void setRate(float rate);
+    public native void setRate(double rate);
     
     @JsProperty(name="pitch")
-    public native float getPitch();
+    public native double getPitch();
     
     @JsProperty(name="pitch")
-    public native void setPitch(float pitch);
+    public native void setPitch(double pitch);
     
     @JsOverlay
     public final EventHandlerNonNull getOnStart(){

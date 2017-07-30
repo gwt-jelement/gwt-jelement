@@ -31,21 +31,21 @@ public class ClientRect extends JsObject{
     }
     
     @JsProperty(name="top")
-    public native float getTop();
+    public native double getTop();
     
     @JsProperty(name="right")
-    public native float getRight();
+    public native double getRight();
     
     @JsProperty(name="bottom")
-    public native float getBottom();
+    public native double getBottom();
     
     @JsProperty(name="left")
-    public native float getLeft();
+    public native double getLeft();
     
     @JsProperty(name="width")
-    public native float getWidth();
+    public native double getWidth();
     
     @JsProperty(name="height")
-    public native float getHeight();
+    public native double getHeight();
     
 }

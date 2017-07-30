@@ -14,23 +14,28 @@
  * License for the specific language governing permissions and limitations under
  * the License.
  */
-package gwt.jelement.canvas2d;
+package gwt.jelement.html;
 
-import gwt.jelement.core.JsObject;
 import jsinterop.annotations.JsConstructor;
-import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = JsPackage.GLOBAL, name="CanvasGradient", isNative = true)
-public class CanvasGradient extends JsObject{
+@JsType(namespace = JsPackage.GLOBAL, name="Image", isNative = true)
+public class Image extends HTMLImageElement{
     @JsConstructor
-    public CanvasGradient(){
+    public Image(){
         super();
     }
     
-    @JsMethod(name = "addColorStop")
-    public native void addColorStop(double offset, String color);
+    @JsConstructor
+    public Image(double width){
+        super();
+    }
+    
+    @JsConstructor
+    public Image(double width, double height){
+        super();
+    }
     
 }

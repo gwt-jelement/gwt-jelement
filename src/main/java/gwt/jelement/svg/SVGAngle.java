@@ -41,16 +41,16 @@ public class SVGAngle extends JsObject{
     public native short getUnitType();
     
     @JsProperty(name="value")
-    public native float getValue();
+    public native double getValue();
     
     @JsProperty(name="value")
-    public native void setValue(float value);
+    public native void setValue(double value);
     
     @JsProperty(name="valueInSpecifiedUnits")
-    public native float getValueInSpecifiedUnits();
+    public native double getValueInSpecifiedUnits();
     
     @JsProperty(name="valueInSpecifiedUnits")
-    public native void setValueInSpecifiedUnits(float valueInSpecifiedUnits);
+    public native void setValueInSpecifiedUnits(double valueInSpecifiedUnits);
     
     @JsProperty(name="valueAsString")
     public native String getValueAsString();
@@ -62,6 +62,6 @@ public class SVGAngle extends JsObject{
     public native void convertToSpecifiedUnits(short unitType);
     
     @JsMethod(name = "newValueSpecifiedUnits")
-    public native void newValueSpecifiedUnits(short unitType, float valueInSpecifiedUnits);
+    public native void newValueSpecifiedUnits(short unitType, double valueInSpecifiedUnits);
     
 }

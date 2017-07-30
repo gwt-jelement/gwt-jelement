@@ -25,18 +25,18 @@ import jsinterop.annotations.JsType;
 public class GainOptions extends AudioNodeOptions{
 
     @JsProperty(name="gain")
-    private float gain;
+    private double gain;
 
     public GainOptions(){
     }
 
     @JsOverlay
-    public final float getGain(){
+    public final double getGain(){
         return this.gain;
     }
 
     @JsOverlay
-    public final void setGain(float gain){
+    public final void setGain(double gain){
         this.gain = gain;
     }
 

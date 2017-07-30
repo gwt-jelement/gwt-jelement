@@ -44,7 +44,7 @@ public class SVGTextContentElement extends SVGGraphicsElement{
     public native double getCharNumAtPosition(SVGPoint point);
     
     @JsMethod(name = "getComputedTextLength")
-    public native float getComputedTextLength();
+    public native double getComputedTextLength();
     
     @JsMethod(name = "getEndPositionOfChar")
     public native SVGPoint getEndPositionOfChar(double charnum);
@@ -56,13 +56,13 @@ public class SVGTextContentElement extends SVGGraphicsElement{
     public native double getNumberOfChars();
     
     @JsMethod(name = "getRotationOfChar")
-    public native float getRotationOfChar(double charnum);
+    public native double getRotationOfChar(double charnum);
     
     @JsMethod(name = "getStartPositionOfChar")
     public native SVGPoint getStartPositionOfChar(double charnum);
     
     @JsMethod(name = "getSubStringLength")
-    public native float getSubStringLength(double charnum, double nchars);
+    public native double getSubStringLength(double charnum, double nchars);
     
     @JsMethod(name = "selectSubString")
     public native void selectSubString(double charnum, double nchars);

@@ -34,6 +34,6 @@ public class SpeechRecognitionAlternative extends JsObject{
     public native String getTranscript();
     
     @JsProperty(name="confidence")
-    public native float getConfidence();
+    public native double getConfidence();
     
 }

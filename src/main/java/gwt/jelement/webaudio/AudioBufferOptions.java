@@ -32,7 +32,7 @@ public class AudioBufferOptions extends JsObject{
     private double length;
 
     @JsProperty(name="sampleRate")
-    private float sampleRate;
+    private double sampleRate;
 
     public AudioBufferOptions(){
     }
@@ -58,12 +58,12 @@ public class AudioBufferOptions extends JsObject{
     }
 
     @JsOverlay
-    public final float getSampleRate(){
+    public final double getSampleRate(){
         return this.sampleRate;
     }
 
     @JsOverlay
-    public final void setSampleRate(float sampleRate){
+    public final void setSampleRate(double sampleRate){
         this.sampleRate = sampleRate;
     }
 

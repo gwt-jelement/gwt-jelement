@@ -32,16 +32,16 @@ public class SVGPoint extends JsObject{
     }
     
     @JsProperty(name="x")
-    public native float getX();
+    public native double getX();
     
     @JsProperty(name="x")
-    public native void setX(float x);
+    public native void setX(double x);
     
     @JsProperty(name="y")
-    public native float getY();
+    public native double getY();
     
     @JsProperty(name="y")
-    public native void setY(float y);
+    public native void setY(double y);
     
     @JsMethod(name = "matrixTransform")
     public native SVGPoint matrixTransform(SVGMatrix matrix);

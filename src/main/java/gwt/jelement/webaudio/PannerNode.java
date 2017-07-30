@@ -116,9 +116,9 @@ public class PannerNode extends AudioNode{
     }
     
     @JsMethod(name = "setOrientation")
-    public native void setOrientation(float x, float y, float z);
+    public native void setOrientation(double x, double y, double z);
     
     @JsMethod(name = "setPosition")
-    public native void setPosition(float x, float y, float z);
+    public native void setPosition(double x, double y, double z);
     
 }

@@ -59,9 +59,9 @@ public class AudioListener extends JsObject{
     public native AudioParam getUpZ();
     
     @JsMethod(name = "setOrientation")
-    public native void setOrientation(float x, float y, float z, float xUp, float yUp, float zUp);
+    public native void setOrientation(double x, double y, double z, double xUp, double yUp, double zUp);
     
     @JsMethod(name = "setPosition")
-    public native void setPosition(float x, float y, float z);
+    public native void setPosition(double x, double y, double z);
     
 }

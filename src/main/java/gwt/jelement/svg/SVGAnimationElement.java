@@ -83,21 +83,21 @@ public class SVGAnimationElement extends SVGElement{
     public native void beginElement();
     
     @JsMethod(name = "beginElementAt")
-    public native void beginElementAt(float offset);
+    public native void beginElementAt(double offset);
     
     @JsMethod(name = "endElement")
     public native void endElement();
     
     @JsMethod(name = "endElementAt")
-    public native void endElementAt(float offset);
+    public native void endElementAt(double offset);
     
     @JsMethod(name = "getCurrentTime")
-    public native float getCurrentTime();
+    public native double getCurrentTime();
     
     @JsMethod(name = "getSimpleDuration")
-    public native float getSimpleDuration();
+    public native double getSimpleDuration();
     
     @JsMethod(name = "getStartTime")
-    public native float getStartTime();
+    public native double getStartTime();
     
 }

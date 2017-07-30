@@ -57,15 +57,15 @@ public class DevToolsHost extends JsObject{
     public native void sendMessageToEmbedder(String message);
     
     @JsMethod(name = "showContextMenuAtPoint")
-    public native void showContextMenuAtPoint(float x, float y, Object items);
+    public native void showContextMenuAtPoint(double x, double y, Object items);
     
     @JsMethod(name = "showContextMenuAtPoint")
-    public native void showContextMenuAtPoint(float x, float y, Object items, Document document);
+    public native void showContextMenuAtPoint(double x, double y, Object items, Document document);
     
     @JsMethod(name = "upgradeDraggedFileSystemPermissions")
     public native void upgradeDraggedFileSystemPermissions(DOMFileSystem domFileSystem);
     
     @JsMethod(name = "zoomFactor")
-    public native float zoomFactor();
+    public native double zoomFactor();
     
 }

@@ -274,19 +274,19 @@ public class CanvasRenderingContext2D extends JsObject{
     public native void addHitRegion(HitRegionOptions options);
     
     @JsMethod(name = "arc")
-    public native void arc(float x, float y, float radius, float startAngle, float endAngle);
+    public native void arc(double x, double y, double radius, double startAngle, double endAngle);
     
     @JsMethod(name = "arc")
-    public native void arc(float x, float y, float radius, float startAngle, float endAngle, boolean anticlockwise);
+    public native void arc(double x, double y, double radius, double startAngle, double endAngle, boolean anticlockwise);
     
     @JsMethod(name = "arcTo")
-    public native void arcTo(float x1, float y1, float x2, float y2, float radius);
+    public native void arcTo(double x1, double y1, double x2, double y2, double radius);
     
     @JsMethod(name = "beginPath")
     public native void beginPath();
     
     @JsMethod(name = "bezierCurveTo")
-    public native void bezierCurveTo(float cp1x, float cp1y, float cp2x, float cp2y, float x, float y);
+    public native void bezierCurveTo(double cp1x, double cp1y, double cp2x, double cp2y, double x, double y);
     
     @JsMethod(name = "clearHitRegions")
     public native void clearHitRegions();
@@ -443,10 +443,10 @@ public class CanvasRenderingContext2D extends JsObject{
     public native void drawImage(OffscreenCanvas image, double sx, double sy, double sw, double sh, double dx, double dy, double dw, double dh);
     
     @JsMethod(name = "ellipse")
-    public native void ellipse(float x, float y, float radiusX, float radiusY, float rotation, float startAngle, float endAngle);
+    public native void ellipse(double x, double y, double radiusX, double radiusY, double rotation, double startAngle, double endAngle);
     
     @JsMethod(name = "ellipse")
-    public native void ellipse(float x, float y, float radiusX, float radiusY, float rotation, float startAngle, float endAngle, boolean anticlockwise);
+    public native void ellipse(double x, double y, double radiusX, double radiusY, double rotation, double startAngle, double endAngle, boolean anticlockwise);
     
     @JsMethod(name = "fill")
     public native void fill();
@@ -520,13 +520,13 @@ public class CanvasRenderingContext2D extends JsObject{
     public native boolean isPointInStroke(Path2D path, double x, double y);
     
     @JsMethod(name = "lineTo")
-    public native void lineTo(float x, float y);
+    public native void lineTo(double x, double y);
     
     @JsMethod(name = "measureText")
     public native TextMetrics measureText(String text);
     
     @JsMethod(name = "moveTo")
-    public native void moveTo(float x, float y);
+    public native void moveTo(double x, double y);
     
     @JsMethod(name = "putImageData")
     public native void putImageData(ImageData imagedata, double dx, double dy);
@@ -535,10 +535,10 @@ public class CanvasRenderingContext2D extends JsObject{
     public native void putImageData(ImageData imagedata, double dx, double dy, double dirtyX, double dirtyY, double dirtyWidth, double dirtyHeight);
     
     @JsMethod(name = "quadraticCurveTo")
-    public native void quadraticCurveTo(float cpx, float cpy, float x, float y);
+    public native void quadraticCurveTo(double cpx, double cpy, double x, double y);
     
     @JsMethod(name = "rect")
-    public native void rect(float x, float y, float width, float height);
+    public native void rect(double x, double y, double width, double height);
     
     @JsMethod(name = "removeHitRegion")
     public native void removeHitRegion(String id);

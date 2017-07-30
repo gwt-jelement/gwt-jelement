@@ -34,12 +34,12 @@ public class SpeechGrammarList extends JsObject{
     public native void addFromString(String string);
     
     @JsMethod(name = "addFromString")
-    public native void addFromString(String string, float weight);
+    public native void addFromString(String string, double weight);
     
     @JsMethod(name = "addFromUri")
     public native void addFromUri(String src);
     
     @JsMethod(name = "addFromUri")
-    public native void addFromUri(String src, float weight);
+    public native void addFromUri(String src, double weight);
     
 }

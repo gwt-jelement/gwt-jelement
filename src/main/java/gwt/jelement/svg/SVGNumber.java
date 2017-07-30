@@ -31,9 +31,9 @@ public class SVGNumber extends JsObject{
     }
     
     @JsProperty(name="value")
-    public native float getValue();
+    public native double getValue();
     
     @JsProperty(name="value")
-    public native void setValue(float value);
+    public native void setValue(double value);
     
 }

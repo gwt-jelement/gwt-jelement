@@ -80,24 +80,24 @@ public class SVGMatrix extends JsObject{
     public native SVGMatrix multiply(SVGMatrix secondMatrix);
     
     @JsMethod(name = "rotate")
-    public native SVGMatrix rotate(float angle);
+    public native SVGMatrix rotate(double angle);
     
     @JsMethod(name = "rotateFromVector")
-    public native SVGMatrix rotateFromVector(float x, float y);
+    public native SVGMatrix rotateFromVector(double x, double y);
     
     @JsMethod(name = "scale")
-    public native SVGMatrix scale(float scaleFactor);
+    public native SVGMatrix scale(double scaleFactor);
     
     @JsMethod(name = "scaleNonUniform")
-    public native SVGMatrix scaleNonUniform(float scaleFactorX, float scaleFactorY);
+    public native SVGMatrix scaleNonUniform(double scaleFactorX, double scaleFactorY);
     
     @JsMethod(name = "skewX")
-    public native SVGMatrix skewX(float angle);
+    public native SVGMatrix skewX(double angle);
     
     @JsMethod(name = "skewY")
-    public native SVGMatrix skewY(float angle);
+    public native SVGMatrix skewY(double angle);
     
     @JsMethod(name = "translate")
-    public native SVGMatrix translate(float x, float y);
+    public native SVGMatrix translate(double x, double y);
     
 }

@@ -31,7 +31,7 @@ public class OfflineAudioContext extends BaseAudioContext{
     private EventHandlerNonNull oncomplete;
     
     @JsConstructor
-    public OfflineAudioContext(double numberOfChannels, double numberOfFrames, float sampleRate){
+    public OfflineAudioContext(double numberOfChannels, double numberOfFrames, double sampleRate){
         super();
     }
     

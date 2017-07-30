@@ -33,10 +33,10 @@ public class VRLayer extends JsObject{
     private WebGL2RenderingContext.VRSource source;
 
     @JsProperty(name="leftBounds")
-    private float[] leftBounds;
+    private double[] leftBounds;
 
     @JsProperty(name="rightBounds")
-    private float[] rightBounds;
+    private double[] rightBounds;
 
     public VRLayer(){
     }
@@ -52,22 +52,22 @@ public class VRLayer extends JsObject{
     }
 
     @JsOverlay
-    public final float[] getLeftBounds(){
+    public final double[] getLeftBounds(){
         return this.leftBounds;
     }
 
     @JsOverlay
-    public final void setLeftBounds(float[] leftBounds){
+    public final void setLeftBounds(double[] leftBounds){
         this.leftBounds = leftBounds;
     }
 
     @JsOverlay
-    public final float[] getRightBounds(){
+    public final double[] getRightBounds(){
         return this.rightBounds;
     }
 
     @JsOverlay
-    public final void setRightBounds(float[] rightBounds){
+    public final void setRightBounds(double[] rightBounds){
         this.rightBounds = rightBounds;
     }
 

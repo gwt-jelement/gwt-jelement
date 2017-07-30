@@ -14,23 +14,11 @@
  * License for the specific language governing permissions and limitations under
  * the License.
  */
-package gwt.jelement.canvas2d;
+package gwt.jelement.dom;
 
-import gwt.jelement.core.JsObject;
-import jsinterop.annotations.JsConstructor;
-import jsinterop.annotations.JsMethod;
-import jsinterop.annotations.JsOverlay;
-import jsinterop.annotations.JsPackage;
-import jsinterop.annotations.JsType;
+import jsinterop.annotations.JsFunction;
 
-@JsType(namespace = JsPackage.GLOBAL, name="CanvasGradient", isNative = true)
-public class CanvasGradient extends JsObject{
-    @JsConstructor
-    public CanvasGradient(){
-        super();
-    }
-    
-    @JsMethod(name = "addColorStop")
-    public native void addColorStop(double offset, String color);
-    
+@JsFunction
+public interface MutationCallback{
+    void calllback(MutationRecord[] mutations, MutationObserver instance);
 }

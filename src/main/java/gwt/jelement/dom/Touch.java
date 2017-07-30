@@ -56,16 +56,16 @@ public class Touch extends JsObject{
     public native double getPageY();
     
     @JsProperty(name="radiusX")
-    public native float getRadiusX();
+    public native double getRadiusX();
     
     @JsProperty(name="radiusY")
-    public native float getRadiusY();
+    public native double getRadiusY();
     
     @JsProperty(name="rotationAngle")
-    public native float getRotationAngle();
+    public native double getRotationAngle();
     
     @JsProperty(name="force")
-    public native float getForce();
+    public native double getForce();
     
     @JsProperty(name="region")
     public native String getRegion();
