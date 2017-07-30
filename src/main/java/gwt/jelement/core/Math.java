@@ -24,14 +24,14 @@ import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="Math", isNative = true)
 public class Math extends JsObject{
-    public static double E;
-    public static double LN2;
-    public static double LN10;
-    public static double LOG2E;
-    public static double LOG10E;
-    public static double PI;
-    public static double SQRT1_2;
-    public static double SQRT2;
+    public static double E; /* 2.718281828459045 */
+    public static double LN2; /* 0.6931471805599453 */
+    public static double LN10; /* 2.302585092994046 */
+    public static double LOG2E; /* 1.4426950408889634 */
+    public static double LOG10E; /* 0.4342944819032518 */
+    public static double PI; /* 3.141592653589793 */
+    public static double SQRT1_2; /* 0.7071067811865476 */
+    public static double SQRT2; /* 1.4142135623730951 */
     
     @JsConstructor
     public Math(){

@@ -25,14 +25,14 @@ import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="SQLError", isNative = true)
 public class SQLError extends JsObject{
-    public static short UNKNOWN_ERR;
-    public static short DATABASE_ERR;
-    public static short VERSION_ERR;
-    public static short TOO_LARGE_ERR;
-    public static short QUOTA_ERR;
-    public static short SYNTAX_ERR;
-    public static short CONSTRAINT_ERR;
-    public static short TIMEOUT_ERR;
+    public static short UNKNOWN_ERR; /* 0 */
+    public static short DATABASE_ERR; /* 1 */
+    public static short VERSION_ERR; /* 2 */
+    public static short TOO_LARGE_ERR; /* 3 */
+    public static short QUOTA_ERR; /* 4 */
+    public static short SYNTAX_ERR; /* 5 */
+    public static short CONSTRAINT_ERR; /* 6 */
+    public static short TIMEOUT_ERR; /* 7 */
     
     @JsConstructor
     public SQLError(){

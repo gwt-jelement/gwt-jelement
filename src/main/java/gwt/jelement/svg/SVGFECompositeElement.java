@@ -24,13 +24,13 @@ import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="SVGFECompositeElement", isNative = true)
 public class SVGFECompositeElement extends SVGElement{
-    public static short SVG_FECOMPOSITE_OPERATOR_UNKNOWN;
-    public static short SVG_FECOMPOSITE_OPERATOR_OVER;
-    public static short SVG_FECOMPOSITE_OPERATOR_IN;
-    public static short SVG_FECOMPOSITE_OPERATOR_OUT;
-    public static short SVG_FECOMPOSITE_OPERATOR_ATOP;
-    public static short SVG_FECOMPOSITE_OPERATOR_XOR;
-    public static short SVG_FECOMPOSITE_OPERATOR_ARITHMETIC;
+    public static short SVG_FECOMPOSITE_OPERATOR_UNKNOWN; /* 0 */
+    public static short SVG_FECOMPOSITE_OPERATOR_OVER; /* 1 */
+    public static short SVG_FECOMPOSITE_OPERATOR_IN; /* 2 */
+    public static short SVG_FECOMPOSITE_OPERATOR_OUT; /* 3 */
+    public static short SVG_FECOMPOSITE_OPERATOR_ATOP; /* 4 */
+    public static short SVG_FECOMPOSITE_OPERATOR_XOR; /* 5 */
+    public static short SVG_FECOMPOSITE_OPERATOR_ARITHMETIC; /* 6 */
     
     @JsConstructor
     public SVGFECompositeElement(){

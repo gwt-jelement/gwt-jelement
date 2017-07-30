@@ -20,11 +20,10 @@ import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
-import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="DataView", isNative = true)
-public class DataView extends JsObject{
+public class DataView extends ArrayBufferView{
     @JsConstructor
     public DataView(ArrayBuffer buffer){
         super();
@@ -39,15 +38,6 @@ public class DataView extends JsObject{
     public DataView(ArrayBuffer buffer, double byteOffset, double byteLength){
         super();
     }
-    
-    @JsProperty(name="buffer")
-    public native ArrayBuffer getBuffer();
-    
-    @JsProperty(name="byteOffset")
-    public native double getByteOffset();
-    
-    @JsProperty(name="byteLength")
-    public native double getByteLength();
     
     @JsMethod(name = "getFloat32")
     public native float getFloat32(double byteOffset);

@@ -27,9 +27,9 @@ import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="EventSource", isNative = true)
 public class EventSource extends EventTarget{
-    public static short CONNECTING;
-    public static short OPEN;
-    public static short CLOSED;
+    public static short CONNECTING; /* 0 */
+    public static short OPEN; /* 1 */
+    public static short CLOSED; /* 2 */
     
     @JsProperty(name="onopen")
     private EventHandlerNonNull onopen;

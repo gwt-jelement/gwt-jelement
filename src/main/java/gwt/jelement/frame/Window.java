@@ -18,6 +18,7 @@ package gwt.jelement.frame;
 
 import gwt.jelement.cachestorage.CacheStorage;
 import gwt.jelement.core.CallbackFunction;
+import gwt.jelement.core.JSONImpl;
 import gwt.jelement.crypto.Crypto;
 import gwt.jelement.css.CSSRuleList;
 import gwt.jelement.css.CSSStyleDeclaration;
@@ -80,8 +81,8 @@ import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="Window", isNative = true)
 public class Window extends EventTarget{
-    public static short TEMPORARY;
-    public static short PERSISTENT;
+    public static short TEMPORARY; /* 0 */
+    public static short PERSISTENT; /* 1 */
     
     @JsProperty(name="onorientationchange")
     private EventHandlerNonNull onorientationchange;
@@ -727,6 +728,9 @@ public class Window extends EventTarget{
     
     @JsProperty(name="animationWorklet")
     public native Worklet getAnimationWorklet();
+    
+    @JsProperty(name="JSON")
+    public native JSONImpl getJSON();
     
     @JsProperty(name="crypto")
     public native Crypto getCrypto();

@@ -26,17 +26,17 @@ import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="SVGLength", isNative = true)
 public class SVGLength extends JsObject{
-    public static short SVG_LENGTHTYPE_UNKNOWN;
-    public static short SVG_LENGTHTYPE_NUMBER;
-    public static short SVG_LENGTHTYPE_PERCENTAGE;
-    public static short SVG_LENGTHTYPE_EMS;
-    public static short SVG_LENGTHTYPE_EXS;
-    public static short SVG_LENGTHTYPE_PX;
-    public static short SVG_LENGTHTYPE_CM;
-    public static short SVG_LENGTHTYPE_MM;
-    public static short SVG_LENGTHTYPE_IN;
-    public static short SVG_LENGTHTYPE_PT;
-    public static short SVG_LENGTHTYPE_PC;
+    public static short SVG_LENGTHTYPE_UNKNOWN; /* 0 */
+    public static short SVG_LENGTHTYPE_NUMBER; /* 1 */
+    public static short SVG_LENGTHTYPE_PERCENTAGE; /* 2 */
+    public static short SVG_LENGTHTYPE_EMS; /* 3 */
+    public static short SVG_LENGTHTYPE_EXS; /* 4 */
+    public static short SVG_LENGTHTYPE_PX; /* 5 */
+    public static short SVG_LENGTHTYPE_CM; /* 6 */
+    public static short SVG_LENGTHTYPE_MM; /* 7 */
+    public static short SVG_LENGTHTYPE_IN; /* 8 */
+    public static short SVG_LENGTHTYPE_PT; /* 9 */
+    public static short SVG_LENGTHTYPE_PC; /* 10 */
     
     @JsConstructor
     public SVGLength(){

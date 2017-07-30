@@ -24,10 +24,10 @@ import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="EXTsRGB", isNative = true)
 public class EXTsRGB extends JsObject{
-    public static double SRGB_EXT;
-    public static double SRGB_ALPHA_EXT;
-    public static double SRGB8_ALPHA8_EXT;
-    public static double FRAMEBUFFER_ATTACHMENT_COLOR_ENCODING_EXT;
+    public static double SRGB_EXT; /* 0x8C40 */
+    public static double SRGB_ALPHA_EXT; /* 0x8C42 */
+    public static double SRGB8_ALPHA8_EXT; /* 0x8C43 */
+    public static double FRAMEBUFFER_ATTACHMENT_COLOR_ENCODING_EXT; /* 0x8210 */
     
     @JsConstructor
     public EXTsRGB(){

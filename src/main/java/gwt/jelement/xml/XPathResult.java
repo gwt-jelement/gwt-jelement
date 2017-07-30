@@ -27,16 +27,16 @@ import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="XPathResult", isNative = true)
 public class XPathResult extends JsObject{
-    public static short ANY_TYPE;
-    public static short NUMBER_TYPE;
-    public static short STRING_TYPE;
-    public static short BOOLEAN_TYPE;
-    public static short UNORDERED_NODE_ITERATOR_TYPE;
-    public static short ORDERED_NODE_ITERATOR_TYPE;
-    public static short UNORDERED_NODE_SNAPSHOT_TYPE;
-    public static short ORDERED_NODE_SNAPSHOT_TYPE;
-    public static short ANY_UNORDERED_NODE_TYPE;
-    public static short FIRST_ORDERED_NODE_TYPE;
+    public static short ANY_TYPE; /* 0 */
+    public static short NUMBER_TYPE; /* 1 */
+    public static short STRING_TYPE; /* 2 */
+    public static short BOOLEAN_TYPE; /* 3 */
+    public static short UNORDERED_NODE_ITERATOR_TYPE; /* 4 */
+    public static short ORDERED_NODE_ITERATOR_TYPE; /* 5 */
+    public static short UNORDERED_NODE_SNAPSHOT_TYPE; /* 6 */
+    public static short ORDERED_NODE_SNAPSHOT_TYPE; /* 7 */
+    public static short ANY_UNORDERED_NODE_TYPE; /* 8 */
+    public static short FIRST_ORDERED_NODE_TYPE; /* 9 */
     
     @JsConstructor
     public XPathResult(){

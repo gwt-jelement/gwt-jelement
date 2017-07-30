@@ -16,6 +16,7 @@
  */
 package gwt.jelement;
 
+import gwt.jelement.core.JSONImpl;
 import gwt.jelement.core.JsObject;
 import gwt.jelement.core.Math;
 import gwt.jelement.frame.Console;
@@ -64,6 +65,9 @@ public class Browser extends JsObject{
     
     @JsProperty(name="Math")
     public static Math JsMath;
+    
+    @JsProperty(name="JSON")
+    public static JSONImpl JSON;
     
     @JsConstructor
     public Browser(){

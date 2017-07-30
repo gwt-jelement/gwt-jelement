@@ -24,9 +24,9 @@ import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="SVGUnitTypes", isNative = true)
 public class SVGUnitTypes extends JsObject{
-    public static short SVG_UNIT_TYPE_UNKNOWN;
-    public static short SVG_UNIT_TYPE_USERSPACEONUSE;
-    public static short SVG_UNIT_TYPE_OBJECTBOUNDINGBOX;
+    public static short SVG_UNIT_TYPE_UNKNOWN; /* 0 */
+    public static short SVG_UNIT_TYPE_USERSPACEONUSE; /* 1 */
+    public static short SVG_UNIT_TYPE_OBJECTBOUNDINGBOX; /* 2 */
     
     @JsConstructor
     public SVGUnitTypes(){

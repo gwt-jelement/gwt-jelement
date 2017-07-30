@@ -30,10 +30,10 @@ import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="WebSocket", isNative = true)
 public class WebSocket extends EventTarget{
-    public static short CONNECTING;
-    public static short OPEN;
-    public static short CLOSING;
-    public static short CLOSED;
+    public static short CONNECTING; /* 0 */
+    public static short OPEN; /* 1 */
+    public static short CLOSING; /* 2 */
+    public static short CLOSED; /* 3 */
     
     @JsProperty(name="onopen")
     private EventHandlerNonNull onopen;

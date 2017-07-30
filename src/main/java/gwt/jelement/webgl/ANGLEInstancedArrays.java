@@ -25,7 +25,7 @@ import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="ANGLEInstancedArrays", isNative = true)
 public class ANGLEInstancedArrays extends JsObject{
-    public static double VERTEX_ATTRIB_ARRAY_DIVISOR_ANGLE;
+    public static double VERTEX_ATTRIB_ARRAY_DIVISOR_ANGLE; /* 0x88FE */
     
     @JsConstructor
     public ANGLEInstancedArrays(){

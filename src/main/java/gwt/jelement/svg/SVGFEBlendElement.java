@@ -24,12 +24,12 @@ import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="SVGFEBlendElement", isNative = true)
 public class SVGFEBlendElement extends SVGElement{
-    public static short SVG_FEBLEND_MODE_UNKNOWN;
-    public static short SVG_FEBLEND_MODE_NORMAL;
-    public static short SVG_FEBLEND_MODE_MULTIPLY;
-    public static short SVG_FEBLEND_MODE_SCREEN;
-    public static short SVG_FEBLEND_MODE_DARKEN;
-    public static short SVG_FEBLEND_MODE_LIGHTEN;
+    public static short SVG_FEBLEND_MODE_UNKNOWN; /* 0 */
+    public static short SVG_FEBLEND_MODE_NORMAL; /* 1 */
+    public static short SVG_FEBLEND_MODE_MULTIPLY; /* 2 */
+    public static short SVG_FEBLEND_MODE_SCREEN; /* 3 */
+    public static short SVG_FEBLEND_MODE_DARKEN; /* 4 */
+    public static short SVG_FEBLEND_MODE_LIGHTEN; /* 5 */
     
     @JsConstructor
     public SVGFEBlendElement(){

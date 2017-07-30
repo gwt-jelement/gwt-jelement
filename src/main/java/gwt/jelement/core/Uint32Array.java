@@ -24,8 +24,8 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="Uint32Array", isNative = true)
-public class Uint32Array extends JsObject{
-    public static double BYTES_PER_ELEMENT;
+public class Uint32Array extends ArrayBufferView{
+    public static double BYTES_PER_ELEMENT; /* 4 */
     
     @JsConstructor
     public Uint32Array(double length){
@@ -57,14 +57,8 @@ public class Uint32Array extends JsObject{
         super();
     }
     
-    @JsProperty(name="buffer")
-    public native ArrayBuffer getBuffer();
-    
-    @JsProperty(name="byteOffset")
-    public native double getByteOffset();
-    
-    @JsProperty(name="byteLength")
-    public native double getByteLength();
+    @JsProperty(name="length")
+    public native double getLength();
     
     @JsMethod(name = "set")
     public native void set(Uint32Array array);

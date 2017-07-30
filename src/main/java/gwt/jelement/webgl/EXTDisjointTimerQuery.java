@@ -25,13 +25,13 @@ import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="EXTDisjointTimerQuery", isNative = true)
 public class EXTDisjointTimerQuery extends JsObject{
-    public static double QUERY_COUNTER_BITS_EXT;
-    public static double CURRENT_QUERY_EXT;
-    public static double QUERY_RESULT_EXT;
-    public static double QUERY_RESULT_AVAILABLE_EXT;
-    public static double TIME_ELAPSED_EXT;
-    public static double TIMESTAMP_EXT;
-    public static double GPU_DISJOINT_EXT;
+    public static double QUERY_COUNTER_BITS_EXT; /* 0x8864 */
+    public static double CURRENT_QUERY_EXT; /* 0x8865 */
+    public static double QUERY_RESULT_EXT; /* 0x8866 */
+    public static double QUERY_RESULT_AVAILABLE_EXT; /* 0x8867 */
+    public static double TIME_ELAPSED_EXT; /* 0x88BF */
+    public static double TIMESTAMP_EXT; /* 0x8E28 */
+    public static double GPU_DISJOINT_EXT; /* 0x8FBB */
     
     @JsConstructor
     public EXTDisjointTimerQuery(){

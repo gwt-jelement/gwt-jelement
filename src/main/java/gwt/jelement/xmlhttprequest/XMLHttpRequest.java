@@ -32,11 +32,11 @@ import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="XMLHttpRequest", isNative = true)
 public class XMLHttpRequest extends XMLHttpRequestEventTarget{
-    public static short UNSENT;
-    public static short OPENED;
-    public static short HEADERS_RECEIVED;
-    public static short LOADING;
-    public static short DONE;
+    public static short UNSENT; /* 0 */
+    public static short OPENED; /* 1 */
+    public static short HEADERS_RECEIVED; /* 2 */
+    public static short LOADING; /* 3 */
+    public static short DONE; /* 4 */
     
     @JsProperty(name="onreadystatechange")
     private EventHandlerNonNull onreadystatechange;

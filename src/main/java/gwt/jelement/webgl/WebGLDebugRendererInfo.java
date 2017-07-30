@@ -24,8 +24,8 @@ import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="WebGLDebugRendererInfo", isNative = true)
 public class WebGLDebugRendererInfo extends JsObject{
-    public static double UNMASKED_VENDOR_WEBGL;
-    public static double UNMASKED_RENDERER_WEBGL;
+    public static double UNMASKED_VENDOR_WEBGL; /* 0x9245 */
+    public static double UNMASKED_RENDERER_WEBGL; /* 0x9246 */
     
     @JsConstructor
     public WebGLDebugRendererInfo(){

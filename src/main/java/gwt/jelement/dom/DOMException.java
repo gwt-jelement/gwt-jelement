@@ -26,31 +26,31 @@ import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="DOMException", isNative = true)
 public class DOMException extends JsObject{
-    public static short INDEX_SIZE_ERR;
-    public static short DOMSTRING_SIZE_ERR;
-    public static short HIERARCHY_REQUEST_ERR;
-    public static short WRONG_DOCUMENT_ERR;
-    public static short INVALID_CHARACTER_ERR;
-    public static short NO_DATA_ALLOWED_ERR;
-    public static short NO_MODIFICATION_ALLOWED_ERR;
-    public static short NOT_FOUND_ERR;
-    public static short NOT_SUPPORTED_ERR;
-    public static short INUSE_ATTRIBUTE_ERR;
-    public static short INVALID_STATE_ERR;
-    public static short SYNTAX_ERR;
-    public static short INVALID_MODIFICATION_ERR;
-    public static short NAMESPACE_ERR;
-    public static short INVALID_ACCESS_ERR;
-    public static short VALIDATION_ERR;
-    public static short TYPE_MISMATCH_ERR;
-    public static short SECURITY_ERR;
-    public static short NETWORK_ERR;
-    public static short ABORT_ERR;
-    public static short URL_MISMATCH_ERR;
-    public static short QUOTA_EXCEEDED_ERR;
-    public static short TIMEOUT_ERR;
-    public static short INVALID_NODE_TYPE_ERR;
-    public static short DATA_CLONE_ERR;
+    public static short INDEX_SIZE_ERR; /* 1 */
+    public static short DOMSTRING_SIZE_ERR; /* 2 */
+    public static short HIERARCHY_REQUEST_ERR; /* 3 */
+    public static short WRONG_DOCUMENT_ERR; /* 4 */
+    public static short INVALID_CHARACTER_ERR; /* 5 */
+    public static short NO_DATA_ALLOWED_ERR; /* 6 */
+    public static short NO_MODIFICATION_ALLOWED_ERR; /* 7 */
+    public static short NOT_FOUND_ERR; /* 8 */
+    public static short NOT_SUPPORTED_ERR; /* 9 */
+    public static short INUSE_ATTRIBUTE_ERR; /* 10 */
+    public static short INVALID_STATE_ERR; /* 11 */
+    public static short SYNTAX_ERR; /* 12 */
+    public static short INVALID_MODIFICATION_ERR; /* 13 */
+    public static short NAMESPACE_ERR; /* 14 */
+    public static short INVALID_ACCESS_ERR; /* 15 */
+    public static short VALIDATION_ERR; /* 16 */
+    public static short TYPE_MISMATCH_ERR; /* 17 */
+    public static short SECURITY_ERR; /* 18 */
+    public static short NETWORK_ERR; /* 19 */
+    public static short ABORT_ERR; /* 20 */
+    public static short URL_MISMATCH_ERR; /* 21 */
+    public static short QUOTA_EXCEEDED_ERR; /* 22 */
+    public static short TIMEOUT_ERR; /* 23 */
+    public static short INVALID_NODE_TYPE_ERR; /* 24 */
+    public static short DATA_CLONE_ERR; /* 25 */
     
     @JsConstructor
     public DOMException(){

@@ -26,10 +26,10 @@ import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="Range", isNative = true)
 public class Range extends JsObject{
-    public static short START_TO_START;
-    public static short START_TO_END;
-    public static short END_TO_END;
-    public static short END_TO_START;
+    public static short START_TO_START; /* 0 */
+    public static short START_TO_END; /* 1 */
+    public static short END_TO_END; /* 2 */
+    public static short END_TO_START; /* 3 */
     
     @JsConstructor
     public Range(){

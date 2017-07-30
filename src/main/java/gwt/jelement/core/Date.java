@@ -112,7 +112,7 @@ public class Date extends JsObject{
     public native int getSeconds();
     
     @JsMethod(name = "getTime")
-    public native int getTime();
+    public native double getTime();
     
     @JsMethod(name = "getTimezoneOffset")
     public native int getTimezoneOffset();

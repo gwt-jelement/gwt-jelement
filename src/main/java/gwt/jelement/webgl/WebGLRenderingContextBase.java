@@ -38,302 +38,302 @@ import jsinterop.base.Js;
 
 @JsType(namespace = JsPackage.GLOBAL, name="WebGLRenderingContextBase", isNative = true)
 public class WebGLRenderingContextBase extends JsObject{
-    public static double DEPTH_BUFFER_BIT;
-    public static double STENCIL_BUFFER_BIT;
-    public static double COLOR_BUFFER_BIT;
-    public static double POINTS;
-    public static double LINES;
-    public static double LINE_LOOP;
-    public static double LINE_STRIP;
-    public static double TRIANGLES;
-    public static double TRIANGLE_STRIP;
-    public static double TRIANGLE_FAN;
-    public static double ZERO;
-    public static double ONE;
-    public static double SRC_COLOR;
-    public static double ONE_MINUS_SRC_COLOR;
-    public static double SRC_ALPHA;
-    public static double ONE_MINUS_SRC_ALPHA;
-    public static double DST_ALPHA;
-    public static double ONE_MINUS_DST_ALPHA;
-    public static double DST_COLOR;
-    public static double ONE_MINUS_DST_COLOR;
-    public static double SRC_ALPHA_SATURATE;
-    public static double FUNC_ADD;
-    public static double BLEND_EQUATION;
-    public static double BLEND_EQUATION_RGB;
-    public static double BLEND_EQUATION_ALPHA;
-    public static double FUNC_SUBTRACT;
-    public static double FUNC_REVERSE_SUBTRACT;
-    public static double BLEND_DST_RGB;
-    public static double BLEND_SRC_RGB;
-    public static double BLEND_DST_ALPHA;
-    public static double BLEND_SRC_ALPHA;
-    public static double CONSTANT_COLOR;
-    public static double ONE_MINUS_CONSTANT_COLOR;
-    public static double CONSTANT_ALPHA;
-    public static double ONE_MINUS_CONSTANT_ALPHA;
-    public static double BLEND_COLOR;
-    public static double ARRAY_BUFFER;
-    public static double ELEMENT_ARRAY_BUFFER;
-    public static double ARRAY_BUFFER_BINDING;
-    public static double ELEMENT_ARRAY_BUFFER_BINDING;
-    public static double STREAM_DRAW;
-    public static double STATIC_DRAW;
-    public static double DYNAMIC_DRAW;
-    public static double BUFFER_SIZE;
-    public static double BUFFER_USAGE;
-    public static double CURRENT_VERTEX_ATTRIB;
-    public static double FRONT;
-    public static double BACK;
-    public static double FRONT_AND_BACK;
-    public static double TEXTURE_2D;
-    public static double CULL_FACE;
-    public static double BLEND;
-    public static double DITHER;
-    public static double STENCIL_TEST;
-    public static double DEPTH_TEST;
-    public static double SCISSOR_TEST;
-    public static double POLYGON_OFFSET_FILL;
-    public static double SAMPLE_ALPHA_TO_COVERAGE;
-    public static double SAMPLE_COVERAGE;
-    public static double NO_ERROR;
-    public static double INVALID_ENUM;
-    public static double INVALID_VALUE;
-    public static double INVALID_OPERATION;
-    public static double OUT_OF_MEMORY;
-    public static double CW;
-    public static double CCW;
-    public static double LINE_WIDTH;
-    public static double ALIASED_POINT_SIZE_RANGE;
-    public static double ALIASED_LINE_WIDTH_RANGE;
-    public static double CULL_FACE_MODE;
-    public static double FRONT_FACE;
-    public static double DEPTH_RANGE;
-    public static double DEPTH_WRITEMASK;
-    public static double DEPTH_CLEAR_VALUE;
-    public static double DEPTH_FUNC;
-    public static double STENCIL_CLEAR_VALUE;
-    public static double STENCIL_FUNC;
-    public static double STENCIL_FAIL;
-    public static double STENCIL_PASS_DEPTH_FAIL;
-    public static double STENCIL_PASS_DEPTH_PASS;
-    public static double STENCIL_REF;
-    public static double STENCIL_VALUE_MASK;
-    public static double STENCIL_WRITEMASK;
-    public static double STENCIL_BACK_FUNC;
-    public static double STENCIL_BACK_FAIL;
-    public static double STENCIL_BACK_PASS_DEPTH_FAIL;
-    public static double STENCIL_BACK_PASS_DEPTH_PASS;
-    public static double STENCIL_BACK_REF;
-    public static double STENCIL_BACK_VALUE_MASK;
-    public static double STENCIL_BACK_WRITEMASK;
-    public static double VIEWPORT;
-    public static double SCISSOR_BOX;
-    public static double COLOR_CLEAR_VALUE;
-    public static double COLOR_WRITEMASK;
-    public static double UNPACK_ALIGNMENT;
-    public static double PACK_ALIGNMENT;
-    public static double MAX_TEXTURE_SIZE;
-    public static double MAX_VIEWPORT_DIMS;
-    public static double SUBPIXEL_BITS;
-    public static double RED_BITS;
-    public static double GREEN_BITS;
-    public static double BLUE_BITS;
-    public static double ALPHA_BITS;
-    public static double DEPTH_BITS;
-    public static double STENCIL_BITS;
-    public static double POLYGON_OFFSET_UNITS;
-    public static double POLYGON_OFFSET_FACTOR;
-    public static double TEXTURE_BINDING_2D;
-    public static double SAMPLE_BUFFERS;
-    public static double SAMPLES;
-    public static double SAMPLE_COVERAGE_VALUE;
-    public static double SAMPLE_COVERAGE_INVERT;
-    public static double COMPRESSED_TEXTURE_FORMATS;
-    public static double DONT_CARE;
-    public static double FASTEST;
-    public static double NICEST;
-    public static double GENERATE_MIPMAP_HINT;
-    public static double BYTE;
-    public static double UNSIGNED_BYTE;
-    public static double SHORT;
-    public static double UNSIGNED_SHORT;
-    public static double INT;
-    public static double UNSIGNED_INT;
-    public static double FLOAT;
-    public static double DEPTH_COMPONENT;
-    public static double ALPHA;
-    public static double RGB;
-    public static double RGBA;
-    public static double LUMINANCE;
-    public static double LUMINANCE_ALPHA;
-    public static double UNSIGNED_SHORT_4_4_4_4;
-    public static double UNSIGNED_SHORT_5_5_5_1;
-    public static double UNSIGNED_SHORT_5_6_5;
-    public static double FRAGMENT_SHADER;
-    public static double VERTEX_SHADER;
-    public static double MAX_VERTEX_ATTRIBS;
-    public static double MAX_VERTEX_UNIFORM_VECTORS;
-    public static double MAX_VARYING_VECTORS;
-    public static double MAX_COMBINED_TEXTURE_IMAGE_UNITS;
-    public static double MAX_VERTEX_TEXTURE_IMAGE_UNITS;
-    public static double MAX_TEXTURE_IMAGE_UNITS;
-    public static double MAX_FRAGMENT_UNIFORM_VECTORS;
-    public static double SHADER_TYPE;
-    public static double DELETE_STATUS;
-    public static double LINK_STATUS;
-    public static double VALIDATE_STATUS;
-    public static double ATTACHED_SHADERS;
-    public static double ACTIVE_UNIFORMS;
-    public static double ACTIVE_ATTRIBUTES;
-    public static double SHADING_LANGUAGE_VERSION;
-    public static double CURRENT_PROGRAM;
-    public static double NEVER;
-    public static double LESS;
-    public static double EQUAL;
-    public static double LEQUAL;
-    public static double GREATER;
-    public static double NOTEQUAL;
-    public static double GEQUAL;
-    public static double ALWAYS;
-    public static double KEEP;
-    public static double REPLACE;
-    public static double INCR;
-    public static double DECR;
-    public static double INVERT;
-    public static double INCR_WRAP;
-    public static double DECR_WRAP;
-    public static double VENDOR;
-    public static double RENDERER;
-    public static double VERSION;
-    public static double NEAREST;
-    public static double LINEAR;
-    public static double NEAREST_MIPMAP_NEAREST;
-    public static double LINEAR_MIPMAP_NEAREST;
-    public static double NEAREST_MIPMAP_LINEAR;
-    public static double LINEAR_MIPMAP_LINEAR;
-    public static double TEXTURE_MAG_FILTER;
-    public static double TEXTURE_MIN_FILTER;
-    public static double TEXTURE_WRAP_S;
-    public static double TEXTURE_WRAP_T;
-    public static double TEXTURE;
-    public static double TEXTURE_CUBE_MAP;
-    public static double TEXTURE_BINDING_CUBE_MAP;
-    public static double TEXTURE_CUBE_MAP_POSITIVE_X;
-    public static double TEXTURE_CUBE_MAP_NEGATIVE_X;
-    public static double TEXTURE_CUBE_MAP_POSITIVE_Y;
-    public static double TEXTURE_CUBE_MAP_NEGATIVE_Y;
-    public static double TEXTURE_CUBE_MAP_POSITIVE_Z;
-    public static double TEXTURE_CUBE_MAP_NEGATIVE_Z;
-    public static double MAX_CUBE_MAP_TEXTURE_SIZE;
-    public static double TEXTURE0;
-    public static double TEXTURE1;
-    public static double TEXTURE2;
-    public static double TEXTURE3;
-    public static double TEXTURE4;
-    public static double TEXTURE5;
-    public static double TEXTURE6;
-    public static double TEXTURE7;
-    public static double TEXTURE8;
-    public static double TEXTURE9;
-    public static double TEXTURE10;
-    public static double TEXTURE11;
-    public static double TEXTURE12;
-    public static double TEXTURE13;
-    public static double TEXTURE14;
-    public static double TEXTURE15;
-    public static double TEXTURE16;
-    public static double TEXTURE17;
-    public static double TEXTURE18;
-    public static double TEXTURE19;
-    public static double TEXTURE20;
-    public static double TEXTURE21;
-    public static double TEXTURE22;
-    public static double TEXTURE23;
-    public static double TEXTURE24;
-    public static double TEXTURE25;
-    public static double TEXTURE26;
-    public static double TEXTURE27;
-    public static double TEXTURE28;
-    public static double TEXTURE29;
-    public static double TEXTURE30;
-    public static double TEXTURE31;
-    public static double ACTIVE_TEXTURE;
-    public static double REPEAT;
-    public static double CLAMP_TO_EDGE;
-    public static double MIRRORED_REPEAT;
-    public static double FLOAT_VEC2;
-    public static double FLOAT_VEC3;
-    public static double FLOAT_VEC4;
-    public static double INT_VEC2;
-    public static double INT_VEC3;
-    public static double INT_VEC4;
-    public static double BOOL;
-    public static double BOOL_VEC2;
-    public static double BOOL_VEC3;
-    public static double BOOL_VEC4;
-    public static double FLOAT_MAT2;
-    public static double FLOAT_MAT3;
-    public static double FLOAT_MAT4;
-    public static double SAMPLER_2D;
-    public static double SAMPLER_CUBE;
-    public static double VERTEX_ATTRIB_ARRAY_ENABLED;
-    public static double VERTEX_ATTRIB_ARRAY_SIZE;
-    public static double VERTEX_ATTRIB_ARRAY_STRIDE;
-    public static double VERTEX_ATTRIB_ARRAY_TYPE;
-    public static double VERTEX_ATTRIB_ARRAY_NORMALIZED;
-    public static double VERTEX_ATTRIB_ARRAY_POINTER;
-    public static double VERTEX_ATTRIB_ARRAY_BUFFER_BINDING;
-    public static double IMPLEMENTATION_COLOR_READ_TYPE;
-    public static double IMPLEMENTATION_COLOR_READ_FORMAT;
-    public static double COMPILE_STATUS;
-    public static double LOW_FLOAT;
-    public static double MEDIUM_FLOAT;
-    public static double HIGH_FLOAT;
-    public static double LOW_INT;
-    public static double MEDIUM_INT;
-    public static double HIGH_INT;
-    public static double FRAMEBUFFER;
-    public static double RENDERBUFFER;
-    public static double RGBA4;
-    public static double RGB5_A1;
-    public static double RGB565;
-    public static double DEPTH_COMPONENT16;
-    public static double STENCIL_INDEX8;
-    public static double DEPTH_STENCIL;
-    public static double RENDERBUFFER_WIDTH;
-    public static double RENDERBUFFER_HEIGHT;
-    public static double RENDERBUFFER_INTERNAL_FORMAT;
-    public static double RENDERBUFFER_RED_SIZE;
-    public static double RENDERBUFFER_GREEN_SIZE;
-    public static double RENDERBUFFER_BLUE_SIZE;
-    public static double RENDERBUFFER_ALPHA_SIZE;
-    public static double RENDERBUFFER_DEPTH_SIZE;
-    public static double RENDERBUFFER_STENCIL_SIZE;
-    public static double FRAMEBUFFER_ATTACHMENT_OBJECT_TYPE;
-    public static double FRAMEBUFFER_ATTACHMENT_OBJECT_NAME;
-    public static double FRAMEBUFFER_ATTACHMENT_TEXTURE_LEVEL;
-    public static double FRAMEBUFFER_ATTACHMENT_TEXTURE_CUBE_MAP_FACE;
-    public static double COLOR_ATTACHMENT0;
-    public static double DEPTH_ATTACHMENT;
-    public static double STENCIL_ATTACHMENT;
-    public static double DEPTH_STENCIL_ATTACHMENT;
-    public static double NONE;
-    public static double FRAMEBUFFER_COMPLETE;
-    public static double FRAMEBUFFER_INCOMPLETE_ATTACHMENT;
-    public static double FRAMEBUFFER_INCOMPLETE_MISSING_ATTACHMENT;
-    public static double FRAMEBUFFER_INCOMPLETE_DIMENSIONS;
-    public static double FRAMEBUFFER_UNSUPPORTED;
-    public static double FRAMEBUFFER_BINDING;
-    public static double RENDERBUFFER_BINDING;
-    public static double MAX_RENDERBUFFER_SIZE;
-    public static double INVALID_FRAMEBUFFER_OPERATION;
-    public static double UNPACK_FLIP_Y_WEBGL;
-    public static double UNPACK_PREMULTIPLY_ALPHA_WEBGL;
-    public static double CONTEXT_LOST_WEBGL;
-    public static double UNPACK_COLORSPACE_CONVERSION_WEBGL;
-    public static double BROWSER_DEFAULT_WEBGL;
+    public static double DEPTH_BUFFER_BIT; /* 0x00000100 */
+    public static double STENCIL_BUFFER_BIT; /* 0x00000400 */
+    public static double COLOR_BUFFER_BIT; /* 0x00004000 */
+    public static double POINTS; /* 0x0000 */
+    public static double LINES; /* 0x0001 */
+    public static double LINE_LOOP; /* 0x0002 */
+    public static double LINE_STRIP; /* 0x0003 */
+    public static double TRIANGLES; /* 0x0004 */
+    public static double TRIANGLE_STRIP; /* 0x0005 */
+    public static double TRIANGLE_FAN; /* 0x0006 */
+    public static double ZERO; /* 0 */
+    public static double ONE; /* 1 */
+    public static double SRC_COLOR; /* 0x0300 */
+    public static double ONE_MINUS_SRC_COLOR; /* 0x0301 */
+    public static double SRC_ALPHA; /* 0x0302 */
+    public static double ONE_MINUS_SRC_ALPHA; /* 0x0303 */
+    public static double DST_ALPHA; /* 0x0304 */
+    public static double ONE_MINUS_DST_ALPHA; /* 0x0305 */
+    public static double DST_COLOR; /* 0x0306 */
+    public static double ONE_MINUS_DST_COLOR; /* 0x0307 */
+    public static double SRC_ALPHA_SATURATE; /* 0x0308 */
+    public static double FUNC_ADD; /* 0x8006 */
+    public static double BLEND_EQUATION; /* 0x8009 */
+    public static double BLEND_EQUATION_RGB; /* 0x8009 */
+    public static double BLEND_EQUATION_ALPHA; /* 0x883D */
+    public static double FUNC_SUBTRACT; /* 0x800A */
+    public static double FUNC_REVERSE_SUBTRACT; /* 0x800B */
+    public static double BLEND_DST_RGB; /* 0x80C8 */
+    public static double BLEND_SRC_RGB; /* 0x80C9 */
+    public static double BLEND_DST_ALPHA; /* 0x80CA */
+    public static double BLEND_SRC_ALPHA; /* 0x80CB */
+    public static double CONSTANT_COLOR; /* 0x8001 */
+    public static double ONE_MINUS_CONSTANT_COLOR; /* 0x8002 */
+    public static double CONSTANT_ALPHA; /* 0x8003 */
+    public static double ONE_MINUS_CONSTANT_ALPHA; /* 0x8004 */
+    public static double BLEND_COLOR; /* 0x8005 */
+    public static double ARRAY_BUFFER; /* 0x8892 */
+    public static double ELEMENT_ARRAY_BUFFER; /* 0x8893 */
+    public static double ARRAY_BUFFER_BINDING; /* 0x8894 */
+    public static double ELEMENT_ARRAY_BUFFER_BINDING; /* 0x8895 */
+    public static double STREAM_DRAW; /* 0x88E0 */
+    public static double STATIC_DRAW; /* 0x88E4 */
+    public static double DYNAMIC_DRAW; /* 0x88E8 */
+    public static double BUFFER_SIZE; /* 0x8764 */
+    public static double BUFFER_USAGE; /* 0x8765 */
+    public static double CURRENT_VERTEX_ATTRIB; /* 0x8626 */
+    public static double FRONT; /* 0x0404 */
+    public static double BACK; /* 0x0405 */
+    public static double FRONT_AND_BACK; /* 0x0408 */
+    public static double TEXTURE_2D; /* 0x0DE1 */
+    public static double CULL_FACE; /* 0x0B44 */
+    public static double BLEND; /* 0x0BE2 */
+    public static double DITHER; /* 0x0BD0 */
+    public static double STENCIL_TEST; /* 0x0B90 */
+    public static double DEPTH_TEST; /* 0x0B71 */
+    public static double SCISSOR_TEST; /* 0x0C11 */
+    public static double POLYGON_OFFSET_FILL; /* 0x8037 */
+    public static double SAMPLE_ALPHA_TO_COVERAGE; /* 0x809E */
+    public static double SAMPLE_COVERAGE; /* 0x80A0 */
+    public static double NO_ERROR; /* 0 */
+    public static double INVALID_ENUM; /* 0x0500 */
+    public static double INVALID_VALUE; /* 0x0501 */
+    public static double INVALID_OPERATION; /* 0x0502 */
+    public static double OUT_OF_MEMORY; /* 0x0505 */
+    public static double CW; /* 0x0900 */
+    public static double CCW; /* 0x0901 */
+    public static double LINE_WIDTH; /* 0x0B21 */
+    public static double ALIASED_POINT_SIZE_RANGE; /* 0x846D */
+    public static double ALIASED_LINE_WIDTH_RANGE; /* 0x846E */
+    public static double CULL_FACE_MODE; /* 0x0B45 */
+    public static double FRONT_FACE; /* 0x0B46 */
+    public static double DEPTH_RANGE; /* 0x0B70 */
+    public static double DEPTH_WRITEMASK; /* 0x0B72 */
+    public static double DEPTH_CLEAR_VALUE; /* 0x0B73 */
+    public static double DEPTH_FUNC; /* 0x0B74 */
+    public static double STENCIL_CLEAR_VALUE; /* 0x0B91 */
+    public static double STENCIL_FUNC; /* 0x0B92 */
+    public static double STENCIL_FAIL; /* 0x0B94 */
+    public static double STENCIL_PASS_DEPTH_FAIL; /* 0x0B95 */
+    public static double STENCIL_PASS_DEPTH_PASS; /* 0x0B96 */
+    public static double STENCIL_REF; /* 0x0B97 */
+    public static double STENCIL_VALUE_MASK; /* 0x0B93 */
+    public static double STENCIL_WRITEMASK; /* 0x0B98 */
+    public static double STENCIL_BACK_FUNC; /* 0x8800 */
+    public static double STENCIL_BACK_FAIL; /* 0x8801 */
+    public static double STENCIL_BACK_PASS_DEPTH_FAIL; /* 0x8802 */
+    public static double STENCIL_BACK_PASS_DEPTH_PASS; /* 0x8803 */
+    public static double STENCIL_BACK_REF; /* 0x8CA3 */
+    public static double STENCIL_BACK_VALUE_MASK; /* 0x8CA4 */
+    public static double STENCIL_BACK_WRITEMASK; /* 0x8CA5 */
+    public static double VIEWPORT; /* 0x0BA2 */
+    public static double SCISSOR_BOX; /* 0x0C10 */
+    public static double COLOR_CLEAR_VALUE; /* 0x0C22 */
+    public static double COLOR_WRITEMASK; /* 0x0C23 */
+    public static double UNPACK_ALIGNMENT; /* 0x0CF5 */
+    public static double PACK_ALIGNMENT; /* 0x0D05 */
+    public static double MAX_TEXTURE_SIZE; /* 0x0D33 */
+    public static double MAX_VIEWPORT_DIMS; /* 0x0D3A */
+    public static double SUBPIXEL_BITS; /* 0x0D50 */
+    public static double RED_BITS; /* 0x0D52 */
+    public static double GREEN_BITS; /* 0x0D53 */
+    public static double BLUE_BITS; /* 0x0D54 */
+    public static double ALPHA_BITS; /* 0x0D55 */
+    public static double DEPTH_BITS; /* 0x0D56 */
+    public static double STENCIL_BITS; /* 0x0D57 */
+    public static double POLYGON_OFFSET_UNITS; /* 0x2A00 */
+    public static double POLYGON_OFFSET_FACTOR; /* 0x8038 */
+    public static double TEXTURE_BINDING_2D; /* 0x8069 */
+    public static double SAMPLE_BUFFERS; /* 0x80A8 */
+    public static double SAMPLES; /* 0x80A9 */
+    public static double SAMPLE_COVERAGE_VALUE; /* 0x80AA */
+    public static double SAMPLE_COVERAGE_INVERT; /* 0x80AB */
+    public static double COMPRESSED_TEXTURE_FORMATS; /* 0x86A3 */
+    public static double DONT_CARE; /* 0x1100 */
+    public static double FASTEST; /* 0x1101 */
+    public static double NICEST; /* 0x1102 */
+    public static double GENERATE_MIPMAP_HINT; /* 0x8192 */
+    public static double BYTE; /* 0x1400 */
+    public static double UNSIGNED_BYTE; /* 0x1401 */
+    public static double SHORT; /* 0x1402 */
+    public static double UNSIGNED_SHORT; /* 0x1403 */
+    public static double INT; /* 0x1404 */
+    public static double UNSIGNED_INT; /* 0x1405 */
+    public static double FLOAT; /* 0x1406 */
+    public static double DEPTH_COMPONENT; /* 0x1902 */
+    public static double ALPHA; /* 0x1906 */
+    public static double RGB; /* 0x1907 */
+    public static double RGBA; /* 0x1908 */
+    public static double LUMINANCE; /* 0x1909 */
+    public static double LUMINANCE_ALPHA; /* 0x190A */
+    public static double UNSIGNED_SHORT_4_4_4_4; /* 0x8033 */
+    public static double UNSIGNED_SHORT_5_5_5_1; /* 0x8034 */
+    public static double UNSIGNED_SHORT_5_6_5; /* 0x8363 */
+    public static double FRAGMENT_SHADER; /* 0x8B30 */
+    public static double VERTEX_SHADER; /* 0x8B31 */
+    public static double MAX_VERTEX_ATTRIBS; /* 0x8869 */
+    public static double MAX_VERTEX_UNIFORM_VECTORS; /* 0x8DFB */
+    public static double MAX_VARYING_VECTORS; /* 0x8DFC */
+    public static double MAX_COMBINED_TEXTURE_IMAGE_UNITS; /* 0x8B4D */
+    public static double MAX_VERTEX_TEXTURE_IMAGE_UNITS; /* 0x8B4C */
+    public static double MAX_TEXTURE_IMAGE_UNITS; /* 0x8872 */
+    public static double MAX_FRAGMENT_UNIFORM_VECTORS; /* 0x8DFD */
+    public static double SHADER_TYPE; /* 0x8B4F */
+    public static double DELETE_STATUS; /* 0x8B80 */
+    public static double LINK_STATUS; /* 0x8B82 */
+    public static double VALIDATE_STATUS; /* 0x8B83 */
+    public static double ATTACHED_SHADERS; /* 0x8B85 */
+    public static double ACTIVE_UNIFORMS; /* 0x8B86 */
+    public static double ACTIVE_ATTRIBUTES; /* 0x8B89 */
+    public static double SHADING_LANGUAGE_VERSION; /* 0x8B8C */
+    public static double CURRENT_PROGRAM; /* 0x8B8D */
+    public static double NEVER; /* 0x0200 */
+    public static double LESS; /* 0x0201 */
+    public static double EQUAL; /* 0x0202 */
+    public static double LEQUAL; /* 0x0203 */
+    public static double GREATER; /* 0x0204 */
+    public static double NOTEQUAL; /* 0x0205 */
+    public static double GEQUAL; /* 0x0206 */
+    public static double ALWAYS; /* 0x0207 */
+    public static double KEEP; /* 0x1E00 */
+    public static double REPLACE; /* 0x1E01 */
+    public static double INCR; /* 0x1E02 */
+    public static double DECR; /* 0x1E03 */
+    public static double INVERT; /* 0x150A */
+    public static double INCR_WRAP; /* 0x8507 */
+    public static double DECR_WRAP; /* 0x8508 */
+    public static double VENDOR; /* 0x1F00 */
+    public static double RENDERER; /* 0x1F01 */
+    public static double VERSION; /* 0x1F02 */
+    public static double NEAREST; /* 0x2600 */
+    public static double LINEAR; /* 0x2601 */
+    public static double NEAREST_MIPMAP_NEAREST; /* 0x2700 */
+    public static double LINEAR_MIPMAP_NEAREST; /* 0x2701 */
+    public static double NEAREST_MIPMAP_LINEAR; /* 0x2702 */
+    public static double LINEAR_MIPMAP_LINEAR; /* 0x2703 */
+    public static double TEXTURE_MAG_FILTER; /* 0x2800 */
+    public static double TEXTURE_MIN_FILTER; /* 0x2801 */
+    public static double TEXTURE_WRAP_S; /* 0x2802 */
+    public static double TEXTURE_WRAP_T; /* 0x2803 */
+    public static double TEXTURE; /* 0x1702 */
+    public static double TEXTURE_CUBE_MAP; /* 0x8513 */
+    public static double TEXTURE_BINDING_CUBE_MAP; /* 0x8514 */
+    public static double TEXTURE_CUBE_MAP_POSITIVE_X; /* 0x8515 */
+    public static double TEXTURE_CUBE_MAP_NEGATIVE_X; /* 0x8516 */
+    public static double TEXTURE_CUBE_MAP_POSITIVE_Y; /* 0x8517 */
+    public static double TEXTURE_CUBE_MAP_NEGATIVE_Y; /* 0x8518 */
+    public static double TEXTURE_CUBE_MAP_POSITIVE_Z; /* 0x8519 */
+    public static double TEXTURE_CUBE_MAP_NEGATIVE_Z; /* 0x851A */
+    public static double MAX_CUBE_MAP_TEXTURE_SIZE; /* 0x851C */
+    public static double TEXTURE0; /* 0x84C0 */
+    public static double TEXTURE1; /* 0x84C1 */
+    public static double TEXTURE2; /* 0x84C2 */
+    public static double TEXTURE3; /* 0x84C3 */
+    public static double TEXTURE4; /* 0x84C4 */
+    public static double TEXTURE5; /* 0x84C5 */
+    public static double TEXTURE6; /* 0x84C6 */
+    public static double TEXTURE7; /* 0x84C7 */
+    public static double TEXTURE8; /* 0x84C8 */
+    public static double TEXTURE9; /* 0x84C9 */
+    public static double TEXTURE10; /* 0x84CA */
+    public static double TEXTURE11; /* 0x84CB */
+    public static double TEXTURE12; /* 0x84CC */
+    public static double TEXTURE13; /* 0x84CD */
+    public static double TEXTURE14; /* 0x84CE */
+    public static double TEXTURE15; /* 0x84CF */
+    public static double TEXTURE16; /* 0x84D0 */
+    public static double TEXTURE17; /* 0x84D1 */
+    public static double TEXTURE18; /* 0x84D2 */
+    public static double TEXTURE19; /* 0x84D3 */
+    public static double TEXTURE20; /* 0x84D4 */
+    public static double TEXTURE21; /* 0x84D5 */
+    public static double TEXTURE22; /* 0x84D6 */
+    public static double TEXTURE23; /* 0x84D7 */
+    public static double TEXTURE24; /* 0x84D8 */
+    public static double TEXTURE25; /* 0x84D9 */
+    public static double TEXTURE26; /* 0x84DA */
+    public static double TEXTURE27; /* 0x84DB */
+    public static double TEXTURE28; /* 0x84DC */
+    public static double TEXTURE29; /* 0x84DD */
+    public static double TEXTURE30; /* 0x84DE */
+    public static double TEXTURE31; /* 0x84DF */
+    public static double ACTIVE_TEXTURE; /* 0x84E0 */
+    public static double REPEAT; /* 0x2901 */
+    public static double CLAMP_TO_EDGE; /* 0x812F */
+    public static double MIRRORED_REPEAT; /* 0x8370 */
+    public static double FLOAT_VEC2; /* 0x8B50 */
+    public static double FLOAT_VEC3; /* 0x8B51 */
+    public static double FLOAT_VEC4; /* 0x8B52 */
+    public static double INT_VEC2; /* 0x8B53 */
+    public static double INT_VEC3; /* 0x8B54 */
+    public static double INT_VEC4; /* 0x8B55 */
+    public static double BOOL; /* 0x8B56 */
+    public static double BOOL_VEC2; /* 0x8B57 */
+    public static double BOOL_VEC3; /* 0x8B58 */
+    public static double BOOL_VEC4; /* 0x8B59 */
+    public static double FLOAT_MAT2; /* 0x8B5A */
+    public static double FLOAT_MAT3; /* 0x8B5B */
+    public static double FLOAT_MAT4; /* 0x8B5C */
+    public static double SAMPLER_2D; /* 0x8B5E */
+    public static double SAMPLER_CUBE; /* 0x8B60 */
+    public static double VERTEX_ATTRIB_ARRAY_ENABLED; /* 0x8622 */
+    public static double VERTEX_ATTRIB_ARRAY_SIZE; /* 0x8623 */
+    public static double VERTEX_ATTRIB_ARRAY_STRIDE; /* 0x8624 */
+    public static double VERTEX_ATTRIB_ARRAY_TYPE; /* 0x8625 */
+    public static double VERTEX_ATTRIB_ARRAY_NORMALIZED; /* 0x886A */
+    public static double VERTEX_ATTRIB_ARRAY_POINTER; /* 0x8645 */
+    public static double VERTEX_ATTRIB_ARRAY_BUFFER_BINDING; /* 0x889F */
+    public static double IMPLEMENTATION_COLOR_READ_TYPE; /* 0x8B9A */
+    public static double IMPLEMENTATION_COLOR_READ_FORMAT; /* 0x8B9B */
+    public static double COMPILE_STATUS; /* 0x8B81 */
+    public static double LOW_FLOAT; /* 0x8DF0 */
+    public static double MEDIUM_FLOAT; /* 0x8DF1 */
+    public static double HIGH_FLOAT; /* 0x8DF2 */
+    public static double LOW_INT; /* 0x8DF3 */
+    public static double MEDIUM_INT; /* 0x8DF4 */
+    public static double HIGH_INT; /* 0x8DF5 */
+    public static double FRAMEBUFFER; /* 0x8D40 */
+    public static double RENDERBUFFER; /* 0x8D41 */
+    public static double RGBA4; /* 0x8056 */
+    public static double RGB5_A1; /* 0x8057 */
+    public static double RGB565; /* 0x8D62 */
+    public static double DEPTH_COMPONENT16; /* 0x81A5 */
+    public static double STENCIL_INDEX8; /* 0x8D48 */
+    public static double DEPTH_STENCIL; /* 0x84F9 */
+    public static double RENDERBUFFER_WIDTH; /* 0x8D42 */
+    public static double RENDERBUFFER_HEIGHT; /* 0x8D43 */
+    public static double RENDERBUFFER_INTERNAL_FORMAT; /* 0x8D44 */
+    public static double RENDERBUFFER_RED_SIZE; /* 0x8D50 */
+    public static double RENDERBUFFER_GREEN_SIZE; /* 0x8D51 */
+    public static double RENDERBUFFER_BLUE_SIZE; /* 0x8D52 */
+    public static double RENDERBUFFER_ALPHA_SIZE; /* 0x8D53 */
+    public static double RENDERBUFFER_DEPTH_SIZE; /* 0x8D54 */
+    public static double RENDERBUFFER_STENCIL_SIZE; /* 0x8D55 */
+    public static double FRAMEBUFFER_ATTACHMENT_OBJECT_TYPE; /* 0x8CD0 */
+    public static double FRAMEBUFFER_ATTACHMENT_OBJECT_NAME; /* 0x8CD1 */
+    public static double FRAMEBUFFER_ATTACHMENT_TEXTURE_LEVEL; /* 0x8CD2 */
+    public static double FRAMEBUFFER_ATTACHMENT_TEXTURE_CUBE_MAP_FACE; /* 0x8CD3 */
+    public static double COLOR_ATTACHMENT0; /* 0x8CE0 */
+    public static double DEPTH_ATTACHMENT; /* 0x8D00 */
+    public static double STENCIL_ATTACHMENT; /* 0x8D20 */
+    public static double DEPTH_STENCIL_ATTACHMENT; /* 0x821A */
+    public static double NONE; /* 0 */
+    public static double FRAMEBUFFER_COMPLETE; /* 0x8CD5 */
+    public static double FRAMEBUFFER_INCOMPLETE_ATTACHMENT; /* 0x8CD6 */
+    public static double FRAMEBUFFER_INCOMPLETE_MISSING_ATTACHMENT; /* 0x8CD7 */
+    public static double FRAMEBUFFER_INCOMPLETE_DIMENSIONS; /* 0x8CD9 */
+    public static double FRAMEBUFFER_UNSUPPORTED; /* 0x8CDD */
+    public static double FRAMEBUFFER_BINDING; /* 0x8CA6 */
+    public static double RENDERBUFFER_BINDING; /* 0x8CA7 */
+    public static double MAX_RENDERBUFFER_SIZE; /* 0x84E8 */
+    public static double INVALID_FRAMEBUFFER_OPERATION; /* 0x0506 */
+    public static double UNPACK_FLIP_Y_WEBGL; /* 0x9240 */
+    public static double UNPACK_PREMULTIPLY_ALPHA_WEBGL; /* 0x9241 */
+    public static double CONTEXT_LOST_WEBGL; /* 0x9242 */
+    public static double UNPACK_COLORSPACE_CONVERSION_WEBGL; /* 0x9243 */
+    public static double BROWSER_DEFAULT_WEBGL; /* 0x9244 */
     
     @JsProperty(name="canvas")
     private WebGL2RenderingContext.VRSource canvas;

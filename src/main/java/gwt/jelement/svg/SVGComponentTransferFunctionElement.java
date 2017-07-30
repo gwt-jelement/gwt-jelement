@@ -24,12 +24,12 @@ import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="SVGComponentTransferFunctionElement", isNative = true)
 public class SVGComponentTransferFunctionElement extends SVGElement{
-    public static short SVG_FECOMPONENTTRANSFER_TYPE_UNKNOWN;
-    public static short SVG_FECOMPONENTTRANSFER_TYPE_IDENTITY;
-    public static short SVG_FECOMPONENTTRANSFER_TYPE_TABLE;
-    public static short SVG_FECOMPONENTTRANSFER_TYPE_DISCRETE;
-    public static short SVG_FECOMPONENTTRANSFER_TYPE_LINEAR;
-    public static short SVG_FECOMPONENTTRANSFER_TYPE_GAMMA;
+    public static short SVG_FECOMPONENTTRANSFER_TYPE_UNKNOWN; /* 0 */
+    public static short SVG_FECOMPONENTTRANSFER_TYPE_IDENTITY; /* 1 */
+    public static short SVG_FECOMPONENTTRANSFER_TYPE_TABLE; /* 2 */
+    public static short SVG_FECOMPONENTTRANSFER_TYPE_DISCRETE; /* 3 */
+    public static short SVG_FECOMPONENTTRANSFER_TYPE_LINEAR; /* 4 */
+    public static short SVG_FECOMPONENTTRANSFER_TYPE_GAMMA; /* 5 */
     
     @JsConstructor
     public SVGComponentTransferFunctionElement(){

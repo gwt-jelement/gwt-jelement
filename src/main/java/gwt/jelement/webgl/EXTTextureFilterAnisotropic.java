@@ -24,8 +24,8 @@ import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="EXTTextureFilterAnisotropic", isNative = true)
 public class EXTTextureFilterAnisotropic extends JsObject{
-    public static double TEXTURE_MAX_ANISOTROPY_EXT;
-    public static double MAX_TEXTURE_MAX_ANISOTROPY_EXT;
+    public static double TEXTURE_MAX_ANISOTROPY_EXT; /* 0x84FE */
+    public static double MAX_TEXTURE_MAX_ANISOTROPY_EXT; /* 0x84FF */
     
     @JsConstructor
     public EXTTextureFilterAnisotropic(){

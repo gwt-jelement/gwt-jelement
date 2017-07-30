@@ -26,7 +26,7 @@ import jsinterop.annotations.JsType;
 @JsType(namespace = JsPackage.GLOBAL, name="MutationObserver", isNative = true)
 public class MutationObserver extends JsObject{
     @JsConstructor
-    public MutationObserver(){
+    public MutationObserver(MutationCallback callback){
         super();
     }
     

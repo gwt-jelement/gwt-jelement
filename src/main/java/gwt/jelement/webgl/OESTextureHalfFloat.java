@@ -24,7 +24,7 @@ import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="OESTextureHalfFloat", isNative = true)
 public class OESTextureHalfFloat extends JsObject{
-    public static double HALF_FLOAT_OES;
+    public static double HALF_FLOAT_OES; /* 0x8D61 */
     
     @JsConstructor
     public OESTextureHalfFloat(){

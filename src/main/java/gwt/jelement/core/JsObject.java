@@ -360,57 +360,57 @@ public class JsObject<T>{
     }
 
     @JsOverlay
-    public JsObject<T> with(String propertyName, T value){
-        return Js.<T>with(this, propertyName, value);
-    }
-    
-    @JsOverlay
-    public JsObject<T> with(String propertyName, boolean value){
+    public final JsObject<T> with(String propertyName, T value){
         return Js.<T>with(this, propertyName, value);
     }
 
     @JsOverlay
-    public JsObject<T> with(String propertyName, char value){
+    public final JsObject<T> with(String propertyName, boolean value){
         return Js.<T>with(this, propertyName, value);
     }
 
     @JsOverlay
-    public JsObject<T> with(String propertyName, byte value){
+    public final JsObject<T> with(String propertyName, char value){
         return Js.<T>with(this, propertyName, value);
     }
 
     @JsOverlay
-    public JsObject<T> with(String propertyName, short value){
+    public final JsObject<T> with(String propertyName, byte value){
         return Js.<T>with(this, propertyName, value);
     }
 
     @JsOverlay
-    public JsObject<T> with(String propertyName, int value){
+    public final JsObject<T> with(String propertyName, short value){
         return Js.<T>with(this, propertyName, value);
     }
 
     @JsOverlay
-    public JsObject<T> with(String propertyName, float value){
+    public final JsObject<T> with(String propertyName, int value){
         return Js.<T>with(this, propertyName, value);
     }
 
     @JsOverlay
-    public JsObject<T> with(String propertyName, double value){
+    public final JsObject<T> with(String propertyName, float value){
         return Js.<T>with(this, propertyName, value);
     }
 
     @JsOverlay
-    public JsObject<T> with(String propertyName, long value){
+    public final JsObject<T> with(String propertyName, double value){
+        return Js.<T>with(this, propertyName, value);
+    }
+
+    @JsOverlay
+    public final JsObject<T> with(String propertyName, long value){
         return Js.<T>with(this, propertyName, (double)value);
     }
 
     @JsOverlay
-    public boolean isEqualTo(Object object){
+    public final boolean isEqualTo(Object object){
         return Js.isEqual(this, object);
     }
 
     @JsOverlay
-    public boolean isStrictlyEqualTo(Object object){
+    public final boolean isStrictlyEqualTo(Object object){
         return Js.isStrictlyEqual(this, object);
     }
 

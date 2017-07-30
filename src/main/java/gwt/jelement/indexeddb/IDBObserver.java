@@ -26,7 +26,7 @@ import jsinterop.annotations.JsType;
 @JsType(namespace = JsPackage.GLOBAL, name="IDBObserver", isNative = true)
 public class IDBObserver extends JsObject{
     @JsConstructor
-    public IDBObserver(){
+    public IDBObserver(IDBObserverCallback callback){
         super();
     }
     

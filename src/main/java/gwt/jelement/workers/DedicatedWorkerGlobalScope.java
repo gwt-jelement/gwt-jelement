@@ -32,8 +32,8 @@ import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="DedicatedWorkerGlobalScope", isNative = true)
 public class DedicatedWorkerGlobalScope extends WorkerGlobalScope{
-    public static short TEMPORARY;
-    public static short PERSISTENT;
+    public static short TEMPORARY; /* 0 */
+    public static short PERSISTENT; /* 1 */
     
     @JsProperty(name="onmessage")
     private EventHandlerNonNull onmessage;

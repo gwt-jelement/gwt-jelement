@@ -25,9 +25,9 @@ import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="SVGTextContentElement", isNative = true)
 public class SVGTextContentElement extends SVGGraphicsElement{
-    public static short LENGTHADJUST_UNKNOWN;
-    public static short LENGTHADJUST_SPACING;
-    public static short LENGTHADJUST_SPACINGANDGLYPHS;
+    public static short LENGTHADJUST_UNKNOWN; /* 0 */
+    public static short LENGTHADJUST_SPACING; /* 1 */
+    public static short LENGTHADJUST_SPACINGANDGLYPHS; /* 2 */
     
     @JsConstructor
     public SVGTextContentElement(){

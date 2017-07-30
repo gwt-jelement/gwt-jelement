@@ -26,13 +26,13 @@ import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="SVGTransform", isNative = true)
 public class SVGTransform extends JsObject{
-    public static short SVG_TRANSFORM_UNKNOWN;
-    public static short SVG_TRANSFORM_MATRIX;
-    public static short SVG_TRANSFORM_TRANSLATE;
-    public static short SVG_TRANSFORM_SCALE;
-    public static short SVG_TRANSFORM_ROTATE;
-    public static short SVG_TRANSFORM_SKEWX;
-    public static short SVG_TRANSFORM_SKEWY;
+    public static short SVG_TRANSFORM_UNKNOWN; /* 0 */
+    public static short SVG_TRANSFORM_MATRIX; /* 1 */
+    public static short SVG_TRANSFORM_TRANSLATE; /* 2 */
+    public static short SVG_TRANSFORM_SCALE; /* 3 */
+    public static short SVG_TRANSFORM_ROTATE; /* 4 */
+    public static short SVG_TRANSFORM_SKEWX; /* 5 */
+    public static short SVG_TRANSFORM_SKEWY; /* 6 */
     
     @JsConstructor
     public SVGTransform(){

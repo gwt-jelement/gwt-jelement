@@ -24,10 +24,10 @@ import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="WebGLCompressedTextureS3TCsRGB", isNative = true)
 public class WebGLCompressedTextureS3TCsRGB extends JsObject{
-    public static double COMPRESSED_SRGB_S3TC_DXT1_EXT;
-    public static double COMPRESSED_SRGB_ALPHA_S3TC_DXT1_EXT;
-    public static double COMPRESSED_SRGB_ALPHA_S3TC_DXT3_EXT;
-    public static double COMPRESSED_SRGB_ALPHA_S3TC_DXT5_EXT;
+    public static double COMPRESSED_SRGB_S3TC_DXT1_EXT; /* 0x8C4C */
+    public static double COMPRESSED_SRGB_ALPHA_S3TC_DXT1_EXT; /* 0x8C4D */
+    public static double COMPRESSED_SRGB_ALPHA_S3TC_DXT3_EXT; /* 0x8C4E */
+    public static double COMPRESSED_SRGB_ALPHA_S3TC_DXT5_EXT; /* 0x8C4F */
     
     @JsConstructor
     public WebGLCompressedTextureS3TCsRGB(){

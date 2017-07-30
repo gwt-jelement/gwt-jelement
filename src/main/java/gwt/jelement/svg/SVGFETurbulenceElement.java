@@ -24,12 +24,12 @@ import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="SVGFETurbulenceElement", isNative = true)
 public class SVGFETurbulenceElement extends SVGElement{
-    public static short SVG_TURBULENCE_TYPE_UNKNOWN;
-    public static short SVG_TURBULENCE_TYPE_FRACTALNOISE;
-    public static short SVG_TURBULENCE_TYPE_TURBULENCE;
-    public static short SVG_STITCHTYPE_UNKNOWN;
-    public static short SVG_STITCHTYPE_STITCH;
-    public static short SVG_STITCHTYPE_NOSTITCH;
+    public static short SVG_TURBULENCE_TYPE_UNKNOWN; /* 0 */
+    public static short SVG_TURBULENCE_TYPE_FRACTALNOISE; /* 1 */
+    public static short SVG_TURBULENCE_TYPE_TURBULENCE; /* 2 */
+    public static short SVG_STITCHTYPE_UNKNOWN; /* 0 */
+    public static short SVG_STITCHTYPE_STITCH; /* 1 */
+    public static short SVG_STITCHTYPE_NOSTITCH; /* 2 */
     
     @JsConstructor
     public SVGFETurbulenceElement(){

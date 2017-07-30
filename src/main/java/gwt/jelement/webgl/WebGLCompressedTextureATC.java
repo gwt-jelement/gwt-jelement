@@ -24,9 +24,9 @@ import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="WebGLCompressedTextureATC", isNative = true)
 public class WebGLCompressedTextureATC extends JsObject{
-    public static double COMPRESSED_RGB_ATC_WEBGL;
-    public static double COMPRESSED_RGBA_ATC_EXPLICIT_ALPHA_WEBGL;
-    public static double COMPRESSED_RGBA_ATC_INTERPOLATED_ALPHA_WEBGL;
+    public static double COMPRESSED_RGB_ATC_WEBGL; /* 0x8C92 */
+    public static double COMPRESSED_RGBA_ATC_EXPLICIT_ALPHA_WEBGL; /* 0x8C93 */
+    public static double COMPRESSED_RGBA_ATC_INTERPOLATED_ALPHA_WEBGL; /* 0x87EE */
     
     @JsConstructor
     public WebGLCompressedTextureATC(){

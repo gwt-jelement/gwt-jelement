@@ -25,17 +25,17 @@ import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="CSSRule", isNative = true)
 public class CSSRule extends JsObject{
-    public static short STYLE_RULE;
-    public static short CHARSET_RULE;
-    public static short IMPORT_RULE;
-    public static short MEDIA_RULE;
-    public static short FONT_FACE_RULE;
-    public static short PAGE_RULE;
-    public static short NAMESPACE_RULE;
-    public static short KEYFRAMES_RULE;
-    public static short KEYFRAME_RULE;
-    public static short SUPPORTS_RULE;
-    public static short VIEWPORT_RULE;
+    public static short STYLE_RULE; /* 1 */
+    public static short CHARSET_RULE; /* 2 */
+    public static short IMPORT_RULE; /* 3 */
+    public static short MEDIA_RULE; /* 4 */
+    public static short FONT_FACE_RULE; /* 5 */
+    public static short PAGE_RULE; /* 6 */
+    public static short NAMESPACE_RULE; /* 10 */
+    public static short KEYFRAMES_RULE; /* 7 */
+    public static short KEYFRAME_RULE; /* 8 */
+    public static short SUPPORTS_RULE; /* 12 */
+    public static short VIEWPORT_RULE; /* 15 */
     
     @JsConstructor
     public CSSRule(){

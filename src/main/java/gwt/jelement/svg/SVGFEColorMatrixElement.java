@@ -24,11 +24,11 @@ import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="SVGFEColorMatrixElement", isNative = true)
 public class SVGFEColorMatrixElement extends SVGElement{
-    public static short SVG_FECOLORMATRIX_TYPE_UNKNOWN;
-    public static short SVG_FECOLORMATRIX_TYPE_MATRIX;
-    public static short SVG_FECOLORMATRIX_TYPE_SATURATE;
-    public static short SVG_FECOLORMATRIX_TYPE_HUEROTATE;
-    public static short SVG_FECOLORMATRIX_TYPE_LUMINANCETOALPHA;
+    public static short SVG_FECOLORMATRIX_TYPE_UNKNOWN; /* 0 */
+    public static short SVG_FECOLORMATRIX_TYPE_MATRIX; /* 1 */
+    public static short SVG_FECOLORMATRIX_TYPE_SATURATE; /* 2 */
+    public static short SVG_FECOLORMATRIX_TYPE_HUEROTATE; /* 3 */
+    public static short SVG_FECOLORMATRIX_TYPE_LUMINANCETOALPHA; /* 4 */
     
     @JsConstructor
     public SVGFEColorMatrixElement(){

@@ -30,9 +30,9 @@ import jsinterop.base.Js;
 
 @JsType(namespace = JsPackage.GLOBAL, name="FileReader", isNative = true)
 public class FileReader extends EventTarget{
-    public static short EMPTY;
-    public static short LOADING;
-    public static short DONE;
+    public static short EMPTY; /* 0 */
+    public static short LOADING; /* 1 */
+    public static short DONE; /* 2 */
     
     @JsType(isNative = true, name = "?", namespace = JsPackage.GLOBAL)
     public interface ResultUnion {

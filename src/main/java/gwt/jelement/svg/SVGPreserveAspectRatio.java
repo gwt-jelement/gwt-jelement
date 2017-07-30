@@ -25,20 +25,20 @@ import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="SVGPreserveAspectRatio", isNative = true)
 public class SVGPreserveAspectRatio extends JsObject{
-    public static short SVG_PRESERVEASPECTRATIO_UNKNOWN;
-    public static short SVG_PRESERVEASPECTRATIO_NONE;
-    public static short SVG_PRESERVEASPECTRATIO_XMINYMIN;
-    public static short SVG_PRESERVEASPECTRATIO_XMIDYMIN;
-    public static short SVG_PRESERVEASPECTRATIO_XMAXYMIN;
-    public static short SVG_PRESERVEASPECTRATIO_XMINYMID;
-    public static short SVG_PRESERVEASPECTRATIO_XMIDYMID;
-    public static short SVG_PRESERVEASPECTRATIO_XMAXYMID;
-    public static short SVG_PRESERVEASPECTRATIO_XMINYMAX;
-    public static short SVG_PRESERVEASPECTRATIO_XMIDYMAX;
-    public static short SVG_PRESERVEASPECTRATIO_XMAXYMAX;
-    public static short SVG_MEETORSLICE_UNKNOWN;
-    public static short SVG_MEETORSLICE_MEET;
-    public static short SVG_MEETORSLICE_SLICE;
+    public static short SVG_PRESERVEASPECTRATIO_UNKNOWN; /* 0 */
+    public static short SVG_PRESERVEASPECTRATIO_NONE; /* 1 */
+    public static short SVG_PRESERVEASPECTRATIO_XMINYMIN; /* 2 */
+    public static short SVG_PRESERVEASPECTRATIO_XMIDYMIN; /* 3 */
+    public static short SVG_PRESERVEASPECTRATIO_XMAXYMIN; /* 4 */
+    public static short SVG_PRESERVEASPECTRATIO_XMINYMID; /* 5 */
+    public static short SVG_PRESERVEASPECTRATIO_XMIDYMID; /* 6 */
+    public static short SVG_PRESERVEASPECTRATIO_XMAXYMID; /* 7 */
+    public static short SVG_PRESERVEASPECTRATIO_XMINYMAX; /* 8 */
+    public static short SVG_PRESERVEASPECTRATIO_XMIDYMAX; /* 9 */
+    public static short SVG_PRESERVEASPECTRATIO_XMAXYMAX; /* 10 */
+    public static short SVG_MEETORSLICE_UNKNOWN; /* 0 */
+    public static short SVG_MEETORSLICE_MEET; /* 1 */
+    public static short SVG_MEETORSLICE_SLICE; /* 2 */
     
     @JsConstructor
     public SVGPreserveAspectRatio(){

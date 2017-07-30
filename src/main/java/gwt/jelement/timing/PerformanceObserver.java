@@ -26,7 +26,7 @@ import jsinterop.annotations.JsType;
 @JsType(namespace = JsPackage.GLOBAL, name="PerformanceObserver", isNative = true)
 public class PerformanceObserver extends JsObject{
     @JsConstructor
-    public PerformanceObserver(){
+    public PerformanceObserver(PerformanceObserverCallback callback){
         super();
     }
     

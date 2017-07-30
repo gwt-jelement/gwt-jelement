@@ -26,9 +26,9 @@ import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="MutationEvent", isNative = true)
 public class MutationEvent extends Event{
-    public static short MODIFICATION;
-    public static short ADDITION;
-    public static short REMOVAL;
+    public static short MODIFICATION; /* 1 */
+    public static short ADDITION; /* 2 */
+    public static short REMOVAL; /* 3 */
     
     @JsConstructor
     public MutationEvent(){

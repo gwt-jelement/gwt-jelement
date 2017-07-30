@@ -24,10 +24,10 @@ import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="SVGGradientElement", isNative = true)
 public class SVGGradientElement extends SVGElement{
-    public static short SVG_SPREADMETHOD_UNKNOWN;
-    public static short SVG_SPREADMETHOD_PAD;
-    public static short SVG_SPREADMETHOD_REFLECT;
-    public static short SVG_SPREADMETHOD_REPEAT;
+    public static short SVG_SPREADMETHOD_UNKNOWN; /* 0 */
+    public static short SVG_SPREADMETHOD_PAD; /* 1 */
+    public static short SVG_SPREADMETHOD_REFLECT; /* 2 */
+    public static short SVG_SPREADMETHOD_REPEAT; /* 3 */
     
     @JsConstructor
     public SVGGradientElement(){

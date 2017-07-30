@@ -25,10 +25,10 @@ import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="MediaError", isNative = true)
 public class MediaError extends JsObject{
-    public static short MEDIA_ERR_ABORTED;
-    public static short MEDIA_ERR_NETWORK;
-    public static short MEDIA_ERR_DECODE;
-    public static short MEDIA_ERR_SRC_NOT_SUPPORTED;
+    public static short MEDIA_ERR_ABORTED; /* 1 */
+    public static short MEDIA_ERR_NETWORK; /* 2 */
+    public static short MEDIA_ERR_DECODE; /* 3 */
+    public static short MEDIA_ERR_SRC_NOT_SUPPORTED; /* 4 */
     
     @JsConstructor
     public MediaError(){

@@ -26,10 +26,10 @@ import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="Event", isNative = true)
 public class Event extends JsObject{
-    public static short NONE;
-    public static short CAPTURING_PHASE;
-    public static short AT_TARGET;
-    public static short BUBBLING_PHASE;
+    public static short NONE; /* 0 */
+    public static short CAPTURING_PHASE; /* 1 */
+    public static short AT_TARGET; /* 2 */
+    public static short BUBBLING_PHASE; /* 3 */
     
     @JsConstructor
     public Event(String type){

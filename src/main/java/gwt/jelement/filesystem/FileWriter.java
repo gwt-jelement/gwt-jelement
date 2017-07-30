@@ -29,9 +29,9 @@ import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="FileWriter", isNative = true)
 public class FileWriter extends EventTarget{
-    public static short INIT;
-    public static short WRITING;
-    public static short DONE;
+    public static short INIT; /* 0 */
+    public static short WRITING; /* 1 */
+    public static short DONE; /* 2 */
     
     @JsProperty(name="onwritestart")
     private EventHandlerNonNull onwritestart;

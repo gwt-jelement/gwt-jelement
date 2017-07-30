@@ -24,11 +24,11 @@ import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="SVGFEDisplacementMapElement", isNative = true)
 public class SVGFEDisplacementMapElement extends SVGElement{
-    public static short SVG_CHANNEL_UNKNOWN;
-    public static short SVG_CHANNEL_R;
-    public static short SVG_CHANNEL_G;
-    public static short SVG_CHANNEL_B;
-    public static short SVG_CHANNEL_A;
+    public static short SVG_CHANNEL_UNKNOWN; /* 0 */
+    public static short SVG_CHANNEL_R; /* 1 */
+    public static short SVG_CHANNEL_G; /* 2 */
+    public static short SVG_CHANNEL_B; /* 3 */
+    public static short SVG_CHANNEL_A; /* 4 */
     
     @JsConstructor
     public SVGFEDisplacementMapElement(){

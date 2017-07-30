@@ -25,10 +25,10 @@ import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="EXTDisjointTimerQueryWebGL2", isNative = true)
 public class EXTDisjointTimerQueryWebGL2 extends JsObject{
-    public static double QUERY_COUNTER_BITS_EXT;
-    public static double TIME_ELAPSED_EXT;
-    public static double TIMESTAMP_EXT;
-    public static double GPU_DISJOINT_EXT;
+    public static double QUERY_COUNTER_BITS_EXT; /* 0x8864 */
+    public static double TIME_ELAPSED_EXT; /* 0x88BF */
+    public static double TIMESTAMP_EXT; /* 0x8E28 */
+    public static double GPU_DISJOINT_EXT; /* 0x8FBB */
     
     @JsConstructor
     public EXTDisjointTimerQueryWebGL2(){

@@ -24,8 +24,8 @@ import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="EXTBlendMinMax", isNative = true)
 public class EXTBlendMinMax extends JsObject{
-    public static double MIN_EXT;
-    public static double MAX_EXT;
+    public static double MIN_EXT; /* 0x8007 */
+    public static double MAX_EXT; /* 0x8008 */
     
     @JsConstructor
     public EXTBlendMinMax(){

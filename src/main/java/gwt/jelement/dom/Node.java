@@ -26,24 +26,24 @@ import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="Node", isNative = true)
 public class Node extends EventTarget{
-    public static short ELEMENT_NODE;
-    public static short ATTRIBUTE_NODE;
-    public static short TEXT_NODE;
-    public static short CDATA_SECTION_NODE;
-    public static short ENTITY_REFERENCE_NODE;
-    public static short ENTITY_NODE;
-    public static short PROCESSING_INSTRUCTION_NODE;
-    public static short COMMENT_NODE;
-    public static short DOCUMENT_NODE;
-    public static short DOCUMENT_TYPE_NODE;
-    public static short DOCUMENT_FRAGMENT_NODE;
-    public static short NOTATION_NODE;
-    public static short DOCUMENT_POSITION_DISCONNECTED;
-    public static short DOCUMENT_POSITION_PRECEDING;
-    public static short DOCUMENT_POSITION_FOLLOWING;
-    public static short DOCUMENT_POSITION_CONTAINS;
-    public static short DOCUMENT_POSITION_CONTAINED_BY;
-    public static short DOCUMENT_POSITION_IMPLEMENTATION_SPECIFIC;
+    public static short ELEMENT_NODE; /* 1 */
+    public static short ATTRIBUTE_NODE; /* 2 */
+    public static short TEXT_NODE; /* 3 */
+    public static short CDATA_SECTION_NODE; /* 4 */
+    public static short ENTITY_REFERENCE_NODE; /* 5 */
+    public static short ENTITY_NODE; /* 6 */
+    public static short PROCESSING_INSTRUCTION_NODE; /* 7 */
+    public static short COMMENT_NODE; /* 8 */
+    public static short DOCUMENT_NODE; /* 9 */
+    public static short DOCUMENT_TYPE_NODE; /* 10 */
+    public static short DOCUMENT_FRAGMENT_NODE; /* 11 */
+    public static short NOTATION_NODE; /* 12 */
+    public static short DOCUMENT_POSITION_DISCONNECTED; /* 0x01 */
+    public static short DOCUMENT_POSITION_PRECEDING; /* 0x02 */
+    public static short DOCUMENT_POSITION_FOLLOWING; /* 0x04 */
+    public static short DOCUMENT_POSITION_CONTAINS; /* 0x08 */
+    public static short DOCUMENT_POSITION_CONTAINED_BY; /* 0x10 */
+    public static short DOCUMENT_POSITION_IMPLEMENTATION_SPECIFIC; /* 0x20 */
     
     @JsConstructor
     public Node(){

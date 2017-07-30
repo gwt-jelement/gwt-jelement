@@ -24,8 +24,8 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="Uint8ClampedArray", isNative = true)
-public class Uint8ClampedArray extends JsObject{
-    public static double BYTES_PER_ELEMENT;
+public class Uint8ClampedArray extends ArrayBufferView{
+    public static double BYTES_PER_ELEMENT; /* 1 */
     
     @JsConstructor
     public Uint8ClampedArray(double length){
@@ -57,14 +57,8 @@ public class Uint8ClampedArray extends JsObject{
         super();
     }
     
-    @JsProperty(name="buffer")
-    public native ArrayBuffer getBuffer();
-    
-    @JsProperty(name="byteOffset")
-    public native double getByteOffset();
-    
-    @JsProperty(name="byteLength")
-    public native double getByteLength();
+    @JsProperty(name="length")
+    public native double getLength();
     
     @JsMethod(name = "set")
     public native void set(Uint8ClampedArray array);

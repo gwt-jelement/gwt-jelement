@@ -38,15 +38,15 @@ import jsinterop.base.Any;
 
 @JsType(namespace = JsPackage.GLOBAL, name="HTMLMediaElement", isNative = true)
 public class HTMLMediaElement extends HTMLElement{
-    public static short NETWORK_EMPTY;
-    public static short NETWORK_IDLE;
-    public static short NETWORK_LOADING;
-    public static short NETWORK_NO_SOURCE;
-    public static short HAVE_NOTHING;
-    public static short HAVE_METADATA;
-    public static short HAVE_CURRENT_DATA;
-    public static short HAVE_FUTURE_DATA;
-    public static short HAVE_ENOUGH_DATA;
+    public static short NETWORK_EMPTY; /* 0 */
+    public static short NETWORK_IDLE; /* 1 */
+    public static short NETWORK_LOADING; /* 2 */
+    public static short NETWORK_NO_SOURCE; /* 3 */
+    public static short HAVE_NOTHING; /* 0 */
+    public static short HAVE_METADATA; /* 1 */
+    public static short HAVE_CURRENT_DATA; /* 2 */
+    public static short HAVE_FUTURE_DATA; /* 3 */
+    public static short HAVE_ENOUGH_DATA; /* 4 */
     
     @JsProperty(name="onencrypted")
     private EventHandlerNonNull onencrypted;

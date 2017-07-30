@@ -25,9 +25,9 @@ import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="PositionError", isNative = true)
 public class PositionError extends JsObject{
-    public static short PERMISSION_DENIED;
-    public static short POSITION_UNAVAILABLE;
-    public static short TIMEOUT;
+    public static short PERMISSION_DENIED; /* 1 */
+    public static short POSITION_UNAVAILABLE; /* 2 */
+    public static short TIMEOUT; /* 3 */
     
     @JsConstructor
     public PositionError(){

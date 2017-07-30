@@ -25,10 +25,10 @@ import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="PerformanceNavigation", isNative = true)
 public class PerformanceNavigation extends JsObject{
-    public static short TYPE_NAVIGATE;
-    public static short TYPE_RELOAD;
-    public static short TYPE_BACK_FORWARD;
-    public static short TYPE_RESERVED;
+    public static short TYPE_NAVIGATE; /* 0 */
+    public static short TYPE_RELOAD; /* 1 */
+    public static short TYPE_BACK_FORWARD; /* 2 */
+    public static short TYPE_RESERVED; /* 255 */
     
     @JsConstructor
     public PerformanceNavigation(){

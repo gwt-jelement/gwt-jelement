@@ -136,7 +136,7 @@ public class Js {
     }
 
     public static native <T> T get(JsObject<T> object, String propertyName) /*-{
-        return objobject[propertyName];
+        return object[propertyName];
     }-*/;
 
     public static native <T> T get(JsObject<T> object, double index) /*-{
