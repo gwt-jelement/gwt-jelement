@@ -16,8 +16,8 @@
  */
 package gwt.jelement.serviceworkers;
 
+import gwt.jelement.core.Promise;
 import gwt.jelement.events.Event;
-import elemental2.promise.Promise;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;

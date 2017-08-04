@@ -18,11 +18,11 @@ package gwt.jelement.webaudio;
 
 import gwt.jelement.core.Array;
 import gwt.jelement.core.ArrayBuffer;
+import gwt.jelement.core.Promise;
 import gwt.jelement.events.EventHandlerNonNull;
 import gwt.jelement.events.EventTarget;
 import gwt.jelement.html.HTMLMediaElement;
 import gwt.jelement.mediastream.MediaStream;
-import elemental2.promise.Promise;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;

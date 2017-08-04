@@ -16,7 +16,7 @@
  */
 package gwt.jelement.background_fetch;
 
-import elemental2.promise.Promise;
+import gwt.jelement.core.Promise;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;

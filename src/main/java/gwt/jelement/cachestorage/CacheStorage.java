@@ -17,8 +17,8 @@
 package gwt.jelement.cachestorage;
 
 import gwt.jelement.core.IsObject;
+import gwt.jelement.core.Promise;
 import gwt.jelement.fetch.Request;
-import elemental2.promise.Promise;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;

@@ -16,8 +16,8 @@
  */
 package gwt.jelement.clipboard;
 
+import gwt.jelement.core.Promise;
 import gwt.jelement.events.EventTarget;
-import elemental2.promise.Promise;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;

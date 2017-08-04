@@ -17,10 +17,10 @@
 package gwt.jelement.imagecapture;
 
 import gwt.jelement.core.IsObject;
+import gwt.jelement.core.Promise;
 import gwt.jelement.fileapi.Blob;
 import gwt.jelement.imagebitmap.ImageBitmap;
 import gwt.jelement.mediastream.MediaStreamTrack;
-import elemental2.promise.Promise;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;

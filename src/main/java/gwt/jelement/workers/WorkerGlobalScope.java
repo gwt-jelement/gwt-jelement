@@ -18,6 +18,7 @@ package gwt.jelement.workers;
 
 import gwt.jelement.cachestorage.CacheStorage;
 import gwt.jelement.core.CallbackFunction;
+import gwt.jelement.core.Promise;
 import gwt.jelement.crypto.Crypto;
 import gwt.jelement.dom.AddressSpace;
 import gwt.jelement.events.EventHandlerNonNull;
@@ -36,7 +37,6 @@ import gwt.jelement.indexeddb.IDBFactory;
 import gwt.jelement.offscreencanvas.OffscreenCanvas;
 import gwt.jelement.svg.SVGImageElement;
 import gwt.jelement.timing.WorkerPerformance;
-import elemental2.promise.Promise;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;

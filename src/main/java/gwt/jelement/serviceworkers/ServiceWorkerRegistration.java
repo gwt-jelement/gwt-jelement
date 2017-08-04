@@ -18,13 +18,13 @@ package gwt.jelement.serviceworkers;
 
 import gwt.jelement.background_fetch.BackgroundFetchManager;
 import gwt.jelement.background_sync.SyncManager;
+import gwt.jelement.core.Promise;
 import gwt.jelement.events.EventHandlerNonNull;
 import gwt.jelement.events.EventTarget;
 import gwt.jelement.notifications.GetNotificationOptions;
 import gwt.jelement.notifications.Notification;
 import gwt.jelement.notifications.NotificationOptions;
 import gwt.jelement.push_messaging.PushManager;
-import elemental2.promise.Promise;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;

@@ -17,6 +17,7 @@
 package gwt.jelement.imagebitmap;
 
 import gwt.jelement.core.IsObject;
+import gwt.jelement.core.Promise;
 import gwt.jelement.fileapi.Blob;
 import gwt.jelement.html.HTMLCanvasElement;
 import gwt.jelement.html.HTMLImageElement;
@@ -24,7 +25,6 @@ import gwt.jelement.html.HTMLVideoElement;
 import gwt.jelement.html.ImageData;
 import gwt.jelement.offscreencanvas.OffscreenCanvas;
 import gwt.jelement.svg.SVGImageElement;
-import elemental2.promise.Promise;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;

@@ -17,7 +17,7 @@
 package gwt.jelement.push_messaging;
 
 import gwt.jelement.core.IsObject;
-import elemental2.promise.Promise;
+import gwt.jelement.core.Promise;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;

@@ -17,6 +17,7 @@
 package gwt.jelement.offscreencanvas;
 
 import gwt.jelement.core.Js;
+import gwt.jelement.core.Promise;
 import gwt.jelement.events.EventTarget;
 import gwt.jelement.fileapi.Blob;
 import gwt.jelement.html.canvas.CanvasContextCreationAttributes;
@@ -24,7 +25,6 @@ import gwt.jelement.imagebitmap.ImageBitmap;
 import gwt.jelement.offscreencanvas2d.OffscreenCanvasRenderingContext2D;
 import gwt.jelement.webgl.WebGL2RenderingContext;
 import gwt.jelement.webgl.WebGLRenderingContext;
-import elemental2.promise.Promise;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;

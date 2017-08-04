@@ -16,6 +16,7 @@
  */
 package gwt.jelement.html;
 
+import gwt.jelement.core.Promise;
 import gwt.jelement.dom.DOMTokenList;
 import gwt.jelement.encryptedmedia.MediaKeys;
 import gwt.jelement.events.EventHandlerNonNull;
@@ -27,7 +28,6 @@ import gwt.jelement.html.track.TextTrackList;
 import gwt.jelement.html.track.VideoTrackList;
 import gwt.jelement.mediastream.MediaStream;
 import gwt.jelement.remoteplayback.RemotePlayback;
-import elemental2.promise.Promise;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
