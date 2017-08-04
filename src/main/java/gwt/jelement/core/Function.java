@@ -24,9 +24,21 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="Function", isNative = true)
-public class Function extends JsObject{
+public class Function extends IsObject{
+    @JsProperty(name="caller")
+    public static Function caller;
+    
     @JsProperty(name="displayName")
     public static String displayName;
+    
+    @JsProperty(name="length")
+    public static int length;
+    
+    @JsProperty(name="name")
+    public static String name;
+    
+    @JsProperty(name="prototype")
+    public static JsObject prototype;
     
     @JsConstructor
     public Function(String functionBody){
@@ -43,6 +55,9 @@ public class Function extends JsObject{
     
     @JsMethod(name = "apply")
     public native Object apply(Object thisArg, Object[] arguments);
+    
+    @JsMethod(name = "apply")
+    public native Object apply(Object thisArg, Array arguments);
     
     @JsMethod(name = "bind")
     public native Function bind(Object thisArg, Object... arguments);

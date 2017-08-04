@@ -16,16 +16,10 @@
  */
 package gwt.jelement.svg;
 
-import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="SVGTextElement", isNative = true)
 public class SVGTextElement extends SVGTextPositioningElement{
-    @JsConstructor
-    public SVGTextElement(){
-        super();
-    }
-    
 }

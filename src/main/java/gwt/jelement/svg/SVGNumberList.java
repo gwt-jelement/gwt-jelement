@@ -16,8 +16,8 @@
  */
 package gwt.jelement.svg;
 
-import gwt.jelement.core.JsObject;
-import jsinterop.annotations.JsConstructor;
+import gwt.jelement.core.ArrayLike;
+import gwt.jelement.core.Js;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
@@ -25,12 +25,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="SVGNumberList", isNative = true)
-public class SVGNumberList extends JsObject{
-    @JsConstructor
-    public SVGNumberList(){
-        super();
-    }
-    
+public class SVGNumberList extends ArrayLike{
     @JsProperty(name="numberOfItems")
     public native double getNumberOfItems();
     
@@ -39,6 +34,9 @@ public class SVGNumberList extends JsObject{
     
     @JsMethod(name = "clear")
     public native void clear();
+    
+    @JsMethod(name = "getItem")
+    public native SVGNumber getItem(double index);
     
     @JsMethod(name = "initialize")
     public native SVGNumber initialize(SVGNumber newItem);
@@ -51,5 +49,10 @@ public class SVGNumberList extends JsObject{
     
     @JsMethod(name = "replaceItem")
     public native SVGNumber replaceItem(SVGNumber newItem, double index);
+    
+    @JsOverlay
+    public final void set(double index, SVGNumber newItem){
+        Js.<SVGNumber>set(this.object(), index, newItem);
+    }
     
 }

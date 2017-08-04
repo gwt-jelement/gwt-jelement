@@ -18,7 +18,6 @@ package gwt.jelement.netinfo;
 
 import gwt.jelement.events.EventHandlerNonNull;
 import gwt.jelement.events.EventTarget;
-import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -37,11 +36,6 @@ public class NetworkInformation extends EventTarget{
     
     @JsProperty(name="effectiveType")
     private String effectiveType;
-    
-    @JsConstructor
-    public NetworkInformation(){
-        super();
-    }
     
     @JsProperty(name="downlinkMax")
     public native double getDownlinkMax();

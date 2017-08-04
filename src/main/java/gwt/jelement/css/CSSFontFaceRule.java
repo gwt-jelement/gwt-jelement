@@ -16,7 +16,6 @@
  */
 package gwt.jelement.css;
 
-import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -24,11 +23,6 @@ import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="CSSFontFaceRule", isNative = true)
 public class CSSFontFaceRule extends CSSRule{
-    @JsConstructor
-    public CSSFontFaceRule(){
-        super();
-    }
-    
     @JsProperty(name="style")
     public native CSSStyleDeclaration getStyle();
     

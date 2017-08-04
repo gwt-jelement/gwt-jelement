@@ -17,7 +17,6 @@
 package gwt.jelement.html;
 
 import gwt.jelement.events.EventHandlerNonNull;
-import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -69,11 +68,6 @@ public class HTMLBodyElement extends HTMLElement{
     
     @JsProperty(name="onunload")
     private EventHandlerNonNull onunload;
-    
-    @JsConstructor
-    public HTMLBodyElement(){
-        super();
-    }
     
     @JsProperty(name="text")
     public native String getText();

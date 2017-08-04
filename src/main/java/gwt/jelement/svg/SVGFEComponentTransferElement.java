@@ -16,7 +16,6 @@
  */
 package gwt.jelement.svg;
 
-import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -24,11 +23,6 @@ import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="SVGFEComponentTransferElement", isNative = true)
 public class SVGFEComponentTransferElement extends SVGElement{
-    @JsConstructor
-    public SVGFEComponentTransferElement(){
-        super();
-    }
-    
     @JsProperty(name="in1")
     public native SVGAnimatedString getIn1();
     

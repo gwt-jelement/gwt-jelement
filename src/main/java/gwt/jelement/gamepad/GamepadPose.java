@@ -17,20 +17,14 @@
 package gwt.jelement.gamepad;
 
 import gwt.jelement.core.Float32Array;
-import gwt.jelement.core.JsObject;
-import jsinterop.annotations.JsConstructor;
+import gwt.jelement.core.IsObject;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="GamepadPose", isNative = true)
-public class GamepadPose extends JsObject{
-    @JsConstructor
-    public GamepadPose(){
-        super();
-    }
-    
+public class GamepadPose extends IsObject{
     @JsProperty(name="hasOrientation")
     public native boolean getHasOrientation();
     

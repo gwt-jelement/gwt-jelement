@@ -16,7 +16,7 @@
  */
 package gwt.jelement.dom;
 
-import gwt.jelement.core.JsObject;
+import gwt.jelement.core.IsObject;
 import gwt.jelement.fileapi.Blob;
 import gwt.jelement.mediasource.MediaSource;
 import gwt.jelement.mediastream.MediaStream;
@@ -28,7 +28,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="URL", isNative = true)
-public class URL extends JsObject{
+public class URL extends IsObject{
     @JsConstructor
     public URL(String url){
         super();

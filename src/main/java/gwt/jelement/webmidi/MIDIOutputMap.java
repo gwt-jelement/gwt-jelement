@@ -16,17 +16,11 @@
  */
 package gwt.jelement.webmidi;
 
-import gwt.jelement.core.JsObject;
-import jsinterop.annotations.JsConstructor;
+import gwt.jelement.core.IsObject;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="MIDIOutputMap", isNative = true)
-public class MIDIOutputMap extends JsObject{
-    @JsConstructor
-    public MIDIOutputMap(){
-        super();
-    }
-    
+public class MIDIOutputMap extends IsObject{
 }

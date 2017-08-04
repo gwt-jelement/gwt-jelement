@@ -16,16 +16,10 @@
  */
 package gwt.jelement.svg;
 
-import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="SVGAnimateTransformElement", isNative = true)
 public class SVGAnimateTransformElement extends SVGAnimationElement{
-    @JsConstructor
-    public SVGAnimateTransformElement(){
-        super();
-    }
-    
 }

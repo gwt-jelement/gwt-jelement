@@ -25,7 +25,6 @@ import gwt.jelement.frame.ScrollToOptions;
 import gwt.jelement.html.HTMLCollection;
 import gwt.jelement.html.HTMLSlotElement;
 import gwt.jelement.page.scrolling.ScrollStateCallback;
-import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
@@ -73,11 +72,6 @@ public class Element extends Node{
     
     @JsProperty(name="onwebkitfullscreenerror")
     private EventHandlerNonNull onwebkitfullscreenerror;
-    
-    @JsConstructor
-    public Element(){
-        super();
-    }
     
     @JsProperty(name="namespaceURI")
     public native String getNamespaceURI();
@@ -435,7 +429,7 @@ public class Element extends Node{
     public native void prepend(String... nodes);
     
     @JsMethod(name = "querySelector")
-    public native <T extends Element> T querySelector(String selectors);
+    public native <T> T querySelector(String selectors);
     
     @JsMethod(name = "querySelectorAll")
     public native NodeList querySelectorAll(String selectors);

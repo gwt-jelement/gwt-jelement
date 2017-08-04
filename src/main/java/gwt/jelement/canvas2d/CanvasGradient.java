@@ -16,20 +16,14 @@
  */
 package gwt.jelement.canvas2d;
 
-import gwt.jelement.core.JsObject;
-import jsinterop.annotations.JsConstructor;
+import gwt.jelement.core.IsObject;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="CanvasGradient", isNative = true)
-public class CanvasGradient extends JsObject{
-    @JsConstructor
-    public CanvasGradient(){
-        super();
-    }
-    
+public class CanvasGradient extends IsObject{
     @JsMethod(name = "addColorStop")
     public native void addColorStop(double offset, String color);
     

@@ -16,20 +16,14 @@
  */
 package gwt.jelement.dom;
 
-import gwt.jelement.core.JsObject;
-import jsinterop.annotations.JsConstructor;
+import gwt.jelement.core.IsObject;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="URLUtilsReadOnly", isNative = true)
-public class URLUtilsReadOnly extends JsObject{
-    @JsConstructor
-    public URLUtilsReadOnly(){
-        super();
-    }
-    
+public class URLUtilsReadOnly extends IsObject{
     @JsProperty(name="href")
     public native String getHref();
     

@@ -16,19 +16,19 @@
  */
 package gwt.jelement.peerconnection;
 
-import gwt.jelement.core.JsObject;
-import jsinterop.annotations.JsConstructor;
+import gwt.jelement.core.IsObject;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="RTCStatsResponse", isNative = true)
-public class RTCStatsResponse extends JsObject{
-    @JsConstructor
-    public RTCStatsResponse(){
-        super();
-    }
+public class RTCStatsResponse extends IsObject{
+    @JsMethod(name = "get")
+    public native RTCLegacyStatsReport get();
+    
+    @JsMethod(name = "get")
+    public native RTCLegacyStatsReport get(String name);
     
     @JsMethod(name = "namedItem")
     public native RTCLegacyStatsReport namedItem();

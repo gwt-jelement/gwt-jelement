@@ -16,11 +16,13 @@
  */
 package gwt.jelement.frame;
 
+import gwt.jelement.battery.BatteryManager;
 import gwt.jelement.bluetooth.Bluetooth;
 import gwt.jelement.budget.BudgetService;
 import gwt.jelement.clipboard.Clipboard;
+import gwt.jelement.core.Array;
 import gwt.jelement.core.ArrayBufferView;
-import gwt.jelement.core.JsObject;
+import gwt.jelement.core.IsObject;
 import gwt.jelement.credentialmanager.CredentialsContainer;
 import gwt.jelement.encryptedmedia.MediaKeySystemAccess;
 import gwt.jelement.encryptedmedia.MediaKeySystemConfiguration;
@@ -48,7 +50,6 @@ import gwt.jelement.webmidi.MIDIOptions;
 import gwt.jelement.webshare.ShareData;
 import gwt.jelement.webusb.USB;
 import elemental2.promise.Promise;
-import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
@@ -56,12 +57,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="Navigator", isNative = true)
-public class Navigator extends JsObject{
-    @JsConstructor
-    public Navigator(){
-        super();
-    }
-    
+public class Navigator extends IsObject{
     @JsProperty(name="vendorSub")
     public native String getVendorSub();
     
@@ -171,7 +167,7 @@ public class Navigator extends JsObject{
     public native void cancelKeyboardLock();
     
     @JsMethod(name = "getBattery")
-    public native Promise getBattery();
+    public native Promise<BatteryManager> getBattery();
     
     @JsMethod(name = "getGamepads")
     public native GamepadList getGamepads();
@@ -199,6 +195,9 @@ public class Navigator extends JsObject{
     
     @JsMethod(name = "requestKeyboardLock")
     public native Promise<Void> requestKeyboardLock(String[] keyCodes);
+    
+    @JsMethod(name = "requestKeyboardLock")
+    public native Promise<Void> requestKeyboardLock(Array keyCodes);
     
     @JsMethod(name = "requestMIDIAccess")
     public native Promise requestMIDIAccess();
@@ -235,6 +234,9 @@ public class Navigator extends JsObject{
     
     @JsMethod(name = "vibrate")
     public native boolean vibrate(double[] pattern);
+    
+    @JsMethod(name = "vibrate")
+    public native boolean vibrate(Array pattern);
     
     @JsMethod(name = "webkitGetUserMedia")
     public native void webkitGetUserMedia(MediaStreamConstraints constraints, NavigatorUserMediaSuccessCallback successCallback, NavigatorUserMediaErrorCallback errorCallback);

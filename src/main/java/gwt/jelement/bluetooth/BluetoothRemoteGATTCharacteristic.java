@@ -22,7 +22,6 @@ import gwt.jelement.core.DataView;
 import gwt.jelement.events.EventHandlerNonNull;
 import gwt.jelement.events.EventTarget;
 import elemental2.promise.Promise;
-import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
@@ -33,11 +32,6 @@ import jsinterop.annotations.JsType;
 public class BluetoothRemoteGATTCharacteristic extends EventTarget{
     @JsProperty(name="oncharacteristicvaluechanged")
     private EventHandlerNonNull oncharacteristicvaluechanged;
-    
-    @JsConstructor
-    public BluetoothRemoteGATTCharacteristic(){
-        super();
-    }
     
     @JsProperty(name="service")
     public native BluetoothRemoteGATTService getService();

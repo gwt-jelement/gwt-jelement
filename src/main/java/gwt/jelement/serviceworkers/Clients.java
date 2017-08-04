@@ -16,26 +16,20 @@
  */
 package gwt.jelement.serviceworkers;
 
-import gwt.jelement.core.JsObject;
+import gwt.jelement.core.IsObject;
 import elemental2.promise.Promise;
-import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="Clients", isNative = true)
-public class Clients extends JsObject{
-    @JsConstructor
-    public Clients(){
-        super();
-    }
-    
+public class Clients extends IsObject{
     @JsMethod(name = "claim")
     public native Promise<Void> claim();
     
     @JsMethod(name = "get")
-    public native Promise<Object> get_(String id);
+    public native Promise<Object> get(String id);
     
     @JsMethod(name = "matchAll")
     public native Promise<Client[]> matchAll();

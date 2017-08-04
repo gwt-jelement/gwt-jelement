@@ -16,7 +16,6 @@
  */
 package gwt.jelement.html;
 
-import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -24,11 +23,6 @@ import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="HTMLParamElement", isNative = true)
 public class HTMLParamElement extends HTMLElement{
-    @JsConstructor
-    public HTMLParamElement(){
-        super();
-    }
-    
     @JsProperty(name="name")
     public native String getName();
     

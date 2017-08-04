@@ -16,7 +16,6 @@
  */
 package gwt.jelement.html;
 
-import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
@@ -25,11 +24,6 @@ import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="HTMLTableRowElement", isNative = true)
 public class HTMLTableRowElement extends HTMLElement{
-    @JsConstructor
-    public HTMLTableRowElement(){
-        super();
-    }
-    
     @JsProperty(name="rowIndex")
     public native double getRowIndex();
     

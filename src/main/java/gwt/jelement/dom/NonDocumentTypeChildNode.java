@@ -16,20 +16,14 @@
  */
 package gwt.jelement.dom;
 
-import gwt.jelement.core.JsObject;
-import jsinterop.annotations.JsConstructor;
+import gwt.jelement.core.IsObject;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="NonDocumentTypeChildNode", isNative = true)
-public class NonDocumentTypeChildNode extends JsObject{
-    @JsConstructor
-    public NonDocumentTypeChildNode(){
-        super();
-    }
-    
+public class NonDocumentTypeChildNode extends IsObject{
     @JsProperty(name="previousElementSibling")
     public native Element getPreviousElementSibling();
     

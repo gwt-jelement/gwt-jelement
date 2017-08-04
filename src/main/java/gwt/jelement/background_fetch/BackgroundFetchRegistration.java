@@ -16,9 +16,8 @@
  */
 package gwt.jelement.background_fetch;
 
-import gwt.jelement.core.JsObject;
+import gwt.jelement.core.IsObject;
 import elemental2.promise.Promise;
-import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
@@ -26,12 +25,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="BackgroundFetchRegistration", isNative = true)
-public class BackgroundFetchRegistration extends JsObject{
-    @JsConstructor
-    public BackgroundFetchRegistration(){
-        super();
-    }
-    
+public class BackgroundFetchRegistration extends IsObject{
     @JsProperty(name="tag")
     public native String getTag();
     

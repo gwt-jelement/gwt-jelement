@@ -17,7 +17,6 @@
 package gwt.jelement.svg;
 
 import gwt.jelement.css.StyleSheet;
-import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -25,11 +24,6 @@ import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="SVGStyleElement", isNative = true)
 public class SVGStyleElement extends SVGElement{
-    @JsConstructor
-    public SVGStyleElement(){
-        super();
-    }
-    
     @JsProperty(name="type")
     public native String getType();
     

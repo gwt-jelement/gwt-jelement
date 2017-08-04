@@ -16,20 +16,14 @@
  */
 package gwt.jelement.crypto;
 
-import gwt.jelement.core.JsObject;
-import jsinterop.annotations.JsConstructor;
+import gwt.jelement.core.IsObject;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="CryptoKey", isNative = true)
-public class CryptoKey extends JsObject{
-    @JsConstructor
-    public CryptoKey(){
-        super();
-    }
-    
+public class CryptoKey extends IsObject{
     @JsProperty(name="type")
     public native String getType();
     

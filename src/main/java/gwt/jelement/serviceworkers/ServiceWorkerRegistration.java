@@ -25,7 +25,6 @@ import gwt.jelement.notifications.Notification;
 import gwt.jelement.notifications.NotificationOptions;
 import gwt.jelement.push_messaging.PushManager;
 import elemental2.promise.Promise;
-import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
@@ -36,11 +35,6 @@ import jsinterop.annotations.JsType;
 public class ServiceWorkerRegistration extends EventTarget{
     @JsProperty(name="onupdatefound")
     private EventHandlerNonNull onupdatefound;
-    
-    @JsConstructor
-    public ServiceWorkerRegistration(){
-        super();
-    }
     
     @JsProperty(name="installing")
     public native ServiceWorker getInstalling();

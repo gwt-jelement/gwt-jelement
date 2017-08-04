@@ -16,8 +16,8 @@
  */
 package gwt.jelement.webaudio;
 
-import gwt.jelement.core.JsObject;
-import jsinterop.annotations.JsConstructor;
+import gwt.jelement.core.Array;
+import gwt.jelement.core.IsObject;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
@@ -25,12 +25,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="AudioParam", isNative = true)
-public class AudioParam extends JsObject{
-    @JsConstructor
-    public AudioParam(){
-        super();
-    }
-    
+public class AudioParam extends IsObject{
     @JsProperty(name="value")
     public native double getValue();
     
@@ -66,5 +61,8 @@ public class AudioParam extends JsObject{
     
     @JsMethod(name = "setValueCurveAtTime")
     public native AudioParam setValueCurveAtTime(double[] values, double time, double duration);
+    
+    @JsMethod(name = "setValueCurveAtTime")
+    public native AudioParam setValueCurveAtTime(Array values, double time, double duration);
     
 }

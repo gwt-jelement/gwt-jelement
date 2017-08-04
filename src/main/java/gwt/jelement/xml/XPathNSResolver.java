@@ -16,20 +16,14 @@
  */
 package gwt.jelement.xml;
 
-import gwt.jelement.core.JsObject;
-import jsinterop.annotations.JsConstructor;
+import gwt.jelement.core.IsObject;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="XPathNSResolver", isNative = true)
-public class XPathNSResolver extends JsObject{
-    @JsConstructor
-    public XPathNSResolver(){
-        super();
-    }
-    
+public class XPathNSResolver extends IsObject{
     @JsMethod(name = "lookupNamespaceURI")
     public native String lookupNamespaceURI();
     

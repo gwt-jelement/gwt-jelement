@@ -16,8 +16,7 @@
  */
 package gwt.jelement.dom;
 
-import gwt.jelement.core.JsObject;
-import jsinterop.annotations.JsConstructor;
+import gwt.jelement.core.ArrayLike;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
@@ -25,12 +24,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="DOMTokenList", isNative = true)
-public class DOMTokenList extends JsObject{
-    @JsConstructor
-    public DOMTokenList(){
-        super();
-    }
-    
+public class DOMTokenList extends ArrayLike{
     @JsProperty(name="value")
     public native String getValue();
     
@@ -42,6 +36,9 @@ public class DOMTokenList extends JsObject{
     
     @JsMethod(name = "contains")
     public native boolean contains(String token);
+    
+    @JsMethod(name = "item")
+    public native String item(double index);
     
     @JsMethod(name = "remove")
     public native void remove(String... tokens);

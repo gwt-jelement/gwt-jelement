@@ -16,8 +16,7 @@
  */
 package gwt.jelement.dom;
 
-import gwt.jelement.core.JsObject;
-import jsinterop.annotations.JsConstructor;
+import gwt.jelement.core.IsObject;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
@@ -25,12 +24,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="NodeIterator", isNative = true)
-public class NodeIterator extends JsObject{
-    @JsConstructor
-    public NodeIterator(){
-        super();
-    }
-    
+public class NodeIterator extends IsObject{
     @JsProperty(name="root")
     public native Node getRoot();
     

@@ -19,7 +19,6 @@ package gwt.jelement.mediastream;
 import gwt.jelement.events.EventHandlerNonNull;
 import gwt.jelement.events.EventTarget;
 import elemental2.promise.Promise;
-import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
@@ -30,11 +29,6 @@ import jsinterop.annotations.JsType;
 public class MediaDevices extends EventTarget{
     @JsProperty(name="ondevicechange")
     private EventHandlerNonNull ondevicechange;
-    
-    @JsConstructor
-    public MediaDevices(){
-        super();
-    }
     
     @JsOverlay
     public final EventHandlerNonNull getOnDevicechange(){

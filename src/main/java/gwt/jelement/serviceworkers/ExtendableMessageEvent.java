@@ -16,13 +16,13 @@
  */
 package gwt.jelement.serviceworkers;
 
+import gwt.jelement.core.Js;
 import gwt.jelement.dom.MessagePort;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
-import jsinterop.base.Js;
 
 @JsType(namespace = JsPackage.GLOBAL, name="ExtendableMessageEvent", isNative = true)
 public class ExtendableMessageEvent extends ExtendableEvent{

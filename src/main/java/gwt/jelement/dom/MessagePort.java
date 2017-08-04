@@ -18,7 +18,6 @@ package gwt.jelement.dom;
 
 import gwt.jelement.events.EventHandlerNonNull;
 import gwt.jelement.events.EventTarget;
-import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
@@ -32,11 +31,6 @@ public class MessagePort extends EventTarget{
     
     @JsProperty(name="onmessageerror")
     private EventHandlerNonNull onmessageerror;
-    
-    @JsConstructor
-    public MessagePort(){
-        super();
-    }
     
     @JsOverlay
     public final EventHandlerNonNull getOnMessage(){

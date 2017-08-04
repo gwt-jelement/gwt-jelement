@@ -16,17 +16,11 @@
  */
 package gwt.jelement.html;
 
-import gwt.jelement.core.JsObject;
-import jsinterop.annotations.JsConstructor;
+import gwt.jelement.dom.Element;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="HTMLCollection", isNative = true)
-public class HTMLCollection extends JsObject{
-    @JsConstructor
-    public HTMLCollection(){
-        super();
-    }
-    
+public class HTMLCollection extends HTMLBaseCollection<Element, Element>{
 }

@@ -20,7 +20,6 @@ import gwt.jelement.css.CSSStyleDeclaration;
 import gwt.jelement.dom.DOMStringMap;
 import gwt.jelement.dom.Element;
 import gwt.jelement.events.EventHandlerNonNull;
-import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
@@ -247,11 +246,6 @@ public class HTMLElement extends Element{
     
     @JsProperty(name="ontouchstart")
     private EventHandlerNonNull ontouchstart;
-    
-    @JsConstructor
-    public HTMLElement(){
-        super();
-    }
     
     @JsProperty(name="title")
     public native String getTitle();

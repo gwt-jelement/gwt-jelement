@@ -16,6 +16,7 @@
  */
 package gwt.jelement.css.cssom;
 
+import gwt.jelement.core.Js;
 import gwt.jelement.geometry.DOMMatrix;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
@@ -41,6 +42,11 @@ public class CSSTransformValue extends CSSStyleValue{
     
     @JsProperty(name="is2D")
     public native boolean getIs2D();
+    
+    @JsOverlay
+    public final CSSTransformComponent get(double index){
+        return (CSSTransformComponent) Js.get(this.object(), index);
+    }
     
     @JsMethod(name = "toMatrix")
     public native DOMMatrix toMatrix();

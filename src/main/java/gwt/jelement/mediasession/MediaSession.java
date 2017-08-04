@@ -16,8 +16,7 @@
  */
 package gwt.jelement.mediasession;
 
-import gwt.jelement.core.JsObject;
-import jsinterop.annotations.JsConstructor;
+import gwt.jelement.core.IsObject;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
@@ -26,14 +25,9 @@ import jsinterop.annotations.JsType;
 import jsinterop.base.Any;
 
 @JsType(namespace = JsPackage.GLOBAL, name="MediaSession", isNative = true)
-public class MediaSession extends JsObject{
+public class MediaSession extends IsObject{
     @JsProperty(name="playbackState")
     private String playbackState;
-    
-    @JsConstructor
-    public MediaSession(){
-        super();
-    }
     
     @JsProperty(name="metadata")
     public native MediaMetadata getMetadata();

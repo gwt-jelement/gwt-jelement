@@ -16,7 +16,6 @@
  */
 package gwt.jelement.svg;
 
-import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -24,11 +23,6 @@ import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="SVGMaskElement", isNative = true)
 public class SVGMaskElement extends SVGElement{
-    @JsConstructor
-    public SVGMaskElement(){
-        super();
-    }
-    
     @JsProperty(name="maskUnits")
     public native SVGAnimatedEnumeration getMaskUnits();
     

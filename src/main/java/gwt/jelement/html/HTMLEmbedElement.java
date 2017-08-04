@@ -16,8 +16,9 @@
  */
 package gwt.jelement.html;
 
+import gwt.jelement.core.Js;
 import gwt.jelement.dom.Document;
-import jsinterop.annotations.JsConstructor;
+import gwt.jelement.dom.Node;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
@@ -26,11 +27,6 @@ import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="HTMLEmbedElement", isNative = true)
 public class HTMLEmbedElement extends HTMLElement{
-    @JsConstructor
-    public HTMLEmbedElement(){
-        super();
-    }
-    
     @JsProperty(name="src")
     public native String getSrc();
     
@@ -67,7 +63,17 @@ public class HTMLEmbedElement extends HTMLElement{
     @JsProperty(name="name")
     public native void setName(String name);
     
+    @JsOverlay
+    public final Node get(String name){
+        return (Node) Js.get(this.object(), name);
+    }
+    
     @JsMethod(name = "getSVGDocument")
     public native Document getSVGDocument();
+    
+    @JsOverlay
+    public final Node set(String name, Node value){
+        return Js.<Node>set(this.object(), name, value);
+    }
     
 }

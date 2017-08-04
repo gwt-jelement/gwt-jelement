@@ -17,20 +17,14 @@
 package gwt.jelement.push_messaging;
 
 import gwt.jelement.core.ArrayBuffer;
-import gwt.jelement.core.JsObject;
-import jsinterop.annotations.JsConstructor;
+import gwt.jelement.core.IsObject;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="PushSubscriptionOptions", isNative = true)
-public class PushSubscriptionOptions extends JsObject{
-    @JsConstructor
-    public PushSubscriptionOptions(){
-        super();
-    }
-    
+public class PushSubscriptionOptions extends IsObject{
     @JsProperty(name="userVisibleOnly")
     public native boolean getUserVisibleOnly();
     

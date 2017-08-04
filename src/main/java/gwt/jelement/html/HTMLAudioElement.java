@@ -16,16 +16,10 @@
  */
 package gwt.jelement.html;
 
-import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="HTMLAudioElement", isNative = true)
 public class HTMLAudioElement extends HTMLMediaElement{
-    @JsConstructor
-    public HTMLAudioElement(){
-        super();
-    }
-    
 }

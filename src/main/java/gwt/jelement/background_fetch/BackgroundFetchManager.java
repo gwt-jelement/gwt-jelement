@@ -16,22 +16,17 @@
  */
 package gwt.jelement.background_fetch;
 
-import gwt.jelement.core.JsObject;
+import gwt.jelement.core.Array;
+import gwt.jelement.core.IsObject;
 import gwt.jelement.fetch.Request;
 import elemental2.promise.Promise;
-import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="BackgroundFetchManager", isNative = true)
-public class BackgroundFetchManager extends JsObject{
-    @JsConstructor
-    public BackgroundFetchManager(){
-        super();
-    }
-    
+public class BackgroundFetchManager extends IsObject{
     @JsMethod(name = "fetch")
     public native Promise<BackgroundFetchRegistration> fetch(String tag, Request requests);
     
@@ -45,6 +40,9 @@ public class BackgroundFetchManager extends JsObject{
     public native Promise<BackgroundFetchRegistration> fetch(String tag, String[] requests);
     
     @JsMethod(name = "fetch")
+    public native Promise<BackgroundFetchRegistration> fetch(String tag, Array requests);
+    
+    @JsMethod(name = "fetch")
     public native Promise<BackgroundFetchRegistration> fetch(String tag, Request requests, BackgroundFetchOptions options);
     
     @JsMethod(name = "fetch")
@@ -56,8 +54,11 @@ public class BackgroundFetchManager extends JsObject{
     @JsMethod(name = "fetch")
     public native Promise<BackgroundFetchRegistration> fetch(String tag, String[] requests, BackgroundFetchOptions options);
     
+    @JsMethod(name = "fetch")
+    public native Promise<BackgroundFetchRegistration> fetch(String tag, Array requests, BackgroundFetchOptions options);
+    
     @JsMethod(name = "get")
-    public native Promise<BackgroundFetchRegistration> get_(String tag);
+    public native Promise<BackgroundFetchRegistration> get(String tag);
     
     @JsMethod(name = "getTags")
     public native Promise<String[]> getTags();

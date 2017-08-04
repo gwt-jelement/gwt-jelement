@@ -17,7 +17,6 @@
 package gwt.jelement.webaudio;
 
 import gwt.jelement.events.EventTarget;
-import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
@@ -31,11 +30,6 @@ public class AudioNode extends EventTarget{
     
     @JsProperty(name="channelInterpretation")
     private String channelInterpretation;
-    
-    @JsConstructor
-    public AudioNode(){
-        super();
-    }
     
     @JsProperty(name="context")
     public native BaseAudioContext getContext();

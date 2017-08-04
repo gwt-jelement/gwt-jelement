@@ -16,7 +16,7 @@
  */
 package gwt.jelement.geometry;
 
-import gwt.jelement.core.JsObject;
+import gwt.jelement.core.IsObject;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
@@ -25,7 +25,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="DOMPointReadOnly", isNative = true)
-public class DOMPointReadOnly extends JsObject{
+public class DOMPointReadOnly extends IsObject{
     @JsConstructor
     public DOMPointReadOnly(){
         super();

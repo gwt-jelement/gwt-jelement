@@ -16,15 +16,14 @@
  */
 package gwt.jelement.webgl;
 
-import gwt.jelement.core.JsObject;
-import jsinterop.annotations.JsConstructor;
+import gwt.jelement.core.IsObject;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="EXTDisjointTimerQuery", isNative = true)
-public class EXTDisjointTimerQuery extends JsObject{
+public class EXTDisjointTimerQuery extends IsObject{
     public static double QUERY_COUNTER_BITS_EXT; /* 0x8864 */
     public static double CURRENT_QUERY_EXT; /* 0x8865 */
     public static double QUERY_RESULT_EXT; /* 0x8866 */
@@ -32,11 +31,6 @@ public class EXTDisjointTimerQuery extends JsObject{
     public static double TIME_ELAPSED_EXT; /* 0x88BF */
     public static double TIMESTAMP_EXT; /* 0x8E28 */
     public static double GPU_DISJOINT_EXT; /* 0x8FBB */
-    
-    @JsConstructor
-    public EXTDisjointTimerQuery(){
-        super();
-    }
     
     @JsMethod(name = "beginQueryEXT")
     public native void beginQueryEXT(double target, WebGLTimerQueryEXT query);

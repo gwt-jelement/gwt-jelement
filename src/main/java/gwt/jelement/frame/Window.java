@@ -19,6 +19,7 @@ package gwt.jelement.frame;
 import gwt.jelement.cachestorage.CacheStorage;
 import gwt.jelement.core.CallbackFunction;
 import gwt.jelement.core.JSONImpl;
+import gwt.jelement.core.Js;
 import gwt.jelement.crypto.Crypto;
 import gwt.jelement.css.CSSRuleList;
 import gwt.jelement.css.CSSStyleDeclaration;
@@ -72,7 +73,6 @@ import gwt.jelement.webdatabase.Database;
 import gwt.jelement.webdatabase.DatabaseCallback;
 import gwt.jelement.workers.Worklet;
 import elemental2.promise.Promise;
-import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
@@ -392,11 +392,6 @@ public class Window extends EventTarget{
     
     @JsProperty(name="onunload")
     private EventHandlerNonNull onunload;
-    
-    @JsConstructor
-    public Window(){
-        super();
-    }
     
     @JsProperty(name="window")
     public native Window getWindow();
@@ -1880,6 +1875,16 @@ public class Window extends EventTarget{
     
     @JsMethod(name = "focus")
     public native void focus();
+    
+    @JsOverlay
+    public final Window get(double index){
+        return (Window) Js.get(this.object(), index);
+    }
+    
+    @JsOverlay
+    public final Object get(String name){
+        return (Object) Js.get(this.object(), name);
+    }
     
     @JsMethod(name = "getComputedStyle")
     public native CSSStyleDeclaration getComputedStyle(Element elt);

@@ -18,7 +18,6 @@ package gwt.jelement.battery;
 
 import gwt.jelement.events.EventHandlerNonNull;
 import gwt.jelement.events.EventTarget;
-import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -37,11 +36,6 @@ public class BatteryManager extends EventTarget{
     
     @JsProperty(name="onlevelchange")
     private EventHandlerNonNull onlevelchange;
-    
-    @JsConstructor
-    public BatteryManager(){
-        super();
-    }
     
     @JsProperty(name="charging")
     public native boolean getCharging();

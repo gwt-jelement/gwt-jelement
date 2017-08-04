@@ -16,7 +16,6 @@
  */
 package gwt.jelement.css;
 
-import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
@@ -25,11 +24,6 @@ import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="CSSStyleSheet", isNative = true)
 public class CSSStyleSheet extends StyleSheet{
-    @JsConstructor
-    public CSSStyleSheet(){
-        super();
-    }
-    
     @JsProperty(name="ownerRule")
     public native CSSRule getOwnerRule();
     

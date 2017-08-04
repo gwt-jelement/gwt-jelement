@@ -16,14 +16,14 @@
  */
 package gwt.jelement.mediasource;
 
-import gwt.jelement.core.JsObject;
+import gwt.jelement.core.ArrayLike;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="TrackDefaultList", isNative = true)
-public class TrackDefaultList extends JsObject{
+public class TrackDefaultList extends ArrayLike{
     @JsConstructor
     public TrackDefaultList(){
         super();

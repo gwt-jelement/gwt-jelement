@@ -17,7 +17,6 @@
 package gwt.jelement.indexeddb;
 
 import gwt.jelement.events.EventHandlerNonNull;
-import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -30,11 +29,6 @@ public class IDBOpenDBRequest extends IDBRequest{
     
     @JsProperty(name="onupgradeneeded")
     private EventHandlerNonNull onupgradeneeded;
-    
-    @JsConstructor
-    public IDBOpenDBRequest(){
-        super();
-    }
     
     @JsOverlay
     public final EventHandlerNonNull getOnBlocked(){

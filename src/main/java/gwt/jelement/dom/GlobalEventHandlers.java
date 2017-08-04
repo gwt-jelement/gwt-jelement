@@ -16,16 +16,15 @@
  */
 package gwt.jelement.dom;
 
-import gwt.jelement.core.JsObject;
+import gwt.jelement.core.IsObject;
 import gwt.jelement.events.EventHandlerNonNull;
-import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="GlobalEventHandlers", isNative = true)
-public class GlobalEventHandlers extends JsObject{
+public class GlobalEventHandlers extends IsObject{
     @JsProperty(name="onabort")
     private EventHandlerNonNull onabort;
     
@@ -244,11 +243,6 @@ public class GlobalEventHandlers extends JsObject{
     
     @JsProperty(name="ontouchstart")
     private EventHandlerNonNull ontouchstart;
-    
-    @JsConstructor
-    public GlobalEventHandlers(){
-        super();
-    }
     
     @JsOverlay
     public final EventHandlerNonNull getOnAbort(){

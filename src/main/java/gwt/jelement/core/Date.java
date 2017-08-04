@@ -23,7 +23,7 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="Date", isNative = true)
-public class Date extends JsObject{
+public class Date extends IsObject{
     @JsConstructor
     public Date(){
         super();
@@ -277,10 +277,16 @@ public class Date extends JsObject{
     public native String toLocaleDateString(String[] locales);
     
     @JsMethod(name = "toLocaleDateString")
-    public native String toLocaleDateString(String locales, DateLocaleOptions options);
+    public native String toLocaleDateString(Array locales);
     
     @JsMethod(name = "toLocaleDateString")
-    public native String toLocaleDateString(String[] locales, DateLocaleOptions options);
+    public native String toLocaleDateString(String locales, LocaleOptions options);
+    
+    @JsMethod(name = "toLocaleDateString")
+    public native String toLocaleDateString(String[] locales, LocaleOptions options);
+    
+    @JsMethod(name = "toLocaleDateString")
+    public native String toLocaleDateString(Array locales, LocaleOptions options);
     
     @Deprecated
     @JsMethod(name = "toLocaleFormat")
@@ -296,10 +302,16 @@ public class Date extends JsObject{
     public native String toLocaleString(String[] locales);
     
     @JsMethod(name = "toLocaleString")
-    public native String toLocaleString(String locales, DateLocaleOptions options);
+    public native String toLocaleString(Array locales);
     
     @JsMethod(name = "toLocaleString")
-    public native String toLocaleString(String[] locales, DateLocaleOptions options);
+    public native String toLocaleString(String locales, LocaleOptions options);
+    
+    @JsMethod(name = "toLocaleString")
+    public native String toLocaleString(String[] locales, LocaleOptions options);
+    
+    @JsMethod(name = "toLocaleString")
+    public native String toLocaleString(Array locales, LocaleOptions options);
     
     @JsMethod(name = "toLocaleTimeString")
     public native String toLocaleTimeString();
@@ -311,10 +323,20 @@ public class Date extends JsObject{
     public native String toLocaleTimeString(String[] locales);
     
     @JsMethod(name = "toLocaleTimeString")
-    public native String toLocaleTimeString(String locales, DateLocaleOptions options);
+    public native String toLocaleTimeString(Array locales);
     
     @JsMethod(name = "toLocaleTimeString")
-    public native String toLocaleTimeString(String[] locales, DateLocaleOptions options);
+    public native String toLocaleTimeString(String locales, LocaleOptions options);
+    
+    @JsMethod(name = "toLocaleTimeString")
+    public native String toLocaleTimeString(String[] locales, LocaleOptions options);
+    
+    @JsMethod(name = "toLocaleTimeString")
+    public native String toLocaleTimeString(Array locales, LocaleOptions options);
+    
+    @Deprecated
+    @JsMethod(name = "toSource")
+    public native String toSource();
     
     @JsMethod(name = "toString")
     public native String toString();

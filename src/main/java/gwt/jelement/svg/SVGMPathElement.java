@@ -16,7 +16,6 @@
  */
 package gwt.jelement.svg;
 
-import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -24,11 +23,6 @@ import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="SVGMPathElement", isNative = true)
 public class SVGMPathElement extends SVGElement{
-    @JsConstructor
-    public SVGMPathElement(){
-        super();
-    }
-    
     @JsProperty(name="href")
     public native SVGAnimatedString getHref();
     

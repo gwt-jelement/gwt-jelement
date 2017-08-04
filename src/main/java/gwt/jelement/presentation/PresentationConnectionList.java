@@ -18,7 +18,6 @@ package gwt.jelement.presentation;
 
 import gwt.jelement.events.EventHandlerNonNull;
 import gwt.jelement.events.EventTarget;
-import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -28,11 +27,6 @@ import jsinterop.annotations.JsType;
 public class PresentationConnectionList extends EventTarget{
     @JsProperty(name="onconnectionavailable")
     private EventHandlerNonNull onconnectionavailable;
-    
-    @JsConstructor
-    public PresentationConnectionList(){
-        super();
-    }
     
     @JsProperty(name="connections")
     public native PresentationConnection[] getConnections();

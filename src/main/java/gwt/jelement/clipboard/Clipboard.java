@@ -18,7 +18,6 @@ package gwt.jelement.clipboard;
 
 import gwt.jelement.events.EventTarget;
 import elemental2.promise.Promise;
-import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
@@ -26,11 +25,6 @@ import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="Clipboard", isNative = true)
 public class Clipboard extends EventTarget{
-    @JsConstructor
-    public Clipboard(){
-        super();
-    }
-    
     @JsMethod(name = "read")
     public native Promise<DataTransfer> read();
     

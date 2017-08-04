@@ -16,25 +16,19 @@
  */
 package gwt.jelement.imagecapture;
 
-import gwt.jelement.core.JsObject;
-import jsinterop.annotations.JsConstructor;
+import gwt.jelement.core.IsObject;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="PhotoCapabilities", isNative = true)
-public class PhotoCapabilities extends JsObject{
+public class PhotoCapabilities extends IsObject{
     @JsProperty(name="redEyeReduction")
     private String redEyeReduction;
     
     @JsProperty(name="fillLightMode")
     private String[] fillLightMode;
-    
-    @JsConstructor
-    public PhotoCapabilities(){
-        super();
-    }
     
     @JsProperty(name="imageHeight")
     public native MediaSettingsRange getImageHeight();

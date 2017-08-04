@@ -16,7 +16,6 @@
  */
 package gwt.jelement.svg;
 
-import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -30,11 +29,6 @@ public class SVGFEBlendElement extends SVGElement{
     public static short SVG_FEBLEND_MODE_SCREEN; /* 3 */
     public static short SVG_FEBLEND_MODE_DARKEN; /* 4 */
     public static short SVG_FEBLEND_MODE_LIGHTEN; /* 5 */
-    
-    @JsConstructor
-    public SVGFEBlendElement(){
-        super();
-    }
     
     @JsProperty(name="in1")
     public native SVGAnimatedString getIn1();

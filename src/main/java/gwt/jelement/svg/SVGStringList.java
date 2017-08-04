@@ -16,8 +16,8 @@
  */
 package gwt.jelement.svg;
 
-import gwt.jelement.core.JsObject;
-import jsinterop.annotations.JsConstructor;
+import gwt.jelement.core.ArrayLike;
+import gwt.jelement.core.Js;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
@@ -25,12 +25,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="SVGStringList", isNative = true)
-public class SVGStringList extends JsObject{
-    @JsConstructor
-    public SVGStringList(){
-        super();
-    }
-    
+public class SVGStringList extends ArrayLike{
     @JsProperty(name="numberOfItems")
     public native double getNumberOfItems();
     
@@ -39,6 +34,9 @@ public class SVGStringList extends JsObject{
     
     @JsMethod(name = "clear")
     public native void clear();
+    
+    @JsMethod(name = "getItem")
+    public native String getItem(double index);
     
     @JsMethod(name = "initialize")
     public native String initialize(String newItem);
@@ -51,5 +49,10 @@ public class SVGStringList extends JsObject{
     
     @JsMethod(name = "replaceItem")
     public native String replaceItem(String newItem, double index);
+    
+    @JsOverlay
+    public final void set(double index, String newItem){
+        Js.<String>set(this.object(), index, newItem);
+    }
     
 }

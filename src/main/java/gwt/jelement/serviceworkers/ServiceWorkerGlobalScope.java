@@ -19,7 +19,6 @@ package gwt.jelement.serviceworkers;
 import gwt.jelement.events.EventHandlerNonNull;
 import gwt.jelement.workers.WorkerGlobalScope;
 import elemental2.promise.Promise;
-import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
@@ -66,11 +65,6 @@ public class ServiceWorkerGlobalScope extends WorkerGlobalScope{
     
     @JsProperty(name="onpush")
     private EventHandlerNonNull onpush;
-    
-    @JsConstructor
-    public ServiceWorkerGlobalScope(){
-        super();
-    }
     
     @JsProperty(name="clients")
     public native Clients getClients();

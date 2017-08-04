@@ -19,7 +19,6 @@ package gwt.jelement.css;
 import gwt.jelement.events.EventHandlerNonNull;
 import gwt.jelement.events.EventListener;
 import gwt.jelement.events.EventTarget;
-import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
@@ -30,11 +29,6 @@ import jsinterop.annotations.JsType;
 public class MediaQueryList extends EventTarget{
     @JsProperty(name="onchange")
     private EventHandlerNonNull onchange;
-    
-    @JsConstructor
-    public MediaQueryList(){
-        super();
-    }
     
     @JsProperty(name="media")
     public native String getMedia();

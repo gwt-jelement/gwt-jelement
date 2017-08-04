@@ -16,11 +16,10 @@
  */
 package gwt.jelement.clipboard;
 
-import gwt.jelement.core.JsObject;
+import gwt.jelement.core.IsObject;
 import gwt.jelement.dom.FunctionStringCallback;
 import gwt.jelement.fileapi.File;
 import gwt.jelement.filesystem.Entry;
-import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
@@ -28,12 +27,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="DataTransferItem", isNative = true)
-public class DataTransferItem extends JsObject{
-    @JsConstructor
-    public DataTransferItem(){
-        super();
-    }
-    
+public class DataTransferItem extends IsObject{
     @JsProperty(name="kind")
     public native String getKind();
     

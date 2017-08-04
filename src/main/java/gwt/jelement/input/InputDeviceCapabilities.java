@@ -16,7 +16,7 @@
  */
 package gwt.jelement.input;
 
-import gwt.jelement.core.JsObject;
+import gwt.jelement.core.IsObject;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
@@ -24,7 +24,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="InputDeviceCapabilities", isNative = true)
-public class InputDeviceCapabilities extends JsObject{
+public class InputDeviceCapabilities extends IsObject{
     @JsConstructor
     public InputDeviceCapabilities(){
         super();

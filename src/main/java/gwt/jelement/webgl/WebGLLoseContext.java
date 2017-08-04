@@ -16,20 +16,14 @@
  */
 package gwt.jelement.webgl;
 
-import gwt.jelement.core.JsObject;
-import jsinterop.annotations.JsConstructor;
+import gwt.jelement.core.IsObject;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="WebGLLoseContext", isNative = true)
-public class WebGLLoseContext extends JsObject{
-    @JsConstructor
-    public WebGLLoseContext(){
-        super();
-    }
-    
+public class WebGLLoseContext extends IsObject{
     @JsMethod(name = "loseContext")
     public native void loseContext();
     

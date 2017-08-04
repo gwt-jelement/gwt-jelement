@@ -17,7 +17,6 @@
 package gwt.jelement.dom;
 
 import gwt.jelement.events.EventTarget;
-import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
@@ -44,11 +43,6 @@ public class Node extends EventTarget{
     public static short DOCUMENT_POSITION_CONTAINS; /* 0x08 */
     public static short DOCUMENT_POSITION_CONTAINED_BY; /* 0x10 */
     public static short DOCUMENT_POSITION_IMPLEMENTATION_SPECIFIC; /* 0x20 */
-    
-    @JsConstructor
-    public Node(){
-        super();
-    }
     
     @JsProperty(name="nodeType")
     public native short getNodeType();

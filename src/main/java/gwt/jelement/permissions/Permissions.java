@@ -16,21 +16,15 @@
  */
 package gwt.jelement.permissions;
 
-import gwt.jelement.core.JsObject;
+import gwt.jelement.core.IsObject;
 import elemental2.promise.Promise;
-import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="Permissions", isNative = true)
-public class Permissions extends JsObject{
-    @JsConstructor
-    public Permissions(){
-        super();
-    }
-    
+public class Permissions extends IsObject{
     @JsMethod(name = "query")
     public native Promise<PermissionStatus> query(Object permission);
     

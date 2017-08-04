@@ -16,7 +16,6 @@
  */
 package gwt.jelement.svg;
 
-import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -30,11 +29,6 @@ public class SVGTextPathElement extends SVGTextContentElement{
     public static short TEXTPATH_SPACINGTYPE_UNKNOWN; /* 0 */
     public static short TEXTPATH_SPACINGTYPE_AUTO; /* 1 */
     public static short TEXTPATH_SPACINGTYPE_EXACT; /* 2 */
-    
-    @JsConstructor
-    public SVGTextPathElement(){
-        super();
-    }
     
     @JsProperty(name="startOffset")
     public native SVGAnimatedLength getStartOffset();

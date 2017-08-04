@@ -37,7 +37,6 @@ import gwt.jelement.offscreencanvas.OffscreenCanvas;
 import gwt.jelement.svg.SVGImageElement;
 import gwt.jelement.timing.WorkerPerformance;
 import elemental2.promise.Promise;
-import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
@@ -57,11 +56,6 @@ public class WorkerGlobalScope extends EventTarget{
     
     @JsProperty(name="addressSpace")
     private String addressSpace;
-    
-    @JsConstructor
-    public WorkerGlobalScope(){
-        super();
-    }
     
     @JsProperty(name="self")
     public native WorkerGlobalScope getSelf();

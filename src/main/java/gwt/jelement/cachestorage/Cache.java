@@ -16,23 +16,18 @@
  */
 package gwt.jelement.cachestorage;
 
-import gwt.jelement.core.JsObject;
+import gwt.jelement.core.Array;
+import gwt.jelement.core.IsObject;
 import gwt.jelement.fetch.Request;
 import gwt.jelement.fetch.Response;
 import elemental2.promise.Promise;
-import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="Cache", isNative = true)
-public class Cache extends JsObject{
-    @JsConstructor
-    public Cache(){
-        super();
-    }
-    
+public class Cache extends IsObject{
     @JsMethod(name = "add")
     public native Promise<Void> add(Request request);
     
@@ -45,17 +40,20 @@ public class Cache extends JsObject{
     @JsMethod(name = "addAll")
     public native Promise<Void> addAll(String[] requests);
     
-    @JsMethod(name = "delete")
-    public native Promise<Boolean> deleteFunction(Request request);
+    @JsMethod(name = "addAll")
+    public native Promise<Void> addAll(Array requests);
     
     @JsMethod(name = "delete")
-    public native Promise<Boolean> deleteFunction(String request);
+    public native Promise<Boolean> delete(Request request);
     
     @JsMethod(name = "delete")
-    public native Promise<Boolean> deleteFunction(Request request, CacheQueryOptions options);
+    public native Promise<Boolean> delete(String request);
     
     @JsMethod(name = "delete")
-    public native Promise<Boolean> deleteFunction(String request, CacheQueryOptions options);
+    public native Promise<Boolean> delete(Request request, CacheQueryOptions options);
+    
+    @JsMethod(name = "delete")
+    public native Promise<Boolean> delete(String request, CacheQueryOptions options);
     
     @JsMethod(name = "keys")
     public native Promise<Request[]> keys();

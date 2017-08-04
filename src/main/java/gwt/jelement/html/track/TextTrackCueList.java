@@ -16,20 +16,14 @@
  */
 package gwt.jelement.html.track;
 
-import gwt.jelement.core.JsObject;
-import jsinterop.annotations.JsConstructor;
+import gwt.jelement.core.ArrayLike;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="TextTrackCueList", isNative = true)
-public class TextTrackCueList extends JsObject{
-    @JsConstructor
-    public TextTrackCueList(){
-        super();
-    }
-    
+public class TextTrackCueList extends ArrayLike{
     @JsMethod(name = "getCueById")
     public native TextTrackCue getCueById(String id);
     

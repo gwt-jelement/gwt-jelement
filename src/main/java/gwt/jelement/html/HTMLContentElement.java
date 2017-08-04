@@ -17,7 +17,6 @@
 package gwt.jelement.html;
 
 import gwt.jelement.dom.NodeList;
-import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
@@ -26,11 +25,6 @@ import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="HTMLContentElement", isNative = true)
 public class HTMLContentElement extends HTMLElement{
-    @JsConstructor
-    public HTMLContentElement(){
-        super();
-    }
-    
     @JsProperty(name="select")
     public native String getSelect();
     

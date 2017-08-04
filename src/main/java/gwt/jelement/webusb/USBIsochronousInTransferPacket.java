@@ -17,7 +17,7 @@
 package gwt.jelement.webusb;
 
 import gwt.jelement.core.DataView;
-import gwt.jelement.core.JsObject;
+import gwt.jelement.core.IsObject;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
@@ -25,7 +25,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="USBIsochronousInTransferPacket", isNative = true)
-public class USBIsochronousInTransferPacket extends JsObject{
+public class USBIsochronousInTransferPacket extends IsObject{
     @JsProperty(name="status")
     private String status;
     

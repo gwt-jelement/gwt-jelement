@@ -16,7 +16,7 @@
  */
 package gwt.jelement.webusb;
 
-import gwt.jelement.core.JsObject;
+import gwt.jelement.core.IsObject;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
@@ -24,7 +24,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="USBConfiguration", isNative = true)
-public class USBConfiguration extends JsObject{
+public class USBConfiguration extends IsObject{
     @JsConstructor
     public USBConfiguration(USBDevice device, byte configurationValue){
         super();

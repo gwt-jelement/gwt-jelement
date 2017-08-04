@@ -16,21 +16,18 @@
  */
 package gwt.jelement.html;
 
-import jsinterop.annotations.JsConstructor;
+import gwt.jelement.core.Js;
+import gwt.jelement.dom.Element;
+import gwt.jelement.dom.Node;
+import gwt.jelement.dom.NodeList;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
-import jsinterop.base.Js;
 
 @JsType(namespace = JsPackage.GLOBAL, name="HTMLOptionsCollection", isNative = true)
-public class HTMLOptionsCollection extends HTMLCollection{
-    @JsConstructor
-    public HTMLOptionsCollection(){
-        super();
-    }
-    
+public class HTMLOptionsCollection extends HTMLBaseCollection<Node, HTMLAllCollection.HTMLOptionsUnion>{
     @JsProperty(name="selectedIndex")
     public native double getSelectedIndex();
     
@@ -60,5 +57,10 @@ public class HTMLOptionsCollection extends HTMLCollection{
     
     @JsMethod(name = "remove")
     public native void remove(double index);
+    
+    @JsOverlay
+    public final void set(double index, HTMLOptionElement option){
+        Js.<HTMLOptionElement>set(this.object(), index, option);
+    }
     
 }

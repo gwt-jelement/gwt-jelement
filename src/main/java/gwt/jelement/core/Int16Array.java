@@ -57,8 +57,18 @@ public class Int16Array extends ArrayBufferView{
         super();
     }
     
+    @JsConstructor
+    public Int16Array(Array array){
+        super();
+    }
+    
     @JsProperty(name="length")
     public native double getLength();
+    
+    @JsOverlay
+    public final short get(double index){
+        return Js.getShort(this.object(), index);
+    }
     
     @JsMethod(name = "set")
     public native void set(Int16Array array);
@@ -67,10 +77,21 @@ public class Int16Array extends ArrayBufferView{
     public native void set(short[] array);
     
     @JsMethod(name = "set")
+    public native void set(Array array);
+    
+    @JsMethod(name = "set")
     public native void set(Int16Array array, double offset);
     
     @JsMethod(name = "set")
     public native void set(short[] array, double offset);
+    
+    @JsOverlay
+    public final void set(double index, short value){
+        Js.set(this.object(), index, value);
+    }
+    
+    @JsMethod(name = "set")
+    public native void set(Array array, double offset);
     
     @JsMethod(name = "subarray")
     public native Int16Array subarray(double begin);

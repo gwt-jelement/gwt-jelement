@@ -16,9 +16,8 @@
  */
 package gwt.jelement.peerconnection;
 
-import gwt.jelement.core.JsObject;
+import gwt.jelement.core.IsObject;
 import gwt.jelement.mediastream.MediaStreamTrack;
-import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
@@ -26,12 +25,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="RTCRtpReceiver", isNative = true)
-public class RTCRtpReceiver extends JsObject{
-    @JsConstructor
-    public RTCRtpReceiver(){
-        super();
-    }
-    
+public class RTCRtpReceiver extends IsObject{
     @JsProperty(name="track")
     public native MediaStreamTrack getTrack();
     

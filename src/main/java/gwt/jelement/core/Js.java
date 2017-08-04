@@ -59,81 +59,82 @@ public class Js {
         return object;
     }-*/;
 
-    public static <T> JsObject<T> with(JsObject<T> object, String key, long value){
+    public static <T> JsObject<T> with(JsObject<T> object, String key, long value) {
         return with(object, key, (double) value);
-    };
-
-    public static native <T> void set(JsObject<T> object, String propertyName, T value) /*-{
-        object[propertyName] = value;
-    }-*/;
-
-    public static native void set(JsObject object, String propertyName, boolean value) /*-{
-        object[propertyName] = value;
-    }-*/;
-
-    public static native void set(JsObject object, String propertyName, char value) /*-{
-        object[propertyName] = value;
-    }-*/;
-
-    public static native void set(JsObject object, String propertyName, byte value) /*-{
-        object[propertyName] = value;
-    }-*/;
-
-    public static native void set(JsObject object, String propertyName, short value) /*-{
-        object[propertyName] = value;
-    }-*/;
-
-    public static native void set(JsObject object, String propertyName, int value) /*-{
-        object[propertyName] = value;
-    }-*/;
-
-    public static native void set(JsObject object, String propertyName, float value) /*-{
-        object[propertyName] = value;
-    }-*/;
-
-    public static native void set(JsObject object, String propertyName, double value) /*-{
-        object[propertyName] = value;
-    }-*/;
-
-    public static void set(JsObject object, String propertyName, long value) {
-        set(object, propertyName, (double) value);
     }
 
-    public static native <T> void set(JsObject<T> object, double index, T value) /*-{
-        object[index] = value;
+    public static native <T> T set(JsObject<T> object, String propertyName, T value) /*-{
+        return object[propertyName] = value;
     }-*/;
 
-    public static native <T> void set(JsObject<T> object, double index, boolean value) /*-{
-        object[index] = value;
+    public static native <T> T set(JsObject<T> object, double index, T value) /*-{
+        return object[index] = value;
     }-*/;
 
-    public static native <T> void set(JsObject<T> object, double index, char value) /*-{
-        object[index] = value;
+    public static native boolean set(JsObject object, String propertyName, boolean value) /*-{
+        return object[propertyName] = value;
     }-*/;
 
-    public static native <T> void set(JsObject<T> object, double index, byte value) /*-{
-        object[index] = value;
+    public static native <T> boolean set(JsObject<T> object, double index, boolean value) /*-{
+        return object[index] = value;
     }-*/;
 
-    public static native <T> void set(JsObject<T> object, double index, short value) /*-{
-        object[index] = value;
+    public static native char set(JsObject object, String propertyName, char value) /*-{
+        return object[propertyName] = value;
     }-*/;
 
-    public static native <T> void set(JsObject<T> object, double index, int value) /*-{
-        object[index] = value;
+    public static native <T> char set(JsObject<T> object, double index, char value) /*-{
+        return object[index] = value;
     }-*/;
 
-    public static native <T> void set(JsObject<T> object, double index, float value) /*-{
-        object[index] = value;
+    public static native byte set(JsObject object, String propertyName, byte value) /*-{
+        return object[propertyName] = value;
     }-*/;
 
-    public static native <T> void set(JsObject<T> object, double index, double value) /*-{
-        object[index] = value;
+    public static native <T> byte set(JsObject<T> object, double index, byte value) /*-{
+        return object[index] = value;
     }-*/;
 
-    public static void set(JsObject object, double index, long value) {
-        set(object, index, (double) value);
+    public static native short set(JsObject object, String propertyName, short value) /*-{
+        return object[propertyName] = value;
+    }-*/;
+
+    public static native <T> short set(JsObject<T> object, double index, short value) /*-{
+        return object[index] = value;
+    }-*/;
+
+    public static native int set(JsObject object, String propertyName, int value) /*-{
+        return object[propertyName] = value;
+    }-*/;
+
+    public static native <T> int set(JsObject<T> object, double index, int value) /*-{
+        return object[index] = value;
+    }-*/;
+
+    public static native float set(JsObject object, String propertyName, float value) /*-{
+        return object[propertyName] = value;
+    }-*/;
+
+    public static native <T> float set(JsObject<T> object, double index, float value) /*-{
+        return object[index] = value;
+    }-*/;
+
+    public static native double set(JsObject object, String propertyName, double value) /*-{
+        return object[propertyName] = value;
+    }-*/;
+
+    public static native <T> double set(JsObject<T> object, double index, double value) /*-{
+        return object[index] = value;
+    }-*/;
+
+    public static long set(JsObject object, String propertyName, long value) {
+        return (long) set(object, propertyName, (double) value);
     }
+
+    public static long set(JsObject object, double index, long value) {
+        return (long) set(object, index, (double) value);
+    }
+
 
     public static native <T> T get(JsObject<T> object, String propertyName) /*-{
         return object[propertyName];
@@ -199,6 +200,7 @@ public class Js {
         return object[index];
     }-*/;
 
+
     public static long getLong(JsObject object, String propertyName) {
         return (long) getDouble(object, propertyName);
     }
@@ -215,12 +217,12 @@ public class Js {
         return index in object;
     }-*/;
 
-    public static native <T> void delete(JsObject<T> object, String propertyName) /*-{
-        delete object[propertyName];
+    public static native <T> boolean delete(JsObject<T> object, String propertyName) /*-{
+        return delete object[propertyName];
     }-*/;
 
-    public static native <T> void delete(JsObject<T> object, double index) /*-{
-        delete object[index];
+    public static native <T> boolean delete(JsObject<T> object, double index) /*-{
+        return delete object[index];
     }-*/;
 
     public static native boolean isTrue(Object object)/*-{
@@ -243,4 +245,21 @@ public class Js {
         return object1 === object2;
     }-*/;
 
+    public static final <T> T cast(Object object){
+        return (T) object;
+    }
+
+    public static native boolean isUndefined(JsObject object, double index) /*-{
+        return object[index] === undefined;
+    }-*/;
+
+    public static native void call(JsObject object, Object value) /*-{
+        object(value);
+    }-*/;
+
+    public static native void call(JsObject object, double value) /*-{
+        object(value);
+    }-*/;
+
 }
+

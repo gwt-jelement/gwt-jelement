@@ -16,8 +16,10 @@
  */
 package gwt.jelement.html;
 
+import gwt.jelement.core.Js;
 import gwt.jelement.events.EventHandlerNonNull;
-import jsinterop.annotations.JsConstructor;
+import gwt.jelement.frame.Window;
+import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -69,11 +71,6 @@ public class HTMLFrameSetElement extends HTMLElement{
     
     @JsProperty(name="onunload")
     private EventHandlerNonNull onunload;
-    
-    @JsConstructor
-    public HTMLFrameSetElement(){
-        super();
-    }
     
     @JsProperty(name="cols")
     public native String getCols();
@@ -235,6 +232,11 @@ public class HTMLFrameSetElement extends HTMLElement{
     @JsOverlay
     public final void setOnUnload(EventHandlerNonNull onunload){
         this.onunload = onunload;
+    }
+    
+    @JsOverlay
+    public final Window get(String name){
+        return (Window) Js.get(this.object(), name);
     }
     
 }

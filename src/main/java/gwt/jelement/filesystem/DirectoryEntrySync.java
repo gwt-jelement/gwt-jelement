@@ -16,7 +16,6 @@
  */
 package gwt.jelement.filesystem;
 
-import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
@@ -24,11 +23,6 @@ import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="DirectoryEntrySync", isNative = true)
 public class DirectoryEntrySync extends EntrySync{
-    @JsConstructor
-    public DirectoryEntrySync(){
-        super();
-    }
-    
     @JsMethod(name = "createReader")
     public native DirectoryReaderSync createReader();
     

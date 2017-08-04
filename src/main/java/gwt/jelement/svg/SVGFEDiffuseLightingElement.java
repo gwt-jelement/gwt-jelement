@@ -16,7 +16,6 @@
  */
 package gwt.jelement.svg;
 
-import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -24,11 +23,6 @@ import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="SVGFEDiffuseLightingElement", isNative = true)
 public class SVGFEDiffuseLightingElement extends SVGElement{
-    @JsConstructor
-    public SVGFEDiffuseLightingElement(){
-        super();
-    }
-    
     @JsProperty(name="in1")
     public native SVGAnimatedString getIn1();
     

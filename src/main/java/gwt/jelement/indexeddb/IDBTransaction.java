@@ -20,7 +20,6 @@ import gwt.jelement.dom.DOMException;
 import gwt.jelement.dom.DOMStringList;
 import gwt.jelement.events.EventHandlerNonNull;
 import gwt.jelement.events.EventTarget;
-import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
@@ -40,11 +39,6 @@ public class IDBTransaction extends EventTarget{
     
     @JsProperty(name="mode")
     private String mode;
-    
-    @JsConstructor
-    public IDBTransaction(){
-        super();
-    }
     
     @JsProperty(name="objectStoreNames")
     public native DOMStringList getObjectStoreNames();

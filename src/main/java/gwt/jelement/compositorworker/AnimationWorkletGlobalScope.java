@@ -18,7 +18,6 @@ package gwt.jelement.compositorworker;
 
 import gwt.jelement.core.Function;
 import gwt.jelement.workers.WorkletGlobalScope;
-import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
@@ -26,11 +25,6 @@ import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="AnimationWorkletGlobalScope", isNative = true)
 public class AnimationWorkletGlobalScope extends WorkletGlobalScope{
-    @JsConstructor
-    public AnimationWorkletGlobalScope(){
-        super();
-    }
-    
     @JsMethod(name = "registerAnimator")
     public native void registerAnimator(String name, Function animatorConstructor);
     

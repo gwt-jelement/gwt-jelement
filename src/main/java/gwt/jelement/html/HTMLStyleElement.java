@@ -17,7 +17,6 @@
 package gwt.jelement.html;
 
 import gwt.jelement.css.StyleSheet;
-import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -25,11 +24,6 @@ import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="HTMLStyleElement", isNative = true)
 public class HTMLStyleElement extends HTMLElement{
-    @JsConstructor
-    public HTMLStyleElement(){
-        super();
-    }
-    
     @JsProperty(name="disabled")
     public native boolean getDisabled();
     

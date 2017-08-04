@@ -16,7 +16,6 @@
  */
 package gwt.jelement.svg;
 
-import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -24,11 +23,6 @@ import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="SVGPolygonElement", isNative = true)
 public class SVGPolygonElement extends SVGGeometryElement{
-    @JsConstructor
-    public SVGPolygonElement(){
-        super();
-    }
-    
     @JsProperty(name="points")
     public native SVGPointList getPoints();
     

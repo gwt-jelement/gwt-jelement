@@ -16,22 +16,16 @@
  */
 package gwt.jelement.mediastream;
 
-import gwt.jelement.core.JsObject;
-import jsinterop.annotations.JsConstructor;
+import gwt.jelement.core.IsObject;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="MediaDeviceInfo", isNative = true)
-public class MediaDeviceInfo extends JsObject{
+public class MediaDeviceInfo extends IsObject{
     @JsProperty(name="kind")
     private String kind;
-    
-    @JsConstructor
-    public MediaDeviceInfo(){
-        super();
-    }
     
     @JsProperty(name="deviceId")
     public native String getDeviceId();

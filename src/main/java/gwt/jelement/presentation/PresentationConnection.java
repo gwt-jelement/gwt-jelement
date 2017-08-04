@@ -22,7 +22,6 @@ import gwt.jelement.events.EventHandlerNonNull;
 import gwt.jelement.events.EventTarget;
 import gwt.jelement.fileapi.Blob;
 import gwt.jelement.websockets.BinaryType;
-import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
@@ -48,11 +47,6 @@ public class PresentationConnection extends EventTarget{
     
     @JsProperty(name="binaryType")
     private String binaryType;
-    
-    @JsConstructor
-    public PresentationConnection(){
-        super();
-    }
     
     @JsProperty(name="id")
     public native String getId();

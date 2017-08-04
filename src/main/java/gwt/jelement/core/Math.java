@@ -16,14 +16,13 @@
  */
 package gwt.jelement.core;
 
-import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="Math", isNative = true)
-public class Math extends JsObject{
+public class Math extends IsObject{
     public static double E; /* 2.718281828459045 */
     public static double LN2; /* 0.6931471805599453 */
     public static double LN10; /* 2.302585092994046 */
@@ -32,11 +31,6 @@ public class Math extends JsObject{
     public static double PI; /* 3.141592653589793 */
     public static double SQRT1_2; /* 0.7071067811865476 */
     public static double SQRT2; /* 1.4142135623730951 */
-    
-    @JsConstructor
-    public Math(){
-        super();
-    }
     
     @JsMethod(name = "abs")
     public static native double abs(double x);

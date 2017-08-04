@@ -16,17 +16,21 @@
  */
 package gwt.jelement.css;
 
-import gwt.jelement.core.JsObject;
-import jsinterop.annotations.JsConstructor;
+import gwt.jelement.core.ArrayLike;
+import gwt.jelement.core.Js;
+import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="StyleSheetList", isNative = true)
-public class StyleSheetList extends JsObject{
-    @JsConstructor
-    public StyleSheetList(){
-        super();
+public class StyleSheetList extends ArrayLike{
+    @JsOverlay
+    public final CSSStyleSheet get(String name){
+        return (CSSStyleSheet) Js.get(this.object(), name);
     }
+    
+    @JsMethod(name = "item")
+    public native StyleSheet item(double index);
     
 }

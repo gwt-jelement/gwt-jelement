@@ -16,17 +16,11 @@
  */
 package gwt.jelement.webgl;
 
-import gwt.jelement.core.JsObject;
-import jsinterop.annotations.JsConstructor;
+import gwt.jelement.core.IsObject;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="WebGLVertexArrayObject", isNative = true)
-public class WebGLVertexArrayObject extends JsObject{
-    @JsConstructor
-    public WebGLVertexArrayObject(){
-        super();
-    }
-    
+public class WebGLVertexArrayObject extends IsObject{
 }

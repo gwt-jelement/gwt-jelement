@@ -16,20 +16,14 @@
  */
 package gwt.jelement.css.cssom;
 
-import gwt.jelement.core.JsObject;
-import jsinterop.annotations.JsConstructor;
+import gwt.jelement.core.IsObject;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="CSSTransformComponent", isNative = true)
-public class CSSTransformComponent extends JsObject{
-    @JsConstructor
-    public CSSTransformComponent(){
-        super();
-    }
-    
+public class CSSTransformComponent extends IsObject{
     @JsProperty(name="is2D")
     public native boolean getIs2D();
     

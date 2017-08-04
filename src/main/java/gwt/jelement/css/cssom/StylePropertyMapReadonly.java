@@ -16,24 +16,24 @@
  */
 package gwt.jelement.css.cssom;
 
-import gwt.jelement.core.JsObject;
-import jsinterop.annotations.JsConstructor;
+import gwt.jelement.core.IsObject;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="StylePropertyMapReadonly", isNative = true)
-public class StylePropertyMapReadonly extends JsObject<CSSStyleValue>{
-    @JsConstructor
-    public StylePropertyMapReadonly(){
-        super();
-    }
+public class StylePropertyMapReadonly extends IsObject{
+    @JsMethod(name = "get")
+    public native CSSStyleValue get(String property);
     
     @JsMethod(name = "getAll")
     public native CSSStyleValue[] getAll(String property);
     
     @JsMethod(name = "getProperties")
     public native String[] getProperties();
+    
+    @JsMethod(name = "has")
+    public native boolean has(String property);
     
 }

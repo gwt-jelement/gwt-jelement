@@ -16,7 +16,7 @@
  */
 package gwt.jelement.html.track.vtt;
 
-import gwt.jelement.core.JsObject;
+import gwt.jelement.core.IsObject;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
@@ -24,7 +24,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="VTTRegion", isNative = true)
-public class VTTRegion extends JsObject{
+public class VTTRegion extends IsObject{
     @JsProperty(name="scroll")
     private String scroll;
     

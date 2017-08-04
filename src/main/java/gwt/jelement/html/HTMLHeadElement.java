@@ -16,16 +16,10 @@
  */
 package gwt.jelement.html;
 
-import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="HTMLHeadElement", isNative = true)
 public class HTMLHeadElement extends HTMLElement{
-    @JsConstructor
-    public HTMLHeadElement(){
-        super();
-    }
-    
 }

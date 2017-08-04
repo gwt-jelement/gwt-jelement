@@ -18,7 +18,6 @@ package gwt.jelement.permissions;
 
 import gwt.jelement.events.EventHandlerNonNull;
 import gwt.jelement.events.EventTarget;
-import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -31,11 +30,6 @@ public class PermissionStatus extends EventTarget{
     
     @JsProperty(name="state")
     private String state;
-    
-    @JsConstructor
-    public PermissionStatus(){
-        super();
-    }
     
     @JsOverlay
     public final EventHandlerNonNull getOnChange(){

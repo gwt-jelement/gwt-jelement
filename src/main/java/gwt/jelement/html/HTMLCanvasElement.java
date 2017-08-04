@@ -17,6 +17,7 @@
 package gwt.jelement.html;
 
 import gwt.jelement.canvas2d.CanvasRenderingContext2D;
+import gwt.jelement.core.Js;
 import gwt.jelement.fileapi.BlobCallback;
 import gwt.jelement.html.canvas.CanvasContextCreationAttributes;
 import gwt.jelement.imagebitmap.ImageBitmapRenderingContext;
@@ -24,13 +25,11 @@ import gwt.jelement.mediastream.MediaStream;
 import gwt.jelement.offscreencanvas.OffscreenCanvas;
 import gwt.jelement.webgl.WebGL2RenderingContext;
 import gwt.jelement.webgl.WebGLRenderingContext;
-import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
-import jsinterop.base.Js;
 
 @JsType(namespace = JsPackage.GLOBAL, name="HTMLCanvasElement", isNative = true)
 public class HTMLCanvasElement extends HTMLElement{
@@ -96,11 +95,6 @@ public class HTMLCanvasElement extends HTMLElement{
             return (Object) this instanceof ImageBitmapRenderingContext;
         }
     
-    }
-    
-    @JsConstructor
-    public HTMLCanvasElement(){
-        super();
     }
     
     @JsProperty(name="width")

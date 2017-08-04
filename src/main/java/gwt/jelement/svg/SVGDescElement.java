@@ -16,16 +16,10 @@
  */
 package gwt.jelement.svg;
 
-import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="SVGDescElement", isNative = true)
 public class SVGDescElement extends SVGElement{
-    @JsConstructor
-    public SVGDescElement(){
-        super();
-    }
-    
 }

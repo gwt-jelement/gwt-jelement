@@ -16,8 +16,8 @@
  */
 package gwt.jelement.plugins;
 
-import gwt.jelement.core.JsObject;
-import jsinterop.annotations.JsConstructor;
+import gwt.jelement.core.ArrayLike;
+import gwt.jelement.core.Js;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
@@ -25,17 +25,23 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="Plugin", isNative = true)
-public class Plugin extends JsObject{
-    @JsConstructor
-    public Plugin(){
-        super();
-    }
+public class Plugin extends ArrayLike{
+    @JsProperty(name="name")
+    public native String getName();
     
     @JsProperty(name="filename")
     public native String getFilename();
     
     @JsProperty(name="description")
     public native String getDescription();
+    
+    @JsOverlay
+    public final MimeType get(String name){
+        return (MimeType) Js.get(this.object(), name);
+    }
+    
+    @JsMethod(name = "item")
+    public native MimeType item(double index);
     
     @JsMethod(name = "namedItem")
     public native MimeType namedItem(String name);

@@ -16,20 +16,14 @@
  */
 package gwt.jelement.device_orientation;
 
-import gwt.jelement.core.JsObject;
-import jsinterop.annotations.JsConstructor;
+import gwt.jelement.core.IsObject;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="DeviceRotationRate", isNative = true)
-public class DeviceRotationRate extends JsObject{
-    @JsConstructor
-    public DeviceRotationRate(){
-        super();
-    }
-    
+public class DeviceRotationRate extends IsObject{
     @JsProperty(name="alpha")
     public native double getAlpha();
     

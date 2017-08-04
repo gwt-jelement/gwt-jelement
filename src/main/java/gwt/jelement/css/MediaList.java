@@ -16,8 +16,7 @@
  */
 package gwt.jelement.css;
 
-import gwt.jelement.core.JsObject;
-import jsinterop.annotations.JsConstructor;
+import gwt.jelement.core.ArrayLike;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
@@ -25,12 +24,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="MediaList", isNative = true)
-public class MediaList extends JsObject{
-    @JsConstructor
-    public MediaList(){
-        super();
-    }
-    
+public class MediaList extends ArrayLike{
     @JsProperty(name="mediaText")
     public native String getMediaText();
     
@@ -42,5 +36,8 @@ public class MediaList extends JsObject{
     
     @JsMethod(name = "deleteMedium")
     public native void deleteMedium(String medium);
+    
+    @JsMethod(name = "item")
+    public native String item(double index);
     
 }

@@ -17,7 +17,8 @@
 package gwt.jelement.html;
 
 import gwt.jelement.core.Float32Array;
-import gwt.jelement.core.JsObject;
+import gwt.jelement.core.IsObject;
+import gwt.jelement.core.Js;
 import gwt.jelement.core.Uint16Array;
 import gwt.jelement.core.Uint8ClampedArray;
 import jsinterop.annotations.JsConstructor;
@@ -26,10 +27,9 @@ import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
-import jsinterop.base.Js;
 
 @JsType(namespace = JsPackage.GLOBAL, name="ImageData", isNative = true)
-public class ImageData extends JsObject{
+public class ImageData extends IsObject{
     @JsType(isNative = true, name = "?", namespace = JsPackage.GLOBAL)
     public interface ImageDataArray {
         @JsOverlay

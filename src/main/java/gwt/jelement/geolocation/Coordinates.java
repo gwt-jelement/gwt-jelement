@@ -16,20 +16,14 @@
  */
 package gwt.jelement.geolocation;
 
-import gwt.jelement.core.JsObject;
-import jsinterop.annotations.JsConstructor;
+import gwt.jelement.core.IsObject;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="Coordinates", isNative = true)
-public class Coordinates extends JsObject{
-    @JsConstructor
-    public Coordinates(){
-        super();
-    }
-    
+public class Coordinates extends IsObject{
     @JsProperty(name="latitude")
     public native double getLatitude();
     

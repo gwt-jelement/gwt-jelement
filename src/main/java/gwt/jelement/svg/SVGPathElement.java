@@ -16,7 +16,6 @@
  */
 package gwt.jelement.svg;
 
-import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
@@ -24,11 +23,6 @@ import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="SVGPathElement", isNative = true)
 public class SVGPathElement extends SVGGeometryElement{
-    @JsConstructor
-    public SVGPathElement(){
-        super();
-    }
-    
     @JsMethod(name = "getPathSegAtLength")
     public native double getPathSegAtLength(double distance);
     

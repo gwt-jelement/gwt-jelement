@@ -16,11 +16,11 @@
  */
 package gwt.jelement.webusb;
 
+import gwt.jelement.core.Array;
 import gwt.jelement.core.ArrayBuffer;
 import gwt.jelement.core.ArrayBufferView;
-import gwt.jelement.core.JsObject;
+import gwt.jelement.core.IsObject;
 import elemental2.promise.Promise;
-import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
@@ -29,12 +29,7 @@ import jsinterop.annotations.JsType;
 import jsinterop.base.Any;
 
 @JsType(namespace = JsPackage.GLOBAL, name="USBDevice", isNative = true)
-public class USBDevice extends JsObject{
-    @JsConstructor
-    public USBDevice(){
-        super();
-    }
-    
+public class USBDevice extends IsObject{
     @JsProperty(name="usbVersionMajor")
     public native byte getUsbVersionMajor();
     
@@ -115,11 +110,20 @@ public class USBDevice extends JsObject{
     @JsMethod(name = "isochronousTransferIn")
     public native Promise<USBIsochronousInTransferResult> isochronousTransferIn(byte endpointNumber, double[] packetLengths);
     
+    @JsMethod(name = "isochronousTransferIn")
+    public native Promise<USBIsochronousInTransferResult> isochronousTransferIn(byte endpointNumber, Array packetLengths);
+    
     @JsMethod(name = "isochronousTransferOut")
     public native Promise<USBIsochronousOutTransferResult> isochronousTransferOut(byte endpointNumber, ArrayBuffer data, double[] packetLengths);
     
     @JsMethod(name = "isochronousTransferOut")
     public native Promise<USBIsochronousOutTransferResult> isochronousTransferOut(byte endpointNumber, ArrayBufferView data, double[] packetLengths);
+    
+    @JsMethod(name = "isochronousTransferOut")
+    public native Promise<USBIsochronousOutTransferResult> isochronousTransferOut(byte endpointNumber, ArrayBuffer data, Array packetLengths);
+    
+    @JsMethod(name = "isochronousTransferOut")
+    public native Promise<USBIsochronousOutTransferResult> isochronousTransferOut(byte endpointNumber, ArrayBufferView data, Array packetLengths);
     
     @JsMethod(name = "open")
     public native Promise<Void> open();

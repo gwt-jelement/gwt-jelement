@@ -17,7 +17,6 @@
 package gwt.jelement.frame;
 
 import gwt.jelement.events.EventTarget;
-import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -25,11 +24,6 @@ import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="VisualViewport", isNative = true)
 public class VisualViewport extends EventTarget{
-    @JsConstructor
-    public VisualViewport(){
-        super();
-    }
-    
     @JsProperty(name="offsetLeft")
     public native double getOffsetLeft();
     

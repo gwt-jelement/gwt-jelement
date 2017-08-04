@@ -17,11 +17,10 @@
 package gwt.jelement.fetch;
 
 import gwt.jelement.core.ArrayBuffer;
-import gwt.jelement.core.JsObject;
+import gwt.jelement.core.IsObject;
 import gwt.jelement.fileapi.Blob;
 import gwt.jelement.html.FormData;
 import elemental2.promise.Promise;
-import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
@@ -29,12 +28,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="Body", isNative = true)
-public class Body extends JsObject{
-    @JsConstructor
-    public Body(){
-        super();
-    }
-    
+public class Body extends IsObject{
     @JsProperty(name="bodyUsed")
     public native boolean getBodyUsed();
     

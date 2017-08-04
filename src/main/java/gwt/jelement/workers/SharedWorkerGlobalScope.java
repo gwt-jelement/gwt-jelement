@@ -22,7 +22,6 @@ import gwt.jelement.filesystem.EntryCallback;
 import gwt.jelement.filesystem.EntrySync;
 import gwt.jelement.filesystem.ErrorCallback;
 import gwt.jelement.filesystem.FileSystemCallback;
-import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
@@ -36,11 +35,6 @@ public class SharedWorkerGlobalScope extends WorkerGlobalScope{
     
     @JsProperty(name="onconnect")
     private EventHandlerNonNull onconnect;
-    
-    @JsConstructor
-    public SharedWorkerGlobalScope(){
-        super();
-    }
     
     @JsProperty(name="name")
     public native String getName();

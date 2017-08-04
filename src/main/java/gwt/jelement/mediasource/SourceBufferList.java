@@ -16,9 +16,10 @@
  */
 package gwt.jelement.mediasource;
 
+import gwt.jelement.core.Js;
 import gwt.jelement.events.EventHandlerNonNull;
 import gwt.jelement.events.EventTarget;
-import jsinterop.annotations.JsConstructor;
+import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -31,11 +32,6 @@ public class SourceBufferList extends EventTarget{
     
     @JsProperty(name="onremovesourcebuffer")
     private EventHandlerNonNull onremovesourcebuffer;
-    
-    @JsConstructor
-    public SourceBufferList(){
-        super();
-    }
     
     @JsProperty(name="length")
     public native double getLength();
@@ -58,6 +54,11 @@ public class SourceBufferList extends EventTarget{
     @JsOverlay
     public final void setOnRemovesourcebuffer(EventHandlerNonNull onremovesourcebuffer){
         this.onremovesourcebuffer = onremovesourcebuffer;
+    }
+    
+    @JsOverlay
+    public final SourceBuffer get(double index){
+        return (SourceBuffer) Js.get(this.object(), index);
     }
     
 }

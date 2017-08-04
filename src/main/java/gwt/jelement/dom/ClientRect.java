@@ -16,20 +16,14 @@
  */
 package gwt.jelement.dom;
 
-import gwt.jelement.core.JsObject;
-import jsinterop.annotations.JsConstructor;
+import gwt.jelement.core.IsObject;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="ClientRect", isNative = true)
-public class ClientRect extends JsObject{
-    @JsConstructor
-    public ClientRect(){
-        super();
-    }
-    
+public class ClientRect extends IsObject{
     @JsProperty(name="top")
     public native double getTop();
     

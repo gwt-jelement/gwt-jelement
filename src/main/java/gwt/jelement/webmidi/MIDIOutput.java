@@ -16,8 +16,8 @@
  */
 package gwt.jelement.webmidi;
 
+import gwt.jelement.core.Array;
 import gwt.jelement.core.Uint8Array;
-import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
@@ -25,11 +25,6 @@ import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="MIDIOutput", isNative = true)
 public class MIDIOutput extends MIDIPort{
-    @JsConstructor
-    public MIDIOutput(){
-        super();
-    }
-    
     @JsMethod(name = "send")
     public native void send(Uint8Array data);
     
@@ -37,9 +32,15 @@ public class MIDIOutput extends MIDIPort{
     public native void send(double[] data);
     
     @JsMethod(name = "send")
+    public native void send(Array data);
+    
+    @JsMethod(name = "send")
     public native void send(Uint8Array data, double timestamp);
     
     @JsMethod(name = "send")
     public native void send(double[] data, double timestamp);
+    
+    @JsMethod(name = "send")
+    public native void send(Array data, double timestamp);
     
 }

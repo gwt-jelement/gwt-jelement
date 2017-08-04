@@ -16,17 +16,11 @@
  */
 package gwt.jelement.webgl;
 
-import gwt.jelement.core.JsObject;
-import jsinterop.annotations.JsConstructor;
+import gwt.jelement.core.IsObject;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="WebGLQuery", isNative = true)
-public class WebGLQuery extends JsObject{
-    @JsConstructor
-    public WebGLQuery(){
-        super();
-    }
-    
+public class WebGLQuery extends IsObject{
 }

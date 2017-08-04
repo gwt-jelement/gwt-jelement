@@ -16,24 +16,21 @@
  */
 package gwt.jelement.webgl;
 
-import gwt.jelement.core.JsObject;
-import jsinterop.annotations.JsConstructor;
+import gwt.jelement.core.IsObject;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="WebGLActiveInfo", isNative = true)
-public class WebGLActiveInfo extends JsObject{
-    @JsConstructor
-    public WebGLActiveInfo(){
-        super();
-    }
-    
+public class WebGLActiveInfo extends IsObject{
     @JsProperty(name="size")
     public native double getSize();
     
     @JsProperty(name="type")
     public native double getType();
+    
+    @JsProperty(name="name")
+    public native String getName();
     
 }

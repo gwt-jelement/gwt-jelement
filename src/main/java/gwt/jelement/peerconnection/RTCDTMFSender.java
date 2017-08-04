@@ -19,7 +19,6 @@ package gwt.jelement.peerconnection;
 import gwt.jelement.events.EventHandlerNonNull;
 import gwt.jelement.events.EventTarget;
 import gwt.jelement.mediastream.MediaStreamTrack;
-import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
@@ -30,11 +29,6 @@ import jsinterop.annotations.JsType;
 public class RTCDTMFSender extends EventTarget{
     @JsProperty(name="ontonechange")
     private EventHandlerNonNull ontonechange;
-    
-    @JsConstructor
-    public RTCDTMFSender(){
-        super();
-    }
     
     @JsProperty(name="canInsertDTMF")
     public native boolean getCanInsertDTMF();

@@ -19,7 +19,6 @@ package gwt.jelement.serviceworkers;
 import gwt.jelement.dom.MessagePort;
 import gwt.jelement.events.EventHandlerNonNull;
 import gwt.jelement.events.EventTarget;
-import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
@@ -36,11 +35,6 @@ public class ServiceWorker extends EventTarget{
     
     @JsProperty(name="state")
     private String state;
-    
-    @JsConstructor
-    public ServiceWorker(){
-        super();
-    }
     
     @JsProperty(name="scriptURL")
     public native String getScriptURL();

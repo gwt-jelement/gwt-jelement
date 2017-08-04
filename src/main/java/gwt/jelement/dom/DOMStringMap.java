@@ -16,17 +16,28 @@
  */
 package gwt.jelement.dom;
 
-import gwt.jelement.core.JsObject;
-import jsinterop.annotations.JsConstructor;
+import gwt.jelement.core.IsObject;
+import gwt.jelement.core.Js;
+import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="DOMStringMap", isNative = true)
-public class DOMStringMap extends JsObject{
-    @JsConstructor
-    public DOMStringMap(){
-        super();
+public class DOMStringMap extends IsObject{
+    @JsOverlay
+    public final void delete(String name){
+        Js.delete(this.object(), name);
+    }
+    
+    @JsOverlay
+    public final String get(String name){
+        return (String) Js.get(this.object(), name);
+    }
+    
+    @JsOverlay
+    public final void set(String name, String value){
+        Js.<String>set(this.object(), name, value);
     }
     
 }

@@ -19,7 +19,6 @@ package gwt.jelement.screen_orientation;
 import gwt.jelement.events.EventHandlerNonNull;
 import gwt.jelement.events.EventTarget;
 import elemental2.promise.Promise;
-import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
@@ -31,11 +30,6 @@ import jsinterop.base.Any;
 public class ScreenOrientation extends EventTarget{
     @JsProperty(name="onchange")
     private EventHandlerNonNull onchange;
-    
-    @JsConstructor
-    public ScreenOrientation(){
-        super();
-    }
     
     @JsProperty(name="angle")
     public native short getAngle();

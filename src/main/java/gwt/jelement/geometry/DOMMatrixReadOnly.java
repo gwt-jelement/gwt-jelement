@@ -16,9 +16,10 @@
  */
 package gwt.jelement.geometry;
 
+import gwt.jelement.core.Array;
 import gwt.jelement.core.Float32Array;
 import gwt.jelement.core.Float64Array;
-import gwt.jelement.core.JsObject;
+import gwt.jelement.core.IsObject;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
@@ -27,7 +28,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="DOMMatrixReadOnly", isNative = true)
-public class DOMMatrixReadOnly extends JsObject{
+public class DOMMatrixReadOnly extends IsObject{
     @JsConstructor
     public DOMMatrixReadOnly(){
         super();
@@ -40,6 +41,11 @@ public class DOMMatrixReadOnly extends JsObject{
     
     @JsConstructor
     public DOMMatrixReadOnly(double[] init){
+        super();
+    }
+    
+    @JsConstructor
+    public DOMMatrixReadOnly(Array init){
         super();
     }
     

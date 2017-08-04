@@ -16,20 +16,14 @@
  */
 package gwt.jelement.dom;
 
-import gwt.jelement.core.JsObject;
-import jsinterop.annotations.JsConstructor;
+import gwt.jelement.core.IsObject;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="ResizeObserverEntry", isNative = true)
-public class ResizeObserverEntry extends JsObject{
-    @JsConstructor
-    public ResizeObserverEntry(){
-        super();
-    }
-    
+public class ResizeObserverEntry extends IsObject{
     @JsProperty(name="target")
     public native Element getTarget();
     

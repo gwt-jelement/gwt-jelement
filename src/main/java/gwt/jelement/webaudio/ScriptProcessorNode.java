@@ -17,7 +17,6 @@
 package gwt.jelement.webaudio;
 
 import gwt.jelement.events.EventHandlerNonNull;
-import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -27,11 +26,6 @@ import jsinterop.annotations.JsType;
 public class ScriptProcessorNode extends AudioNode{
     @JsProperty(name="onaudioprocess")
     private EventHandlerNonNull onaudioprocess;
-    
-    @JsConstructor
-    public ScriptProcessorNode(){
-        super();
-    }
     
     @JsOverlay
     public final EventHandlerNonNull getOnAudioprocess(){

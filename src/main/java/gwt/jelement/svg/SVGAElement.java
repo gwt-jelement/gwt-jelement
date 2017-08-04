@@ -16,7 +16,6 @@
  */
 package gwt.jelement.svg;
 
-import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -24,11 +23,6 @@ import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="SVGAElement", isNative = true)
 public class SVGAElement extends SVGGraphicsElement{
-    @JsConstructor
-    public SVGAElement(){
-        super();
-    }
-    
     @JsProperty(name="target")
     public native SVGAnimatedString getTarget();
     

@@ -19,7 +19,6 @@ package gwt.jelement.indexeddb;
 import gwt.jelement.dom.DOMException;
 import gwt.jelement.events.EventHandlerNonNull;
 import gwt.jelement.events.EventTarget;
-import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -35,11 +34,6 @@ public class IDBRequest extends EventTarget{
     
     @JsProperty(name="readyState")
     private String readyState;
-    
-    @JsConstructor
-    public IDBRequest(){
-        super();
-    }
     
     @JsProperty(name="result")
     public native Object getResult();

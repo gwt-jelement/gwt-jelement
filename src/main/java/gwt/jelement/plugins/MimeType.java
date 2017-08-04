@@ -16,20 +16,14 @@
  */
 package gwt.jelement.plugins;
 
-import gwt.jelement.core.JsObject;
-import jsinterop.annotations.JsConstructor;
+import gwt.jelement.core.IsObject;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="MimeType", isNative = true)
-public class MimeType extends JsObject{
-    @JsConstructor
-    public MimeType(){
-        super();
-    }
-    
+public class MimeType extends IsObject{
     @JsProperty(name="type")
     public native String getType();
     

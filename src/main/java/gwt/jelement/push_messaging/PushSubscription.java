@@ -17,9 +17,8 @@
 package gwt.jelement.push_messaging;
 
 import gwt.jelement.core.ArrayBuffer;
-import gwt.jelement.core.JsObject;
+import gwt.jelement.core.IsObject;
 import elemental2.promise.Promise;
-import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
@@ -28,12 +27,7 @@ import jsinterop.annotations.JsType;
 import jsinterop.base.Any;
 
 @JsType(namespace = JsPackage.GLOBAL, name="PushSubscription", isNative = true)
-public class PushSubscription extends JsObject{
-    @JsConstructor
-    public PushSubscription(){
-        super();
-    }
-    
+public class PushSubscription extends IsObject{
     @JsProperty(name="endpoint")
     public native String getEndpoint();
     

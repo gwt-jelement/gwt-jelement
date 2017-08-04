@@ -16,20 +16,14 @@
  */
 package gwt.jelement.css.cssom;
 
-import gwt.jelement.core.JsObject;
-import jsinterop.annotations.JsConstructor;
+import gwt.jelement.core.IsObject;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="CSSVariableReferenceValue", isNative = true)
-public class CSSVariableReferenceValue extends JsObject{
-    @JsConstructor
-    public CSSVariableReferenceValue(){
-        super();
-    }
-    
+public class CSSVariableReferenceValue extends IsObject{
     @JsProperty(name="variable")
     public native String getVariable();
     

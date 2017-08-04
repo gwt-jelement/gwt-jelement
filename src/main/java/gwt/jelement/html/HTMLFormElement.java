@@ -16,7 +16,8 @@
  */
 package gwt.jelement.html;
 
-import jsinterop.annotations.JsConstructor;
+import gwt.jelement.core.Js;
+import gwt.jelement.dom.Element;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
@@ -25,9 +26,38 @@ import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="HTMLFormElement", isNative = true)
 public class HTMLFormElement extends HTMLElement{
-    @JsConstructor
-    public HTMLFormElement(){
-        super();
+    @JsType(isNative = true, name = "?", namespace = JsPackage.GLOBAL)
+    public interface FormControlsUnion {
+        @JsOverlay
+        static FormControlsUnion of(RadioNodeList value){
+            return Js.cast(value);
+        }
+    
+        @JsOverlay
+        static FormControlsUnion of(Element value){
+            return Js.cast(value);
+        }
+    
+        @JsOverlay
+        default RadioNodeList asRadioNodeList(){
+            return Js.cast(this);
+        }
+    
+        @JsOverlay
+        default Element asElement(){
+            return Js.cast(this);
+        }
+    
+        @JsOverlay
+        default boolean isRadioNodeList(){
+            return (Object) this instanceof RadioNodeList;
+        }
+    
+        @JsOverlay
+        default boolean isElement(){
+            return (Object) this instanceof Element;
+        }
+    
     }
     
     @JsProperty(name="acceptCharset")
@@ -92,6 +122,16 @@ public class HTMLFormElement extends HTMLElement{
     
     @JsMethod(name = "checkValidity")
     public native boolean checkValidity();
+    
+    @JsOverlay
+    public final Element get(double index){
+        return (Element) Js.get(this.object(), index);
+    }
+    
+    @JsOverlay
+    public final HTMLFormElement.FormControlsUnion get(String name){
+        return (HTMLFormElement.FormControlsUnion) Js.get(this.object(), name);
+    }
     
     @JsMethod(name = "reportValidity")
     public native boolean reportValidity();

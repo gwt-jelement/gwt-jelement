@@ -16,7 +16,6 @@
  */
 package gwt.jelement.dom;
 
-import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
@@ -25,11 +24,6 @@ import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="DocumentType", isNative = true)
 public class DocumentType extends Node{
-    @JsConstructor
-    public DocumentType(){
-        super();
-    }
-    
     @JsProperty(name="name")
     public native String getName();
     

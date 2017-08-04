@@ -16,19 +16,13 @@
  */
 package gwt.jelement.webgl;
 
-import gwt.jelement.core.JsObject;
-import jsinterop.annotations.JsConstructor;
+import gwt.jelement.core.IsObject;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="WebGLDepthTexture", isNative = true)
-public class WebGLDepthTexture extends JsObject{
+public class WebGLDepthTexture extends IsObject{
     public static double UNSIGNED_INT_24_8_WEBGL; /* 0x84FA */
-    
-    @JsConstructor
-    public WebGLDepthTexture(){
-        super();
-    }
     
 }

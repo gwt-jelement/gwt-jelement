@@ -16,7 +16,6 @@
  */
 package gwt.jelement.css.cssom;
 
-import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -26,11 +25,6 @@ import jsinterop.annotations.JsType;
 public class CSSResourceValue extends CSSStyleValue{
     @JsProperty(name="state")
     private String state;
-    
-    @JsConstructor
-    public CSSResourceValue(){
-        super();
-    }
     
     @JsOverlay
     public final CSSResourceState getState(){

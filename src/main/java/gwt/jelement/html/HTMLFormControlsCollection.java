@@ -16,16 +16,12 @@
  */
 package gwt.jelement.html;
 
-import jsinterop.annotations.JsConstructor;
+import gwt.jelement.dom.Element;
+import gwt.jelement.dom.Node;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="HTMLFormControlsCollection", isNative = true)
-public class HTMLFormControlsCollection extends HTMLCollection{
-    @JsConstructor
-    public HTMLFormControlsCollection(){
-        super();
-    }
-    
+public class HTMLFormControlsCollection extends HTMLBaseCollection<Node, HTMLFormElement.FormControlsUnion>{
 }

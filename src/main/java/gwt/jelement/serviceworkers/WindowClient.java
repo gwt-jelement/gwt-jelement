@@ -18,7 +18,6 @@ package gwt.jelement.serviceworkers;
 
 import gwt.jelement.dom.VisibilityState;
 import elemental2.promise.Promise;
-import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
@@ -29,11 +28,6 @@ import jsinterop.annotations.JsType;
 public class WindowClient extends Client{
     @JsProperty(name="visibilityState")
     private String visibilityState;
-    
-    @JsConstructor
-    public WindowClient(){
-        super();
-    }
     
     @JsProperty(name="focused")
     public native boolean getFocused();

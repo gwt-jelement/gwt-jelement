@@ -16,7 +16,7 @@
  */
 package gwt.jelement.css;
 
-import jsinterop.annotations.JsConstructor;
+import gwt.jelement.core.Js;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
@@ -25,11 +25,6 @@ import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="CSSKeyframesRule", isNative = true)
 public class CSSKeyframesRule extends CSSRule{
-    @JsConstructor
-    public CSSKeyframesRule(){
-        super();
-    }
-    
     @JsProperty(name="name")
     public native String getName();
     
@@ -47,5 +42,10 @@ public class CSSKeyframesRule extends CSSRule{
     
     @JsMethod(name = "findRule")
     public native CSSKeyframeRule findRule(String select);
+    
+    @JsOverlay
+    public final CSSKeyframeRule get(double index){
+        return (CSSKeyframeRule) Js.get(this.object(), index);
+    }
     
 }

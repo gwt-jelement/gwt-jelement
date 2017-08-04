@@ -16,21 +16,15 @@
  */
 package gwt.jelement.html.track;
 
-import gwt.jelement.core.JsObject;
+import gwt.jelement.core.IsObject;
 import gwt.jelement.mediasource.SourceBuffer;
-import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="AudioTrack", isNative = true)
-public class AudioTrack extends JsObject{
-    @JsConstructor
-    public AudioTrack(){
-        super();
-    }
-    
+public class AudioTrack extends IsObject{
     @JsProperty(name="id")
     public native String getId();
     

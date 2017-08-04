@@ -16,7 +16,6 @@
  */
 package gwt.jelement.svg;
 
-import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
@@ -25,11 +24,6 @@ import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="SVGFEGaussianBlurElement", isNative = true)
 public class SVGFEGaussianBlurElement extends SVGElement{
-    @JsConstructor
-    public SVGFEGaussianBlurElement(){
-        super();
-    }
-    
     @JsProperty(name="in1")
     public native SVGAnimatedString getIn1();
     

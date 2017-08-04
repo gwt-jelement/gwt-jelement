@@ -26,7 +26,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="ArrayBuffer", isNative = true)
-public class ArrayBuffer extends JsObject{
+public class ArrayBuffer extends IsObject{
     @JsProperty(name="onmessage")
     private EventHandlerNonNull onmessage;
     

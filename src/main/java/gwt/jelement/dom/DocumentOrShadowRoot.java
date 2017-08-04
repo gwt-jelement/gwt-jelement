@@ -16,10 +16,9 @@
  */
 package gwt.jelement.dom;
 
-import gwt.jelement.core.JsObject;
+import gwt.jelement.core.IsObject;
 import gwt.jelement.css.StyleSheetList;
 import gwt.jelement.editing.Selection;
-import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
@@ -27,12 +26,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="DocumentOrShadowRoot", isNative = true)
-public class DocumentOrShadowRoot extends JsObject{
-    @JsConstructor
-    public DocumentOrShadowRoot(){
-        super();
-    }
-    
+public class DocumentOrShadowRoot extends IsObject{
     @JsProperty(name="activeElement")
     public native Element getActiveElement();
     

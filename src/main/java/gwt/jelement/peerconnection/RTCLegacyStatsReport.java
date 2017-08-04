@@ -17,8 +17,7 @@
 package gwt.jelement.peerconnection;
 
 import gwt.jelement.core.Date;
-import gwt.jelement.core.JsObject;
-import jsinterop.annotations.JsConstructor;
+import gwt.jelement.core.IsObject;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
@@ -26,12 +25,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="RTCLegacyStatsReport", isNative = true)
-public class RTCLegacyStatsReport extends JsObject{
-    @JsConstructor
-    public RTCLegacyStatsReport(){
-        super();
-    }
-    
+public class RTCLegacyStatsReport extends IsObject{
     @JsProperty(name="timestamp")
     public native Date getTimestamp();
     

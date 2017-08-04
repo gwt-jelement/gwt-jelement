@@ -28,7 +28,6 @@ import gwt.jelement.html.track.VideoTrackList;
 import gwt.jelement.mediastream.MediaStream;
 import gwt.jelement.remoteplayback.RemotePlayback;
 import elemental2.promise.Promise;
-import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
@@ -53,11 +52,6 @@ public class HTMLMediaElement extends HTMLElement{
     
     @JsProperty(name="onwaitingforkey")
     private EventHandlerNonNull onwaitingforkey;
-    
-    @JsConstructor
-    public HTMLMediaElement(){
-        super();
-    }
     
     @JsProperty(name="error")
     public native MediaError getError();

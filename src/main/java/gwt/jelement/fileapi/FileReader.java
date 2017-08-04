@@ -17,6 +17,7 @@
 package gwt.jelement.fileapi;
 
 import gwt.jelement.core.ArrayBuffer;
+import gwt.jelement.core.Js;
 import gwt.jelement.dom.DOMException;
 import gwt.jelement.events.EventHandlerNonNull;
 import gwt.jelement.events.EventTarget;
@@ -26,7 +27,6 @@ import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
-import jsinterop.base.Js;
 
 @JsType(namespace = JsPackage.GLOBAL, name="FileReader", isNative = true)
 public class FileReader extends EventTarget{

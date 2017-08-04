@@ -16,7 +16,6 @@
  */
 package gwt.jelement.svg;
 
-import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
@@ -31,11 +30,6 @@ public class SVGMarkerElement extends SVGElement{
     public static short SVG_MARKER_ORIENT_UNKNOWN; /* 0 */
     public static short SVG_MARKER_ORIENT_AUTO; /* 1 */
     public static short SVG_MARKER_ORIENT_ANGLE; /* 2 */
-    
-    @JsConstructor
-    public SVGMarkerElement(){
-        super();
-    }
     
     @JsProperty(name="refX")
     public native SVGAnimatedLength getRefX();

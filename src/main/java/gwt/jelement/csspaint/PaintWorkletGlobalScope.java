@@ -18,7 +18,6 @@ package gwt.jelement.csspaint;
 
 import gwt.jelement.core.Function;
 import gwt.jelement.workers.WorkletGlobalScope;
-import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
@@ -26,11 +25,6 @@ import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="PaintWorkletGlobalScope", isNative = true)
 public class PaintWorkletGlobalScope extends WorkletGlobalScope{
-    @JsConstructor
-    public PaintWorkletGlobalScope(){
-        super();
-    }
-    
     @JsMethod(name = "registerPaint")
     public native void registerPaint(String name, Function paintCtor);
     

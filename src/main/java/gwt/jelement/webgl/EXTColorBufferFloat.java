@@ -16,17 +16,11 @@
  */
 package gwt.jelement.webgl;
 
-import gwt.jelement.core.JsObject;
-import jsinterop.annotations.JsConstructor;
+import gwt.jelement.core.IsObject;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="EXTColorBufferFloat", isNative = true)
-public class EXTColorBufferFloat extends JsObject{
-    @JsConstructor
-    public EXTColorBufferFloat(){
-        super();
-    }
-    
+public class EXTColorBufferFloat extends IsObject{
 }

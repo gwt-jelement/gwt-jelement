@@ -16,6 +16,7 @@
  */
 package gwt.jelement.fileapi;
 
+import gwt.jelement.core.Array;
 import gwt.jelement.core.ArrayBuffer;
 import gwt.jelement.core.ArrayBufferView;
 import gwt.jelement.core.Date;
@@ -64,6 +65,16 @@ public class File extends Blob{
     
     @JsConstructor
     public File(String[] fileBits, String fileName, FilePropertyBag options){
+        super();
+    }
+    
+    @JsConstructor
+    public File(Array fileBits, String fileName){
+        super();
+    }
+    
+    @JsConstructor
+    public File(Array fileBits, String fileName, FilePropertyBag options){
         super();
     }
     

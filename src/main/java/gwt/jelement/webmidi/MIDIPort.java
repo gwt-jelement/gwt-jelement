@@ -19,7 +19,6 @@ package gwt.jelement.webmidi;
 import gwt.jelement.events.EventHandlerNonNull;
 import gwt.jelement.events.EventTarget;
 import elemental2.promise.Promise;
-import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
@@ -39,11 +38,6 @@ public class MIDIPort extends EventTarget{
     
     @JsProperty(name="type")
     private String type;
-    
-    @JsConstructor
-    public MIDIPort(){
-        super();
-    }
     
     @JsProperty(name="id")
     public native String getId();

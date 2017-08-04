@@ -18,7 +18,6 @@ package gwt.jelement.mediacapturefromelement;
 
 import gwt.jelement.html.HTMLCanvasElement;
 import gwt.jelement.mediastream.MediaStreamTrack;
-import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
@@ -27,11 +26,6 @@ import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="CanvasCaptureMediaStreamTrack", isNative = true)
 public class CanvasCaptureMediaStreamTrack extends MediaStreamTrack{
-    @JsConstructor
-    public CanvasCaptureMediaStreamTrack(){
-        super();
-    }
-    
     @JsProperty(name="canvas")
     public native HTMLCanvasElement getCanvas();
     

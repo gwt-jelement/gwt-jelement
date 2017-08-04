@@ -18,7 +18,6 @@ package gwt.jelement.timing;
 
 import gwt.jelement.events.EventHandlerNonNull;
 import gwt.jelement.events.EventTarget;
-import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
@@ -29,11 +28,6 @@ import jsinterop.annotations.JsType;
 public class Performance extends EventTarget{
     @JsProperty(name="onresourcetimingbufferfull")
     private EventHandlerNonNull onresourcetimingbufferfull;
-    
-    @JsConstructor
-    public Performance(){
-        super();
-    }
     
     @JsOverlay
     public final EventHandlerNonNull getOnResourcetimingbufferfull(){

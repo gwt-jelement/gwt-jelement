@@ -16,7 +16,6 @@
  */
 package gwt.jelement.html;
 
-import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -24,11 +23,6 @@ import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="HTMLOListElement", isNative = true)
 public class HTMLOListElement extends HTMLElement{
-    @JsConstructor
-    public HTMLOListElement(){
-        super();
-    }
-    
     @JsProperty(name="reversed")
     public native boolean getReversed();
     

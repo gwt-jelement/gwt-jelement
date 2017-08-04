@@ -16,7 +16,7 @@
  */
 package gwt.jelement.speech;
 
-import gwt.jelement.core.JsObject;
+import gwt.jelement.core.IsObject;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
@@ -24,7 +24,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="SpeechGrammar", isNative = true)
-public class SpeechGrammar extends JsObject{
+public class SpeechGrammar extends IsObject{
     @JsConstructor
     public SpeechGrammar(){
         super();

@@ -23,7 +23,6 @@ import gwt.jelement.events.EventTarget;
 import gwt.jelement.html.TimeRanges;
 import gwt.jelement.html.track.AudioTrackList;
 import gwt.jelement.html.track.VideoTrackList;
-import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
@@ -49,11 +48,6 @@ public class SourceBuffer extends EventTarget{
     
     @JsProperty(name="mode")
     private String mode;
-    
-    @JsConstructor
-    public SourceBuffer(){
-        super();
-    }
     
     @JsProperty(name="updating")
     public native boolean getUpdating();

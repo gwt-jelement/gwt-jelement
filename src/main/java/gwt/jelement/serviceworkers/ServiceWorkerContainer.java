@@ -19,7 +19,6 @@ package gwt.jelement.serviceworkers;
 import gwt.jelement.events.EventHandlerNonNull;
 import gwt.jelement.events.EventTarget;
 import elemental2.promise.Promise;
-import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
@@ -33,11 +32,6 @@ public class ServiceWorkerContainer extends EventTarget{
     
     @JsProperty(name="onmessage")
     private EventHandlerNonNull onmessage;
-    
-    @JsConstructor
-    public ServiceWorkerContainer(){
-        super();
-    }
     
     @JsProperty(name="controller")
     public native ServiceWorker getController();

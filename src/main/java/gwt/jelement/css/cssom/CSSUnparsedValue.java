@@ -16,7 +16,8 @@
  */
 package gwt.jelement.css.cssom;
 
-import jsinterop.annotations.JsConstructor;
+import gwt.jelement.core.Js;
+import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -24,12 +25,46 @@ import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="CSSUnparsedValue", isNative = true)
 public class CSSUnparsedValue extends CSSStyleValue{
-    @JsConstructor
-    public CSSUnparsedValue(){
-        super();
+    @JsType(isNative = true, name = "?", namespace = JsPackage.GLOBAL)
+    public interface GetUnion {
+        @JsOverlay
+        static GetUnion of(String value){
+            return Js.cast(value);
+        }
+    
+        @JsOverlay
+        static GetUnion of(CSSVariableReferenceValue value){
+            return Js.cast(value);
+        }
+    
+        @JsOverlay
+        default String asString(){
+            return Js.cast(this);
+        }
+    
+        @JsOverlay
+        default CSSVariableReferenceValue asCSSVariableReferenceValue(){
+            return Js.cast(this);
+        }
+    
+        @JsOverlay
+        default boolean isString(){
+            return (Object) this instanceof String;
+        }
+    
+        @JsOverlay
+        default boolean isCSSVariableReferenceValue(){
+            return (Object) this instanceof CSSVariableReferenceValue;
+        }
+    
     }
     
     @JsProperty(name="length")
     public native double getLength();
+    
+    @JsOverlay
+    public final CSSUnparsedValue.GetUnion get(double index){
+        return (CSSUnparsedValue.GetUnion) Js.get(this.object(), index);
+    }
     
 }

@@ -16,18 +16,18 @@
  */
 package gwt.jelement.dom;
 
-import gwt.jelement.core.JsObject;
-import jsinterop.annotations.JsConstructor;
+import gwt.jelement.core.ArrayLike;
+import gwt.jelement.core.Js;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="NamedNodeMap", isNative = true)
-public class NamedNodeMap extends JsObject{
-    @JsConstructor
-    public NamedNodeMap(){
-        super();
+public class NamedNodeMap extends ArrayLike{
+    @JsOverlay
+    public final Attr get(String name){
+        return (Attr) Js.get(this.object(), name);
     }
     
     @JsMethod(name = "getNamedItem")
@@ -35,6 +35,9 @@ public class NamedNodeMap extends JsObject{
     
     @JsMethod(name = "getNamedItemNS")
     public native Attr getNamedItemNS(String namespaceURI, String localName);
+    
+    @JsMethod(name = "item")
+    public native Attr item(double index);
     
     @JsMethod(name = "removeNamedItem")
     public native Attr removeNamedItem(String name);

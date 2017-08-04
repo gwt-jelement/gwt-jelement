@@ -21,7 +21,6 @@ import gwt.jelement.core.ArrayBufferView;
 import gwt.jelement.events.EventHandlerNonNull;
 import gwt.jelement.events.EventTarget;
 import elemental2.promise.Promise;
-import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
@@ -35,11 +34,6 @@ public class MediaKeySession extends EventTarget{
     
     @JsProperty(name="onmessage")
     private EventHandlerNonNull onmessage;
-    
-    @JsConstructor
-    public MediaKeySession(){
-        super();
-    }
     
     @JsProperty(name="sessionId")
     public native String getSessionId();

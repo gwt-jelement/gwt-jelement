@@ -16,19 +16,13 @@
  */
 package gwt.jelement.core;
 
-import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="ArrayBufferView", isNative = true)
-public class ArrayBufferView extends JsObject{
-    @JsConstructor
-    public ArrayBufferView(){
-        super();
-    }
-    
+public class ArrayBufferView extends IsObject{
     @JsProperty(name="buffer")
     public native ArrayBuffer getBuffer();
     

@@ -16,12 +16,11 @@
  */
 package gwt.jelement.animation;
 
-import jsinterop.annotations.JsConstructor;
+import gwt.jelement.core.Js;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
-import jsinterop.base.Js;
 
 @JsType(namespace = JsPackage.GLOBAL, name="AnimationEffectTiming", isNative = true)
 public class AnimationEffectTiming extends AnimationEffectTimingReadOnly{
@@ -30,11 +29,6 @@ public class AnimationEffectTiming extends AnimationEffectTimingReadOnly{
     
     @JsProperty(name="direction")
     private String direction;
-    
-    @JsConstructor
-    public AnimationEffectTiming(){
-        super();
-    }
     
     @JsProperty(name="delay")
     public native void setDelay(double delay);

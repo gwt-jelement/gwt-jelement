@@ -16,9 +16,10 @@
  */
 package gwt.jelement.html;
 
+import gwt.jelement.core.Js;
 import gwt.jelement.dom.Document;
+import gwt.jelement.dom.Node;
 import gwt.jelement.frame.Window;
-import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
@@ -27,11 +28,6 @@ import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="HTMLObjectElement", isNative = true)
 public class HTMLObjectElement extends HTMLElement{
-    @JsConstructor
-    public HTMLObjectElement(){
-        super();
-    }
-    
     @JsProperty(name="data")
     public native String getData();
     
@@ -149,11 +145,21 @@ public class HTMLObjectElement extends HTMLElement{
     @JsMethod(name = "checkValidity")
     public native boolean checkValidity();
     
+    @JsOverlay
+    public final Node get(String name){
+        return (Node) Js.get(this.object(), name);
+    }
+    
     @JsMethod(name = "getSVGDocument")
     public native Document getSVGDocument();
     
     @JsMethod(name = "reportValidity")
     public native boolean reportValidity();
+    
+    @JsOverlay
+    public final Node set(String name, Node value){
+        return Js.<Node>set(this.object(), name, value);
+    }
     
     @JsMethod(name = "setCustomValidity")
     public native void setCustomValidity(String error);

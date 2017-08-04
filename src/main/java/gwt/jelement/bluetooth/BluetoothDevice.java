@@ -18,7 +18,6 @@ package gwt.jelement.bluetooth;
 
 import gwt.jelement.events.EventHandlerNonNull;
 import gwt.jelement.events.EventTarget;
-import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -28,11 +27,6 @@ import jsinterop.annotations.JsType;
 public class BluetoothDevice extends EventTarget{
     @JsProperty(name="ongattserverdisconnected")
     private EventHandlerNonNull ongattserverdisconnected;
-    
-    @JsConstructor
-    public BluetoothDevice(){
-        super();
-    }
     
     @JsProperty(name="id")
     public native String getId();

@@ -16,15 +16,16 @@
  */
 package gwt.jelement.geometry;
 
+import gwt.jelement.core.Array;
 import gwt.jelement.core.Float32Array;
 import gwt.jelement.core.Float64Array;
+import gwt.jelement.core.Js;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
-import jsinterop.base.Js;
 
 @JsType(namespace = JsPackage.GLOBAL, name="DOMMatrix", isNative = true)
 public class DOMMatrix extends DOMMatrixReadOnly{
@@ -40,6 +41,11 @@ public class DOMMatrix extends DOMMatrixReadOnly{
     
     @JsConstructor
     public DOMMatrix(double[] init){
+        super();
+    }
+    
+    @JsConstructor
+    public DOMMatrix(Array init){
         super();
     }
     

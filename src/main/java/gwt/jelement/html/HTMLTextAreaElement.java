@@ -17,7 +17,6 @@
 package gwt.jelement.html;
 
 import gwt.jelement.dom.NodeList;
-import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
@@ -27,11 +26,6 @@ import jsinterop.base.Any;
 
 @JsType(namespace = JsPackage.GLOBAL, name="HTMLTextAreaElement", isNative = true)
 public class HTMLTextAreaElement extends HTMLElement{
-    @JsConstructor
-    public HTMLTextAreaElement(){
-        super();
-    }
-    
     @JsProperty(name="autofocus")
     public native boolean getAutofocus();
     

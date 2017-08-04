@@ -18,7 +18,6 @@ package gwt.jelement.speech;
 
 import gwt.jelement.events.EventHandlerNonNull;
 import gwt.jelement.events.EventTarget;
-import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
@@ -29,11 +28,6 @@ import jsinterop.annotations.JsType;
 public class SpeechSynthesis extends EventTarget{
     @JsProperty(name="onvoiceschanged")
     private EventHandlerNonNull onvoiceschanged;
-    
-    @JsConstructor
-    public SpeechSynthesis(){
-        super();
-    }
     
     @JsProperty(name="pending")
     public native boolean getPending();

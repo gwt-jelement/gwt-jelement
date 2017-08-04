@@ -18,7 +18,6 @@ package gwt.jelement.html.track;
 
 import gwt.jelement.events.EventHandlerNonNull;
 import gwt.jelement.events.EventTarget;
-import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -31,11 +30,6 @@ public class TextTrackCue extends EventTarget{
     
     @JsProperty(name="onexit")
     private EventHandlerNonNull onexit;
-    
-    @JsConstructor
-    public TextTrackCue(){
-        super();
-    }
     
     @JsProperty(name="track")
     public native TextTrack getTrack();

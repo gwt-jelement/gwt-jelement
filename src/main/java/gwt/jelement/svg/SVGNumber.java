@@ -16,20 +16,14 @@
  */
 package gwt.jelement.svg;
 
-import gwt.jelement.core.JsObject;
-import jsinterop.annotations.JsConstructor;
+import gwt.jelement.core.IsObject;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="SVGNumber", isNative = true)
-public class SVGNumber extends JsObject{
-    @JsConstructor
-    public SVGNumber(){
-        super();
-    }
-    
+public class SVGNumber extends IsObject{
     @JsProperty(name="value")
     public native double getValue();
     

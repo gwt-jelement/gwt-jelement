@@ -16,7 +16,6 @@
  */
 package gwt.jelement.svg;
 
-import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -27,11 +26,6 @@ public class SVGViewElement extends SVGElement{
     public static short SVG_ZOOMANDPAN_UNKNOWN; /* 0 */
     public static short SVG_ZOOMANDPAN_DISABLE; /* 1 */
     public static short SVG_ZOOMANDPAN_MAGNIFY; /* 2 */
-    
-    @JsConstructor
-    public SVGViewElement(){
-        super();
-    }
     
     @JsProperty(name="viewBox")
     public native SVGAnimatedRect getViewBox();

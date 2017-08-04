@@ -16,7 +16,7 @@
  */
 package gwt.jelement.page.scrolling;
 
-import gwt.jelement.core.JsObject;
+import gwt.jelement.core.IsObject;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
@@ -25,7 +25,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="ScrollState", isNative = true)
-public class ScrollState extends JsObject{
+public class ScrollState extends IsObject{
     @JsConstructor
     public ScrollState(){
         super();

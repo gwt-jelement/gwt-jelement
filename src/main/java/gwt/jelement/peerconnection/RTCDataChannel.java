@@ -21,7 +21,6 @@ import gwt.jelement.core.ArrayBufferView;
 import gwt.jelement.events.EventHandlerNonNull;
 import gwt.jelement.events.EventTarget;
 import gwt.jelement.fileapi.Blob;
-import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
@@ -47,11 +46,6 @@ public class RTCDataChannel extends EventTarget{
     
     @JsProperty(name="readyState")
     private String readyState;
-    
-    @JsConstructor
-    public RTCDataChannel(){
-        super();
-    }
     
     @JsProperty(name="label")
     public native String getLabel();

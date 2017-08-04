@@ -18,7 +18,6 @@ package gwt.jelement.webmidi;
 
 import gwt.jelement.events.EventHandlerNonNull;
 import gwt.jelement.events.EventTarget;
-import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -28,11 +27,6 @@ import jsinterop.annotations.JsType;
 public class MIDIAccess extends EventTarget{
     @JsProperty(name="onstatechange")
     private EventHandlerNonNull onstatechange;
-    
-    @JsConstructor
-    public MIDIAccess(){
-        super();
-    }
     
     @JsProperty(name="inputs")
     public native MIDIInputMap getInputs();

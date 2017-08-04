@@ -17,7 +17,6 @@
 package gwt.jelement.html;
 
 import gwt.jelement.dom.DocumentFragment;
-import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -25,11 +24,6 @@ import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="HTMLTemplateElement", isNative = true)
 public class HTMLTemplateElement extends HTMLElement{
-    @JsConstructor
-    public HTMLTemplateElement(){
-        super();
-    }
-    
     @JsProperty(name="content")
     public native DocumentFragment getContent();
     

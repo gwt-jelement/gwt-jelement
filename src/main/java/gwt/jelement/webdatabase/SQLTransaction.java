@@ -16,20 +16,15 @@
  */
 package gwt.jelement.webdatabase;
 
-import gwt.jelement.core.JsObject;
-import jsinterop.annotations.JsConstructor;
+import gwt.jelement.core.Array;
+import gwt.jelement.core.IsObject;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="SQLTransaction", isNative = true)
-public class SQLTransaction extends JsObject{
-    @JsConstructor
-    public SQLTransaction(){
-        super();
-    }
-    
+public class SQLTransaction extends IsObject{
     @JsMethod(name = "executeSql")
     public native void executeSql(String sqlStatement);
     
@@ -37,9 +32,18 @@ public class SQLTransaction extends JsObject{
     public native void executeSql(String sqlStatement, Object[] arguments);
     
     @JsMethod(name = "executeSql")
+    public native void executeSql(String sqlStatement, Array arguments);
+    
+    @JsMethod(name = "executeSql")
     public native void executeSql(String sqlStatement, Object[] arguments, SQLStatementCallback callback);
     
     @JsMethod(name = "executeSql")
+    public native void executeSql(String sqlStatement, Array arguments, SQLStatementCallback callback);
+    
+    @JsMethod(name = "executeSql")
     public native void executeSql(String sqlStatement, Object[] arguments, SQLStatementCallback callback, SQLStatementErrorCallback errorCallback);
+    
+    @JsMethod(name = "executeSql")
+    public native void executeSql(String sqlStatement, Array arguments, SQLStatementCallback callback, SQLStatementErrorCallback errorCallback);
     
 }

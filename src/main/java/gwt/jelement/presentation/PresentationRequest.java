@@ -16,6 +16,7 @@
  */
 package gwt.jelement.presentation;
 
+import gwt.jelement.core.Array;
 import gwt.jelement.events.EventHandlerNonNull;
 import gwt.jelement.events.EventTarget;
 import elemental2.promise.Promise;
@@ -38,6 +39,11 @@ public class PresentationRequest extends EventTarget{
     
     @JsConstructor
     public PresentationRequest(String[] urls){
+        super();
+    }
+    
+    @JsConstructor
+    public PresentationRequest(Array urls){
         super();
     }
     

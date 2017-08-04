@@ -16,9 +16,8 @@
  */
 package gwt.jelement.budget;
 
-import gwt.jelement.core.JsObject;
+import gwt.jelement.core.IsObject;
 import elemental2.promise.Promise;
-import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
@@ -26,12 +25,7 @@ import jsinterop.annotations.JsType;
 import jsinterop.base.Any;
 
 @JsType(namespace = JsPackage.GLOBAL, name="BudgetService", isNative = true)
-public class BudgetService extends JsObject{
-    @JsConstructor
-    public BudgetService(){
-        super();
-    }
-    
+public class BudgetService extends IsObject{
     @JsMethod(name = "getBudget")
     public native Promise<BudgetState[]> getBudget();
     

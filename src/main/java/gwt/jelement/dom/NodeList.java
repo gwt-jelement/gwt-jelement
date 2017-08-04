@@ -16,17 +16,15 @@
  */
 package gwt.jelement.dom;
 
-import gwt.jelement.core.JsObject;
-import jsinterop.annotations.JsConstructor;
+import gwt.jelement.core.ArrayLike;
+import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="NodeList", isNative = true)
-public class NodeList extends JsObject{
-    @JsConstructor
-    public NodeList(){
-        super();
-    }
+public class NodeList extends ArrayLike{
+    @JsMethod(name = "item")
+    public native Node item(double index);
     
 }

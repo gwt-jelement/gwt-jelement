@@ -16,7 +16,7 @@
  */
 package gwt.jelement.xml;
 
-import gwt.jelement.core.JsObject;
+import gwt.jelement.core.IsObject;
 import gwt.jelement.dom.Document;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
@@ -26,7 +26,7 @@ import jsinterop.annotations.JsType;
 import jsinterop.base.Any;
 
 @JsType(namespace = JsPackage.GLOBAL, name="DOMParser", isNative = true)
-public class DOMParser extends JsObject{
+public class DOMParser extends IsObject{
     @JsConstructor
     public DOMParser(){
         super();

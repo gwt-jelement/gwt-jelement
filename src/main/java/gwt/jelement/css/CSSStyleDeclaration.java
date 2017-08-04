@@ -16,8 +16,8 @@
  */
 package gwt.jelement.css;
 
-import gwt.jelement.core.JsObject;
-import jsinterop.annotations.JsConstructor;
+import gwt.jelement.core.ArrayLike;
+import gwt.jelement.core.Js;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
@@ -25,10 +25,39 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="CSSStyleDeclaration", isNative = true)
-public class CSSStyleDeclaration extends JsObject{
-    @JsConstructor
-    public CSSStyleDeclaration(){
-        super();
+public class CSSStyleDeclaration extends ArrayLike{
+    @JsType(isNative = true, name = "?", namespace = JsPackage.GLOBAL)
+    public interface GetUnion {
+        @JsOverlay
+        static GetUnion of(String value){
+            return Js.cast(value);
+        }
+    
+        @JsOverlay
+        static GetUnion of(double value){
+            return Js.cast(value);
+        }
+    
+        @JsOverlay
+        default String asString(){
+            return Js.cast(this);
+        }
+    
+        @JsOverlay
+        default double asDouble(){
+            return Js.cast(this);
+        }
+    
+        @JsOverlay
+        default boolean isString(){
+            return (Object) this instanceof String;
+        }
+    
+        @JsOverlay
+        default boolean isDouble(){
+            return (Object) this instanceof Double;
+        }
+    
     }
     
     @JsProperty(name="cssText")
@@ -46,14 +75,27 @@ public class CSSStyleDeclaration extends JsObject{
     @JsProperty(name="cssFloat")
     public native void setCssFloat(String cssFloat);
     
+    @JsOverlay
+    public final CSSStyleDeclaration.GetUnion get(String name){
+        return (CSSStyleDeclaration.GetUnion) Js.get(this.object(), name);
+    }
+    
     @JsMethod(name = "getPropertyPriority")
     public native String getPropertyPriority(String property);
     
     @JsMethod(name = "getPropertyValue")
     public native String getPropertyValue(String property);
     
+    @JsMethod(name = "item")
+    public native String item(double index);
+    
     @JsMethod(name = "removeProperty")
     public native String removeProperty(String property);
+    
+    @JsOverlay
+    public final void set(String property, String propertyValue){
+        Js.<String>set(this.object(), property, propertyValue);
+    }
     
     @JsMethod(name = "setProperty")
     public native void setProperty(String property, String value);

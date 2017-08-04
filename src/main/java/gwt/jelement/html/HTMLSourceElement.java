@@ -16,7 +16,6 @@
  */
 package gwt.jelement.html;
 
-import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -24,11 +23,6 @@ import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="HTMLSourceElement", isNative = true)
 public class HTMLSourceElement extends HTMLElement{
-    @JsConstructor
-    public HTMLSourceElement(){
-        super();
-    }
-    
     @JsProperty(name="src")
     public native String getSrc();
     

@@ -16,6 +16,7 @@
  */
 package gwt.jelement.credentialmanager;
 
+import gwt.jelement.core.Js;
 import gwt.jelement.dom.URLSearchParams;
 import gwt.jelement.html.FormData;
 import gwt.jelement.html.HTMLFormElement;
@@ -24,7 +25,6 @@ import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
-import jsinterop.base.Js;
 
 @JsType(namespace = JsPackage.GLOBAL, name="PasswordCredential", isNative = true)
 public class PasswordCredential extends Credential{

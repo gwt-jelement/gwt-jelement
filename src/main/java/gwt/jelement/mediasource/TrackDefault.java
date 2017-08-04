@@ -16,7 +16,8 @@
  */
 package gwt.jelement.mediasource;
 
-import gwt.jelement.core.JsObject;
+import gwt.jelement.core.Array;
+import gwt.jelement.core.IsObject;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
@@ -24,7 +25,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="TrackDefault", isNative = true)
-public class TrackDefault extends JsObject{
+public class TrackDefault extends IsObject{
     @JsProperty(name="type")
     private String type;
     
@@ -35,6 +36,16 @@ public class TrackDefault extends JsObject{
     
     @JsConstructor
     public TrackDefault(TrackDefaultType type, String language, String label, String[] kinds, String byteStreamTrackID){
+        super();
+    }
+    
+    @JsConstructor
+    public TrackDefault(TrackDefaultType type, String language, String label, Array kinds){
+        super();
+    }
+    
+    @JsConstructor
+    public TrackDefault(TrackDefaultType type, String language, String label, Array kinds, String byteStreamTrackID){
         super();
     }
     

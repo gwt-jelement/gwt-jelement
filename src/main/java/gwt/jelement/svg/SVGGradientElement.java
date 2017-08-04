@@ -16,7 +16,6 @@
  */
 package gwt.jelement.svg;
 
-import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -28,11 +27,6 @@ public class SVGGradientElement extends SVGElement{
     public static short SVG_SPREADMETHOD_PAD; /* 1 */
     public static short SVG_SPREADMETHOD_REFLECT; /* 2 */
     public static short SVG_SPREADMETHOD_REPEAT; /* 3 */
-    
-    @JsConstructor
-    public SVGGradientElement(){
-        super();
-    }
     
     @JsProperty(name="gradientUnits")
     public native SVGAnimatedEnumeration getGradientUnits();

@@ -16,20 +16,14 @@
  */
 package gwt.jelement.timing;
 
-import gwt.jelement.core.JsObject;
-import jsinterop.annotations.JsConstructor;
+import gwt.jelement.core.IsObject;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="PerformanceObserverEntryList", isNative = true)
-public class PerformanceObserverEntryList extends JsObject{
-    @JsConstructor
-    public PerformanceObserverEntryList(){
-        super();
-    }
-    
+public class PerformanceObserverEntryList extends IsObject{
     @JsMethod(name = "getEntries")
     public native PerformanceEntry[] getEntries();
     

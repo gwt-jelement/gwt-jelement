@@ -17,7 +17,6 @@
 package gwt.jelement.html;
 
 import gwt.jelement.html.track.TextTrack;
-import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -29,11 +28,6 @@ public class HTMLTrackElement extends HTMLElement{
     public static short LOADING; /* 1 */
     public static short LOADED; /* 2 */
     public static short ERROR; /* 3 */
-    
-    @JsConstructor
-    public HTMLTrackElement(){
-        super();
-    }
     
     @JsProperty(name="kind")
     public native String getKind();

@@ -16,7 +16,7 @@
  */
 package gwt.jelement.shapedetection;
 
-import gwt.jelement.core.JsObject;
+import gwt.jelement.core.IsObject;
 import gwt.jelement.fileapi.Blob;
 import gwt.jelement.html.HTMLCanvasElement;
 import gwt.jelement.html.HTMLImageElement;
@@ -33,7 +33,7 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="FaceDetector", isNative = true)
-public class FaceDetector extends JsObject{
+public class FaceDetector extends IsObject{
     @JsConstructor
     public FaceDetector(){
         super();

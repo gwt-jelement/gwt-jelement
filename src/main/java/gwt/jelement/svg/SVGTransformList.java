@@ -16,8 +16,8 @@
  */
 package gwt.jelement.svg;
 
-import gwt.jelement.core.JsObject;
-import jsinterop.annotations.JsConstructor;
+import gwt.jelement.core.ArrayLike;
+import gwt.jelement.core.Js;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
@@ -25,12 +25,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="SVGTransformList", isNative = true)
-public class SVGTransformList extends JsObject{
-    @JsConstructor
-    public SVGTransformList(){
-        super();
-    }
-    
+public class SVGTransformList extends ArrayLike{
     @JsProperty(name="numberOfItems")
     public native double getNumberOfItems();
     
@@ -46,6 +41,9 @@ public class SVGTransformList extends JsObject{
     @JsMethod(name = "createSVGTransformFromMatrix")
     public native SVGTransform createSVGTransformFromMatrix(SVGMatrix matrix);
     
+    @JsMethod(name = "getItem")
+    public native SVGTransform getItem(double index);
+    
     @JsMethod(name = "initialize")
     public native SVGTransform initialize(SVGTransform newItem);
     
@@ -57,5 +55,10 @@ public class SVGTransformList extends JsObject{
     
     @JsMethod(name = "replaceItem")
     public native SVGTransform replaceItem(SVGTransform newItem, double index);
+    
+    @JsOverlay
+    public final void set(double index, SVGTransform newItem){
+        Js.<SVGTransform>set(this.object(), index, newItem);
+    }
     
 }

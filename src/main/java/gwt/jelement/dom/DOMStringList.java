@@ -16,21 +16,18 @@
  */
 package gwt.jelement.dom;
 
-import gwt.jelement.core.JsObject;
-import jsinterop.annotations.JsConstructor;
+import gwt.jelement.core.ArrayLike;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="DOMStringList", isNative = true)
-public class DOMStringList extends JsObject{
-    @JsConstructor
-    public DOMStringList(){
-        super();
-    }
-    
+public class DOMStringList extends ArrayLike{
     @JsMethod(name = "contains")
     public native boolean contains(String string);
+    
+    @JsMethod(name = "item")
+    public native String item(double index);
     
 }

@@ -16,20 +16,14 @@
  */
 package gwt.jelement.svg;
 
-import gwt.jelement.core.JsObject;
-import jsinterop.annotations.JsConstructor;
+import gwt.jelement.core.IsObject;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="SVGAnimatedPreserveAspectRatio", isNative = true)
-public class SVGAnimatedPreserveAspectRatio extends JsObject{
-    @JsConstructor
-    public SVGAnimatedPreserveAspectRatio(){
-        super();
-    }
-    
+public class SVGAnimatedPreserveAspectRatio extends IsObject{
     @JsProperty(name="baseVal")
     public native SVGPreserveAspectRatio getBaseVal();
     

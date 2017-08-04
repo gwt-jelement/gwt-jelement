@@ -16,7 +16,6 @@
  */
 package gwt.jelement.html;
 
-import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
@@ -25,11 +24,6 @@ import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="HTMLDialogElement", isNative = true)
 public class HTMLDialogElement extends HTMLElement{
-    @JsConstructor
-    public HTMLDialogElement(){
-        super();
-    }
-    
     @JsProperty(name="open")
     public native boolean getOpen();
     

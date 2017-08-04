@@ -16,17 +16,11 @@
  */
 package gwt.jelement.peerconnection;
 
-import gwt.jelement.core.JsObject;
-import jsinterop.annotations.JsConstructor;
+import gwt.jelement.core.IsObject;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="RTCStatsReport", isNative = true)
-public class RTCStatsReport extends JsObject{
-    @JsConstructor
-    public RTCStatsReport(){
-        super();
-    }
-    
+public class RTCStatsReport extends IsObject{
 }

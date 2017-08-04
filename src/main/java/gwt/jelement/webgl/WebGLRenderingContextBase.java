@@ -16,11 +16,13 @@
  */
 package gwt.jelement.webgl;
 
+import gwt.jelement.core.Array;
 import gwt.jelement.core.ArrayBuffer;
 import gwt.jelement.core.ArrayBufferView;
 import gwt.jelement.core.Float32Array;
 import gwt.jelement.core.Int32Array;
-import gwt.jelement.core.JsObject;
+import gwt.jelement.core.IsObject;
+import gwt.jelement.core.Js;
 import gwt.jelement.html.HTMLCanvasElement;
 import gwt.jelement.html.HTMLImageElement;
 import gwt.jelement.html.HTMLVideoElement;
@@ -28,16 +30,14 @@ import gwt.jelement.html.ImageData;
 import gwt.jelement.imagebitmap.ImageBitmap;
 import gwt.jelement.offscreencanvas.OffscreenCanvas;
 import elemental2.promise.Promise;
-import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
-import jsinterop.base.Js;
 
 @JsType(namespace = JsPackage.GLOBAL, name="WebGLRenderingContextBase", isNative = true)
-public class WebGLRenderingContextBase extends JsObject{
+public class WebGLRenderingContextBase extends IsObject{
     public static double DEPTH_BUFFER_BIT; /* 0x00000100 */
     public static double STENCIL_BUFFER_BIT; /* 0x00000400 */
     public static double COLOR_BUFFER_BIT; /* 0x00004000 */
@@ -337,11 +337,6 @@ public class WebGLRenderingContextBase extends JsObject{
     
     @JsProperty(name="canvas")
     private WebGL2RenderingContext.VRSource canvas;
-    
-    @JsConstructor
-    public WebGLRenderingContextBase(){
-        super();
-    }
     
     @JsOverlay
     public final WebGL2RenderingContext.VRSource getCanvas(){
@@ -720,6 +715,9 @@ public class WebGLRenderingContextBase extends JsObject{
     @JsMethod(name = "uniform1fv")
     public native void uniform1fv(WebGLUniformLocation location, double[] v);
     
+    @JsMethod(name = "uniform1fv")
+    public native void uniform1fv(WebGLUniformLocation location, Array v);
+    
     @JsMethod(name = "uniform1i")
     public native void uniform1i(WebGLUniformLocation location, double x);
     
@@ -728,6 +726,9 @@ public class WebGLRenderingContextBase extends JsObject{
     
     @JsMethod(name = "uniform1iv")
     public native void uniform1iv(WebGLUniformLocation location, double[] v);
+    
+    @JsMethod(name = "uniform1iv")
+    public native void uniform1iv(WebGLUniformLocation location, Array v);
     
     @JsMethod(name = "uniform2f")
     public native void uniform2f(WebGLUniformLocation location, double x, double y);
@@ -738,6 +739,9 @@ public class WebGLRenderingContextBase extends JsObject{
     @JsMethod(name = "uniform2fv")
     public native void uniform2fv(WebGLUniformLocation location, double[] v);
     
+    @JsMethod(name = "uniform2fv")
+    public native void uniform2fv(WebGLUniformLocation location, Array v);
+    
     @JsMethod(name = "uniform2i")
     public native void uniform2i(WebGLUniformLocation location, double x, double y);
     
@@ -746,6 +750,9 @@ public class WebGLRenderingContextBase extends JsObject{
     
     @JsMethod(name = "uniform2iv")
     public native void uniform2iv(WebGLUniformLocation location, double[] v);
+    
+    @JsMethod(name = "uniform2iv")
+    public native void uniform2iv(WebGLUniformLocation location, Array v);
     
     @JsMethod(name = "uniform3f")
     public native void uniform3f(WebGLUniformLocation location, double x, double y, double z);
@@ -756,6 +763,9 @@ public class WebGLRenderingContextBase extends JsObject{
     @JsMethod(name = "uniform3fv")
     public native void uniform3fv(WebGLUniformLocation location, double[] v);
     
+    @JsMethod(name = "uniform3fv")
+    public native void uniform3fv(WebGLUniformLocation location, Array v);
+    
     @JsMethod(name = "uniform3i")
     public native void uniform3i(WebGLUniformLocation location, double x, double y, double z);
     
@@ -764,6 +774,9 @@ public class WebGLRenderingContextBase extends JsObject{
     
     @JsMethod(name = "uniform3iv")
     public native void uniform3iv(WebGLUniformLocation location, double[] v);
+    
+    @JsMethod(name = "uniform3iv")
+    public native void uniform3iv(WebGLUniformLocation location, Array v);
     
     @JsMethod(name = "uniform4f")
     public native void uniform4f(WebGLUniformLocation location, double x, double y, double z, double w);
@@ -774,6 +787,9 @@ public class WebGLRenderingContextBase extends JsObject{
     @JsMethod(name = "uniform4fv")
     public native void uniform4fv(WebGLUniformLocation location, double[] v);
     
+    @JsMethod(name = "uniform4fv")
+    public native void uniform4fv(WebGLUniformLocation location, Array v);
+    
     @JsMethod(name = "uniform4i")
     public native void uniform4i(WebGLUniformLocation location, double x, double y, double z, double w);
     
@@ -783,11 +799,17 @@ public class WebGLRenderingContextBase extends JsObject{
     @JsMethod(name = "uniform4iv")
     public native void uniform4iv(WebGLUniformLocation location, double[] v);
     
+    @JsMethod(name = "uniform4iv")
+    public native void uniform4iv(WebGLUniformLocation location, Array v);
+    
     @JsMethod(name = "uniformMatrix2fv")
     public native void uniformMatrix2fv(WebGLUniformLocation location, boolean transpose, Float32Array array);
     
     @JsMethod(name = "uniformMatrix2fv")
     public native void uniformMatrix2fv(WebGLUniformLocation location, boolean transpose, double[] array);
+    
+    @JsMethod(name = "uniformMatrix2fv")
+    public native void uniformMatrix2fv(WebGLUniformLocation location, boolean transpose, Array array);
     
     @JsMethod(name = "uniformMatrix3fv")
     public native void uniformMatrix3fv(WebGLUniformLocation location, boolean transpose, Float32Array array);
@@ -795,11 +817,17 @@ public class WebGLRenderingContextBase extends JsObject{
     @JsMethod(name = "uniformMatrix3fv")
     public native void uniformMatrix3fv(WebGLUniformLocation location, boolean transpose, double[] array);
     
+    @JsMethod(name = "uniformMatrix3fv")
+    public native void uniformMatrix3fv(WebGLUniformLocation location, boolean transpose, Array array);
+    
     @JsMethod(name = "uniformMatrix4fv")
     public native void uniformMatrix4fv(WebGLUniformLocation location, boolean transpose, Float32Array array);
     
     @JsMethod(name = "uniformMatrix4fv")
     public native void uniformMatrix4fv(WebGLUniformLocation location, boolean transpose, double[] array);
+    
+    @JsMethod(name = "uniformMatrix4fv")
+    public native void uniformMatrix4fv(WebGLUniformLocation location, boolean transpose, Array array);
     
     @JsMethod(name = "useProgram")
     public native void useProgram(WebGLProgram program);
@@ -816,6 +844,9 @@ public class WebGLRenderingContextBase extends JsObject{
     @JsMethod(name = "vertexAttrib1fv")
     public native void vertexAttrib1fv(double indx, double[] values);
     
+    @JsMethod(name = "vertexAttrib1fv")
+    public native void vertexAttrib1fv(double indx, Array values);
+    
     @JsMethod(name = "vertexAttrib2f")
     public native void vertexAttrib2f(double indx, double x, double y);
     
@@ -824,6 +855,9 @@ public class WebGLRenderingContextBase extends JsObject{
     
     @JsMethod(name = "vertexAttrib2fv")
     public native void vertexAttrib2fv(double indx, double[] values);
+    
+    @JsMethod(name = "vertexAttrib2fv")
+    public native void vertexAttrib2fv(double indx, Array values);
     
     @JsMethod(name = "vertexAttrib3f")
     public native void vertexAttrib3f(double indx, double x, double y, double z);
@@ -834,6 +868,9 @@ public class WebGLRenderingContextBase extends JsObject{
     @JsMethod(name = "vertexAttrib3fv")
     public native void vertexAttrib3fv(double indx, double[] values);
     
+    @JsMethod(name = "vertexAttrib3fv")
+    public native void vertexAttrib3fv(double indx, Array values);
+    
     @JsMethod(name = "vertexAttrib4f")
     public native void vertexAttrib4f(double indx, double x, double y, double z, double w);
     
@@ -842,6 +879,9 @@ public class WebGLRenderingContextBase extends JsObject{
     
     @JsMethod(name = "vertexAttrib4fv")
     public native void vertexAttrib4fv(double indx, double[] values);
+    
+    @JsMethod(name = "vertexAttrib4fv")
+    public native void vertexAttrib4fv(double indx, Array values);
     
     @JsMethod(name = "vertexAttribPointer")
     public native void vertexAttribPointer(double indx, double size, double type, boolean normalized, double stride, double offset);

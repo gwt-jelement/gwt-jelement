@@ -16,8 +16,7 @@
  */
 package gwt.jelement.svg;
 
-import gwt.jelement.core.JsObject;
-import jsinterop.annotations.JsConstructor;
+import gwt.jelement.core.IsObject;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
@@ -25,17 +24,12 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="SVGAngle", isNative = true)
-public class SVGAngle extends JsObject{
+public class SVGAngle extends IsObject{
     public static short SVG_ANGLETYPE_UNKNOWN; /* 0 */
     public static short SVG_ANGLETYPE_UNSPECIFIED; /* 1 */
     public static short SVG_ANGLETYPE_DEG; /* 2 */
     public static short SVG_ANGLETYPE_RAD; /* 3 */
     public static short SVG_ANGLETYPE_GRAD; /* 4 */
-    
-    @JsConstructor
-    public SVGAngle(){
-        super();
-    }
     
     @JsProperty(name="unitType")
     public native short getUnitType();

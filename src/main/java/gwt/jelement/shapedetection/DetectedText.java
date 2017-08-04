@@ -16,7 +16,7 @@
  */
 package gwt.jelement.shapedetection;
 
-import gwt.jelement.core.JsObject;
+import gwt.jelement.core.IsObject;
 import gwt.jelement.geometry.DOMRect;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsOverlay;
@@ -25,7 +25,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="DetectedText", isNative = true)
-public class DetectedText extends JsObject{
+public class DetectedText extends IsObject{
     @JsConstructor
     public DetectedText(){
         super();

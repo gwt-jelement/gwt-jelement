@@ -16,9 +16,9 @@
  */
 package gwt.jelement.html.track;
 
+import gwt.jelement.core.Js;
 import gwt.jelement.events.EventHandlerNonNull;
 import gwt.jelement.events.EventTarget;
-import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
@@ -35,11 +35,6 @@ public class VideoTrackList extends EventTarget{
     
     @JsProperty(name="onremovetrack")
     private EventHandlerNonNull onremovetrack;
-    
-    @JsConstructor
-    public VideoTrackList(){
-        super();
-    }
     
     @JsProperty(name="length")
     public native double getLength();
@@ -75,6 +70,11 @@ public class VideoTrackList extends EventTarget{
     @JsOverlay
     public final void setOnRemovetrack(EventHandlerNonNull onremovetrack){
         this.onremovetrack = onremovetrack;
+    }
+    
+    @JsOverlay
+    public final VideoTrack get(double index){
+        return (VideoTrack) Js.get(this.object(), index);
     }
     
     @JsMethod(name = "getTrackById")

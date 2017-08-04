@@ -18,7 +18,6 @@ package gwt.jelement.svg;
 
 import gwt.jelement.dom.Element;
 import gwt.jelement.dom.NodeList;
-import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
@@ -30,11 +29,6 @@ public class SVGSVGElement extends SVGGraphicsElement{
     public static short SVG_ZOOMANDPAN_UNKNOWN; /* 0 */
     public static short SVG_ZOOMANDPAN_DISABLE; /* 1 */
     public static short SVG_ZOOMANDPAN_MAGNIFY; /* 2 */
-    
-    @JsConstructor
-    public SVGSVGElement(){
-        super();
-    }
     
     @JsProperty(name="x")
     public native SVGAnimatedLength getX();
@@ -112,7 +106,7 @@ public class SVGSVGElement extends SVGGraphicsElement{
     public native double getCurrentTime();
     
     @JsMethod(name = "getElementById")
-    public native <T extends Element> T getElementById(String elementId);
+    public native <T> T getElementById(String elementId);
     
     @JsMethod(name = "getEnclosureList")
     public native NodeList getEnclosureList(SVGRect rect, SVGElement referenceElement);

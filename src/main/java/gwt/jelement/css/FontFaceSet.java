@@ -19,7 +19,6 @@ package gwt.jelement.css;
 import gwt.jelement.events.EventHandlerNonNull;
 import gwt.jelement.events.EventTarget;
 import elemental2.promise.Promise;
-import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
@@ -39,11 +38,6 @@ public class FontFaceSet extends EventTarget{
     
     @JsProperty(name="status")
     private String status;
-    
-    @JsConstructor
-    public FontFaceSet(){
-        super();
-    }
     
     @JsOverlay
     public final EventHandlerNonNull getOnLoading(){

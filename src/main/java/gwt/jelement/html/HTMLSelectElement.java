@@ -16,8 +16,9 @@
  */
 package gwt.jelement.html;
 
+import gwt.jelement.core.Js;
+import gwt.jelement.dom.Element;
 import gwt.jelement.dom.NodeList;
-import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
@@ -26,11 +27,6 @@ import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="HTMLSelectElement", isNative = true)
 public class HTMLSelectElement extends HTMLElement{
-    @JsConstructor
-    public HTMLSelectElement(){
-        super();
-    }
-    
     @JsProperty(name="autofocus")
     public native boolean getAutofocus();
     
@@ -130,6 +126,14 @@ public class HTMLSelectElement extends HTMLElement{
     @JsMethod(name = "checkValidity")
     public native boolean checkValidity();
     
+    @JsOverlay
+    public final Element get(double index){
+        return (Element) Js.get(this.object(), index);
+    }
+    
+    @JsMethod(name = "item")
+    public native Element item(double index);
+    
     @JsMethod(name = "namedItem")
     public native HTMLOptionElement namedItem(String name);
     
@@ -138,6 +142,11 @@ public class HTMLSelectElement extends HTMLElement{
     
     @JsMethod(name = "reportValidity")
     public native boolean reportValidity();
+    
+    @JsOverlay
+    public final void set(double index, HTMLOptionElement option){
+        Js.<HTMLOptionElement>set(this.object(), index, option);
+    }
     
     @JsMethod(name = "setCustomValidity")
     public native void setCustomValidity(String error);

@@ -16,19 +16,54 @@
  */
 package gwt.jelement.html;
 
-import gwt.jelement.core.JsObject;
+import gwt.jelement.core.ArrayLike;
+import gwt.jelement.core.Js;
 import gwt.jelement.dom.Element;
-import jsinterop.annotations.JsConstructor;
+import gwt.jelement.dom.NodeList;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="HTMLAllCollection", isNative = true)
-public class HTMLAllCollection extends JsObject{
-    @JsConstructor
-    public HTMLAllCollection(){
-        super();
+public class HTMLAllCollection extends ArrayLike{
+    @JsType(isNative = true, name = "?", namespace = JsPackage.GLOBAL)
+    public interface HTMLOptionsUnion {
+        @JsOverlay
+        static HTMLOptionsUnion of(NodeList value){
+            return Js.cast(value);
+        }
+    
+        @JsOverlay
+        static HTMLOptionsUnion of(Element value){
+            return Js.cast(value);
+        }
+    
+        @JsOverlay
+        default NodeList asNodeList(){
+            return Js.cast(this);
+        }
+    
+        @JsOverlay
+        default Element asElement(){
+            return Js.cast(this);
+        }
+    
+        @JsOverlay
+        default boolean isNodeList(){
+            return (Object) this instanceof NodeList;
+        }
+    
+        @JsOverlay
+        default boolean isElement(){
+            return (Object) this instanceof Element;
+        }
+    
+    }
+    
+    @JsOverlay
+    public final HTMLAllCollection.HTMLOptionsUnion get(String name){
+        return (HTMLAllCollection.HTMLOptionsUnion) Js.get(this.object(), name);
     }
     
     @JsMethod(name = "item")
@@ -36,5 +71,8 @@ public class HTMLAllCollection extends JsObject{
     
     @JsMethod(name = "item")
     public native Element item(double index);
+    
+    @JsMethod(name = "namedItem")
+    public native HTMLAllCollection.HTMLOptionsUnion namedItem(String name);
     
 }

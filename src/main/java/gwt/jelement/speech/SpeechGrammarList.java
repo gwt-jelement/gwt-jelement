@@ -16,7 +16,7 @@
  */
 package gwt.jelement.speech;
 
-import gwt.jelement.core.JsObject;
+import gwt.jelement.core.ArrayLike;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
@@ -24,7 +24,7 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="SpeechGrammarList", isNative = true)
-public class SpeechGrammarList extends JsObject{
+public class SpeechGrammarList extends ArrayLike{
     @JsConstructor
     public SpeechGrammarList(){
         super();
@@ -41,5 +41,8 @@ public class SpeechGrammarList extends JsObject{
     
     @JsMethod(name = "addFromUri")
     public native void addFromUri(String src, double weight);
+    
+    @JsMethod(name = "item")
+    public native SpeechGrammar item(double index);
     
 }

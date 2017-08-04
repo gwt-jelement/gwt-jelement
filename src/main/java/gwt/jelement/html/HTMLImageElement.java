@@ -17,7 +17,6 @@
 package gwt.jelement.html;
 
 import elemental2.promise.Promise;
-import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
@@ -26,11 +25,6 @@ import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="HTMLImageElement", isNative = true)
 public class HTMLImageElement extends HTMLElement{
-    @JsConstructor
-    public HTMLImageElement(){
-        super();
-    }
-    
     @JsProperty(name="alt")
     public native String getAlt();
     

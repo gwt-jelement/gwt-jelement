@@ -16,20 +16,14 @@
  */
 package gwt.jelement.svg;
 
-import gwt.jelement.core.JsObject;
-import jsinterop.annotations.JsConstructor;
+import gwt.jelement.core.IsObject;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="SVGAnimatedString", isNative = true)
-public class SVGAnimatedString extends JsObject{
-    @JsConstructor
-    public SVGAnimatedString(){
-        super();
-    }
-    
+public class SVGAnimatedString extends IsObject{
     @JsProperty(name="baseVal")
     public native String getBaseVal();
     

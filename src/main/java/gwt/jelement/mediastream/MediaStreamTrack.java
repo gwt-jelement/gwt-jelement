@@ -19,7 +19,6 @@ package gwt.jelement.mediastream;
 import gwt.jelement.events.EventHandlerNonNull;
 import gwt.jelement.events.EventTarget;
 import elemental2.promise.Promise;
-import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
@@ -39,11 +38,6 @@ public class MediaStreamTrack extends EventTarget{
     
     @JsProperty(name="readyState")
     private String readyState;
-    
-    @JsConstructor
-    public MediaStreamTrack(){
-        super();
-    }
     
     @JsProperty(name="kind")
     public native String getKind();

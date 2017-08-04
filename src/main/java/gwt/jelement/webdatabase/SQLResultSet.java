@@ -16,20 +16,14 @@
  */
 package gwt.jelement.webdatabase;
 
-import gwt.jelement.core.JsObject;
-import jsinterop.annotations.JsConstructor;
+import gwt.jelement.core.IsObject;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="SQLResultSet", isNative = true)
-public class SQLResultSet extends JsObject{
-    @JsConstructor
-    public SQLResultSet(){
-        super();
-    }
-    
+public class SQLResultSet extends IsObject{
     @JsProperty(name="rows")
     public native SQLResultSetRowList getRows();
     

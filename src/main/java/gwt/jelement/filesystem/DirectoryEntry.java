@@ -17,7 +17,6 @@
 package gwt.jelement.filesystem;
 
 import gwt.jelement.html.VoidCallback;
-import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
@@ -25,11 +24,6 @@ import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="DirectoryEntry", isNative = true)
 public class DirectoryEntry extends Entry{
-    @JsConstructor
-    public DirectoryEntry(){
-        super();
-    }
-    
     @JsMethod(name = "createReader")
     public native DirectoryReader createReader();
     

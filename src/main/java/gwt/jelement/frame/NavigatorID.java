@@ -16,20 +16,14 @@
  */
 package gwt.jelement.frame;
 
-import gwt.jelement.core.JsObject;
-import jsinterop.annotations.JsConstructor;
+import gwt.jelement.core.IsObject;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="NavigatorID", isNative = true)
-public class NavigatorID extends JsObject{
-    @JsConstructor
-    public NavigatorID(){
-        super();
-    }
-    
+public class NavigatorID extends IsObject{
     @JsProperty(name="appCodeName")
     public native String getAppCodeName();
     

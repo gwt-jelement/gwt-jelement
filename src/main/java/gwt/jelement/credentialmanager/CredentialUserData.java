@@ -16,19 +16,16 @@
  */
 package gwt.jelement.credentialmanager;
 
-import gwt.jelement.core.JsObject;
-import jsinterop.annotations.JsConstructor;
+import gwt.jelement.core.IsObject;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="CredentialUserData", isNative = true)
-public class CredentialUserData extends JsObject{
-    @JsConstructor
-    public CredentialUserData(){
-        super();
-    }
+public class CredentialUserData extends IsObject{
+    @JsProperty(name="name")
+    public native String getName();
     
     @JsProperty(name="iconURL")
     public native String getIconURL();

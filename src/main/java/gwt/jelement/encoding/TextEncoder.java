@@ -16,7 +16,7 @@
  */
 package gwt.jelement.encoding;
 
-import gwt.jelement.core.JsObject;
+import gwt.jelement.core.IsObject;
 import gwt.jelement.core.Uint8Array;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
@@ -26,7 +26,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="TextEncoder", isNative = true)
-public class TextEncoder extends JsObject{
+public class TextEncoder extends IsObject{
     @JsConstructor
     public TextEncoder(){
         super();

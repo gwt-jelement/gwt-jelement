@@ -16,7 +16,6 @@
  */
 package gwt.jelement.dom;
 
-import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -24,11 +23,6 @@ import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="Attr", isNative = true)
 public class Attr extends Node{
-    @JsConstructor
-    public Attr(){
-        super();
-    }
-    
     @JsProperty(name="namespaceURI")
     public native String getNamespaceURI();
     

@@ -16,23 +16,17 @@
  */
 package gwt.jelement.geolocation;
 
-import gwt.jelement.core.JsObject;
-import jsinterop.annotations.JsConstructor;
+import gwt.jelement.core.IsObject;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="PositionError", isNative = true)
-public class PositionError extends JsObject{
+public class PositionError extends IsObject{
     public static short PERMISSION_DENIED; /* 1 */
     public static short POSITION_UNAVAILABLE; /* 2 */
     public static short TIMEOUT; /* 3 */
-    
-    @JsConstructor
-    public PositionError(){
-        super();
-    }
     
     @JsProperty(name="code")
     public native short getCode();

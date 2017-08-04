@@ -17,7 +17,6 @@
 package gwt.jelement.html;
 
 import gwt.jelement.dom.NodeList;
-import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -25,11 +24,6 @@ import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="HTMLMeterElement", isNative = true)
 public class HTMLMeterElement extends HTMLElement{
-    @JsConstructor
-    public HTMLMeterElement(){
-        super();
-    }
-    
     @JsProperty(name="value")
     public native double getValue();
     

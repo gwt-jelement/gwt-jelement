@@ -17,7 +17,7 @@
 package gwt.jelement.fetch;
 
 import gwt.jelement.core.ArrayBuffer;
-import gwt.jelement.core.JsObject;
+import gwt.jelement.core.IsObject;
 import gwt.jelement.fileapi.Blob;
 import gwt.jelement.html.FormData;
 import elemental2.promise.Promise;
@@ -29,7 +29,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="Response", isNative = true)
-public class Response extends JsObject{
+public class Response extends IsObject{
     @JsProperty(name="type")
     private String type;
     

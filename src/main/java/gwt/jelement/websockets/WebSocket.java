@@ -16,6 +16,7 @@
  */
 package gwt.jelement.websockets;
 
+import gwt.jelement.core.Array;
 import gwt.jelement.core.ArrayBuffer;
 import gwt.jelement.core.ArrayBufferView;
 import gwt.jelement.events.EventHandlerNonNull;
@@ -62,6 +63,11 @@ public class WebSocket extends EventTarget{
     
     @JsConstructor
     public WebSocket(String url, String[] protocols){
+        super();
+    }
+    
+    @JsConstructor
+    public WebSocket(String url, Array protocols){
         super();
     }
     

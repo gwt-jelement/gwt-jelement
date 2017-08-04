@@ -16,17 +16,15 @@
  */
 package gwt.jelement.dom;
 
-import gwt.jelement.core.JsObject;
-import jsinterop.annotations.JsConstructor;
+import gwt.jelement.core.ArrayLike;
+import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="TouchList", isNative = true)
-public class TouchList extends JsObject{
-    @JsConstructor
-    public TouchList(){
-        super();
-    }
+public class TouchList extends ArrayLike{
+    @JsMethod(name = "item")
+    public native Touch item(double index);
     
 }

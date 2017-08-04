@@ -16,17 +16,15 @@
  */
 package gwt.jelement.webdatabase;
 
-import gwt.jelement.core.JsObject;
-import jsinterop.annotations.JsConstructor;
+import gwt.jelement.core.ArrayLike;
+import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="SQLResultSetRowList", isNative = true)
-public class SQLResultSetRowList extends JsObject{
-    @JsConstructor
-    public SQLResultSetRowList(){
-        super();
-    }
+public class SQLResultSetRowList extends ArrayLike{
+    @JsMethod(name = "item")
+    public native Object item(double index);
     
 }

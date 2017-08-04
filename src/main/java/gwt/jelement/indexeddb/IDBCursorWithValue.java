@@ -16,7 +16,6 @@
  */
 package gwt.jelement.indexeddb;
 
-import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -24,11 +23,6 @@ import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="IDBCursorWithValue", isNative = true)
 public class IDBCursorWithValue extends IDBCursor{
-    @JsConstructor
-    public IDBCursorWithValue(){
-        super();
-    }
-    
     @JsProperty(name="value")
     public native Object getValue();
     

@@ -16,7 +16,6 @@
  */
 package gwt.jelement.css.cssom;
 
-import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -24,11 +23,6 @@ import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="CSSImageValue", isNative = true)
 public class CSSImageValue extends CSSResourceValue{
-    @JsConstructor
-    public CSSImageValue(){
-        super();
-    }
-    
     @JsProperty(name="intrinsicWidth")
     public native double getIntrinsicWidth();
     

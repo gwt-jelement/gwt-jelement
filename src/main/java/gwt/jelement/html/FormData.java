@@ -16,7 +16,8 @@
  */
 package gwt.jelement.html;
 
-import gwt.jelement.core.JsObject;
+import gwt.jelement.core.IsObject;
+import gwt.jelement.core.Js;
 import gwt.jelement.fileapi.Blob;
 import gwt.jelement.fileapi.File;
 import jsinterop.annotations.JsConstructor;
@@ -24,10 +25,9 @@ import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
-import jsinterop.base.Js;
 
 @JsType(namespace = JsPackage.GLOBAL, name="FormData", isNative = true)
-public class FormData extends JsObject{
+public class FormData extends IsObject{
     @JsType(isNative = true, name = "?", namespace = JsPackage.GLOBAL)
     public interface FormDataEntryValue {
         @JsOverlay
@@ -81,19 +81,25 @@ public class FormData extends JsObject{
     @JsMethod(name = "append")
     public native void append(String name, Blob value, String filename);
     
+    @JsMethod(name = "delete")
+    public native void delete(String name);
+    
     @JsMethod(name = "get")
-    public native FormData.FormDataEntryValue get_(String name);
+    public native FormData.FormDataEntryValue get(String name);
     
     @JsMethod(name = "getAll")
     public native FormData.FormDataEntryValue[] getAll(String name);
     
-    @JsMethod(name = "set")
-    public native void set_(String name, String value);
+    @JsMethod(name = "has")
+    public native boolean has(String name);
     
     @JsMethod(name = "set")
-    public native void set_(String name, Blob value);
+    public native void set(String name, String value);
     
     @JsMethod(name = "set")
-    public native void set_(String name, Blob value, String filename);
+    public native void set(String name, Blob value);
+    
+    @JsMethod(name = "set")
+    public native void set(String name, Blob value, String filename);
     
 }

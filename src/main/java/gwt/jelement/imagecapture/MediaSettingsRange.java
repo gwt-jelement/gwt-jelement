@@ -16,20 +16,14 @@
  */
 package gwt.jelement.imagecapture;
 
-import gwt.jelement.core.JsObject;
-import jsinterop.annotations.JsConstructor;
+import gwt.jelement.core.IsObject;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="MediaSettingsRange", isNative = true)
-public class MediaSettingsRange extends JsObject{
-    @JsConstructor
-    public MediaSettingsRange(){
-        super();
-    }
-    
+public class MediaSettingsRange extends IsObject{
     @JsProperty(name="max")
     public native double getMax();
     

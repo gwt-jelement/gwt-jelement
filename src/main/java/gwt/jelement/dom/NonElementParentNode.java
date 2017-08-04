@@ -16,21 +16,15 @@
  */
 package gwt.jelement.dom;
 
-import gwt.jelement.core.JsObject;
-import jsinterop.annotations.JsConstructor;
+import gwt.jelement.core.IsObject;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="NonElementParentNode", isNative = true)
-public class NonElementParentNode extends JsObject{
-    @JsConstructor
-    public NonElementParentNode(){
-        super();
-    }
-    
+public class NonElementParentNode extends IsObject{
     @JsMethod(name = "getElementById")
-    public native <T extends Element> T getElementById(String elementId);
+    public native <T> T getElementById(String elementId);
     
 }

@@ -17,7 +17,6 @@
 package gwt.jelement.html;
 
 import gwt.jelement.mediasource.VideoPlaybackQuality;
-import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
@@ -26,11 +25,6 @@ import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="HTMLVideoElement", isNative = true)
 public class HTMLVideoElement extends HTMLMediaElement{
-    @JsConstructor
-    public HTMLVideoElement(){
-        super();
-    }
-    
     @JsProperty(name="width")
     public native double getWidth();
     

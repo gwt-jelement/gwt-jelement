@@ -16,9 +16,10 @@
  */
 package gwt.jelement.fileapi;
 
+import gwt.jelement.core.Array;
 import gwt.jelement.core.ArrayBuffer;
 import gwt.jelement.core.ArrayBufferView;
-import gwt.jelement.core.JsObject;
+import gwt.jelement.core.IsObject;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
@@ -27,7 +28,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="Blob", isNative = true)
-public class Blob extends JsObject{
+public class Blob extends IsObject{
     @JsConstructor
     public Blob(){
         super();
@@ -70,6 +71,16 @@ public class Blob extends JsObject{
     
     @JsConstructor
     public Blob(String[] blobParts, BlobPropertyBag options){
+        super();
+    }
+    
+    @JsConstructor
+    public Blob(Array blobParts){
+        super();
+    }
+    
+    @JsConstructor
+    public Blob(Array blobParts, BlobPropertyBag options){
         super();
     }
     

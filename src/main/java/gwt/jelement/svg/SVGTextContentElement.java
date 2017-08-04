@@ -16,7 +16,6 @@
  */
 package gwt.jelement.svg;
 
-import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
@@ -28,11 +27,6 @@ public class SVGTextContentElement extends SVGGraphicsElement{
     public static short LENGTHADJUST_UNKNOWN; /* 0 */
     public static short LENGTHADJUST_SPACING; /* 1 */
     public static short LENGTHADJUST_SPACINGANDGLYPHS; /* 2 */
-    
-    @JsConstructor
-    public SVGTextContentElement(){
-        super();
-    }
     
     @JsProperty(name="textLength")
     public native SVGAnimatedLength getTextLength();

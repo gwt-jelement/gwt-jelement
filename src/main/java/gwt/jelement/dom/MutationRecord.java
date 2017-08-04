@@ -16,20 +16,14 @@
  */
 package gwt.jelement.dom;
 
-import gwt.jelement.core.JsObject;
-import jsinterop.annotations.JsConstructor;
+import gwt.jelement.core.IsObject;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="MutationRecord", isNative = true)
-public class MutationRecord extends JsObject{
-    @JsConstructor
-    public MutationRecord(){
-        super();
-    }
-    
+public class MutationRecord extends IsObject{
     @JsProperty(name="type")
     public native String getType();
     

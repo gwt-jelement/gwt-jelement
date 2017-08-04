@@ -16,20 +16,14 @@
  */
 package gwt.jelement.indexeddb;
 
-import gwt.jelement.core.JsObject;
-import jsinterop.annotations.JsConstructor;
+import gwt.jelement.core.IsObject;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="IDBFactory", isNative = true)
-public class IDBFactory extends JsObject{
-    @JsConstructor
-    public IDBFactory(){
-        super();
-    }
-    
+public class IDBFactory extends IsObject{
     @JsMethod(name = "cmp")
     public native short cmp(Object first, Object second);
     

@@ -16,7 +16,6 @@
  */
 package gwt.jelement.svg;
 
-import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
@@ -25,11 +24,6 @@ import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="SVGGraphicsElement", isNative = true)
 public class SVGGraphicsElement extends SVGElement{
-    @JsConstructor
-    public SVGGraphicsElement(){
-        super();
-    }
-    
     @JsProperty(name="transform")
     public native SVGAnimatedTransformList getTransform();
     

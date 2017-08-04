@@ -17,21 +17,15 @@
 package gwt.jelement.push_messaging;
 
 import gwt.jelement.core.ArrayBuffer;
-import gwt.jelement.core.JsObject;
+import gwt.jelement.core.IsObject;
 import gwt.jelement.fileapi.Blob;
-import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="PushMessageData", isNative = true)
-public class PushMessageData extends JsObject{
-    @JsConstructor
-    public PushMessageData(){
-        super();
-    }
-    
+public class PushMessageData extends IsObject{
     @JsMethod(name = "arrayBuffer")
     public native ArrayBuffer arrayBuffer();
     

@@ -16,13 +16,13 @@
  */
 package gwt.jelement.animation;
 
+import gwt.jelement.core.Js;
 import gwt.jelement.dom.Element;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
-import jsinterop.base.Js;
 
 @JsType(namespace = JsPackage.GLOBAL, name="ScrollTimeline", isNative = true)
 public class ScrollTimeline extends AnimationTimeline{

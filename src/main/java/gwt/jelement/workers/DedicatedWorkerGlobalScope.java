@@ -23,7 +23,6 @@ import gwt.jelement.filesystem.EntryCallback;
 import gwt.jelement.filesystem.EntrySync;
 import gwt.jelement.filesystem.ErrorCallback;
 import gwt.jelement.filesystem.FileSystemCallback;
-import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
@@ -40,11 +39,6 @@ public class DedicatedWorkerGlobalScope extends WorkerGlobalScope{
     
     @JsProperty(name="onmessageerror")
     private EventHandlerNonNull onmessageerror;
-    
-    @JsConstructor
-    public DedicatedWorkerGlobalScope(){
-        super();
-    }
     
     @JsOverlay
     public final EventHandlerNonNull getOnMessage(){

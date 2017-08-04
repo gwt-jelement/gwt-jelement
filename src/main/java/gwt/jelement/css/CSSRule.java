@@ -16,15 +16,14 @@
  */
 package gwt.jelement.css;
 
-import gwt.jelement.core.JsObject;
-import jsinterop.annotations.JsConstructor;
+import gwt.jelement.core.IsObject;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="CSSRule", isNative = true)
-public class CSSRule extends JsObject{
+public class CSSRule extends IsObject{
     public static short STYLE_RULE; /* 1 */
     public static short CHARSET_RULE; /* 2 */
     public static short IMPORT_RULE; /* 3 */
@@ -36,11 +35,6 @@ public class CSSRule extends JsObject{
     public static short KEYFRAME_RULE; /* 8 */
     public static short SUPPORTS_RULE; /* 12 */
     public static short VIEWPORT_RULE; /* 15 */
-    
-    @JsConstructor
-    public CSSRule(){
-        super();
-    }
     
     @JsProperty(name="type")
     public native short getType();

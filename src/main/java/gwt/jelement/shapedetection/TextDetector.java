@@ -16,7 +16,7 @@
  */
 package gwt.jelement.shapedetection;
 
-import gwt.jelement.core.JsObject;
+import gwt.jelement.core.IsObject;
 import gwt.jelement.fileapi.Blob;
 import gwt.jelement.html.HTMLCanvasElement;
 import gwt.jelement.html.HTMLImageElement;
@@ -33,7 +33,7 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="TextDetector", isNative = true)
-public class TextDetector extends JsObject{
+public class TextDetector extends IsObject{
     @JsConstructor
     public TextDetector(){
         super();

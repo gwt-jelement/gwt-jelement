@@ -16,8 +16,7 @@
  */
 package gwt.jelement.css;
 
-import gwt.jelement.core.JsObject;
-import jsinterop.annotations.JsConstructor;
+import gwt.jelement.core.IsObject;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
@@ -25,12 +24,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="StyleMedia", isNative = true)
-public class StyleMedia extends JsObject{
-    @JsConstructor
-    public StyleMedia(){
-        super();
-    }
-    
+public class StyleMedia extends IsObject{
     @JsProperty(name="type")
     public native String getType();
     

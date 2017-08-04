@@ -16,14 +16,14 @@
  */
 package gwt.jelement.webaudio;
 
-import gwt.jelement.core.JsObject;
+import gwt.jelement.core.IsObject;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="PeriodicWave", isNative = true)
-public class PeriodicWave extends JsObject{
+public class PeriodicWave extends IsObject{
     @JsConstructor
     public PeriodicWave(BaseAudioContext context){
         super();

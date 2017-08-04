@@ -16,22 +16,16 @@
  */
 package gwt.jelement.webgl;
 
-import gwt.jelement.core.JsObject;
-import jsinterop.annotations.JsConstructor;
+import gwt.jelement.core.IsObject;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="WebGLCompressedTextureS3TC", isNative = true)
-public class WebGLCompressedTextureS3TC extends JsObject{
+public class WebGLCompressedTextureS3TC extends IsObject{
     public static double COMPRESSED_RGB_S3TC_DXT1_EXT; /* 0x83F0 */
     public static double COMPRESSED_RGBA_S3TC_DXT1_EXT; /* 0x83F1 */
     public static double COMPRESSED_RGBA_S3TC_DXT3_EXT; /* 0x83F2 */
     public static double COMPRESSED_RGBA_S3TC_DXT5_EXT; /* 0x83F3 */
-    
-    @JsConstructor
-    public WebGLCompressedTextureS3TC(){
-        super();
-    }
     
 }

@@ -16,17 +16,11 @@
  */
 package gwt.jelement.webgl;
 
-import gwt.jelement.core.JsObject;
-import jsinterop.annotations.JsConstructor;
+import gwt.jelement.core.IsObject;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="WebGLTimerQueryEXT", isNative = true)
-public class WebGLTimerQueryEXT extends JsObject{
-    @JsConstructor
-    public WebGLTimerQueryEXT(){
-        super();
-    }
-    
+public class WebGLTimerQueryEXT extends IsObject{
 }

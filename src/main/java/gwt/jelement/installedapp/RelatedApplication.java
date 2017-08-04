@@ -16,20 +16,14 @@
  */
 package gwt.jelement.installedapp;
 
-import gwt.jelement.core.JsObject;
-import jsinterop.annotations.JsConstructor;
+import gwt.jelement.core.IsObject;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="RelatedApplication", isNative = true)
-public class RelatedApplication extends JsObject{
-    @JsConstructor
-    public RelatedApplication(){
-        super();
-    }
-    
+public class RelatedApplication extends IsObject{
     @JsProperty(name="platform")
     public native String getPlatform();
     

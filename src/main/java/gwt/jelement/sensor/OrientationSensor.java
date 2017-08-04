@@ -19,7 +19,6 @@ package gwt.jelement.sensor;
 import gwt.jelement.core.Float32Array;
 import gwt.jelement.core.Float64Array;
 import gwt.jelement.geometry.DOMMatrix;
-import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
@@ -28,11 +27,6 @@ import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="OrientationSensor", isNative = true)
 public class OrientationSensor extends Sensor{
-    @JsConstructor
-    public OrientationSensor(){
-        super();
-    }
-    
     @JsProperty(name="quaternion")
     public native double[] getQuaternion();
     

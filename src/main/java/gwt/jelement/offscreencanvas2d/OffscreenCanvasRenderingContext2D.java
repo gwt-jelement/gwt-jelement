@@ -22,8 +22,10 @@ import gwt.jelement.canvas2d.CanvasPattern;
 import gwt.jelement.canvas2d.CanvasRenderingContext2D;
 import gwt.jelement.canvas2d.ImageSmoothingQuality;
 import gwt.jelement.canvas2d.Path2D;
+import gwt.jelement.core.Array;
 import gwt.jelement.core.Float32Array;
-import gwt.jelement.core.JsObject;
+import gwt.jelement.core.IsObject;
+import gwt.jelement.core.Js;
 import gwt.jelement.core.Uint16Array;
 import gwt.jelement.core.Uint8ClampedArray;
 import gwt.jelement.css.cssom.CSSImageValue;
@@ -36,17 +38,15 @@ import gwt.jelement.imagebitmap.ImageBitmap;
 import gwt.jelement.offscreencanvas.OffscreenCanvas;
 import gwt.jelement.svg.SVGImageElement;
 import elemental2.promise.Promise;
-import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 import jsinterop.base.Any;
-import jsinterop.base.Js;
 
 @JsType(namespace = JsPackage.GLOBAL, name="OffscreenCanvasRenderingContext2D", isNative = true)
-public class OffscreenCanvasRenderingContext2D extends JsObject{
+public class OffscreenCanvasRenderingContext2D extends IsObject{
     @JsProperty(name="strokeStyle")
     private CanvasRenderingContext2D.StrokeStyleUnion strokeStyle;
     
@@ -55,11 +55,6 @@ public class OffscreenCanvasRenderingContext2D extends JsObject{
     
     @JsProperty(name="imageSmoothingQuality")
     private String imageSmoothingQuality;
-    
-    @JsConstructor
-    public OffscreenCanvasRenderingContext2D(){
-        super();
-    }
     
     @JsProperty(name="canvas")
     public native OffscreenCanvas getCanvas();
@@ -430,6 +425,9 @@ public class OffscreenCanvasRenderingContext2D extends JsObject{
     
     @JsMethod(name = "setLineDash")
     public native void setLineDash(double[] dash);
+    
+    @JsMethod(name = "setLineDash")
+    public native void setLineDash(Array dash);
     
     @JsMethod(name = "setTransform")
     public native void setTransform(double a, double b, double c, double d, double e, double f);

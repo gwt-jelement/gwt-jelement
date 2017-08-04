@@ -16,20 +16,14 @@
  */
 package gwt.jelement.budget;
 
-import gwt.jelement.core.JsObject;
-import jsinterop.annotations.JsConstructor;
+import gwt.jelement.core.IsObject;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="BudgetState", isNative = true)
-public class BudgetState extends JsObject{
-    @JsConstructor
-    public BudgetState(){
-        super();
-    }
-    
+public class BudgetState extends IsObject{
     @JsProperty(name="budgetAt")
     public native double getBudgetAt();
     

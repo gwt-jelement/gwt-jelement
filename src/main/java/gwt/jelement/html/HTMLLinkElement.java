@@ -19,7 +19,6 @@ package gwt.jelement.html;
 import gwt.jelement.css.StyleSheet;
 import gwt.jelement.dom.DOMTokenList;
 import gwt.jelement.dom.Document;
-import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -27,11 +26,6 @@ import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="HTMLLinkElement", isNative = true)
 public class HTMLLinkElement extends HTMLElement{
-    @JsConstructor
-    public HTMLLinkElement(){
-        super();
-    }
-    
     @JsProperty(name="disabled")
     public native boolean getDisabled();
     

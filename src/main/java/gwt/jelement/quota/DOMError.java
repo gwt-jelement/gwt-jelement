@@ -16,7 +16,7 @@
  */
 package gwt.jelement.quota;
 
-import gwt.jelement.core.JsObject;
+import gwt.jelement.core.IsObject;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
@@ -24,7 +24,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="DOMError", isNative = true)
-public class DOMError extends JsObject{
+public class DOMError extends IsObject{
     @JsConstructor
     public DOMError(String name){
         super();
@@ -34,6 +34,9 @@ public class DOMError extends JsObject{
     public DOMError(String name, String message){
         super();
     }
+    
+    @JsProperty(name="name")
+    public native String getName();
     
     @JsProperty(name="message")
     public native String getMessage();

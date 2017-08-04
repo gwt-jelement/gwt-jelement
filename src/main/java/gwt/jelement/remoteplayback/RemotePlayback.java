@@ -19,7 +19,6 @@ package gwt.jelement.remoteplayback;
 import gwt.jelement.events.EventHandlerNonNull;
 import gwt.jelement.events.EventTarget;
 import elemental2.promise.Promise;
-import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
@@ -39,11 +38,6 @@ public class RemotePlayback extends EventTarget{
     
     @JsProperty(name="state")
     private String state;
-    
-    @JsConstructor
-    public RemotePlayback(){
-        super();
-    }
     
     @JsOverlay
     public final EventHandlerNonNull getOnConnecting(){

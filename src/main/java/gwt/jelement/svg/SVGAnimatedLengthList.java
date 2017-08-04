@@ -16,20 +16,14 @@
  */
 package gwt.jelement.svg;
 
-import gwt.jelement.core.JsObject;
-import jsinterop.annotations.JsConstructor;
+import gwt.jelement.core.IsObject;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="SVGAnimatedLengthList", isNative = true)
-public class SVGAnimatedLengthList extends JsObject{
-    @JsConstructor
-    public SVGAnimatedLengthList(){
-        super();
-    }
-    
+public class SVGAnimatedLengthList extends IsObject{
     @JsProperty(name="baseVal")
     public native SVGLengthList getBaseVal();
     

@@ -16,7 +16,7 @@
  */
 package gwt.jelement.peerconnection;
 
-import gwt.jelement.core.JsObject;
+import gwt.jelement.core.IsObject;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
@@ -24,7 +24,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="RTCSessionDescription", isNative = true)
-public class RTCSessionDescription extends JsObject{
+public class RTCSessionDescription extends IsObject{
     @JsProperty(name="type")
     private String type;
     

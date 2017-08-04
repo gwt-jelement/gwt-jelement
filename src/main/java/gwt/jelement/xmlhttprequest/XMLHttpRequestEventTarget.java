@@ -18,7 +18,6 @@ package gwt.jelement.xmlhttprequest;
 
 import gwt.jelement.events.EventHandlerNonNull;
 import gwt.jelement.events.EventTarget;
-import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -46,11 +45,6 @@ public class XMLHttpRequestEventTarget extends EventTarget{
     
     @JsProperty(name="onloadend")
     private EventHandlerNonNull onloadend;
-    
-    @JsConstructor
-    public XMLHttpRequestEventTarget(){
-        super();
-    }
     
     @JsOverlay
     public final EventHandlerNonNull getOnLoadstart(){

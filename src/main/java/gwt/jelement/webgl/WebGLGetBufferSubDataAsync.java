@@ -17,21 +17,15 @@
 package gwt.jelement.webgl;
 
 import gwt.jelement.core.ArrayBufferView;
-import gwt.jelement.core.JsObject;
+import gwt.jelement.core.IsObject;
 import elemental2.promise.Promise;
-import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="WebGLGetBufferSubDataAsync", isNative = true)
-public class WebGLGetBufferSubDataAsync extends JsObject{
-    @JsConstructor
-    public WebGLGetBufferSubDataAsync(){
-        super();
-    }
-    
+public class WebGLGetBufferSubDataAsync extends IsObject{
     @JsMethod(name = "getBufferSubDataAsync")
     public native Promise<ArrayBufferView> getBufferSubDataAsync(double target, double srcByteOffset, ArrayBufferView dstData);
     

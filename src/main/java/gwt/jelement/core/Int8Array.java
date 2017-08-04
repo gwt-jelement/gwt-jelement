@@ -57,8 +57,18 @@ public class Int8Array extends ArrayBufferView{
         super();
     }
     
+    @JsConstructor
+    public Int8Array(Array array){
+        super();
+    }
+    
     @JsProperty(name="length")
     public native double getLength();
+    
+    @JsOverlay
+    public final byte get(double index){
+        return Js.getByte(this.object(), index);
+    }
     
     @JsMethod(name = "set")
     public native void set(Int8Array array);
@@ -67,10 +77,21 @@ public class Int8Array extends ArrayBufferView{
     public native void set(byte[] array);
     
     @JsMethod(name = "set")
+    public native void set(Array array);
+    
+    @JsMethod(name = "set")
     public native void set(Int8Array array, double offset);
     
     @JsMethod(name = "set")
     public native void set(byte[] array, double offset);
+    
+    @JsOverlay
+    public final void set(double index, byte value){
+        Js.set(this.object(), index, value);
+    }
+    
+    @JsMethod(name = "set")
+    public native void set(Array array, double offset);
     
     @JsMethod(name = "subarray")
     public native Int8Array subarray(double begin);

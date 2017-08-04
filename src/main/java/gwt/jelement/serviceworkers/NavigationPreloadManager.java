@@ -16,21 +16,15 @@
  */
 package gwt.jelement.serviceworkers;
 
-import gwt.jelement.core.JsObject;
+import gwt.jelement.core.IsObject;
 import elemental2.promise.Promise;
-import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="NavigationPreloadManager", isNative = true)
-public class NavigationPreloadManager extends JsObject{
-    @JsConstructor
-    public NavigationPreloadManager(){
-        super();
-    }
-    
+public class NavigationPreloadManager extends IsObject{
     @JsMethod(name = "disable")
     public native Promise<Void> disable();
     

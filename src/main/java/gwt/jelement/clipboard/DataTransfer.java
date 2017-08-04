@@ -16,7 +16,7 @@
  */
 package gwt.jelement.clipboard;
 
-import gwt.jelement.core.JsObject;
+import gwt.jelement.core.IsObject;
 import gwt.jelement.dom.Element;
 import gwt.jelement.fileapi.FileList;
 import jsinterop.annotations.JsConstructor;
@@ -27,7 +27,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="DataTransfer", isNative = true)
-public class DataTransfer extends JsObject{
+public class DataTransfer extends IsObject{
     @JsConstructor
     public DataTransfer(){
         super();

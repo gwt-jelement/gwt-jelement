@@ -16,20 +16,14 @@
  */
 package gwt.jelement.frame;
 
-import gwt.jelement.core.JsObject;
-import jsinterop.annotations.JsConstructor;
+import gwt.jelement.core.IsObject;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="WindowBase64", isNative = true)
-public class WindowBase64 extends JsObject{
-    @JsConstructor
-    public WindowBase64(){
-        super();
-    }
-    
+public class WindowBase64 extends IsObject{
     @JsMethod(name = "atob")
     public native String atob(String atob);
     

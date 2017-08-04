@@ -17,7 +17,6 @@
 package gwt.jelement.html;
 
 import gwt.jelement.dom.NodeList;
-import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -25,11 +24,6 @@ import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="RadioNodeList", isNative = true)
 public class RadioNodeList extends NodeList{
-    @JsConstructor
-    public RadioNodeList(){
-        super();
-    }
-    
     @JsProperty(name="value")
     public native String getValue();
     

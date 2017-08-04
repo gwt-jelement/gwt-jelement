@@ -16,7 +16,6 @@
  */
 package gwt.jelement.svg;
 
-import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -24,11 +23,6 @@ import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="SVGFEPointLightElement", isNative = true)
 public class SVGFEPointLightElement extends SVGElement{
-    @JsConstructor
-    public SVGFEPointLightElement(){
-        super();
-    }
-    
     @JsProperty(name="x")
     public native SVGAnimatedNumber getX();
     

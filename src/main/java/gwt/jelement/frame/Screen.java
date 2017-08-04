@@ -16,21 +16,15 @@
  */
 package gwt.jelement.frame;
 
-import gwt.jelement.core.JsObject;
+import gwt.jelement.core.IsObject;
 import gwt.jelement.screen_orientation.ScreenOrientation;
-import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="Screen", isNative = true)
-public class Screen extends JsObject{
-    @JsConstructor
-    public Screen(){
-        super();
-    }
-    
+public class Screen extends IsObject{
     @JsProperty(name="availWidth")
     public native double getAvailWidth();
     

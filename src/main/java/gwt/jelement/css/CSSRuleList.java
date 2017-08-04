@@ -16,17 +16,15 @@
  */
 package gwt.jelement.css;
 
-import gwt.jelement.core.JsObject;
-import jsinterop.annotations.JsConstructor;
+import gwt.jelement.core.ArrayLike;
+import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="CSSRuleList", isNative = true)
-public class CSSRuleList extends JsObject{
-    @JsConstructor
-    public CSSRuleList(){
-        super();
-    }
+public class CSSRuleList extends ArrayLike{
+    @JsMethod(name = "item")
+    public native CSSRule item(double index);
     
 }

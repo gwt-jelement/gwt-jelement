@@ -17,7 +17,6 @@
 package gwt.jelement.svg;
 
 import gwt.jelement.events.EventHandlerNonNull;
-import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
@@ -34,11 +33,6 @@ public class SVGAnimationElement extends SVGElement{
     
     @JsProperty(name="onrepeat")
     private EventHandlerNonNull onrepeat;
-    
-    @JsConstructor
-    public SVGAnimationElement(){
-        super();
-    }
     
     @JsProperty(name="targetElement")
     public native SVGElement getTargetElement();

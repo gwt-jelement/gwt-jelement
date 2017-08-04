@@ -16,7 +16,7 @@
  */
 package gwt.jelement.webusb;
 
-import gwt.jelement.core.JsObject;
+import gwt.jelement.core.IsObject;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
@@ -24,7 +24,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="USBIsochronousOutTransferResult", isNative = true)
-public class USBIsochronousOutTransferResult extends JsObject{
+public class USBIsochronousOutTransferResult extends IsObject{
     @JsConstructor
     public USBIsochronousOutTransferResult(USBIsochronousOutTransferPacket[] packets){
         super();

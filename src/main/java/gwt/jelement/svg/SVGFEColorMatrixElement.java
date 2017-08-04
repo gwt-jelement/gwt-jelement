@@ -16,7 +16,6 @@
  */
 package gwt.jelement.svg;
 
-import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -29,11 +28,6 @@ public class SVGFEColorMatrixElement extends SVGElement{
     public static short SVG_FECOLORMATRIX_TYPE_SATURATE; /* 2 */
     public static short SVG_FECOLORMATRIX_TYPE_HUEROTATE; /* 3 */
     public static short SVG_FECOLORMATRIX_TYPE_LUMINANCETOALPHA; /* 4 */
-    
-    @JsConstructor
-    public SVGFEColorMatrixElement(){
-        super();
-    }
     
     @JsProperty(name="in1")
     public native SVGAnimatedString getIn1();

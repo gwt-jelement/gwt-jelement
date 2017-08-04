@@ -16,9 +16,9 @@
  */
 package gwt.jelement.indexeddb;
 
-import gwt.jelement.core.JsObject;
+import gwt.jelement.core.Array;
+import gwt.jelement.core.IsObject;
 import gwt.jelement.dom.DOMStringList;
-import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
@@ -27,11 +27,12 @@ import jsinterop.annotations.JsType;
 import jsinterop.base.Any;
 
 @JsType(namespace = JsPackage.GLOBAL, name="IDBObjectStore", isNative = true)
-public class IDBObjectStore extends JsObject{
-    @JsConstructor
-    public IDBObjectStore(){
-        super();
-    }
+public class IDBObjectStore extends IsObject{
+    @JsProperty(name="name")
+    public native String getName();
+    
+    @JsProperty(name="name")
+    public native void setName(String name);
     
     @JsProperty(name="keyPath")
     public native Object getKeyPath();
@@ -67,10 +68,16 @@ public class IDBObjectStore extends JsObject{
     public native IDBIndex createIndex(String name, String[] keyPath);
     
     @JsMethod(name = "createIndex")
+    public native IDBIndex createIndex(String name, Array keyPath);
+    
+    @JsMethod(name = "createIndex")
     public native IDBIndex createIndex(String name, String keyPath, IDBIndexParameters options);
     
     @JsMethod(name = "createIndex")
     public native IDBIndex createIndex(String name, String[] keyPath, IDBIndexParameters options);
+    
+    @JsMethod(name = "createIndex")
+    public native IDBIndex createIndex(String name, Array keyPath, IDBIndexParameters options);
     
     @JsMethod(name = "delete")
     public native IDBRequest delete(Object key);

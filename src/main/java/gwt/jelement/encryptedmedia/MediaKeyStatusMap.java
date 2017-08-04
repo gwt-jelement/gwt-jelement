@@ -18,8 +18,7 @@ package gwt.jelement.encryptedmedia;
 
 import gwt.jelement.core.ArrayBuffer;
 import gwt.jelement.core.ArrayBufferView;
-import gwt.jelement.core.JsObject;
-import jsinterop.annotations.JsConstructor;
+import gwt.jelement.core.IsObject;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
@@ -27,12 +26,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="MediaKeyStatusMap", isNative = true)
-public class MediaKeyStatusMap extends JsObject{
-    @JsConstructor
-    public MediaKeyStatusMap(){
-        super();
-    }
-    
+public class MediaKeyStatusMap extends IsObject{
     @JsProperty(name="size")
     public native double getSize();
     

@@ -18,7 +18,6 @@ package gwt.jelement.sensor;
 
 import gwt.jelement.events.EventHandlerNonNull;
 import gwt.jelement.events.EventTarget;
-import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
@@ -35,11 +34,6 @@ public class Sensor extends EventTarget{
     
     @JsProperty(name="onactivate")
     private EventHandlerNonNull onactivate;
-    
-    @JsConstructor
-    public Sensor(){
-        super();
-    }
     
     @JsProperty(name="activated")
     public native boolean getActivated();

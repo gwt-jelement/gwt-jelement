@@ -16,13 +16,13 @@
  */
 package gwt.jelement.geometry;
 
+import gwt.jelement.core.Js;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
-import jsinterop.base.Js;
 
 @JsType(namespace = JsPackage.GLOBAL, name="DOMRect", isNative = true)
 public class DOMRect extends DOMRectReadOnly{

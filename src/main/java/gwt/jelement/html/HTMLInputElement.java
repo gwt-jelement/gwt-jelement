@@ -20,7 +20,6 @@ import gwt.jelement.core.Date;
 import gwt.jelement.dom.NodeList;
 import gwt.jelement.fileapi.FileList;
 import gwt.jelement.filesystem.Entry;
-import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
@@ -30,11 +29,6 @@ import jsinterop.base.Any;
 
 @JsType(namespace = JsPackage.GLOBAL, name="HTMLInputElement", isNative = true)
 public class HTMLInputElement extends HTMLElement{
-    @JsConstructor
-    public HTMLInputElement(){
-        super();
-    }
-    
     @JsProperty(name="accept")
     public native String getAccept();
     

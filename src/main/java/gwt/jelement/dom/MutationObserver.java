@@ -16,7 +16,7 @@
  */
 package gwt.jelement.dom;
 
-import gwt.jelement.core.JsObject;
+import gwt.jelement.core.IsObject;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
@@ -24,7 +24,7 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="MutationObserver", isNative = true)
-public class MutationObserver extends JsObject{
+public class MutationObserver extends IsObject{
     @JsConstructor
     public MutationObserver(MutationCallback callback){
         super();

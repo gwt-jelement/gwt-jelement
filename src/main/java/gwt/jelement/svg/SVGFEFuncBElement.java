@@ -16,16 +16,10 @@
  */
 package gwt.jelement.svg;
 
-import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="SVGFEFuncBElement", isNative = true)
 public class SVGFEFuncBElement extends SVGComponentTransferFunctionElement{
-    @JsConstructor
-    public SVGFEFuncBElement(){
-        super();
-    }
-    
 }

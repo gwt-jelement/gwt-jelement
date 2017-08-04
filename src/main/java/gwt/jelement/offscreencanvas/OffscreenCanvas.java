@@ -16,6 +16,7 @@
  */
 package gwt.jelement.offscreencanvas;
 
+import gwt.jelement.core.Js;
 import gwt.jelement.events.EventTarget;
 import gwt.jelement.fileapi.Blob;
 import gwt.jelement.html.canvas.CanvasContextCreationAttributes;
@@ -31,7 +32,6 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 import jsinterop.base.Any;
-import jsinterop.base.Js;
 
 @JsType(namespace = JsPackage.GLOBAL, name="OffscreenCanvas", isNative = true)
 public class OffscreenCanvas extends EventTarget{

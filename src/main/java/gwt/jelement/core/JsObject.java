@@ -24,7 +24,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="Object", isNative = true)
-public class JsObject<T>{
+public class JsObject<T> extends IsObject{
     @JsProperty(name="length")
     public static int length;
     
@@ -39,10 +39,12 @@ public class JsObject<T>{
     
     @JsConstructor
     public JsObject(){
+        super();
     }
     
     @JsConstructor
     public JsObject(Object value){
+        super();
     }
     
     @JsProperty(name="__proto__")
@@ -64,22 +66,25 @@ public class JsObject<T>{
     public native void __defineSetter__(String propertyName, ObjectPropertySetterFunction func);
     
     @JsMethod(name = "__lookupGetter__")
-    public native ObjectPropertyGetterFunction __lookupGetter__(String propertyName);
+    public native <U> ObjectPropertyGetterFunction<U> __lookupGetter__(String propertyName);
     
     @JsMethod(name = "__lookupSetter__")
-    public native ObjectPropertySetterFunction __lookupSetter__(String propertyName);
+    public native <U> ObjectPropertySetterFunction<U> __lookupSetter__(String propertyName);
     
     @JsMethod(name = "apply")
-    public static native Object apply_(Object thisArg);
+    public static native Object apply(Object thisArg);
     
     @JsMethod(name = "apply")
-    public static native Object apply_(Object thisArg, Object[] arguments);
+    public static native Object apply(Object thisArg, Object[] arguments);
+    
+    @JsMethod(name = "apply")
+    public static native Object apply(Object thisArg, Array arguments);
     
     @JsMethod(name = "assign")
     public static native JsObject assign(JsObject target, JsObject... sources);
     
     @JsMethod(name = "call")
-    public static native Object call_(Object thisArg, Object... arguments);
+    public static native Object call(Object thisArg, Object... arguments);
     
     @JsMethod(name = "create")
     public static native JsObject create(JsObject proto);
@@ -88,22 +93,22 @@ public class JsObject<T>{
     public static native JsObject create(JsObject proto, JsObject propertiesObject);
     
     @JsMethod(name = "defineProperties")
-    public native <T extends JsObject> T defineProperties(T obj, JsObject<ObjectPropertyDescriptor> properties);
+    public native T defineProperties(T obj, JsObject<ObjectPropertyDescriptor> properties);
     
     @JsMethod(name = "defineProperty")
-    public static native <T extends JsObject> T defineProperty(T obj, String propertyName, ObjectPropertyDescriptor<?> descriptor);
+    public static native <T,U> T defineProperty(T obj, String propertyName, ObjectPropertyDescriptor<U> descriptor);
     
     @JsMethod(name = "entries")
     public static native Object[][] entries(JsObject obj);
     
     @JsMethod(name = "freeze")
-    public static native <T extends JsObject> T freeze(T obj);
+    public static native <T> T freeze(T obj);
     
     @JsMethod(name = "getOwnPropertyDescriptor")
-    public static native ObjectPropertyDescriptor getOwnPropertyDescriptor(JsObject obj, String propertyName);
+    public static native <U> ObjectPropertyDescriptor<U> getOwnPropertyDescriptor(JsObject obj, String propertyName);
     
     @JsMethod(name = "getOwnPropertyDescriptors")
-    public static native JsObject getOwnPropertyDescriptors(JsObject obj);
+    public static native JsObject<ObjectPropertyDescriptor> getOwnPropertyDescriptors(JsObject obj);
     
     @JsMethod(name = "getOwnPropertyNames")
     public static native String[] getOwnPropertyNames(JsObject obj);
@@ -142,13 +147,31 @@ public class JsObject<T>{
     public native boolean propertyIsEnumerable(String propertyName);
     
     @JsMethod(name = "seal")
-    public static native <T extends JsObject> T seal(T seal);
+    public static native <T> T seal(T seal);
     
     @JsMethod(name = "setPrototypeOf")
     public static native JsObject setPrototypeOf(JsObject obj, Object proto);
     
     @JsMethod(name = "toLocaleString")
     public native String toLocaleString();
+    
+    @JsMethod(name = "toLocaleString")
+    public native String toLocaleString(String locales);
+    
+    @JsMethod(name = "toLocaleString")
+    public native String toLocaleString(String[] locales);
+    
+    @JsMethod(name = "toLocaleString")
+    public native String toLocaleString(Array locales);
+    
+    @JsMethod(name = "toLocaleString")
+    public native String toLocaleString(String locales, LocaleOptions options);
+    
+    @JsMethod(name = "toLocaleString")
+    public native String toLocaleString(String[] locales, LocaleOptions options);
+    
+    @JsMethod(name = "toLocaleString")
+    public native String toLocaleString(Array locales, LocaleOptions options);
     
     @JsMethod(name = "toSource")
     public native String toSource();
@@ -160,258 +183,258 @@ public class JsObject<T>{
     public static native <T> T values(JsObject<T> obj);
     
     @JsOverlay
-    public final T get(String propertyName){
+    public final T get(String propertyName) {
         return Js.<T>get(this, propertyName);
     }
-
+    
     @JsOverlay
-    public final T get(double index){
+    public final T get(double index) {
         return Js.<T>get(this, index);
     }
-
+    
     @JsOverlay
-    public final boolean getBoolean(String propertyName){
+    public final boolean getBoolean(String propertyName) {
         return Js.getBoolean(this, propertyName);
     }
-
+    
     @JsOverlay
-    public final boolean getBoolean(double index){
+    public final boolean getBoolean(double index) {
         return Js.getBoolean(this, index);
     }
-
+    
     @JsOverlay
-    public final char getChar(String propertyName){
+    public final char getChar(String propertyName) {
         return Js.getChar(this, propertyName);
     }
-
+    
     @JsOverlay
-    public final char getChar(double index){
+    public final char getChar(double index) {
         return Js.getChar(this, index);
     }
-
+    
     @JsOverlay
-    public final byte getByte(String propertyName){
+    public final byte getByte(String propertyName) {
         return Js.getByte(this, propertyName);
     }
-
+    
     @JsOverlay
-    public final byte getByte(double index){
+    public final byte getByte(double index) {
         return Js.getByte(this, index);
     }
-
+    
     @JsOverlay
-    public final short getShort(String propertyName){
+    public final short getShort(String propertyName) {
         return Js.getShort(this, propertyName);
     }
-
+    
     @JsOverlay
-    public final short getShort(double index){
+    public final short getShort(double index) {
         return Js.getShort(this, index);
     }
-
+    
     @JsOverlay
-    public final int getInt(String propertyName){
+    public final int getInt(String propertyName) {
         return Js.getInt(this, propertyName);
     }
-
+    
     @JsOverlay
-    public final int getInt(double index){
+    public final int getInt(double index) {
         return Js.getInt(this, index);
     }
-
+    
     @JsOverlay
-    public final float getFloat(String propertyName){
+    public final float getFloat(String propertyName) {
         return Js.getFloat(this, propertyName);
     }
-
+    
     @JsOverlay
-    public final float getFloat(double index){
+    public final float getFloat(double index) {
         return Js.getFloat(this, index);
     }
-
+    
     @JsOverlay
-    public final double getDouble(String propertyName){
+    public final double getDouble(String propertyName) {
         return Js.getDouble(this, propertyName);
     }
-
+    
     @JsOverlay
-    public final double getDouble(double index){
+    public final double getDouble(double index) {
         return Js.getDouble(this, index);
     }
-
+    
     @JsOverlay
-    public final long getLong(String propertyName){
+    public final long getLong(String propertyName) {
         return Js.getLong(this, propertyName);
     }
-
+    
     @JsOverlay
-    public final long getLong(double index){
+    public final long getLong(double index) {
         return Js.getLong(this, index);
     }
-
+    
     @JsOverlay
-    public final void set(String propertyName, T value){
+    public final void set(String propertyName, T value) {
         Js.<T>set(this, propertyName, value);
     }
-
+    
     @JsOverlay
-    public final void set(double index , T value){
+    public final void set(double index, T value) {
         Js.<T>set(this, index, value);
     }
-
+    
     @JsOverlay
-    public final void set(String propertyName, boolean value){
+    public final void set(String propertyName, boolean value) {
         Js.<T>set(this, propertyName, value);
     }
-
+    
     @JsOverlay
-    public final void set(double index , boolean value){
+    public final void set(double index, boolean value) {
         Js.<T>set(this, index, value);
     }
-
+    
     @JsOverlay
-    public final void set(String propertyName, char value){
+    public final void set(String propertyName, char value) {
         Js.<T>set(this, propertyName, value);
     }
-
+    
     @JsOverlay
-    public final void set(double index , char value){
+    public final void set(double index, char value) {
         Js.<T>set(this, index, value);
     }
-
+    
     @JsOverlay
-    public final void set(String propertyName, byte value){
+    public final void set(String propertyName, byte value) {
         Js.<T>set(this, propertyName, value);
     }
-
+    
     @JsOverlay
-    public final void set(double index , byte value){
+    public final void set(double index, byte value) {
         Js.<T>set(this, index, value);
     }
-
+    
     @JsOverlay
-    public final void set(String propertyName, short value){
+    public final void set(String propertyName, short value) {
         Js.<T>set(this, propertyName, value);
     }
-
+    
     @JsOverlay
-    public final void set(double index , short value){
+    public final void set(double index, short value) {
         Js.<T>set(this, index, value);
     }
-
+    
     @JsOverlay
-    public final void set(String propertyName, int value){
+    public final void set(String propertyName, int value) {
         Js.<T>set(this, propertyName, value);
     }
-
+    
     @JsOverlay
-    public final void set(double index , int value){
+    public final void set(double index, int value) {
         Js.<T>set(this, index, value);
     }
-
+    
     @JsOverlay
-    public final void set(String propertyName, float value){
+    public final void set(String propertyName, float value) {
         Js.<T>set(this, propertyName, value);
     }
-
+    
     @JsOverlay
-    public final void set(double index , float value){
+    public final void set(double index, float value) {
         Js.<T>set(this, index, value);
     }
-
+    
     @JsOverlay
-    public final void set(String propertyName, double value){
+    public final void set(String propertyName, double value) {
         Js.<T>set(this, propertyName, value);
     }
-
+    
     @JsOverlay
-    public final void set(double index , double value){
+    public final void set(double index, double value) {
         Js.<T>set(this, index, value);
     }
-
+    
     @JsOverlay
-    public final void set(String propertyName, long value){
+    public final void set(String propertyName, long value) {
         Js.set(this, propertyName, (double) value);
     }
-
+    
     @JsOverlay
-    public final void set(double index, long value){
+    public final void set(double index, long value) {
         Js.set(this, index, (double) value);
     }
-
+    
     @JsOverlay
-    public final void delete(String propertyName){
+    public final void delete(String propertyName) {
         Js.<T>delete(this, propertyName);
     }
-
+    
     @JsOverlay
-    public final void delete(double index){
+    public final void delete(double index) {
         Js.<T>delete(this, index);
     }
-
+    
     @JsOverlay
-    public final boolean has(String propertyName){
+    public final boolean has(String propertyName) {
         return Js.<T>has(this, propertyName);
     }
-
+    
     @JsOverlay
-    public final boolean has(double index){
-         return Js.<T>has(this, index);
+    public final boolean has(double index) {
+        return Js.<T>has(this, index);
     }
-
+    
     @JsOverlay
-    public final JsObject<T> with(String propertyName, T value){
+    public final JsObject<T> with(String propertyName, T value) {
         return Js.<T>with(this, propertyName, value);
     }
-
+    
     @JsOverlay
-    public final JsObject<T> with(String propertyName, boolean value){
+    public final JsObject<T> with(String propertyName, boolean value) {
         return Js.<T>with(this, propertyName, value);
     }
-
+    
     @JsOverlay
-    public final JsObject<T> with(String propertyName, char value){
+    public final JsObject<T> with(String propertyName, char value) {
         return Js.<T>with(this, propertyName, value);
     }
-
+    
     @JsOverlay
-    public final JsObject<T> with(String propertyName, byte value){
+    public final JsObject<T> with(String propertyName, byte value) {
         return Js.<T>with(this, propertyName, value);
     }
-
+    
     @JsOverlay
-    public final JsObject<T> with(String propertyName, short value){
+    public final JsObject<T> with(String propertyName, short value) {
         return Js.<T>with(this, propertyName, value);
     }
-
+    
     @JsOverlay
-    public final JsObject<T> with(String propertyName, int value){
+    public final JsObject<T> with(String propertyName, int value) {
         return Js.<T>with(this, propertyName, value);
     }
-
+    
     @JsOverlay
-    public final JsObject<T> with(String propertyName, float value){
+    public final JsObject<T> with(String propertyName, float value) {
         return Js.<T>with(this, propertyName, value);
     }
-
+    
     @JsOverlay
-    public final JsObject<T> with(String propertyName, double value){
+    public final JsObject<T> with(String propertyName, double value) {
         return Js.<T>with(this, propertyName, value);
     }
-
+    
     @JsOverlay
-    public final JsObject<T> with(String propertyName, long value){
-        return Js.<T>with(this, propertyName, (double)value);
+    public final JsObject<T> with(String propertyName, long value) {
+        return Js.<T>with(this, propertyName, (double) value);
     }
-
+    
     @JsOverlay
-    public final boolean isEqualTo(Object object){
+    public final boolean isEqualTo(Object object) {
         return Js.isEqual(this, object);
     }
-
+    
     @JsOverlay
-    public final boolean isStrictlyEqualTo(Object object){
+    public final boolean isStrictlyEqualTo(Object object) {
         return Js.isStrictlyEqual(this, object);
     }
-
+    
 }

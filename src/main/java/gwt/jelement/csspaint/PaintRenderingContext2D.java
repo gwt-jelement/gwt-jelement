@@ -22,7 +22,9 @@ import gwt.jelement.canvas2d.CanvasPattern;
 import gwt.jelement.canvas2d.CanvasRenderingContext2D;
 import gwt.jelement.canvas2d.ImageSmoothingQuality;
 import gwt.jelement.canvas2d.Path2D;
-import gwt.jelement.core.JsObject;
+import gwt.jelement.core.Array;
+import gwt.jelement.core.IsObject;
+import gwt.jelement.core.Js;
 import gwt.jelement.css.cssom.CSSImageValue;
 import gwt.jelement.html.HTMLCanvasElement;
 import gwt.jelement.html.HTMLImageElement;
@@ -31,17 +33,15 @@ import gwt.jelement.imagebitmap.ImageBitmap;
 import gwt.jelement.offscreencanvas.OffscreenCanvas;
 import gwt.jelement.svg.SVGImageElement;
 import gwt.jelement.svg.SVGMatrix;
-import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 import jsinterop.base.Any;
-import jsinterop.base.Js;
 
 @JsType(namespace = JsPackage.GLOBAL, name="PaintRenderingContext2D", isNative = true)
-public class PaintRenderingContext2D extends JsObject{
+public class PaintRenderingContext2D extends IsObject{
     @JsProperty(name="strokeStyle")
     private CanvasRenderingContext2D.StrokeStyleUnion strokeStyle;
     
@@ -50,11 +50,6 @@ public class PaintRenderingContext2D extends JsObject{
     
     @JsProperty(name="imageSmoothingQuality")
     private String imageSmoothingQuality;
-    
-    @JsConstructor
-    public PaintRenderingContext2D(){
-        super();
-    }
     
     @JsProperty(name="currentTransform")
     public native SVGMatrix getCurrentTransform();
@@ -414,6 +409,9 @@ public class PaintRenderingContext2D extends JsObject{
     
     @JsMethod(name = "setLineDash")
     public native void setLineDash(double[] dash);
+    
+    @JsMethod(name = "setLineDash")
+    public native void setLineDash(Array dash);
     
     @JsMethod(name = "setTransform")
     public native void setTransform(double a, double b, double c, double d, double e, double f);

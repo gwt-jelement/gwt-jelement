@@ -16,20 +16,14 @@
  */
 package gwt.jelement.media_capabilities;
 
-import gwt.jelement.core.JsObject;
-import jsinterop.annotations.JsConstructor;
+import gwt.jelement.core.IsObject;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="MediaCapabilitiesInfo", isNative = true)
-public class MediaCapabilitiesInfo extends JsObject{
-    @JsConstructor
-    public MediaCapabilitiesInfo(){
-        super();
-    }
-    
+public class MediaCapabilitiesInfo extends IsObject{
     @JsProperty(name="supported")
     public native boolean getSupported();
     

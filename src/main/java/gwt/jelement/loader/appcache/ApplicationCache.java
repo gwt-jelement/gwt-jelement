@@ -18,7 +18,6 @@ package gwt.jelement.loader.appcache;
 
 import gwt.jelement.events.EventHandlerNonNull;
 import gwt.jelement.events.EventTarget;
-import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
@@ -57,11 +56,6 @@ public class ApplicationCache extends EventTarget{
     
     @JsProperty(name="onobsolete")
     private EventHandlerNonNull onobsolete;
-    
-    @JsConstructor
-    public ApplicationCache(){
-        super();
-    }
     
     @JsProperty(name="status")
     public native short getStatus();

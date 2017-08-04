@@ -16,7 +16,6 @@
  */
 package gwt.jelement.svg;
 
-import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -30,11 +29,6 @@ public class SVGFETurbulenceElement extends SVGElement{
     public static short SVG_STITCHTYPE_UNKNOWN; /* 0 */
     public static short SVG_STITCHTYPE_STITCH; /* 1 */
     public static short SVG_STITCHTYPE_NOSTITCH; /* 2 */
-    
-    @JsConstructor
-    public SVGFETurbulenceElement(){
-        super();
-    }
     
     @JsProperty(name="baseFrequencyX")
     public native SVGAnimatedNumber getBaseFrequencyX();

@@ -16,21 +16,15 @@
  */
 package gwt.jelement.canvas2d;
 
-import gwt.jelement.core.JsObject;
+import gwt.jelement.core.IsObject;
 import gwt.jelement.svg.SVGMatrix;
-import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="CanvasPattern", isNative = true)
-public class CanvasPattern extends JsObject{
-    @JsConstructor
-    public CanvasPattern(){
-        super();
-    }
-    
+public class CanvasPattern extends IsObject{
     @JsMethod(name = "setTransform")
     public native void setTransform(SVGMatrix transform);
     

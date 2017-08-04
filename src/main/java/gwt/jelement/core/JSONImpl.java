@@ -16,19 +16,13 @@
  */
 package gwt.jelement.core;
 
-import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="JSON", isNative = true)
-public class JSONImpl extends JsObject{
-    @JsConstructor
-    public JSONImpl(){
-        super();
-    }
-    
+public class JSONImpl extends IsObject{
     @JsMethod(name = "parse")
     public native Object parse(String text);
     
@@ -45,6 +39,9 @@ public class JSONImpl extends JsObject{
     public native String stringify(Object value, JSONModifier replacer);
     
     @JsMethod(name = "stringify")
+    public native String stringify(Object value, Array replacer);
+    
+    @JsMethod(name = "stringify")
     public native String stringify(Object value, String[] replacer, String space);
     
     @JsMethod(name = "stringify")
@@ -55,5 +52,11 @@ public class JSONImpl extends JsObject{
     
     @JsMethod(name = "stringify")
     public native String stringify(Object value, JSONModifier replacer, double space);
+    
+    @JsMethod(name = "stringify")
+    public native String stringify(Object value, Array replacer, String space);
+    
+    @JsMethod(name = "stringify")
+    public native String stringify(Object value, Array replacer, double space);
     
 }

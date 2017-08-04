@@ -16,7 +16,6 @@
  */
 package gwt.jelement.svg;
 
-import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -31,11 +30,6 @@ public class SVGFECompositeElement extends SVGElement{
     public static short SVG_FECOMPOSITE_OPERATOR_ATOP; /* 4 */
     public static short SVG_FECOMPOSITE_OPERATOR_XOR; /* 5 */
     public static short SVG_FECOMPOSITE_OPERATOR_ARITHMETIC; /* 6 */
-    
-    @JsConstructor
-    public SVGFECompositeElement(){
-        super();
-    }
     
     @JsProperty(name="in2")
     public native SVGAnimatedString getIn2();

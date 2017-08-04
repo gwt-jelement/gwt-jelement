@@ -16,9 +16,8 @@
  */
 package gwt.jelement.imagebitmap;
 
-import gwt.jelement.core.JsObject;
+import gwt.jelement.core.IsObject;
 import gwt.jelement.html.HTMLCanvasElement;
-import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
@@ -26,12 +25,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="ImageBitmapRenderingContext", isNative = true)
-public class ImageBitmapRenderingContext extends JsObject{
-    @JsConstructor
-    public ImageBitmapRenderingContext(){
-        super();
-    }
-    
+public class ImageBitmapRenderingContext extends IsObject{
     @JsProperty(name="canvas")
     public native HTMLCanvasElement getCanvas();
     

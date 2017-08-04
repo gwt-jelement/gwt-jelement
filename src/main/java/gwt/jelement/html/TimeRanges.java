@@ -16,19 +16,17 @@
  */
 package gwt.jelement.html;
 
-import gwt.jelement.core.JsObject;
-import jsinterop.annotations.JsConstructor;
+import gwt.jelement.core.IsObject;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
+import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="TimeRanges", isNative = true)
-public class TimeRanges extends JsObject{
-    @JsConstructor
-    public TimeRanges(){
-        super();
-    }
+public class TimeRanges extends IsObject{
+    @JsProperty(name="length")
+    public native double getLength();
     
     @JsMethod(name = "end")
     public native double end(double index);

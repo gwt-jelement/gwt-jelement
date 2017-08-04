@@ -16,8 +16,10 @@
  */
 package gwt.jelement.canvas2d;
 
+import gwt.jelement.core.Array;
 import gwt.jelement.core.Float32Array;
-import gwt.jelement.core.JsObject;
+import gwt.jelement.core.IsObject;
+import gwt.jelement.core.Js;
 import gwt.jelement.core.Uint16Array;
 import gwt.jelement.core.Uint8ClampedArray;
 import gwt.jelement.css.cssom.CSSImageValue;
@@ -32,17 +34,15 @@ import gwt.jelement.imagebitmap.ImageBitmap;
 import gwt.jelement.offscreencanvas.OffscreenCanvas;
 import gwt.jelement.svg.SVGImageElement;
 import gwt.jelement.svg.SVGMatrix;
-import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 import jsinterop.base.Any;
-import jsinterop.base.Js;
 
 @JsType(namespace = JsPackage.GLOBAL, name="CanvasRenderingContext2D", isNative = true)
-public class CanvasRenderingContext2D extends JsObject{
+public class CanvasRenderingContext2D extends IsObject{
     @JsType(isNative = true, name = "?", namespace = JsPackage.GLOBAL)
     public interface StrokeStyleUnion {
         @JsOverlay
@@ -100,11 +100,6 @@ public class CanvasRenderingContext2D extends JsObject{
     
     @JsProperty(name="imageSmoothingQuality")
     private String imageSmoothingQuality;
-    
-    @JsConstructor
-    public CanvasRenderingContext2D(){
-        super();
-    }
     
     @JsProperty(name="canvas")
     public native HTMLCanvasElement getCanvas();
@@ -566,6 +561,9 @@ public class CanvasRenderingContext2D extends JsObject{
     
     @JsMethod(name = "setLineDash")
     public native void setLineDash(double[] dash);
+    
+    @JsMethod(name = "setLineDash")
+    public native void setLineDash(Array dash);
     
     @JsMethod(name = "setTransform")
     public native void setTransform(double a, double b, double c, double d, double e, double f);

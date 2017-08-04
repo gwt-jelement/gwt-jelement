@@ -16,7 +16,7 @@
  */
 package gwt.jelement.indexeddb;
 
-import gwt.jelement.core.JsObject;
+import gwt.jelement.core.IsObject;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
@@ -24,7 +24,7 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="IDBObserver", isNative = true)
-public class IDBObserver extends JsObject{
+public class IDBObserver extends IsObject{
     @JsConstructor
     public IDBObserver(IDBObserverCallback callback){
         super();

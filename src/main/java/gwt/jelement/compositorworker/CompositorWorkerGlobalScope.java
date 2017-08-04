@@ -20,7 +20,6 @@ import gwt.jelement.dom.FrameRequestCallback;
 import gwt.jelement.dom.MessagePort;
 import gwt.jelement.events.EventHandlerNonNull;
 import gwt.jelement.workers.WorkerGlobalScope;
-import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
@@ -31,11 +30,6 @@ import jsinterop.annotations.JsType;
 public class CompositorWorkerGlobalScope extends WorkerGlobalScope{
     @JsProperty(name="onmessage")
     private EventHandlerNonNull onmessage;
-    
-    @JsConstructor
-    public CompositorWorkerGlobalScope(){
-        super();
-    }
     
     @JsOverlay
     public final EventHandlerNonNull getOnMessage(){

@@ -19,7 +19,6 @@ package gwt.jelement.webusb;
 import gwt.jelement.events.EventHandlerNonNull;
 import gwt.jelement.events.EventTarget;
 import elemental2.promise.Promise;
-import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
@@ -33,11 +32,6 @@ public class USB extends EventTarget{
     
     @JsProperty(name="ondisconnect")
     private EventHandlerNonNull ondisconnect;
-    
-    @JsConstructor
-    public USB(){
-        super();
-    }
     
     @JsOverlay
     public final EventHandlerNonNull getOnConnect(){

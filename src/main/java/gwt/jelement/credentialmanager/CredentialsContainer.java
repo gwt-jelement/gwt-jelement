@@ -16,21 +16,15 @@
  */
 package gwt.jelement.credentialmanager;
 
-import gwt.jelement.core.JsObject;
+import gwt.jelement.core.IsObject;
 import elemental2.promise.Promise;
-import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="CredentialsContainer", isNative = true)
-public class CredentialsContainer extends JsObject{
-    @JsConstructor
-    public CredentialsContainer(){
-        super();
-    }
-    
+public class CredentialsContainer extends IsObject{
     @JsMethod(name = "create")
     public native Promise create();
     

@@ -16,10 +16,10 @@
  */
 package gwt.jelement.indexeddb;
 
+import gwt.jelement.core.Array;
 import gwt.jelement.dom.DOMStringList;
 import gwt.jelement.events.EventHandlerNonNull;
 import gwt.jelement.events.EventTarget;
-import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
@@ -40,11 +40,6 @@ public class IDBDatabase extends EventTarget{
     
     @JsProperty(name="onversionchange")
     private EventHandlerNonNull onversionchange;
-    
-    @JsConstructor
-    public IDBDatabase(){
-        super();
-    }
     
     @JsProperty(name="name")
     public native String getName();
@@ -113,6 +108,9 @@ public class IDBDatabase extends EventTarget{
     @JsMethod(name = "transaction")
     public native IDBTransaction transaction(String[] storeNames);
     
+    @JsMethod(name = "transaction")
+    public native IDBTransaction transaction(Array storeNames);
+    
     @JsOverlay
     public final IDBTransaction transaction(String storeNames, IDBTransactionMode mode){
         return transaction(storeNames, mode.getInternalValue());
@@ -128,5 +126,13 @@ public class IDBDatabase extends EventTarget{
     
     @JsMethod(name = "transaction")
     public native IDBTransaction transaction(String[] storeNames, String mode);
+    
+    @JsOverlay
+    public final IDBTransaction transaction(Array storeNames, IDBTransactionMode mode){
+        return transaction(storeNames, mode.getInternalValue());
+    }
+    
+    @JsMethod(name = "transaction")
+    public native IDBTransaction transaction(Array storeNames, String mode);
     
 }

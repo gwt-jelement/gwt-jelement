@@ -16,7 +16,6 @@
  */
 package gwt.jelement.svg;
 
-import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -30,11 +29,6 @@ public class SVGComponentTransferFunctionElement extends SVGElement{
     public static short SVG_FECOMPONENTTRANSFER_TYPE_DISCRETE; /* 3 */
     public static short SVG_FECOMPONENTTRANSFER_TYPE_LINEAR; /* 4 */
     public static short SVG_FECOMPONENTTRANSFER_TYPE_GAMMA; /* 5 */
-    
-    @JsConstructor
-    public SVGComponentTransferFunctionElement(){
-        super();
-    }
     
     @JsProperty(name="type")
     public native SVGAnimatedEnumeration getType();

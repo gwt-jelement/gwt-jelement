@@ -57,8 +57,18 @@ public class Float64Array extends ArrayBufferView{
         super();
     }
     
+    @JsConstructor
+    public Float64Array(Array array){
+        super();
+    }
+    
     @JsProperty(name="length")
     public native double getLength();
+    
+    @JsOverlay
+    public final double get(double index){
+        return Js.getDouble(this.object(), index);
+    }
     
     @JsMethod(name = "set")
     public native void set(Float64Array array);
@@ -67,10 +77,21 @@ public class Float64Array extends ArrayBufferView{
     public native void set(double[] array);
     
     @JsMethod(name = "set")
+    public native void set(Array array);
+    
+    @JsMethod(name = "set")
     public native void set(Float64Array array, double offset);
     
     @JsMethod(name = "set")
     public native void set(double[] array, double offset);
+    
+    @JsOverlay
+    public final void set(double index, double value){
+        Js.set(this.object(), index, value);
+    }
+    
+    @JsMethod(name = "set")
+    public native void set(Array array, double offset);
     
     @JsMethod(name = "subarray")
     public native Float64Array subarray(double begin);

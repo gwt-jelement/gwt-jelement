@@ -16,20 +16,14 @@
  */
 package gwt.jelement.webgl;
 
-import gwt.jelement.core.JsObject;
-import jsinterop.annotations.JsConstructor;
+import gwt.jelement.core.IsObject;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="WebGLDebugShaders", isNative = true)
-public class WebGLDebugShaders extends JsObject{
-    @JsConstructor
-    public WebGLDebugShaders(){
-        super();
-    }
-    
+public class WebGLDebugShaders extends IsObject{
     @JsMethod(name = "getTranslatedShaderSource")
     public native String getTranslatedShaderSource(WebGLShader shader);
     

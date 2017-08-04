@@ -16,7 +16,6 @@
  */
 package gwt.jelement.html;
 
-import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -24,11 +23,6 @@ import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="HTMLUListElement", isNative = true)
 public class HTMLUListElement extends HTMLElement{
-    @JsConstructor
-    public HTMLUListElement(){
-        super();
-    }
-    
     @JsProperty(name="compact")
     public native boolean getCompact();
     

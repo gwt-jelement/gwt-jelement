@@ -16,19 +16,22 @@
  */
 package gwt.jelement.plugins;
 
-import gwt.jelement.core.JsObject;
-import jsinterop.annotations.JsConstructor;
+import gwt.jelement.core.ArrayLike;
+import gwt.jelement.core.Js;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="PluginArray", isNative = true)
-public class PluginArray extends JsObject{
-    @JsConstructor
-    public PluginArray(){
-        super();
+public class PluginArray extends ArrayLike{
+    @JsOverlay
+    public final Plugin get(String name){
+        return (Plugin) Js.get(this.object(), name);
     }
+    
+    @JsMethod(name = "item")
+    public native Plugin item(double index);
     
     @JsMethod(name = "namedItem")
     public native Plugin namedItem(String name);

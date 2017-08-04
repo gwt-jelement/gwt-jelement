@@ -16,16 +16,10 @@
  */
 package gwt.jelement.html;
 
-import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="HTMLSpanElement", isNative = true)
 public class HTMLSpanElement extends HTMLElement{
-    @JsConstructor
-    public HTMLSpanElement(){
-        super();
-    }
-    
 }

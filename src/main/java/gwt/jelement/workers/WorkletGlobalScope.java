@@ -16,17 +16,11 @@
  */
 package gwt.jelement.workers;
 
-import gwt.jelement.core.JsObject;
-import jsinterop.annotations.JsConstructor;
+import gwt.jelement.core.IsObject;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="WorkletGlobalScope", isNative = true)
-public class WorkletGlobalScope extends JsObject{
-    @JsConstructor
-    public WorkletGlobalScope(){
-        super();
-    }
-    
+public class WorkletGlobalScope extends IsObject{
 }

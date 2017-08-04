@@ -16,19 +16,16 @@
  */
 package gwt.jelement.filesystem;
 
-import gwt.jelement.core.JsObject;
-import jsinterop.annotations.JsConstructor;
+import gwt.jelement.core.IsObject;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="DOMFileSystemSync", isNative = true)
-public class DOMFileSystemSync extends JsObject{
-    @JsConstructor
-    public DOMFileSystemSync(){
-        super();
-    }
+public class DOMFileSystemSync extends IsObject{
+    @JsProperty(name="name")
+    public native String getName();
     
     @JsProperty(name="root")
     public native DirectoryEntrySync getRoot();

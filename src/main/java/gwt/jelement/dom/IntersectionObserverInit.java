@@ -16,12 +16,12 @@
  */
 package gwt.jelement.dom;
 
+import gwt.jelement.core.Js;
 import gwt.jelement.core.JsObject;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
-import jsinterop.base.Js;
 
 @JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class IntersectionObserverInit extends JsObject{

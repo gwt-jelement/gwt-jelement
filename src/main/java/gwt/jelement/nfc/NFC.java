@@ -17,9 +17,8 @@
 package gwt.jelement.nfc;
 
 import gwt.jelement.core.ArrayBuffer;
-import gwt.jelement.core.JsObject;
+import gwt.jelement.core.IsObject;
 import elemental2.promise.Promise;
-import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
@@ -27,12 +26,7 @@ import jsinterop.annotations.JsType;
 import jsinterop.base.Any;
 
 @JsType(namespace = JsPackage.GLOBAL, name="NFC", isNative = true)
-public class NFC extends JsObject{
-    @JsConstructor
-    public NFC(){
-        super();
-    }
-    
+public class NFC extends IsObject{
     @JsMethod(name = "cancelPush")
     public native Promise<Void> cancelPush();
     

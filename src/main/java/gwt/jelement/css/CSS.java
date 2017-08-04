@@ -16,21 +16,15 @@
  */
 package gwt.jelement.css;
 
-import gwt.jelement.core.JsObject;
+import gwt.jelement.core.IsObject;
 import gwt.jelement.css.cssom.CSSUnitValue;
-import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="CSS", isNative = true)
-public class CSS extends JsObject{
-    @JsConstructor
-    public CSS(){
-        super();
-    }
-    
+public class CSS extends IsObject{
     @JsMethod(name = "Hz")
     public static native CSSUnitValue Hz(double value);
     

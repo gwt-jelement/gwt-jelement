@@ -16,7 +16,6 @@
  */
 package gwt.jelement.svg;
 
-import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -29,11 +28,6 @@ public class SVGFEDisplacementMapElement extends SVGElement{
     public static short SVG_CHANNEL_G; /* 2 */
     public static short SVG_CHANNEL_B; /* 3 */
     public static short SVG_CHANNEL_A; /* 4 */
-    
-    @JsConstructor
-    public SVGFEDisplacementMapElement(){
-        super();
-    }
     
     @JsProperty(name="in1")
     public native SVGAnimatedString getIn1();

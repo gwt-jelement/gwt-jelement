@@ -16,7 +16,6 @@
  */
 package gwt.jelement.svg;
 
-import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -27,11 +26,6 @@ public class SVGFEMorphologyElement extends SVGElement{
     public static short SVG_MORPHOLOGY_OPERATOR_UNKNOWN; /* 0 */
     public static short SVG_MORPHOLOGY_OPERATOR_ERODE; /* 1 */
     public static short SVG_MORPHOLOGY_OPERATOR_DILATE; /* 2 */
-    
-    @JsConstructor
-    public SVGFEMorphologyElement(){
-        super();
-    }
     
     @JsProperty(name="in1")
     public native SVGAnimatedString getIn1();

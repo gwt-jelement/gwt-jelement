@@ -16,17 +16,11 @@
  */
 package gwt.jelement.webgl;
 
-import gwt.jelement.core.JsObject;
-import jsinterop.annotations.JsConstructor;
+import gwt.jelement.core.IsObject;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="WebGLTransformFeedback", isNative = true)
-public class WebGLTransformFeedback extends JsObject{
-    @JsConstructor
-    public WebGLTransformFeedback(){
-        super();
-    }
-    
+public class WebGLTransformFeedback extends IsObject{
 }

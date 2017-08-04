@@ -16,13 +16,13 @@
  */
 package gwt.jelement.webaudio;
 
+import gwt.jelement.core.Array;
 import gwt.jelement.core.ArrayBuffer;
 import gwt.jelement.events.EventHandlerNonNull;
 import gwt.jelement.events.EventTarget;
 import gwt.jelement.html.HTMLMediaElement;
 import gwt.jelement.mediastream.MediaStream;
 import elemental2.promise.Promise;
-import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
@@ -36,11 +36,6 @@ public class BaseAudioContext extends EventTarget{
     
     @JsProperty(name="state")
     private String state;
-    
-    @JsConstructor
-    public BaseAudioContext(){
-        super();
-    }
     
     @JsProperty(name="destination")
     public native AudioDestinationNode getDestination();
@@ -114,6 +109,12 @@ public class BaseAudioContext extends EventTarget{
     @JsMethod(name = "createIIRFilter")
     public native IIRFilterNode createIIRFilter(double[] feedForward, double[] feedBack);
     
+    @JsMethod(name = "createIIRFilter")
+    public native IIRFilterNode createIIRFilter(Array feedForward, double[] feedBack);
+    
+    @JsMethod(name = "createIIRFilter")
+    public native IIRFilterNode createIIRFilter(Array feedForward, Array feedBack);
+    
     @JsMethod(name = "createMediaElementSource")
     public native MediaElementAudioSourceNode createMediaElementSource(HTMLMediaElement mediaElement);
     
@@ -133,7 +134,19 @@ public class BaseAudioContext extends EventTarget{
     public native PeriodicWave createPeriodicWave(double[] real, double[] imag);
     
     @JsMethod(name = "createPeriodicWave")
+    public native PeriodicWave createPeriodicWave(Array real, double[] imag);
+    
+    @JsMethod(name = "createPeriodicWave")
+    public native PeriodicWave createPeriodicWave(Array real, Array imag);
+    
+    @JsMethod(name = "createPeriodicWave")
     public native PeriodicWave createPeriodicWave(double[] real, double[] imag, PeriodicWaveConstraints options);
+    
+    @JsMethod(name = "createPeriodicWave")
+    public native PeriodicWave createPeriodicWave(Array real, double[] imag, PeriodicWaveConstraints options);
+    
+    @JsMethod(name = "createPeriodicWave")
+    public native PeriodicWave createPeriodicWave(Array real, Array imag, PeriodicWaveConstraints options);
     
     @JsMethod(name = "createScriptProcessor")
     public native ScriptProcessorNode createScriptProcessor();

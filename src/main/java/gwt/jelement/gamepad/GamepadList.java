@@ -16,17 +16,21 @@
  */
 package gwt.jelement.gamepad;
 
-import gwt.jelement.core.JsObject;
-import jsinterop.annotations.JsConstructor;
+import gwt.jelement.core.ArrayLike;
+import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="GamepadList", isNative = true)
-public class GamepadList extends JsObject{
-    @JsConstructor
-    public GamepadList(){
-        super();
-    }
+public class GamepadList extends ArrayLike{
+    @JsMethod(name = "get")
+    public native Gamepad get();
+    
+    @JsMethod(name = "item")
+    public native Gamepad item();
+    
+    @JsMethod(name = "item")
+    public native Gamepad item(double index);
     
 }

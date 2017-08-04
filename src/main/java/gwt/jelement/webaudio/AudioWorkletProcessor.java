@@ -16,17 +16,11 @@
  */
 package gwt.jelement.webaudio;
 
-import gwt.jelement.core.JsObject;
-import jsinterop.annotations.JsConstructor;
+import gwt.jelement.core.IsObject;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="AudioWorkletProcessor", isNative = true)
-public class AudioWorkletProcessor extends JsObject{
-    @JsConstructor
-    public AudioWorkletProcessor(){
-        super();
-    }
-    
+public class AudioWorkletProcessor extends IsObject{
 }

@@ -16,7 +16,6 @@
  */
 package gwt.jelement.svg;
 
-import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -28,11 +27,6 @@ public class SVGFEConvolveMatrixElement extends SVGElement{
     public static short SVG_EDGEMODE_DUPLICATE; /* 1 */
     public static short SVG_EDGEMODE_WRAP; /* 2 */
     public static short SVG_EDGEMODE_NONE; /* 3 */
-    
-    @JsConstructor
-    public SVGFEConvolveMatrixElement(){
-        super();
-    }
     
     @JsProperty(name="in1")
     public native SVGAnimatedString getIn1();

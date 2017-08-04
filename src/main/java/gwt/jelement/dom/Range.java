@@ -16,7 +16,7 @@
  */
 package gwt.jelement.dom;
 
-import gwt.jelement.core.JsObject;
+import gwt.jelement.core.IsObject;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
@@ -25,7 +25,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="Range", isNative = true)
-public class Range extends JsObject{
+public class Range extends IsObject{
     public static short START_TO_START; /* 0 */
     public static short START_TO_END; /* 1 */
     public static short END_TO_END; /* 2 */

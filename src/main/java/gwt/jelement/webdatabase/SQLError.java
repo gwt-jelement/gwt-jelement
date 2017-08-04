@@ -16,15 +16,14 @@
  */
 package gwt.jelement.webdatabase;
 
-import gwt.jelement.core.JsObject;
-import jsinterop.annotations.JsConstructor;
+import gwt.jelement.core.IsObject;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="SQLError", isNative = true)
-public class SQLError extends JsObject{
+public class SQLError extends IsObject{
     public static short UNKNOWN_ERR; /* 0 */
     public static short DATABASE_ERR; /* 1 */
     public static short VERSION_ERR; /* 2 */
@@ -33,11 +32,6 @@ public class SQLError extends JsObject{
     public static short SYNTAX_ERR; /* 5 */
     public static short CONSTRAINT_ERR; /* 6 */
     public static short TIMEOUT_ERR; /* 7 */
-    
-    @JsConstructor
-    public SQLError(){
-        super();
-    }
     
     @JsProperty(name="code")
     public native double getCode();

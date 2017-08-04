@@ -16,7 +16,6 @@
  */
 package gwt.jelement.html;
 
-import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -24,11 +23,6 @@ import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="HTMLBaseElement", isNative = true)
 public class HTMLBaseElement extends HTMLElement{
-    @JsConstructor
-    public HTMLBaseElement(){
-        super();
-    }
-    
     @JsProperty(name="href")
     public native String getHref();
     

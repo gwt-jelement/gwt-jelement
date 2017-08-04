@@ -16,15 +16,14 @@
  */
 package gwt.jelement;
 
+import gwt.jelement.core.IsObject;
 import gwt.jelement.core.JSONImpl;
-import gwt.jelement.core.JsObject;
 import gwt.jelement.core.Math;
 import gwt.jelement.frame.Console;
 import gwt.jelement.frame.Location;
 import gwt.jelement.frame.Navigator;
 import gwt.jelement.frame.Window;
 import gwt.jelement.html.HTMLDocument;
-import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
@@ -32,7 +31,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="window", isNative = true)
-public class Browser extends JsObject{
+public class Browser extends IsObject{
     @JsProperty(name="navigator")
     public static Navigator navigator;
     
@@ -68,11 +67,6 @@ public class Browser extends JsObject{
     
     @JsProperty(name="JSON")
     public static JSONImpl JSON;
-    
-    @JsConstructor
-    public Browser(){
-        super();
-    }
     
     @JsMethod(name = "decodeURI")
     public static native String decodeURI(String value);

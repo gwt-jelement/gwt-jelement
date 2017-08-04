@@ -16,8 +16,7 @@
  */
 package gwt.jelement.svg;
 
-import gwt.jelement.core.JsObject;
-import jsinterop.annotations.JsConstructor;
+import gwt.jelement.core.IsObject;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
@@ -25,12 +24,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="SVGPoint", isNative = true)
-public class SVGPoint extends JsObject{
-    @JsConstructor
-    public SVGPoint(){
-        super();
-    }
-    
+public class SVGPoint extends IsObject{
     @JsProperty(name="x")
     public native double getX();
     

@@ -16,8 +16,7 @@
  */
 package gwt.jelement.svg;
 
-import gwt.jelement.core.JsObject;
-import jsinterop.annotations.JsConstructor;
+import gwt.jelement.core.IsObject;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
@@ -25,12 +24,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="SVGMatrix", isNative = true)
-public class SVGMatrix extends JsObject{
-    @JsConstructor
-    public SVGMatrix(){
-        super();
-    }
-    
+public class SVGMatrix extends IsObject{
     @JsProperty(name="a")
     public native double getA();
     

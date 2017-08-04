@@ -16,22 +16,16 @@
  */
 package gwt.jelement.inspector;
 
-import gwt.jelement.core.JsObject;
+import gwt.jelement.core.IsObject;
 import gwt.jelement.dom.Document;
 import gwt.jelement.filesystem.DOMFileSystem;
-import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="DevToolsHost", isNative = true)
-public class DevToolsHost extends JsObject{
-    @JsConstructor
-    public DevToolsHost(){
-        super();
-    }
-    
+public class DevToolsHost extends IsObject{
     @JsMethod(name = "copyText")
     public native void copyText(String text);
     

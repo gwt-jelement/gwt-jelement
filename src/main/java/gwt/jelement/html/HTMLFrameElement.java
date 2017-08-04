@@ -18,7 +18,6 @@ package gwt.jelement.html;
 
 import gwt.jelement.dom.Document;
 import gwt.jelement.frame.Window;
-import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -26,11 +25,6 @@ import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="HTMLFrameElement", isNative = true)
 public class HTMLFrameElement extends HTMLElement{
-    @JsConstructor
-    public HTMLFrameElement(){
-        super();
-    }
-    
     @JsProperty(name="name")
     public native String getName();
     

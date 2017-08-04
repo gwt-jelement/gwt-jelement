@@ -16,22 +16,31 @@
  */
 package gwt.jelement.storage;
 
-import gwt.jelement.core.JsObject;
-import jsinterop.annotations.JsConstructor;
+import gwt.jelement.core.IsObject;
+import gwt.jelement.core.Js;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
+import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="Storage", isNative = true)
-public class Storage extends JsObject{
-    @JsConstructor
-    public Storage(){
-        super();
-    }
+public class Storage extends IsObject{
+    @JsProperty(name="length")
+    public native double getLength();
     
     @JsMethod(name = "clear")
     public native void clear();
+    
+    @JsOverlay
+    public final boolean delete(String name){
+        return Js.delete(this.object(), name);
+    }
+    
+    @JsOverlay
+    public final String get(String name){
+        return (String) Js.get(this.object(), name);
+    }
     
     @JsMethod(name = "getItem")
     public native String getItem(String key);
@@ -41,6 +50,11 @@ public class Storage extends JsObject{
     
     @JsMethod(name = "removeItem")
     public native void removeItem(String key);
+    
+    @JsOverlay
+    public final String set(String name, String value){
+        return Js.<String>set(this.object(), name, value);
+    }
     
     @JsMethod(name = "setItem")
     public native void setItem(String key, String value);

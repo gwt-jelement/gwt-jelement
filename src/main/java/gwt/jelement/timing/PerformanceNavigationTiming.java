@@ -16,7 +16,6 @@
  */
 package gwt.jelement.timing;
 
-import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -26,11 +25,6 @@ import jsinterop.annotations.JsType;
 public class PerformanceNavigationTiming extends PerformanceResourceTiming{
     @JsProperty(name="type")
     private String type;
-    
-    @JsConstructor
-    public PerformanceNavigationTiming(){
-        super();
-    }
     
     @JsProperty(name="unloadEventStart")
     public native double getUnloadEventStart();

@@ -16,17 +16,15 @@
  */
 package gwt.jelement.speech;
 
-import gwt.jelement.core.JsObject;
-import jsinterop.annotations.JsConstructor;
+import gwt.jelement.core.ArrayLike;
+import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="SpeechRecognitionResultList", isNative = true)
-public class SpeechRecognitionResultList extends JsObject{
-    @JsConstructor
-    public SpeechRecognitionResultList(){
-        super();
-    }
+public class SpeechRecognitionResultList extends ArrayLike{
+    @JsMethod(name = "item")
+    public native SpeechRecognitionResult item(double index);
     
 }
