@@ -154,7 +154,7 @@ public class ScrollStateInit extends JsObject{
     }
 
     @JsOverlay
-    public final boolean getIsBeginning(){
+    public final boolean isIsBeginning(){
         return this.isBeginning;
     }
 
@@ -164,7 +164,7 @@ public class ScrollStateInit extends JsObject{
     }
 
     @JsOverlay
-    public final boolean getIsInInertialPhase(){
+    public final boolean isIsInInertialPhase(){
         return this.isInInertialPhase;
     }
 
@@ -174,7 +174,7 @@ public class ScrollStateInit extends JsObject{
     }
 
     @JsOverlay
-    public final boolean getIsEnding(){
+    public final boolean isIsEnding(){
         return this.isEnding;
     }
 
@@ -184,7 +184,7 @@ public class ScrollStateInit extends JsObject{
     }
 
     @JsOverlay
-    public final boolean getShouldPropagate(){
+    public final boolean isShouldPropagate(){
         return this.shouldPropagate;
     }
 
@@ -194,7 +194,7 @@ public class ScrollStateInit extends JsObject{
     }
 
     @JsOverlay
-    public final boolean getFromUserInput(){
+    public final boolean isFromUserInput(){
         return this.fromUserInput;
     }
 
@@ -204,7 +204,7 @@ public class ScrollStateInit extends JsObject{
     }
 
     @JsOverlay
-    public final boolean getIsDirectManipulation(){
+    public final boolean isIsDirectManipulation(){
         return this.isDirectManipulation;
     }
 
@@ -222,5 +222,6 @@ public class ScrollStateInit extends JsObject{
     public final void setDeltaGranularity(double deltaGranularity){
         this.deltaGranularity = deltaGranularity;
     }
+
 
 }

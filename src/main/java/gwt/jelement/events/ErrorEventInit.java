@@ -92,4 +92,5 @@ public class ErrorEventInit extends EventInit{
         this.error = error;
     }
 
+
 }

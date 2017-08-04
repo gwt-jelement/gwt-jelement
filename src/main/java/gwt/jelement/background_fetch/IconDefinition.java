@@ -67,4 +67,5 @@ public class IconDefinition extends JsObject{
         this.type = type;
     }
 
+
 }

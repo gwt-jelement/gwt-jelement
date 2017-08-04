@@ -51,7 +51,7 @@ public class CredentialRequestOptions extends JsObject{
     }
 
     @JsOverlay
-    public final boolean getPassword(){
+    public final boolean isPassword(){
         return this.password;
     }
 
@@ -61,7 +61,7 @@ public class CredentialRequestOptions extends JsObject{
     }
 
     @JsOverlay
-    public final boolean getUnmediated(){
+    public final boolean isUnmediated(){
         return this.unmediated;
     }
 
@@ -79,5 +79,6 @@ public class CredentialRequestOptions extends JsObject{
     public final void setMediation(CredentialMediationRequirement mediation){
         this.mediation = mediation.getInternalValue();
     }
+
 
 }

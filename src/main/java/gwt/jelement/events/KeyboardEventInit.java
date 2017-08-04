@@ -73,7 +73,7 @@ public class KeyboardEventInit extends EventModifierInit{
     }
 
     @JsOverlay
-    public final boolean getRepeat(){
+    public final boolean isRepeat(){
         return this.repeat;
     }
 
@@ -83,7 +83,7 @@ public class KeyboardEventInit extends EventModifierInit{
     }
 
     @JsOverlay
-    public final boolean getIsComposing(){
+    public final boolean isIsComposing(){
         return this.isComposing;
     }
 
@@ -91,5 +91,6 @@ public class KeyboardEventInit extends EventModifierInit{
     public final void setIsComposing(boolean isComposing){
         this.isComposing = isComposing;
     }
+
 
 }

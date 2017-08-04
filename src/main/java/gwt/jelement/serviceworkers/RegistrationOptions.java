@@ -41,4 +41,5 @@ public class RegistrationOptions extends JsObject{
         this.scope = scope;
     }
 
+
 }

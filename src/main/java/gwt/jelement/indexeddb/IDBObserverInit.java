@@ -42,7 +42,7 @@ public class IDBObserverInit extends JsObject{
     }
 
     @JsOverlay
-    public final boolean getTransaction(){
+    public final boolean isTransaction(){
         return this.transaction;
     }
 
@@ -52,7 +52,7 @@ public class IDBObserverInit extends JsObject{
     }
 
     @JsOverlay
-    public final boolean getValues(){
+    public final boolean isValues(){
         return this.values;
     }
 
@@ -62,7 +62,7 @@ public class IDBObserverInit extends JsObject{
     }
 
     @JsOverlay
-    public final boolean getNoRecords(){
+    public final boolean isNoRecords(){
         return this.noRecords;
     }
 
@@ -82,5 +82,6 @@ public class IDBObserverInit extends JsObject{
             .map(IDBObservationType::getInternalValue)
             .toArray(String[]::new);
     }
+
 
 }

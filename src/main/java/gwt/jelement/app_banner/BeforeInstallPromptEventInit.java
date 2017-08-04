@@ -41,4 +41,5 @@ public class BeforeInstallPromptEventInit extends EventInit{
         this.platforms = platforms;
     }
 
+
 }

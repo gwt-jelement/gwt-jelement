@@ -54,4 +54,5 @@ public class MediaConfiguration extends JsObject{
         this.audio = audio;
     }
 
+
 }

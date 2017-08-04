@@ -40,4 +40,5 @@ public class CustomEventInit extends EventInit{
         this.detail = detail;
     }
 
+
 }

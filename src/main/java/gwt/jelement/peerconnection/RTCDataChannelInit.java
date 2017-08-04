@@ -47,7 +47,7 @@ public class RTCDataChannelInit extends JsObject{
     }
 
     @JsOverlay
-    public final boolean getOrdered(){
+    public final boolean isOrdered(){
         return this.ordered;
     }
 
@@ -87,7 +87,7 @@ public class RTCDataChannelInit extends JsObject{
     }
 
     @JsOverlay
-    public final boolean getNegotiated(){
+    public final boolean isNegotiated(){
         return this.negotiated;
     }
 
@@ -105,5 +105,6 @@ public class RTCDataChannelInit extends JsObject{
     public final void setId(short id){
         this.id = id;
     }
+
 
 }

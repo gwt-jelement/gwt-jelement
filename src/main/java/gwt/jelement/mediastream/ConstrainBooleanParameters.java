@@ -35,7 +35,7 @@ public class ConstrainBooleanParameters extends JsObject{
     }
 
     @JsOverlay
-    public final boolean getExact(){
+    public final boolean isExact(){
         return this.exact;
     }
 
@@ -45,7 +45,7 @@ public class ConstrainBooleanParameters extends JsObject{
     }
 
     @JsOverlay
-    public final boolean getIdeal(){
+    public final boolean isIdeal(){
         return this.ideal;
     }
 
@@ -53,5 +53,6 @@ public class ConstrainBooleanParameters extends JsObject{
     public final void setIdeal(boolean ideal){
         this.ideal = ideal;
     }
+
 
 }

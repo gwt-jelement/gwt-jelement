@@ -80,4 +80,5 @@ public class NFCWatchOptions extends JsObject{
         this.mode = mode.getInternalValue();
     }
 
+
 }

@@ -80,4 +80,5 @@ public class DeviceMotionEventInit extends EventInit{
         this.interval = interval;
     }
 
+
 }

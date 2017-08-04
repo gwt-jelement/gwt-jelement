@@ -55,4 +55,5 @@ public class ImageDataColorSettings extends JsObject{
         this.storageFormat = storageFormat.getInternalValue();
     }
 
+
 }

@@ -55,4 +55,5 @@ public class Landmark extends JsObject{
         this.type = type.getInternalValue();
     }
 
+
 }

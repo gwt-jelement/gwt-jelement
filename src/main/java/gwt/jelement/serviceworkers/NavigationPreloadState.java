@@ -35,7 +35,7 @@ public class NavigationPreloadState extends JsObject{
     }
 
     @JsOverlay
-    public final boolean getEnabled(){
+    public final boolean isEnabled(){
         return this.enabled;
     }
 
@@ -53,5 +53,6 @@ public class NavigationPreloadState extends JsObject{
     public final void setHeaderValue(String headerValue){
         this.headerValue = headerValue;
     }
+
 
 }

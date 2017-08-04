@@ -54,4 +54,5 @@ public class StorageEstimate extends JsObject{
         this.quota = quota;
     }
 
+
 }

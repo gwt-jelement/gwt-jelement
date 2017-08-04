@@ -67,4 +67,5 @@ public class DeviceAccelerationInit extends JsObject{
         this.z = z;
     }
 
+
 }

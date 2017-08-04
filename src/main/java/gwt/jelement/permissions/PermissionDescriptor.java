@@ -41,4 +41,5 @@ public class PermissionDescriptor extends JsObject{
         this.name = name.getInternalValue();
     }
 
+
 }

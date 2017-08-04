@@ -53,4 +53,5 @@ public class HashChangeEventInit extends EventInit{
         this.newURL = newURL;
     }
 
+
 }

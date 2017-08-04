@@ -41,4 +41,5 @@ public class GetNotificationOptions extends JsObject{
         this.tag = tag;
     }
 
+
 }

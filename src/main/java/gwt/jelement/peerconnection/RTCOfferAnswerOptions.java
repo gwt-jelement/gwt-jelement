@@ -32,7 +32,7 @@ public class RTCOfferAnswerOptions extends JsObject{
     }
 
     @JsOverlay
-    public final boolean getVoiceActivityDetection(){
+    public final boolean isVoiceActivityDetection(){
         return this.voiceActivityDetection;
     }
 
@@ -40,5 +40,6 @@ public class RTCOfferAnswerOptions extends JsObject{
     public final void setVoiceActivityDetection(boolean voiceActivityDetection){
         this.voiceActivityDetection = voiceActivityDetection;
     }
+
 
 }

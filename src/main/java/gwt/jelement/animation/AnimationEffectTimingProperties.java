@@ -133,4 +133,5 @@ public class AnimationEffectTimingProperties extends JsObject{
         this.easing = easing;
     }
 
+
 }

@@ -38,7 +38,7 @@ public class PositionOptions extends JsObject{
     }
 
     @JsOverlay
-    public final boolean getEnableHighAccuracy(){
+    public final boolean isEnableHighAccuracy(){
         return this.enableHighAccuracy;
     }
 
@@ -66,5 +66,6 @@ public class PositionOptions extends JsObject{
     public final void setMaximumAge(double maximumAge){
         this.maximumAge = maximumAge;
     }
+
 
 }

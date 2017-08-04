@@ -67,4 +67,5 @@ public class BackgroundFetchOptions extends JsObject{
         this.totalDownloadSize = totalDownloadSize;
     }
 
+
 }

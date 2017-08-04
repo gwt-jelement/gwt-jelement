@@ -32,7 +32,7 @@ public class AssignedNodesOptions extends JsObject{
     }
 
     @JsOverlay
-    public final boolean getFlatten(){
+    public final boolean isFlatten(){
         return this.flatten;
     }
 
@@ -40,5 +40,6 @@ public class AssignedNodesOptions extends JsObject{
     public final void setFlatten(boolean flatten){
         this.flatten = flatten;
     }
+
 
 }

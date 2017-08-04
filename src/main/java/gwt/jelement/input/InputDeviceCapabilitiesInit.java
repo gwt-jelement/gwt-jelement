@@ -32,7 +32,7 @@ public class InputDeviceCapabilitiesInit extends JsObject{
     }
 
     @JsOverlay
-    public final boolean getFiresTouchEvents(){
+    public final boolean isFiresTouchEvents(){
         return this.firesTouchEvents;
     }
 
@@ -40,5 +40,6 @@ public class InputDeviceCapabilitiesInit extends JsObject{
     public final void setFiresTouchEvents(boolean firesTouchEvents){
         this.firesTouchEvents = firesTouchEvents;
     }
+
 
 }

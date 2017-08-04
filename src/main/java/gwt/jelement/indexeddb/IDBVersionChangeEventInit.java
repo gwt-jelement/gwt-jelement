@@ -67,4 +67,5 @@ public class IDBVersionChangeEventInit extends EventInit{
         this.dataLoss = dataLoss.getInternalValue();
     }
 
+
 }

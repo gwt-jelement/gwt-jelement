@@ -53,4 +53,5 @@ public class WaveShaperOptions extends AudioNodeOptions{
         this.oversample = oversample.getInternalValue();
     }
 
+
 }

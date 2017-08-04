@@ -41,4 +41,5 @@ public class ClipboardEventInit extends EventInit{
         this.clipboardData = clipboardData;
     }
 
+
 }

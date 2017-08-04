@@ -102,4 +102,5 @@ public class BluetoothLEScanFilterInit extends JsObject{
         this.namePrefix = namePrefix;
     }
 
+
 }

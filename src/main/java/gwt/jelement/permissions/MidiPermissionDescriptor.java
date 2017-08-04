@@ -31,7 +31,7 @@ public class MidiPermissionDescriptor extends PermissionDescriptor{
     }
 
     @JsOverlay
-    public final boolean getSysex(){
+    public final boolean isSysex(){
         return this.sysex;
     }
 
@@ -39,5 +39,6 @@ public class MidiPermissionDescriptor extends PermissionDescriptor{
     public final void setSysex(boolean sysex){
         this.sysex = sysex;
     }
+
 
 }

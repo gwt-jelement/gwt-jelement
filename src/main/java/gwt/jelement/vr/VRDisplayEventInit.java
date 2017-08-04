@@ -54,4 +54,5 @@ public class VRDisplayEventInit extends EventInit{
         this.reason = reason.getInternalValue();
     }
 
+
 }

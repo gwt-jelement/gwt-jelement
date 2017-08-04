@@ -32,7 +32,7 @@ public class EventSourceInit extends JsObject{
     }
 
     @JsOverlay
-    public final boolean getWithCredentials(){
+    public final boolean isWithCredentials(){
         return this.withCredentials;
     }
 
@@ -40,5 +40,6 @@ public class EventSourceInit extends JsObject{
     public final void setWithCredentials(boolean withCredentials){
         this.withCredentials = withCredentials;
     }
+
 
 }

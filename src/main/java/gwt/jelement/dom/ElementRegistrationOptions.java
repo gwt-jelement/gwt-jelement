@@ -54,4 +54,5 @@ public class ElementRegistrationOptions extends JsObject{
         this.extends_ = extends_;
     }
 
+
 }

@@ -71,4 +71,5 @@ public class VRLayer extends JsObject{
         this.rightBounds = rightBounds;
     }
 
+
 }

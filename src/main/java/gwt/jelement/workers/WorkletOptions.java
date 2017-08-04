@@ -42,4 +42,5 @@ public class WorkletOptions extends JsObject{
         this.credentials = credentials.getInternalValue();
     }
 
+
 }

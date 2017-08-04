@@ -43,7 +43,7 @@ public class CanvasRenderingContext2DSettings extends JsObject{
     }
 
     @JsOverlay
-    public final boolean getAlpha(){
+    public final boolean isAlpha(){
         return this.alpha;
     }
 
@@ -73,7 +73,7 @@ public class CanvasRenderingContext2DSettings extends JsObject{
     }
 
     @JsOverlay
-    public final boolean getLinearPixelMath(){
+    public final boolean isLinearPixelMath(){
         return this.linearPixelMath;
     }
 
@@ -81,5 +81,6 @@ public class CanvasRenderingContext2DSettings extends JsObject{
     public final void setLinearPixelMath(boolean linearPixelMath){
         this.linearPixelMath = linearPixelMath;
     }
+
 
 }

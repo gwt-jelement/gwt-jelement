@@ -50,7 +50,7 @@ public class MutationObserverInit extends JsObject{
     }
 
     @JsOverlay
-    public final boolean getChildList(){
+    public final boolean isChildList(){
         return this.childList;
     }
 
@@ -60,7 +60,7 @@ public class MutationObserverInit extends JsObject{
     }
 
     @JsOverlay
-    public final boolean getAttributes(){
+    public final boolean isAttributes(){
         return this.attributes;
     }
 
@@ -70,7 +70,7 @@ public class MutationObserverInit extends JsObject{
     }
 
     @JsOverlay
-    public final boolean getCharacterData(){
+    public final boolean isCharacterData(){
         return this.characterData;
     }
 
@@ -80,7 +80,7 @@ public class MutationObserverInit extends JsObject{
     }
 
     @JsOverlay
-    public final boolean getSubtree(){
+    public final boolean isSubtree(){
         return this.subtree;
     }
 
@@ -90,7 +90,7 @@ public class MutationObserverInit extends JsObject{
     }
 
     @JsOverlay
-    public final boolean getAttributeOldValue(){
+    public final boolean isAttributeOldValue(){
         return this.attributeOldValue;
     }
 
@@ -100,7 +100,7 @@ public class MutationObserverInit extends JsObject{
     }
 
     @JsOverlay
-    public final boolean getCharacterDataOldValue(){
+    public final boolean isCharacterDataOldValue(){
         return this.characterDataOldValue;
     }
 
@@ -118,5 +118,6 @@ public class MutationObserverInit extends JsObject{
     public final void setAttributeFilter(String[] attributeFilter){
         this.attributeFilter = attributeFilter;
     }
+
 
 }

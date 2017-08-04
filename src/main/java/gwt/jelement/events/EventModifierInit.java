@@ -58,7 +58,7 @@ public class EventModifierInit extends UIEventInit{
     }
 
     @JsOverlay
-    public final boolean getCtrlKey(){
+    public final boolean isCtrlKey(){
         return this.ctrlKey;
     }
 
@@ -68,7 +68,7 @@ public class EventModifierInit extends UIEventInit{
     }
 
     @JsOverlay
-    public final boolean getShiftKey(){
+    public final boolean isShiftKey(){
         return this.shiftKey;
     }
 
@@ -78,7 +78,7 @@ public class EventModifierInit extends UIEventInit{
     }
 
     @JsOverlay
-    public final boolean getAltKey(){
+    public final boolean isAltKey(){
         return this.altKey;
     }
 
@@ -88,7 +88,7 @@ public class EventModifierInit extends UIEventInit{
     }
 
     @JsOverlay
-    public final boolean getMetaKey(){
+    public final boolean isMetaKey(){
         return this.metaKey;
     }
 
@@ -98,7 +98,7 @@ public class EventModifierInit extends UIEventInit{
     }
 
     @JsOverlay
-    public final boolean getModifierAltGraph(){
+    public final boolean isModifierAltGraph(){
         return this.modifierAltGraph;
     }
 
@@ -108,7 +108,7 @@ public class EventModifierInit extends UIEventInit{
     }
 
     @JsOverlay
-    public final boolean getModifierCapsLock(){
+    public final boolean isModifierCapsLock(){
         return this.modifierCapsLock;
     }
 
@@ -118,7 +118,7 @@ public class EventModifierInit extends UIEventInit{
     }
 
     @JsOverlay
-    public final boolean getModifierFn(){
+    public final boolean isModifierFn(){
         return this.modifierFn;
     }
 
@@ -128,7 +128,7 @@ public class EventModifierInit extends UIEventInit{
     }
 
     @JsOverlay
-    public final boolean getModifierNumLock(){
+    public final boolean isModifierNumLock(){
         return this.modifierNumLock;
     }
 
@@ -138,7 +138,7 @@ public class EventModifierInit extends UIEventInit{
     }
 
     @JsOverlay
-    public final boolean getModifierScrollLock(){
+    public final boolean isModifierScrollLock(){
         return this.modifierScrollLock;
     }
 
@@ -148,7 +148,7 @@ public class EventModifierInit extends UIEventInit{
     }
 
     @JsOverlay
-    public final boolean getModifierSymbol(){
+    public final boolean isModifierSymbol(){
         return this.modifierSymbol;
     }
 
@@ -156,5 +156,6 @@ public class EventModifierInit extends UIEventInit{
     public final void setModifierSymbol(boolean modifierSymbol){
         this.modifierSymbol = modifierSymbol;
     }
+
 
 }

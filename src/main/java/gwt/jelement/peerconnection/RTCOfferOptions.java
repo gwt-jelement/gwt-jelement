@@ -37,7 +37,7 @@ public class RTCOfferOptions extends RTCOfferAnswerOptions{
     }
 
     @JsOverlay
-    public final boolean getIceRestart(){
+    public final boolean isIceRestart(){
         return this.iceRestart;
     }
 
@@ -65,5 +65,6 @@ public class RTCOfferOptions extends RTCOfferAnswerOptions{
     public final void setOfferToReceiveAudio(double offerToReceiveAudio){
         this.offerToReceiveAudio = offerToReceiveAudio;
     }
+
 
 }

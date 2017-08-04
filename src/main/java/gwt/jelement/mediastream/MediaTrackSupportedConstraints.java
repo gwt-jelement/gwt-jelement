@@ -122,7 +122,7 @@ public class MediaTrackSupportedConstraints extends JsObject{
     }
 
     @JsOverlay
-    public final boolean getWidth(){
+    public final boolean isWidth(){
         return this.width;
     }
 
@@ -132,7 +132,7 @@ public class MediaTrackSupportedConstraints extends JsObject{
     }
 
     @JsOverlay
-    public final boolean getHeight(){
+    public final boolean isHeight(){
         return this.height;
     }
 
@@ -142,7 +142,7 @@ public class MediaTrackSupportedConstraints extends JsObject{
     }
 
     @JsOverlay
-    public final boolean getAspectRatio(){
+    public final boolean isAspectRatio(){
         return this.aspectRatio;
     }
 
@@ -152,7 +152,7 @@ public class MediaTrackSupportedConstraints extends JsObject{
     }
 
     @JsOverlay
-    public final boolean getFrameRate(){
+    public final boolean isFrameRate(){
         return this.frameRate;
     }
 
@@ -162,7 +162,7 @@ public class MediaTrackSupportedConstraints extends JsObject{
     }
 
     @JsOverlay
-    public final boolean getFacingMode(){
+    public final boolean isFacingMode(){
         return this.facingMode;
     }
 
@@ -172,7 +172,7 @@ public class MediaTrackSupportedConstraints extends JsObject{
     }
 
     @JsOverlay
-    public final boolean getVolume(){
+    public final boolean isVolume(){
         return this.volume;
     }
 
@@ -182,7 +182,7 @@ public class MediaTrackSupportedConstraints extends JsObject{
     }
 
     @JsOverlay
-    public final boolean getSampleRate(){
+    public final boolean isSampleRate(){
         return this.sampleRate;
     }
 
@@ -192,7 +192,7 @@ public class MediaTrackSupportedConstraints extends JsObject{
     }
 
     @JsOverlay
-    public final boolean getSampleSize(){
+    public final boolean isSampleSize(){
         return this.sampleSize;
     }
 
@@ -202,7 +202,7 @@ public class MediaTrackSupportedConstraints extends JsObject{
     }
 
     @JsOverlay
-    public final boolean getEchoCancellation(){
+    public final boolean isEchoCancellation(){
         return this.echoCancellation;
     }
 
@@ -212,7 +212,7 @@ public class MediaTrackSupportedConstraints extends JsObject{
     }
 
     @JsOverlay
-    public final boolean getLatency(){
+    public final boolean isLatency(){
         return this.latency;
     }
 
@@ -222,7 +222,7 @@ public class MediaTrackSupportedConstraints extends JsObject{
     }
 
     @JsOverlay
-    public final boolean getChannelCount(){
+    public final boolean isChannelCount(){
         return this.channelCount;
     }
 
@@ -232,7 +232,7 @@ public class MediaTrackSupportedConstraints extends JsObject{
     }
 
     @JsOverlay
-    public final boolean getDeviceId(){
+    public final boolean isDeviceId(){
         return this.deviceId;
     }
 
@@ -242,7 +242,7 @@ public class MediaTrackSupportedConstraints extends JsObject{
     }
 
     @JsOverlay
-    public final boolean getGroupId(){
+    public final boolean isGroupId(){
         return this.groupId;
     }
 
@@ -252,7 +252,7 @@ public class MediaTrackSupportedConstraints extends JsObject{
     }
 
     @JsOverlay
-    public final boolean getVideoKind(){
+    public final boolean isVideoKind(){
         return this.videoKind;
     }
 
@@ -262,7 +262,7 @@ public class MediaTrackSupportedConstraints extends JsObject{
     }
 
     @JsOverlay
-    public final boolean getDepthNear(){
+    public final boolean isDepthNear(){
         return this.depthNear;
     }
 
@@ -272,7 +272,7 @@ public class MediaTrackSupportedConstraints extends JsObject{
     }
 
     @JsOverlay
-    public final boolean getDepthFar(){
+    public final boolean isDepthFar(){
         return this.depthFar;
     }
 
@@ -282,7 +282,7 @@ public class MediaTrackSupportedConstraints extends JsObject{
     }
 
     @JsOverlay
-    public final boolean getFocalLengthX(){
+    public final boolean isFocalLengthX(){
         return this.focalLengthX;
     }
 
@@ -292,7 +292,7 @@ public class MediaTrackSupportedConstraints extends JsObject{
     }
 
     @JsOverlay
-    public final boolean getFocalLengthY(){
+    public final boolean isFocalLengthY(){
         return this.focalLengthY;
     }
 
@@ -302,7 +302,7 @@ public class MediaTrackSupportedConstraints extends JsObject{
     }
 
     @JsOverlay
-    public final boolean getWhiteBalanceMode(){
+    public final boolean isWhiteBalanceMode(){
         return this.whiteBalanceMode;
     }
 
@@ -312,7 +312,7 @@ public class MediaTrackSupportedConstraints extends JsObject{
     }
 
     @JsOverlay
-    public final boolean getExposureMode(){
+    public final boolean isExposureMode(){
         return this.exposureMode;
     }
 
@@ -322,7 +322,7 @@ public class MediaTrackSupportedConstraints extends JsObject{
     }
 
     @JsOverlay
-    public final boolean getFocusMode(){
+    public final boolean isFocusMode(){
         return this.focusMode;
     }
 
@@ -332,7 +332,7 @@ public class MediaTrackSupportedConstraints extends JsObject{
     }
 
     @JsOverlay
-    public final boolean getPointsOfInterest(){
+    public final boolean isPointsOfInterest(){
         return this.pointsOfInterest;
     }
 
@@ -342,7 +342,7 @@ public class MediaTrackSupportedConstraints extends JsObject{
     }
 
     @JsOverlay
-    public final boolean getExposureCompensation(){
+    public final boolean isExposureCompensation(){
         return this.exposureCompensation;
     }
 
@@ -352,7 +352,7 @@ public class MediaTrackSupportedConstraints extends JsObject{
     }
 
     @JsOverlay
-    public final boolean getColorTemperature(){
+    public final boolean isColorTemperature(){
         return this.colorTemperature;
     }
 
@@ -362,7 +362,7 @@ public class MediaTrackSupportedConstraints extends JsObject{
     }
 
     @JsOverlay
-    public final boolean getIso(){
+    public final boolean isIso(){
         return this.iso;
     }
 
@@ -372,7 +372,7 @@ public class MediaTrackSupportedConstraints extends JsObject{
     }
 
     @JsOverlay
-    public final boolean getBrightness(){
+    public final boolean isBrightness(){
         return this.brightness;
     }
 
@@ -382,7 +382,7 @@ public class MediaTrackSupportedConstraints extends JsObject{
     }
 
     @JsOverlay
-    public final boolean getContrast(){
+    public final boolean isContrast(){
         return this.contrast;
     }
 
@@ -392,7 +392,7 @@ public class MediaTrackSupportedConstraints extends JsObject{
     }
 
     @JsOverlay
-    public final boolean getSaturation(){
+    public final boolean isSaturation(){
         return this.saturation;
     }
 
@@ -402,7 +402,7 @@ public class MediaTrackSupportedConstraints extends JsObject{
     }
 
     @JsOverlay
-    public final boolean getSharpness(){
+    public final boolean isSharpness(){
         return this.sharpness;
     }
 
@@ -412,7 +412,7 @@ public class MediaTrackSupportedConstraints extends JsObject{
     }
 
     @JsOverlay
-    public final boolean getZoom(){
+    public final boolean isZoom(){
         return this.zoom;
     }
 
@@ -422,7 +422,7 @@ public class MediaTrackSupportedConstraints extends JsObject{
     }
 
     @JsOverlay
-    public final boolean getTorch(){
+    public final boolean isTorch(){
         return this.torch;
     }
 
@@ -430,5 +430,6 @@ public class MediaTrackSupportedConstraints extends JsObject{
     public final void setTorch(boolean torch){
         this.torch = torch;
     }
+
 
 }

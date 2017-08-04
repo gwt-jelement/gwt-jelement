@@ -196,7 +196,7 @@ public class NotificationOptions extends JsObject{
     }
 
     @JsOverlay
-    public final boolean getRenotify(){
+    public final boolean isRenotify(){
         return this.renotify;
     }
 
@@ -206,7 +206,7 @@ public class NotificationOptions extends JsObject{
     }
 
     @JsOverlay
-    public final boolean getSilent(){
+    public final boolean isSilent(){
         return this.silent;
     }
 
@@ -216,7 +216,7 @@ public class NotificationOptions extends JsObject{
     }
 
     @JsOverlay
-    public final boolean getRequireInteraction(){
+    public final boolean isRequireInteraction(){
         return this.requireInteraction;
     }
 
@@ -244,5 +244,6 @@ public class NotificationOptions extends JsObject{
     public final void setActions(NotificationAction[] actions){
         this.actions = actions;
     }
+
 
 }

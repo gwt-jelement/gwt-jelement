@@ -67,4 +67,5 @@ public class ShareData extends JsObject{
         this.url = url;
     }
 
+
 }

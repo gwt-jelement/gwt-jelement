@@ -38,7 +38,7 @@ public class CloseEventInit extends EventInit{
     }
 
     @JsOverlay
-    public final boolean getWasClean(){
+    public final boolean isWasClean(){
         return this.wasClean;
     }
 
@@ -66,5 +66,6 @@ public class CloseEventInit extends EventInit{
     public final void setReason(String reason){
         this.reason = reason;
     }
+
 
 }

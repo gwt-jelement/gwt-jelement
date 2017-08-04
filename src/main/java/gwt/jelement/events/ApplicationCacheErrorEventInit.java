@@ -79,4 +79,5 @@ public class ApplicationCacheErrorEventInit extends EventInit{
         this.message = message;
     }
 
+
 }

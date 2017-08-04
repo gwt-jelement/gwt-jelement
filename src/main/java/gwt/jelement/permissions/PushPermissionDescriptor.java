@@ -31,7 +31,7 @@ public class PushPermissionDescriptor extends PermissionDescriptor{
     }
 
     @JsOverlay
-    public final boolean getUserVisibleOnly(){
+    public final boolean isUserVisibleOnly(){
         return this.userVisibleOnly;
     }
 
@@ -39,5 +39,6 @@ public class PushPermissionDescriptor extends PermissionDescriptor{
     public final void setUserVisibleOnly(boolean userVisibleOnly){
         this.userVisibleOnly = userVisibleOnly;
     }
+
 
 }

@@ -32,7 +32,7 @@ public class GetRootNodeOptions extends JsObject{
     }
 
     @JsOverlay
-    public final boolean getComposed(){
+    public final boolean isComposed(){
         return this.composed;
     }
 
@@ -40,5 +40,6 @@ public class GetRootNodeOptions extends JsObject{
     public final void setComposed(boolean composed){
         this.composed = composed;
     }
+
 
 }

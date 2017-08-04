@@ -41,7 +41,7 @@ public class PhotoSettings extends JsObject{
     }
 
     @JsOverlay
-    public final boolean getRedEyeReduction(){
+    public final boolean isRedEyeReduction(){
         return this.redEyeReduction;
     }
 
@@ -79,5 +79,6 @@ public class PhotoSettings extends JsObject{
     public final void setFillLightMode(FillLightMode fillLightMode){
         this.fillLightMode = fillLightMode.getInternalValue();
     }
+
 
 }

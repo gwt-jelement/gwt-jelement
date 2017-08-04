@@ -93,4 +93,5 @@ public class USBControlTransferParameters extends JsObject{
         this.index = index;
     }
 
+
 }

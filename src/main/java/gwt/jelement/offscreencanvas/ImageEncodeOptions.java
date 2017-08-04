@@ -54,4 +54,5 @@ public class ImageEncodeOptions extends JsObject{
         this.quality = quality;
     }
 
+
 }

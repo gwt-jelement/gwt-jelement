@@ -72,7 +72,7 @@ public class PushSubscriptionOptionsInit extends JsObject{
     }
 
     @JsOverlay
-    public final boolean getUserVisibleOnly(){
+    public final boolean isUserVisibleOnly(){
         return this.userVisibleOnly;
     }
 
@@ -90,5 +90,6 @@ public class PushSubscriptionOptionsInit extends JsObject{
     public final void setApplicationServerKey(ArrayBufferView applicationServerKey){
         this.applicationServerKey = PushSubscriptionOptionsInit.BufferSource.of(applicationServerKey);
     }
+
 
 }

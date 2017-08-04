@@ -58,7 +58,7 @@ public class FetchEventInit extends ExtendableEventInit{
     }
 
     @JsOverlay
-    public final boolean getIsReload(){
+    public final boolean isIsReload(){
         return this.isReload;
     }
 
@@ -66,5 +66,6 @@ public class FetchEventInit extends ExtendableEventInit{
     public final void setIsReload(boolean isReload){
         this.isReload = isReload;
     }
+
 
 }

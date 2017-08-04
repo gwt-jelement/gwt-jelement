@@ -45,7 +45,7 @@ public class MediaQueryListEventInit extends EventInit{
     }
 
     @JsOverlay
-    public final boolean getMatches(){
+    public final boolean isMatches(){
         return this.matches;
     }
 
@@ -53,5 +53,6 @@ public class MediaQueryListEventInit extends EventInit{
     public final void setMatches(boolean matches){
         this.matches = matches;
     }
+
 
 }

@@ -54,4 +54,5 @@ public class ForeignFetchEventInit extends ExtendableEventInit{
         this.origin = origin;
     }
 
+
 }

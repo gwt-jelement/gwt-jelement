@@ -54,4 +54,5 @@ public class FederatedCredentialRequestOptions extends JsObject{
         this.protocols = protocols;
     }
 
+
 }

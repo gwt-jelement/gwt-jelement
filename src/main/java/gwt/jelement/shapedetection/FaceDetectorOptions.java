@@ -45,7 +45,7 @@ public class FaceDetectorOptions extends JsObject{
     }
 
     @JsOverlay
-    public final boolean getFastMode(){
+    public final boolean isFastMode(){
         return this.fastMode;
     }
 
@@ -53,5 +53,6 @@ public class FaceDetectorOptions extends JsObject{
     public final void setFastMode(boolean fastMode){
         this.fastMode = fastMode;
     }
+
 
 }

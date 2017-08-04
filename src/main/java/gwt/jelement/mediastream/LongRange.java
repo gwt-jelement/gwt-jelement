@@ -54,4 +54,5 @@ public class LongRange extends JsObject{
         this.min = min;
     }
 
+
 }

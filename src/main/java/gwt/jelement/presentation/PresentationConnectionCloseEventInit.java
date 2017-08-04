@@ -54,4 +54,5 @@ public class PresentationConnectionCloseEventInit extends EventInit{
         this.message = message;
     }
 
+
 }

@@ -40,4 +40,5 @@ public class FocusEventInit extends UIEventInit{
         this.relatedTarget = relatedTarget;
     }
 
+
 }

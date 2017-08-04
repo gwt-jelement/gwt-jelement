@@ -41,4 +41,5 @@ public class MediaKeysPolicyInit extends JsObject{
         this.minHdcpVersion = minHdcpVersion;
     }
 
+
 }

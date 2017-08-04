@@ -45,7 +45,7 @@ public class SyncEventInit extends ExtendableEventInit{
     }
 
     @JsOverlay
-    public final boolean getLastChance(){
+    public final boolean isLastChance(){
         return this.lastChance;
     }
 
@@ -53,5 +53,6 @@ public class SyncEventInit extends ExtendableEventInit{
     public final void setLastChance(boolean lastChance){
         this.lastChance = lastChance;
     }
+
 
 }

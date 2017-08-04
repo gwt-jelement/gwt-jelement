@@ -41,4 +41,5 @@ public class USBDeviceRequestOptions extends JsObject{
         this.filters = filters;
     }
 
+
 }

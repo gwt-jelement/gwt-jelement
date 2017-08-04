@@ -41,4 +41,5 @@ public class USBConnectionEventInit extends EventInit{
         this.device = device;
     }
 
+
 }

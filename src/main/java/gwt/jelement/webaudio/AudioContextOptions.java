@@ -76,4 +76,5 @@ public class AudioContextOptions extends JsObject{
         this.latencyHint = AudioContextOptions.LatencyHintUnion.of(latencyHint);
     }
 
+
 }

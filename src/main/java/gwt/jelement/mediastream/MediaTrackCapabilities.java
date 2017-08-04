@@ -176,7 +176,7 @@ public class MediaTrackCapabilities extends JsObject{
     }
 
     @JsOverlay
-    public final boolean getTorch(){
+    public final boolean isTorch(){
         return this.torch;
     }
 
@@ -184,5 +184,6 @@ public class MediaTrackCapabilities extends JsObject{
     public final void setTorch(boolean torch){
         this.torch = torch;
     }
+
 
 }

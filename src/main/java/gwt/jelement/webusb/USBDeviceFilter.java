@@ -106,4 +106,5 @@ public class USBDeviceFilter extends JsObject{
         this.serialNumber = serialNumber;
     }
 
+
 }

@@ -59,7 +59,7 @@ public class CanvasContextCreationAttributes extends JsObject{
     }
 
     @JsOverlay
-    public final boolean getAlpha(){
+    public final boolean isAlpha(){
         return this.alpha;
     }
 
@@ -89,7 +89,7 @@ public class CanvasContextCreationAttributes extends JsObject{
     }
 
     @JsOverlay
-    public final boolean getLinearPixelMath(){
+    public final boolean isLinearPixelMath(){
         return this.linearPixelMath;
     }
 
@@ -99,7 +99,7 @@ public class CanvasContextCreationAttributes extends JsObject{
     }
 
     @JsOverlay
-    public final boolean getDepth(){
+    public final boolean isDepth(){
         return this.depth;
     }
 
@@ -109,7 +109,7 @@ public class CanvasContextCreationAttributes extends JsObject{
     }
 
     @JsOverlay
-    public final boolean getStencil(){
+    public final boolean isStencil(){
         return this.stencil;
     }
 
@@ -119,7 +119,7 @@ public class CanvasContextCreationAttributes extends JsObject{
     }
 
     @JsOverlay
-    public final boolean getAntialias(){
+    public final boolean isAntialias(){
         return this.antialias;
     }
 
@@ -129,7 +129,7 @@ public class CanvasContextCreationAttributes extends JsObject{
     }
 
     @JsOverlay
-    public final boolean getPremultipliedAlpha(){
+    public final boolean isPremultipliedAlpha(){
         return this.premultipliedAlpha;
     }
 
@@ -139,7 +139,7 @@ public class CanvasContextCreationAttributes extends JsObject{
     }
 
     @JsOverlay
-    public final boolean getPreserveDrawingBuffer(){
+    public final boolean isPreserveDrawingBuffer(){
         return this.preserveDrawingBuffer;
     }
 
@@ -149,7 +149,7 @@ public class CanvasContextCreationAttributes extends JsObject{
     }
 
     @JsOverlay
-    public final boolean getFailIfMajorPerformanceCaveat(){
+    public final boolean isFailIfMajorPerformanceCaveat(){
         return this.failIfMajorPerformanceCaveat;
     }
 
@@ -157,5 +157,6 @@ public class CanvasContextCreationAttributes extends JsObject{
     public final void setFailIfMajorPerformanceCaveat(boolean failIfMajorPerformanceCaveat){
         this.failIfMajorPerformanceCaveat = failIfMajorPerformanceCaveat;
     }
+
 
 }

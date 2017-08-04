@@ -67,4 +67,5 @@ public class NFCRecord extends JsObject{
         this.data = data;
     }
 
+
 }

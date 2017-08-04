@@ -40,4 +40,5 @@ public class MediaDecodingConfiguration extends MediaConfiguration{
         this.type = type.getInternalValue();
     }
 
+
 }

@@ -44,7 +44,7 @@ public class ConvolverOptions extends AudioNodeOptions{
     }
 
     @JsOverlay
-    public final boolean getDisableNormalization(){
+    public final boolean isDisableNormalization(){
         return this.disableNormalization;
     }
 
@@ -52,5 +52,6 @@ public class ConvolverOptions extends AudioNodeOptions{
     public final void setDisableNormalization(boolean disableNormalization){
         this.disableNormalization = disableNormalization;
     }
+
 
 }

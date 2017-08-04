@@ -80,7 +80,7 @@ public class IDBObjectStoreParameters extends JsObject{
     }
 
     @JsOverlay
-    public final boolean getAutoIncrement(){
+    public final boolean isAutoIncrement(){
         return this.autoIncrement;
     }
 
@@ -88,5 +88,6 @@ public class IDBObjectStoreParameters extends JsObject{
     public final void setAutoIncrement(boolean autoIncrement){
         this.autoIncrement = autoIncrement;
     }
+
 
 }

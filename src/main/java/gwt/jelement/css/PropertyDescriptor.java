@@ -61,7 +61,7 @@ public class PropertyDescriptor extends JsObject{
     }
 
     @JsOverlay
-    public final boolean getInherits(){
+    public final boolean isInherits(){
         return this.inherits;
     }
 
@@ -79,5 +79,6 @@ public class PropertyDescriptor extends JsObject{
     public final void setInitialValue(String initialValue){
         this.initialValue = initialValue;
     }
+
 
 }

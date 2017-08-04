@@ -46,7 +46,7 @@ public class ObjectPropertyDescriptor<T> extends JsObject{
     }
 
     @JsOverlay
-    public final boolean getConfigurable(){
+    public final boolean isConfigurable(){
         return this.configurable;
     }
 
@@ -56,7 +56,7 @@ public class ObjectPropertyDescriptor<T> extends JsObject{
     }
 
     @JsOverlay
-    public final boolean getEnumerable(){
+    public final boolean isEnumerable(){
         return this.enumerable;
     }
 
@@ -76,7 +76,7 @@ public class ObjectPropertyDescriptor<T> extends JsObject{
     }
 
     @JsOverlay
-    public final boolean getWritable(){
+    public final boolean isWritable(){
         return this.writable;
     }
 
@@ -104,5 +104,6 @@ public class ObjectPropertyDescriptor<T> extends JsObject{
     public final void setSet(ObjectPropertySetterFunction<T> set){
         this.set = set;
     }
+
 
 }

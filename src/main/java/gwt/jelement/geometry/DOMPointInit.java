@@ -80,4 +80,5 @@ public class DOMPointInit extends JsObject{
         this.w = w;
     }
 
+
 }

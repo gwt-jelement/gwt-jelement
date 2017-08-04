@@ -67,4 +67,5 @@ public class RTCIceCandidateInit extends JsObject{
         this.sdpMLineIndex = sdpMLineIndex;
     }
 
+
 }

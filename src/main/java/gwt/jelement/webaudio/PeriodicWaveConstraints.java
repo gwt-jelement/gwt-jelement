@@ -32,7 +32,7 @@ public class PeriodicWaveConstraints extends JsObject{
     }
 
     @JsOverlay
-    public final boolean getDisableNormalization(){
+    public final boolean isDisableNormalization(){
         return this.disableNormalization;
     }
 
@@ -40,5 +40,6 @@ public class PeriodicWaveConstraints extends JsObject{
     public final void setDisableNormalization(boolean disableNormalization){
         this.disableNormalization = disableNormalization;
     }
+
 
 }

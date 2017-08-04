@@ -38,7 +38,7 @@ public class EventInit extends JsObject{
     }
 
     @JsOverlay
-    public final boolean getBubbles(){
+    public final boolean isBubbles(){
         return this.bubbles;
     }
 
@@ -48,7 +48,7 @@ public class EventInit extends JsObject{
     }
 
     @JsOverlay
-    public final boolean getCancelable(){
+    public final boolean isCancelable(){
         return this.cancelable;
     }
 
@@ -58,7 +58,7 @@ public class EventInit extends JsObject{
     }
 
     @JsOverlay
-    public final boolean getComposed(){
+    public final boolean isComposed(){
         return this.composed;
     }
 
@@ -66,5 +66,6 @@ public class EventInit extends JsObject{
     public final void setComposed(boolean composed){
         this.composed = composed;
     }
+
 
 }

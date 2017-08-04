@@ -40,4 +40,5 @@ public class BackgroundFetchClickEventInit extends BackgroundFetchEventInit{
         this.state = state.getInternalValue();
     }
 
+
 }

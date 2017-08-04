@@ -34,7 +34,7 @@ public class AddEventListenerOptions extends EventListenerOptions{
     }
 
     @JsOverlay
-    public final boolean getPassive(){
+    public final boolean isPassive(){
         return this.passive;
     }
 
@@ -44,7 +44,7 @@ public class AddEventListenerOptions extends EventListenerOptions{
     }
 
     @JsOverlay
-    public final boolean getOnce(){
+    public final boolean isOnce(){
         return this.once;
     }
 
@@ -52,5 +52,6 @@ public class AddEventListenerOptions extends EventListenerOptions{
     public final void setOnce(boolean once){
         this.once = once;
     }
+
 
 }

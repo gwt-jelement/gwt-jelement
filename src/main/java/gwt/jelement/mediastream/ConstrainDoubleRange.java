@@ -53,4 +53,5 @@ public class ConstrainDoubleRange extends DoubleRange{
         this.ideal = ideal;
     }
 
+
 }

@@ -56,4 +56,5 @@ public class ConstrainDOMStringParameters extends JsObject{
         this.ideal = IDBObjectStoreParameters.KeyPathUnion.of(ideal);
     }
 
+
 }

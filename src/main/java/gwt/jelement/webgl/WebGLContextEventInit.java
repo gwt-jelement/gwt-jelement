@@ -41,4 +41,5 @@ public class WebGLContextEventInit extends EventInit{
         this.statusMessage = statusMessage;
     }
 
+
 }

@@ -35,7 +35,7 @@ public class IDBIndexParameters extends JsObject{
     }
 
     @JsOverlay
-    public final boolean getUnique(){
+    public final boolean isUnique(){
         return this.unique;
     }
 
@@ -45,7 +45,7 @@ public class IDBIndexParameters extends JsObject{
     }
 
     @JsOverlay
-    public final boolean getMultiEntry(){
+    public final boolean isMultiEntry(){
         return this.multiEntry;
     }
 
@@ -53,5 +53,6 @@ public class IDBIndexParameters extends JsObject{
     public final void setMultiEntry(boolean multiEntry){
         this.multiEntry = multiEntry;
     }
+
 
 }

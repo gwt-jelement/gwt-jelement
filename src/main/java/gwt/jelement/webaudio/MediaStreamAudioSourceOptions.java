@@ -42,4 +42,5 @@ public class MediaStreamAudioSourceOptions extends JsObject{
         this.mediaStream = mediaStream;
     }
 
+
 }

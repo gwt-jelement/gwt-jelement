@@ -66,4 +66,5 @@ public class PasswordCredentialData extends CredentialData{
         this.password = password;
     }
 
+
 }

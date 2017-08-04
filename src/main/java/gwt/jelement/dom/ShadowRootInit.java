@@ -45,7 +45,7 @@ public class ShadowRootInit extends JsObject{
     }
 
     @JsOverlay
-    public final boolean getDelegatesFocus(){
+    public final boolean isDelegatesFocus(){
         return this.delegatesFocus;
     }
 
@@ -53,5 +53,6 @@ public class ShadowRootInit extends JsObject{
     public final void setDelegatesFocus(boolean delegatesFocus){
         this.delegatesFocus = delegatesFocus;
     }
+
 
 }

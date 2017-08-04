@@ -93,16 +93,16 @@ public class JsObject<T> extends IsObject{
     public static native JsObject create(JsObject proto, JsObject propertiesObject);
     
     @JsMethod(name = "defineProperties")
-    public native T defineProperties(T obj, JsObject<ObjectPropertyDescriptor> properties);
+    public native <T extends JsObject> T defineProperties(T obj, JsObject<ObjectPropertyDescriptor> properties);
     
     @JsMethod(name = "defineProperty")
-    public static native <T,U> T defineProperty(T obj, String propertyName, ObjectPropertyDescriptor<U> descriptor);
+    public static native <T extends JsObject, U> T defineProperty(T obj, String propertyName, ObjectPropertyDescriptor<U> descriptor);
     
     @JsMethod(name = "entries")
     public static native Object[][] entries(JsObject obj);
     
     @JsMethod(name = "freeze")
-    public static native <T> T freeze(T obj);
+    public static native <T extends JsObject> T freeze(T obj);
     
     @JsMethod(name = "getOwnPropertyDescriptor")
     public static native <U> ObjectPropertyDescriptor<U> getOwnPropertyDescriptor(JsObject obj, String propertyName);
@@ -147,7 +147,7 @@ public class JsObject<T> extends IsObject{
     public native boolean propertyIsEnumerable(String propertyName);
     
     @JsMethod(name = "seal")
-    public static native <T> T seal(T seal);
+    public static native <T extends JsObject> T seal(T seal);
     
     @JsMethod(name = "setPrototypeOf")
     public static native JsObject setPrototypeOf(JsObject obj, Object proto);

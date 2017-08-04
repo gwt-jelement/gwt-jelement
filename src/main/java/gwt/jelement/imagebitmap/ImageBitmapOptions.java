@@ -106,4 +106,5 @@ public class ImageBitmapOptions extends JsObject{
         this.resizeQuality = resizeQuality.getInternalValue();
     }
 
+
 }

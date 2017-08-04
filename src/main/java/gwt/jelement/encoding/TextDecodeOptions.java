@@ -32,7 +32,7 @@ public class TextDecodeOptions extends JsObject{
     }
 
     @JsOverlay
-    public final boolean getStream(){
+    public final boolean isStream(){
         return this.stream;
     }
 
@@ -40,5 +40,6 @@ public class TextDecodeOptions extends JsObject{
     public final void setStream(boolean stream){
         this.stream = stream;
     }
+
 
 }

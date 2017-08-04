@@ -35,7 +35,7 @@ public class ClientQueryOptions extends JsObject{
     }
 
     @JsOverlay
-    public final boolean getIncludeUncontrolled(){
+    public final boolean isIncludeUncontrolled(){
         return this.includeUncontrolled;
     }
 
@@ -53,5 +53,6 @@ public class ClientQueryOptions extends JsObject{
     public final void setType(ClientType type){
         this.type = type.getInternalValue();
     }
+
 
 }

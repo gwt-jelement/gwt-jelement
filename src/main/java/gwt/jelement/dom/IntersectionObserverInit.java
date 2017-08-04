@@ -102,4 +102,5 @@ public class IntersectionObserverInit extends JsObject{
         this.threshold = IntersectionObserverInit.ThresholdUnion.of(threshold);
     }
 
+
 }

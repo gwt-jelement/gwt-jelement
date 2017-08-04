@@ -37,7 +37,7 @@ public class ProgressEventInit extends EventInit{
     }
 
     @JsOverlay
-    public final boolean getLengthComputable(){
+    public final boolean isLengthComputable(){
         return this.lengthComputable;
     }
 
@@ -65,5 +65,6 @@ public class ProgressEventInit extends EventInit{
     public final void setTotal(double total){
         this.total = total;
     }
+
 
 }

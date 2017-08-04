@@ -35,7 +35,7 @@ public class TextDecoderOptions extends JsObject{
     }
 
     @JsOverlay
-    public final boolean getFatal(){
+    public final boolean isFatal(){
         return this.fatal;
     }
 
@@ -45,7 +45,7 @@ public class TextDecoderOptions extends JsObject{
     }
 
     @JsOverlay
-    public final boolean getIgnoreBOM(){
+    public final boolean isIgnoreBOM(){
         return this.ignoreBOM;
     }
 
@@ -53,5 +53,6 @@ public class TextDecoderOptions extends JsObject{
     public final void setIgnoreBOM(boolean ignoreBOM){
         this.ignoreBOM = ignoreBOM;
     }
+
 
 }

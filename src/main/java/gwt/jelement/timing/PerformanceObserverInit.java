@@ -41,4 +41,5 @@ public class PerformanceObserverInit extends JsObject{
         this.entryTypes = entryTypes;
     }
 
+
 }

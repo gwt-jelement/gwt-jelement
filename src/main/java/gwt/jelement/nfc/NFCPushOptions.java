@@ -58,7 +58,7 @@ public class NFCPushOptions extends JsObject{
     }
 
     @JsOverlay
-    public final boolean getIgnoreRead(){
+    public final boolean isIgnoreRead(){
         return this.ignoreRead;
     }
 
@@ -66,5 +66,6 @@ public class NFCPushOptions extends JsObject{
     public final void setIgnoreRead(boolean ignoreRead){
         this.ignoreRead = ignoreRead;
     }
+
 
 }

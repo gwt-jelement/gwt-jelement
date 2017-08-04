@@ -81,4 +81,5 @@ public class HitRegionOptions extends JsObject{
         this.control = control;
     }
 
+
 }

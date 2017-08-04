@@ -59,7 +59,7 @@ public class RequestDeviceOptions extends JsObject{
     }
 
     @JsOverlay
-    public final boolean getAcceptAllDevices(){
+    public final boolean isAcceptAllDevices(){
         return this.acceptAllDevices;
     }
 
@@ -67,5 +67,6 @@ public class RequestDeviceOptions extends JsObject{
     public final void setAcceptAllDevices(boolean acceptAllDevices){
         this.acceptAllDevices = acceptAllDevices;
     }
+
 
 }

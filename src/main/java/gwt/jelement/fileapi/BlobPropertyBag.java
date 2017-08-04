@@ -54,4 +54,5 @@ public class BlobPropertyBag extends JsObject{
         this.endings = endings.getInternalValue();
     }
 
+
 }

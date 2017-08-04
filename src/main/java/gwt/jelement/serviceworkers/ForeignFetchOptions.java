@@ -54,4 +54,5 @@ public class ForeignFetchOptions extends JsObject{
         this.origins = origins;
     }
 
+
 }

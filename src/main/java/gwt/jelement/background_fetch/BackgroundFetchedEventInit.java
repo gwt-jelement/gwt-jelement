@@ -40,4 +40,5 @@ public class BackgroundFetchedEventInit extends BackgroundFetchEventInit{
         this.fetches = fetches;
     }
 
+
 }

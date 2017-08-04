@@ -93,4 +93,5 @@ public class StorageEventInit extends EventInit{
         this.storageArea = storageArea;
     }
 
+
 }

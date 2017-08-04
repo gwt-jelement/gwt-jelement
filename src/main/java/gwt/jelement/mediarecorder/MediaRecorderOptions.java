@@ -80,4 +80,5 @@ public class MediaRecorderOptions extends JsObject{
         this.bitsPerSecond = bitsPerSecond;
     }
 
+
 }

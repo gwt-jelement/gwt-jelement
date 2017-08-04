@@ -80,4 +80,5 @@ public class DOMRectInit extends JsObject{
         this.height = height;
     }
 
+
 }

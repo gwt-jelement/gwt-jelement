@@ -151,7 +151,7 @@ public class PointerEventInit extends MouseEventInit{
     }
 
     @JsOverlay
-    public final boolean getIsPrimary(){
+    public final boolean isIsPrimary(){
         return this.isPrimary;
     }
 
@@ -169,5 +169,6 @@ public class PointerEventInit extends MouseEventInit{
     public final void setCoalescedEvents(PointerEvent[] coalescedEvents){
         this.coalescedEvents = coalescedEvents;
     }
+
 
 }

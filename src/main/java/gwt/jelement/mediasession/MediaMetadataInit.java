@@ -80,4 +80,5 @@ public class MediaMetadataInit extends JsObject{
         this.artwork = artwork;
     }
 
+
 }

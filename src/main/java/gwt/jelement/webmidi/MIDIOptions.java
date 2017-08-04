@@ -32,7 +32,7 @@ public class MIDIOptions extends JsObject{
     }
 
     @JsOverlay
-    public final boolean getSysex(){
+    public final boolean isSysex(){
         return this.sysex;
     }
 
@@ -40,5 +40,6 @@ public class MIDIOptions extends JsObject{
     public final void setSysex(boolean sysex){
         this.sysex = sysex;
     }
+
 
 }

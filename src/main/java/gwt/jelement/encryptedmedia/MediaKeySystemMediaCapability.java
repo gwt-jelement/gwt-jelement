@@ -54,4 +54,5 @@ public class MediaKeySystemMediaCapability extends JsObject{
         this.robustness = robustness;
     }
 
+
 }

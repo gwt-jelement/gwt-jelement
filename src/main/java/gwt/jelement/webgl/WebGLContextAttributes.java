@@ -50,7 +50,7 @@ public class WebGLContextAttributes extends JsObject{
     }
 
     @JsOverlay
-    public final boolean getAlpha(){
+    public final boolean isAlpha(){
         return this.alpha;
     }
 
@@ -60,7 +60,7 @@ public class WebGLContextAttributes extends JsObject{
     }
 
     @JsOverlay
-    public final boolean getDepth(){
+    public final boolean isDepth(){
         return this.depth;
     }
 
@@ -70,7 +70,7 @@ public class WebGLContextAttributes extends JsObject{
     }
 
     @JsOverlay
-    public final boolean getStencil(){
+    public final boolean isStencil(){
         return this.stencil;
     }
 
@@ -80,7 +80,7 @@ public class WebGLContextAttributes extends JsObject{
     }
 
     @JsOverlay
-    public final boolean getAntialias(){
+    public final boolean isAntialias(){
         return this.antialias;
     }
 
@@ -90,7 +90,7 @@ public class WebGLContextAttributes extends JsObject{
     }
 
     @JsOverlay
-    public final boolean getPremultipliedAlpha(){
+    public final boolean isPremultipliedAlpha(){
         return this.premultipliedAlpha;
     }
 
@@ -100,7 +100,7 @@ public class WebGLContextAttributes extends JsObject{
     }
 
     @JsOverlay
-    public final boolean getPreserveDrawingBuffer(){
+    public final boolean isPreserveDrawingBuffer(){
         return this.preserveDrawingBuffer;
     }
 
@@ -110,7 +110,7 @@ public class WebGLContextAttributes extends JsObject{
     }
 
     @JsOverlay
-    public final boolean getFailIfMajorPerformanceCaveat(){
+    public final boolean isFailIfMajorPerformanceCaveat(){
         return this.failIfMajorPerformanceCaveat;
     }
 
@@ -118,5 +118,6 @@ public class WebGLContextAttributes extends JsObject{
     public final void setFailIfMajorPerformanceCaveat(boolean failIfMajorPerformanceCaveat){
         this.failIfMajorPerformanceCaveat = failIfMajorPerformanceCaveat;
     }
+
 
 }

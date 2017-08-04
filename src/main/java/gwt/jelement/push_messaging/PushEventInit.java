@@ -98,4 +98,5 @@ public class PushEventInit extends ExtendableEventInit{
         this.data = PushEventInit.PushMessageDataInit.of(data);
     }
 
+
 }

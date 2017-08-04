@@ -41,4 +41,5 @@ public class FontFaceSetLoadEventInit extends EventInit{
         this.fontfaces = fontfaces;
     }
 
+
 }

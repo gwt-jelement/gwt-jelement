@@ -55,7 +55,7 @@ public class InputEventInit extends UIEventInit{
     }
 
     @JsOverlay
-    public final boolean getIsComposing(){
+    public final boolean isIsComposing(){
         return this.isComposing;
     }
 
@@ -93,5 +93,6 @@ public class InputEventInit extends UIEventInit{
     public final void setTargetRanges(StaticRange[] targetRanges){
         this.targetRanges = targetRanges;
     }
+
 
 }

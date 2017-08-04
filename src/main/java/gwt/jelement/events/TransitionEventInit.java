@@ -66,4 +66,5 @@ public class TransitionEventInit extends EventInit{
         this.pseudoElement = pseudoElement;
     }
 
+
 }

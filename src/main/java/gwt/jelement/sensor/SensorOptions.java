@@ -41,4 +41,5 @@ public class SensorOptions extends JsObject{
         this.frequency = frequency;
     }
 
+
 }

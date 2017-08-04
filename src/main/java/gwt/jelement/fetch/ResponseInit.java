@@ -102,4 +102,5 @@ public class ResponseInit extends JsObject{
         this.headers = ResponseInit.HeadersInit.of(headers);
     }
 
+
 }

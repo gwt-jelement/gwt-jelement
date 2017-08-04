@@ -93,4 +93,5 @@ public class VideoConfiguration extends JsObject{
         this.framerate = framerate;
     }
 
+
 }

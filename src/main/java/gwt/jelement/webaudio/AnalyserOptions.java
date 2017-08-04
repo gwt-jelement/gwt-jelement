@@ -79,4 +79,5 @@ public class AnalyserOptions extends AudioNodeOptions{
         this.smoothingTimeConstant = smoothingTimeConstant;
     }
 
+
 }

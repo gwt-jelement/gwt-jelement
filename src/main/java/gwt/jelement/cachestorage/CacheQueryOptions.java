@@ -41,7 +41,7 @@ public class CacheQueryOptions extends JsObject{
     }
 
     @JsOverlay
-    public final boolean getIgnoreSearch(){
+    public final boolean isIgnoreSearch(){
         return this.ignoreSearch;
     }
 
@@ -51,7 +51,7 @@ public class CacheQueryOptions extends JsObject{
     }
 
     @JsOverlay
-    public final boolean getIgnoreMethod(){
+    public final boolean isIgnoreMethod(){
         return this.ignoreMethod;
     }
 
@@ -61,7 +61,7 @@ public class CacheQueryOptions extends JsObject{
     }
 
     @JsOverlay
-    public final boolean getIgnoreVary(){
+    public final boolean isIgnoreVary(){
         return this.ignoreVary;
     }
 
@@ -79,5 +79,6 @@ public class CacheQueryOptions extends JsObject{
     public final void setCacheName(String cacheName){
         this.cacheName = cacheName;
     }
+
 
 }

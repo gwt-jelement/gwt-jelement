@@ -71,7 +71,7 @@ public class DeviceOrientationEventInit extends EventInit{
     }
 
     @JsOverlay
-    public final boolean getAbsolute(){
+    public final boolean isAbsolute(){
         return this.absolute;
     }
 
@@ -79,5 +79,6 @@ public class DeviceOrientationEventInit extends EventInit{
     public final void setAbsolute(boolean absolute){
         this.absolute = absolute;
     }
+
 
 }

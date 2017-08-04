@@ -67,4 +67,5 @@ public class NotificationEventInit extends ExtendableEventInit{
         this.reply = reply;
     }
 
+
 }

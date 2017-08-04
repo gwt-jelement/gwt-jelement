@@ -67,7 +67,7 @@ public class AudioBufferSourceOptions extends JsObject{
     }
 
     @JsOverlay
-    public final boolean getLoop(){
+    public final boolean isLoop(){
         return this.loop;
     }
 
@@ -105,5 +105,6 @@ public class AudioBufferSourceOptions extends JsObject{
     public final void setPlaybackRate(double playbackRate){
         this.playbackRate = playbackRate;
     }
+
 
 }

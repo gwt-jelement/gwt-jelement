@@ -54,4 +54,5 @@ public class Point2D extends JsObject{
         this.y = y;
     }
 
+
 }

@@ -32,7 +32,7 @@ public class EventListenerOptions extends JsObject{
     }
 
     @JsOverlay
-    public final boolean getCapture(){
+    public final boolean isCapture(){
         return this.capture;
     }
 
@@ -40,5 +40,6 @@ public class EventListenerOptions extends JsObject{
     public final void setCapture(boolean capture){
         this.capture = capture;
     }
+
 
 }

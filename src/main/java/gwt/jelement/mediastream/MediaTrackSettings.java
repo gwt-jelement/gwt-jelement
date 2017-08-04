@@ -155,7 +155,7 @@ public class MediaTrackSettings extends JsObject{
     }
 
     @JsOverlay
-    public final boolean getEchoCancellation(){
+    public final boolean isEchoCancellation(){
         return this.echoCancellation;
     }
 
@@ -345,7 +345,7 @@ public class MediaTrackSettings extends JsObject{
     }
 
     @JsOverlay
-    public final boolean getTorch(){
+    public final boolean isTorch(){
         return this.torch;
     }
 
@@ -353,5 +353,6 @@ public class MediaTrackSettings extends JsObject{
     public final void setTorch(boolean torch){
         this.torch = torch;
     }
+
 
 }

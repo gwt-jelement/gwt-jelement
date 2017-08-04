@@ -318,7 +318,7 @@ public class DOMMatrixInit extends JsObject{
     }
 
     @JsOverlay
-    public final boolean getIs2D(){
+    public final boolean isIs2D(){
         return this.is2D;
     }
 
@@ -326,5 +326,6 @@ public class DOMMatrixInit extends JsObject{
     public final void setIs2D(boolean is2D){
         this.is2D = is2D;
     }
+
 
 }

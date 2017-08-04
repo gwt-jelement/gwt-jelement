@@ -31,7 +31,7 @@ public class PageTransitionEventInit extends EventInit{
     }
 
     @JsOverlay
-    public final boolean getPersisted(){
+    public final boolean isPersisted(){
         return this.persisted;
     }
 
@@ -39,5 +39,6 @@ public class PageTransitionEventInit extends EventInit{
     public final void setPersisted(boolean persisted){
         this.persisted = persisted;
     }
+
 
 }

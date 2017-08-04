@@ -35,7 +35,7 @@ public class FileSystemFlags extends JsObject{
     }
 
     @JsOverlay
-    public final boolean getCreate(){
+    public final boolean isCreate(){
         return this.create;
     }
 
@@ -45,7 +45,7 @@ public class FileSystemFlags extends JsObject{
     }
 
     @JsOverlay
-    public final boolean getExclusive(){
+    public final boolean isExclusive(){
         return this.exclusive;
     }
 
@@ -53,5 +53,6 @@ public class FileSystemFlags extends JsObject{
     public final void setExclusive(boolean exclusive){
         this.exclusive = exclusive;
     }
+
 
 }

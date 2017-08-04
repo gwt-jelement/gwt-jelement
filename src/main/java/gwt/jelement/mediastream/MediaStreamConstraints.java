@@ -89,4 +89,5 @@ public class MediaStreamConstraints extends JsObject{
         this.audio = MediaStreamConstraints.VideoUnion.of(audio);
     }
 
+
 }

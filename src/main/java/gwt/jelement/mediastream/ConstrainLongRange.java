@@ -53,4 +53,5 @@ public class ConstrainLongRange extends LongRange{
         this.ideal = ideal;
     }
 
+
 }

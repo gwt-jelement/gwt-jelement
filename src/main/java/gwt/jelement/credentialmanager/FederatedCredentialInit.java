@@ -79,4 +79,5 @@ public class FederatedCredentialInit extends CredentialData{
         this.protocol = protocol;
     }
 
+
 }

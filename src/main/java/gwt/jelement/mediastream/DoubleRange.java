@@ -54,4 +54,5 @@ public class DoubleRange extends JsObject{
         this.min = min;
     }
 
+
 }

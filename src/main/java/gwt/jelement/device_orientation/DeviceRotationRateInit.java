@@ -67,4 +67,5 @@ public class DeviceRotationRateInit extends JsObject{
         this.gamma = gamma;
     }
 
+
 }

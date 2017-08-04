@@ -67,4 +67,5 @@ public class MediaImage extends JsObject{
         this.type = type;
     }
 
+
 }

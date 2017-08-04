@@ -80,4 +80,5 @@ public class DOMQuadInit extends JsObject{
         this.p4 = p4;
     }
 
+
 }

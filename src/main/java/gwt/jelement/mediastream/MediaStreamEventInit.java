@@ -41,4 +41,5 @@ public class MediaStreamEventInit extends EventInit{
         this.stream = stream;
     }
 
+
 }

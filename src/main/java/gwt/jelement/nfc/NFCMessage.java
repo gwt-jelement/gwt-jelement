@@ -54,4 +54,5 @@ public class NFCMessage extends JsObject{
         this.url = url;
     }
 
+
 }

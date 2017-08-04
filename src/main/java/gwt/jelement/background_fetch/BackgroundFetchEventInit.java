@@ -41,4 +41,5 @@ public class BackgroundFetchEventInit extends ExtendableEventInit{
         this.tag = tag;
     }
 
+
 }
