@@ -19,6 +19,30 @@ package gwt.jelement.core;
 
 public class Js {
 
+    public static final String TYPE_STRING = "String";
+    public static final String TYPE_DATE = "Date";
+    public static final String TYPE_NUMBER = "Number";
+    public static final String TYPE_OBJECT = "Object";
+    public static final String TYPE_BOOLEAN = "Boolean";
+    public static final String TYPE_ARRAY = "Array";
+    public static final String TYPE_NULL = "Null";
+    public static final String TYPE_UNDEFINED = "Undefined";
+    public static final String TYPE_SYMBOL = "Symbol";
+    public static final String TYPE_FUNCTION = "Function";
+    public static final String TYPE_ERROR = "Error";
+    public static final String TYPE_REGEXP = "RegExp";
+    public static final String TYPE_PROMISE = "Promise";
+    public static final String TYPE_ARRAY_BUFFER = "ArrayBuffer";
+    public static final String TYPE_INT8_ARRAY = "Int8Array";
+    public static final String TYPE_UINT8_ARRAY = "Uint8Array";
+    public static final String TYPE_UINT8_CLAMPED_ARRAY = "Uint8ClampedArray";
+    public static final String TYPE_INT16_ARRAY = "Int16Array";
+    public static final String TYPE_UINT16_ARRAY = "Uint16Array";
+    public static final String TYPE_INT32_ARRAY = "Int32Array";
+    public static final String TYPE_UINT32_ARRAY = "Uint32Array";
+    public static final String TYPE_FLOAT32_ARRAY = "Float32Array";
+    public static final String TYPE_FLOAT64_ARRAY = "Float64Array";
+
     public static native <T> JsObject<T> with(JsObject<T> object, String key, T value)/*-{
         object[key] = value;
         return object;
@@ -259,6 +283,18 @@ public class Js {
 
     public static native void call(JsObject object, double value) /*-{
         object(value);
+    }-*/;
+
+    public static native String typeName(Object object) /*-{
+        return Object.prototype.toString.call(object).replace(/(?:\[object |])/g, '');
+    }-*/;
+
+    public static native boolean isTypeName(Object object, String typeName) /*-{
+        return Object.prototype.toString.call(object).replace(/(?:\[object |])/g,'') === typeName;
+    }-*/;
+
+    public static native Object symbol() /*-{
+        return Symbol();
     }-*/;
 
 }

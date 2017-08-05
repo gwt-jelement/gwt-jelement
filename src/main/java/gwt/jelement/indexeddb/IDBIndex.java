@@ -22,7 +22,6 @@ import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
-import jsinterop.base.Any;
 
 @JsType(namespace = JsPackage.GLOBAL, name="IDBIndex", isNative = true)
 public class IDBIndex extends IsObject{
@@ -36,7 +35,7 @@ public class IDBIndex extends IsObject{
     public native IDBObjectStore getObjectStore();
     
     @JsProperty(name="keyPath")
-    public native Any getKeyPath();
+    public native Object getKeyPath();
     
     @JsProperty(name="multiEntry")
     public native boolean getMultiEntry();
@@ -48,58 +47,58 @@ public class IDBIndex extends IsObject{
     public native IDBRequest count();
     
     @JsMethod(name = "count")
-    public native IDBRequest count(Any key);
+    public native IDBRequest count(Object key);
     
     @JsMethod(name = "get")
-    public native IDBRequest get(Any key);
+    public native IDBRequest get(Object key);
     
     @JsMethod(name = "getAll")
     public native IDBRequest getAll();
     
     @JsMethod(name = "getAll")
-    public native IDBRequest getAll(Any query);
+    public native IDBRequest getAll(Object query);
     
     @JsMethod(name = "getAll")
-    public native IDBRequest getAll(Any query, double count);
+    public native IDBRequest getAll(Object query, double count);
     
     @JsMethod(name = "getAllKeys")
     public native IDBRequest getAllKeys();
     
     @JsMethod(name = "getAllKeys")
-    public native IDBRequest getAllKeys(Any query);
+    public native IDBRequest getAllKeys(Object query);
     
     @JsMethod(name = "getAllKeys")
-    public native IDBRequest getAllKeys(Any query, double count);
+    public native IDBRequest getAllKeys(Object query, double count);
     
     @JsMethod(name = "getKey")
-    public native IDBRequest getKey(Any key);
+    public native IDBRequest getKey(Object key);
     
     @JsMethod(name = "openCursor")
     public native IDBRequest openCursor();
     
     @JsMethod(name = "openCursor")
-    public native IDBRequest openCursor(Any range);
+    public native IDBRequest openCursor(Object range);
     
     @JsOverlay
-    public final IDBRequest openCursor(Any range, IDBCursorDirection direction){
+    public final IDBRequest openCursor(Object range, IDBCursorDirection direction){
         return openCursor(range, direction.getInternalValue());
     }
     
     @JsMethod(name = "openCursor")
-    public native IDBRequest openCursor(Any range, String direction);
+    public native IDBRequest openCursor(Object range, String direction);
     
     @JsMethod(name = "openKeyCursor")
     public native IDBRequest openKeyCursor();
     
     @JsMethod(name = "openKeyCursor")
-    public native IDBRequest openKeyCursor(Any range);
+    public native IDBRequest openKeyCursor(Object range);
     
     @JsOverlay
-    public final IDBRequest openKeyCursor(Any range, IDBCursorDirection direction){
+    public final IDBRequest openKeyCursor(Object range, IDBCursorDirection direction){
         return openKeyCursor(range, direction.getInternalValue());
     }
     
     @JsMethod(name = "openKeyCursor")
-    public native IDBRequest openKeyCursor(Any range, String direction);
+    public native IDBRequest openKeyCursor(Object range, String direction);
     
 }

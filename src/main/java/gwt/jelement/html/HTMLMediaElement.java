@@ -33,7 +33,6 @@ import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
-import jsinterop.base.Any;
 
 @JsType(namespace = JsPackage.GLOBAL, name="HTMLMediaElement", isNative = true)
 public class HTMLMediaElement extends HTMLElement{

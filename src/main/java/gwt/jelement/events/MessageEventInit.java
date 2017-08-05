@@ -21,13 +21,12 @@ import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
-import jsinterop.base.Any;
 
 @JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class MessageEventInit extends EventInit{
 
     @JsProperty(name="data")
-    private Any data;
+    private Object data;
 
     @JsProperty(name="origin")
     private String origin;
@@ -45,12 +44,12 @@ public class MessageEventInit extends EventInit{
     }
 
     @JsOverlay
-    public final Any getData(){
+    public final Object getData(){
         return this.data;
     }
 
     @JsOverlay
-    public final void setData(Any data){
+    public final void setData(Object data){
         this.data = data;
     }
 

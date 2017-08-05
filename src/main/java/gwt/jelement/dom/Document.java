@@ -20,6 +20,7 @@ import gwt.jelement.animation.Animation;
 import gwt.jelement.animation.DocumentTimeline;
 import gwt.jelement.core.Function;
 import gwt.jelement.core.Js;
+import gwt.jelement.core.JsObject;
 import gwt.jelement.css.FontFaceSet;
 import gwt.jelement.css.StyleSheetList;
 import gwt.jelement.editing.Selection;
@@ -1546,7 +1547,7 @@ public class Document extends Node{
     public native <T extends Element> T createElement(String localName, String options);
     
     @JsMethod(name = "createElement")
-    public native <T extends Element> T createElement(String localName, Object options);
+    public native <T extends Element> T createElement(String localName, JsObject options);
     
     @JsMethod(name = "createElementNS")
     public native <T extends Element> T createElementNS(String namespaceURI, String qualifiedName);
@@ -1555,7 +1556,7 @@ public class Document extends Node{
     public native <T extends Element> T createElementNS(String namespaceURI, String qualifiedName, String options);
     
     @JsMethod(name = "createElementNS")
-    public native <T extends Element> T createElementNS(String namespaceURI, String qualifiedName, Object options);
+    public native <T extends Element> T createElementNS(String namespaceURI, String qualifiedName, JsObject options);
     
     @JsMethod(name = "createEvent")
     public native Event createEvent(String eventType);

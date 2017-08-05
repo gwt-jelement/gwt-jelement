@@ -21,7 +21,6 @@ import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
-import jsinterop.base.Any;
 
 @JsType(namespace = JsPackage.GLOBAL, name="Date", isNative = true)
 public class Date extends IsObject{
@@ -41,52 +40,52 @@ public class Date extends IsObject{
     }
     
     @JsConstructor
-    public Date(Any year, Any month){
+    public Date(int year, int month){
         super();
     }
     
     @JsConstructor
-    public Date(Any year, Any month, Any date){
+    public Date(int year, int month, int date){
         super();
     }
     
     @JsConstructor
-    public Date(Any year, Any month, Any date, Any hours){
+    public Date(int year, int month, int date, int hours){
         super();
     }
     
     @JsConstructor
-    public Date(Any year, Any month, Any date, Any hours, Any minutes){
+    public Date(int year, int month, int date, int hours, int minutes){
         super();
     }
     
     @JsConstructor
-    public Date(Any year, Any month, Any date, Any hours, Any minutes, Any seconds){
+    public Date(int year, int month, int date, int hours, int minutes, int seconds){
         super();
     }
     
     @JsConstructor
-    public Date(Any year, Any month, Any date, Any hours, Any minutes, Any seconds, Any milliseconds){
+    public Date(int year, int month, int date, int hours, int minutes, int seconds, int milliseconds){
         super();
     }
     
     @JsMethod(name = "UTC")
-    public static native double UTC(Any year, Any month);
+    public static native double UTC(int year, int month);
     
     @JsMethod(name = "UTC")
-    public static native double UTC(Any year, Any month, Any date);
+    public static native double UTC(int year, int month, int date);
     
     @JsMethod(name = "UTC")
-    public static native double UTC(Any year, Any month, Any date, Any hours);
+    public static native double UTC(int year, int month, int date, int hours);
     
     @JsMethod(name = "UTC")
-    public static native double UTC(Any year, Any month, Any date, Any hours, Any minutes);
+    public static native double UTC(int year, int month, int date, int hours, int minutes);
     
     @JsMethod(name = "UTC")
-    public static native double UTC(Any year, Any month, Any date, Any hours, Any minutes, Any seconds);
+    public static native double UTC(int year, int month, int date, int hours, int minutes, int seconds);
     
     @JsMethod(name = "UTC")
-    public static native double UTC(Any year, Any month, Any date, Any hours, Any minutes, Any seconds, Any milliseconds);
+    public static native double UTC(int year, int month, int date, int hours, int minutes, int seconds, int milliseconds);
     
     @JsMethod(name = "getDate")
     public native int getDate();

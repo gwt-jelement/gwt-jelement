@@ -23,7 +23,6 @@ import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
-import jsinterop.base.Any;
 
 @JsType(namespace = JsPackage.GLOBAL, name="Location", isNative = true)
 public class Location extends IsObject{
@@ -94,6 +93,6 @@ public class Location extends IsObject{
     public native String toString();
     
     @JsMethod(name = "valueOf")
-    public native Any valueOf();
+    public native Object valueOf();
     
 }

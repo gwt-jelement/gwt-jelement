@@ -22,7 +22,6 @@ import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
-import jsinterop.base.Any;
 
 @JsType(namespace = JsPackage.GLOBAL, name="Object", isNative = true)
 public class JsObject<T> extends IsObject{
@@ -73,18 +72,20 @@ public class JsObject<T> extends IsObject{
     public native <U> ObjectPropertySetterFunction<U> __lookupSetter__(String propertyName);
     
     @JsMethod(name = "apply")
-    public static native Any apply(Object thisArg);
+    public static native Object apply(Object thisArg);
     
     @JsMethod(name = "apply")
-    public static native Any apply(Object thisArg, Any[] arguments);
+    public static native Object apply(Object thisArg, Object[] arguments);
+    
+    @JsMethod(name = "apply")
+    public static native Object apply(Object thisArg, Array arguments);
     
     @SafeVarargs
     @JsMethod(name = "assign")
     public static native JsObject assign(JsObject target, JsObject... sources);
     
-    @SafeVarargs
     @JsMethod(name = "call")
-    public static native Any call(Object thisArg, Any... arguments);
+    public static native Object call(Object thisArg, Object... arguments);
     
     @JsMethod(name = "create")
     public static native JsObject create(JsObject proto);
@@ -99,7 +100,7 @@ public class JsObject<T> extends IsObject{
     public static native <T extends JsObject, U> T defineProperty(T obj, String propertyName, ObjectPropertyDescriptor<U> descriptor);
     
     @JsMethod(name = "entries")
-    public static native Any[][] entries(JsObject obj);
+    public static native Object[][] entries(JsObject obj);
     
     @JsMethod(name = "freeze")
     public static native <T extends JsObject> T freeze(T obj);
@@ -177,7 +178,7 @@ public class JsObject<T> extends IsObject{
     public native String toSource();
     
     @JsMethod(name = "valueOf")
-    public native Any valueOf();
+    public native Object valueOf();
     
     @JsMethod(name = "values")
     public static native <T> T values(JsObject<T> obj);

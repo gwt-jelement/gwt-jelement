@@ -16,6 +16,7 @@
  */
 package gwt.jelement.animation;
 
+import gwt.jelement.core.JsObject;
 import gwt.jelement.dom.Element;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsOverlay;
@@ -25,33 +26,33 @@ import jsinterop.annotations.JsType;
 @JsType(namespace = JsPackage.GLOBAL, name="KeyframeEffect", isNative = true)
 public class KeyframeEffect extends KeyframeEffectReadOnly{
     @JsConstructor
-    public KeyframeEffect(Element target, Object[] effect){
-        super((Element) null, (Object[]) null);
+    public KeyframeEffect(Element target, JsObject[] effect){
+        super((Element) null, (JsObject[]) null);
     }
     
     @JsConstructor
-    public KeyframeEffect(Element target, Object[] effect, double options){
-        super((Element) null, (Object[]) null);
+    public KeyframeEffect(Element target, JsObject[] effect, double options){
+        super((Element) null, (JsObject[]) null);
     }
     
     @JsConstructor
-    public KeyframeEffect(Element target, Object[] effect, KeyframeEffectOptions options){
-        super((Element) null, (Object[]) null);
+    public KeyframeEffect(Element target, JsObject[] effect, KeyframeEffectOptions options){
+        super((Element) null, (JsObject[]) null);
     }
     
     @JsConstructor
-    public KeyframeEffect(Element target, Object effect){
-        super((Element) null, (Object[]) null);
+    public KeyframeEffect(Element target, JsObject effect){
+        super((Element) null, (JsObject[]) null);
     }
     
     @JsConstructor
-    public KeyframeEffect(Element target, Object effect, double options){
-        super((Element) null, (Object[]) null);
+    public KeyframeEffect(Element target, JsObject effect, double options){
+        super((Element) null, (JsObject[]) null);
     }
     
     @JsConstructor
-    public KeyframeEffect(Element target, Object effect, KeyframeEffectOptions options){
-        super((Element) null, (Object[]) null);
+    public KeyframeEffect(Element target, JsObject effect, KeyframeEffectOptions options){
+        super((Element) null, (JsObject[]) null);
     }
     
 }

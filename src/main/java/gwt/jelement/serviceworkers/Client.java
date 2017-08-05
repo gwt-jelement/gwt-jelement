@@ -17,6 +17,7 @@
 package gwt.jelement.serviceworkers;
 
 import gwt.jelement.core.IsObject;
+import gwt.jelement.core.JsObject;
 import gwt.jelement.dom.MessagePort;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
@@ -49,9 +50,9 @@ public class Client extends IsObject{
     }
     
     @JsMethod(name = "postMessage")
-    public native void postMessage(Object message);
+    public native void postMessage(JsObject message);
     
     @JsMethod(name = "postMessage")
-    public native void postMessage(Object message, MessagePort[] transfer);
+    public native void postMessage(JsObject message, MessagePort[] transfer);
     
 }

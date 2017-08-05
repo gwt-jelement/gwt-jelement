@@ -22,7 +22,6 @@ import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
-import jsinterop.base.Any;
 
 @JsType(namespace = JsPackage.GLOBAL, name="WindowTimers", isNative = true)
 public class WindowTimers extends IsObject{
@@ -44,13 +43,11 @@ public class WindowTimers extends IsObject{
     @JsMethod(name = "setInterval")
     public native double setInterval(String handler);
     
-    @SafeVarargs
     @JsMethod(name = "setInterval")
-    public final native double setInterval(CallbackFunction handler, double timeout, Any... arguments);
+    public native double setInterval(CallbackFunction handler, double timeout, Object... arguments);
     
-    @SafeVarargs
     @JsMethod(name = "setInterval")
-    public final native double setInterval(String handler, double timeout, Any... arguments);
+    public native double setInterval(String handler, double timeout, Object... arguments);
     
     @JsMethod(name = "setTimeout")
     public native double setTimeout(CallbackFunction handler);
@@ -58,12 +55,10 @@ public class WindowTimers extends IsObject{
     @JsMethod(name = "setTimeout")
     public native double setTimeout(String handler);
     
-    @SafeVarargs
     @JsMethod(name = "setTimeout")
-    public final native double setTimeout(CallbackFunction handler, double timeout, Any... arguments);
+    public native double setTimeout(CallbackFunction handler, double timeout, Object... arguments);
     
-    @SafeVarargs
     @JsMethod(name = "setTimeout")
-    public final native double setTimeout(String handler, double timeout, Any... arguments);
+    public native double setTimeout(String handler, double timeout, Object... arguments);
     
 }

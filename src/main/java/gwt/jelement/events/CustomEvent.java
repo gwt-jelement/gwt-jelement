@@ -22,7 +22,6 @@ import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
-import jsinterop.base.Any;
 
 @JsType(namespace = JsPackage.GLOBAL, name="CustomEvent", isNative = true)
 public class CustomEvent extends Event{
@@ -37,7 +36,7 @@ public class CustomEvent extends Event{
     }
     
     @JsProperty(name="detail")
-    public native Any getDetail();
+    public native Object getDetail();
     
     @JsMethod(name = "initCustomEvent")
     public native void initCustomEvent(String type);
@@ -49,6 +48,6 @@ public class CustomEvent extends Event{
     public native void initCustomEvent(String type, boolean bubbles, boolean cancelable);
     
     @JsMethod(name = "initCustomEvent")
-    public native void initCustomEvent(String type, boolean bubbles, boolean cancelable, Any detail);
+    public native void initCustomEvent(String type, boolean bubbles, boolean cancelable, Object detail);
     
 }

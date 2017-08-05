@@ -35,7 +35,6 @@ import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
-import jsinterop.base.Any;
 
 @JsType(namespace = JsPackage.GLOBAL, name="WebGLRenderingContext", isNative = true)
 public class WebGLRenderingContext extends IsObject{
@@ -537,7 +536,7 @@ public class WebGLRenderingContext extends IsObject{
     public native double getAttribLocation(WebGLProgram program, String name);
     
     @JsMethod(name = "getBufferParameter")
-    public native Any getBufferParameter(double target, double pname);
+    public native Object getBufferParameter(double target, double pname);
     
     @JsMethod(name = "getContextAttributes")
     public native WebGLContextAttributes getContextAttributes();
@@ -549,25 +548,25 @@ public class WebGLRenderingContext extends IsObject{
     public native Object getExtension(String name);
     
     @JsMethod(name = "getFramebufferAttachmentParameter")
-    public native Any getFramebufferAttachmentParameter(double target, double attachment, double pname);
+    public native Object getFramebufferAttachmentParameter(double target, double attachment, double pname);
     
     @JsMethod(name = "getParameter")
-    public native Any getParameter(double pname);
+    public native Object getParameter(double pname);
     
     @JsMethod(name = "getProgramInfoLog")
     public native String getProgramInfoLog(WebGLProgram program);
     
     @JsMethod(name = "getProgramParameter")
-    public native Any getProgramParameter(WebGLProgram program, double pname);
+    public native Object getProgramParameter(WebGLProgram program, double pname);
     
     @JsMethod(name = "getRenderbufferParameter")
-    public native Any getRenderbufferParameter(double target, double pname);
+    public native Object getRenderbufferParameter(double target, double pname);
     
     @JsMethod(name = "getShaderInfoLog")
     public native String getShaderInfoLog(WebGLShader shader);
     
     @JsMethod(name = "getShaderParameter")
-    public native Any getShaderParameter(WebGLShader shader, double pname);
+    public native Object getShaderParameter(WebGLShader shader, double pname);
     
     @JsMethod(name = "getShaderPrecisionFormat")
     public native WebGLShaderPrecisionFormat getShaderPrecisionFormat(double shadertype, double precisiontype);
@@ -579,16 +578,16 @@ public class WebGLRenderingContext extends IsObject{
     public native String[] getSupportedExtensions();
     
     @JsMethod(name = "getTexParameter")
-    public native Any getTexParameter(double target, double pname);
+    public native Object getTexParameter(double target, double pname);
     
     @JsMethod(name = "getUniform")
-    public native Any getUniform(WebGLProgram program, WebGLUniformLocation location);
+    public native Object getUniform(WebGLProgram program, WebGLUniformLocation location);
     
     @JsMethod(name = "getUniformLocation")
     public native WebGLUniformLocation getUniformLocation(WebGLProgram program, String name);
     
     @JsMethod(name = "getVertexAttrib")
-    public native Any getVertexAttrib(double index, double pname);
+    public native Object getVertexAttrib(double index, double pname);
     
     @JsMethod(name = "getVertexAttribOffset")
     public native double getVertexAttribOffset(double index, double pname);

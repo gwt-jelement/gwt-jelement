@@ -18,6 +18,7 @@ package gwt.jelement.dom;
 
 import gwt.jelement.animation.Animation;
 import gwt.jelement.animation.KeyframeAnimationOptions;
+import gwt.jelement.core.JsObject;
 import gwt.jelement.css.cssom.StylePropertyMap;
 import gwt.jelement.events.EventHandlerNonNull;
 import gwt.jelement.frame.ScrollIntoViewOptions;
@@ -30,7 +31,6 @@ import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
-import jsinterop.base.Any;
 
 @JsType(namespace = JsPackage.GLOBAL, name="Element", isNative = true)
 public class Element extends Node{
@@ -326,22 +326,22 @@ public class Element extends Node{
     public final native void after(String... nodes);
     
     @JsMethod(name = "animate")
-    public native Animation animate(Object[] effect);
+    public native Animation animate(JsObject[] effect);
     
     @JsMethod(name = "animate")
-    public native Animation animate(Object effect);
+    public native Animation animate(JsObject effect);
     
     @JsMethod(name = "animate")
-    public native Animation animate(Object[] effect, double options);
+    public native Animation animate(JsObject[] effect, double options);
     
     @JsMethod(name = "animate")
-    public native Animation animate(Object[] effect, KeyframeAnimationOptions options);
+    public native Animation animate(JsObject[] effect, KeyframeAnimationOptions options);
     
     @JsMethod(name = "animate")
-    public native Animation animate(Object effect, double options);
+    public native Animation animate(JsObject effect, double options);
     
     @JsMethod(name = "animate")
-    public native Animation animate(Object effect, KeyframeAnimationOptions options);
+    public native Animation animate(JsObject effect, KeyframeAnimationOptions options);
     
     @SafeVarargs
     @JsMethod(name = "append")

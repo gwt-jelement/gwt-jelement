@@ -23,7 +23,6 @@ import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
-import jsinterop.base.Any;
 
 @JsType(namespace = JsPackage.GLOBAL, name="MessagePort", isNative = true)
 public class MessagePort extends EventTarget{
@@ -57,10 +56,10 @@ public class MessagePort extends EventTarget{
     public native void close();
     
     @JsMethod(name = "postMessage")
-    public native void postMessage(Any message);
+    public native void postMessage(Object message);
     
     @JsMethod(name = "postMessage")
-    public native void postMessage(Any message, MessagePort[] transfer);
+    public native void postMessage(Object message, MessagePort[] transfer);
     
     @JsMethod(name = "start")
     public native void start();

@@ -18,6 +18,7 @@ package gwt.jelement.fetch;
 
 import gwt.jelement.core.ArrayBuffer;
 import gwt.jelement.core.IsObject;
+import gwt.jelement.core.JsObject;
 import gwt.jelement.core.Promise;
 import gwt.jelement.fileapi.Blob;
 import gwt.jelement.html.FormData;
@@ -51,7 +52,7 @@ public class Request extends IsObject{
     }
     
     @JsConstructor
-    public Request(Request input, Object requestInitDict){
+    public Request(Request input, JsObject requestInitDict){
         super();
     }
     
@@ -61,7 +62,7 @@ public class Request extends IsObject{
     }
     
     @JsConstructor
-    public Request(String input, Object requestInitDict){
+    public Request(String input, JsObject requestInitDict){
         super();
     }
     

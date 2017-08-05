@@ -20,7 +20,6 @@ import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
-import jsinterop.base.Any;
 
 @JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class ErrorEventInit extends EventInit{
@@ -38,7 +37,7 @@ public class ErrorEventInit extends EventInit{
     private double colno;
 
     @JsProperty(name="error")
-    private Any error;
+    private Object error;
 
     public ErrorEventInit(){
     }
@@ -84,12 +83,12 @@ public class ErrorEventInit extends EventInit{
     }
 
     @JsOverlay
-    public final Any getError(){
+    public final Object getError(){
         return this.error;
     }
 
     @JsOverlay
-    public final void setError(Any error){
+    public final void setError(Object error){
         this.error = error;
     }
 

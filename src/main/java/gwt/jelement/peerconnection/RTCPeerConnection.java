@@ -16,6 +16,7 @@
  */
 package gwt.jelement.peerconnection;
 
+import gwt.jelement.core.JsObject;
 import gwt.jelement.core.Promise;
 import gwt.jelement.events.EventHandlerNonNull;
 import gwt.jelement.events.EventTarget;
@@ -75,7 +76,7 @@ public class RTCPeerConnection extends EventTarget{
     }
     
     @JsConstructor
-    public RTCPeerConnection(RTCConfiguration configuration, Object mediaConstraints){
+    public RTCPeerConnection(RTCConfiguration configuration, JsObject mediaConstraints){
         super();
     }
     
@@ -196,7 +197,7 @@ public class RTCPeerConnection extends EventTarget{
     public native void addStream(MediaStream stream);
     
     @JsMethod(name = "addStream")
-    public native void addStream(MediaStream stream, Object mediaConstraints);
+    public native void addStream(MediaStream stream, JsObject mediaConstraints);
     
     @JsMethod(name = "close")
     public native void close();
@@ -211,7 +212,7 @@ public class RTCPeerConnection extends EventTarget{
     public native Promise<Void> createAnswer(RTCSessionDescriptionCallback successCallback, RTCPeerConnectionErrorCallback failureCallback);
     
     @JsMethod(name = "createAnswer")
-    public native Promise<Void> createAnswer(RTCSessionDescriptionCallback successCallback, RTCPeerConnectionErrorCallback failureCallback, Object mediaConstraints);
+    public native Promise<Void> createAnswer(RTCSessionDescriptionCallback successCallback, RTCPeerConnectionErrorCallback failureCallback, JsObject mediaConstraints);
     
     @JsMethod(name = "createDTMFSender")
     public native RTCDTMFSender createDTMFSender(MediaStreamTrack track);
@@ -232,10 +233,10 @@ public class RTCPeerConnection extends EventTarget{
     public native Promise<Void> createOffer(RTCSessionDescriptionCallback successCallback, RTCPeerConnectionErrorCallback failureCallback);
     
     @JsMethod(name = "createOffer")
-    public native Promise<Void> createOffer(RTCSessionDescriptionCallback successCallback, RTCPeerConnectionErrorCallback failureCallback, Object rtcOfferOptions);
+    public native Promise<Void> createOffer(RTCSessionDescriptionCallback successCallback, RTCPeerConnectionErrorCallback failureCallback, JsObject rtcOfferOptions);
     
     @JsMethod(name = "generateCertificate")
-    public static native Promise<RTCCertificate> generateCertificate(Object keygenAlgorithm);
+    public static native Promise<RTCCertificate> generateCertificate(JsObject keygenAlgorithm);
     
     @JsMethod(name = "generateCertificate")
     public static native Promise<RTCCertificate> generateCertificate(String keygenAlgorithm);

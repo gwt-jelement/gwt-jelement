@@ -122,10 +122,10 @@ public class MediaTrackConstraintSet extends JsObject{
     private ConstrainBoolean torch;
 
     @JsProperty(name="mandatory")
-    private Object mandatory;
+    private JsObject mandatory;
 
     @JsProperty(name="_optional")
-    private Object[] _optional;
+    private JsObject[] _optional;
 
     @JsType(isNative = true, name = "?", namespace = JsPackage.GLOBAL)
     public interface ConstrainLong {
@@ -661,22 +661,22 @@ public class MediaTrackConstraintSet extends JsObject{
     }
 
     @JsOverlay
-    public final Object getMandatory(){
+    public final JsObject getMandatory(){
         return this.mandatory;
     }
 
     @JsOverlay
-    public final void setMandatory(Object mandatory){
+    public final void setMandatory(JsObject mandatory){
         this.mandatory = mandatory;
     }
 
     @JsOverlay
-    public final Object[] get_optional(){
+    public final JsObject[] get_optional(){
         return this._optional;
     }
 
     @JsOverlay
-    public final void set_optional(Object[] _optional){
+    public final void set_optional(JsObject[] _optional){
         this._optional = _optional;
     }
 

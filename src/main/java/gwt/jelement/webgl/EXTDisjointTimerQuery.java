@@ -21,7 +21,6 @@ import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
-import jsinterop.base.Any;
 
 @JsType(namespace = JsPackage.GLOBAL, name="EXTDisjointTimerQuery", isNative = true)
 public class EXTDisjointTimerQuery extends IsObject{
@@ -46,10 +45,10 @@ public class EXTDisjointTimerQuery extends IsObject{
     public native void endQueryEXT(double target);
     
     @JsMethod(name = "getQueryEXT")
-    public native Any getQueryEXT(double target, double pname);
+    public native Object getQueryEXT(double target, double pname);
     
     @JsMethod(name = "getQueryObjectEXT")
-    public native Any getQueryObjectEXT(WebGLTimerQueryEXT query, double pname);
+    public native Object getQueryObjectEXT(WebGLTimerQueryEXT query, double pname);
     
     @JsMethod(name = "isQueryEXT")
     public native boolean isQueryEXT(WebGLTimerQueryEXT query);

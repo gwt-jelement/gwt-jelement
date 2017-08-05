@@ -20,24 +20,23 @@ import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
-import jsinterop.base.Any;
 
 @JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class CustomEventInit extends EventInit{
 
     @JsProperty(name="detail")
-    private Any detail;
+    private Object detail;
 
     public CustomEventInit(){
     }
 
     @JsOverlay
-    public final Any getDetail(){
+    public final Object getDetail(){
         return this.detail;
     }
 
     @JsOverlay
-    public final void setDetail(Any detail){
+    public final void setDetail(Object detail){
         this.detail = detail;
     }
 

@@ -20,6 +20,7 @@ import gwt.jelement.core.Array;
 import gwt.jelement.core.ArrayBuffer;
 import gwt.jelement.core.ArrayBufferView;
 import gwt.jelement.core.IsObject;
+import gwt.jelement.core.JsObject;
 import gwt.jelement.core.Promise;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
@@ -29,10 +30,10 @@ import jsinterop.annotations.JsType;
 @JsType(namespace = JsPackage.GLOBAL, name="SubtleCrypto", isNative = true)
 public class SubtleCrypto extends IsObject{
     @JsMethod(name = "decrypt")
-    public native Promise decrypt(Object algorithm, CryptoKey key, ArrayBuffer data);
+    public native Promise decrypt(JsObject algorithm, CryptoKey key, ArrayBuffer data);
     
     @JsMethod(name = "decrypt")
-    public native Promise decrypt(Object algorithm, CryptoKey key, ArrayBufferView data);
+    public native Promise decrypt(JsObject algorithm, CryptoKey key, ArrayBufferView data);
     
     @JsMethod(name = "decrypt")
     public native Promise decrypt(String algorithm, CryptoKey key, ArrayBuffer data);
@@ -41,40 +42,40 @@ public class SubtleCrypto extends IsObject{
     public native Promise decrypt(String algorithm, CryptoKey key, ArrayBufferView data);
     
     @JsMethod(name = "deriveBits")
-    public native Promise deriveBits(Object algorithm, CryptoKey baseKey, double length);
+    public native Promise deriveBits(JsObject algorithm, CryptoKey baseKey, double length);
     
     @JsMethod(name = "deriveBits")
     public native Promise deriveBits(String algorithm, CryptoKey baseKey, double length);
     
     @JsMethod(name = "deriveKey")
-    public native Promise deriveKey(Object algorithm, CryptoKey baseKey, Object derivedKeyType, boolean extractable, String[] keyUsages);
+    public native Promise deriveKey(JsObject algorithm, CryptoKey baseKey, JsObject derivedKeyType, boolean extractable, String[] keyUsages);
     
     @JsMethod(name = "deriveKey")
-    public native Promise deriveKey(Object algorithm, CryptoKey baseKey, String derivedKeyType, boolean extractable, String[] keyUsages);
+    public native Promise deriveKey(JsObject algorithm, CryptoKey baseKey, String derivedKeyType, boolean extractable, String[] keyUsages);
     
     @JsMethod(name = "deriveKey")
-    public native Promise deriveKey(String algorithm, CryptoKey baseKey, Object derivedKeyType, boolean extractable, String[] keyUsages);
+    public native Promise deriveKey(String algorithm, CryptoKey baseKey, JsObject derivedKeyType, boolean extractable, String[] keyUsages);
     
     @JsMethod(name = "deriveKey")
     public native Promise deriveKey(String algorithm, CryptoKey baseKey, String derivedKeyType, boolean extractable, String[] keyUsages);
     
     @JsMethod(name = "deriveKey")
-    public native Promise deriveKey(Object algorithm, CryptoKey baseKey, Object derivedKeyType, boolean extractable, Array keyUsages);
+    public native Promise deriveKey(JsObject algorithm, CryptoKey baseKey, JsObject derivedKeyType, boolean extractable, Array keyUsages);
     
     @JsMethod(name = "deriveKey")
-    public native Promise deriveKey(Object algorithm, CryptoKey baseKey, String derivedKeyType, boolean extractable, Array keyUsages);
+    public native Promise deriveKey(JsObject algorithm, CryptoKey baseKey, String derivedKeyType, boolean extractable, Array keyUsages);
     
     @JsMethod(name = "deriveKey")
-    public native Promise deriveKey(String algorithm, CryptoKey baseKey, Object derivedKeyType, boolean extractable, Array keyUsages);
+    public native Promise deriveKey(String algorithm, CryptoKey baseKey, JsObject derivedKeyType, boolean extractable, Array keyUsages);
     
     @JsMethod(name = "deriveKey")
     public native Promise deriveKey(String algorithm, CryptoKey baseKey, String derivedKeyType, boolean extractable, Array keyUsages);
     
     @JsMethod(name = "digest")
-    public native Promise digest(Object algorithm, ArrayBuffer data);
+    public native Promise digest(JsObject algorithm, ArrayBuffer data);
     
     @JsMethod(name = "digest")
-    public native Promise digest(Object algorithm, ArrayBufferView data);
+    public native Promise digest(JsObject algorithm, ArrayBufferView data);
     
     @JsMethod(name = "digest")
     public native Promise digest(String algorithm, ArrayBuffer data);
@@ -83,10 +84,10 @@ public class SubtleCrypto extends IsObject{
     public native Promise digest(String algorithm, ArrayBufferView data);
     
     @JsMethod(name = "encrypt")
-    public native Promise encrypt(Object algorithm, CryptoKey key, ArrayBuffer data);
+    public native Promise encrypt(JsObject algorithm, CryptoKey key, ArrayBuffer data);
     
     @JsMethod(name = "encrypt")
-    public native Promise encrypt(Object algorithm, CryptoKey key, ArrayBufferView data);
+    public native Promise encrypt(JsObject algorithm, CryptoKey key, ArrayBufferView data);
     
     @JsMethod(name = "encrypt")
     public native Promise encrypt(String algorithm, CryptoKey key, ArrayBuffer data);
@@ -98,58 +99,58 @@ public class SubtleCrypto extends IsObject{
     public native Promise exportKey(String format, CryptoKey key);
     
     @JsMethod(name = "generateKey")
-    public native Promise generateKey(Object algorithm, boolean extractable, String[] keyUsages);
+    public native Promise generateKey(JsObject algorithm, boolean extractable, String[] keyUsages);
     
     @JsMethod(name = "generateKey")
     public native Promise generateKey(String algorithm, boolean extractable, String[] keyUsages);
     
     @JsMethod(name = "generateKey")
-    public native Promise generateKey(Object algorithm, boolean extractable, Array keyUsages);
+    public native Promise generateKey(JsObject algorithm, boolean extractable, Array keyUsages);
     
     @JsMethod(name = "generateKey")
     public native Promise generateKey(String algorithm, boolean extractable, Array keyUsages);
     
     @JsMethod(name = "importKey")
-    public native Promise importKey(String format, ArrayBuffer keyData, Object algorithm, boolean extractable, String[] keyUsages);
+    public native Promise importKey(String format, ArrayBuffer keyData, JsObject algorithm, boolean extractable, String[] keyUsages);
     
     @JsMethod(name = "importKey")
     public native Promise importKey(String format, ArrayBuffer keyData, String algorithm, boolean extractable, String[] keyUsages);
     
     @JsMethod(name = "importKey")
-    public native Promise importKey(String format, ArrayBufferView keyData, Object algorithm, boolean extractable, String[] keyUsages);
+    public native Promise importKey(String format, ArrayBufferView keyData, JsObject algorithm, boolean extractable, String[] keyUsages);
     
     @JsMethod(name = "importKey")
     public native Promise importKey(String format, ArrayBufferView keyData, String algorithm, boolean extractable, String[] keyUsages);
     
     @JsMethod(name = "importKey")
-    public native Promise importKey(String format, Object keyData, Object algorithm, boolean extractable, String[] keyUsages);
+    public native Promise importKey(String format, JsObject keyData, JsObject algorithm, boolean extractable, String[] keyUsages);
     
     @JsMethod(name = "importKey")
-    public native Promise importKey(String format, Object keyData, String algorithm, boolean extractable, String[] keyUsages);
+    public native Promise importKey(String format, JsObject keyData, String algorithm, boolean extractable, String[] keyUsages);
     
     @JsMethod(name = "importKey")
-    public native Promise importKey(String format, ArrayBuffer keyData, Object algorithm, boolean extractable, Array keyUsages);
+    public native Promise importKey(String format, ArrayBuffer keyData, JsObject algorithm, boolean extractable, Array keyUsages);
     
     @JsMethod(name = "importKey")
     public native Promise importKey(String format, ArrayBuffer keyData, String algorithm, boolean extractable, Array keyUsages);
     
     @JsMethod(name = "importKey")
-    public native Promise importKey(String format, ArrayBufferView keyData, Object algorithm, boolean extractable, Array keyUsages);
+    public native Promise importKey(String format, ArrayBufferView keyData, JsObject algorithm, boolean extractable, Array keyUsages);
     
     @JsMethod(name = "importKey")
     public native Promise importKey(String format, ArrayBufferView keyData, String algorithm, boolean extractable, Array keyUsages);
     
     @JsMethod(name = "importKey")
-    public native Promise importKey(String format, Object keyData, Object algorithm, boolean extractable, Array keyUsages);
+    public native Promise importKey(String format, JsObject keyData, JsObject algorithm, boolean extractable, Array keyUsages);
     
     @JsMethod(name = "importKey")
-    public native Promise importKey(String format, Object keyData, String algorithm, boolean extractable, Array keyUsages);
+    public native Promise importKey(String format, JsObject keyData, String algorithm, boolean extractable, Array keyUsages);
     
     @JsMethod(name = "sign")
-    public native Promise sign(Object algorithm, CryptoKey key, ArrayBuffer data);
+    public native Promise sign(JsObject algorithm, CryptoKey key, ArrayBuffer data);
     
     @JsMethod(name = "sign")
-    public native Promise sign(Object algorithm, CryptoKey key, ArrayBufferView data);
+    public native Promise sign(JsObject algorithm, CryptoKey key, ArrayBufferView data);
     
     @JsMethod(name = "sign")
     public native Promise sign(String algorithm, CryptoKey key, ArrayBuffer data);
@@ -158,64 +159,64 @@ public class SubtleCrypto extends IsObject{
     public native Promise sign(String algorithm, CryptoKey key, ArrayBufferView data);
     
     @JsMethod(name = "unwrapKey")
-    public native Promise unwrapKey(String format, ArrayBuffer wrappedKey, CryptoKey unwrappingKey, Object unwrapAlgorithm, Object unwrappedKeyAlgorithm, boolean extractable, String[] keyUsages);
+    public native Promise unwrapKey(String format, ArrayBuffer wrappedKey, CryptoKey unwrappingKey, JsObject unwrapAlgorithm, JsObject unwrappedKeyAlgorithm, boolean extractable, String[] keyUsages);
     
     @JsMethod(name = "unwrapKey")
-    public native Promise unwrapKey(String format, ArrayBuffer wrappedKey, CryptoKey unwrappingKey, Object unwrapAlgorithm, String unwrappedKeyAlgorithm, boolean extractable, String[] keyUsages);
+    public native Promise unwrapKey(String format, ArrayBuffer wrappedKey, CryptoKey unwrappingKey, JsObject unwrapAlgorithm, String unwrappedKeyAlgorithm, boolean extractable, String[] keyUsages);
     
     @JsMethod(name = "unwrapKey")
-    public native Promise unwrapKey(String format, ArrayBuffer wrappedKey, CryptoKey unwrappingKey, String unwrapAlgorithm, Object unwrappedKeyAlgorithm, boolean extractable, String[] keyUsages);
+    public native Promise unwrapKey(String format, ArrayBuffer wrappedKey, CryptoKey unwrappingKey, String unwrapAlgorithm, JsObject unwrappedKeyAlgorithm, boolean extractable, String[] keyUsages);
     
     @JsMethod(name = "unwrapKey")
     public native Promise unwrapKey(String format, ArrayBuffer wrappedKey, CryptoKey unwrappingKey, String unwrapAlgorithm, String unwrappedKeyAlgorithm, boolean extractable, String[] keyUsages);
     
     @JsMethod(name = "unwrapKey")
-    public native Promise unwrapKey(String format, ArrayBufferView wrappedKey, CryptoKey unwrappingKey, Object unwrapAlgorithm, Object unwrappedKeyAlgorithm, boolean extractable, String[] keyUsages);
+    public native Promise unwrapKey(String format, ArrayBufferView wrappedKey, CryptoKey unwrappingKey, JsObject unwrapAlgorithm, JsObject unwrappedKeyAlgorithm, boolean extractable, String[] keyUsages);
     
     @JsMethod(name = "unwrapKey")
-    public native Promise unwrapKey(String format, ArrayBufferView wrappedKey, CryptoKey unwrappingKey, Object unwrapAlgorithm, String unwrappedKeyAlgorithm, boolean extractable, String[] keyUsages);
+    public native Promise unwrapKey(String format, ArrayBufferView wrappedKey, CryptoKey unwrappingKey, JsObject unwrapAlgorithm, String unwrappedKeyAlgorithm, boolean extractable, String[] keyUsages);
     
     @JsMethod(name = "unwrapKey")
-    public native Promise unwrapKey(String format, ArrayBufferView wrappedKey, CryptoKey unwrappingKey, String unwrapAlgorithm, Object unwrappedKeyAlgorithm, boolean extractable, String[] keyUsages);
+    public native Promise unwrapKey(String format, ArrayBufferView wrappedKey, CryptoKey unwrappingKey, String unwrapAlgorithm, JsObject unwrappedKeyAlgorithm, boolean extractable, String[] keyUsages);
     
     @JsMethod(name = "unwrapKey")
     public native Promise unwrapKey(String format, ArrayBufferView wrappedKey, CryptoKey unwrappingKey, String unwrapAlgorithm, String unwrappedKeyAlgorithm, boolean extractable, String[] keyUsages);
     
     @JsMethod(name = "unwrapKey")
-    public native Promise unwrapKey(String format, ArrayBuffer wrappedKey, CryptoKey unwrappingKey, Object unwrapAlgorithm, Object unwrappedKeyAlgorithm, boolean extractable, Array keyUsages);
+    public native Promise unwrapKey(String format, ArrayBuffer wrappedKey, CryptoKey unwrappingKey, JsObject unwrapAlgorithm, JsObject unwrappedKeyAlgorithm, boolean extractable, Array keyUsages);
     
     @JsMethod(name = "unwrapKey")
-    public native Promise unwrapKey(String format, ArrayBuffer wrappedKey, CryptoKey unwrappingKey, Object unwrapAlgorithm, String unwrappedKeyAlgorithm, boolean extractable, Array keyUsages);
+    public native Promise unwrapKey(String format, ArrayBuffer wrappedKey, CryptoKey unwrappingKey, JsObject unwrapAlgorithm, String unwrappedKeyAlgorithm, boolean extractable, Array keyUsages);
     
     @JsMethod(name = "unwrapKey")
-    public native Promise unwrapKey(String format, ArrayBuffer wrappedKey, CryptoKey unwrappingKey, String unwrapAlgorithm, Object unwrappedKeyAlgorithm, boolean extractable, Array keyUsages);
+    public native Promise unwrapKey(String format, ArrayBuffer wrappedKey, CryptoKey unwrappingKey, String unwrapAlgorithm, JsObject unwrappedKeyAlgorithm, boolean extractable, Array keyUsages);
     
     @JsMethod(name = "unwrapKey")
     public native Promise unwrapKey(String format, ArrayBuffer wrappedKey, CryptoKey unwrappingKey, String unwrapAlgorithm, String unwrappedKeyAlgorithm, boolean extractable, Array keyUsages);
     
     @JsMethod(name = "unwrapKey")
-    public native Promise unwrapKey(String format, ArrayBufferView wrappedKey, CryptoKey unwrappingKey, Object unwrapAlgorithm, Object unwrappedKeyAlgorithm, boolean extractable, Array keyUsages);
+    public native Promise unwrapKey(String format, ArrayBufferView wrappedKey, CryptoKey unwrappingKey, JsObject unwrapAlgorithm, JsObject unwrappedKeyAlgorithm, boolean extractable, Array keyUsages);
     
     @JsMethod(name = "unwrapKey")
-    public native Promise unwrapKey(String format, ArrayBufferView wrappedKey, CryptoKey unwrappingKey, Object unwrapAlgorithm, String unwrappedKeyAlgorithm, boolean extractable, Array keyUsages);
+    public native Promise unwrapKey(String format, ArrayBufferView wrappedKey, CryptoKey unwrappingKey, JsObject unwrapAlgorithm, String unwrappedKeyAlgorithm, boolean extractable, Array keyUsages);
     
     @JsMethod(name = "unwrapKey")
-    public native Promise unwrapKey(String format, ArrayBufferView wrappedKey, CryptoKey unwrappingKey, String unwrapAlgorithm, Object unwrappedKeyAlgorithm, boolean extractable, Array keyUsages);
+    public native Promise unwrapKey(String format, ArrayBufferView wrappedKey, CryptoKey unwrappingKey, String unwrapAlgorithm, JsObject unwrappedKeyAlgorithm, boolean extractable, Array keyUsages);
     
     @JsMethod(name = "unwrapKey")
     public native Promise unwrapKey(String format, ArrayBufferView wrappedKey, CryptoKey unwrappingKey, String unwrapAlgorithm, String unwrappedKeyAlgorithm, boolean extractable, Array keyUsages);
     
     @JsMethod(name = "verify")
-    public native Promise verify(Object algorithm, CryptoKey key, ArrayBuffer signature, ArrayBuffer data);
+    public native Promise verify(JsObject algorithm, CryptoKey key, ArrayBuffer signature, ArrayBuffer data);
     
     @JsMethod(name = "verify")
-    public native Promise verify(Object algorithm, CryptoKey key, ArrayBuffer signature, ArrayBufferView data);
+    public native Promise verify(JsObject algorithm, CryptoKey key, ArrayBuffer signature, ArrayBufferView data);
     
     @JsMethod(name = "verify")
-    public native Promise verify(Object algorithm, CryptoKey key, ArrayBufferView signature, ArrayBuffer data);
+    public native Promise verify(JsObject algorithm, CryptoKey key, ArrayBufferView signature, ArrayBuffer data);
     
     @JsMethod(name = "verify")
-    public native Promise verify(Object algorithm, CryptoKey key, ArrayBufferView signature, ArrayBufferView data);
+    public native Promise verify(JsObject algorithm, CryptoKey key, ArrayBufferView signature, ArrayBufferView data);
     
     @JsMethod(name = "verify")
     public native Promise verify(String algorithm, CryptoKey key, ArrayBuffer signature, ArrayBuffer data);
@@ -230,7 +231,7 @@ public class SubtleCrypto extends IsObject{
     public native Promise verify(String algorithm, CryptoKey key, ArrayBufferView signature, ArrayBufferView data);
     
     @JsMethod(name = "wrapKey")
-    public native Promise wrapKey(String format, CryptoKey key, CryptoKey wrappingKey, Object wrapAlgorithm);
+    public native Promise wrapKey(String format, CryptoKey key, CryptoKey wrappingKey, JsObject wrapAlgorithm);
     
     @JsMethod(name = "wrapKey")
     public native Promise wrapKey(String format, CryptoKey key, CryptoKey wrappingKey, String wrapAlgorithm);

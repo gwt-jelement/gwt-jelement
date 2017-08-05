@@ -16,12 +16,12 @@
  */
 package gwt.jelement.webdatabase;
 
+import gwt.jelement.core.Array;
 import gwt.jelement.core.IsObject;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
-import jsinterop.base.Any;
 
 @JsType(namespace = JsPackage.GLOBAL, name="SQLTransaction", isNative = true)
 public class SQLTransaction extends IsObject{
@@ -29,12 +29,21 @@ public class SQLTransaction extends IsObject{
     public native void executeSql(String sqlStatement);
     
     @JsMethod(name = "executeSql")
-    public native void executeSql(String sqlStatement, Any[] arguments);
+    public native void executeSql(String sqlStatement, Object[] arguments);
     
     @JsMethod(name = "executeSql")
-    public native void executeSql(String sqlStatement, Any[] arguments, SQLStatementCallback callback);
+    public native void executeSql(String sqlStatement, Array arguments);
     
     @JsMethod(name = "executeSql")
-    public native void executeSql(String sqlStatement, Any[] arguments, SQLStatementCallback callback, SQLStatementErrorCallback errorCallback);
+    public native void executeSql(String sqlStatement, Object[] arguments, SQLStatementCallback callback);
+    
+    @JsMethod(name = "executeSql")
+    public native void executeSql(String sqlStatement, Array arguments, SQLStatementCallback callback);
+    
+    @JsMethod(name = "executeSql")
+    public native void executeSql(String sqlStatement, Object[] arguments, SQLStatementCallback callback, SQLStatementErrorCallback errorCallback);
+    
+    @JsMethod(name = "executeSql")
+    public native void executeSql(String sqlStatement, Array arguments, SQLStatementCallback callback, SQLStatementErrorCallback errorCallback);
     
 }

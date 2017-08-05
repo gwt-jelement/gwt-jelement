@@ -16,6 +16,7 @@
  */
 package gwt.jelement.serviceworkers;
 
+import gwt.jelement.core.JsObject;
 import gwt.jelement.dom.MessagePort;
 import gwt.jelement.events.EventHandlerNonNull;
 import gwt.jelement.events.EventTarget;
@@ -65,9 +66,9 @@ public class ServiceWorker extends EventTarget{
     }
     
     @JsMethod(name = "postMessage")
-    public native void postMessage(Object message);
+    public native void postMessage(JsObject message);
     
     @JsMethod(name = "postMessage")
-    public native void postMessage(Object message, MessagePort[] transfer);
+    public native void postMessage(JsObject message, MessagePort[] transfer);
     
 }

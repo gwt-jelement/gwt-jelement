@@ -21,11 +21,10 @@ import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
-import jsinterop.base.Any;
 
 @JsType(namespace = JsPackage.GLOBAL, name="SQLResultSetRowList", isNative = true)
 public class SQLResultSetRowList extends ArrayLike{
     @JsMethod(name = "item")
-    public native Any item(double index);
+    public native Object item(double index);
     
 }

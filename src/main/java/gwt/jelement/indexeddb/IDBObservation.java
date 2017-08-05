@@ -21,7 +21,6 @@ import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
-import jsinterop.base.Any;
 
 @JsType(namespace = JsPackage.GLOBAL, name="IDBObservation", isNative = true)
 public class IDBObservation extends IsObject{
@@ -29,10 +28,10 @@ public class IDBObservation extends IsObject{
     private String type;
     
     @JsProperty(name="key")
-    public native Any getKey();
+    public native Object getKey();
     
     @JsProperty(name="value")
-    public native Any getValue();
+    public native Object getValue();
     
     @JsOverlay
     public final IDBObservationType getType(){

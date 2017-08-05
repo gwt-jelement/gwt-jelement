@@ -24,7 +24,6 @@ import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
-import jsinterop.base.Any;
 
 @JsType(namespace = JsPackage.GLOBAL, name="MediaKeyStatusMap", isNative = true)
 public class MediaKeyStatusMap extends IsObject{
@@ -32,10 +31,10 @@ public class MediaKeyStatusMap extends IsObject{
     public native double getSize();
     
     @JsMethod(name = "get")
-    public native Any get(ArrayBuffer keyId);
+    public native Object get(ArrayBuffer keyId);
     
     @JsMethod(name = "get")
-    public native Any get(ArrayBufferView keyId);
+    public native Object get(ArrayBufferView keyId);
     
     @JsMethod(name = "has")
     public native boolean has(ArrayBuffer keyId);

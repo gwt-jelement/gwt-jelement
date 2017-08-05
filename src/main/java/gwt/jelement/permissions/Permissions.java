@@ -17,6 +17,7 @@
 package gwt.jelement.permissions;
 
 import gwt.jelement.core.IsObject;
+import gwt.jelement.core.JsObject;
 import gwt.jelement.core.Promise;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
@@ -26,15 +27,15 @@ import jsinterop.annotations.JsType;
 @JsType(namespace = JsPackage.GLOBAL, name="Permissions", isNative = true)
 public class Permissions extends IsObject{
     @JsMethod(name = "query")
-    public native Promise<PermissionStatus> query(Object permission);
+    public native Promise<PermissionStatus> query(JsObject permission);
     
     @JsMethod(name = "request")
-    public native Promise<PermissionStatus> request(Object permissions);
+    public native Promise<PermissionStatus> request(JsObject permissions);
     
     @JsMethod(name = "requestAll")
-    public native Promise<PermissionStatus[]> requestAll(Object[] permissions);
+    public native Promise<PermissionStatus[]> requestAll(JsObject[] permissions);
     
     @JsMethod(name = "revoke")
-    public native Promise<PermissionStatus> revoke(Object permission);
+    public native Promise<PermissionStatus> revoke(JsObject permission);
     
 }

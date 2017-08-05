@@ -21,7 +21,6 @@ import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
-import jsinterop.base.Any;
 
 @JsType(namespace = JsPackage.GLOBAL, name="PopStateEvent", isNative = true)
 public class PopStateEvent extends Event{
@@ -36,6 +35,6 @@ public class PopStateEvent extends Event{
     }
     
     @JsProperty(name="state")
-    public native Any getState();
+    public native Object getState();
     
 }

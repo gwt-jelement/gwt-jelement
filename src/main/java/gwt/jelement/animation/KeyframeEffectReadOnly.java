@@ -16,6 +16,7 @@
  */
 package gwt.jelement.animation;
 
+import gwt.jelement.core.JsObject;
 import gwt.jelement.dom.Element;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsOverlay;
@@ -25,32 +26,32 @@ import jsinterop.annotations.JsType;
 @JsType(namespace = JsPackage.GLOBAL, name="KeyframeEffectReadOnly", isNative = true)
 public class KeyframeEffectReadOnly extends AnimationEffectReadOnly{
     @JsConstructor
-    public KeyframeEffectReadOnly(Element target, Object[] effect){
+    public KeyframeEffectReadOnly(Element target, JsObject[] effect){
         super();
     }
     
     @JsConstructor
-    public KeyframeEffectReadOnly(Element target, Object[] effect, double options){
+    public KeyframeEffectReadOnly(Element target, JsObject[] effect, double options){
         super();
     }
     
     @JsConstructor
-    public KeyframeEffectReadOnly(Element target, Object[] effect, KeyframeEffectOptions options){
+    public KeyframeEffectReadOnly(Element target, JsObject[] effect, KeyframeEffectOptions options){
         super();
     }
     
     @JsConstructor
-    public KeyframeEffectReadOnly(Element target, Object effect){
+    public KeyframeEffectReadOnly(Element target, JsObject effect){
         super();
     }
     
     @JsConstructor
-    public KeyframeEffectReadOnly(Element target, Object effect, double options){
+    public KeyframeEffectReadOnly(Element target, JsObject effect, double options){
         super();
     }
     
     @JsConstructor
-    public KeyframeEffectReadOnly(Element target, Object effect, KeyframeEffectOptions options){
+    public KeyframeEffectReadOnly(Element target, JsObject effect, KeyframeEffectOptions options){
         super();
     }
     

@@ -17,6 +17,7 @@
 package gwt.jelement.frame;
 
 import gwt.jelement.core.IsObject;
+import gwt.jelement.core.JsObject;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
@@ -32,7 +33,7 @@ public class History extends IsObject{
     public native double getLength();
     
     @JsProperty(name="state")
-    public native Object getState();
+    public native JsObject getState();
     
     @JsOverlay
     public final ScrollRestoration getScrollRestoration(){
@@ -57,15 +58,15 @@ public class History extends IsObject{
     public native void go(double delta);
     
     @JsMethod(name = "pushState")
-    public native void pushState(Object data, String title);
+    public native void pushState(JsObject data, String title);
     
     @JsMethod(name = "pushState")
-    public native void pushState(Object data, String title, String url);
+    public native void pushState(JsObject data, String title, String url);
     
     @JsMethod(name = "replaceState")
-    public native void replaceState(Object data, String title);
+    public native void replaceState(JsObject data, String title);
     
     @JsMethod(name = "replaceState")
-    public native void replaceState(Object data, String title, String url);
+    public native void replaceState(JsObject data, String title, String url);
     
 }

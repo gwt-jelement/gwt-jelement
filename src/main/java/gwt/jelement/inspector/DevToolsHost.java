@@ -23,7 +23,6 @@ import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
-import jsinterop.base.Any;
 
 @JsType(namespace = JsPackage.GLOBAL, name="DevToolsHost", isNative = true)
 public class DevToolsHost extends IsObject{
@@ -52,10 +51,10 @@ public class DevToolsHost extends IsObject{
     public native void sendMessageToEmbedder(String message);
     
     @JsMethod(name = "showContextMenuAtPoint")
-    public native void showContextMenuAtPoint(double x, double y, Any items);
+    public native void showContextMenuAtPoint(double x, double y, Object items);
     
     @JsMethod(name = "showContextMenuAtPoint")
-    public native void showContextMenuAtPoint(double x, double y, Any items, Document document);
+    public native void showContextMenuAtPoint(double x, double y, Object items, Document document);
     
     @JsMethod(name = "upgradeDraggedFileSystemPermissions")
     public native void upgradeDraggedFileSystemPermissions(DOMFileSystem domFileSystem);

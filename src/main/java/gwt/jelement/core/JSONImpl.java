@@ -20,44 +20,43 @@ import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
-import jsinterop.base.Any;
 
 @JsType(namespace = JsPackage.GLOBAL, name="JSON", isNative = true)
 public class JSONImpl extends IsObject{
     @JsMethod(name = "parse")
-    public native Any parse(String text);
+    public native Object parse(String text);
     
     @JsMethod(name = "parse")
-    public native Any parse(String text, JSONModifier reviver);
+    public native Object parse(String text, JSONModifier reviver);
     
     @JsMethod(name = "stringify")
-    public native String stringify(Any value);
+    public native String stringify(Object value);
     
     @JsMethod(name = "stringify")
-    public native String stringify(Any value, String[] replacer);
+    public native String stringify(Object value, String[] replacer);
     
     @JsMethod(name = "stringify")
-    public native String stringify(Any value, JSONModifier replacer);
+    public native String stringify(Object value, JSONModifier replacer);
     
     @JsMethod(name = "stringify")
-    public native String stringify(Any value, Array replacer);
+    public native String stringify(Object value, Array replacer);
     
     @JsMethod(name = "stringify")
-    public native String stringify(Any value, String[] replacer, String space);
+    public native String stringify(Object value, String[] replacer, String space);
     
     @JsMethod(name = "stringify")
-    public native String stringify(Any value, String[] replacer, double space);
+    public native String stringify(Object value, String[] replacer, double space);
     
     @JsMethod(name = "stringify")
-    public native String stringify(Any value, JSONModifier replacer, String space);
+    public native String stringify(Object value, JSONModifier replacer, String space);
     
     @JsMethod(name = "stringify")
-    public native String stringify(Any value, JSONModifier replacer, double space);
+    public native String stringify(Object value, JSONModifier replacer, double space);
     
     @JsMethod(name = "stringify")
-    public native String stringify(Any value, Array replacer, String space);
+    public native String stringify(Object value, Array replacer, String space);
     
     @JsMethod(name = "stringify")
-    public native String stringify(Any value, Array replacer, double space);
+    public native String stringify(Object value, Array replacer, double space);
     
 }

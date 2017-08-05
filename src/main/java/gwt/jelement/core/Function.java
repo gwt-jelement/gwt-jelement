@@ -22,7 +22,6 @@ import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
-import jsinterop.base.Any;
 
 @JsType(namespace = JsPackage.GLOBAL, name="Function", isNative = true)
 public class Function extends IsObject{
@@ -52,18 +51,19 @@ public class Function extends IsObject{
     }
     
     @JsMethod(name = "apply")
-    public native Any apply(Object thisArg);
+    public native Object apply(Object thisArg);
     
     @JsMethod(name = "apply")
-    public native Any apply(Object thisArg, Any[] arguments);
+    public native Object apply(Object thisArg, Object[] arguments);
     
-    @SafeVarargs
+    @JsMethod(name = "apply")
+    public native Object apply(Object thisArg, Array arguments);
+    
     @JsMethod(name = "bind")
-    public final native Function bind(Object thisArg, Any... arguments);
+    public native Function bind(Object thisArg, Object... arguments);
     
-    @SafeVarargs
     @JsMethod(name = "call")
-    public final native Any call(Object thisArg, Any... arguments);
+    public native Object call(Object thisArg, Object... arguments);
     
     @JsMethod(name = "isGenerator")
     public native boolean isGenerator();

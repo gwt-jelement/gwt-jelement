@@ -17,9 +17,8 @@
 package gwt.jelement.core;
 
 import jsinterop.annotations.JsFunction;
-import jsinterop.base.Any;
 
 @JsFunction
 public interface CallbackFunction{
-    Any onInvoked(Any... arguments);
+    Object onInvoked(Object... arguments);
 }

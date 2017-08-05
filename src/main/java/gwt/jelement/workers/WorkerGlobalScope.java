@@ -18,6 +18,7 @@ package gwt.jelement.workers;
 
 import gwt.jelement.cachestorage.CacheStorage;
 import gwt.jelement.core.CallbackFunction;
+import gwt.jelement.core.JsObject;
 import gwt.jelement.core.Promise;
 import gwt.jelement.crypto.Crypto;
 import gwt.jelement.dom.AddressSpace;
@@ -42,7 +43,6 @@ import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
-import jsinterop.base.Any;
 
 @JsType(namespace = JsPackage.GLOBAL, name="WorkerGlobalScope", isNative = true)
 public class WorkerGlobalScope extends EventTarget{
@@ -244,10 +244,10 @@ public class WorkerGlobalScope extends EventTarget{
     public native Promise<Response> fetch(String input);
     
     @JsMethod(name = "fetch")
-    public native Promise<Response> fetch(Request input, Object init);
+    public native Promise<Response> fetch(Request input, JsObject init);
     
     @JsMethod(name = "fetch")
-    public native Promise<Response> fetch(String input, Object init);
+    public native Promise<Response> fetch(String input, JsObject init);
     
     @SafeVarargs
     @JsMethod(name = "importScripts")
@@ -259,13 +259,11 @@ public class WorkerGlobalScope extends EventTarget{
     @JsMethod(name = "setInterval")
     public native double setInterval(String handler);
     
-    @SafeVarargs
     @JsMethod(name = "setInterval")
-    public final native double setInterval(CallbackFunction handler, double timeout, Any... arguments);
+    public native double setInterval(CallbackFunction handler, double timeout, Object... arguments);
     
-    @SafeVarargs
     @JsMethod(name = "setInterval")
-    public final native double setInterval(String handler, double timeout, Any... arguments);
+    public native double setInterval(String handler, double timeout, Object... arguments);
     
     @JsMethod(name = "setTimeout")
     public native double setTimeout(CallbackFunction handler);
@@ -273,12 +271,10 @@ public class WorkerGlobalScope extends EventTarget{
     @JsMethod(name = "setTimeout")
     public native double setTimeout(String handler);
     
-    @SafeVarargs
     @JsMethod(name = "setTimeout")
-    public final native double setTimeout(CallbackFunction handler, double timeout, Any... arguments);
+    public native double setTimeout(CallbackFunction handler, double timeout, Object... arguments);
     
-    @SafeVarargs
     @JsMethod(name = "setTimeout")
-    public final native double setTimeout(String handler, double timeout, Any... arguments);
+    public native double setTimeout(String handler, double timeout, Object... arguments);
     
 }
