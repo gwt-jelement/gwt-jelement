@@ -25,6 +25,7 @@ import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
+import jsinterop.base.Any;
 
 @JsType(namespace = JsPackage.GLOBAL, name="FetchEvent", isNative = true)
 public class FetchEvent extends ExtendableEvent{
@@ -43,7 +44,7 @@ public class FetchEvent extends ExtendableEvent{
     public native boolean getIsReload();
     
     @JsProperty(name="preloadResponse")
-    public native Promise<Object> getPreloadResponse();
+    public native Promise<Any> getPreloadResponse();
     
     @JsMethod(name = "respondWith")
     public native void respondWith(Promise<Response> r);

@@ -33,25 +33,31 @@ public class DocumentType extends Node{
     @JsProperty(name="systemId")
     public native String getSystemId();
     
+    @SafeVarargs
     @JsMethod(name = "after")
-    public native void after(Node... nodes);
+    public final native void after(Node... nodes);
     
+    @SafeVarargs
     @JsMethod(name = "after")
-    public native void after(String... nodes);
+    public final native void after(String... nodes);
     
+    @SafeVarargs
     @JsMethod(name = "before")
-    public native void before(Node... nodes);
+    public final native void before(Node... nodes);
     
+    @SafeVarargs
     @JsMethod(name = "before")
-    public native void before(String... nodes);
+    public final native void before(String... nodes);
     
     @JsMethod(name = "remove")
     public native void remove();
     
+    @SafeVarargs
     @JsMethod(name = "replaceWith")
-    public native void replaceWith(Node... nodes);
+    public final native void replaceWith(Node... nodes);
     
+    @SafeVarargs
     @JsMethod(name = "replaceWith")
-    public native void replaceWith(String... nodes);
+    public final native void replaceWith(String... nodes);
     
 }

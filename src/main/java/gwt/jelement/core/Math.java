@@ -83,6 +83,7 @@ public class Math extends IsObject{
     @JsMethod(name = "fround")
     public static native double fround(double x);
     
+    @SafeVarargs
     @JsMethod(name = "hypot")
     public static native double hypot(double... x);
     
@@ -101,9 +102,11 @@ public class Math extends IsObject{
     @JsMethod(name = "log2")
     public static native double log2(double x);
     
+    @SafeVarargs
     @JsMethod(name = "max")
     public static native double max(double... x);
     
+    @SafeVarargs
     @JsMethod(name = "min")
     public static native double min(double... x);
     

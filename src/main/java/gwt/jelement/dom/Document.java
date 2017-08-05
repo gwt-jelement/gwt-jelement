@@ -1504,11 +1504,13 @@ public class Document extends Node{
     @JsMethod(name = "adoptNode")
     public native Node adoptNode(Node node);
     
+    @SafeVarargs
     @JsMethod(name = "append")
-    public native void append(Node... nodes);
+    public final native void append(Node... nodes);
     
+    @SafeVarargs
     @JsMethod(name = "append")
-    public native void append(String... nodes);
+    public final native void append(String... nodes);
     
     @JsMethod(name = "caretRangeFromPoint")
     public native Range caretRangeFromPoint();
@@ -1600,8 +1602,9 @@ public class Document extends Node{
     @JsMethod(name = "createTouch")
     public native Touch createTouch(Window view, EventTarget target, double identifier, double pageX, double pageY, double screenX, double screenY, double radiusX, double radiusY, double rotationAngle, double force);
     
+    @SafeVarargs
     @JsMethod(name = "createTouchList")
-    public native TouchList createTouchList(Touch... touches);
+    public final native TouchList createTouchList(Touch... touches);
     
     @JsMethod(name = "createTreeWalker")
     public native TreeWalker createTreeWalker(Node root);
@@ -1678,11 +1681,13 @@ public class Document extends Node{
     @JsMethod(name = "open")
     public native void open();
     
+    @SafeVarargs
     @JsMethod(name = "prepend")
-    public native void prepend(Node... nodes);
+    public final native void prepend(Node... nodes);
     
+    @SafeVarargs
     @JsMethod(name = "prepend")
-    public native void prepend(String... nodes);
+    public final native void prepend(String... nodes);
     
     @JsMethod(name = "queryCommandEnabled")
     public native boolean queryCommandEnabled(String commandId);
@@ -1717,10 +1722,12 @@ public class Document extends Node{
     @JsMethod(name = "webkitExitFullscreen")
     public native void webkitExitFullscreen();
     
+    @SafeVarargs
     @JsMethod(name = "write")
-    public native void write(String... text);
+    public final native void write(String... text);
     
+    @SafeVarargs
     @JsMethod(name = "writeln")
-    public native void writeln(String... text);
+    public final native void writeln(String... text);
     
 }

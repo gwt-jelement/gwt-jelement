@@ -38,17 +38,21 @@ public class ParentNode extends IsObject{
     @JsProperty(name="childElementCount")
     public native double getChildElementCount();
     
+    @SafeVarargs
     @JsMethod(name = "append")
-    public native void append(Node... nodes);
+    public final native void append(Node... nodes);
     
+    @SafeVarargs
     @JsMethod(name = "append")
-    public native void append(String... nodes);
+    public final native void append(String... nodes);
     
+    @SafeVarargs
     @JsMethod(name = "prepend")
-    public native void prepend(Node... nodes);
+    public final native void prepend(Node... nodes);
     
+    @SafeVarargs
     @JsMethod(name = "prepend")
-    public native void prepend(String... nodes);
+    public final native void prepend(String... nodes);
     
     @JsMethod(name = "querySelector")
     public native <T extends Element> T querySelector(String selectors);

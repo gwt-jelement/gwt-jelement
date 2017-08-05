@@ -29,6 +29,7 @@ import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
+import jsinterop.base.Any;
 
 @JsType(namespace = JsPackage.GLOBAL, name="XMLHttpRequest", isNative = true)
 public class XMLHttpRequest extends XMLHttpRequestEventTarget{
@@ -87,7 +88,7 @@ public class XMLHttpRequest extends XMLHttpRequestEventTarget{
     public native String getStatusText();
     
     @JsProperty(name="response")
-    public native Object getResponse();
+    public native Any getResponse();
     
     @JsProperty(name="responseText")
     public native String getResponseText();

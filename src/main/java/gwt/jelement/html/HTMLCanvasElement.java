@@ -30,6 +30,7 @@ import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
+import jsinterop.base.Any;
 
 @JsType(namespace = JsPackage.GLOBAL, name="HTMLCanvasElement", isNative = true)
 public class HTMLCanvasElement extends HTMLElement{
@@ -128,7 +129,7 @@ public class HTMLCanvasElement extends HTMLElement{
     public native void toBlob(BlobCallback _callback, String type);
     
     @JsMethod(name = "toBlob")
-    public native void toBlob(BlobCallback _callback, String type, Object arguments);
+    public native void toBlob(BlobCallback _callback, String type, Any arguments);
     
     @JsMethod(name = "toDataURL")
     public native String toDataURL();
@@ -137,7 +138,7 @@ public class HTMLCanvasElement extends HTMLElement{
     public native String toDataURL(String type);
     
     @JsMethod(name = "toDataURL")
-    public native String toDataURL(String type, Object arguments);
+    public native String toDataURL(String type, Any arguments);
     
     @JsMethod(name = "transferControlToOffscreen")
     public native OffscreenCanvas transferControlToOffscreen();

@@ -22,6 +22,7 @@ import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
+import jsinterop.base.Any;
 
 @JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class NotificationOptions extends JsObject{
@@ -63,7 +64,7 @@ public class NotificationOptions extends JsObject{
     private boolean requireInteraction;
 
     @JsProperty(name="data")
-    private Object data;
+    private Any data;
 
     @JsProperty(name="actions")
     private NotificationAction[] actions;
@@ -226,12 +227,12 @@ public class NotificationOptions extends JsObject{
     }
 
     @JsOverlay
-    public final Object getData(){
+    public final Any getData(){
         return this.data;
     }
 
     @JsOverlay
-    public final void setData(Object data){
+    public final void setData(Any data){
         this.data = data;
     }
 

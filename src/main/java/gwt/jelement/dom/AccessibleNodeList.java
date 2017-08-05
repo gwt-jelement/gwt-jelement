@@ -50,7 +50,7 @@ public class AccessibleNodeList extends ArrayLike{
     
     @JsOverlay
     public final void set(double index, AccessibleNode node){
-        Js.<AccessibleNode>set(this.object(), index, node);
+        Js.set(this.object(), index, node);
     }
     
 }

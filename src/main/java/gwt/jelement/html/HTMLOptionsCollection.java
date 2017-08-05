@@ -60,7 +60,7 @@ public class HTMLOptionsCollection extends HTMLBaseCollection<Node, HTMLAllColle
     
     @JsOverlay
     public final void set(double index, HTMLOptionElement option){
-        Js.<HTMLOptionElement>set(this.object(), index, option);
+        Js.set(this.object(), index, option);
     }
     
 }

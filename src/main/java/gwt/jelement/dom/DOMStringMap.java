@@ -37,7 +37,7 @@ public class DOMStringMap extends IsObject{
     
     @JsOverlay
     public final void set(String name, String value){
-        Js.<String>set(this.object(), name, value);
+        Js.set(this.object(), name, value);
     }
     
 }

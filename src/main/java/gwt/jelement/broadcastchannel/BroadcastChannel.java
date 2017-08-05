@@ -24,6 +24,7 @@ import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
+import jsinterop.base.Any;
 
 @JsType(namespace = JsPackage.GLOBAL, name="BroadcastChannel", isNative = true)
 public class BroadcastChannel extends EventTarget{
@@ -65,6 +66,6 @@ public class BroadcastChannel extends EventTarget{
     public native void close();
     
     @JsMethod(name = "postMessage")
-    public native void postMessage(Object message);
+    public native void postMessage(Any message);
     
 }

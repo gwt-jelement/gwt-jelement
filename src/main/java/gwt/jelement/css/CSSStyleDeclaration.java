@@ -94,7 +94,7 @@ public class CSSStyleDeclaration extends ArrayLike{
     
     @JsOverlay
     public final void set(String property, String propertyValue){
-        Js.<String>set(this.object(), property, propertyValue);
+        Js.set(this.object(), property, propertyValue);
     }
     
     @JsMethod(name = "setProperty")

@@ -21,36 +21,37 @@ import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
+import jsinterop.base.Any;
 
 @JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class PromiseRejectionEventInit extends EventInit{
 
     @JsProperty(name="promise")
-    private Promise<Object> promise;
+    private Promise<Any> promise;
 
     @JsProperty(name="reason")
-    private Object reason;
+    private Any reason;
 
     public PromiseRejectionEventInit(){
     }
 
     @JsOverlay
-    public final Promise<Object> getPromise(){
+    public final Promise<Any> getPromise(){
         return this.promise;
     }
 
     @JsOverlay
-    public final void setPromise(Promise<Object> promise){
+    public final void setPromise(Promise<Any> promise){
         this.promise = promise;
     }
 
     @JsOverlay
-    public final Object getReason(){
+    public final Any getReason(){
         return this.reason;
     }
 
     @JsOverlay
-    public final void setReason(Object reason){
+    public final void setReason(Any reason){
         this.reason = reason;
     }
 

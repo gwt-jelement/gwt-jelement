@@ -24,6 +24,7 @@ import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
+import jsinterop.base.Any;
 
 @JsType(namespace = JsPackage.GLOBAL, name="ArrayBuffer", isNative = true)
 public class ArrayBuffer extends IsObject{
@@ -65,13 +66,13 @@ public class ArrayBuffer extends IsObject{
     public native void close();
     
     @JsMethod(name = "isView")
-    public static native boolean isView(Object value);
+    public static native boolean isView(Any value);
     
     @JsMethod(name = "postMessage")
-    public native void postMessage(Object message);
+    public native void postMessage(Any message);
     
     @JsMethod(name = "postMessage")
-    public native void postMessage(Object message, MessagePort[] transfer);
+    public native void postMessage(Any message, MessagePort[] transfer);
     
     @JsMethod(name = "slice")
     public native ArrayBuffer slice(double begin);

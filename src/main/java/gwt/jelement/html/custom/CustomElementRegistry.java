@@ -24,6 +24,7 @@ import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
+import jsinterop.base.Any;
 
 @JsType(namespace = JsPackage.GLOBAL, name="CustomElementRegistry", isNative = true)
 public class CustomElementRegistry extends IsObject{
@@ -34,7 +35,7 @@ public class CustomElementRegistry extends IsObject{
     public native void define(String name, Function constructor, ElementDefinitionOptions options);
     
     @JsMethod(name = "get")
-    public native Object get(String name);
+    public native Any get(String name);
     
     @JsMethod(name = "whenDefined")
     public native Promise<Void> whenDefined(String name);

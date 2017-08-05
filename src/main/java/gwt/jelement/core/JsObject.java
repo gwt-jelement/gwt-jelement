@@ -22,6 +22,7 @@ import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
+import jsinterop.base.Any;
 
 @JsType(namespace = JsPackage.GLOBAL, name="Object", isNative = true)
 public class JsObject<T> extends IsObject{
@@ -72,19 +73,18 @@ public class JsObject<T> extends IsObject{
     public native <U> ObjectPropertySetterFunction<U> __lookupSetter__(String propertyName);
     
     @JsMethod(name = "apply")
-    public static native Object apply(Object thisArg);
+    public static native Any apply(Object thisArg);
     
     @JsMethod(name = "apply")
-    public static native Object apply(Object thisArg, Object[] arguments);
+    public static native Any apply(Object thisArg, Any[] arguments);
     
-    @JsMethod(name = "apply")
-    public static native Object apply(Object thisArg, Array arguments);
-    
+    @SafeVarargs
     @JsMethod(name = "assign")
     public static native JsObject assign(JsObject target, JsObject... sources);
     
+    @SafeVarargs
     @JsMethod(name = "call")
-    public static native Object call(Object thisArg, Object... arguments);
+    public static native Any call(Object thisArg, Any... arguments);
     
     @JsMethod(name = "create")
     public static native JsObject create(JsObject proto);
@@ -99,7 +99,7 @@ public class JsObject<T> extends IsObject{
     public static native <T extends JsObject, U> T defineProperty(T obj, String propertyName, ObjectPropertyDescriptor<U> descriptor);
     
     @JsMethod(name = "entries")
-    public static native Object[][] entries(JsObject obj);
+    public static native Any[][] entries(JsObject obj);
     
     @JsMethod(name = "freeze")
     public static native <T extends JsObject> T freeze(T obj);
@@ -177,7 +177,7 @@ public class JsObject<T> extends IsObject{
     public native String toSource();
     
     @JsMethod(name = "valueOf")
-    public native Object valueOf();
+    public native Any valueOf();
     
     @JsMethod(name = "values")
     public static native <T> T values(JsObject<T> obj);
@@ -274,82 +274,82 @@ public class JsObject<T> extends IsObject{
     
     @JsOverlay
     public final void set(String propertyName, T value) {
-        Js.<T>set(this, propertyName, value);
+        Js.set(this, propertyName, value);
     }
     
     @JsOverlay
     public final void set(double index, T value) {
-        Js.<T>set(this, index, value);
+        Js.set(this, index, value);
     }
     
     @JsOverlay
     public final void set(String propertyName, boolean value) {
-        Js.<T>set(this, propertyName, value);
+        Js.set(this, propertyName, value);
     }
     
     @JsOverlay
     public final void set(double index, boolean value) {
-        Js.<T>set(this, index, value);
+        Js.set(this, index, value);
     }
     
     @JsOverlay
     public final void set(String propertyName, char value) {
-        Js.<T>set(this, propertyName, value);
+        Js.set(this, propertyName, value);
     }
     
     @JsOverlay
     public final void set(double index, char value) {
-        Js.<T>set(this, index, value);
+        Js.set(this, index, value);
     }
     
     @JsOverlay
     public final void set(String propertyName, byte value) {
-        Js.<T>set(this, propertyName, value);
+        Js.set(this, propertyName, value);
     }
     
     @JsOverlay
     public final void set(double index, byte value) {
-        Js.<T>set(this, index, value);
+        Js.set(this, index, value);
     }
     
     @JsOverlay
     public final void set(String propertyName, short value) {
-        Js.<T>set(this, propertyName, value);
+        Js.set(this, propertyName, value);
     }
     
     @JsOverlay
     public final void set(double index, short value) {
-        Js.<T>set(this, index, value);
+        Js.set(this, index, value);
     }
     
     @JsOverlay
     public final void set(String propertyName, int value) {
-        Js.<T>set(this, propertyName, value);
+        Js.set(this, propertyName, value);
     }
     
     @JsOverlay
     public final void set(double index, int value) {
-        Js.<T>set(this, index, value);
+        Js.set(this, index, value);
     }
     
     @JsOverlay
     public final void set(String propertyName, float value) {
-        Js.<T>set(this, propertyName, value);
+        Js.set(this, propertyName, value);
     }
     
     @JsOverlay
     public final void set(double index, float value) {
-        Js.<T>set(this, index, value);
+        Js.set(this, index, value);
     }
     
     @JsOverlay
     public final void set(String propertyName, double value) {
-        Js.<T>set(this, propertyName, value);
+        Js.set(this, propertyName, value);
     }
     
     @JsOverlay
     public final void set(double index, double value) {
-        Js.<T>set(this, index, value);
+        Js.set(this, index, value);
     }
     
     @JsOverlay
@@ -364,67 +364,67 @@ public class JsObject<T> extends IsObject{
     
     @JsOverlay
     public final void delete(String propertyName) {
-        Js.<T>delete(this, propertyName);
+        Js.delete(this, propertyName);
     }
     
     @JsOverlay
     public final void delete(double index) {
-        Js.<T>delete(this, index);
+        Js.delete(this, index);
     }
     
     @JsOverlay
     public final boolean has(String propertyName) {
-        return Js.<T>has(this, propertyName);
+        return Js.has(this, propertyName);
     }
     
     @JsOverlay
     public final boolean has(double index) {
-        return Js.<T>has(this, index);
+        return Js.has(this, index);
     }
     
     @JsOverlay
     public final JsObject<T> with(String propertyName, T value) {
-        return Js.<T>with(this, propertyName, value);
+        return Js.with(this, propertyName, value);
     }
     
     @JsOverlay
     public final JsObject<T> with(String propertyName, boolean value) {
-        return Js.<T>with(this, propertyName, value);
+        return Js.with(this, propertyName, value);
     }
     
     @JsOverlay
     public final JsObject<T> with(String propertyName, char value) {
-        return Js.<T>with(this, propertyName, value);
+        return Js.with(this, propertyName, value);
     }
     
     @JsOverlay
     public final JsObject<T> with(String propertyName, byte value) {
-        return Js.<T>with(this, propertyName, value);
+        return Js.with(this, propertyName, value);
     }
     
     @JsOverlay
     public final JsObject<T> with(String propertyName, short value) {
-        return Js.<T>with(this, propertyName, value);
+        return Js.with(this, propertyName, value);
     }
     
     @JsOverlay
     public final JsObject<T> with(String propertyName, int value) {
-        return Js.<T>with(this, propertyName, value);
+        return Js.with(this, propertyName, value);
     }
     
     @JsOverlay
     public final JsObject<T> with(String propertyName, float value) {
-        return Js.<T>with(this, propertyName, value);
+        return Js.with(this, propertyName, value);
     }
     
     @JsOverlay
     public final JsObject<T> with(String propertyName, double value) {
-        return Js.<T>with(this, propertyName, value);
+        return Js.with(this, propertyName, value);
     }
     
     @JsOverlay
     public final JsObject<T> with(String propertyName, long value) {
-        return Js.<T>with(this, propertyName, (double) value);
+        return Js.with(this, propertyName, (double) value);
     }
     
     @JsOverlay

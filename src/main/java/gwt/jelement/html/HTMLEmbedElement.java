@@ -73,7 +73,7 @@ public class HTMLEmbedElement extends HTMLElement{
     
     @JsOverlay
     public final Node set(String name, Node value){
-        return Js.<Node>set(this.object(), name, value);
+        return Js.set(this.object(), name, value);
     }
     
 }

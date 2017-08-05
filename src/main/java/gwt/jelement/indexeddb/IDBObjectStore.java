@@ -35,7 +35,7 @@ public class IDBObjectStore extends IsObject{
     public native void setName(String name);
     
     @JsProperty(name="keyPath")
-    public native Object getKeyPath();
+    public native Any getKeyPath();
     
     @JsProperty(name="indexNames")
     public native DOMStringList getIndexNames();
@@ -47,10 +47,10 @@ public class IDBObjectStore extends IsObject{
     public native boolean getAutoIncrement();
     
     @JsMethod(name = "add")
-    public native IDBRequest add(Object value);
+    public native IDBRequest add(Any value);
     
     @JsMethod(name = "add")
-    public native IDBRequest add(Object value, Object key);
+    public native IDBRequest add(Any value, Any key);
     
     @JsMethod(name = "clear")
     public native IDBRequest clear();
@@ -59,7 +59,7 @@ public class IDBObjectStore extends IsObject{
     public native IDBRequest count();
     
     @JsMethod(name = "count")
-    public native IDBRequest count(Object key);
+    public native IDBRequest count(Any key);
     
     @JsMethod(name = "createIndex")
     public native IDBIndex createIndex(String name, String keyPath);
@@ -80,34 +80,34 @@ public class IDBObjectStore extends IsObject{
     public native IDBIndex createIndex(String name, Array keyPath, IDBIndexParameters options);
     
     @JsMethod(name = "delete")
-    public native IDBRequest delete(Object key);
+    public native IDBRequest delete(Any key);
     
     @JsMethod(name = "deleteIndex")
     public native void deleteIndex(String name);
     
     @JsMethod(name = "get")
-    public native IDBRequest get(Object key);
+    public native IDBRequest get(Any key);
     
     @JsMethod(name = "getAll")
     public native IDBRequest getAll();
     
     @JsMethod(name = "getAll")
-    public native IDBRequest getAll(Object query);
+    public native IDBRequest getAll(Any query);
     
     @JsMethod(name = "getAll")
-    public native IDBRequest getAll(Object query, double count);
+    public native IDBRequest getAll(Any query, double count);
     
     @JsMethod(name = "getAllKeys")
     public native IDBRequest getAllKeys();
     
     @JsMethod(name = "getAllKeys")
-    public native IDBRequest getAllKeys(Object query);
+    public native IDBRequest getAllKeys(Any query);
     
     @JsMethod(name = "getAllKeys")
-    public native IDBRequest getAllKeys(Object query, double count);
+    public native IDBRequest getAllKeys(Any query, double count);
     
     @JsMethod(name = "getKey")
-    public native IDBRequest getKey(Object key);
+    public native IDBRequest getKey(Any key);
     
     @JsMethod(name = "index")
     public native IDBIndex index(String name);
@@ -116,34 +116,34 @@ public class IDBObjectStore extends IsObject{
     public native IDBRequest openCursor();
     
     @JsMethod(name = "openCursor")
-    public native IDBRequest openCursor(Object range);
+    public native IDBRequest openCursor(Any range);
     
     @JsOverlay
-    public final IDBRequest openCursor(Object range, IDBCursorDirection direction){
+    public final IDBRequest openCursor(Any range, IDBCursorDirection direction){
         return openCursor(range, direction.getInternalValue());
     }
     
     @JsMethod(name = "openCursor")
-    public native IDBRequest openCursor(Object range, String direction);
+    public native IDBRequest openCursor(Any range, String direction);
     
     @JsMethod(name = "openKeyCursor")
     public native IDBRequest openKeyCursor();
     
     @JsMethod(name = "openKeyCursor")
-    public native IDBRequest openKeyCursor(Object range);
+    public native IDBRequest openKeyCursor(Any range);
     
     @JsOverlay
-    public final IDBRequest openKeyCursor(Object range, IDBCursorDirection direction){
+    public final IDBRequest openKeyCursor(Any range, IDBCursorDirection direction){
         return openKeyCursor(range, direction.getInternalValue());
     }
     
     @JsMethod(name = "openKeyCursor")
-    public native IDBRequest openKeyCursor(Object range, String direction);
+    public native IDBRequest openKeyCursor(Any range, String direction);
     
     @JsMethod(name = "put")
-    public native IDBRequest put(Object value);
+    public native IDBRequest put(Any value);
     
     @JsMethod(name = "put")
-    public native IDBRequest put(Object value, Object key);
+    public native IDBRequest put(Any value, Any key);
     
 }

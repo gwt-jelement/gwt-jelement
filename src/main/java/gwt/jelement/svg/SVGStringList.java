@@ -52,7 +52,7 @@ public class SVGStringList extends ArrayLike{
     
     @JsOverlay
     public final void set(double index, String newItem){
-        Js.<String>set(this.object(), index, newItem);
+        Js.set(this.object(), index, newItem);
     }
     
 }

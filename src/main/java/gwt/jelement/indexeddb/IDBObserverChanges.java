@@ -21,6 +21,7 @@ import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
+import jsinterop.base.Any;
 
 @JsType(namespace = JsPackage.GLOBAL, name="IDBObserverChanges", isNative = true)
 public class IDBObserverChanges extends IsObject{
@@ -31,6 +32,6 @@ public class IDBObserverChanges extends IsObject{
     public native IDBTransaction getTransaction();
     
     @JsProperty(name="records")
-    public native Object getRecords();
+    public native Any getRecords();
     
 }

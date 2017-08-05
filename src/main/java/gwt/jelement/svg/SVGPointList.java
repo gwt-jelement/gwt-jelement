@@ -52,7 +52,7 @@ public class SVGPointList extends ArrayLike{
     
     @JsOverlay
     public final void set(double index, SVGPoint newItem){
-        Js.<SVGPoint>set(this.object(), index, newItem);
+        Js.set(this.object(), index, newItem);
     }
     
 }

@@ -23,6 +23,7 @@ import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
+import jsinterop.base.Any;
 
 @JsType(namespace = JsPackage.GLOBAL, name="ExtendableMessageEvent", isNative = true)
 public class ExtendableMessageEvent extends ExtendableEvent{
@@ -84,7 +85,7 @@ public class ExtendableMessageEvent extends ExtendableEvent{
     }
     
     @JsProperty(name="data")
-    public native Object getData();
+    public native Any getData();
     
     @JsProperty(name="origin")
     public native String getOrigin();

@@ -20,10 +20,11 @@ import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
+import jsinterop.base.Any;
 
 @JsType(namespace = JsPackage.GLOBAL, name="IDBCursorWithValue", isNative = true)
 public class IDBCursorWithValue extends IDBCursor{
     @JsProperty(name="value")
-    public native Object getValue();
+    public native Any getValue();
     
 }

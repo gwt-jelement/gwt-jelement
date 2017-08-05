@@ -31,8 +31,9 @@ public class DOMTokenList extends ArrayLike{
     @JsProperty(name="value")
     public native void setValue(String value);
     
+    @SafeVarargs
     @JsMethod(name = "add")
-    public native void add(String... tokens);
+    public final native void add(String... tokens);
     
     @JsMethod(name = "contains")
     public native boolean contains(String token);
@@ -40,8 +41,9 @@ public class DOMTokenList extends ArrayLike{
     @JsMethod(name = "item")
     public native String item(double index);
     
+    @SafeVarargs
     @JsMethod(name = "remove")
-    public native void remove(String... tokens);
+    public final native void remove(String... tokens);
     
     @JsMethod(name = "replace")
     public native void replace(String token, String newToken);

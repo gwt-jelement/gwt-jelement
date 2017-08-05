@@ -23,6 +23,7 @@ import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
+import jsinterop.base.Any;
 
 @JsType(namespace = JsPackage.GLOBAL, name="IDBRequest", isNative = true)
 public class IDBRequest extends EventTarget{
@@ -36,13 +37,13 @@ public class IDBRequest extends EventTarget{
     private String readyState;
     
     @JsProperty(name="result")
-    public native Object getResult();
+    public native Any getResult();
     
     @JsProperty(name="error")
     public native DOMException getError();
     
     @JsProperty(name="source")
-    public native Object getSource();
+    public native Any getSource();
     
     @JsProperty(name="transaction")
     public native IDBTransaction getTransaction();

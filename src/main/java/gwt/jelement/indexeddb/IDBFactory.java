@@ -21,11 +21,12 @@ import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
+import jsinterop.base.Any;
 
 @JsType(namespace = JsPackage.GLOBAL, name="IDBFactory", isNative = true)
 public class IDBFactory extends IsObject{
     @JsMethod(name = "cmp")
-    public native short cmp(Object first, Object second);
+    public native short cmp(Any first, Any second);
     
     @JsMethod(name = "deleteDatabase")
     public native IDBOpenDBRequest deleteDatabase(String name);

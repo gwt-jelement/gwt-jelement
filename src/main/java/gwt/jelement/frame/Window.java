@@ -78,6 +78,7 @@ import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
+import jsinterop.base.Any;
 
 @JsType(namespace = JsPackage.GLOBAL, name="Window", isNative = true)
 public class Window extends EventTarget{
@@ -1932,10 +1933,10 @@ public class Window extends EventTarget{
     public native Database openDatabase(String name, String version, String displayName, double estimatedSize, DatabaseCallback creationCallback);
     
     @JsMethod(name = "postMessage")
-    public native void postMessage(Object message, String targetOrigin);
+    public native void postMessage(Any message, String targetOrigin);
     
     @JsMethod(name = "postMessage")
-    public native void postMessage(Object message, String targetOrigin, MessagePort[] transfer);
+    public native void postMessage(Any message, String targetOrigin, MessagePort[] transfer);
     
     @JsMethod(name = "print")
     public native void print();
@@ -2000,11 +2001,13 @@ public class Window extends EventTarget{
     @JsMethod(name = "setInterval")
     public native double setInterval(String handler);
     
+    @SafeVarargs
     @JsMethod(name = "setInterval")
-    public native double setInterval(CallbackFunction handler, double timeout, Object... arguments);
+    public final native double setInterval(CallbackFunction handler, double timeout, Any... arguments);
     
+    @SafeVarargs
     @JsMethod(name = "setInterval")
-    public native double setInterval(String handler, double timeout, Object... arguments);
+    public final native double setInterval(String handler, double timeout, Any... arguments);
     
     @JsMethod(name = "setTimeout")
     public native double setTimeout(CallbackFunction handler);
@@ -2012,11 +2015,13 @@ public class Window extends EventTarget{
     @JsMethod(name = "setTimeout")
     public native double setTimeout(String handler);
     
+    @SafeVarargs
     @JsMethod(name = "setTimeout")
-    public native double setTimeout(CallbackFunction handler, double timeout, Object... arguments);
+    public final native double setTimeout(CallbackFunction handler, double timeout, Any... arguments);
     
+    @SafeVarargs
     @JsMethod(name = "setTimeout")
-    public native double setTimeout(String handler, double timeout, Object... arguments);
+    public final native double setTimeout(String handler, double timeout, Any... arguments);
     
     @JsMethod(name = "stop")
     public native void stop();

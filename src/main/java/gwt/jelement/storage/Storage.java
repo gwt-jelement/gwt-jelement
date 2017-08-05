@@ -53,7 +53,7 @@ public class Storage extends IsObject{
     
     @JsOverlay
     public final String set(String name, String value){
-        return Js.<String>set(this.object(), name, value);
+        return Js.set(this.object(), name, value);
     }
     
     @JsMethod(name = "setItem")

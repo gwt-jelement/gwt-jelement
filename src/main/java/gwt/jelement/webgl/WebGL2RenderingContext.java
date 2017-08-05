@@ -36,6 +36,7 @@ import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
+import jsinterop.base.Any;
 
 @JsType(namespace = JsPackage.GLOBAL, name="WebGL2RenderingContext", isNative = true)
 public class WebGL2RenderingContext extends IsObject{
@@ -1029,13 +1030,13 @@ public class WebGL2RenderingContext extends IsObject{
     public native String getActiveUniformBlockName(WebGLProgram program, double uniformBlockIndex);
     
     @JsMethod(name = "getActiveUniformBlockParameter")
-    public native Object getActiveUniformBlockParameter(WebGLProgram program, double uniformBlockIndex, double pname);
+    public native Any getActiveUniformBlockParameter(WebGLProgram program, double uniformBlockIndex, double pname);
     
     @JsMethod(name = "getActiveUniforms")
-    public native Object getActiveUniforms(WebGLProgram program, double[] uniformIndices, double pname);
+    public native Any getActiveUniforms(WebGLProgram program, double[] uniformIndices, double pname);
     
     @JsMethod(name = "getActiveUniforms")
-    public native Object getActiveUniforms(WebGLProgram program, Array uniformIndices, double pname);
+    public native Any getActiveUniforms(WebGLProgram program, Array uniformIndices, double pname);
     
     @JsMethod(name = "getAttachedShaders")
     public native WebGLShader[] getAttachedShaders(WebGLProgram program);
@@ -1044,7 +1045,7 @@ public class WebGL2RenderingContext extends IsObject{
     public native double getAttribLocation(WebGLProgram program, String name);
     
     @JsMethod(name = "getBufferParameter")
-    public native Object getBufferParameter(double target, double pname);
+    public native Any getBufferParameter(double target, double pname);
     
     @JsMethod(name = "getBufferSubData")
     public native void getBufferSubData(double target, double srcByteOffset, ArrayBufferView dstData);
@@ -1068,40 +1069,40 @@ public class WebGL2RenderingContext extends IsObject{
     public native double getFragDataLocation(WebGLProgram program, String name);
     
     @JsMethod(name = "getFramebufferAttachmentParameter")
-    public native Object getFramebufferAttachmentParameter(double target, double attachment, double pname);
+    public native Any getFramebufferAttachmentParameter(double target, double attachment, double pname);
     
     @JsMethod(name = "getIndexedParameter")
-    public native Object getIndexedParameter(double target, double index);
+    public native Any getIndexedParameter(double target, double index);
     
     @JsMethod(name = "getInternalformatParameter")
-    public native Object getInternalformatParameter(double target, double internalformat, double pname);
+    public native Any getInternalformatParameter(double target, double internalformat, double pname);
     
     @JsMethod(name = "getParameter")
-    public native Object getParameter(double pname);
+    public native Any getParameter(double pname);
     
     @JsMethod(name = "getProgramInfoLog")
     public native String getProgramInfoLog(WebGLProgram program);
     
     @JsMethod(name = "getProgramParameter")
-    public native Object getProgramParameter(WebGLProgram program, double pname);
+    public native Any getProgramParameter(WebGLProgram program, double pname);
     
     @JsMethod(name = "getQuery")
-    public native Object getQuery(double target, double pname);
+    public native Any getQuery(double target, double pname);
     
     @JsMethod(name = "getQueryParameter")
-    public native Object getQueryParameter(WebGLQuery query, double pname);
+    public native Any getQueryParameter(WebGLQuery query, double pname);
     
     @JsMethod(name = "getRenderbufferParameter")
-    public native Object getRenderbufferParameter(double target, double pname);
+    public native Any getRenderbufferParameter(double target, double pname);
     
     @JsMethod(name = "getSamplerParameter")
-    public native Object getSamplerParameter(WebGLSampler sampler, double pname);
+    public native Any getSamplerParameter(WebGLSampler sampler, double pname);
     
     @JsMethod(name = "getShaderInfoLog")
     public native String getShaderInfoLog(WebGLShader shader);
     
     @JsMethod(name = "getShaderParameter")
-    public native Object getShaderParameter(WebGLShader shader, double pname);
+    public native Any getShaderParameter(WebGLShader shader, double pname);
     
     @JsMethod(name = "getShaderPrecisionFormat")
     public native WebGLShaderPrecisionFormat getShaderPrecisionFormat(double shadertype, double precisiontype);
@@ -1113,16 +1114,16 @@ public class WebGL2RenderingContext extends IsObject{
     public native String[] getSupportedExtensions();
     
     @JsMethod(name = "getSyncParameter")
-    public native Object getSyncParameter(WebGLSync sync, double pname);
+    public native Any getSyncParameter(WebGLSync sync, double pname);
     
     @JsMethod(name = "getTexParameter")
-    public native Object getTexParameter(double target, double pname);
+    public native Any getTexParameter(double target, double pname);
     
     @JsMethod(name = "getTransformFeedbackVarying")
     public native WebGLActiveInfo getTransformFeedbackVarying(WebGLProgram program, double index);
     
     @JsMethod(name = "getUniform")
-    public native Object getUniform(WebGLProgram program, WebGLUniformLocation location);
+    public native Any getUniform(WebGLProgram program, WebGLUniformLocation location);
     
     @JsMethod(name = "getUniformBlockIndex")
     public native double getUniformBlockIndex(WebGLProgram program, String uniformBlockName);
@@ -1137,7 +1138,7 @@ public class WebGL2RenderingContext extends IsObject{
     public native WebGLUniformLocation getUniformLocation(WebGLProgram program, String name);
     
     @JsMethod(name = "getVertexAttrib")
-    public native Object getVertexAttrib(double index, double pname);
+    public native Any getVertexAttrib(double index, double pname);
     
     @JsMethod(name = "getVertexAttribOffset")
     public native double getVertexAttribOffset(double index, double pname);

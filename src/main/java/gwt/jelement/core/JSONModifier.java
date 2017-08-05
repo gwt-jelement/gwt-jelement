@@ -17,8 +17,9 @@
 package gwt.jelement.core;
 
 import jsinterop.annotations.JsFunction;
+import jsinterop.base.Any;
 
 @JsFunction
 public interface JSONModifier{
-    Object revive(String key, Object value);
+    Any revive(String key, Any value);
 }

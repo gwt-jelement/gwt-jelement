@@ -22,14 +22,15 @@ import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
+import jsinterop.base.Any;
 
 @JsType(namespace = JsPackage.GLOBAL, name="IDBKeyRange", isNative = true)
 public class IDBKeyRange extends IsObject{
     @JsProperty(name="lower")
-    public native Object getLower();
+    public native Any getLower();
     
     @JsProperty(name="upper")
-    public native Object getUpper();
+    public native Any getUpper();
     
     @JsProperty(name="lowerOpen")
     public native boolean getLowerOpen();
@@ -38,30 +39,30 @@ public class IDBKeyRange extends IsObject{
     public native boolean getUpperOpen();
     
     @JsMethod(name = "bound")
-    public static native IDBKeyRange bound(Object lower, Object upper);
+    public static native IDBKeyRange bound(Any lower, Any upper);
     
     @JsMethod(name = "bound")
-    public static native IDBKeyRange bound(Object lower, Object upper, boolean lowerOpen);
+    public static native IDBKeyRange bound(Any lower, Any upper, boolean lowerOpen);
     
     @JsMethod(name = "bound")
-    public static native IDBKeyRange bound(Object lower, Object upper, boolean lowerOpen, boolean upperOpen);
+    public static native IDBKeyRange bound(Any lower, Any upper, boolean lowerOpen, boolean upperOpen);
     
     @JsMethod(name = "includes")
-    public native boolean includes(Object key);
+    public native boolean includes(Any key);
     
     @JsMethod(name = "lowerBound")
-    public static native IDBKeyRange lowerBound(Object bound);
+    public static native IDBKeyRange lowerBound(Any bound);
     
     @JsMethod(name = "lowerBound")
-    public static native IDBKeyRange lowerBound(Object bound, boolean open);
+    public static native IDBKeyRange lowerBound(Any bound, boolean open);
     
     @JsMethod(name = "only")
-    public static native IDBKeyRange only(Object value);
+    public static native IDBKeyRange only(Any value);
     
     @JsMethod(name = "upperBound")
-    public static native IDBKeyRange upperBound(Object bound);
+    public static native IDBKeyRange upperBound(Any bound);
     
     @JsMethod(name = "upperBound")
-    public static native IDBKeyRange upperBound(Object bound, boolean open);
+    public static native IDBKeyRange upperBound(Any bound, boolean open);
     
 }

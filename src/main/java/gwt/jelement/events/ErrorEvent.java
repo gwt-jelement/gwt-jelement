@@ -21,6 +21,7 @@ import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
+import jsinterop.base.Any;
 
 @JsType(namespace = JsPackage.GLOBAL, name="ErrorEvent", isNative = true)
 public class ErrorEvent extends Event{
@@ -47,6 +48,6 @@ public class ErrorEvent extends Event{
     public native double getColno();
     
     @JsProperty(name="error")
-    public native Object getError();
+    public native Any getError();
     
 }

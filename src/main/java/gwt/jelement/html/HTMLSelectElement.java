@@ -145,7 +145,7 @@ public class HTMLSelectElement extends HTMLElement{
     
     @JsOverlay
     public final void set(double index, HTMLOptionElement option){
-        Js.<HTMLOptionElement>set(this.object(), index, option);
+        Js.set(this.object(), index, option);
     }
     
     @JsMethod(name = "setCustomValidity")

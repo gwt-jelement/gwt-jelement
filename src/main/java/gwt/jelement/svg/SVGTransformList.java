@@ -58,7 +58,7 @@ public class SVGTransformList extends ArrayLike{
     
     @JsOverlay
     public final void set(double index, SVGTransform newItem){
-        Js.<SVGTransform>set(this.object(), index, newItem);
+        Js.set(this.object(), index, newItem);
     }
     
 }

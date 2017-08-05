@@ -28,6 +28,7 @@ import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
+import jsinterop.base.Any;
 
 @JsType(namespace = JsPackage.GLOBAL, name="DedicatedWorkerGlobalScope", isNative = true)
 public class DedicatedWorkerGlobalScope extends WorkerGlobalScope{
@@ -64,10 +65,10 @@ public class DedicatedWorkerGlobalScope extends WorkerGlobalScope{
     public native void close();
     
     @JsMethod(name = "postMessage")
-    public native void postMessage(Object message);
+    public native void postMessage(Any message);
     
     @JsMethod(name = "postMessage")
-    public native void postMessage(Object message, MessagePort[] transfer);
+    public native void postMessage(Any message, MessagePort[] transfer);
     
     @JsMethod(name = "webkitRequestFileSystem")
     public native void webkitRequestFileSystem(short type, double size);

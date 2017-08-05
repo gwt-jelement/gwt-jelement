@@ -25,6 +25,7 @@ import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
+import jsinterop.base.Any;
 
 @JsType(namespace = JsPackage.GLOBAL, name="Notification", isNative = true)
 public class Notification extends EventTarget{
@@ -136,7 +137,7 @@ public class Notification extends EventTarget{
     public native boolean getRequireInteraction();
     
     @JsProperty(name="data")
-    public native Object getData();
+    public native Any getData();
     
     @JsProperty(name="actions")
     public native NotificationAction[] getActions();

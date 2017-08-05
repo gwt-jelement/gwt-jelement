@@ -52,7 +52,7 @@ public class SVGLengthList extends ArrayLike{
     
     @JsOverlay
     public final void set(double index, SVGLength newItem){
-        Js.<SVGLength>set(this.object(), index, newItem);
+        Js.set(this.object(), index, newItem);
     }
     
 }
