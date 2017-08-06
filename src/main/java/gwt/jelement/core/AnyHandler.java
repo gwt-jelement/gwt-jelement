@@ -16,9 +16,6 @@
 */
 package gwt.jelement.core;
 
-import com.google.gwt.core.client.JavaScriptObject;
-import com.google.gwt.user.client.Command;
-
 import java.util.Date;
 import java.util.function.Consumer;
 
@@ -59,7 +56,7 @@ public interface AnyHandler {
 
     AnyHandler asFloat64Array(Consumer<Float64Array> consumer);
 
-    AnyHandler ifNullOrUndefined(Command command);
+    AnyHandler ifNullOrUndefined(Consumer<Void> callback);
 
     void otherwise(Consumer<Any> consumer);
 }

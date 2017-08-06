@@ -16,15 +16,10 @@
 */
 package gwt.jelement.core;
 
-import com.google.gwt.core.client.JavaScriptObject;
-import com.google.gwt.core.client.JsDate;
-import com.google.gwt.user.client.Command;
-
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
-import java.util.Date;
 import java.util.function.Consumer;
 
 @JsType(isNative = true, name = "*", namespace = JsPackage.GLOBAL)
@@ -91,7 +86,7 @@ public interface Any {
     }
 
     @JsOverlay
-    default AnyHandler asDate(Consumer<Date> consumer) {
+    default AnyHandler asDate(Consumer<java.util.Date> consumer) {
         return new DefaultAnyHandler(this).asDate(consumer);
     }
 
@@ -167,8 +162,8 @@ public interface Any {
 
 
     @JsOverlay
-    default AnyHandler ifNullOrUndefined(Command command) {
-        return new DefaultAnyHandler(this).ifNullOrUndefined(command);
+    default AnyHandler ifNullOrUndefined(Consumer<Void> callback) {
+        return new DefaultAnyHandler(this).ifNullOrUndefined(callback);
     }
 
     @JsOverlay
@@ -200,10 +195,10 @@ public interface Any {
         }
 
         @Override
-        public AnyHandler asDate(Consumer<Date> consumer) {
+        public AnyHandler asDate(Consumer<java.util.Date> consumer) {
             if (Js.isTypeName(anyValue, Js.TYPE_DATE)) {
-                JsDate date = Js.cast(anyValue);
-                consumer.accept(new Date((long) date.getTime()));
+                Date date = Js.cast(anyValue);
+                consumer.accept(new java.util.Date((long) date.getTime()));
                 return new CompletedAnyHandler();
             }
             return this;
@@ -280,9 +275,9 @@ public interface Any {
         }
 
         @Override
-        public AnyHandler ifNullOrUndefined(Command command) {
+        public AnyHandler ifNullOrUndefined(Consumer<Void> callback) {
             if (anyValue == null){
-                command.execute();
+                callback.accept(null);
                 return new CompletedAnyHandler();
             }
             return this;
@@ -322,7 +317,7 @@ public interface Any {
         }
 
         @Override
-        public AnyHandler asDate(Consumer<Date> consumer) {
+        public AnyHandler asDate(Consumer<java.util.Date> consumer) {
             return this;
         }
 
@@ -397,7 +392,7 @@ public interface Any {
         }
 
         @Override
-        public AnyHandler ifNullOrUndefined(Command command) {
+        public AnyHandler ifNullOrUndefined(Consumer<Void> callback) {
             return this;
         }
 
