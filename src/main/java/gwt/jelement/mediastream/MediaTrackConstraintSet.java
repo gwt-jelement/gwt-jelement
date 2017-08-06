@@ -316,6 +316,11 @@ public class MediaTrackConstraintSet extends JsObject{
     }
 
     @JsOverlay
+    public final MediaTrackConstraintSet.ConstrainLong getWidth(){
+        return this.width;
+    }
+
+    @JsOverlay
     public final void setWidth(double width){
         this.width = MediaTrackConstraintSet.ConstrainLong.of(width);
     }
@@ -323,6 +328,11 @@ public class MediaTrackConstraintSet extends JsObject{
     @JsOverlay
     public final void setWidth(ConstrainLongRange width){
         this.width = MediaTrackConstraintSet.ConstrainLong.of(width);
+    }
+
+    @JsOverlay
+    public final MediaTrackConstraintSet.ConstrainLong getHeight(){
+        return this.height;
     }
 
     @JsOverlay
@@ -336,6 +346,11 @@ public class MediaTrackConstraintSet extends JsObject{
     }
 
     @JsOverlay
+    public final MediaTrackConstraintSet.ConstrainDouble getAspectRatio(){
+        return this.aspectRatio;
+    }
+
+    @JsOverlay
     public final void setAspectRatio(double aspectRatio){
         this.aspectRatio = MediaTrackConstraintSet.ConstrainDouble.of(aspectRatio);
     }
@@ -346,6 +361,11 @@ public class MediaTrackConstraintSet extends JsObject{
     }
 
     @JsOverlay
+    public final MediaTrackConstraintSet.ConstrainDouble getFrameRate(){
+        return this.frameRate;
+    }
+
+    @JsOverlay
     public final void setFrameRate(double frameRate){
         this.frameRate = MediaTrackConstraintSet.ConstrainDouble.of(frameRate);
     }
@@ -353,6 +373,11 @@ public class MediaTrackConstraintSet extends JsObject{
     @JsOverlay
     public final void setFrameRate(ConstrainDoubleRange frameRate){
         this.frameRate = MediaTrackConstraintSet.ConstrainDouble.of(frameRate);
+    }
+
+    @JsOverlay
+    public final MediaTrackConstraintSet.ConstrainDOMString getFacingMode(){
+        return this.facingMode;
     }
 
     @JsOverlay
@@ -371,6 +396,11 @@ public class MediaTrackConstraintSet extends JsObject{
     }
 
     @JsOverlay
+    public final MediaTrackConstraintSet.ConstrainDouble getVolume(){
+        return this.volume;
+    }
+
+    @JsOverlay
     public final void setVolume(double volume){
         this.volume = MediaTrackConstraintSet.ConstrainDouble.of(volume);
     }
@@ -378,6 +408,11 @@ public class MediaTrackConstraintSet extends JsObject{
     @JsOverlay
     public final void setVolume(ConstrainDoubleRange volume){
         this.volume = MediaTrackConstraintSet.ConstrainDouble.of(volume);
+    }
+
+    @JsOverlay
+    public final MediaTrackConstraintSet.ConstrainLong getSampleRate(){
+        return this.sampleRate;
     }
 
     @JsOverlay
@@ -391,6 +426,11 @@ public class MediaTrackConstraintSet extends JsObject{
     }
 
     @JsOverlay
+    public final MediaTrackConstraintSet.ConstrainLong getSampleSize(){
+        return this.sampleSize;
+    }
+
+    @JsOverlay
     public final void setSampleSize(double sampleSize){
         this.sampleSize = MediaTrackConstraintSet.ConstrainLong.of(sampleSize);
     }
@@ -398,6 +438,11 @@ public class MediaTrackConstraintSet extends JsObject{
     @JsOverlay
     public final void setSampleSize(ConstrainLongRange sampleSize){
         this.sampleSize = MediaTrackConstraintSet.ConstrainLong.of(sampleSize);
+    }
+
+    @JsOverlay
+    public final MediaTrackConstraintSet.ConstrainBoolean getEchoCancellation(){
+        return this.echoCancellation;
     }
 
     @JsOverlay
@@ -411,6 +456,11 @@ public class MediaTrackConstraintSet extends JsObject{
     }
 
     @JsOverlay
+    public final MediaTrackConstraintSet.ConstrainDouble getLatency(){
+        return this.latency;
+    }
+
+    @JsOverlay
     public final void setLatency(double latency){
         this.latency = MediaTrackConstraintSet.ConstrainDouble.of(latency);
     }
@@ -421,6 +471,11 @@ public class MediaTrackConstraintSet extends JsObject{
     }
 
     @JsOverlay
+    public final MediaTrackConstraintSet.ConstrainLong getChannelCount(){
+        return this.channelCount;
+    }
+
+    @JsOverlay
     public final void setChannelCount(double channelCount){
         this.channelCount = MediaTrackConstraintSet.ConstrainLong.of(channelCount);
     }
@@ -428,6 +483,11 @@ public class MediaTrackConstraintSet extends JsObject{
     @JsOverlay
     public final void setChannelCount(ConstrainLongRange channelCount){
         this.channelCount = MediaTrackConstraintSet.ConstrainLong.of(channelCount);
+    }
+
+    @JsOverlay
+    public final MediaTrackConstraintSet.ConstrainDOMString getDeviceId(){
+        return this.deviceId;
     }
 
     @JsOverlay
@@ -446,6 +506,11 @@ public class MediaTrackConstraintSet extends JsObject{
     }
 
     @JsOverlay
+    public final MediaTrackConstraintSet.ConstrainDOMString getGroupId(){
+        return this.groupId;
+    }
+
+    @JsOverlay
     public final void setGroupId(String groupId){
         this.groupId = MediaTrackConstraintSet.ConstrainDOMString.of(groupId);
     }
@@ -458,6 +523,11 @@ public class MediaTrackConstraintSet extends JsObject{
     @JsOverlay
     public final void setGroupId(ConstrainDOMStringParameters groupId){
         this.groupId = MediaTrackConstraintSet.ConstrainDOMString.of(groupId);
+    }
+
+    @JsOverlay
+    public final MediaTrackConstraintSet.ConstrainDOMString getVideoKind(){
+        return this.videoKind;
     }
 
     @JsOverlay
@@ -476,6 +546,11 @@ public class MediaTrackConstraintSet extends JsObject{
     }
 
     @JsOverlay
+    public final MediaTrackConstraintSet.ConstrainDouble getDepthNear(){
+        return this.depthNear;
+    }
+
+    @JsOverlay
     public final void setDepthNear(double depthNear){
         this.depthNear = MediaTrackConstraintSet.ConstrainDouble.of(depthNear);
     }
@@ -483,6 +558,11 @@ public class MediaTrackConstraintSet extends JsObject{
     @JsOverlay
     public final void setDepthNear(ConstrainDoubleRange depthNear){
         this.depthNear = MediaTrackConstraintSet.ConstrainDouble.of(depthNear);
+    }
+
+    @JsOverlay
+    public final MediaTrackConstraintSet.ConstrainDouble getDepthFar(){
+        return this.depthFar;
     }
 
     @JsOverlay
@@ -496,6 +576,11 @@ public class MediaTrackConstraintSet extends JsObject{
     }
 
     @JsOverlay
+    public final MediaTrackConstraintSet.ConstrainDouble getFocalLengthX(){
+        return this.focalLengthX;
+    }
+
+    @JsOverlay
     public final void setFocalLengthX(double focalLengthX){
         this.focalLengthX = MediaTrackConstraintSet.ConstrainDouble.of(focalLengthX);
     }
@@ -506,6 +591,11 @@ public class MediaTrackConstraintSet extends JsObject{
     }
 
     @JsOverlay
+    public final MediaTrackConstraintSet.ConstrainDouble getFocalLengthY(){
+        return this.focalLengthY;
+    }
+
+    @JsOverlay
     public final void setFocalLengthY(double focalLengthY){
         this.focalLengthY = MediaTrackConstraintSet.ConstrainDouble.of(focalLengthY);
     }
@@ -513,6 +603,11 @@ public class MediaTrackConstraintSet extends JsObject{
     @JsOverlay
     public final void setFocalLengthY(ConstrainDoubleRange focalLengthY){
         this.focalLengthY = MediaTrackConstraintSet.ConstrainDouble.of(focalLengthY);
+    }
+
+    @JsOverlay
+    public final MediaTrackConstraintSet.ConstrainDOMString getWhiteBalanceMode(){
+        return this.whiteBalanceMode;
     }
 
     @JsOverlay
@@ -531,6 +626,11 @@ public class MediaTrackConstraintSet extends JsObject{
     }
 
     @JsOverlay
+    public final MediaTrackConstraintSet.ConstrainDOMString getExposureMode(){
+        return this.exposureMode;
+    }
+
+    @JsOverlay
     public final void setExposureMode(String exposureMode){
         this.exposureMode = MediaTrackConstraintSet.ConstrainDOMString.of(exposureMode);
     }
@@ -543,6 +643,11 @@ public class MediaTrackConstraintSet extends JsObject{
     @JsOverlay
     public final void setExposureMode(ConstrainDOMStringParameters exposureMode){
         this.exposureMode = MediaTrackConstraintSet.ConstrainDOMString.of(exposureMode);
+    }
+
+    @JsOverlay
+    public final MediaTrackConstraintSet.ConstrainDOMString getFocusMode(){
+        return this.focusMode;
     }
 
     @JsOverlay
@@ -561,6 +666,11 @@ public class MediaTrackConstraintSet extends JsObject{
     }
 
     @JsOverlay
+    public final MediaTrackConstraintSet.ConstrainPoint2D getPointsOfInterest(){
+        return this.pointsOfInterest;
+    }
+
+    @JsOverlay
     public final void setPointsOfInterest(Point2D[] pointsOfInterest){
         this.pointsOfInterest = MediaTrackConstraintSet.ConstrainPoint2D.of(pointsOfInterest);
     }
@@ -568,6 +678,11 @@ public class MediaTrackConstraintSet extends JsObject{
     @JsOverlay
     public final void setPointsOfInterest(ConstrainPoint2DParameters pointsOfInterest){
         this.pointsOfInterest = MediaTrackConstraintSet.ConstrainPoint2D.of(pointsOfInterest);
+    }
+
+    @JsOverlay
+    public final MediaTrackConstraintSet.ConstrainDouble getExposureCompensation(){
+        return this.exposureCompensation;
     }
 
     @JsOverlay
@@ -581,6 +696,11 @@ public class MediaTrackConstraintSet extends JsObject{
     }
 
     @JsOverlay
+    public final MediaTrackConstraintSet.ConstrainDouble getColorTemperature(){
+        return this.colorTemperature;
+    }
+
+    @JsOverlay
     public final void setColorTemperature(double colorTemperature){
         this.colorTemperature = MediaTrackConstraintSet.ConstrainDouble.of(colorTemperature);
     }
@@ -588,6 +708,11 @@ public class MediaTrackConstraintSet extends JsObject{
     @JsOverlay
     public final void setColorTemperature(ConstrainDoubleRange colorTemperature){
         this.colorTemperature = MediaTrackConstraintSet.ConstrainDouble.of(colorTemperature);
+    }
+
+    @JsOverlay
+    public final MediaTrackConstraintSet.ConstrainDouble getIso(){
+        return this.iso;
     }
 
     @JsOverlay
@@ -601,6 +726,11 @@ public class MediaTrackConstraintSet extends JsObject{
     }
 
     @JsOverlay
+    public final MediaTrackConstraintSet.ConstrainDouble getBrightness(){
+        return this.brightness;
+    }
+
+    @JsOverlay
     public final void setBrightness(double brightness){
         this.brightness = MediaTrackConstraintSet.ConstrainDouble.of(brightness);
     }
@@ -608,6 +738,11 @@ public class MediaTrackConstraintSet extends JsObject{
     @JsOverlay
     public final void setBrightness(ConstrainDoubleRange brightness){
         this.brightness = MediaTrackConstraintSet.ConstrainDouble.of(brightness);
+    }
+
+    @JsOverlay
+    public final MediaTrackConstraintSet.ConstrainDouble getContrast(){
+        return this.contrast;
     }
 
     @JsOverlay
@@ -621,6 +756,11 @@ public class MediaTrackConstraintSet extends JsObject{
     }
 
     @JsOverlay
+    public final MediaTrackConstraintSet.ConstrainDouble getSaturation(){
+        return this.saturation;
+    }
+
+    @JsOverlay
     public final void setSaturation(double saturation){
         this.saturation = MediaTrackConstraintSet.ConstrainDouble.of(saturation);
     }
@@ -628,6 +768,11 @@ public class MediaTrackConstraintSet extends JsObject{
     @JsOverlay
     public final void setSaturation(ConstrainDoubleRange saturation){
         this.saturation = MediaTrackConstraintSet.ConstrainDouble.of(saturation);
+    }
+
+    @JsOverlay
+    public final MediaTrackConstraintSet.ConstrainDouble getSharpness(){
+        return this.sharpness;
     }
 
     @JsOverlay
@@ -641,6 +786,11 @@ public class MediaTrackConstraintSet extends JsObject{
     }
 
     @JsOverlay
+    public final MediaTrackConstraintSet.ConstrainDouble getZoom(){
+        return this.zoom;
+    }
+
+    @JsOverlay
     public final void setZoom(double zoom){
         this.zoom = MediaTrackConstraintSet.ConstrainDouble.of(zoom);
     }
@@ -648,6 +798,11 @@ public class MediaTrackConstraintSet extends JsObject{
     @JsOverlay
     public final void setZoom(ConstrainDoubleRange zoom){
         this.zoom = MediaTrackConstraintSet.ConstrainDouble.of(zoom);
+    }
+
+    @JsOverlay
+    public final MediaTrackConstraintSet.ConstrainBoolean getTorch(){
+        return this.torch;
     }
 
     @JsOverlay

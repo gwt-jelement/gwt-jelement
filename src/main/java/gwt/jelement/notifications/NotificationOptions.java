@@ -176,6 +176,11 @@ public class NotificationOptions extends JsObject{
     }
 
     @JsOverlay
+    public final NotificationOptions.VibrateUnion getVibrate(){
+        return this.vibrate;
+    }
+
+    @JsOverlay
     public final void setVibrate(double vibrate){
         this.vibrate = NotificationOptions.VibrateUnion.of(vibrate);
     }

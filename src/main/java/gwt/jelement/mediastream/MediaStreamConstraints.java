@@ -70,6 +70,11 @@ public class MediaStreamConstraints extends JsObject{
     }
 
     @JsOverlay
+    public final MediaStreamConstraints.VideoUnion getVideo(){
+        return this.video;
+    }
+
+    @JsOverlay
     public final void setVideo(boolean video){
         this.video = MediaStreamConstraints.VideoUnion.of(video);
     }
@@ -77,6 +82,11 @@ public class MediaStreamConstraints extends JsObject{
     @JsOverlay
     public final void setVideo(MediaTrackConstraints video){
         this.video = MediaStreamConstraints.VideoUnion.of(video);
+    }
+
+    @JsOverlay
+    public final MediaStreamConstraints.VideoUnion getAudio(){
+        return this.audio;
     }
 
     @JsOverlay

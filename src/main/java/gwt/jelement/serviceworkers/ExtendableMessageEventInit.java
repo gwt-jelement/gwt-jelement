@@ -75,6 +75,11 @@ public class ExtendableMessageEventInit extends ExtendableEventInit{
     }
 
     @JsOverlay
+    public final ExtendableMessageEvent.SourceUnion getSource(){
+        return this.source;
+    }
+
+    @JsOverlay
     public final void setSource(Client source){
         this.source = ExtendableMessageEvent.SourceUnion.of(source);
     }

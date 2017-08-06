@@ -104,6 +104,11 @@ public class AnimationEffectTimingProperties extends JsObject{
     }
 
     @JsOverlay
+    public final AnimationEffectTimingReadOnly.DurationUnion getDuration(){
+        return this.duration;
+    }
+
+    @JsOverlay
     public final void setDuration(double duration){
         this.duration = AnimationEffectTimingReadOnly.DurationUnion.of(duration);
     }

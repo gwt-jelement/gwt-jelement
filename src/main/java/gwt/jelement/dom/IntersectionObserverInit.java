@@ -93,6 +93,11 @@ public class IntersectionObserverInit extends JsObject{
     }
 
     @JsOverlay
+    public final IntersectionObserverInit.ThresholdUnion getThreshold(){
+        return this.threshold;
+    }
+
+    @JsOverlay
     public final void setThreshold(double threshold){
         this.threshold = IntersectionObserverInit.ThresholdUnion.of(threshold);
     }

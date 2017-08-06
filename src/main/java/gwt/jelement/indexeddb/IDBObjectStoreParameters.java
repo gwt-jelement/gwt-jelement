@@ -70,6 +70,11 @@ public class IDBObjectStoreParameters extends JsObject{
     }
 
     @JsOverlay
+    public final IDBObjectStoreParameters.KeyPathUnion getKeyPath(){
+        return this.keyPath;
+    }
+
+    @JsOverlay
     public final void setKeyPath(String keyPath){
         this.keyPath = IDBObjectStoreParameters.KeyPathUnion.of(keyPath);
     }

@@ -93,6 +93,11 @@ public class ResponseInit extends JsObject{
     }
 
     @JsOverlay
+    public final ResponseInit.HeadersInit getHeaders(){
+        return this.headers;
+    }
+
+    @JsOverlay
     public final void setHeaders(String[][] headers){
         this.headers = ResponseInit.HeadersInit.of(headers);
     }

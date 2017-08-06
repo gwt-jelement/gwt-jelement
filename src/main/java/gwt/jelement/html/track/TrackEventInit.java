@@ -33,6 +33,11 @@ public class TrackEventInit extends EventInit{
     }
 
     @JsOverlay
+    public final TrackEvent.TrackUnion getTrack(){
+        return this.track;
+    }
+
+    @JsOverlay
     public final void setTrack(VideoTrack track){
         this.track = TrackEvent.TrackUnion.of(track);
     }

@@ -60,6 +60,11 @@ public class ScrollTimelineOptions extends JsObject{
     }
 
     @JsOverlay
+    public final ScrollTimeline.TimeRangeUnion getTimeRange(){
+        return this.timeRange;
+    }
+
+    @JsOverlay
     public final void setTimeRange(double timeRange){
         this.timeRange = ScrollTimeline.TimeRangeUnion.of(timeRange);
     }

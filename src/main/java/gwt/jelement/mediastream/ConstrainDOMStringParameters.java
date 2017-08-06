@@ -37,6 +37,11 @@ public class ConstrainDOMStringParameters extends JsObject{
     }
 
     @JsOverlay
+    public final IDBObjectStoreParameters.KeyPathUnion getExact(){
+        return this.exact;
+    }
+
+    @JsOverlay
     public final void setExact(String exact){
         this.exact = IDBObjectStoreParameters.KeyPathUnion.of(exact);
     }
@@ -44,6 +49,11 @@ public class ConstrainDOMStringParameters extends JsObject{
     @JsOverlay
     public final void setExact(String[] exact){
         this.exact = IDBObjectStoreParameters.KeyPathUnion.of(exact);
+    }
+
+    @JsOverlay
+    public final IDBObjectStoreParameters.KeyPathUnion getIdeal(){
+        return this.ideal;
     }
 
     @JsOverlay

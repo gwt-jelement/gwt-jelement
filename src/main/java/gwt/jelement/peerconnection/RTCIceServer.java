@@ -43,6 +43,11 @@ public class RTCIceServer extends JsObject{
     }
 
     @JsOverlay
+    public final IDBObjectStoreParameters.KeyPathUnion getUrls(){
+        return this.urls;
+    }
+
+    @JsOverlay
     public final void setUrls(String urls){
         this.urls = IDBObjectStoreParameters.KeyPathUnion.of(urls);
     }

@@ -67,6 +67,11 @@ public class AudioContextOptions extends JsObject{
     }
 
     @JsOverlay
+    public final AudioContextOptions.LatencyHintUnion getLatencyHint(){
+        return this.latencyHint;
+    }
+
+    @JsOverlay
     public final void setLatencyHint(String latencyHint){
         this.latencyHint = AudioContextOptions.LatencyHintUnion.of(latencyHint);
     }

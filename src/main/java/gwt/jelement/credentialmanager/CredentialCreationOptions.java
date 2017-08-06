@@ -71,6 +71,11 @@ public class CredentialCreationOptions extends JsObject{
     }
 
     @JsOverlay
+    public final CredentialCreationOptions.PasswordCredentialInit getPassword(){
+        return this.password;
+    }
+
+    @JsOverlay
     public final void setPassword(PasswordCredentialData password){
         this.password = CredentialCreationOptions.PasswordCredentialInit.of(password);
     }

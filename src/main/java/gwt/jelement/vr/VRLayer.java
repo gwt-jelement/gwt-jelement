@@ -42,6 +42,11 @@ public class VRLayer extends JsObject{
     }
 
     @JsOverlay
+    public final WebGL2RenderingContext.VRSource getSource(){
+        return this.source;
+    }
+
+    @JsOverlay
     public final void setSource(HTMLCanvasElement source){
         this.source = WebGL2RenderingContext.VRSource.of(source);
     }

@@ -30,6 +30,6 @@ public class Thenable<T> extends IsObject{
     public native Promise<T> then(FullfilCallback<T> fulfillCallback);
     
     @JsMethod(name = "then")
-    public native Promise<T> then(FullfilCallback<T> fulfillCallback, AnyCallback rejectCallback);
+    public native Promise<T> then(FullfilCallback<T> fulfillCallback, PromiseRejectCallback rejectCallback);
     
 }

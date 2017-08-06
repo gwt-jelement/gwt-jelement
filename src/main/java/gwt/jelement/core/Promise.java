@@ -37,7 +37,7 @@ public class Promise<T> extends Thenable<T>{
     public native Promise<T> catch_();
     
     @JsMethod(name = "catch")
-    public native Promise<T> catch_(AnyCallback rejectCallback);
+    public native Promise<T> catch_(PromiseRejectCallback rejectCallback);
     
     @SafeVarargs
     @JsMethod(name = "race")

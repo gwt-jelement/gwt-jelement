@@ -82,6 +82,11 @@ public class PushSubscriptionOptionsInit extends JsObject{
     }
 
     @JsOverlay
+    public final PushSubscriptionOptionsInit.BufferSource getApplicationServerKey(){
+        return this.applicationServerKey;
+    }
+
+    @JsOverlay
     public final void setApplicationServerKey(ArrayBuffer applicationServerKey){
         this.applicationServerKey = PushSubscriptionOptionsInit.BufferSource.of(applicationServerKey);
     }

@@ -84,6 +84,11 @@ public class PushEventInit extends ExtendableEventInit{
     }
 
     @JsOverlay
+    public final PushEventInit.PushMessageDataInit getData(){
+        return this.data;
+    }
+
+    @JsOverlay
     public final void setData(ArrayBuffer data){
         this.data = PushEventInit.PushMessageDataInit.of(data);
     }
