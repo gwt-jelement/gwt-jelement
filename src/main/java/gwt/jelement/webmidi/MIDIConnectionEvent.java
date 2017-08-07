@@ -24,7 +24,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="MIDIConnectionEvent", isNative = true)
-public class MIDIConnectionEvent extends Event{
+public class MIDIConnectionEvent extends Event {
     @JsConstructor
     public MIDIConnectionEvent(String type){
         super((String) null);

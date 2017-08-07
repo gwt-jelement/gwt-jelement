@@ -23,7 +23,7 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="IDBFactory", isNative = true)
-public class IDBFactory extends IsObject{
+public class IDBFactory implements IsObject {
     @JsMethod(name = "cmp")
     public native short cmp(Object first, Object second);
     

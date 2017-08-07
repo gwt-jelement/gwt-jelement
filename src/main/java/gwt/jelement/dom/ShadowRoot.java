@@ -26,7 +26,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="ShadowRoot", isNative = true)
-public class ShadowRoot extends DocumentFragment{
+public class ShadowRoot extends DocumentFragment {
     @JsProperty(name="mode")
     private String mode;
     

@@ -24,7 +24,7 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="PagePopupController", isNative = true)
-public class PagePopupController extends IsObject{
+public class PagePopupController implements IsObject {
     @JsMethod(name = "closePopup")
     public native void closePopup();
     

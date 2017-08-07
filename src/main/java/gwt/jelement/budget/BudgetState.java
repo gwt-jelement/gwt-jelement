@@ -23,7 +23,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="BudgetState", isNative = true)
-public class BudgetState extends IsObject{
+public class BudgetState implements IsObject {
     @JsProperty(name="budgetAt")
     public native double getBudgetAt();
     

@@ -23,7 +23,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="DeviceRotationRate", isNative = true)
-public class DeviceRotationRate extends IsObject{
+public class DeviceRotationRate implements IsObject {
     @JsProperty(name="alpha")
     public native double getAlpha();
     

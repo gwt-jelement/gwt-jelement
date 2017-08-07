@@ -23,7 +23,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="MIDIInput", isNative = true)
-public class MIDIInput extends MIDIPort{
+public class MIDIInput extends MIDIPort {
     @JsProperty(name="onmidimessage")
     private EventHandlerNonNull onmidimessage;
     

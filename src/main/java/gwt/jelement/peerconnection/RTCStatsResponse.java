@@ -23,7 +23,7 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="RTCStatsResponse", isNative = true)
-public class RTCStatsResponse extends IsObject{
+public class RTCStatsResponse implements IsObject {
     @JsMethod(name = "get")
     public native RTCLegacyStatsReport get();
     

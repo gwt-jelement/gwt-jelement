@@ -17,6 +17,7 @@
 package gwt.jelement.html;
 
 import gwt.jelement.core.ArrayLike;
+import gwt.jelement.core.IsObject;
 import gwt.jelement.core.Js;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
@@ -24,7 +25,7 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="HTMLBaseCollection", isNative = true)
-public class HTMLBaseCollection<T,U> extends ArrayLike{
+public class HTMLBaseCollection<T,U> implements IsObject, ArrayLike<T> {
     @JsOverlay
     public final U get(String name){
         return (U) Js.get(this.object(), name);

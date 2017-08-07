@@ -28,7 +28,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="BluetoothRemoteGATTDescriptor", isNative = true)
-public class BluetoothRemoteGATTDescriptor extends IsObject{
+public class BluetoothRemoteGATTDescriptor implements IsObject {
     @JsProperty(name="characteristic")
     public native BluetoothRemoteGATTCharacteristic getCharacteristic();
     

@@ -23,7 +23,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="CSSPositionValue", isNative = true)
-public class CSSPositionValue extends CSSStyleValue{
+public class CSSPositionValue extends CSSStyleValue {
     @JsConstructor
     public CSSPositionValue(CSSNumericValue x, CSSNumericValue y){
         super();

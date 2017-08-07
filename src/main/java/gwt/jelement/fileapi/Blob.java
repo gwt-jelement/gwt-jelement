@@ -28,60 +28,49 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="Blob", isNative = true)
-public class Blob extends IsObject{
+public class Blob implements IsObject {
     @JsConstructor
     public Blob(){
-        super();
     }
     
     @JsConstructor
     public Blob(ArrayBuffer[] blobParts){
-        super();
     }
     
     @JsConstructor
     public Blob(ArrayBuffer[] blobParts, BlobPropertyBag options){
-        super();
     }
     
     @JsConstructor
     public Blob(ArrayBufferView[] blobParts){
-        super();
     }
     
     @JsConstructor
     public Blob(ArrayBufferView[] blobParts, BlobPropertyBag options){
-        super();
     }
     
     @JsConstructor
     public Blob(Blob[] blobParts){
-        super();
     }
     
     @JsConstructor
     public Blob(Blob[] blobParts, BlobPropertyBag options){
-        super();
     }
     
     @JsConstructor
     public Blob(String[] blobParts){
-        super();
     }
     
     @JsConstructor
     public Blob(String[] blobParts, BlobPropertyBag options){
-        super();
     }
     
     @JsConstructor
     public Blob(Array blobParts){
-        super();
     }
     
     @JsConstructor
     public Blob(Array blobParts, BlobPropertyBag options){
-        super();
     }
     
     @JsProperty(name="size")

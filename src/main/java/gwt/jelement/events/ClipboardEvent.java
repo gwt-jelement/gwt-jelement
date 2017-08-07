@@ -24,7 +24,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="ClipboardEvent", isNative = true)
-public class ClipboardEvent extends Event{
+public class ClipboardEvent extends Event {
     @JsConstructor
     public ClipboardEvent(String type){
         super((String) null);

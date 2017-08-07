@@ -24,7 +24,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="CSSUnparsedValue", isNative = true)
-public class CSSUnparsedValue extends CSSStyleValue{
+public class CSSUnparsedValue extends CSSStyleValue {
     @JsType(isNative = true, name = "?", namespace = JsPackage.GLOBAL)
     public interface GetUnion {
         @JsOverlay

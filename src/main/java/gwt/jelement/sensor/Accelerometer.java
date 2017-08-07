@@ -23,7 +23,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="Accelerometer", isNative = true)
-public class Accelerometer extends Sensor{
+public class Accelerometer extends Sensor {
     @JsConstructor
     public Accelerometer(){
         super();

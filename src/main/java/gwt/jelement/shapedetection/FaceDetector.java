@@ -33,15 +33,13 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="FaceDetector", isNative = true)
-public class FaceDetector extends IsObject{
+public class FaceDetector implements IsObject {
     @JsConstructor
     public FaceDetector(){
-        super();
     }
     
     @JsConstructor
     public FaceDetector(FaceDetectorOptions faceDetectorOptions){
-        super();
     }
     
     @JsMethod(name = "detect")

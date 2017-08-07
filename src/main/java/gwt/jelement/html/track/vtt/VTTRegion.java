@@ -24,13 +24,12 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="VTTRegion", isNative = true)
-public class VTTRegion extends IsObject{
+public class VTTRegion implements IsObject {
     @JsProperty(name="scroll")
     private String scroll;
     
     @JsConstructor
     public VTTRegion(){
-        super();
     }
     
     @JsProperty(name="width")

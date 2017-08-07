@@ -17,29 +17,30 @@
 package gwt.jelement.core;
 
 import jsinterop.annotations.JsOverlay;
-import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 import java.util.Iterator;
 
 @JsType(isNative = true)
-public class ArrayLike<T> extends IsObject {
-
-    @JsProperty(name = "length")
-    public native double getLength();
+public interface ArrayLike<T> {
 
     @JsOverlay
-    public final T get(double index) {
-        return (T) Js.get(this.object(), index);
+    default double getLength(){
+        return Js.getDouble(Js.cast(this), "length");
     }
 
     @JsOverlay
-    private final boolean isUndefined(double index) {
-        return Js.isUndefined(this.object(), index);
+    default T get(double index) {
+        return (T) Js.get(Js.cast(this), index);
     }
 
     @JsOverlay
-    public final Iterable<T> iterable() {
+    default boolean isUndefined(double index) {
+        return Js.isUndefined(Js.cast(this), index);
+    }
+
+    @JsOverlay
+    default Iterable<T> iterable() {
         return new Iterable<T>() {
             @Override
             public Iterator<T> iterator() {

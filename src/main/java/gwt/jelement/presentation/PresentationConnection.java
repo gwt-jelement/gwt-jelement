@@ -29,7 +29,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="PresentationConnection", isNative = true)
-public class PresentationConnection extends EventTarget{
+public class PresentationConnection extends EventTarget {
     @JsProperty(name="onconnect")
     private EventHandlerNonNull onconnect;
     

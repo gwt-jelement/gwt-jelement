@@ -22,7 +22,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="SVGFEOffsetElement", isNative = true)
-public class SVGFEOffsetElement extends SVGElement{
+public class SVGFEOffsetElement extends SVGElement {
     @JsProperty(name="in1")
     public native SVGAnimatedString getIn1();
     

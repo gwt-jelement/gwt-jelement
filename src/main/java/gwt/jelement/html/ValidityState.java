@@ -23,7 +23,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="ValidityState", isNative = true)
-public class ValidityState extends IsObject{
+public class ValidityState implements IsObject {
     @JsProperty(name="valueMissing")
     public native boolean getValueMissing();
     

@@ -24,7 +24,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="AudioBufferSourceNode", isNative = true)
-public class AudioBufferSourceNode extends AudioScheduledSourceNode{
+public class AudioBufferSourceNode extends AudioScheduledSourceNode {
     @JsConstructor
     public AudioBufferSourceNode(BaseAudioContext context){
         super();

@@ -25,7 +25,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="AudioParam", isNative = true)
-public class AudioParam extends IsObject{
+public class AudioParam implements IsObject {
     @JsProperty(name="value")
     public native double getValue();
     

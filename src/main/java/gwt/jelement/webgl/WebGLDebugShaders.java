@@ -23,7 +23,7 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="WebGLDebugShaders", isNative = true)
-public class WebGLDebugShaders extends IsObject{
+public class WebGLDebugShaders implements IsObject {
     @JsMethod(name = "getTranslatedShaderSource")
     public native String getTranslatedShaderSource(WebGLShader shader);
     

@@ -23,7 +23,7 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="DirectoryEntry", isNative = true)
-public class DirectoryEntry extends Entry{
+public class DirectoryEntry extends Entry {
     @JsMethod(name = "createReader")
     public native DirectoryReader createReader();
     

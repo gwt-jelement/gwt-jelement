@@ -23,7 +23,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="Gyroscope", isNative = true)
-public class Gyroscope extends Sensor{
+public class Gyroscope extends Sensor {
     @JsConstructor
     public Gyroscope(){
         super();

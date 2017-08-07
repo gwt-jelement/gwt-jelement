@@ -22,7 +22,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="ArrayBufferView", isNative = true)
-public class ArrayBufferView extends IsObject{
+public class ArrayBufferView implements IsObject {
     @JsProperty(name="buffer")
     public native ArrayBuffer getBuffer();
     

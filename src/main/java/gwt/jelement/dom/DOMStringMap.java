@@ -24,7 +24,7 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="DOMStringMap", isNative = true)
-public class DOMStringMap extends IsObject{
+public class DOMStringMap implements IsObject {
     @JsOverlay
     public final void delete(String name){
         Js.delete(this.object(), name);

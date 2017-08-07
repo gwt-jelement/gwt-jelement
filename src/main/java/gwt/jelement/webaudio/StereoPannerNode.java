@@ -23,7 +23,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="StereoPannerNode", isNative = true)
-public class StereoPannerNode extends AudioNode{
+public class StereoPannerNode extends AudioNode {
     @JsConstructor
     public StereoPannerNode(BaseAudioContext context){
         super();

@@ -30,7 +30,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="SourceBuffer", isNative = true)
-public class SourceBuffer extends EventTarget{
+public class SourceBuffer extends EventTarget {
     @JsProperty(name="onupdatestart")
     private EventHandlerNonNull onupdatestart;
     

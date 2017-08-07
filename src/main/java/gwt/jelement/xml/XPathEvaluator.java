@@ -25,10 +25,9 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="XPathEvaluator", isNative = true)
-public class XPathEvaluator extends IsObject{
+public class XPathEvaluator implements IsObject {
     @JsConstructor
     public XPathEvaluator(){
-        super();
     }
     
     @JsMethod(name = "createExpression")

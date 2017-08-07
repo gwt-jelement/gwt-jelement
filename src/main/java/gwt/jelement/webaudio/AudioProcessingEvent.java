@@ -24,7 +24,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="AudioProcessingEvent", isNative = true)
-public class AudioProcessingEvent extends Event{
+public class AudioProcessingEvent extends Event {
     @JsConstructor
     public AudioProcessingEvent(String type, AudioProcessingEventInit eventInitDict){
         super((String) null);

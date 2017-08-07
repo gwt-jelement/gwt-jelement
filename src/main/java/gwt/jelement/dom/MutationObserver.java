@@ -24,10 +24,9 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="MutationObserver", isNative = true)
-public class MutationObserver extends IsObject{
+public class MutationObserver implements IsObject {
     @JsConstructor
     public MutationObserver(MutationCallback callback){
-        super();
     }
     
     @JsMethod(name = "disconnect")

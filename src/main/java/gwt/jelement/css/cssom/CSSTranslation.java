@@ -23,7 +23,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="CSSTranslation", isNative = true)
-public class CSSTranslation extends CSSTransformComponent{
+public class CSSTranslation extends CSSTransformComponent {
     @JsConstructor
     public CSSTranslation(CSSNumericValue x, CSSNumericValue y){
         super();

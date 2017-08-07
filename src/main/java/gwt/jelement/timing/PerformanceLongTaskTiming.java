@@ -22,7 +22,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="PerformanceLongTaskTiming", isNative = true)
-public class PerformanceLongTaskTiming extends PerformanceEntry{
+public class PerformanceLongTaskTiming extends PerformanceEntry {
     @JsProperty(name="attribution")
     public native TaskAttributionTiming[] getAttribution();
     

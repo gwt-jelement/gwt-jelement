@@ -23,7 +23,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="CSSPerspective", isNative = true)
-public class CSSPerspective extends CSSTransformComponent{
+public class CSSPerspective extends CSSTransformComponent {
     @JsConstructor
     public CSSPerspective(CSSNumericValue length){
         super();

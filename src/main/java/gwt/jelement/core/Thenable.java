@@ -22,7 +22,7 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="Thenable", isNative = true)
-public class Thenable<T> extends IsObject{
+public class Thenable<T> implements IsObject {
     @JsMethod(name = "then")
     public native Promise<T> then();
     

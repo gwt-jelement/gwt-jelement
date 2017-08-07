@@ -28,7 +28,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="Body", isNative = true)
-public class Body extends IsObject{
+public class Body implements IsObject {
     @JsProperty(name="bodyUsed")
     public native boolean getBodyUsed();
     

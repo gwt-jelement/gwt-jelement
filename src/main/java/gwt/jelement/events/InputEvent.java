@@ -26,7 +26,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="InputEvent", isNative = true)
-public class InputEvent extends UIEvent{
+public class InputEvent extends UIEvent {
     @JsConstructor
     public InputEvent(String type){
         super((String) null);

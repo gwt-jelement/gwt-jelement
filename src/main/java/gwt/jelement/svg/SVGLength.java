@@ -24,7 +24,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="SVGLength", isNative = true)
-public class SVGLength extends IsObject{
+public class SVGLength implements IsObject {
     public static short SVG_LENGTHTYPE_UNKNOWN; /* 0 */
     public static short SVG_LENGTHTYPE_NUMBER; /* 1 */
     public static short SVG_LENGTHTYPE_PERCENTAGE; /* 2 */

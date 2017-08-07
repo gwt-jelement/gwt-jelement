@@ -27,7 +27,7 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="Cache", isNative = true)
-public class Cache extends IsObject{
+public class Cache implements IsObject {
     @JsMethod(name = "add")
     public native Promise<Void> add(Request request);
     

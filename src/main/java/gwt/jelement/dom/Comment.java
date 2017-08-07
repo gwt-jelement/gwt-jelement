@@ -22,7 +22,7 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="Comment", isNative = true)
-public class Comment extends CharacterData{
+public class Comment extends CharacterData {
     @JsConstructor
     public Comment(){
         super();

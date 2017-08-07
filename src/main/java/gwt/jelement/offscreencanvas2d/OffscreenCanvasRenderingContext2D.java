@@ -45,7 +45,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="OffscreenCanvasRenderingContext2D", isNative = true)
-public class OffscreenCanvasRenderingContext2D extends IsObject{
+public class OffscreenCanvasRenderingContext2D implements IsObject {
     @JsProperty(name="strokeStyle")
     private CanvasRenderingContext2D.StrokeStyleUnion strokeStyle;
     

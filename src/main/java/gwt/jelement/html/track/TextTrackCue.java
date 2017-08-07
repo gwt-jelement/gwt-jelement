@@ -24,7 +24,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="TextTrackCue", isNative = true)
-public class TextTrackCue extends EventTarget{
+public class TextTrackCue extends EventTarget {
     @JsProperty(name="onenter")
     private EventHandlerNonNull onenter;
     

@@ -24,10 +24,9 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="PerformanceObserver", isNative = true)
-public class PerformanceObserver extends IsObject{
+public class PerformanceObserver implements IsObject {
     @JsConstructor
     public PerformanceObserver(PerformanceObserverCallback callback){
-        super();
     }
     
     @JsMethod(name = "disconnect")

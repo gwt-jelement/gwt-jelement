@@ -23,7 +23,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="MediaSettingsRange", isNative = true)
-public class MediaSettingsRange extends IsObject{
+public class MediaSettingsRange implements IsObject {
     @JsProperty(name="max")
     public native double getMax();
     

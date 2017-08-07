@@ -27,7 +27,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="DataTransferItem", isNative = true)
-public class DataTransferItem extends IsObject{
+public class DataTransferItem implements IsObject {
     @JsProperty(name="kind")
     public native String getKind();
     

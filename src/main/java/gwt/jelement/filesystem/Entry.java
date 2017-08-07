@@ -25,7 +25,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="Entry", isNative = true)
-public class Entry extends IsObject{
+public class Entry implements IsObject {
     @JsProperty(name="isFile")
     public native boolean getIsFile();
     

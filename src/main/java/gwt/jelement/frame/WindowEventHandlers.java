@@ -24,7 +24,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="WindowEventHandlers", isNative = true)
-public class WindowEventHandlers extends IsObject{
+public class WindowEventHandlers implements IsObject {
     @JsProperty(name="onbeforeunload")
     private EventHandlerNonNull onbeforeunload;
     

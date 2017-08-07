@@ -24,7 +24,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="PresentationAvailability", isNative = true)
-public class PresentationAvailability extends EventTarget{
+public class PresentationAvailability extends EventTarget {
     @JsProperty(name="onchange")
     private EventHandlerNonNull onchange;
     

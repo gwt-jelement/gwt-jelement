@@ -22,7 +22,7 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="LinearAccelerationSensor", isNative = true)
-public class LinearAccelerationSensor extends Accelerometer{
+public class LinearAccelerationSensor extends Accelerometer {
     @JsConstructor
     public LinearAccelerationSensor(){
         super();

@@ -31,7 +31,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="window", isNative = true)
-public class Browser extends IsObject{
+public class Browser implements IsObject {
     @JsProperty(name="navigator")
     public static Navigator navigator;
     

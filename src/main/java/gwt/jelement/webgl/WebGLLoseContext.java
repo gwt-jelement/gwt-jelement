@@ -23,7 +23,7 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="WebGLLoseContext", isNative = true)
-public class WebGLLoseContext extends IsObject{
+public class WebGLLoseContext implements IsObject {
     @JsMethod(name = "loseContext")
     public native void loseContext();
     

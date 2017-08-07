@@ -17,6 +17,7 @@
 package gwt.jelement.plugins;
 
 import gwt.jelement.core.ArrayLike;
+import gwt.jelement.core.IsObject;
 import gwt.jelement.core.Js;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
@@ -25,7 +26,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="Plugin", isNative = true)
-public class Plugin extends ArrayLike{
+public class Plugin implements IsObject, ArrayLike<MimeType> {
     @JsProperty(name="name")
     public native String getName();
     

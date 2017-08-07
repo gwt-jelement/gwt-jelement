@@ -22,7 +22,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="CSSKeyframeRule", isNative = true)
-public class CSSKeyframeRule extends CSSRule{
+public class CSSKeyframeRule extends CSSRule {
     @JsProperty(name="keyText")
     public native String getKeyText();
     

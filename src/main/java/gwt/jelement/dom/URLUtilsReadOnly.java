@@ -23,7 +23,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="URLUtilsReadOnly", isNative = true)
-public class URLUtilsReadOnly extends IsObject{
+public class URLUtilsReadOnly implements IsObject {
     @JsProperty(name="href")
     public native String getHref();
     

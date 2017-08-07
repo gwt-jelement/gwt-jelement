@@ -24,7 +24,7 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="WebGLDrawBuffers", isNative = true)
-public class WebGLDrawBuffers extends IsObject{
+public class WebGLDrawBuffers implements IsObject {
     public static double COLOR_ATTACHMENT0_WEBGL; /* 0x8CE0 */
     public static double COLOR_ATTACHMENT1_WEBGL; /* 0x8CE1 */
     public static double COLOR_ATTACHMENT2_WEBGL; /* 0x8CE2 */

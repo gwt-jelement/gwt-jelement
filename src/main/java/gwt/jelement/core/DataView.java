@@ -23,7 +23,7 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="DataView", isNative = true)
-public class DataView extends ArrayBufferView{
+public class DataView extends ArrayBufferView {
     @JsConstructor
     public DataView(ArrayBuffer buffer){
         super();

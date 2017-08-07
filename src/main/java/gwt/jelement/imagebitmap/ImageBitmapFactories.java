@@ -31,7 +31,7 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="ImageBitmapFactories", isNative = true)
-public class ImageBitmapFactories extends IsObject{
+public class ImageBitmapFactories implements IsObject {
     @JsMethod(name = "createImageBitmap")
     public native Promise createImageBitmap(HTMLImageElement imageBitmap);
     

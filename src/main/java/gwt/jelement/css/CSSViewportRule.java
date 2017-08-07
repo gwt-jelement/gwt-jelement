@@ -22,7 +22,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="CSSViewportRule", isNative = true)
-public class CSSViewportRule extends CSSRule{
+public class CSSViewportRule extends CSSRule {
     @JsProperty(name="style")
     public native CSSStyleDeclaration getStyle();
     

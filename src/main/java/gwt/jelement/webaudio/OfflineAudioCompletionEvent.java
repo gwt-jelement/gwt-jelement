@@ -24,7 +24,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="OfflineAudioCompletionEvent", isNative = true)
-public class OfflineAudioCompletionEvent extends Event{
+public class OfflineAudioCompletionEvent extends Event {
     @JsConstructor
     public OfflineAudioCompletionEvent(String type, OfflineAudioCompletionEventInit eventInitDict){
         super((String) null);

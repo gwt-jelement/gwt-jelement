@@ -23,7 +23,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="ScriptProcessorNode", isNative = true)
-public class ScriptProcessorNode extends AudioNode{
+public class ScriptProcessorNode extends AudioNode {
     @JsProperty(name="onaudioprocess")
     private EventHandlerNonNull onaudioprocess;
     

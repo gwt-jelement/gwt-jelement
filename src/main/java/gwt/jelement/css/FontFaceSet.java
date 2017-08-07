@@ -26,7 +26,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="FontFaceSet", isNative = true)
-public class FontFaceSet extends EventTarget{
+public class FontFaceSet extends EventTarget {
     @JsProperty(name="onloading")
     private EventHandlerNonNull onloading;
     

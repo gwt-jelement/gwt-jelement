@@ -23,7 +23,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="MediaError", isNative = true)
-public class MediaError extends IsObject{
+public class MediaError implements IsObject {
     public static short MEDIA_ERR_ABORTED; /* 1 */
     public static short MEDIA_ERR_NETWORK; /* 2 */
     public static short MEDIA_ERR_DECODE; /* 3 */

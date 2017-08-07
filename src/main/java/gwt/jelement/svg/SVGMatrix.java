@@ -24,7 +24,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="SVGMatrix", isNative = true)
-public class SVGMatrix extends IsObject{
+public class SVGMatrix implements IsObject {
     @JsProperty(name="a")
     public native double getA();
     

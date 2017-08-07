@@ -24,7 +24,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="PermissionStatus", isNative = true)
-public class PermissionStatus extends EventTarget{
+public class PermissionStatus extends EventTarget {
     @JsProperty(name="onchange")
     private EventHandlerNonNull onchange;
     

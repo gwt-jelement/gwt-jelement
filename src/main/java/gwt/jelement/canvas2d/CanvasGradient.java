@@ -23,7 +23,7 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="CanvasGradient", isNative = true)
-public class CanvasGradient extends IsObject{
+public class CanvasGradient implements IsObject {
     @JsMethod(name = "addColorStop")
     public native void addColorStop(double offset, String color);
     

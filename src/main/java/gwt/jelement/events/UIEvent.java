@@ -26,7 +26,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="UIEvent", isNative = true)
-public class UIEvent extends Event{
+public class UIEvent extends Event {
     @JsConstructor
     public UIEvent(String type){
         super((String) null);

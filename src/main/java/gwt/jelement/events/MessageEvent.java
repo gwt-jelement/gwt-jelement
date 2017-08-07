@@ -25,7 +25,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="MessageEvent", isNative = true)
-public class MessageEvent extends Event{
+public class MessageEvent extends Event {
     @JsConstructor
     public MessageEvent(String type){
         super((String) null);

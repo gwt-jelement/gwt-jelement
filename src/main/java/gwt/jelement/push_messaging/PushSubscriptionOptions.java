@@ -24,7 +24,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="PushSubscriptionOptions", isNative = true)
-public class PushSubscriptionOptions extends IsObject{
+public class PushSubscriptionOptions implements IsObject {
     @JsProperty(name="userVisibleOnly")
     public native boolean getUserVisibleOnly();
     

@@ -23,7 +23,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="NavigatorConcurrentHardware", isNative = true)
-public class NavigatorConcurrentHardware extends IsObject{
+public class NavigatorConcurrentHardware implements IsObject {
     @JsProperty(name="hardwareConcurrency")
     public native double getHardwareConcurrency();
     

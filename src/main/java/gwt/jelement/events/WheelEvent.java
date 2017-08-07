@@ -23,7 +23,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="WheelEvent", isNative = true)
-public class WheelEvent extends MouseEvent{
+public class WheelEvent extends MouseEvent {
     public static double DOM_DELTA_PIXEL; /* 0x00 */
     public static double DOM_DELTA_LINE; /* 0x01 */
     public static double DOM_DELTA_PAGE; /* 0x02 */

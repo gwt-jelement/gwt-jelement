@@ -23,7 +23,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="Gamepad", isNative = true)
-public class Gamepad extends IsObject{
+public class Gamepad implements IsObject {
     @JsProperty(name="hand")
     private String hand;
     

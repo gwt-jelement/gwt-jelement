@@ -23,7 +23,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="ProcessingInstruction", isNative = true)
-public class ProcessingInstruction extends CharacterData{
+public class ProcessingInstruction extends CharacterData {
     @JsProperty(name="target")
     public native String getTarget();
     

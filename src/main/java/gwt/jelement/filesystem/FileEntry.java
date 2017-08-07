@@ -23,7 +23,7 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="FileEntry", isNative = true)
-public class FileEntry extends Entry{
+public class FileEntry extends Entry {
     @JsMethod(name = "createWriter")
     public native void createWriter(FileWriterCallback successCallback);
     

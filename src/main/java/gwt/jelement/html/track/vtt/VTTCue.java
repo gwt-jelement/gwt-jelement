@@ -27,7 +27,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="VTTCue", isNative = true)
-public class VTTCue extends TextTrackCue{
+public class VTTCue extends TextTrackCue {
     @JsType(isNative = true, name = "?", namespace = JsPackage.GLOBAL)
     public interface LineUnion {
         @JsOverlay

@@ -23,7 +23,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="SVGAnimatedInteger", isNative = true)
-public class SVGAnimatedInteger extends IsObject{
+public class SVGAnimatedInteger implements IsObject {
     @JsProperty(name="baseVal")
     public native double getBaseVal();
     

@@ -25,28 +25,24 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="TrackDefault", isNative = true)
-public class TrackDefault extends IsObject{
+public class TrackDefault implements IsObject {
     @JsProperty(name="type")
     private String type;
     
     @JsConstructor
     public TrackDefault(TrackDefaultType type, String language, String label, String[] kinds){
-        super();
     }
     
     @JsConstructor
     public TrackDefault(TrackDefaultType type, String language, String label, String[] kinds, String byteStreamTrackID){
-        super();
     }
     
     @JsConstructor
     public TrackDefault(TrackDefaultType type, String language, String label, Array kinds){
-        super();
     }
     
     @JsConstructor
     public TrackDefault(TrackDefaultType type, String language, String label, Array kinds, String byteStreamTrackID){
-        super();
     }
     
     @JsProperty(name="byteStreamTrackID")

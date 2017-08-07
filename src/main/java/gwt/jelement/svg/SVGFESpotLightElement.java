@@ -22,7 +22,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="SVGFESpotLightElement", isNative = true)
-public class SVGFESpotLightElement extends SVGElement{
+public class SVGFESpotLightElement extends SVGElement {
     @JsProperty(name="x")
     public native SVGAnimatedNumber getX();
     

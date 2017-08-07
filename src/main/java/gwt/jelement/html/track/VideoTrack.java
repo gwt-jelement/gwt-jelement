@@ -24,7 +24,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="VideoTrack", isNative = true)
-public class VideoTrack extends IsObject{
+public class VideoTrack implements IsObject {
     @JsProperty(name="id")
     public native String getId();
     

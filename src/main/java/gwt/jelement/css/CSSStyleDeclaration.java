@@ -17,6 +17,7 @@
 package gwt.jelement.css;
 
 import gwt.jelement.core.ArrayLike;
+import gwt.jelement.core.IsObject;
 import gwt.jelement.core.Js;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
@@ -25,7 +26,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="CSSStyleDeclaration", isNative = true)
-public class CSSStyleDeclaration extends ArrayLike{
+public class CSSStyleDeclaration implements IsObject, ArrayLike<String> {
     @JsType(isNative = true, name = "?", namespace = JsPackage.GLOBAL)
     public interface GetUnion {
         @JsOverlay

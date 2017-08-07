@@ -46,7 +46,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="Document", isNative = true)
-public class Document extends Node{
+public class Document extends Node {
     @JsType(isNative = true, name = "?", namespace = JsPackage.GLOBAL)
     public interface HTMLOrSVGScriptElement {
         @JsOverlay

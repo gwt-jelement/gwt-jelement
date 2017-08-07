@@ -25,7 +25,7 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="DevToolsHost", isNative = true)
-public class DevToolsHost extends IsObject{
+public class DevToolsHost implements IsObject {
     @JsMethod(name = "copyText")
     public native void copyText(String text);
     

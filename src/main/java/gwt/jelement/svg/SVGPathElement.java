@@ -22,7 +22,7 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="SVGPathElement", isNative = true)
-public class SVGPathElement extends SVGGeometryElement{
+public class SVGPathElement extends SVGGeometryElement {
     @JsMethod(name = "getPathSegAtLength")
     public native double getPathSegAtLength(double distance);
     

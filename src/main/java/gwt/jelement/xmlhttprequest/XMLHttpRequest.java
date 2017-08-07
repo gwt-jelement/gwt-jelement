@@ -31,7 +31,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="XMLHttpRequest", isNative = true)
-public class XMLHttpRequest extends XMLHttpRequestEventTarget{
+public class XMLHttpRequest extends XMLHttpRequestEventTarget {
     public static short UNSENT; /* 0 */
     public static short OPENED; /* 1 */
     public static short HEADERS_RECEIVED; /* 2 */

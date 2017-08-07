@@ -24,7 +24,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="DeviceMotionEvent", isNative = true)
-public class DeviceMotionEvent extends Event{
+public class DeviceMotionEvent extends Event {
     @JsConstructor
     public DeviceMotionEvent(String type){
         super((String) null);

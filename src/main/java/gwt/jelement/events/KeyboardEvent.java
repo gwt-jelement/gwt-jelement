@@ -25,7 +25,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="KeyboardEvent", isNative = true)
-public class KeyboardEvent extends UIEvent{
+public class KeyboardEvent extends UIEvent {
     public static double DOM_KEY_LOCATION_STANDARD; /* 0x00 */
     public static double DOM_KEY_LOCATION_LEFT; /* 0x01 */
     public static double DOM_KEY_LOCATION_RIGHT; /* 0x02 */

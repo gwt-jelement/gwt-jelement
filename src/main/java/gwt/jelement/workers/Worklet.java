@@ -24,7 +24,7 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="Worklet", isNative = true)
-public class Worklet extends IsObject{
+public class Worklet implements IsObject {
     @JsMethod(name = "addModule")
     public native Promise<Void> addModule(String url);
     

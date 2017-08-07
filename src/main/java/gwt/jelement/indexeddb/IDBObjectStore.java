@@ -26,7 +26,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="IDBObjectStore", isNative = true)
-public class IDBObjectStore extends IsObject{
+public class IDBObjectStore implements IsObject {
     @JsProperty(name="name")
     public native String getName();
     

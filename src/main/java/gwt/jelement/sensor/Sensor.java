@@ -25,7 +25,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="Sensor", isNative = true)
-public class Sensor extends EventTarget{
+public class Sensor extends EventTarget {
     @JsProperty(name="onerror")
     private EventHandlerNonNull onerror;
     

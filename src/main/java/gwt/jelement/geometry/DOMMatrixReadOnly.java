@@ -28,25 +28,21 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="DOMMatrixReadOnly", isNative = true)
-public class DOMMatrixReadOnly extends IsObject{
+public class DOMMatrixReadOnly implements IsObject {
     @JsConstructor
     public DOMMatrixReadOnly(){
-        super();
     }
     
     @JsConstructor
     public DOMMatrixReadOnly(String init){
-        super();
     }
     
     @JsConstructor
     public DOMMatrixReadOnly(double[] init){
-        super();
     }
     
     @JsConstructor
     public DOMMatrixReadOnly(Array init){
-        super();
     }
     
     @JsProperty(name="a")

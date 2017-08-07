@@ -23,7 +23,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="ErrorEvent", isNative = true)
-public class ErrorEvent extends Event{
+public class ErrorEvent extends Event {
     @JsConstructor
     public ErrorEvent(String type){
         super((String) null);

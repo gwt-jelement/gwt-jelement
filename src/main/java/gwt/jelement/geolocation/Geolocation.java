@@ -23,7 +23,7 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="Geolocation", isNative = true)
-public class Geolocation extends IsObject{
+public class Geolocation implements IsObject {
     @JsMethod(name = "clearWatch")
     public native void clearWatch(double watchID);
     

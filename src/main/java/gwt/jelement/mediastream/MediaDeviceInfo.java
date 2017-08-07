@@ -23,7 +23,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="MediaDeviceInfo", isNative = true)
-public class MediaDeviceInfo extends IsObject{
+public class MediaDeviceInfo implements IsObject {
     @JsProperty(name="kind")
     private String kind;
     

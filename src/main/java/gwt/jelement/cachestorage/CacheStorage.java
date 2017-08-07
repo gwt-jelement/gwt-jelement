@@ -25,7 +25,7 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="CacheStorage", isNative = true)
-public class CacheStorage extends IsObject{
+public class CacheStorage implements IsObject {
     @JsMethod(name = "delete")
     public native Promise<Boolean> delete(String cacheName);
     

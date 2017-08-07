@@ -25,10 +25,9 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="Touch", isNative = true)
-public class Touch extends IsObject{
+public class Touch implements IsObject {
     @JsConstructor
     public Touch(TouchInit initDict){
-        super();
     }
     
     @JsProperty(name="identifier")

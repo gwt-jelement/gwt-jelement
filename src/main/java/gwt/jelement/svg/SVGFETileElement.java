@@ -22,7 +22,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="SVGFETileElement", isNative = true)
-public class SVGFETileElement extends SVGElement{
+public class SVGFETileElement extends SVGElement {
     @JsProperty(name="in1")
     public native SVGAnimatedString getIn1();
     

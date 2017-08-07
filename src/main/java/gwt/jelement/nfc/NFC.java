@@ -25,7 +25,7 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="NFC", isNative = true)
-public class NFC extends IsObject{
+public class NFC implements IsObject {
     @JsMethod(name = "cancelPush")
     public native Promise<Void> cancelPush();
     

@@ -23,7 +23,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="NavigatorCookies", isNative = true)
-public class NavigatorCookies extends IsObject{
+public class NavigatorCookies implements IsObject {
     @JsProperty(name="cookieEnabled")
     public native boolean getCookieEnabled();
     

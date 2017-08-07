@@ -25,7 +25,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="WindowClient", isNative = true)
-public class WindowClient extends Client{
+public class WindowClient extends Client {
     @JsProperty(name="visibilityState")
     private String visibilityState;
     

@@ -22,7 +22,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="HTMLAreaElement", isNative = true)
-public class HTMLAreaElement extends HTMLElement{
+public class HTMLAreaElement extends HTMLElement {
     @JsProperty(name="alt")
     public native String getAlt();
     

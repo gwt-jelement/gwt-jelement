@@ -24,7 +24,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="VREyeParameters", isNative = true)
-public class VREyeParameters extends IsObject{
+public class VREyeParameters implements IsObject {
     @JsProperty(name="offset")
     public native Float32Array getOffset();
     

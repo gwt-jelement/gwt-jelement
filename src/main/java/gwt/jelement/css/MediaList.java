@@ -17,6 +17,7 @@
 package gwt.jelement.css;
 
 import gwt.jelement.core.ArrayLike;
+import gwt.jelement.core.IsObject;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
@@ -24,7 +25,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="MediaList", isNative = true)
-public class MediaList extends ArrayLike{
+public class MediaList implements IsObject, ArrayLike<String> {
     @JsProperty(name="mediaText")
     public native String getMediaText();
     

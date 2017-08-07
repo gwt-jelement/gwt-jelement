@@ -23,7 +23,7 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="DirectoryReaderSync", isNative = true)
-public class DirectoryReaderSync extends IsObject{
+public class DirectoryReaderSync implements IsObject {
     @JsMethod(name = "readEntries")
     public native EntrySync[] readEntries();
     

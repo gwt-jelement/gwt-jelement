@@ -22,5 +22,5 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="WorkletGlobalScope", isNative = true)
-public class WorkletGlobalScope extends IsObject{
+public class WorkletGlobalScope implements IsObject {
 }

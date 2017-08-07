@@ -23,7 +23,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="CSSScale", isNative = true)
-public class CSSScale extends CSSTransformComponent{
+public class CSSScale extends CSSTransformComponent {
     @JsConstructor
     public CSSScale(double x, double y){
         super();

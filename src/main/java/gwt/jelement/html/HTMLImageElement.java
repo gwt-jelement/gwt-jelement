@@ -24,7 +24,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="HTMLImageElement", isNative = true)
-public class HTMLImageElement extends HTMLElement{
+public class HTMLImageElement extends HTMLElement {
     @JsProperty(name="alt")
     public native String getAlt();
     

@@ -24,7 +24,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="RTCCertificate", isNative = true)
-public class RTCCertificate extends IsObject{
+public class RTCCertificate implements IsObject {
     @JsProperty(name="expires")
     public native double getExpires();
     

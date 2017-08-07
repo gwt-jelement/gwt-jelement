@@ -23,7 +23,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="HTMLDialogElement", isNative = true)
-public class HTMLDialogElement extends HTMLElement{
+public class HTMLDialogElement extends HTMLElement {
     @JsProperty(name="open")
     public native boolean getOpen();
     

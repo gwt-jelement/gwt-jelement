@@ -25,7 +25,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="TrackEvent", isNative = true)
-public class TrackEvent extends Event{
+public class TrackEvent extends Event {
     @JsType(isNative = true, name = "?", namespace = JsPackage.GLOBAL)
     public interface TrackUnion {
         @JsOverlay

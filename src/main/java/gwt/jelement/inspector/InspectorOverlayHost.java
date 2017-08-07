@@ -23,7 +23,7 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="InspectorOverlayHost", isNative = true)
-public class InspectorOverlayHost extends IsObject{
+public class InspectorOverlayHost implements IsObject {
     @JsMethod(name = "resume")
     public native void resume();
     

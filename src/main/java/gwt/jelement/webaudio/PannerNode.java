@@ -24,7 +24,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="PannerNode", isNative = true)
-public class PannerNode extends AudioNode{
+public class PannerNode extends AudioNode {
     @JsProperty(name="panningModel")
     private String panningModel;
     

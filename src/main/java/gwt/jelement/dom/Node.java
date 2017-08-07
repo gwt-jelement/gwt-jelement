@@ -24,7 +24,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="Node", isNative = true)
-public class Node extends EventTarget{
+public class Node extends EventTarget {
     public static short ELEMENT_NODE; /* 1 */
     public static short ATTRIBUTE_NODE; /* 2 */
     public static short TEXT_NODE; /* 3 */

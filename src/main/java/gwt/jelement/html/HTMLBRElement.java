@@ -22,7 +22,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="HTMLBRElement", isNative = true)
-public class HTMLBRElement extends HTMLElement{
+public class HTMLBRElement extends HTMLElement {
     @JsProperty(name="clear")
     public native String getClear();
     

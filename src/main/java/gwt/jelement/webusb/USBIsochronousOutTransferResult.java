@@ -24,10 +24,9 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="USBIsochronousOutTransferResult", isNative = true)
-public class USBIsochronousOutTransferResult extends IsObject{
+public class USBIsochronousOutTransferResult implements IsObject {
     @JsConstructor
     public USBIsochronousOutTransferResult(USBIsochronousOutTransferPacket[] packets){
-        super();
     }
     
     @JsProperty(name="packets")

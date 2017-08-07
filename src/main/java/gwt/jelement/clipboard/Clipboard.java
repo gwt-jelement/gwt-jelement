@@ -24,7 +24,7 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="Clipboard", isNative = true)
-public class Clipboard extends EventTarget{
+public class Clipboard extends EventTarget {
     @JsMethod(name = "read")
     public native Promise<DataTransfer> read();
     

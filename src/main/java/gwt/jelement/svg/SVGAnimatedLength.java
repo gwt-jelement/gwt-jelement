@@ -23,7 +23,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="SVGAnimatedLength", isNative = true)
-public class SVGAnimatedLength extends IsObject{
+public class SVGAnimatedLength implements IsObject {
     @JsProperty(name="baseVal")
     public native SVGLength getBaseVal();
     

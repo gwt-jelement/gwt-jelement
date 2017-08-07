@@ -23,7 +23,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="HTMLTableSectionElement", isNative = true)
-public class HTMLTableSectionElement extends HTMLElement{
+public class HTMLTableSectionElement extends HTMLElement {
     @JsProperty(name="rows")
     public native HTMLCollection getRows();
     

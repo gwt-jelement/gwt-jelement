@@ -26,7 +26,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="MediaDevices", isNative = true)
-public class MediaDevices extends EventTarget{
+public class MediaDevices extends EventTarget {
     @JsProperty(name="ondevicechange")
     private EventHandlerNonNull ondevicechange;
     

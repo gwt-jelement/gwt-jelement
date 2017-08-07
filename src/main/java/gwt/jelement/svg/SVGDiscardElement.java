@@ -21,5 +21,5 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="SVGDiscardElement", isNative = true)
-public class SVGDiscardElement extends SVGElement{
+public class SVGDiscardElement extends SVGElement {
 }

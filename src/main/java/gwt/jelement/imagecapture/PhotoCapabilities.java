@@ -23,7 +23,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="PhotoCapabilities", isNative = true)
-public class PhotoCapabilities extends IsObject{
+public class PhotoCapabilities implements IsObject {
     @JsProperty(name="redEyeReduction")
     private String redEyeReduction;
     

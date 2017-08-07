@@ -24,7 +24,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="RTCDataChannelEvent", isNative = true)
-public class RTCDataChannelEvent extends Event{
+public class RTCDataChannelEvent extends Event {
     @JsConstructor
     public RTCDataChannelEvent(String type, RTCDataChannelEventInit eventInitDict){
         super((String) null);

@@ -27,7 +27,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="SpeechRecognition", isNative = true)
-public class SpeechRecognition extends EventTarget{
+public class SpeechRecognition extends EventTarget {
     @JsProperty(name="onaudiostart")
     private EventHandlerNonNull onaudiostart;
     

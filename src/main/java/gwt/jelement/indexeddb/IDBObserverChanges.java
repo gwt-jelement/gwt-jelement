@@ -23,7 +23,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="IDBObserverChanges", isNative = true)
-public class IDBObserverChanges extends IsObject{
+public class IDBObserverChanges implements IsObject {
     @JsProperty(name="database")
     public native IDBDatabase getDatabase();
     

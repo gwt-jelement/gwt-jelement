@@ -28,7 +28,7 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="SubtleCrypto", isNative = true)
-public class SubtleCrypto extends IsObject{
+public class SubtleCrypto implements IsObject {
     @JsMethod(name = "decrypt")
     public native Promise decrypt(JsObject algorithm, CryptoKey key, ArrayBuffer data);
     

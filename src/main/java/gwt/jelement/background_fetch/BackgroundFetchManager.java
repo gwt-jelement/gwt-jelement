@@ -26,7 +26,7 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="BackgroundFetchManager", isNative = true)
-public class BackgroundFetchManager extends IsObject{
+public class BackgroundFetchManager implements IsObject {
     @JsMethod(name = "fetch")
     public native Promise<BackgroundFetchRegistration> fetch(String tag, Request requests);
     

@@ -24,7 +24,7 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="MIDIOutput", isNative = true)
-public class MIDIOutput extends MIDIPort{
+public class MIDIOutput extends MIDIPort {
     @JsMethod(name = "send")
     public native void send(Uint8Array data);
     

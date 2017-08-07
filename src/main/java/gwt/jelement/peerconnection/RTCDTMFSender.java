@@ -26,7 +26,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="RTCDTMFSender", isNative = true)
-public class RTCDTMFSender extends EventTarget{
+public class RTCDTMFSender extends EventTarget {
     @JsProperty(name="ontonechange")
     private EventHandlerNonNull ontonechange;
     

@@ -21,5 +21,5 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="SVGDefsElement", isNative = true)
-public class SVGDefsElement extends SVGGraphicsElement{
+public class SVGDefsElement extends SVGGraphicsElement {
 }

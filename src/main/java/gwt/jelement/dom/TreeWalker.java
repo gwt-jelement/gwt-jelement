@@ -24,7 +24,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="TreeWalker", isNative = true)
-public class TreeWalker extends IsObject{
+public class TreeWalker implements IsObject {
     @JsProperty(name="root")
     public native Node getRoot();
     

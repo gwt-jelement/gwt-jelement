@@ -26,7 +26,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="RemotePlayback", isNative = true)
-public class RemotePlayback extends EventTarget{
+public class RemotePlayback extends EventTarget {
     @JsProperty(name="onconnecting")
     private EventHandlerNonNull onconnecting;
     

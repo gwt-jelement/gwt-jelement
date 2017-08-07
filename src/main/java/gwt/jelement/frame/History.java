@@ -25,7 +25,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="History", isNative = true)
-public class History extends IsObject{
+public class History implements IsObject {
     @JsProperty(name="scrollRestoration")
     private String scrollRestoration;
     

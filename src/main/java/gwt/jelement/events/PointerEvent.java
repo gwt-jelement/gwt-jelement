@@ -24,7 +24,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="PointerEvent", isNative = true)
-public class PointerEvent extends MouseEvent{
+public class PointerEvent extends MouseEvent {
     @JsConstructor
     public PointerEvent(String type){
         super((String) null);

@@ -22,7 +22,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="SVGPolylineElement", isNative = true)
-public class SVGPolylineElement extends SVGGeometryElement{
+public class SVGPolylineElement extends SVGGeometryElement {
     @JsProperty(name="points")
     public native SVGPointList getPoints();
     

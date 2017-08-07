@@ -25,7 +25,7 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="WebGLGetBufferSubDataAsync", isNative = true)
-public class WebGLGetBufferSubDataAsync extends IsObject{
+public class WebGLGetBufferSubDataAsync implements IsObject {
     @JsMethod(name = "getBufferSubDataAsync")
     public native Promise<ArrayBufferView> getBufferSubDataAsync(double target, double srcByteOffset, ArrayBufferView dstData);
     

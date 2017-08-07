@@ -23,7 +23,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="ResizeObserverEntry", isNative = true)
-public class ResizeObserverEntry extends IsObject{
+public class ResizeObserverEntry implements IsObject {
     @JsProperty(name="target")
     public native Element getTarget();
     

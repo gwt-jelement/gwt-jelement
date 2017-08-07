@@ -26,7 +26,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="DocumentOrShadowRoot", isNative = true)
-public class DocumentOrShadowRoot extends IsObject{
+public class DocumentOrShadowRoot implements IsObject {
     @JsProperty(name="activeElement")
     public native Element getActiveElement();
     

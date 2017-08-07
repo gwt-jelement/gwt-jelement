@@ -23,7 +23,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="PerformanceEntry", isNative = true)
-public class PerformanceEntry extends IsObject{
+public class PerformanceEntry implements IsObject {
     @JsProperty(name="name")
     public native String getName();
     

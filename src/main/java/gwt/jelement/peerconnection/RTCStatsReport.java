@@ -22,5 +22,5 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="RTCStatsReport", isNative = true)
-public class RTCStatsReport extends IsObject{
+public class RTCStatsReport implements IsObject {
 }

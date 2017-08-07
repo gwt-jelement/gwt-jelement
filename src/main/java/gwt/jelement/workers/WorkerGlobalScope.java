@@ -45,7 +45,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="WorkerGlobalScope", isNative = true)
-public class WorkerGlobalScope extends EventTarget{
+public class WorkerGlobalScope extends EventTarget {
     @JsProperty(name="onerror")
     private EventHandlerNonNull onerror;
     

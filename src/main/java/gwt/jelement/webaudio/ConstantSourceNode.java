@@ -23,7 +23,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="ConstantSourceNode", isNative = true)
-public class ConstantSourceNode extends AudioScheduledSourceNode{
+public class ConstantSourceNode extends AudioScheduledSourceNode {
     @JsConstructor
     public ConstantSourceNode(BaseAudioContext context){
         super();

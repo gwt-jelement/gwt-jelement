@@ -25,7 +25,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="Crypto", isNative = true)
-public class Crypto extends IsObject{
+public class Crypto implements IsObject {
     @JsProperty(name="subtle")
     public native SubtleCrypto getSubtle();
     

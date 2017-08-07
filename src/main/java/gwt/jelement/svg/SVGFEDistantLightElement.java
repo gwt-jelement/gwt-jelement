@@ -22,7 +22,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="SVGFEDistantLightElement", isNative = true)
-public class SVGFEDistantLightElement extends SVGElement{
+public class SVGFEDistantLightElement extends SVGElement {
     @JsProperty(name="azimuth")
     public native SVGAnimatedNumber getAzimuth();
     

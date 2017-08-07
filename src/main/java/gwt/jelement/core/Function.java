@@ -24,7 +24,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="Function", isNative = true)
-public class Function extends IsObject{
+public class Function implements IsObject {
     @JsProperty(name="caller")
     public static Function caller;
     
@@ -42,12 +42,10 @@ public class Function extends IsObject{
     
     @JsConstructor
     public Function(String functionBody){
-        super();
     }
     
     @JsConstructor
     public Function(String args, String functionBody){
-        super();
     }
     
     @JsMethod(name = "apply")

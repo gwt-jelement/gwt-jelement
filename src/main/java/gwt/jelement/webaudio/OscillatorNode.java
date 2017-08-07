@@ -24,7 +24,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="OscillatorNode", isNative = true)
-public class OscillatorNode extends AudioScheduledSourceNode{
+public class OscillatorNode extends AudioScheduledSourceNode {
     @JsProperty(name="type")
     private String type;
     

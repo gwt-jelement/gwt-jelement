@@ -24,7 +24,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="NetworkInformation", isNative = true)
-public class NetworkInformation extends EventTarget{
+public class NetworkInformation extends EventTarget {
     @JsProperty(name="onchange")
     private EventHandlerNonNull onchange;
     

@@ -22,7 +22,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="SVGFEImageElement", isNative = true)
-public class SVGFEImageElement extends SVGElement{
+public class SVGFEImageElement extends SVGElement {
     @JsProperty(name="preserveAspectRatio")
     public native SVGAnimatedPreserveAspectRatio getPreserveAspectRatio();
     

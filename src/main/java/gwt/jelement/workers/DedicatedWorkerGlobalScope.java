@@ -30,7 +30,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="DedicatedWorkerGlobalScope", isNative = true)
-public class DedicatedWorkerGlobalScope extends WorkerGlobalScope{
+public class DedicatedWorkerGlobalScope extends WorkerGlobalScope {
     public static short TEMPORARY; /* 0 */
     public static short PERSISTENT; /* 1 */
     

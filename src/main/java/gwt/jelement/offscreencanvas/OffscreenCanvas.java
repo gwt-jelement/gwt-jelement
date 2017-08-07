@@ -33,7 +33,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="OffscreenCanvas", isNative = true)
-public class OffscreenCanvas extends EventTarget{
+public class OffscreenCanvas extends EventTarget {
     @JsType(isNative = true, name = "?", namespace = JsPackage.GLOBAL)
     public interface OffscreenRenderingContext {
         @JsOverlay

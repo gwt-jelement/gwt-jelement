@@ -23,7 +23,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="PositionError", isNative = true)
-public class PositionError extends IsObject{
+public class PositionError implements IsObject {
     public static short PERMISSION_DENIED; /* 1 */
     public static short POSITION_UNAVAILABLE; /* 2 */
     public static short TIMEOUT; /* 3 */

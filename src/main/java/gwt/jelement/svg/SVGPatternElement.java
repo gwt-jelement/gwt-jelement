@@ -22,7 +22,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="SVGPatternElement", isNative = true)
-public class SVGPatternElement extends SVGElement{
+public class SVGPatternElement extends SVGElement {
     @JsProperty(name="patternUnits")
     public native SVGAnimatedEnumeration getPatternUnits();
     

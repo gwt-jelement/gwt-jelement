@@ -17,6 +17,7 @@
 package gwt.jelement.dom;
 
 import gwt.jelement.core.ArrayLike;
+import gwt.jelement.core.IsObject;
 import gwt.jelement.core.Js;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
@@ -25,15 +26,13 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="AccessibleNodeList", isNative = true)
-public class AccessibleNodeList extends ArrayLike{
+public class AccessibleNodeList implements IsObject, ArrayLike<AccessibleNode> {
     @JsConstructor
     public AccessibleNodeList(){
-        super();
     }
     
     @JsConstructor
     public AccessibleNodeList(AccessibleNode[] nodes){
-        super();
     }
     
     @JsMethod(name = "add")

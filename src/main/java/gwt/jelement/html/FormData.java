@@ -27,7 +27,7 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="FormData", isNative = true)
-public class FormData extends IsObject{
+public class FormData implements IsObject {
     @JsType(isNative = true, name = "?", namespace = JsPackage.GLOBAL)
     public interface FormDataEntryValue {
         @JsOverlay
@@ -64,12 +64,10 @@ public class FormData extends IsObject{
     
     @JsConstructor
     public FormData(){
-        super();
     }
     
     @JsConstructor
     public FormData(HTMLFormElement form){
-        super();
     }
     
     @JsMethod(name = "append")

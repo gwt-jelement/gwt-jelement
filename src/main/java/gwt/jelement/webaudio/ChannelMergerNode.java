@@ -22,7 +22,7 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="ChannelMergerNode", isNative = true)
-public class ChannelMergerNode extends AudioNode{
+public class ChannelMergerNode extends AudioNode {
     @JsConstructor
     public ChannelMergerNode(BaseAudioContext context){
         super();

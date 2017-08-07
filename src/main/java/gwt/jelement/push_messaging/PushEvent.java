@@ -24,7 +24,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="PushEvent", isNative = true)
-public class PushEvent extends ExtendableEvent{
+public class PushEvent extends ExtendableEvent {
     @JsConstructor
     public PushEvent(String type){
         super((String) null);

@@ -25,7 +25,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="IDBRequest", isNative = true)
-public class IDBRequest extends EventTarget{
+public class IDBRequest extends EventTarget {
     @JsProperty(name="onsuccess")
     private EventHandlerNonNull onsuccess;
     

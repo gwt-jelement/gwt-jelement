@@ -23,7 +23,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="PerformanceServerTiming", isNative = true)
-public class PerformanceServerTiming extends IsObject{
+public class PerformanceServerTiming implements IsObject {
     @JsProperty(name="metric")
     public native String getMetric();
     

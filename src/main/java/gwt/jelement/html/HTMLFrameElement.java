@@ -24,7 +24,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="HTMLFrameElement", isNative = true)
-public class HTMLFrameElement extends HTMLElement{
+public class HTMLFrameElement extends HTMLElement {
     @JsProperty(name="name")
     public native String getName();
     

@@ -24,7 +24,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="CloseEvent", isNative = true)
-public class CloseEvent extends Event{
+public class CloseEvent extends Event {
     @JsConstructor
     public CloseEvent(String type){
         super((String) null);

@@ -24,7 +24,7 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="BudgetService", isNative = true)
-public class BudgetService extends IsObject{
+public class BudgetService implements IsObject {
     @JsMethod(name = "getBudget")
     public native Promise<BudgetState[]> getBudget();
     

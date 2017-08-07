@@ -21,5 +21,5 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="SVGFEFuncBElement", isNative = true)
-public class SVGFEFuncBElement extends SVGComponentTransferFunctionElement{
+public class SVGFEFuncBElement extends SVGComponentTransferFunctionElement {
 }

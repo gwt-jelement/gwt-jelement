@@ -27,7 +27,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="SVGElement", isNative = true)
-public class SVGElement extends Element{
+public class SVGElement extends Element {
     @JsProperty(name="onabort")
     private EventHandlerNonNull onabort;
     

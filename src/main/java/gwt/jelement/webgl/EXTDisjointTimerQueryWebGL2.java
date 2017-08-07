@@ -23,7 +23,7 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="EXTDisjointTimerQueryWebGL2", isNative = true)
-public class EXTDisjointTimerQueryWebGL2 extends IsObject{
+public class EXTDisjointTimerQueryWebGL2 implements IsObject {
     public static double QUERY_COUNTER_BITS_EXT; /* 0x8864 */
     public static double TIME_ELAPSED_EXT; /* 0x88BF */
     public static double TIMESTAMP_EXT; /* 0x8E28 */

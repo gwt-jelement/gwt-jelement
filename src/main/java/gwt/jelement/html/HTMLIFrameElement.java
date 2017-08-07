@@ -26,7 +26,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="HTMLIFrameElement", isNative = true)
-public class HTMLIFrameElement extends HTMLElement{
+public class HTMLIFrameElement extends HTMLElement {
     @JsProperty(name="src")
     public native String getSrc();
     

@@ -25,7 +25,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="Storage", isNative = true)
-public class Storage extends IsObject{
+public class Storage implements IsObject {
     @JsProperty(name="length")
     public native double getLength();
     

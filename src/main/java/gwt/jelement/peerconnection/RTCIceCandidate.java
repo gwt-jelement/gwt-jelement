@@ -24,10 +24,9 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="RTCIceCandidate", isNative = true)
-public class RTCIceCandidate extends IsObject{
+public class RTCIceCandidate implements IsObject {
     @JsConstructor
     public RTCIceCandidate(RTCIceCandidateInit candidateInitDict){
-        super();
     }
     
     @JsProperty(name="candidate")

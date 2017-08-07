@@ -23,7 +23,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="HTMLTemplateElement", isNative = true)
-public class HTMLTemplateElement extends HTMLElement{
+public class HTMLTemplateElement extends HTMLElement {
     @JsProperty(name="content")
     public native DocumentFragment getContent();
     

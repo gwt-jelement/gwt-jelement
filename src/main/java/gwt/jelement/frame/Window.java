@@ -81,7 +81,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="Window", isNative = true)
-public class Window extends EventTarget{
+public class Window extends EventTarget {
     public static short TEMPORARY; /* 0 */
     public static short PERSISTENT; /* 1 */
     

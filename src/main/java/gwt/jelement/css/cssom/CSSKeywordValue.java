@@ -23,7 +23,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="CSSKeywordValue", isNative = true)
-public class CSSKeywordValue extends CSSStyleValue{
+public class CSSKeywordValue extends CSSStyleValue {
     @JsConstructor
     public CSSKeywordValue(String keyword){
         super();

@@ -24,15 +24,13 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="InputDeviceCapabilities", isNative = true)
-public class InputDeviceCapabilities extends IsObject{
+public class InputDeviceCapabilities implements IsObject {
     @JsConstructor
     public InputDeviceCapabilities(){
-        super();
     }
     
     @JsConstructor
     public InputDeviceCapabilities(InputDeviceCapabilitiesInit deviceInitDict){
-        super();
     }
     
     @JsProperty(name="firesTouchEvents")

@@ -23,7 +23,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="SQLResultSet", isNative = true)
-public class SQLResultSet extends IsObject{
+public class SQLResultSet implements IsObject {
     @JsProperty(name="rows")
     public native SQLResultSetRowList getRows();
     

@@ -26,7 +26,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="SourceBufferList", isNative = true)
-public class SourceBufferList extends EventTarget{
+public class SourceBufferList extends EventTarget {
     @JsProperty(name="onaddsourcebuffer")
     private EventHandlerNonNull onaddsourcebuffer;
     

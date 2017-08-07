@@ -23,7 +23,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="PaintSize", isNative = true)
-public class PaintSize extends IsObject{
+public class PaintSize implements IsObject {
     @JsProperty(name="width")
     public native double getWidth();
     

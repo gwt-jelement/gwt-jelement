@@ -22,7 +22,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="HTMLMetaElement", isNative = true)
-public class HTMLMetaElement extends HTMLElement{
+public class HTMLMetaElement extends HTMLElement {
     @JsProperty(name="name")
     public native String getName();
     

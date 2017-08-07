@@ -17,13 +17,14 @@
 package gwt.jelement.webdatabase;
 
 import gwt.jelement.core.ArrayLike;
+import gwt.jelement.core.IsObject;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="SQLResultSetRowList", isNative = true)
-public class SQLResultSetRowList extends ArrayLike{
+public class SQLResultSetRowList implements IsObject, ArrayLike<Object> {
     @JsMethod(name = "item")
     public native Object item(double index);
     

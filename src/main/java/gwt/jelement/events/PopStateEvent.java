@@ -23,7 +23,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="PopStateEvent", isNative = true)
-public class PopStateEvent extends Event{
+public class PopStateEvent extends Event {
     @JsConstructor
     public PopStateEvent(String type){
         super((String) null);

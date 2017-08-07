@@ -25,10 +25,9 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="FileReaderSync", isNative = true)
-public class FileReaderSync extends IsObject{
+public class FileReaderSync implements IsObject {
     @JsConstructor
     public FileReaderSync(){
-        super();
     }
     
     @JsMethod(name = "readAsArrayBuffer")

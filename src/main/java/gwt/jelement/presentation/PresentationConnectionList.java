@@ -24,7 +24,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="PresentationConnectionList", isNative = true)
-public class PresentationConnectionList extends EventTarget{
+public class PresentationConnectionList extends EventTarget {
     @JsProperty(name="onconnectionavailable")
     private EventHandlerNonNull onconnectionavailable;
     

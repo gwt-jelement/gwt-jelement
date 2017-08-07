@@ -27,7 +27,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="IDBDatabase", isNative = true)
-public class IDBDatabase extends EventTarget{
+public class IDBDatabase extends EventTarget {
     @JsProperty(name="onabort")
     private EventHandlerNonNull onabort;
     

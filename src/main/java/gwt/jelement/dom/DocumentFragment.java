@@ -25,7 +25,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="DocumentFragment", isNative = true)
-public class DocumentFragment extends Node{
+public class DocumentFragment extends Node {
     @JsConstructor
     public DocumentFragment(){
         super();

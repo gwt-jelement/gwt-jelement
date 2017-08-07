@@ -24,7 +24,7 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="AudioWorkletGlobalScope", isNative = true)
-public class AudioWorkletGlobalScope extends WorkletGlobalScope{
+public class AudioWorkletGlobalScope extends WorkletGlobalScope {
     @JsMethod(name = "registerProcessor")
     public native void registerProcessor(String name, Function processorConstructor);
     

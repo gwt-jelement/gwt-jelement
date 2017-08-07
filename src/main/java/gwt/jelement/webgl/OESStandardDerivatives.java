@@ -22,7 +22,7 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="OESStandardDerivatives", isNative = true)
-public class OESStandardDerivatives extends IsObject{
+public class OESStandardDerivatives implements IsObject {
     public static double FRAGMENT_SHADER_DERIVATIVE_HINT_OES; /* 0x8B8B */
     
 }

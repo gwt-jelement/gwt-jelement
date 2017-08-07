@@ -24,7 +24,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="FontFaceSetLoadEvent", isNative = true)
-public class FontFaceSetLoadEvent extends Event{
+public class FontFaceSetLoadEvent extends Event {
     @JsConstructor
     public FontFaceSetLoadEvent(String type){
         super((String) null);

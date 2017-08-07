@@ -22,7 +22,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="SVGScriptElement", isNative = true)
-public class SVGScriptElement extends SVGElement{
+public class SVGScriptElement extends SVGElement {
     @JsProperty(name="type")
     public native String getType();
     

@@ -23,7 +23,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="AnimationEvent", isNative = true)
-public class AnimationEvent extends Event{
+public class AnimationEvent extends Event {
     @JsConstructor
     public AnimationEvent(String type){
         super((String) null);

@@ -27,10 +27,9 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="DataTransfer", isNative = true)
-public class DataTransfer extends IsObject{
+public class DataTransfer implements IsObject {
     @JsConstructor
     public DataTransfer(){
-        super();
     }
     
     @JsProperty(name="dropEffect")

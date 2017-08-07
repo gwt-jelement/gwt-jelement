@@ -26,7 +26,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="MediaStreamTrack", isNative = true)
-public class MediaStreamTrack extends EventTarget{
+public class MediaStreamTrack extends EventTarget {
     @JsProperty(name="onmute")
     private EventHandlerNonNull onmute;
     

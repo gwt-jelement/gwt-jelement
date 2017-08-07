@@ -22,7 +22,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="SVGMaskElement", isNative = true)
-public class SVGMaskElement extends SVGElement{
+public class SVGMaskElement extends SVGElement {
     @JsProperty(name="maskUnits")
     public native SVGAnimatedEnumeration getMaskUnits();
     

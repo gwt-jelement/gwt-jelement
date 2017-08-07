@@ -24,7 +24,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="DeviceOrientationEvent", isNative = true)
-public class DeviceOrientationEvent extends Event{
+public class DeviceOrientationEvent extends Event {
     @JsConstructor
     public DeviceOrientationEvent(String type){
         super((String) null);

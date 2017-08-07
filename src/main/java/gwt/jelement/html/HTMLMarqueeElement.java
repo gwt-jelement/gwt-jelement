@@ -23,7 +23,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="HTMLMarqueeElement", isNative = true)
-public class HTMLMarqueeElement extends HTMLElement{
+public class HTMLMarqueeElement extends HTMLElement {
     @JsProperty(name="behavior")
     public native String getBehavior();
     

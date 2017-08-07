@@ -24,7 +24,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="PresentationConnectionAvailableEvent", isNative = true)
-public class PresentationConnectionAvailableEvent extends Event{
+public class PresentationConnectionAvailableEvent extends Event {
     @JsConstructor
     public PresentationConnectionAvailableEvent(String type, PresentationConnectionAvailableEventInit eventInitDict){
         super((String) null);

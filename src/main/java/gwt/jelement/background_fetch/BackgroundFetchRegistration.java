@@ -25,7 +25,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="BackgroundFetchRegistration", isNative = true)
-public class BackgroundFetchRegistration extends IsObject{
+public class BackgroundFetchRegistration implements IsObject {
     @JsProperty(name="tag")
     public native String getTag();
     

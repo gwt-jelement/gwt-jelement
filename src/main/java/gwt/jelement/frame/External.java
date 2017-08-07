@@ -23,7 +23,7 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="External", isNative = true)
-public class External extends IsObject{
+public class External implements IsObject {
     @JsMethod(name = "AddSearchProvider")
     public native void AddSearchProvider();
     

@@ -22,7 +22,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="HTMLTableCellElement", isNative = true)
-public class HTMLTableCellElement extends HTMLElement{
+public class HTMLTableCellElement extends HTMLElement {
     @JsProperty(name="colSpan")
     public native double getColSpan();
     

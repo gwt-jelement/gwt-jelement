@@ -22,7 +22,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="HTMLDataListElement", isNative = true)
-public class HTMLDataListElement extends HTMLElement{
+public class HTMLDataListElement extends HTMLElement {
     @JsProperty(name="options")
     public native HTMLCollection getOptions();
     

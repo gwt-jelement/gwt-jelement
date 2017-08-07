@@ -22,7 +22,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="HTMLLabelElement", isNative = true)
-public class HTMLLabelElement extends HTMLElement{
+public class HTMLLabelElement extends HTMLElement {
     @JsProperty(name="form")
     public native HTMLFormElement getForm();
     

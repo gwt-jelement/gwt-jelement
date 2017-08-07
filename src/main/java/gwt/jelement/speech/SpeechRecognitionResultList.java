@@ -17,13 +17,14 @@
 package gwt.jelement.speech;
 
 import gwt.jelement.core.ArrayLike;
+import gwt.jelement.core.IsObject;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="SpeechRecognitionResultList", isNative = true)
-public class SpeechRecognitionResultList extends ArrayLike{
+public class SpeechRecognitionResultList implements IsObject, ArrayLike<SpeechRecognitionResult> {
     @JsMethod(name = "item")
     public native SpeechRecognitionResult item(double index);
     

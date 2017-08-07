@@ -25,30 +25,25 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="DOMPointReadOnly", isNative = true)
-public class DOMPointReadOnly extends IsObject{
+public class DOMPointReadOnly implements IsObject {
     @JsConstructor
     public DOMPointReadOnly(){
-        super();
     }
     
     @JsConstructor
     public DOMPointReadOnly(double x){
-        super();
     }
     
     @JsConstructor
     public DOMPointReadOnly(double x, double y){
-        super();
     }
     
     @JsConstructor
     public DOMPointReadOnly(double x, double y, double z){
-        super();
     }
     
     @JsConstructor
     public DOMPointReadOnly(double x, double y, double z, double w){
-        super();
     }
     
     @JsProperty(name="x")

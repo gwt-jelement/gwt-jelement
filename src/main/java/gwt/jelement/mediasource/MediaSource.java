@@ -26,7 +26,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="MediaSource", isNative = true)
-public class MediaSource extends EventTarget{
+public class MediaSource extends EventTarget {
     @JsProperty(name="onsourceopen")
     private EventHandlerNonNull onsourceopen;
     

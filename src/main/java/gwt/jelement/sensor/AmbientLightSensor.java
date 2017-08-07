@@ -23,7 +23,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="AmbientLightSensor", isNative = true)
-public class AmbientLightSensor extends Sensor{
+public class AmbientLightSensor extends Sensor {
     @JsConstructor
     public AmbientLightSensor(){
         super();

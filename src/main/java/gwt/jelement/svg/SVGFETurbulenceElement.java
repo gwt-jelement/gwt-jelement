@@ -22,7 +22,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="SVGFETurbulenceElement", isNative = true)
-public class SVGFETurbulenceElement extends SVGElement{
+public class SVGFETurbulenceElement extends SVGElement {
     public static short SVG_TURBULENCE_TYPE_UNKNOWN; /* 0 */
     public static short SVG_TURBULENCE_TYPE_FRACTALNOISE; /* 1 */
     public static short SVG_TURBULENCE_TYPE_TURBULENCE; /* 2 */

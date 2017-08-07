@@ -24,7 +24,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="ImageBitmap", isNative = true)
-public class ImageBitmap extends IsObject{
+public class ImageBitmap implements IsObject {
     @JsProperty(name="width")
     public native double getWidth();
     

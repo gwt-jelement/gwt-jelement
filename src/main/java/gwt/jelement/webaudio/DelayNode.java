@@ -23,7 +23,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="DelayNode", isNative = true)
-public class DelayNode extends AudioNode{
+public class DelayNode extends AudioNode {
     @JsConstructor
     public DelayNode(BaseAudioContext context){
         super();

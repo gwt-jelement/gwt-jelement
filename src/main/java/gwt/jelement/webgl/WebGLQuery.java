@@ -22,5 +22,5 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="WebGLQuery", isNative = true)
-public class WebGLQuery extends IsObject{
+public class WebGLQuery implements IsObject {
 }

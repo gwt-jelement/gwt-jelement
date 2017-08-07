@@ -23,7 +23,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="SVGAnimatedPreserveAspectRatio", isNative = true)
-public class SVGAnimatedPreserveAspectRatio extends IsObject{
+public class SVGAnimatedPreserveAspectRatio implements IsObject {
     @JsProperty(name="baseVal")
     public native SVGPreserveAspectRatio getBaseVal();
     

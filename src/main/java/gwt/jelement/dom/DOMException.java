@@ -25,7 +25,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="DOMException", isNative = true)
-public class DOMException extends IsObject{
+public class DOMException implements IsObject {
     public static short INDEX_SIZE_ERR; /* 1 */
     public static short DOMSTRING_SIZE_ERR; /* 2 */
     public static short HIERARCHY_REQUEST_ERR; /* 3 */
@@ -54,17 +54,14 @@ public class DOMException extends IsObject{
     
     @JsConstructor
     public DOMException(){
-        super();
     }
     
     @JsConstructor
     public DOMException(String message){
-        super();
     }
     
     @JsConstructor
     public DOMException(String message, String name){
-        super();
     }
     
     @JsProperty(name="code")

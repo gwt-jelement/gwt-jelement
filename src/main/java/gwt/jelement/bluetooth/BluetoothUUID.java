@@ -23,7 +23,7 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="BluetoothUUID", isNative = true)
-public class BluetoothUUID extends IsObject{
+public class BluetoothUUID implements IsObject {
     @JsMethod(name = "canonicalUUID")
     public static native String canonicalUUID(double alias);
     

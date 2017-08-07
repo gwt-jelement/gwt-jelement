@@ -22,7 +22,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="SVGFEMorphologyElement", isNative = true)
-public class SVGFEMorphologyElement extends SVGElement{
+public class SVGFEMorphologyElement extends SVGElement {
     public static short SVG_MORPHOLOGY_OPERATOR_UNKNOWN; /* 0 */
     public static short SVG_MORPHOLOGY_OPERATOR_ERODE; /* 1 */
     public static short SVG_MORPHOLOGY_OPERATOR_DILATE; /* 2 */

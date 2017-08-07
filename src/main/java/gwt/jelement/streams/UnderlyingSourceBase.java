@@ -24,7 +24,7 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="UnderlyingSourceBase", isNative = true)
-public class UnderlyingSourceBase extends IsObject{
+public class UnderlyingSourceBase implements IsObject {
     @JsMethod(name = "cancel")
     public native Promise<Void> cancel();
     

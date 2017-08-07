@@ -24,7 +24,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="Object", isNative = true)
-public class JsObject<T> extends IsObject{
+public class JsObject<T> implements IsObject {
     @JsProperty(name="length")
     public static int length;
     
@@ -39,12 +39,10 @@ public class JsObject<T> extends IsObject{
     
     @JsConstructor
     public JsObject(){
-        super();
     }
     
     @JsConstructor
     public JsObject(Object value){
-        super();
     }
     
     @JsProperty(name="__proto__")

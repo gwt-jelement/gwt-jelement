@@ -22,7 +22,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="HTMLBaseElement", isNative = true)
-public class HTMLBaseElement extends HTMLElement{
+public class HTMLBaseElement extends HTMLElement {
     @JsProperty(name="href")
     public native String getHref();
     

@@ -28,15 +28,13 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="URL", isNative = true)
-public class URL extends IsObject{
+public class URL implements IsObject {
     @JsConstructor
     public URL(String url){
-        super();
     }
     
     @JsConstructor
     public URL(String url, String base){
-        super();
     }
     
     @JsProperty(name="href")

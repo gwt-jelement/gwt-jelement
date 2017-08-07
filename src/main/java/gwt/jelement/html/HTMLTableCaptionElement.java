@@ -22,7 +22,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="HTMLTableCaptionElement", isNative = true)
-public class HTMLTableCaptionElement extends HTMLElement{
+public class HTMLTableCaptionElement extends HTMLElement {
     @JsProperty(name="align")
     public native String getAlign();
     

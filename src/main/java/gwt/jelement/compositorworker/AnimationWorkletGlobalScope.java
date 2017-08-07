@@ -24,7 +24,7 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="AnimationWorkletGlobalScope", isNative = true)
-public class AnimationWorkletGlobalScope extends WorkletGlobalScope{
+public class AnimationWorkletGlobalScope extends WorkletGlobalScope {
     @JsMethod(name = "registerAnimator")
     public native void registerAnimator(String name, Function animatorConstructor);
     

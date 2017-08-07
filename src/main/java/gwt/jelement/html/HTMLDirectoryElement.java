@@ -22,7 +22,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="HTMLDirectoryElement", isNative = true)
-public class HTMLDirectoryElement extends HTMLElement{
+public class HTMLDirectoryElement extends HTMLElement {
     @JsProperty(name="compact")
     public native boolean getCompact();
     

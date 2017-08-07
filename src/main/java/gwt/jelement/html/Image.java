@@ -22,7 +22,7 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="Image", isNative = true)
-public class Image extends HTMLImageElement{
+public class Image extends HTMLImageElement {
     @JsConstructor
     public Image(){
         super();

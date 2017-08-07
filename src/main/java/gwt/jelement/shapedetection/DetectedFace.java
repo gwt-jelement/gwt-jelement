@@ -25,10 +25,9 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="DetectedFace", isNative = true)
-public class DetectedFace extends IsObject{
+public class DetectedFace implements IsObject {
     @JsConstructor
     public DetectedFace(){
-        super();
     }
     
     @JsProperty(name="boundingBox")

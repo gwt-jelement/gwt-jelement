@@ -23,7 +23,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="CSSGroupingRule", isNative = true)
-public class CSSGroupingRule extends CSSRule{
+public class CSSGroupingRule extends CSSRule {
     @JsProperty(name="cssRules")
     public native CSSRuleList getCssRules();
     

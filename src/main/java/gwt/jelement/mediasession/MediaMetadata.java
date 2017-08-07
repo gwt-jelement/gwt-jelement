@@ -24,15 +24,13 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="MediaMetadata", isNative = true)
-public class MediaMetadata extends IsObject{
+public class MediaMetadata implements IsObject {
     @JsConstructor
     public MediaMetadata(){
-        super();
     }
     
     @JsConstructor
     public MediaMetadata(MediaMetadataInit metadata){
-        super();
     }
     
     @JsProperty(name="title")

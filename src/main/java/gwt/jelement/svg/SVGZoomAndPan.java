@@ -23,7 +23,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="SVGZoomAndPan", isNative = true)
-public class SVGZoomAndPan extends IsObject{
+public class SVGZoomAndPan implements IsObject {
     public static short SVG_ZOOMANDPAN_UNKNOWN; /* 0 */
     public static short SVG_ZOOMANDPAN_DISABLE; /* 1 */
     public static short SVG_ZOOMANDPAN_MAGNIFY; /* 2 */

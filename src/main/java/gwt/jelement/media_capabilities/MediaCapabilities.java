@@ -24,7 +24,7 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="MediaCapabilities", isNative = true)
-public class MediaCapabilities extends IsObject{
+public class MediaCapabilities implements IsObject {
     @JsMethod(name = "decodingInfo")
     public native Promise<MediaCapabilitiesInfo> decodingInfo(MediaDecodingConfiguration configuration);
     

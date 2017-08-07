@@ -24,7 +24,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="HTMLContentElement", isNative = true)
-public class HTMLContentElement extends HTMLElement{
+public class HTMLContentElement extends HTMLElement {
     @JsProperty(name="select")
     public native String getSelect();
     

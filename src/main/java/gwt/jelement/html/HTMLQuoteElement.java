@@ -22,7 +22,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="HTMLQuoteElement", isNative = true)
-public class HTMLQuoteElement extends HTMLElement{
+public class HTMLQuoteElement extends HTMLElement {
     @JsProperty(name="cite")
     public native String getCite();
     

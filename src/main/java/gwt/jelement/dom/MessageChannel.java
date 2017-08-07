@@ -24,10 +24,9 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="MessageChannel", isNative = true)
-public class MessageChannel extends IsObject{
+public class MessageChannel implements IsObject {
     @JsConstructor
     public MessageChannel(){
-        super();
     }
     
     @JsProperty(name="port1")

@@ -31,7 +31,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="RTCPeerConnection", isNative = true)
-public class RTCPeerConnection extends EventTarget{
+public class RTCPeerConnection extends EventTarget {
     @JsProperty(name="onnegotiationneeded")
     private EventHandlerNonNull onnegotiationneeded;
     

@@ -24,7 +24,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="NodeIterator", isNative = true)
-public class NodeIterator extends IsObject{
+public class NodeIterator implements IsObject {
     @JsProperty(name="root")
     public native Node getRoot();
     

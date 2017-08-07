@@ -23,7 +23,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="TransitionEvent", isNative = true)
-public class TransitionEvent extends Event{
+public class TransitionEvent extends Event {
     @JsConstructor
     public TransitionEvent(String type){
         super((String) null);

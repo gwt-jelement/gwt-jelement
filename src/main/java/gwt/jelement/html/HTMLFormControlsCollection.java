@@ -23,5 +23,5 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="HTMLFormControlsCollection", isNative = true)
-public class HTMLFormControlsCollection extends HTMLBaseCollection<Node, HTMLFormElement.FormControlsUnion>{
+public class HTMLFormControlsCollection extends HTMLBaseCollection<Node, HTMLFormElement.FormControlsUnion> {
 }

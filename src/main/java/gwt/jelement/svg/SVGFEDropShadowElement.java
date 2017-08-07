@@ -23,7 +23,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="SVGFEDropShadowElement", isNative = true)
-public class SVGFEDropShadowElement extends SVGElement{
+public class SVGFEDropShadowElement extends SVGElement {
     @JsProperty(name="in1")
     public native SVGAnimatedString getIn1();
     

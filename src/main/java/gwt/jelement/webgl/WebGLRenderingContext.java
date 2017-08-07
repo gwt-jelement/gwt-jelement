@@ -37,7 +37,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="WebGLRenderingContext", isNative = true)
-public class WebGLRenderingContext extends IsObject{
+public class WebGLRenderingContext implements IsObject {
     public static double DEPTH_BUFFER_BIT; /* 0x00000100 */
     public static double STENCIL_BUFFER_BIT; /* 0x00000400 */
     public static double COLOR_BUFFER_BIT; /* 0x00004000 */

@@ -22,7 +22,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="Attr", isNative = true)
-public class Attr extends Node{
+public class Attr extends Node {
     @JsProperty(name="namespaceURI")
     public native String getNamespaceURI();
     

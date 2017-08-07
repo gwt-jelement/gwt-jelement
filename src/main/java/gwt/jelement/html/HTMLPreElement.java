@@ -22,7 +22,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="HTMLPreElement", isNative = true)
-public class HTMLPreElement extends HTMLElement{
+public class HTMLPreElement extends HTMLElement {
     @JsProperty(name="width")
     public native double getWidth();
     

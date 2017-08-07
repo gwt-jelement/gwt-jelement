@@ -26,7 +26,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="HTMLSelectElement", isNative = true)
-public class HTMLSelectElement extends HTMLElement{
+public class HTMLSelectElement extends HTMLElement {
     @JsProperty(name="autofocus")
     public native boolean getAutofocus();
     

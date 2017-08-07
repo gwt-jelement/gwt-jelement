@@ -24,7 +24,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="WaveShaperNode", isNative = true)
-public class WaveShaperNode extends AudioNode{
+public class WaveShaperNode extends AudioNode {
     @JsProperty(name="oversample")
     private String oversample;
     

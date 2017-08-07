@@ -23,7 +23,7 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="StylePropertyMapReadonly", isNative = true)
-public class StylePropertyMapReadonly extends IsObject{
+public class StylePropertyMapReadonly implements IsObject {
     @JsMethod(name = "get")
     public native CSSStyleValue get(String property);
     

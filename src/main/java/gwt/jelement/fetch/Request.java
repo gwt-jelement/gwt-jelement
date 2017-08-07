@@ -30,7 +30,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="Request", isNative = true)
-public class Request extends IsObject{
+public class Request implements IsObject {
     @JsProperty(name="referrerPolicy")
     private String referrerPolicy;
     
@@ -48,22 +48,18 @@ public class Request extends IsObject{
     
     @JsConstructor
     public Request(Request input){
-        super();
     }
     
     @JsConstructor
     public Request(Request input, JsObject requestInitDict){
-        super();
     }
     
     @JsConstructor
     public Request(String input){
-        super();
     }
     
     @JsConstructor
     public Request(String input, JsObject requestInitDict){
-        super();
     }
     
     @JsProperty(name="method")

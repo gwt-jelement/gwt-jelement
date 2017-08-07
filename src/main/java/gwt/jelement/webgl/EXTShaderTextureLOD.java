@@ -22,5 +22,5 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="EXTShaderTextureLOD", isNative = true)
-public class EXTShaderTextureLOD extends IsObject{
+public class EXTShaderTextureLOD implements IsObject {
 }

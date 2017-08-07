@@ -29,7 +29,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="ImageData", isNative = true)
-public class ImageData extends IsObject{
+public class ImageData implements IsObject {
     @JsType(isNative = true, name = "?", namespace = JsPackage.GLOBAL)
     public interface ImageDataArray {
         @JsOverlay
@@ -84,17 +84,14 @@ public class ImageData extends IsObject{
     
     @JsConstructor
     public ImageData(double sw, double sh){
-        super();
     }
     
     @JsConstructor
     public ImageData(Uint8ClampedArray data, double sw){
-        super();
     }
     
     @JsConstructor
     public ImageData(Uint8ClampedArray data, double sw, double sh){
-        super();
     }
     
     @JsProperty(name="width")

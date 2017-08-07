@@ -23,7 +23,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="NonDocumentTypeChildNode", isNative = true)
-public class NonDocumentTypeChildNode extends IsObject{
+public class NonDocumentTypeChildNode implements IsObject {
     @JsProperty(name="previousElementSibling")
     public native Element getPreviousElementSibling();
     

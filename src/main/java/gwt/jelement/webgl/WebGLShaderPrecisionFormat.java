@@ -23,7 +23,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="WebGLShaderPrecisionFormat", isNative = true)
-public class WebGLShaderPrecisionFormat extends IsObject{
+public class WebGLShaderPrecisionFormat implements IsObject {
     @JsProperty(name="rangeMin")
     public native double getRangeMin();
     

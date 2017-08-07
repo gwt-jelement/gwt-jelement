@@ -23,7 +23,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="SharedArrayBuffer", isNative = true)
-public class SharedArrayBuffer extends IsObject{
+public class SharedArrayBuffer implements IsObject {
     @JsProperty(name="byteLength")
     public native double getByteLength();
     

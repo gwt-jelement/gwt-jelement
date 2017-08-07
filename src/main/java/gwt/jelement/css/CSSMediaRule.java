@@ -22,7 +22,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="CSSMediaRule", isNative = true)
-public class CSSMediaRule extends CSSConditionRule{
+public class CSSMediaRule extends CSSConditionRule {
     @JsProperty(name="media")
     public native MediaList getMedia();
     

@@ -33,10 +33,9 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="TextDetector", isNative = true)
-public class TextDetector extends IsObject{
+public class TextDetector implements IsObject {
     @JsConstructor
     public TextDetector(){
-        super();
     }
     
     @JsMethod(name = "detect")

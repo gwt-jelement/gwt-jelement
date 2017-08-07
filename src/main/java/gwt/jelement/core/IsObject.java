@@ -20,9 +20,9 @@ import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsType;
 
 @JsType(isNative = true)
-public class IsObject {
+public interface IsObject {
     @JsOverlay
-    public final <T> JsObject<T> object() {
+    default <T> JsObject<T> object() {
         return Js.cast(this);
     }
 }

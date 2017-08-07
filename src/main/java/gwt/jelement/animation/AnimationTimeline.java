@@ -23,7 +23,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="AnimationTimeline", isNative = true)
-public class AnimationTimeline extends IsObject{
+public class AnimationTimeline implements IsObject {
     @JsProperty(name="currentTime")
     public native double getCurrentTime();
     

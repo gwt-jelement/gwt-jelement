@@ -24,7 +24,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="XMLHttpRequestEventTarget", isNative = true)
-public class XMLHttpRequestEventTarget extends EventTarget{
+public class XMLHttpRequestEventTarget extends EventTarget {
     @JsProperty(name="onloadstart")
     private EventHandlerNonNull onloadstart;
     

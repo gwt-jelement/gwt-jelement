@@ -24,7 +24,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="VRPose", isNative = true)
-public class VRPose extends IsObject{
+public class VRPose implements IsObject {
     @JsProperty(name="position")
     public native Float32Array getPosition();
     

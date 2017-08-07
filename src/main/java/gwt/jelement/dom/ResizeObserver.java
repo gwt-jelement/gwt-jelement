@@ -24,10 +24,9 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="ResizeObserver", isNative = true)
-public class ResizeObserver extends IsObject{
+public class ResizeObserver implements IsObject {
     @JsConstructor
     public ResizeObserver(ResizeObserverCallback callback){
-        super();
     }
     
     @JsMethod(name = "disconnect")

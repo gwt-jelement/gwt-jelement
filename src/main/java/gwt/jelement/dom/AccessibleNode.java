@@ -23,7 +23,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="AccessibleNode", isNative = true)
-public class AccessibleNode extends IsObject{
+public class AccessibleNode implements IsObject {
     @JsProperty(name="activeDescendant")
     public native AccessibleNode getActiveDescendant();
     

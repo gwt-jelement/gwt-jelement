@@ -27,7 +27,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="HTMLObjectElement", isNative = true)
-public class HTMLObjectElement extends HTMLElement{
+public class HTMLObjectElement extends HTMLElement {
     @JsProperty(name="data")
     public native String getData();
     

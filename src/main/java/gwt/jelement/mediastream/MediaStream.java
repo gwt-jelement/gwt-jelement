@@ -26,7 +26,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="MediaStream", isNative = true)
-public class MediaStream extends EventTarget{
+public class MediaStream extends EventTarget {
     @JsProperty(name="onaddtrack")
     private EventHandlerNonNull onaddtrack;
     

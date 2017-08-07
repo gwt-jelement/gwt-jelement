@@ -22,7 +22,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="HTMLUListElement", isNative = true)
-public class HTMLUListElement extends HTMLElement{
+public class HTMLUListElement extends HTMLElement {
     @JsProperty(name="compact")
     public native boolean getCompact();
     

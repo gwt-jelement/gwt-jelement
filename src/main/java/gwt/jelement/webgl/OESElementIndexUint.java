@@ -22,5 +22,5 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="OESElementIndexUint", isNative = true)
-public class OESElementIndexUint extends IsObject{
+public class OESElementIndexUint implements IsObject {
 }

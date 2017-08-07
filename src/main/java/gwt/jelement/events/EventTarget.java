@@ -23,7 +23,7 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="EventTarget", isNative = true)
-public class EventTarget extends IsObject{
+public class EventTarget implements IsObject {
     @JsMethod(name = "addEventListener")
     public native void addEventListener(String type, EventListener listener);
     

@@ -22,7 +22,7 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="SVGUnitTypes", isNative = true)
-public class SVGUnitTypes extends IsObject{
+public class SVGUnitTypes implements IsObject {
     public static short SVG_UNIT_TYPE_UNKNOWN; /* 0 */
     public static short SVG_UNIT_TYPE_USERSPACEONUSE; /* 1 */
     public static short SVG_UNIT_TYPE_OBJECTBOUNDINGBOX; /* 2 */

@@ -23,7 +23,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="ApplicationCacheErrorEvent", isNative = true)
-public class ApplicationCacheErrorEvent extends Event{
+public class ApplicationCacheErrorEvent extends Event {
     @JsConstructor
     public ApplicationCacheErrorEvent(String type){
         super((String) null);

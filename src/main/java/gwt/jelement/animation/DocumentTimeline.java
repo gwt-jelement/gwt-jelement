@@ -22,7 +22,7 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="DocumentTimeline", isNative = true)
-public class DocumentTimeline extends AnimationTimeline{
+public class DocumentTimeline extends AnimationTimeline {
     @JsConstructor
     public DocumentTimeline(){
         super();

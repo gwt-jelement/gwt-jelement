@@ -22,5 +22,5 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="OESTextureFloat", isNative = true)
-public class OESTextureFloat extends IsObject{
+public class OESTextureFloat implements IsObject {
 }

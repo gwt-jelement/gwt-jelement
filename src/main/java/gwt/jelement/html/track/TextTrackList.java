@@ -26,7 +26,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="TextTrackList", isNative = true)
-public class TextTrackList extends EventTarget{
+public class TextTrackList extends EventTarget {
     @JsProperty(name="onchange")
     private EventHandlerNonNull onchange;
     

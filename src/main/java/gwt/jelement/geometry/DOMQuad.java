@@ -25,30 +25,25 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="DOMQuad", isNative = true)
-public class DOMQuad extends IsObject{
+public class DOMQuad implements IsObject {
     @JsConstructor
     public DOMQuad(){
-        super();
     }
     
     @JsConstructor
     public DOMQuad(DOMPointInit p1){
-        super();
     }
     
     @JsConstructor
     public DOMQuad(DOMPointInit p1, DOMPointInit p2){
-        super();
     }
     
     @JsConstructor
     public DOMQuad(DOMPointInit p1, DOMPointInit p2, DOMPointInit p3){
-        super();
     }
     
     @JsConstructor
     public DOMQuad(DOMPointInit p1, DOMPointInit p2, DOMPointInit p3, DOMPointInit p4){
-        super();
     }
     
     @JsProperty(name="p1")

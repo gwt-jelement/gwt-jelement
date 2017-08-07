@@ -24,7 +24,7 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="CSS", isNative = true)
-public class CSS extends IsObject{
+public class CSS implements IsObject {
     @JsMethod(name = "Hz")
     public static native CSSUnitValue Hz(double value);
     

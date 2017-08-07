@@ -23,7 +23,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="BarProp", isNative = true)
-public class BarProp extends IsObject{
+public class BarProp implements IsObject {
     @JsProperty(name="visible")
     public native boolean getVisible();
     

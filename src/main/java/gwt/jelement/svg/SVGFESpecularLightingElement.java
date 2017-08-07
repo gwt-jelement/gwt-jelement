@@ -22,7 +22,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="SVGFESpecularLightingElement", isNative = true)
-public class SVGFESpecularLightingElement extends SVGElement{
+public class SVGFESpecularLightingElement extends SVGElement {
     @JsProperty(name="in1")
     public native SVGAnimatedString getIn1();
     

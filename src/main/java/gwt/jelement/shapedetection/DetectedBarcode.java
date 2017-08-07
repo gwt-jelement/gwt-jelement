@@ -26,10 +26,9 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="DetectedBarcode", isNative = true)
-public class DetectedBarcode extends IsObject{
+public class DetectedBarcode implements IsObject {
     @JsConstructor
     public DetectedBarcode(){
-        super();
     }
     
     @JsProperty(name="rawValue")

@@ -25,7 +25,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="BackgroundFetchSettledFetch", isNative = true)
-public class BackgroundFetchSettledFetch extends BackgroundFetchFetch{
+public class BackgroundFetchSettledFetch extends BackgroundFetchFetch {
     @JsConstructor
     public BackgroundFetchSettledFetch(Request request, Response response){
         super();

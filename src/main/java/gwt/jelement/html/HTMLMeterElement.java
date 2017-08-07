@@ -23,7 +23,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="HTMLMeterElement", isNative = true)
-public class HTMLMeterElement extends HTMLElement{
+public class HTMLMeterElement extends HTMLElement {
     @JsProperty(name="value")
     public native double getValue();
     

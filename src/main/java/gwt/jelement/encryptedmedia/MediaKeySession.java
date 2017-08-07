@@ -28,7 +28,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="MediaKeySession", isNative = true)
-public class MediaKeySession extends EventTarget{
+public class MediaKeySession extends EventTarget {
     @JsProperty(name="onkeystatuseschange")
     private EventHandlerNonNull onkeystatuseschange;
     

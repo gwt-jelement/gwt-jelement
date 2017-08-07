@@ -22,7 +22,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="AudioDestinationNode", isNative = true)
-public class AudioDestinationNode extends AudioNode{
+public class AudioDestinationNode extends AudioNode {
     @JsProperty(name="maxChannelCount")
     public native double getMaxChannelCount();
     

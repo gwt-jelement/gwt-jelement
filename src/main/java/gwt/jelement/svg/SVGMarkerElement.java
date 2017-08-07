@@ -23,7 +23,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="SVGMarkerElement", isNative = true)
-public class SVGMarkerElement extends SVGElement{
+public class SVGMarkerElement extends SVGElement {
     public static short SVG_MARKERUNITS_UNKNOWN; /* 0 */
     public static short SVG_MARKERUNITS_USERSPACEONUSE; /* 1 */
     public static short SVG_MARKERUNITS_STROKEWIDTH; /* 2 */

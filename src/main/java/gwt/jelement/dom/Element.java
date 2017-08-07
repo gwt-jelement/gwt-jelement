@@ -33,7 +33,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="Element", isNative = true)
-public class Element extends Node{
+public class Element extends Node {
     @JsProperty(name="onbeforecopy")
     private EventHandlerNonNull onbeforecopy;
     

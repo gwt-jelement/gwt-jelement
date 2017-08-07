@@ -22,7 +22,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="SVGFilterElement", isNative = true)
-public class SVGFilterElement extends SVGElement{
+public class SVGFilterElement extends SVGElement {
     @JsProperty(name="filterUnits")
     public native SVGAnimatedEnumeration getFilterUnits();
     

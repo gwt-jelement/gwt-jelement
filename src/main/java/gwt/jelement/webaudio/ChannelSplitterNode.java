@@ -22,7 +22,7 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="ChannelSplitterNode", isNative = true)
-public class ChannelSplitterNode extends AudioNode{
+public class ChannelSplitterNode extends AudioNode {
     @JsConstructor
     public ChannelSplitterNode(BaseAudioContext context){
         super();

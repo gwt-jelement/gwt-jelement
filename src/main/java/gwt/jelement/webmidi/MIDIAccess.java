@@ -24,7 +24,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="MIDIAccess", isNative = true)
-public class MIDIAccess extends EventTarget{
+public class MIDIAccess extends EventTarget {
     @JsProperty(name="onstatechange")
     private EventHandlerNonNull onstatechange;
     

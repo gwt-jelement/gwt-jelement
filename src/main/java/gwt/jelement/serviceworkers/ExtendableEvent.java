@@ -25,7 +25,7 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="ExtendableEvent", isNative = true)
-public class ExtendableEvent extends Event{
+public class ExtendableEvent extends Event {
     @JsConstructor
     public ExtendableEvent(String type){
         super((String) null);

@@ -26,7 +26,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="HTMLEmbedElement", isNative = true)
-public class HTMLEmbedElement extends HTMLElement{
+public class HTMLEmbedElement extends HTMLElement {
     @JsProperty(name="src")
     public native String getSrc();
     

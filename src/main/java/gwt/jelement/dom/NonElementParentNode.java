@@ -23,7 +23,7 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="NonElementParentNode", isNative = true)
-public class NonElementParentNode extends IsObject{
+public class NonElementParentNode implements IsObject {
     @JsMethod(name = "getElementById")
     public native <T extends Element> T getElementById(String elementId);
     

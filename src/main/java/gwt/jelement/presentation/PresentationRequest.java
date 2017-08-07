@@ -28,7 +28,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="PresentationRequest", isNative = true)
-public class PresentationRequest extends EventTarget{
+public class PresentationRequest extends EventTarget {
     @JsProperty(name="onconnectionavailable")
     private EventHandlerNonNull onconnectionavailable;
     

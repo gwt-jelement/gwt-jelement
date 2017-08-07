@@ -25,7 +25,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="StorageEvent", isNative = true)
-public class StorageEvent extends Event{
+public class StorageEvent extends Event {
     @JsConstructor
     public StorageEvent(String type){
         super((String) null);

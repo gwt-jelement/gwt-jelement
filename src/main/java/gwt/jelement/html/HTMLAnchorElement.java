@@ -22,7 +22,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="HTMLAnchorElement", isNative = true)
-public class HTMLAnchorElement extends HTMLElement{
+public class HTMLAnchorElement extends HTMLElement {
     @JsProperty(name="target")
     public native String getTarget();
     

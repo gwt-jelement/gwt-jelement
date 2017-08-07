@@ -23,7 +23,7 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="InstallEvent", isNative = true)
-public class InstallEvent extends ExtendableEvent{
+public class InstallEvent extends ExtendableEvent {
     @JsConstructor
     public InstallEvent(String type){
         super((String) null);

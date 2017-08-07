@@ -23,7 +23,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="WorkerLocation", isNative = true)
-public class WorkerLocation extends IsObject{
+public class WorkerLocation implements IsObject {
     @JsProperty(name="href")
     public native String getHref();
     

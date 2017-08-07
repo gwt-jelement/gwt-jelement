@@ -22,7 +22,7 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="WebGLCompressedTextureETC", isNative = true)
-public class WebGLCompressedTextureETC extends IsObject{
+public class WebGLCompressedTextureETC implements IsObject {
     public static double COMPRESSED_R11_EAC; /* 0x9270 */
     public static double COMPRESSED_SIGNED_R11_EAC; /* 0x9271 */
     public static double COMPRESSED_RG11_EAC; /* 0x9272 */

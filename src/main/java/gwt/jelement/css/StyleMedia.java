@@ -24,7 +24,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="StyleMedia", isNative = true)
-public class StyleMedia extends IsObject{
+public class StyleMedia implements IsObject {
     @JsProperty(name="type")
     public native String getType();
     

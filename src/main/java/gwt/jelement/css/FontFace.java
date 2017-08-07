@@ -28,38 +28,32 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="FontFace", isNative = true)
-public class FontFace extends IsObject{
+public class FontFace implements IsObject {
     @JsProperty(name="status")
     private String status;
     
     @JsConstructor
     public FontFace(String family, String source){
-        super();
     }
     
     @JsConstructor
     public FontFace(String family, String source, FontFaceDescriptors descriptors){
-        super();
     }
     
     @JsConstructor
     public FontFace(String family, ArrayBuffer source){
-        super();
     }
     
     @JsConstructor
     public FontFace(String family, ArrayBuffer source, FontFaceDescriptors descriptors){
-        super();
     }
     
     @JsConstructor
     public FontFace(String family, ArrayBufferView source){
-        super();
     }
     
     @JsConstructor
     public FontFace(String family, ArrayBufferView source, FontFaceDescriptors descriptors){
-        super();
     }
     
     @JsProperty(name="family")

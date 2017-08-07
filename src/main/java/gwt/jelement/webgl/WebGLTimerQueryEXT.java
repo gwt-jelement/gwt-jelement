@@ -22,5 +22,5 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="WebGLTimerQueryEXT", isNative = true)
-public class WebGLTimerQueryEXT extends IsObject{
+public class WebGLTimerQueryEXT implements IsObject {
 }

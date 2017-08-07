@@ -25,10 +25,9 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="XMLSerializer", isNative = true)
-public class XMLSerializer extends IsObject{
+public class XMLSerializer implements IsObject {
     @JsConstructor
     public XMLSerializer(){
-        super();
     }
     
     @JsMethod(name = "serializeToString")

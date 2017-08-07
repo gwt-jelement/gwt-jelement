@@ -24,7 +24,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="HTMLVideoElement", isNative = true)
-public class HTMLVideoElement extends HTMLMediaElement{
+public class HTMLVideoElement extends HTMLMediaElement {
     @JsProperty(name="width")
     public native double getWidth();
     

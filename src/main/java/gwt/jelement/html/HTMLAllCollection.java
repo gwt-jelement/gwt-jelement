@@ -17,6 +17,7 @@
 package gwt.jelement.html;
 
 import gwt.jelement.core.ArrayLike;
+import gwt.jelement.core.IsObject;
 import gwt.jelement.core.Js;
 import gwt.jelement.dom.Element;
 import gwt.jelement.dom.NodeList;
@@ -26,7 +27,7 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="HTMLAllCollection", isNative = true)
-public class HTMLAllCollection extends ArrayLike{
+public class HTMLAllCollection implements IsObject, ArrayLike<Element> {
     @JsType(isNative = true, name = "?", namespace = JsPackage.GLOBAL)
     public interface HTMLOptionsUnion {
         @JsOverlay

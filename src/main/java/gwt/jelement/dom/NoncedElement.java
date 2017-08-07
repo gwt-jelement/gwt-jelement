@@ -23,7 +23,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="NoncedElement", isNative = true)
-public class NoncedElement extends IsObject{
+public class NoncedElement implements IsObject {
     @JsProperty(name="nonce")
     public native String getNonce();
     

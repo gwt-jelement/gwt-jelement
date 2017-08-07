@@ -22,7 +22,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="SVGMPathElement", isNative = true)
-public class SVGMPathElement extends SVGElement{
+public class SVGMPathElement extends SVGElement {
     @JsProperty(name="href")
     public native SVGAnimatedString getHref();
     

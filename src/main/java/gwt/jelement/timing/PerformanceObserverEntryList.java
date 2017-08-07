@@ -23,7 +23,7 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="PerformanceObserverEntryList", isNative = true)
-public class PerformanceObserverEntryList extends IsObject{
+public class PerformanceObserverEntryList implements IsObject {
     @JsMethod(name = "getEntries")
     public native PerformanceEntry[] getEntries();
     

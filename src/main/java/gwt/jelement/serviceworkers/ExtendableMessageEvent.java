@@ -25,7 +25,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="ExtendableMessageEvent", isNative = true)
-public class ExtendableMessageEvent extends ExtendableEvent{
+public class ExtendableMessageEvent extends ExtendableEvent {
     @JsType(isNative = true, name = "?", namespace = JsPackage.GLOBAL)
     public interface SourceUnion {
         @JsOverlay

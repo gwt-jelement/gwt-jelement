@@ -26,7 +26,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="ScreenOrientation", isNative = true)
-public class ScreenOrientation extends EventTarget{
+public class ScreenOrientation extends EventTarget {
     @JsProperty(name="onchange")
     private EventHandlerNonNull onchange;
     

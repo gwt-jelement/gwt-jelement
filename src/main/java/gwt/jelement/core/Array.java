@@ -23,16 +23,14 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="Array", isNative = true)
-public class Array<T> extends ArrayLike{
+public class Array<T> implements IsObject, ArrayLike<T> {
     @JsConstructor
     public Array(){
-        super();
     }
     
     @SafeVarargs
     @JsConstructor
     public Array(T... value){
-        super();
     }
     
     @SafeVarargs

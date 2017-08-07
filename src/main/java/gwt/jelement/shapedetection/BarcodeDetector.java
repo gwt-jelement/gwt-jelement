@@ -33,10 +33,9 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="BarcodeDetector", isNative = true)
-public class BarcodeDetector extends IsObject{
+public class BarcodeDetector implements IsObject {
     @JsConstructor
     public BarcodeDetector(){
-        super();
     }
     
     @JsMethod(name = "detect")

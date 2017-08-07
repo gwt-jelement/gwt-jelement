@@ -24,10 +24,9 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="MediaKeysPolicy", isNative = true)
-public class MediaKeysPolicy extends IsObject{
+public class MediaKeysPolicy implements IsObject {
     @JsConstructor
     public MediaKeysPolicy(MediaKeysPolicyInit init){
-        super();
     }
     
     @JsProperty(name="minHdcpVersion")

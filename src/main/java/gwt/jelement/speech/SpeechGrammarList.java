@@ -17,6 +17,7 @@
 package gwt.jelement.speech;
 
 import gwt.jelement.core.ArrayLike;
+import gwt.jelement.core.IsObject;
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
@@ -24,10 +25,9 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="SpeechGrammarList", isNative = true)
-public class SpeechGrammarList extends ArrayLike{
+public class SpeechGrammarList implements IsObject, ArrayLike<SpeechGrammar> {
     @JsConstructor
     public SpeechGrammarList(){
-        super();
     }
     
     @JsMethod(name = "addFromString")

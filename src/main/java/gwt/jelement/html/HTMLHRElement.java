@@ -22,7 +22,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="HTMLHRElement", isNative = true)
-public class HTMLHRElement extends HTMLElement{
+public class HTMLHRElement extends HTMLElement {
     @JsProperty(name="align")
     public native String getAlign();
     

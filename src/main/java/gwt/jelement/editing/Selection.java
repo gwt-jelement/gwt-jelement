@@ -26,7 +26,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="Selection", isNative = true)
-public class Selection extends IsObject{
+public class Selection implements IsObject {
     @JsProperty(name="anchorNode")
     public native Node getAnchorNode();
     

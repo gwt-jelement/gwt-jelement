@@ -23,7 +23,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="SecurityPolicyViolationEvent", isNative = true)
-public class SecurityPolicyViolationEvent extends Event{
+public class SecurityPolicyViolationEvent extends Event {
     @JsProperty(name="disposition")
     private String disposition;
     

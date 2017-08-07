@@ -24,7 +24,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="MediaQueryListEvent", isNative = true)
-public class MediaQueryListEvent extends Event{
+public class MediaQueryListEvent extends Event {
     @JsConstructor
     public MediaQueryListEvent(String type){
         super((String) null);

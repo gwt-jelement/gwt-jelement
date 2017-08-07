@@ -25,7 +25,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="PushManager", isNative = true)
-public class PushManager extends IsObject{
+public class PushManager implements IsObject {
     @JsProperty(name="supportedContentEncodings")
     public static String[] supportedContentEncodings;
     

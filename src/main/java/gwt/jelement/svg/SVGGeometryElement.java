@@ -23,7 +23,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="SVGGeometryElement", isNative = true)
-public class SVGGeometryElement extends SVGGraphicsElement{
+public class SVGGeometryElement extends SVGGraphicsElement {
     @JsProperty(name="pathLength")
     public native SVGAnimatedNumber getPathLength();
     

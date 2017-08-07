@@ -17,6 +17,7 @@
 package gwt.jelement.svg;
 
 import gwt.jelement.core.ArrayLike;
+import gwt.jelement.core.IsObject;
 import gwt.jelement.core.Js;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
@@ -25,7 +26,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="SVGLengthList", isNative = true)
-public class SVGLengthList extends ArrayLike{
+public class SVGLengthList implements IsObject, ArrayLike<SVGLength> {
     @JsProperty(name="numberOfItems")
     public native double getNumberOfItems();
     

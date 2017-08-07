@@ -22,7 +22,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="SVGRectElement", isNative = true)
-public class SVGRectElement extends SVGGeometryElement{
+public class SVGRectElement extends SVGGeometryElement {
     @JsProperty(name="x")
     public native SVGAnimatedLength getX();
     

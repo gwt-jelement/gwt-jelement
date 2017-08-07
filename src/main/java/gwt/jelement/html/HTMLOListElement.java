@@ -22,7 +22,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="HTMLOListElement", isNative = true)
-public class HTMLOListElement extends HTMLElement{
+public class HTMLOListElement extends HTMLElement {
     @JsProperty(name="reversed")
     public native boolean getReversed();
     

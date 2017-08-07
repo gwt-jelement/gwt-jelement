@@ -25,7 +25,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="SpeechRecognitionEvent", isNative = true)
-public class SpeechRecognitionEvent extends Event{
+public class SpeechRecognitionEvent extends Event {
     @JsConstructor
     public SpeechRecognitionEvent(String type){
         super((String) null);

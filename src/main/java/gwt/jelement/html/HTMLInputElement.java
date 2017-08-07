@@ -27,7 +27,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="HTMLInputElement", isNative = true)
-public class HTMLInputElement extends HTMLElement{
+public class HTMLInputElement extends HTMLElement {
     @JsProperty(name="accept")
     public native String getAccept();
     

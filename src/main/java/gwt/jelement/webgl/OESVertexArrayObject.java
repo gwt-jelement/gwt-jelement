@@ -23,7 +23,7 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="OESVertexArrayObject", isNative = true)
-public class OESVertexArrayObject extends IsObject{
+public class OESVertexArrayObject implements IsObject {
     public static double VERTEX_ARRAY_BINDING_OES; /* 0x85B5 */
     
     @JsMethod(name = "bindVertexArrayOES")

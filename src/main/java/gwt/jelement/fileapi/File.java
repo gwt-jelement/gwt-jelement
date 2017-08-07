@@ -27,7 +27,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="File", isNative = true)
-public class File extends Blob{
+public class File extends Blob {
     @JsConstructor
     public File(ArrayBuffer[] fileBits, String fileName){
         super();

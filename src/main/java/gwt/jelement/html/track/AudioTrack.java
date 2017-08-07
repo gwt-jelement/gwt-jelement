@@ -24,7 +24,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="AudioTrack", isNative = true)
-public class AudioTrack extends IsObject{
+public class AudioTrack implements IsObject {
     @JsProperty(name="id")
     public native String getId();
     

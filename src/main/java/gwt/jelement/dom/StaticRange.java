@@ -23,7 +23,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="StaticRange", isNative = true)
-public class StaticRange extends IsObject{
+public class StaticRange implements IsObject {
     @JsProperty(name="startContainer")
     public native Node getStartContainer();
     

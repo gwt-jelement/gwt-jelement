@@ -26,7 +26,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="ServiceWorkerContainer", isNative = true)
-public class ServiceWorkerContainer extends EventTarget{
+public class ServiceWorkerContainer extends EventTarget {
     @JsProperty(name="oncontrollerchange")
     private EventHandlerNonNull oncontrollerchange;
     

@@ -23,7 +23,7 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="CSSStyleValue", isNative = true)
-public class CSSStyleValue extends IsObject{
+public class CSSStyleValue implements IsObject {
     @JsMethod(name = "parse")
     public static native Object parse(String property, String cssText);
     

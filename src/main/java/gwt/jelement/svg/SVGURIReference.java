@@ -23,7 +23,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="SVGURIReference", isNative = true)
-public class SVGURIReference extends IsObject{
+public class SVGURIReference implements IsObject {
     @JsProperty(name="href")
     public native SVGAnimatedString getHref();
     

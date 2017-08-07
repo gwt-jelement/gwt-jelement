@@ -26,10 +26,9 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="TextEncoder", isNative = true)
-public class TextEncoder extends IsObject{
+public class TextEncoder implements IsObject {
     @JsConstructor
     public TextEncoder(){
-        super();
     }
     
     @JsProperty(name="encoding")

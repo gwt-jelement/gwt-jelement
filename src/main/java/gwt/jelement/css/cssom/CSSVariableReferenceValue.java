@@ -23,7 +23,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="CSSVariableReferenceValue", isNative = true)
-public class CSSVariableReferenceValue extends IsObject{
+public class CSSVariableReferenceValue implements IsObject {
     @JsProperty(name="variable")
     public native String getVariable();
     

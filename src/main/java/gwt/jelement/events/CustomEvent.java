@@ -24,7 +24,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="CustomEvent", isNative = true)
-public class CustomEvent extends Event{
+public class CustomEvent extends Event {
     @JsConstructor
     public CustomEvent(String type){
         super((String) null);

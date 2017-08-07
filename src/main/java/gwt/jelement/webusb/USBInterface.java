@@ -24,10 +24,9 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="USBInterface", isNative = true)
-public class USBInterface extends IsObject{
+public class USBInterface implements IsObject {
     @JsConstructor
     public USBInterface(USBConfiguration configuration, byte interfaceNumber){
-        super();
     }
     
     @JsProperty(name="interfaceNumber")

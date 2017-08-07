@@ -25,15 +25,13 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="IntersectionObserver", isNative = true)
-public class IntersectionObserver extends IsObject{
+public class IntersectionObserver implements IsObject {
     @JsConstructor
     public IntersectionObserver(IntersectionObserverCallback callback){
-        super();
     }
     
     @JsConstructor
     public IntersectionObserver(IntersectionObserverCallback callback, IntersectionObserverInit options){
-        super();
     }
     
     @JsProperty(name="root")

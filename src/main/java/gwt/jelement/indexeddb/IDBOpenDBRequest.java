@@ -23,7 +23,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="IDBOpenDBRequest", isNative = true)
-public class IDBOpenDBRequest extends IDBRequest{
+public class IDBOpenDBRequest extends IDBRequest {
     @JsProperty(name="onblocked")
     private EventHandlerNonNull onblocked;
     

@@ -23,7 +23,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="PerformanceNavigation", isNative = true)
-public class PerformanceNavigation extends IsObject{
+public class PerformanceNavigation implements IsObject {
     public static short TYPE_NAVIGATE; /* 0 */
     public static short TYPE_RELOAD; /* 1 */
     public static short TYPE_BACK_FORWARD; /* 2 */

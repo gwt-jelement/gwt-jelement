@@ -25,7 +25,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="CompositionEvent", isNative = true)
-public class CompositionEvent extends UIEvent{
+public class CompositionEvent extends UIEvent {
     @JsConstructor
     public CompositionEvent(String type){
         super((String) null);

@@ -30,7 +30,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="BaseAudioContext", isNative = true)
-public class BaseAudioContext extends EventTarget{
+public class BaseAudioContext extends EventTarget {
     @JsProperty(name="onstatechange")
     private EventHandlerNonNull onstatechange;
     

@@ -21,5 +21,5 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="HTMLHeadElement", isNative = true)
-public class HTMLHeadElement extends HTMLElement{
+public class HTMLHeadElement extends HTMLElement {
 }

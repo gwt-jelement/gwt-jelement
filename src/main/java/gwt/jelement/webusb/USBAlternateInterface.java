@@ -24,10 +24,9 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="USBAlternateInterface", isNative = true)
-public class USBAlternateInterface extends IsObject{
+public class USBAlternateInterface implements IsObject {
     @JsConstructor
     public USBAlternateInterface(USBInterface deviceInterface, byte alternateSetting){
-        super();
     }
     
     @JsProperty(name="alternateSetting")

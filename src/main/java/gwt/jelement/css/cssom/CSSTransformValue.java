@@ -26,7 +26,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="CSSTransformValue", isNative = true)
-public class CSSTransformValue extends CSSStyleValue{
+public class CSSTransformValue extends CSSStyleValue {
     @JsConstructor
     public CSSTransformValue(){
         super();

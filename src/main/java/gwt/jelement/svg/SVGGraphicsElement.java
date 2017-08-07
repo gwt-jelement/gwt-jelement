@@ -23,7 +23,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="SVGGraphicsElement", isNative = true)
-public class SVGGraphicsElement extends SVGElement{
+public class SVGGraphicsElement extends SVGElement {
     @JsProperty(name="transform")
     public native SVGAnimatedTransformList getTransform();
     

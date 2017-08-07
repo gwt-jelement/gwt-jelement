@@ -23,7 +23,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="NavigatorID", isNative = true)
-public class NavigatorID extends IsObject{
+public class NavigatorID implements IsObject {
     @JsProperty(name="appCodeName")
     public native String getAppCodeName();
     

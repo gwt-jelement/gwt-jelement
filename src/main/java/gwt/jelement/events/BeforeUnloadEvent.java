@@ -22,7 +22,7 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="BeforeUnloadEvent", isNative = true)
-public class BeforeUnloadEvent extends Event{
+public class BeforeUnloadEvent extends Event {
     @JsConstructor
     public BeforeUnloadEvent(){
         super((String) null);

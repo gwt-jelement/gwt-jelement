@@ -25,7 +25,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="HTMLDocument", isNative = true)
-public class HTMLDocument extends Document{
+public class HTMLDocument extends Document {
     @JsConstructor
     public HTMLDocument(){
         super();

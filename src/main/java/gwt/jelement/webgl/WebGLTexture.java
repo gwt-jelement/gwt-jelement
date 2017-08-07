@@ -23,7 +23,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="WebGLTexture", isNative = true)
-public class WebGLTexture extends IsObject{
+public class WebGLTexture implements IsObject {
     @JsProperty(name="lastUploadedVideoWidth")
     public native double getLastUploadedVideoWidth();
     

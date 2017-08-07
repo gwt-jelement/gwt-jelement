@@ -28,7 +28,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="RTCDataChannel", isNative = true)
-public class RTCDataChannel extends EventTarget{
+public class RTCDataChannel extends EventTarget {
     @JsProperty(name="onopen")
     private EventHandlerNonNull onopen;
     

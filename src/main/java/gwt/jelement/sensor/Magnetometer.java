@@ -23,7 +23,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="Magnetometer", isNative = true)
-public class Magnetometer extends Sensor{
+public class Magnetometer extends Sensor {
     @JsConstructor
     public Magnetometer(){
         super();

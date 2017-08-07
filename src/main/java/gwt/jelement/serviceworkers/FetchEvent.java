@@ -27,7 +27,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="FetchEvent", isNative = true)
-public class FetchEvent extends ExtendableEvent{
+public class FetchEvent extends ExtendableEvent {
     @JsConstructor
     public FetchEvent(String type, FetchEventInit eventInitDict){
         super((String) null);

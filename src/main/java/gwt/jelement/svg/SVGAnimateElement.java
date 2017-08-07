@@ -21,5 +21,5 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="SVGAnimateElement", isNative = true)
-public class SVGAnimateElement extends SVGAnimationElement{
+public class SVGAnimateElement extends SVGAnimationElement {
 }

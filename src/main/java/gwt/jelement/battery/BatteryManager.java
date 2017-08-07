@@ -24,7 +24,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="BatteryManager", isNative = true)
-public class BatteryManager extends EventTarget{
+public class BatteryManager extends EventTarget {
     @JsProperty(name="onchargingchange")
     private EventHandlerNonNull onchargingchange;
     

@@ -22,7 +22,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="HTMLLIElement", isNative = true)
-public class HTMLLIElement extends HTMLElement{
+public class HTMLLIElement extends HTMLElement {
     @JsProperty(name="value")
     public native double getValue();
     

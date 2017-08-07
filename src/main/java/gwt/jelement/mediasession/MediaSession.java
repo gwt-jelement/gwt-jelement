@@ -24,7 +24,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="MediaSession", isNative = true)
-public class MediaSession extends IsObject{
+public class MediaSession implements IsObject {
     @JsProperty(name="playbackState")
     private String playbackState;
     

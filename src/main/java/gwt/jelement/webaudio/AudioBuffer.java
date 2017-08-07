@@ -26,10 +26,9 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="AudioBuffer", isNative = true)
-public class AudioBuffer extends IsObject{
+public class AudioBuffer implements IsObject {
     @JsConstructor
     public AudioBuffer(AudioBufferOptions options){
-        super();
     }
     
     @JsProperty(name="length")

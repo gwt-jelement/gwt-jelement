@@ -22,5 +22,5 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="EXTColorBufferFloat", isNative = true)
-public class EXTColorBufferFloat extends IsObject{
+public class EXTColorBufferFloat implements IsObject {
 }

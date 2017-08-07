@@ -25,20 +25,17 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="Path2D", isNative = true)
-public class Path2D extends IsObject{
+public class Path2D implements IsObject {
     @JsConstructor
     public Path2D(){
-        super();
     }
     
     @JsConstructor
     public Path2D(Path2D path){
-        super();
     }
     
     @JsConstructor
     public Path2D(String text){
-        super();
     }
     
     @JsMethod(name = "addPath")

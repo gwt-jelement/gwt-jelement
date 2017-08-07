@@ -25,7 +25,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="SpeechSynthesis", isNative = true)
-public class SpeechSynthesis extends EventTarget{
+public class SpeechSynthesis extends EventTarget {
     @JsProperty(name="onvoiceschanged")
     private EventHandlerNonNull onvoiceschanged;
     

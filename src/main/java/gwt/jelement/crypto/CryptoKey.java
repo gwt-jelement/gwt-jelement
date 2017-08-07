@@ -23,7 +23,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="CryptoKey", isNative = true)
-public class CryptoKey extends IsObject{
+public class CryptoKey implements IsObject {
     @JsProperty(name="type")
     public native String getType();
     

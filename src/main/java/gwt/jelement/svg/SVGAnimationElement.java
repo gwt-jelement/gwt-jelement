@@ -24,7 +24,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="SVGAnimationElement", isNative = true)
-public class SVGAnimationElement extends SVGElement{
+public class SVGAnimationElement extends SVGElement {
     @JsProperty(name="onbegin")
     private EventHandlerNonNull onbegin;
     

@@ -23,7 +23,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="HTMLHyperlinkElementUtils", isNative = true)
-public class HTMLHyperlinkElementUtils extends IsObject{
+public class HTMLHyperlinkElementUtils implements IsObject {
     @JsProperty(name="href")
     public native String getHref();
     

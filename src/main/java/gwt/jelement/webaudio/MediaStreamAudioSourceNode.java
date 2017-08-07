@@ -24,7 +24,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="MediaStreamAudioSourceNode", isNative = true)
-public class MediaStreamAudioSourceNode extends AudioNode{
+public class MediaStreamAudioSourceNode extends AudioNode {
     @JsConstructor
     public MediaStreamAudioSourceNode(BaseAudioContext context, MediaStreamAudioSourceOptions options){
         super();

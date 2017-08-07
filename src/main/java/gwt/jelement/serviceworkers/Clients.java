@@ -24,7 +24,7 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="Clients", isNative = true)
-public class Clients extends IsObject{
+public class Clients implements IsObject {
     @JsMethod(name = "claim")
     public native Promise<Void> claim();
     

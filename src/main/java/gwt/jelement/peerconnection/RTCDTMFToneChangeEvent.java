@@ -24,7 +24,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="RTCDTMFToneChangeEvent", isNative = true)
-public class RTCDTMFToneChangeEvent extends Event{
+public class RTCDTMFToneChangeEvent extends Event {
     @JsConstructor
     public RTCDTMFToneChangeEvent(String type, RTCDTMFToneChangeEventInit eventInitDict){
         super((String) null);

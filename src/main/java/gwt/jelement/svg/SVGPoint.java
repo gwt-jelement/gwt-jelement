@@ -24,7 +24,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="SVGPoint", isNative = true)
-public class SVGPoint extends IsObject{
+public class SVGPoint implements IsObject {
     @JsProperty(name="x")
     public native double getX();
     

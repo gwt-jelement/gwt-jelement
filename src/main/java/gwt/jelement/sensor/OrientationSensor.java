@@ -26,7 +26,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="OrientationSensor", isNative = true)
-public class OrientationSensor extends Sensor{
+public class OrientationSensor extends Sensor {
     @JsProperty(name="quaternion")
     public native double[] getQuaternion();
     

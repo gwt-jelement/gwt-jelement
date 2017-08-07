@@ -23,7 +23,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="SVGPreserveAspectRatio", isNative = true)
-public class SVGPreserveAspectRatio extends IsObject{
+public class SVGPreserveAspectRatio implements IsObject {
     public static short SVG_PRESERVEASPECTRATIO_UNKNOWN; /* 0 */
     public static short SVG_PRESERVEASPECTRATIO_NONE; /* 1 */
     public static short SVG_PRESERVEASPECTRATIO_XMINYMIN; /* 2 */

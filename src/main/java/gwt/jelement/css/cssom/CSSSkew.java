@@ -23,7 +23,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="CSSSkew", isNative = true)
-public class CSSSkew extends CSSTransformComponent{
+public class CSSSkew extends CSSTransformComponent {
     @JsConstructor
     public CSSSkew(CSSNumericValue ax, CSSNumericValue ay){
         super();

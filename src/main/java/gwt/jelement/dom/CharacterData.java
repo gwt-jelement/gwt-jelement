@@ -23,7 +23,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="CharacterData", isNative = true)
-public class CharacterData extends Node{
+public class CharacterData extends Node {
     @JsProperty(name="data")
     public native String getData();
     

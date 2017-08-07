@@ -24,7 +24,7 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="CanvasPattern", isNative = true)
-public class CanvasPattern extends IsObject{
+public class CanvasPattern implements IsObject {
     @JsMethod(name = "setTransform")
     public native void setTransform(SVGMatrix transform);
     

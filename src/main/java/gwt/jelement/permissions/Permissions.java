@@ -25,7 +25,7 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="Permissions", isNative = true)
-public class Permissions extends IsObject{
+public class Permissions implements IsObject {
     @JsMethod(name = "query")
     public native Promise<PermissionStatus> query(JsObject permission);
     

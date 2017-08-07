@@ -23,7 +23,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="PageTransitionEvent", isNative = true)
-public class PageTransitionEvent extends Event{
+public class PageTransitionEvent extends Event {
     @JsConstructor
     public PageTransitionEvent(String type){
         super((String) null);

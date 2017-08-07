@@ -23,7 +23,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="Coordinates", isNative = true)
-public class Coordinates extends IsObject{
+public class Coordinates implements IsObject {
     @JsProperty(name="latitude")
     public native double getLatitude();
     

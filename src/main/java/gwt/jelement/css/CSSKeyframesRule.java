@@ -24,7 +24,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="CSSKeyframesRule", isNative = true)
-public class CSSKeyframesRule extends CSSRule{
+public class CSSKeyframesRule extends CSSRule {
     @JsProperty(name="name")
     public native String getName();
     

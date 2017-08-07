@@ -22,5 +22,5 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="WebGLFramebuffer", isNative = true)
-public class WebGLFramebuffer extends IsObject{
+public class WebGLFramebuffer implements IsObject {
 }

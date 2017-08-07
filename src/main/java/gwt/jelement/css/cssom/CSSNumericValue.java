@@ -22,7 +22,7 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="CSSNumericValue", isNative = true)
-public class CSSNumericValue extends CSSStyleValue{
+public class CSSNumericValue extends CSSStyleValue {
     @JsMethod(name = "add")
     public native CSSNumericValue add(CSSNumericValue value);
     

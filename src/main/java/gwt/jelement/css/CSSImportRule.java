@@ -22,7 +22,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="CSSImportRule", isNative = true)
-public class CSSImportRule extends CSSRule{
+public class CSSImportRule extends CSSRule {
     @JsProperty(name="href")
     public native String getHref();
     

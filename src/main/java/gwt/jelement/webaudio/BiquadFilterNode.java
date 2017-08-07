@@ -25,7 +25,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="BiquadFilterNode", isNative = true)
-public class BiquadFilterNode extends AudioNode{
+public class BiquadFilterNode extends AudioNode {
     @JsProperty(name="type")
     private String type;
     

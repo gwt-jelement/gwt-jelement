@@ -24,7 +24,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="USBConnectionEvent", isNative = true)
-public class USBConnectionEvent extends Event{
+public class USBConnectionEvent extends Event {
     @JsConstructor
     public USBConnectionEvent(String type, USBConnectionEventInit eventInitDict){
         super((String) null);

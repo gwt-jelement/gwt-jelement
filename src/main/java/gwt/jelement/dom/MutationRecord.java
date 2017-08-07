@@ -23,7 +23,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="MutationRecord", isNative = true)
-public class MutationRecord extends IsObject{
+public class MutationRecord implements IsObject {
     @JsProperty(name="type")
     public native String getType();
     

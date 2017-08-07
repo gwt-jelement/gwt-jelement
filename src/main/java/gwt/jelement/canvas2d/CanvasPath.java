@@ -23,7 +23,7 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="CanvasPath", isNative = true)
-public class CanvasPath extends IsObject{
+public class CanvasPath implements IsObject {
     @JsMethod(name = "arc")
     public native void arc(double x, double y, double radius, double startAngle, double endAngle);
     

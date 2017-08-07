@@ -23,7 +23,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="IDBObservation", isNative = true)
-public class IDBObservation extends IsObject{
+public class IDBObservation implements IsObject {
     @JsProperty(name="type")
     private String type;
     

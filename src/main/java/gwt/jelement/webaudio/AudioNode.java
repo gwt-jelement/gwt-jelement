@@ -24,7 +24,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="AudioNode", isNative = true)
-public class AudioNode extends EventTarget{
+public class AudioNode extends EventTarget {
     @JsProperty(name="channelCountMode")
     private String channelCountMode;
     

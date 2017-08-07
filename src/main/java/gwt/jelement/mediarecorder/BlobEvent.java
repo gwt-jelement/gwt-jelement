@@ -25,7 +25,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="BlobEvent", isNative = true)
-public class BlobEvent extends Event{
+public class BlobEvent extends Event {
     @JsConstructor
     public BlobEvent(String type, BlobEventInit eventInitDict){
         super((String) null);

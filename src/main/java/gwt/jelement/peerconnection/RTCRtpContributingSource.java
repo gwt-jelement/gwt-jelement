@@ -23,7 +23,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="RTCRtpContributingSource", isNative = true)
-public class RTCRtpContributingSource extends IsObject{
+public class RTCRtpContributingSource implements IsObject {
     @JsProperty(name="timestamp")
     public native double getTimestamp();
     

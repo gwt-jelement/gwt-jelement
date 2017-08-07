@@ -22,5 +22,5 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="WebGLTransformFeedback", isNative = true)
-public class WebGLTransformFeedback extends IsObject{
+public class WebGLTransformFeedback implements IsObject {
 }

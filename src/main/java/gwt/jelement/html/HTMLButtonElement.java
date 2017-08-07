@@ -24,7 +24,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="HTMLButtonElement", isNative = true)
-public class HTMLButtonElement extends HTMLElement{
+public class HTMLButtonElement extends HTMLElement {
     @JsProperty(name="autofocus")
     public native boolean getAutofocus();
     

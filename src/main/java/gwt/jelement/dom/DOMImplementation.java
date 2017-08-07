@@ -24,7 +24,7 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="DOMImplementation", isNative = true)
-public class DOMImplementation extends IsObject{
+public class DOMImplementation implements IsObject {
     @JsMethod(name = "createDocument")
     public native XMLDocument createDocument(String namespaceURI, String qualifiedName);
     

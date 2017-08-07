@@ -23,7 +23,7 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="FileEntrySync", isNative = true)
-public class FileEntrySync extends EntrySync{
+public class FileEntrySync extends EntrySync {
     @JsMethod(name = "createWriter")
     public native FileWriterSync createWriter();
     

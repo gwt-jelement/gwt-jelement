@@ -25,7 +25,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="Range", isNative = true)
-public class Range extends IsObject{
+public class Range implements IsObject {
     public static short START_TO_START; /* 0 */
     public static short START_TO_END; /* 1 */
     public static short END_TO_END; /* 2 */
@@ -33,7 +33,6 @@ public class Range extends IsObject{
     
     @JsConstructor
     public Range(){
-        super();
     }
     
     @JsProperty(name="startContainer")

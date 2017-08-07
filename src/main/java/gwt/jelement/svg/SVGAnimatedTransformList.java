@@ -23,7 +23,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="SVGAnimatedTransformList", isNative = true)
-public class SVGAnimatedTransformList extends IsObject{
+public class SVGAnimatedTransformList implements IsObject {
     @JsProperty(name="baseVal")
     public native SVGTransformList getBaseVal();
     

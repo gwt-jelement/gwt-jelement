@@ -26,7 +26,7 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="MediaKeys", isNative = true)
-public class MediaKeys extends IsObject{
+public class MediaKeys implements IsObject {
     @JsMethod(name = "createSession")
     public native MediaKeySession createSession();
     

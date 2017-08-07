@@ -25,7 +25,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="Database", isNative = true)
-public class Database extends IsObject{
+public class Database implements IsObject {
     @JsProperty(name="version")
     public native String getVersion();
     

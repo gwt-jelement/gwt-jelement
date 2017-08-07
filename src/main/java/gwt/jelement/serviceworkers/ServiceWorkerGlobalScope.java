@@ -26,7 +26,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="ServiceWorkerGlobalScope", isNative = true)
-public class ServiceWorkerGlobalScope extends WorkerGlobalScope{
+public class ServiceWorkerGlobalScope extends WorkerGlobalScope {
     @JsProperty(name="onactivate")
     private EventHandlerNonNull onactivate;
     

@@ -23,7 +23,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="SpeechRecognitionAlternative", isNative = true)
-public class SpeechRecognitionAlternative extends IsObject{
+public class SpeechRecognitionAlternative implements IsObject {
     @JsProperty(name="transcript")
     public native String getTranscript();
     

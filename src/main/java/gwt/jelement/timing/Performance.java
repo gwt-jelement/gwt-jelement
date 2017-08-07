@@ -25,7 +25,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="Performance", isNative = true)
-public class Performance extends EventTarget{
+public class Performance extends EventTarget {
     @JsProperty(name="onresourcetimingbufferfull")
     private EventHandlerNonNull onresourcetimingbufferfull;
     

@@ -24,7 +24,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="HTMLSlotElement", isNative = true)
-public class HTMLSlotElement extends HTMLElement{
+public class HTMLSlotElement extends HTMLElement {
     @JsProperty(name="name")
     public native String getName();
     

@@ -26,7 +26,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="MediaQueryList", isNative = true)
-public class MediaQueryList extends EventTarget{
+public class MediaQueryList extends EventTarget {
     @JsProperty(name="onchange")
     private EventHandlerNonNull onchange;
     

@@ -22,5 +22,5 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="HTMLCollection", isNative = true)
-public class HTMLCollection extends HTMLBaseCollection<Element, Element>{
+public class HTMLCollection extends HTMLBaseCollection<Element, Element> {
 }

@@ -23,7 +23,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="SQLError", isNative = true)
-public class SQLError extends IsObject{
+public class SQLError implements IsObject {
     public static short UNKNOWN_ERR; /* 0 */
     public static short DATABASE_ERR; /* 1 */
     public static short VERSION_ERR; /* 2 */

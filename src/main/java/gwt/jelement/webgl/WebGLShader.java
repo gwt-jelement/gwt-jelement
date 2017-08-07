@@ -22,5 +22,5 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="WebGLShader", isNative = true)
-public class WebGLShader extends IsObject{
+public class WebGLShader implements IsObject {
 }

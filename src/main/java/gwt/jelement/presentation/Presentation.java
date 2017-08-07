@@ -23,7 +23,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="Presentation", isNative = true)
-public class Presentation extends IsObject{
+public class Presentation implements IsObject {
     @JsProperty(name="defaultRequest")
     public native PresentationRequest getDefaultRequest();
     

@@ -24,7 +24,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="IdleDeadline", isNative = true)
-public class IdleDeadline extends IsObject{
+public class IdleDeadline implements IsObject {
     @JsProperty(name="didTimeout")
     public native boolean getDidTimeout();
     

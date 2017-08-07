@@ -22,5 +22,5 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="WebGLVertexArrayObject", isNative = true)
-public class WebGLVertexArrayObject extends IsObject{
+public class WebGLVertexArrayObject implements IsObject {
 }

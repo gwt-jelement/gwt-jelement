@@ -23,7 +23,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="NavigatorUserMediaError", isNative = true)
-public class NavigatorUserMediaError extends IsObject{
+public class NavigatorUserMediaError implements IsObject {
     @JsProperty(name="name")
     public native String getName();
     

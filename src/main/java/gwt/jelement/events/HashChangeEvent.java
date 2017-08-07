@@ -23,7 +23,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="HashChangeEvent", isNative = true)
-public class HashChangeEvent extends Event{
+public class HashChangeEvent extends Event {
     @JsConstructor
     public HashChangeEvent(String type){
         super((String) null);

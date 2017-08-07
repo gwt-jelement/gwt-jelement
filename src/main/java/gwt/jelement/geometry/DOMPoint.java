@@ -25,7 +25,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="DOMPoint", isNative = true)
-public class DOMPoint extends DOMPointReadOnly{
+public class DOMPoint extends DOMPointReadOnly {
     @JsConstructor
     public DOMPoint(){
         super();

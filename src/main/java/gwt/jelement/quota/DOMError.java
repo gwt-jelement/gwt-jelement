@@ -24,15 +24,13 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="DOMError", isNative = true)
-public class DOMError extends IsObject{
+public class DOMError implements IsObject {
     @JsConstructor
     public DOMError(String name){
-        super();
     }
     
     @JsConstructor
     public DOMError(String name, String message){
-        super();
     }
     
     @JsProperty(name="name")

@@ -38,7 +38,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="WebGL2RenderingContextBase", isNative = true)
-public class WebGL2RenderingContextBase extends IsObject{
+public class WebGL2RenderingContextBase implements IsObject {
     public static double READ_BUFFER; /* 0x0C02 */
     public static double UNPACK_ROW_LENGTH; /* 0x0CF2 */
     public static double UNPACK_SKIP_ROWS; /* 0x0CF3 */

@@ -23,7 +23,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="WebGLActiveInfo", isNative = true)
-public class WebGLActiveInfo extends IsObject{
+public class WebGLActiveInfo implements IsObject {
     @JsProperty(name="size")
     public native double getSize();
     

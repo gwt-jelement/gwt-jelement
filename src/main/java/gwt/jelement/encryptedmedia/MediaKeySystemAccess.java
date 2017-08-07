@@ -25,7 +25,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="MediaKeySystemAccess", isNative = true)
-public class MediaKeySystemAccess extends IsObject{
+public class MediaKeySystemAccess implements IsObject {
     @JsProperty(name="keySystem")
     public native String getKeySystem();
     

@@ -22,7 +22,7 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="JSON", isNative = true)
-public class JSONImpl extends IsObject{
+public class JSONImpl implements IsObject {
     @JsMethod(name = "parse")
     public native Object parse(String text);
     

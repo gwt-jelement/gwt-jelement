@@ -27,7 +27,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="HTMLOptionsCollection", isNative = true)
-public class HTMLOptionsCollection extends HTMLBaseCollection<Node, HTMLAllCollection.HTMLOptionsUnion>{
+public class HTMLOptionsCollection extends HTMLBaseCollection<Node, HTMLAllCollection.HTMLOptionsUnion> {
     @JsProperty(name="selectedIndex")
     public native double getSelectedIndex();
     

@@ -25,7 +25,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="XPathResult", isNative = true)
-public class XPathResult extends IsObject{
+public class XPathResult implements IsObject {
     public static short ANY_TYPE; /* 0 */
     public static short NUMBER_TYPE; /* 1 */
     public static short STRING_TYPE; /* 2 */

@@ -24,7 +24,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="DragEvent", isNative = true)
-public class DragEvent extends MouseEvent{
+public class DragEvent extends MouseEvent {
     @JsConstructor
     public DragEvent(String type){
         super((String) null);

@@ -25,7 +25,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="CanvasCaptureMediaStreamTrack", isNative = true)
-public class CanvasCaptureMediaStreamTrack extends MediaStreamTrack{
+public class CanvasCaptureMediaStreamTrack extends MediaStreamTrack {
     @JsProperty(name="canvas")
     public native HTMLCanvasElement getCanvas();
     

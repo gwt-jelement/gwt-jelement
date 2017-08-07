@@ -23,7 +23,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="GainNode", isNative = true)
-public class GainNode extends AudioNode{
+public class GainNode extends AudioNode {
     @JsConstructor
     public GainNode(BaseAudioContext context){
         super();

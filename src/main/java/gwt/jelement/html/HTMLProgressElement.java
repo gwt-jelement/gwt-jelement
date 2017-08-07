@@ -23,7 +23,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="HTMLProgressElement", isNative = true)
-public class HTMLProgressElement extends HTMLElement{
+public class HTMLProgressElement extends HTMLElement {
     @JsProperty(name="value")
     public native double getValue();
     

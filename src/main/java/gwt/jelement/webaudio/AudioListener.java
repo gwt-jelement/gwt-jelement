@@ -24,7 +24,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="AudioListener", isNative = true)
-public class AudioListener extends IsObject{
+public class AudioListener implements IsObject {
     @JsProperty(name="positionX")
     public native AudioParam getPositionX();
     

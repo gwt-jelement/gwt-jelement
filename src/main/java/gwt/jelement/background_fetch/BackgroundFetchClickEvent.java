@@ -23,7 +23,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="BackgroundFetchClickEvent", isNative = true)
-public class BackgroundFetchClickEvent extends BackgroundFetchEvent{
+public class BackgroundFetchClickEvent extends BackgroundFetchEvent {
     @JsProperty(name="state")
     private String state;
     

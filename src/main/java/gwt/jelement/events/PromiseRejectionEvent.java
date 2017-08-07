@@ -24,7 +24,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="PromiseRejectionEvent", isNative = true)
-public class PromiseRejectionEvent extends Event{
+public class PromiseRejectionEvent extends Event {
     @JsConstructor
     public PromiseRejectionEvent(String type, PromiseRejectionEventInit eventInitDict){
         super((String) null);

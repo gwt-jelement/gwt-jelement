@@ -23,7 +23,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="CSSStyleSheet", isNative = true)
-public class CSSStyleSheet extends StyleSheet{
+public class CSSStyleSheet extends StyleSheet {
     @JsProperty(name="ownerRule")
     public native CSSRule getOwnerRule();
     

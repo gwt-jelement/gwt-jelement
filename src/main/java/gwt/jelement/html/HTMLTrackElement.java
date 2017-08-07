@@ -23,7 +23,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="HTMLTrackElement", isNative = true)
-public class HTMLTrackElement extends HTMLElement{
+public class HTMLTrackElement extends HTMLElement {
     public static short NONE; /* 0 */
     public static short LOADING; /* 1 */
     public static short LOADED; /* 2 */

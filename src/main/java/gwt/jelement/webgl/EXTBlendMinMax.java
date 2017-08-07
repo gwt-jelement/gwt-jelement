@@ -22,7 +22,7 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="EXTBlendMinMax", isNative = true)
-public class EXTBlendMinMax extends IsObject{
+public class EXTBlendMinMax implements IsObject {
     public static double MIN_EXT; /* 0x8007 */
     public static double MAX_EXT; /* 0x8008 */
     

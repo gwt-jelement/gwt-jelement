@@ -23,7 +23,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="MemoryInfo", isNative = true)
-public class MemoryInfo extends IsObject{
+public class MemoryInfo implements IsObject {
     @JsProperty(name="totalJSHeapSize")
     public native double getTotalJSHeapSize();
     

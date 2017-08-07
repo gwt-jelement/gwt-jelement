@@ -23,7 +23,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="DOMFileSystemSync", isNative = true)
-public class DOMFileSystemSync extends IsObject{
+public class DOMFileSystemSync implements IsObject {
     @JsProperty(name="name")
     public native String getName();
     

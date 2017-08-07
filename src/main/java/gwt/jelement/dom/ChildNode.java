@@ -23,7 +23,7 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="ChildNode", isNative = true)
-public class ChildNode extends IsObject{
+public class ChildNode implements IsObject {
     @SafeVarargs
     @JsMethod(name = "after")
     public final native void after(Node... nodes);

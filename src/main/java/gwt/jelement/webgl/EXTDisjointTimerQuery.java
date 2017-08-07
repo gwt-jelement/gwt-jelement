@@ -23,7 +23,7 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="EXTDisjointTimerQuery", isNative = true)
-public class EXTDisjointTimerQuery extends IsObject{
+public class EXTDisjointTimerQuery implements IsObject {
     public static double QUERY_COUNTER_BITS_EXT; /* 0x8864 */
     public static double CURRENT_QUERY_EXT; /* 0x8865 */
     public static double QUERY_RESULT_EXT; /* 0x8866 */

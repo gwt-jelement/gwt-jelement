@@ -23,7 +23,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="ConvolverNode", isNative = true)
-public class ConvolverNode extends AudioNode{
+public class ConvolverNode extends AudioNode {
     @JsConstructor
     public ConvolverNode(BaseAudioContext context){
         super();

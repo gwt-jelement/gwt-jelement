@@ -21,5 +21,5 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="HTMLUnknownElement", isNative = true)
-public class HTMLUnknownElement extends HTMLElement{
+public class HTMLUnknownElement extends HTMLElement {
 }

@@ -22,5 +22,5 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="WebGLBuffer", isNative = true)
-public class WebGLBuffer extends IsObject{
+public class WebGLBuffer implements IsObject {
 }

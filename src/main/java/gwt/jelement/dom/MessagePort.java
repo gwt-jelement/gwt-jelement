@@ -25,7 +25,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="MessagePort", isNative = true)
-public class MessagePort extends EventTarget{
+public class MessagePort extends EventTarget {
     @JsProperty(name="onmessage")
     private EventHandlerNonNull onmessage;
     

@@ -17,6 +17,7 @@
 package gwt.jelement.svg;
 
 import gwt.jelement.core.ArrayLike;
+import gwt.jelement.core.IsObject;
 import gwt.jelement.core.Js;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
@@ -25,7 +26,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="SVGPointList", isNative = true)
-public class SVGPointList extends ArrayLike{
+public class SVGPointList implements IsObject, ArrayLike<SVGPoint> {
     @JsProperty(name="numberOfItems")
     public native double getNumberOfItems();
     

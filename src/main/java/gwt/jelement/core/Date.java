@@ -23,50 +23,41 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="Date", isNative = true)
-public class Date extends IsObject{
+public class Date implements IsObject {
     @JsConstructor
     public Date(){
-        super();
     }
     
     @JsConstructor
     public Date(double value){
-        super();
     }
     
     @JsConstructor
     public Date(String dateString){
-        super();
     }
     
     @JsConstructor
     public Date(int year, int month){
-        super();
     }
     
     @JsConstructor
     public Date(int year, int month, int date){
-        super();
     }
     
     @JsConstructor
     public Date(int year, int month, int date, int hours){
-        super();
     }
     
     @JsConstructor
     public Date(int year, int month, int date, int hours, int minutes){
-        super();
     }
     
     @JsConstructor
     public Date(int year, int month, int date, int hours, int minutes, int seconds){
-        super();
     }
     
     @JsConstructor
     public Date(int year, int month, int date, int hours, int minutes, int seconds, int milliseconds){
-        super();
     }
     
     @JsMethod(name = "UTC")

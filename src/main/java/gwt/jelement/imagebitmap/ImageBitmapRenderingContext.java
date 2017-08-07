@@ -25,7 +25,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="ImageBitmapRenderingContext", isNative = true)
-public class ImageBitmapRenderingContext extends IsObject{
+public class ImageBitmapRenderingContext implements IsObject {
     @JsProperty(name="canvas")
     public native HTMLCanvasElement getCanvas();
     

@@ -23,7 +23,7 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="HTMLShadowElement", isNative = true)
-public class HTMLShadowElement extends HTMLElement{
+public class HTMLShadowElement extends HTMLElement {
     @JsMethod(name = "getDistributedNodes")
     public native NodeList getDistributedNodes();
     

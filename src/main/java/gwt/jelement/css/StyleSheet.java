@@ -24,7 +24,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="StyleSheet", isNative = true)
-public class StyleSheet extends IsObject{
+public class StyleSheet implements IsObject {
     @JsProperty(name="type")
     public native String getType();
     

@@ -24,7 +24,7 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="CredentialsContainer", isNative = true)
-public class CredentialsContainer extends IsObject{
+public class CredentialsContainer implements IsObject {
     @JsMethod(name = "create")
     public native Promise create();
     

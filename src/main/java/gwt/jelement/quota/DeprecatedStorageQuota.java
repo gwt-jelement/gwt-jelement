@@ -23,7 +23,7 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="DeprecatedStorageQuota", isNative = true)
-public class DeprecatedStorageQuota extends IsObject{
+public class DeprecatedStorageQuota implements IsObject {
     @JsMethod(name = "queryUsageAndQuota")
     public native void queryUsageAndQuota(StorageUsageCallback usageCallback);
     

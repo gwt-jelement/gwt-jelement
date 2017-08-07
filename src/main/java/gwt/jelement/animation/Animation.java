@@ -27,7 +27,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="Animation", isNative = true)
-public class Animation extends EventTarget{
+public class Animation extends EventTarget {
     @JsProperty(name="onfinish")
     private EventHandlerNonNull onfinish;
     

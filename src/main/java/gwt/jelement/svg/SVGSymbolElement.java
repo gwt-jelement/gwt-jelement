@@ -22,7 +22,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="SVGSymbolElement", isNative = true)
-public class SVGSymbolElement extends SVGElement{
+public class SVGSymbolElement extends SVGElement {
     @JsProperty(name="viewBox")
     public native SVGAnimatedRect getViewBox();
     

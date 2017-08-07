@@ -27,7 +27,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="HTMLElement", isNative = true)
-public class HTMLElement extends Element{
+public class HTMLElement extends Element {
     @JsProperty(name="onabort")
     private EventHandlerNonNull onabort;
     

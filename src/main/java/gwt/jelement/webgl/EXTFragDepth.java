@@ -22,5 +22,5 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="EXTFragDepth", isNative = true)
-public class EXTFragDepth extends IsObject{
+public class EXTFragDepth implements IsObject {
 }

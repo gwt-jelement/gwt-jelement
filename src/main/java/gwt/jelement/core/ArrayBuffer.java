@@ -26,7 +26,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="ArrayBuffer", isNative = true)
-public class ArrayBuffer extends IsObject{
+public class ArrayBuffer implements IsObject {
     @JsProperty(name="onmessage")
     private EventHandlerNonNull onmessage;
     
@@ -35,7 +35,6 @@ public class ArrayBuffer extends IsObject{
     
     @JsConstructor
     public ArrayBuffer(double length){
-        super();
     }
     
     @JsProperty(name="byteLength")

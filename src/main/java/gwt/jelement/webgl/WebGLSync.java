@@ -22,5 +22,5 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="WebGLSync", isNative = true)
-public class WebGLSync extends IsObject{
+public class WebGLSync implements IsObject {
 }

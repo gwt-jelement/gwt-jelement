@@ -22,7 +22,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="SVGGradientElement", isNative = true)
-public class SVGGradientElement extends SVGElement{
+public class SVGGradientElement extends SVGElement {
     public static short SVG_SPREADMETHOD_UNKNOWN; /* 0 */
     public static short SVG_SPREADMETHOD_PAD; /* 1 */
     public static short SVG_SPREADMETHOD_REFLECT; /* 2 */

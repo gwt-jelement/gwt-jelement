@@ -21,5 +21,5 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="HTMLPictureElement", isNative = true)
-public class HTMLPictureElement extends HTMLElement{
+public class HTMLPictureElement extends HTMLElement {
 }

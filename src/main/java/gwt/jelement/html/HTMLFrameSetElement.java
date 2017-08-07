@@ -26,7 +26,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="HTMLFrameSetElement", isNative = true)
-public class HTMLFrameSetElement extends HTMLElement{
+public class HTMLFrameSetElement extends HTMLElement {
     @JsProperty(name="onorientationchange")
     private EventHandlerNonNull onorientationchange;
     

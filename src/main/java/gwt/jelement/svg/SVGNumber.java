@@ -23,7 +23,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="SVGNumber", isNative = true)
-public class SVGNumber extends IsObject{
+public class SVGNumber implements IsObject {
     @JsProperty(name="value")
     public native double getValue();
     

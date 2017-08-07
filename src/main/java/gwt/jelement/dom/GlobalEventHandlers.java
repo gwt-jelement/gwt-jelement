@@ -24,7 +24,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="GlobalEventHandlers", isNative = true)
-public class GlobalEventHandlers extends IsObject{
+public class GlobalEventHandlers implements IsObject {
     @JsProperty(name="onabort")
     private EventHandlerNonNull onabort;
     

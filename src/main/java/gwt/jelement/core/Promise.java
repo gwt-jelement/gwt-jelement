@@ -23,7 +23,7 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="Promise", isNative = true)
-public class Promise<T> extends Thenable<T>{
+public class Promise<T> extends Thenable<T> {
     @JsConstructor
     public Promise(PromiseExecutor<T> executor){
         super();

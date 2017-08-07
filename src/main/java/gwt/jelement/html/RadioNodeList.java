@@ -23,7 +23,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="RadioNodeList", isNative = true)
-public class RadioNodeList extends NodeList{
+public class RadioNodeList extends NodeList {
     @JsProperty(name="value")
     public native String getValue();
     

@@ -25,7 +25,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="ParentNode", isNative = true)
-public class ParentNode extends IsObject{
+public class ParentNode implements IsObject {
     @JsProperty(name="children")
     public native HTMLCollection getChildren();
     

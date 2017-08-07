@@ -24,7 +24,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="Metadata", isNative = true)
-public class Metadata extends IsObject{
+public class Metadata implements IsObject {
     @JsProperty(name="modificationTime")
     public native Date getModificationTime();
     

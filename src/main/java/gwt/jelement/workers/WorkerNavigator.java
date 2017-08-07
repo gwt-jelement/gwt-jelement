@@ -27,7 +27,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="WorkerNavigator", isNative = true)
-public class WorkerNavigator extends IsObject{
+public class WorkerNavigator implements IsObject {
     @JsProperty(name="budget")
     public native BudgetService getBudget();
     

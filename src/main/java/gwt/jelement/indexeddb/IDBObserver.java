@@ -24,10 +24,9 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="IDBObserver", isNative = true)
-public class IDBObserver extends IsObject{
+public class IDBObserver implements IsObject {
     @JsConstructor
     public IDBObserver(IDBObserverCallback callback){
-        super();
     }
     
     @JsMethod(name = "observe")

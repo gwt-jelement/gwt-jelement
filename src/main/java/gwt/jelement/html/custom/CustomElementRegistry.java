@@ -26,7 +26,7 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="CustomElementRegistry", isNative = true)
-public class CustomElementRegistry extends IsObject{
+public class CustomElementRegistry implements IsObject {
     @JsMethod(name = "define")
     public native void define(String name, Function constructor);
     

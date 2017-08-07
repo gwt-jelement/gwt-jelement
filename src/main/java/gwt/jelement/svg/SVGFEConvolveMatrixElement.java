@@ -22,7 +22,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="SVGFEConvolveMatrixElement", isNative = true)
-public class SVGFEConvolveMatrixElement extends SVGElement{
+public class SVGFEConvolveMatrixElement extends SVGElement {
     public static short SVG_EDGEMODE_UNKNOWN; /* 0 */
     public static short SVG_EDGEMODE_DUPLICATE; /* 1 */
     public static short SVG_EDGEMODE_WRAP; /* 2 */

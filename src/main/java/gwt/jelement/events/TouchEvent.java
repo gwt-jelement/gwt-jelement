@@ -24,7 +24,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="TouchEvent", isNative = true)
-public class TouchEvent extends UIEvent{
+public class TouchEvent extends UIEvent {
     @JsConstructor
     public TouchEvent(String type){
         super((String) null);

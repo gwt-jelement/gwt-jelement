@@ -25,7 +25,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="Event", isNative = true)
-public class Event extends IsObject{
+public class Event implements IsObject {
     public static short NONE; /* 0 */
     public static short CAPTURING_PHASE; /* 1 */
     public static short AT_TARGET; /* 2 */
@@ -33,12 +33,10 @@ public class Event extends IsObject{
     
     @JsConstructor
     public Event(String type){
-        super();
     }
     
     @JsConstructor
     public Event(String type, EventInit eventInitDict){
-        super();
     }
     
     @JsProperty(name="type")

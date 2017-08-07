@@ -23,7 +23,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="NavigatorLanguage", isNative = true)
-public class NavigatorLanguage extends IsObject{
+public class NavigatorLanguage implements IsObject {
     @JsProperty(name="language")
     public native String getLanguage();
     

@@ -26,7 +26,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="VRDisplay", isNative = true)
-public class VRDisplay extends EventTarget{
+public class VRDisplay extends EventTarget {
     @JsProperty(name="displayId")
     public native double getDisplayId();
     

@@ -22,7 +22,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="SVGFEDiffuseLightingElement", isNative = true)
-public class SVGFEDiffuseLightingElement extends SVGElement{
+public class SVGFEDiffuseLightingElement extends SVGElement {
     @JsProperty(name="in1")
     public native SVGAnimatedString getIn1();
     

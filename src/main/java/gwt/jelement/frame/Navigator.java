@@ -57,7 +57,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="Navigator", isNative = true)
-public class Navigator extends IsObject{
+public class Navigator implements IsObject {
     @JsProperty(name="vendorSub")
     public native String getVendorSub();
     

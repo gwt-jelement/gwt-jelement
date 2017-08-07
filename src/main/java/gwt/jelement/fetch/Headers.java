@@ -25,20 +25,17 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="Headers", isNative = true)
-public class Headers extends IsObject{
+public class Headers implements IsObject {
     @JsConstructor
     public Headers(){
-        super();
     }
     
     @JsConstructor
     public Headers(String[][] init){
-        super();
     }
     
     @JsConstructor
     public Headers(JsObject<String> init){
-        super();
     }
     
     @JsMethod(name = "append")

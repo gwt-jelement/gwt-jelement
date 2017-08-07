@@ -24,7 +24,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="HTMLTextAreaElement", isNative = true)
-public class HTMLTextAreaElement extends HTMLElement{
+public class HTMLTextAreaElement extends HTMLElement {
     @JsProperty(name="autofocus")
     public native boolean getAutofocus();
     

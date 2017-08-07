@@ -23,7 +23,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="FocusEvent", isNative = true)
-public class FocusEvent extends UIEvent{
+public class FocusEvent extends UIEvent {
     @JsConstructor
     public FocusEvent(String type){
         super((String) null);

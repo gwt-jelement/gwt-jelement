@@ -28,7 +28,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="USBDevice", isNative = true)
-public class USBDevice extends IsObject{
+public class USBDevice implements IsObject {
     @JsProperty(name="usbVersionMajor")
     public native byte getUsbVersionMajor();
     

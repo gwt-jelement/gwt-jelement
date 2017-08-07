@@ -24,7 +24,7 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="Bluetooth", isNative = true)
-public class Bluetooth extends IsObject{
+public class Bluetooth implements IsObject {
     @JsMethod(name = "requestDevice")
     public native Promise<BluetoothDevice> requestDevice();
     

@@ -25,7 +25,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="ScrollTimeline", isNative = true)
-public class ScrollTimeline extends AnimationTimeline{
+public class ScrollTimeline extends AnimationTimeline {
     @JsType(isNative = true, name = "?", namespace = JsPackage.GLOBAL)
     public interface TimeRangeUnion {
         @JsOverlay

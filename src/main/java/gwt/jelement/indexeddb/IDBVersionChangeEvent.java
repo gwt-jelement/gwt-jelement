@@ -24,7 +24,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="IDBVersionChangeEvent", isNative = true)
-public class IDBVersionChangeEvent extends Event{
+public class IDBVersionChangeEvent extends Event {
     @JsProperty(name="dataLoss")
     private String dataLoss;
     

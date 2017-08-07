@@ -22,7 +22,7 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="StylePropertyMap", isNative = true)
-public class StylePropertyMap extends StylePropertyMapReadonly{
+public class StylePropertyMap extends StylePropertyMapReadonly {
     @JsMethod(name = "append")
     public native void append(String property, CSSStyleValue value);
     

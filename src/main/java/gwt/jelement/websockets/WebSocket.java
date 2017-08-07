@@ -30,7 +30,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="WebSocket", isNative = true)
-public class WebSocket extends EventTarget{
+public class WebSocket extends EventTarget {
     public static short CONNECTING; /* 0 */
     public static short OPEN; /* 1 */
     public static short CLOSING; /* 2 */

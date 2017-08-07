@@ -21,5 +21,5 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="PerformanceMeasure", isNative = true)
-public class PerformanceMeasure extends PerformanceEntry{
+public class PerformanceMeasure extends PerformanceEntry {
 }

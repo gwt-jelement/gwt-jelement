@@ -23,7 +23,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="MediaCapabilitiesInfo", isNative = true)
-public class MediaCapabilitiesInfo extends IsObject{
+public class MediaCapabilitiesInfo implements IsObject {
     @JsProperty(name="supported")
     public native boolean getSupported();
     

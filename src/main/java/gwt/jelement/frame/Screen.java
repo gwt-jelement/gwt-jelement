@@ -24,7 +24,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="Screen", isNative = true)
-public class Screen extends IsObject{
+public class Screen implements IsObject {
     @JsProperty(name="availWidth")
     public native double getAvailWidth();
     

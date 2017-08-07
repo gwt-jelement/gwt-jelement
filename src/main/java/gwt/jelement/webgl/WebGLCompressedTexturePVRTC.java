@@ -22,7 +22,7 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="WebGLCompressedTexturePVRTC", isNative = true)
-public class WebGLCompressedTexturePVRTC extends IsObject{
+public class WebGLCompressedTexturePVRTC implements IsObject {
     public static double COMPRESSED_RGB_PVRTC_4BPPV1_IMG; /* 0x8C00 */
     public static double COMPRESSED_RGB_PVRTC_2BPPV1_IMG; /* 0x8C01 */
     public static double COMPRESSED_RGBA_PVRTC_4BPPV1_IMG; /* 0x8C02 */

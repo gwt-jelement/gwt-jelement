@@ -22,7 +22,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="SVGRadialGradientElement", isNative = true)
-public class SVGRadialGradientElement extends SVGGradientElement{
+public class SVGRadialGradientElement extends SVGGradientElement {
     @JsProperty(name="cx")
     public native SVGAnimatedLength getCx();
     

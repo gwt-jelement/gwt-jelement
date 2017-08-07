@@ -24,7 +24,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="AnimationEffectTimingReadOnly", isNative = true)
-public class AnimationEffectTimingReadOnly extends IsObject{
+public class AnimationEffectTimingReadOnly implements IsObject {
     @JsType(isNative = true, name = "?", namespace = JsPackage.GLOBAL)
     public interface DurationUnion {
         @JsOverlay

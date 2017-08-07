@@ -22,7 +22,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="CSSNamespaceRule", isNative = true)
-public class CSSNamespaceRule extends CSSRule{
+public class CSSNamespaceRule extends CSSRule {
     @JsProperty(name="namespaceURI")
     public native String getNamespaceURI();
     

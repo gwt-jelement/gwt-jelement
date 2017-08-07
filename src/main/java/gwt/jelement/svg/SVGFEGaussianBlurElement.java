@@ -23,7 +23,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="SVGFEGaussianBlurElement", isNative = true)
-public class SVGFEGaussianBlurElement extends SVGElement{
+public class SVGFEGaussianBlurElement extends SVGElement {
     @JsProperty(name="in1")
     public native SVGAnimatedString getIn1();
     

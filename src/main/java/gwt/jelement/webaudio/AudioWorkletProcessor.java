@@ -22,5 +22,5 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="AudioWorkletProcessor", isNative = true)
-public class AudioWorkletProcessor extends IsObject{
+public class AudioWorkletProcessor implements IsObject {
 }

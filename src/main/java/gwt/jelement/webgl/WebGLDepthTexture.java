@@ -22,7 +22,7 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="WebGLDepthTexture", isNative = true)
-public class WebGLDepthTexture extends IsObject{
+public class WebGLDepthTexture implements IsObject {
     public static double UNSIGNED_INT_24_8_WEBGL; /* 0x84FA */
     
 }

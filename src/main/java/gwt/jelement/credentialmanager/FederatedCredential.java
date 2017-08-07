@@ -23,7 +23,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="FederatedCredential", isNative = true)
-public class FederatedCredential extends Credential{
+public class FederatedCredential extends Credential {
     @JsConstructor
     public FederatedCredential(FederatedCredentialInit data){
         super();

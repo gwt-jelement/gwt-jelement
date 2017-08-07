@@ -41,7 +41,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="CanvasRenderingContext2D", isNative = true)
-public class CanvasRenderingContext2D extends IsObject{
+public class CanvasRenderingContext2D implements IsObject {
     @JsType(isNative = true, name = "?", namespace = JsPackage.GLOBAL)
     public interface StrokeStyleUnion {
         @JsOverlay

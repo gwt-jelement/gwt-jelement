@@ -25,7 +25,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="FileWriterSync", isNative = true)
-public class FileWriterSync extends IsObject{
+public class FileWriterSync implements IsObject {
     @JsProperty(name="position")
     public native double getPosition();
     

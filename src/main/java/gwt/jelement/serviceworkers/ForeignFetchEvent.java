@@ -26,7 +26,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="ForeignFetchEvent", isNative = true)
-public class ForeignFetchEvent extends ExtendableEvent{
+public class ForeignFetchEvent extends ExtendableEvent {
     @JsConstructor
     public ForeignFetchEvent(String type, ForeignFetchEventInit eventInitDict){
         super((String) null);

@@ -23,7 +23,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="HTMLTableElement", isNative = true)
-public class HTMLTableElement extends HTMLElement{
+public class HTMLTableElement extends HTMLElement {
     @JsProperty(name="caption")
     public native HTMLTableCaptionElement getCaption();
     

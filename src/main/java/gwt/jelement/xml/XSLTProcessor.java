@@ -27,10 +27,9 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="XSLTProcessor", isNative = true)
-public class XSLTProcessor extends IsObject{
+public class XSLTProcessor implements IsObject {
     @JsConstructor
     public XSLTProcessor(){
-        super();
     }
     
     @JsMethod(name = "clearParameters")

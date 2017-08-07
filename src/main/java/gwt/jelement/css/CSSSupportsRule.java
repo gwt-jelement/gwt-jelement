@@ -21,5 +21,5 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="CSSSupportsRule", isNative = true)
-public class CSSSupportsRule extends CSSConditionRule{
+public class CSSSupportsRule extends CSSConditionRule {
 }

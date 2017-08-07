@@ -24,7 +24,7 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="XPathExpression", isNative = true)
-public class XPathExpression extends IsObject{
+public class XPathExpression implements IsObject {
     @JsMethod(name = "evaluate")
     public native XPathResult evaluate(Node contextNode);
     

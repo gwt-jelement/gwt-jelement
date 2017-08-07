@@ -22,5 +22,5 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="MIDIOutputMap", isNative = true)
-public class MIDIOutputMap extends IsObject{
+public class MIDIOutputMap implements IsObject {
 }

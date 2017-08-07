@@ -26,7 +26,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="MIDIPort", isNative = true)
-public class MIDIPort extends EventTarget{
+public class MIDIPort extends EventTarget {
     @JsProperty(name="onstatechange")
     private EventHandlerNonNull onstatechange;
     

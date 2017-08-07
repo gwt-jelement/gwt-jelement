@@ -27,7 +27,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="PasswordCredential", isNative = true)
-public class PasswordCredential extends Credential{
+public class PasswordCredential extends Credential {
     @JsType(isNative = true, name = "?", namespace = JsPackage.GLOBAL)
     public interface CredentialBodyType {
         @JsOverlay

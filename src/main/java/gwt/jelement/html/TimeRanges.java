@@ -24,7 +24,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="TimeRanges", isNative = true)
-public class TimeRanges extends IsObject{
+public class TimeRanges implements IsObject {
     @JsProperty(name="length")
     public native double getLength();
     

@@ -22,7 +22,7 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="XMLDocument", isNative = true)
-public class XMLDocument extends Document{
+public class XMLDocument extends Document {
     @JsConstructor
     public XMLDocument(){
         super();

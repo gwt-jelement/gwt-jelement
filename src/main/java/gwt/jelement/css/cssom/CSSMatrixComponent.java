@@ -25,7 +25,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="CSSMatrixComponent", isNative = true)
-public class CSSMatrixComponent extends CSSTransformComponent{
+public class CSSMatrixComponent extends CSSTransformComponent {
     @JsConstructor
     public CSSMatrixComponent(DOMMatrixReadOnly matrix){
         super();

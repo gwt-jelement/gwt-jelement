@@ -25,7 +25,7 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="PushMessageData", isNative = true)
-public class PushMessageData extends IsObject{
+public class PushMessageData implements IsObject {
     @JsMethod(name = "arrayBuffer")
     public native ArrayBuffer arrayBuffer();
     

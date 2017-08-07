@@ -24,7 +24,7 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="IIRFilterNode", isNative = true)
-public class IIRFilterNode extends AudioNode{
+public class IIRFilterNode extends AudioNode {
     @JsConstructor
     public IIRFilterNode(BaseAudioContext context, IIRFilterOptions options){
         super();

@@ -25,7 +25,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="BackgroundFetchedEvent", isNative = true)
-public class BackgroundFetchedEvent extends BackgroundFetchEvent{
+public class BackgroundFetchedEvent extends BackgroundFetchEvent {
     @JsConstructor
     public BackgroundFetchedEvent(String type, BackgroundFetchedEventInit init){
         super((String) null, (BackgroundFetchEventInit) null);

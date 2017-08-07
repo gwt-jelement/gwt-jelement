@@ -24,7 +24,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="IDBKeyRange", isNative = true)
-public class IDBKeyRange extends IsObject{
+public class IDBKeyRange implements IsObject {
     @JsProperty(name="lower")
     public native Object getLower();
     

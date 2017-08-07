@@ -28,7 +28,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="DOMMatrix", isNative = true)
-public class DOMMatrix extends DOMMatrixReadOnly{
+public class DOMMatrix extends DOMMatrixReadOnly {
     @JsConstructor
     public DOMMatrix(){
         super();

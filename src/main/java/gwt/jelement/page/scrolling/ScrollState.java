@@ -25,15 +25,13 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="ScrollState", isNative = true)
-public class ScrollState extends IsObject{
+public class ScrollState implements IsObject {
     @JsConstructor
     public ScrollState(){
-        super();
     }
     
     @JsConstructor
     public ScrollState(ScrollStateInit scrollStateInit){
-        super();
     }
     
     @JsProperty(name="deltaX")

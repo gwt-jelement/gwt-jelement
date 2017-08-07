@@ -22,7 +22,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="HTMLTitleElement", isNative = true)
-public class HTMLTitleElement extends HTMLElement{
+public class HTMLTitleElement extends HTMLElement {
     @JsProperty(name="text")
     public native String getText();
     

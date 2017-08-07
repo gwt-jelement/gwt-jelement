@@ -24,18 +24,16 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="USBOutTransferResult", isNative = true)
-public class USBOutTransferResult extends IsObject{
+public class USBOutTransferResult implements IsObject {
     @JsProperty(name="status")
     private String status;
     
     @JsConstructor
     public USBOutTransferResult(USBTransferStatus status){
-        super();
     }
     
     @JsConstructor
     public USBOutTransferResult(USBTransferStatus status, double bytesWritten){
-        super();
     }
     
     @JsProperty(name="bytesWritten")

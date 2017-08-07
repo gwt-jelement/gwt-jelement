@@ -23,7 +23,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="AppBannerPromptResult", isNative = true)
-public class AppBannerPromptResult extends IsObject{
+public class AppBannerPromptResult implements IsObject {
     @JsProperty(name="outcome")
     private String outcome;
     

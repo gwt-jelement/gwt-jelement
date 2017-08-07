@@ -28,7 +28,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="CompositorWorker", isNative = true)
-public class CompositorWorker extends EventTarget{
+public class CompositorWorker extends EventTarget {
     @JsProperty(name="onmessage")
     private EventHandlerNonNull onmessage;
     

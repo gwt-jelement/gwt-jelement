@@ -22,7 +22,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="SVGUseElement", isNative = true)
-public class SVGUseElement extends SVGGraphicsElement{
+public class SVGUseElement extends SVGGraphicsElement {
     @JsProperty(name="x")
     public native SVGAnimatedLength getX();
     

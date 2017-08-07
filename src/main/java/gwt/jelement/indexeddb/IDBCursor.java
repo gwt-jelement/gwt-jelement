@@ -24,7 +24,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="IDBCursor", isNative = true)
-public class IDBCursor extends IsObject{
+public class IDBCursor implements IsObject {
     @JsProperty(name="direction")
     private String direction;
     

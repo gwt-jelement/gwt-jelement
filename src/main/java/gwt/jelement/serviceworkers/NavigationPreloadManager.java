@@ -24,7 +24,7 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="NavigationPreloadManager", isNative = true)
-public class NavigationPreloadManager extends IsObject{
+public class NavigationPreloadManager implements IsObject {
     @JsMethod(name = "disable")
     public native Promise<Void> disable();
     

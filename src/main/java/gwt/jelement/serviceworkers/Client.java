@@ -26,7 +26,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="Client", isNative = true)
-public class Client extends IsObject{
+public class Client implements IsObject {
     @JsProperty(name="type")
     private String type;
     

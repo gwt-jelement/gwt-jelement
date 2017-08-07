@@ -23,7 +23,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="SVGFitToViewBox", isNative = true)
-public class SVGFitToViewBox extends IsObject{
+public class SVGFitToViewBox implements IsObject {
     @JsProperty(name="viewBox")
     public native SVGAnimatedRect getViewBox();
     

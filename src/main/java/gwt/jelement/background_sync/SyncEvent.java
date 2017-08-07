@@ -24,7 +24,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="SyncEvent", isNative = true)
-public class SyncEvent extends ExtendableEvent{
+public class SyncEvent extends ExtendableEvent {
     @JsConstructor
     public SyncEvent(String type, SyncEventInit init){
         super((String) null);

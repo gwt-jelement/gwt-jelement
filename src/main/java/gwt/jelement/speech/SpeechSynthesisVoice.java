@@ -23,7 +23,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="SpeechSynthesisVoice", isNative = true)
-public class SpeechSynthesisVoice extends IsObject{
+public class SpeechSynthesisVoice implements IsObject {
     @JsProperty(name="voiceURI")
     public native String getVoiceURI();
     

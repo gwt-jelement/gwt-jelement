@@ -17,6 +17,7 @@
 package gwt.jelement.clipboard;
 
 import gwt.jelement.core.ArrayLike;
+import gwt.jelement.core.IsObject;
 import gwt.jelement.fileapi.File;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
@@ -24,7 +25,7 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="DataTransferItemList", isNative = true)
-public class DataTransferItemList extends ArrayLike{
+public class DataTransferItemList implements IsObject, ArrayLike<DataTransferItem> {
     @JsMethod(name = "add")
     public native DataTransferItem add(File file);
     

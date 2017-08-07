@@ -26,7 +26,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="VideoTrackList", isNative = true)
-public class VideoTrackList extends EventTarget{
+public class VideoTrackList extends EventTarget {
     @JsProperty(name="onchange")
     private EventHandlerNonNull onchange;
     

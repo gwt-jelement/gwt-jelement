@@ -23,7 +23,7 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="XPathNSResolver", isNative = true)
-public class XPathNSResolver extends IsObject{
+public class XPathNSResolver implements IsObject {
     @JsMethod(name = "lookupNamespaceURI")
     public native String lookupNamespaceURI();
     

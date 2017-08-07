@@ -25,7 +25,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="Location", isNative = true)
-public class Location extends IsObject{
+public class Location implements IsObject {
     @JsProperty(name="ancestorOrigins")
     public native DOMStringList getAncestorOrigins();
     

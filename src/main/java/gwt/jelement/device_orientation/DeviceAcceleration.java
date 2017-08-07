@@ -23,7 +23,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="DeviceAcceleration", isNative = true)
-public class DeviceAcceleration extends IsObject{
+public class DeviceAcceleration implements IsObject {
     @JsProperty(name="x")
     public native double getX();
     

@@ -24,7 +24,7 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="WindowTimers", isNative = true)
-public class WindowTimers extends IsObject{
+public class WindowTimers implements IsObject {
     @JsMethod(name = "clearInterval")
     public native void clearInterval();
     

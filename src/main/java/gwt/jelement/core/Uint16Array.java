@@ -24,7 +24,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="Uint16Array", isNative = true)
-public class Uint16Array extends ArrayBufferView{
+public class Uint16Array extends ArrayBufferView {
     public static double BYTES_PER_ELEMENT; /* 2 */
     
     @JsConstructor

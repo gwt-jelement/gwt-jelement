@@ -23,7 +23,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="CSSRule", isNative = true)
-public class CSSRule extends IsObject{
+public class CSSRule implements IsObject {
     public static short STYLE_RULE; /* 1 */
     public static short CHARSET_RULE; /* 2 */
     public static short IMPORT_RULE; /* 3 */

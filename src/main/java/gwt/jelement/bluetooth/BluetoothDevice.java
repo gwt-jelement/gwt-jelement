@@ -24,7 +24,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="BluetoothDevice", isNative = true)
-public class BluetoothDevice extends EventTarget{
+public class BluetoothDevice extends EventTarget {
     @JsProperty(name="ongattserverdisconnected")
     private EventHandlerNonNull ongattserverdisconnected;
     

@@ -26,7 +26,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="USB", isNative = true)
-public class USB extends EventTarget{
+public class USB extends EventTarget {
     @JsProperty(name="onconnect")
     private EventHandlerNonNull onconnect;
     

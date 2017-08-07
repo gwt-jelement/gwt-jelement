@@ -22,7 +22,7 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="Iterator", isNative = true)
-public class Iterator<T extends IteratorValue <V>,V> extends IsObject{
+public class Iterator<T extends IteratorValue <V>,V> implements IsObject {
     @JsMethod(name = "next")
     public native T next();
     

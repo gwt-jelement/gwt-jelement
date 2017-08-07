@@ -24,7 +24,7 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="StorageManager", isNative = true)
-public class StorageManager extends IsObject{
+public class StorageManager implements IsObject {
     @JsMethod(name = "estimate")
     public native Promise<StorageEstimate> estimate();
     

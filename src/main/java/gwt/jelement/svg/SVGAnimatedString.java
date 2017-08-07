@@ -23,7 +23,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="SVGAnimatedString", isNative = true)
-public class SVGAnimatedString extends IsObject{
+public class SVGAnimatedString implements IsObject {
     @JsProperty(name="baseVal")
     public native String getBaseVal();
     

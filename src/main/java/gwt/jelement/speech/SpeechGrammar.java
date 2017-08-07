@@ -24,10 +24,9 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="SpeechGrammar", isNative = true)
-public class SpeechGrammar extends IsObject{
+public class SpeechGrammar implements IsObject {
     @JsConstructor
     public SpeechGrammar(){
-        super();
     }
     
     @JsProperty(name="src")

@@ -23,7 +23,7 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="DeprecatedStorageInfo", isNative = true)
-public class DeprecatedStorageInfo extends IsObject{
+public class DeprecatedStorageInfo implements IsObject {
     public static short TEMPORARY; /* 0 */
     public static short PERSISTENT; /* 1 */
     

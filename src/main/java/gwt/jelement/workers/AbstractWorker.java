@@ -24,7 +24,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="AbstractWorker", isNative = true)
-public class AbstractWorker extends IsObject{
+public class AbstractWorker implements IsObject {
     @JsProperty(name="onerror")
     private EventHandlerNonNull onerror;
     

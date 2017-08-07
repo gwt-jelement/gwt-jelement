@@ -24,7 +24,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="SVGTransform", isNative = true)
-public class SVGTransform extends IsObject{
+public class SVGTransform implements IsObject {
     public static short SVG_TRANSFORM_UNKNOWN; /* 0 */
     public static short SVG_TRANSFORM_MATRIX; /* 1 */
     public static short SVG_TRANSFORM_TRANSLATE; /* 2 */

@@ -21,5 +21,5 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="SVGTextElement", isNative = true)
-public class SVGTextElement extends SVGTextPositioningElement{
+public class SVGTextElement extends SVGTextPositioningElement {
 }

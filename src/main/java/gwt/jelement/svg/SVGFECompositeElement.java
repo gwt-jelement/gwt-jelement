@@ -22,7 +22,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="SVGFECompositeElement", isNative = true)
-public class SVGFECompositeElement extends SVGElement{
+public class SVGFECompositeElement extends SVGElement {
     public static short SVG_FECOMPOSITE_OPERATOR_UNKNOWN; /* 0 */
     public static short SVG_FECOMPOSITE_OPERATOR_OVER; /* 1 */
     public static short SVG_FECOMPOSITE_OPERATOR_IN; /* 2 */

@@ -29,7 +29,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="SharedWorkerGlobalScope", isNative = true)
-public class SharedWorkerGlobalScope extends WorkerGlobalScope{
+public class SharedWorkerGlobalScope extends WorkerGlobalScope {
     public static short TEMPORARY; /* 0 */
     public static short PERSISTENT; /* 1 */
     

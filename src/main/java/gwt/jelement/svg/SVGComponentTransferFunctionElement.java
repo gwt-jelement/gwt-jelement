@@ -22,7 +22,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="SVGComponentTransferFunctionElement", isNative = true)
-public class SVGComponentTransferFunctionElement extends SVGElement{
+public class SVGComponentTransferFunctionElement extends SVGElement {
     public static short SVG_FECOMPONENTTRANSFER_TYPE_UNKNOWN; /* 0 */
     public static short SVG_FECOMPONENTTRANSFER_TYPE_IDENTITY; /* 1 */
     public static short SVG_FECOMPONENTTRANSFER_TYPE_TABLE; /* 2 */

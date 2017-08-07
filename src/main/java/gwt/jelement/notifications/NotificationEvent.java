@@ -24,7 +24,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="NotificationEvent", isNative = true)
-public class NotificationEvent extends ExtendableEvent{
+public class NotificationEvent extends ExtendableEvent {
     @JsConstructor
     public NotificationEvent(String type, NotificationEventInit eventInitDict){
         super((String) null);

@@ -21,5 +21,5 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="SVGTitleElement", isNative = true)
-public class SVGTitleElement extends SVGElement{
+public class SVGTitleElement extends SVGElement {
 }

@@ -27,7 +27,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="ServiceWorker", isNative = true)
-public class ServiceWorker extends EventTarget{
+public class ServiceWorker extends EventTarget {
     @JsProperty(name="onstatechange")
     private EventHandlerNonNull onstatechange;
     

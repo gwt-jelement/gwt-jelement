@@ -27,20 +27,17 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="TextDecoder", isNative = true)
-public class TextDecoder extends IsObject{
+public class TextDecoder implements IsObject {
     @JsConstructor
     public TextDecoder(){
-        super();
     }
     
     @JsConstructor
     public TextDecoder(String label){
-        super();
     }
     
     @JsConstructor
     public TextDecoder(String label, TextDecoderOptions options){
-        super();
     }
     
     @JsProperty(name="encoding")

@@ -26,7 +26,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="AnalyserNode", isNative = true)
-public class AnalyserNode extends AudioNode{
+public class AnalyserNode extends AudioNode {
     @JsConstructor
     public AnalyserNode(BaseAudioContext context){
         super();

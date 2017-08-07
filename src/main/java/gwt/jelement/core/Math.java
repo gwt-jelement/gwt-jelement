@@ -22,7 +22,7 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="Math", isNative = true)
-public class Math extends IsObject{
+public class Math implements IsObject {
     public static double E; /* 2.718281828459045 */
     public static double LN2; /* 0.6931471805599453 */
     public static double LN10; /* 2.302585092994046 */

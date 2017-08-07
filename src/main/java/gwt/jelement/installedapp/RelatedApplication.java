@@ -23,7 +23,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="RelatedApplication", isNative = true)
-public class RelatedApplication extends IsObject{
+public class RelatedApplication implements IsObject {
     @JsProperty(name="platform")
     public native String getPlatform();
     

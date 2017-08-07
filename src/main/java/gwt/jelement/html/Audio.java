@@ -22,7 +22,7 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="Audio", isNative = true)
-public class Audio extends HTMLAudioElement{
+public class Audio extends HTMLAudioElement {
     @JsConstructor
     public Audio(){
         super();

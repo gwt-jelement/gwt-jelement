@@ -22,7 +22,7 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="Option", isNative = true)
-public class Option extends HTMLOptionElement{
+public class Option extends HTMLOptionElement {
     @JsConstructor
     public Option(){
         super();

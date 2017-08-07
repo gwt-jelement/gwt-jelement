@@ -22,7 +22,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="CSSConditionRule", isNative = true)
-public class CSSConditionRule extends CSSGroupingRule{
+public class CSSConditionRule extends CSSGroupingRule {
     @JsProperty(name="conditionText")
     public native String getConditionText();
     

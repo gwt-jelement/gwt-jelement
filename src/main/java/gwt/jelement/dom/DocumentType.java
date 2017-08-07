@@ -23,7 +23,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="DocumentType", isNative = true)
-public class DocumentType extends Node{
+public class DocumentType extends Node {
     @JsProperty(name="name")
     public native String getName();
     

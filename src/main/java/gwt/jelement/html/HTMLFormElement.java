@@ -25,7 +25,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="HTMLFormElement", isNative = true)
-public class HTMLFormElement extends HTMLElement{
+public class HTMLFormElement extends HTMLElement {
     @JsType(isNative = true, name = "?", namespace = JsPackage.GLOBAL)
     public interface FormControlsUnion {
         @JsOverlay

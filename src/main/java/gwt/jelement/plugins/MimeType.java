@@ -23,7 +23,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="MimeType", isNative = true)
-public class MimeType extends IsObject{
+public class MimeType implements IsObject {
     @JsProperty(name="type")
     public native String getType();
     

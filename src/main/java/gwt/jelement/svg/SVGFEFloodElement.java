@@ -22,7 +22,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="SVGFEFloodElement", isNative = true)
-public class SVGFEFloodElement extends SVGElement{
+public class SVGFEFloodElement extends SVGElement {
     @JsProperty(name="x")
     public native SVGAnimatedLength getX();
     

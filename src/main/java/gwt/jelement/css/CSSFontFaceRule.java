@@ -22,7 +22,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="CSSFontFaceRule", isNative = true)
-public class CSSFontFaceRule extends CSSRule{
+public class CSSFontFaceRule extends CSSRule {
     @JsProperty(name="style")
     public native CSSStyleDeclaration getStyle();
     

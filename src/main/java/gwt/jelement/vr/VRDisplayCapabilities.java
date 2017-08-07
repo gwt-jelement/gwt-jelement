@@ -23,7 +23,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="VRDisplayCapabilities", isNative = true)
-public class VRDisplayCapabilities extends IsObject{
+public class VRDisplayCapabilities implements IsObject {
     @JsProperty(name="hasPosition")
     public native boolean getHasPosition();
     

@@ -22,7 +22,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="SVGFEBlendElement", isNative = true)
-public class SVGFEBlendElement extends SVGElement{
+public class SVGFEBlendElement extends SVGElement {
     public static short SVG_FEBLEND_MODE_UNKNOWN; /* 0 */
     public static short SVG_FEBLEND_MODE_NORMAL; /* 1 */
     public static short SVG_FEBLEND_MODE_MULTIPLY; /* 2 */

@@ -23,7 +23,7 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="WindowBase64", isNative = true)
-public class WindowBase64 extends IsObject{
+public class WindowBase64 implements IsObject {
     @JsMethod(name = "atob")
     public native String atob(String atob);
     

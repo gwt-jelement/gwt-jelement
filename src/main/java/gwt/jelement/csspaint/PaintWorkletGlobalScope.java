@@ -24,7 +24,7 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="PaintWorkletGlobalScope", isNative = true)
-public class PaintWorkletGlobalScope extends WorkletGlobalScope{
+public class PaintWorkletGlobalScope extends WorkletGlobalScope {
     @JsMethod(name = "registerPaint")
     public native void registerPaint(String name, Function paintCtor);
     

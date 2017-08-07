@@ -23,7 +23,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="ClientRect", isNative = true)
-public class ClientRect extends IsObject{
+public class ClientRect implements IsObject {
     @JsProperty(name="top")
     public native double getTop();
     

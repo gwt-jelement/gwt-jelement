@@ -24,7 +24,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="SVGAngle", isNative = true)
-public class SVGAngle extends IsObject{
+public class SVGAngle implements IsObject {
     public static short SVG_ANGLETYPE_UNKNOWN; /* 0 */
     public static short SVG_ANGLETYPE_UNSPECIFIED; /* 1 */
     public static short SVG_ANGLETYPE_DEG; /* 2 */

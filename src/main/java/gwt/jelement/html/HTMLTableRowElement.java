@@ -23,7 +23,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="HTMLTableRowElement", isNative = true)
-public class HTMLTableRowElement extends HTMLElement{
+public class HTMLTableRowElement extends HTMLElement {
     @JsProperty(name="rowIndex")
     public native double getRowIndex();
     

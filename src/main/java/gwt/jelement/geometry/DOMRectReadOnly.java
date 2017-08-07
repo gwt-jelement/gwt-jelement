@@ -25,30 +25,25 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="DOMRectReadOnly", isNative = true)
-public class DOMRectReadOnly extends IsObject{
+public class DOMRectReadOnly implements IsObject {
     @JsConstructor
     public DOMRectReadOnly(){
-        super();
     }
     
     @JsConstructor
     public DOMRectReadOnly(double x){
-        super();
     }
     
     @JsConstructor
     public DOMRectReadOnly(double x, double y){
-        super();
     }
     
     @JsConstructor
     public DOMRectReadOnly(double x, double y, double width){
-        super();
     }
     
     @JsConstructor
     public DOMRectReadOnly(double x, double y, double width, double height){
-        super();
     }
     
     @JsProperty(name="x")

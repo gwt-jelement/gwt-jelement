@@ -22,7 +22,7 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="EXTsRGB", isNative = true)
-public class EXTsRGB extends IsObject{
+public class EXTsRGB implements IsObject {
     public static double SRGB_EXT; /* 0x8C40 */
     public static double SRGB_ALPHA_EXT; /* 0x8C42 */
     public static double SRGB8_ALPHA8_EXT; /* 0x8C43 */

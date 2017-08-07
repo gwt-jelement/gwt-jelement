@@ -22,7 +22,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="CSSResourceValue", isNative = true)
-public class CSSResourceValue extends CSSStyleValue{
+public class CSSResourceValue extends CSSStyleValue {
     @JsProperty(name="state")
     private String state;
     

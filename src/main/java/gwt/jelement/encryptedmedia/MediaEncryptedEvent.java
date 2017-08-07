@@ -25,7 +25,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="MediaEncryptedEvent", isNative = true)
-public class MediaEncryptedEvent extends Event{
+public class MediaEncryptedEvent extends Event {
     @JsConstructor
     public MediaEncryptedEvent(String type){
         super((String) null);

@@ -22,7 +22,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="HTMLFontElement", isNative = true)
-public class HTMLFontElement extends HTMLElement{
+public class HTMLFontElement extends HTMLElement {
     @JsProperty(name="color")
     public native String getColor();
     

@@ -25,7 +25,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="AudioContext", isNative = true)
-public class AudioContext extends BaseAudioContext{
+public class AudioContext extends BaseAudioContext {
     @JsConstructor
     public AudioContext(){
         super();

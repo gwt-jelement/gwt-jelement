@@ -29,10 +29,9 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="ImageCapture", isNative = true)
-public class ImageCapture extends IsObject{
+public class ImageCapture implements IsObject {
     @JsConstructor
     public ImageCapture(MediaStreamTrack track){
-        super();
     }
     
     @JsProperty(name="track")

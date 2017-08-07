@@ -23,7 +23,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="ProgressEvent", isNative = true)
-public class ProgressEvent extends Event{
+public class ProgressEvent extends Event {
     @JsConstructor
     public ProgressEvent(String type){
         super((String) null);

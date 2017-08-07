@@ -23,7 +23,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="HTMLFieldSetElement", isNative = true)
-public class HTMLFieldSetElement extends HTMLElement{
+public class HTMLFieldSetElement extends HTMLElement {
     @JsProperty(name="disabled")
     public native boolean getDisabled();
     

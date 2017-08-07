@@ -23,7 +23,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="DynamicsCompressorNode", isNative = true)
-public class DynamicsCompressorNode extends AudioNode{
+public class DynamicsCompressorNode extends AudioNode {
     @JsConstructor
     public DynamicsCompressorNode(BaseAudioContext context){
         super();

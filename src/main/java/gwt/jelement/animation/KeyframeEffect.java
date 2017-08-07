@@ -24,7 +24,7 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="KeyframeEffect", isNative = true)
-public class KeyframeEffect extends KeyframeEffectReadOnly{
+public class KeyframeEffect extends KeyframeEffectReadOnly {
     @JsConstructor
     public KeyframeEffect(Element target, JsObject[] effect){
         super((Element) null, (JsObject[]) null);

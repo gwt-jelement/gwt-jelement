@@ -26,7 +26,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="OfflineAudioContext", isNative = true)
-public class OfflineAudioContext extends BaseAudioContext{
+public class OfflineAudioContext extends BaseAudioContext {
     @JsProperty(name="oncomplete")
     private EventHandlerNonNull oncomplete;
     

@@ -22,7 +22,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="PerformanceNavigationTiming", isNative = true)
-public class PerformanceNavigationTiming extends PerformanceResourceTiming{
+public class PerformanceNavigationTiming extends PerformanceResourceTiming {
     @JsProperty(name="type")
     private String type;
     

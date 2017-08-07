@@ -24,7 +24,7 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="Console", isNative = true)
-public class Console extends IsObject{
+public class Console implements IsObject {
     @JsMethod(name = "assert")
     public native void assert_();
     

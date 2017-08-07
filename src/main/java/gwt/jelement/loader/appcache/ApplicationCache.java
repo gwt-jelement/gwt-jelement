@@ -25,7 +25,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="ApplicationCache", isNative = true)
-public class ApplicationCache extends EventTarget{
+public class ApplicationCache extends EventTarget {
     public static short UNCACHED; /* 0 */
     public static short IDLE; /* 1 */
     public static short CHECKING; /* 2 */

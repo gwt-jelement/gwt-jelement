@@ -25,7 +25,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="HTMLLinkElement", isNative = true)
-public class HTMLLinkElement extends HTMLElement{
+public class HTMLLinkElement extends HTMLElement {
     @JsProperty(name="disabled")
     public native boolean getDisabled();
     

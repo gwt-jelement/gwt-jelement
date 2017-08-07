@@ -21,5 +21,5 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="HTMLAudioElement", isNative = true)
-public class HTMLAudioElement extends HTMLMediaElement{
+public class HTMLAudioElement extends HTMLMediaElement {
 }

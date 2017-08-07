@@ -17,6 +17,7 @@
 package gwt.jelement.dom;
 
 import gwt.jelement.core.ArrayLike;
+import gwt.jelement.core.IsObject;
 import gwt.jelement.core.Js;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
@@ -24,7 +25,7 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="NamedNodeMap", isNative = true)
-public class NamedNodeMap extends ArrayLike{
+public class NamedNodeMap implements IsObject, ArrayLike<Attr> {
     @JsOverlay
     public final Attr get(String name){
         return (Attr) Js.get(this.object(), name);

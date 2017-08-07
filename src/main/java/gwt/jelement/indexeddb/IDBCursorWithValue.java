@@ -22,7 +22,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="IDBCursorWithValue", isNative = true)
-public class IDBCursorWithValue extends IDBCursor{
+public class IDBCursorWithValue extends IDBCursor {
     @JsProperty(name="value")
     public native Object getValue();
     

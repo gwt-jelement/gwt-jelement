@@ -23,7 +23,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="VideoPlaybackQuality", isNative = true)
-public class VideoPlaybackQuality extends IsObject{
+public class VideoPlaybackQuality implements IsObject {
     @JsProperty(name="creationTime")
     public native double getCreationTime();
     

@@ -23,7 +23,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="SVGTests", isNative = true)
-public class SVGTests extends IsObject{
+public class SVGTests implements IsObject {
     @JsProperty(name="requiredExtensions")
     public native SVGStringList getRequiredExtensions();
     

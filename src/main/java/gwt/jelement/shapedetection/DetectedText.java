@@ -25,10 +25,9 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="DetectedText", isNative = true)
-public class DetectedText extends IsObject{
+public class DetectedText implements IsObject {
     @JsConstructor
     public DetectedText(){
-        super();
     }
     
     @JsProperty(name="rawValue")

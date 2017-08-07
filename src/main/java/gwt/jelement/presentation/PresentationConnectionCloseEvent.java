@@ -24,7 +24,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="PresentationConnectionCloseEvent", isNative = true)
-public class PresentationConnectionCloseEvent extends Event{
+public class PresentationConnectionCloseEvent extends Event {
     @JsProperty(name="reason")
     private String reason;
     

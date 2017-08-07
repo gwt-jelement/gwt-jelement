@@ -22,7 +22,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="HTMLParamElement", isNative = true)
-public class HTMLParamElement extends HTMLElement{
+public class HTMLParamElement extends HTMLElement {
     @JsProperty(name="name")
     public native String getName();
     

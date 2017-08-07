@@ -29,23 +29,20 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="Response", isNative = true)
-public class Response extends IsObject{
+public class Response implements IsObject {
     @JsProperty(name="type")
     private String type;
     
     @JsConstructor
     public Response(){
-        super();
     }
     
     @JsConstructor
     public Response(Object body){
-        super();
     }
     
     @JsConstructor
     public Response(Object body, ResponseInit init){
-        super();
     }
     
     @JsProperty(name="url")

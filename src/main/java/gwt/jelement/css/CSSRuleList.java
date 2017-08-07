@@ -17,13 +17,14 @@
 package gwt.jelement.css;
 
 import gwt.jelement.core.ArrayLike;
+import gwt.jelement.core.IsObject;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="CSSRuleList", isNative = true)
-public class CSSRuleList extends ArrayLike{
+public class CSSRuleList implements IsObject, ArrayLike<CSSRule> {
     @JsMethod(name = "item")
     public native CSSRule item(double index);
     

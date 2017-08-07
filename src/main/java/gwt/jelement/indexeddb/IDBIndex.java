@@ -24,7 +24,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="IDBIndex", isNative = true)
-public class IDBIndex extends IsObject{
+public class IDBIndex implements IsObject {
     @JsProperty(name="name")
     public native String getName();
     

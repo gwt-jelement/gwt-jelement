@@ -24,7 +24,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="RTCRtpSender", isNative = true)
-public class RTCRtpSender extends IsObject{
+public class RTCRtpSender implements IsObject {
     @JsProperty(name="track")
     public native MediaStreamTrack getTrack();
     

@@ -25,7 +25,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="HTMLOutputElement", isNative = true)
-public class HTMLOutputElement extends HTMLElement{
+public class HTMLOutputElement extends HTMLElement {
     @JsProperty(name="htmlFor")
     public native DOMTokenList getHtmlFor();
     

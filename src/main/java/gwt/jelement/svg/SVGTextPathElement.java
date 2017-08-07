@@ -22,7 +22,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="SVGTextPathElement", isNative = true)
-public class SVGTextPathElement extends SVGTextContentElement{
+public class SVGTextPathElement extends SVGTextContentElement {
     public static short TEXTPATH_METHODTYPE_UNKNOWN; /* 0 */
     public static short TEXTPATH_METHODTYPE_ALIGN; /* 1 */
     public static short TEXTPATH_METHODTYPE_STRETCH; /* 2 */

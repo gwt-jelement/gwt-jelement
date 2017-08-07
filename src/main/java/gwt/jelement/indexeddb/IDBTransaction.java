@@ -27,7 +27,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="IDBTransaction", isNative = true)
-public class IDBTransaction extends EventTarget{
+public class IDBTransaction extends EventTarget {
     @JsProperty(name="onabort")
     private EventHandlerNonNull onabort;
     

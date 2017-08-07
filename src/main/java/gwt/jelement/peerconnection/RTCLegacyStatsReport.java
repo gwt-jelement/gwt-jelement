@@ -25,7 +25,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="RTCLegacyStatsReport", isNative = true)
-public class RTCLegacyStatsReport extends IsObject{
+public class RTCLegacyStatsReport implements IsObject {
     @JsProperty(name="timestamp")
     public native Date getTimestamp();
     

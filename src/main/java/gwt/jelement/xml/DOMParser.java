@@ -25,10 +25,9 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="DOMParser", isNative = true)
-public class DOMParser extends IsObject{
+public class DOMParser implements IsObject {
     @JsConstructor
     public DOMParser(){
-        super();
     }
     
     @JsOverlay

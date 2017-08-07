@@ -17,13 +17,14 @@
 package gwt.jelement.dom;
 
 import gwt.jelement.core.ArrayLike;
+import gwt.jelement.core.IsObject;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="ClientRectList", isNative = true)
-public class ClientRectList extends ArrayLike{
+public class ClientRectList implements IsObject, ArrayLike<ClientRect> {
     @JsMethod(name = "item")
     public native ClientRect item(double index);
     

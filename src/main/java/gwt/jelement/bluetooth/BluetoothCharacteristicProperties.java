@@ -23,7 +23,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="BluetoothCharacteristicProperties", isNative = true)
-public class BluetoothCharacteristicProperties extends IsObject{
+public class BluetoothCharacteristicProperties implements IsObject {
     @JsProperty(name="broadcast")
     public native boolean getBroadcast();
     

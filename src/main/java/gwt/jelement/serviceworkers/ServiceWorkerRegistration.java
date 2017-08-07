@@ -32,7 +32,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="ServiceWorkerRegistration", isNative = true)
-public class ServiceWorkerRegistration extends EventTarget{
+public class ServiceWorkerRegistration extends EventTarget {
     @JsProperty(name="onupdatefound")
     private EventHandlerNonNull onupdatefound;
     

@@ -24,18 +24,16 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="RTCSessionDescription", isNative = true)
-public class RTCSessionDescription extends IsObject{
+public class RTCSessionDescription implements IsObject {
     @JsProperty(name="type")
     private String type;
     
     @JsConstructor
     public RTCSessionDescription(){
-        super();
     }
     
     @JsConstructor
     public RTCSessionDescription(RTCSessionDescriptionInit descriptionInitDict){
-        super();
     }
     
     @JsProperty(name="sdp")

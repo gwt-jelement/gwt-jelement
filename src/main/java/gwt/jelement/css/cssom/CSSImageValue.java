@@ -22,7 +22,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="CSSImageValue", isNative = true)
-public class CSSImageValue extends CSSResourceValue{
+public class CSSImageValue extends CSSResourceValue {
     @JsProperty(name="intrinsicWidth")
     public native double getIntrinsicWidth();
     

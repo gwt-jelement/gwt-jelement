@@ -26,7 +26,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="PushSubscription", isNative = true)
-public class PushSubscription extends IsObject{
+public class PushSubscription implements IsObject {
     @JsProperty(name="endpoint")
     public native String getEndpoint();
     

@@ -26,7 +26,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="BroadcastChannel", isNative = true)
-public class BroadcastChannel extends EventTarget{
+public class BroadcastChannel extends EventTarget {
     @JsProperty(name="onmessage")
     private EventHandlerNonNull onmessage;
     

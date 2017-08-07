@@ -24,7 +24,7 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="SyncManager", isNative = true)
-public class SyncManager extends IsObject{
+public class SyncManager implements IsObject {
     @JsMethod(name = "getTags")
     public native Promise<String[]> getTags();
     

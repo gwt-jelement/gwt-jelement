@@ -23,7 +23,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="CredentialUserData", isNative = true)
-public class CredentialUserData extends IsObject{
+public class CredentialUserData implements IsObject {
     @JsProperty(name="name")
     public native String getName();
     

@@ -24,7 +24,7 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="SQLTransaction", isNative = true)
-public class SQLTransaction extends IsObject{
+public class SQLTransaction implements IsObject {
     @JsMethod(name = "executeSql")
     public native void executeSql(String sqlStatement);
     

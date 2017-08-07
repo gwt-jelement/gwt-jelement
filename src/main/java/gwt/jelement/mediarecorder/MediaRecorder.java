@@ -27,7 +27,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="MediaRecorder", isNative = true)
-public class MediaRecorder extends EventTarget{
+public class MediaRecorder extends EventTarget {
     @JsProperty(name="onstart")
     private EventHandlerNonNull onstart;
     

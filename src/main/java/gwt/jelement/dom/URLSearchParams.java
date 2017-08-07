@@ -25,25 +25,21 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="URLSearchParams", isNative = true)
-public class URLSearchParams extends IsObject{
+public class URLSearchParams implements IsObject {
     @JsConstructor
     public URLSearchParams(){
-        super();
     }
     
     @JsConstructor
     public URLSearchParams(String[][] init){
-        super();
     }
     
     @JsConstructor
     public URLSearchParams(JsObject<String> init){
-        super();
     }
     
     @JsConstructor
     public URLSearchParams(String init){
-        super();
     }
     
     @JsMethod(name = "append")

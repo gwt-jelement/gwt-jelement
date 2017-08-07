@@ -24,7 +24,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="WebGLContextEvent", isNative = true)
-public class WebGLContextEvent extends Event{
+public class WebGLContextEvent extends Event {
     @JsConstructor
     public WebGLContextEvent(String type){
         super((String) null);

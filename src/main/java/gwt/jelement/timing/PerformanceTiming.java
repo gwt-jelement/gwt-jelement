@@ -23,7 +23,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="PerformanceTiming", isNative = true)
-public class PerformanceTiming extends IsObject{
+public class PerformanceTiming implements IsObject {
     @JsProperty(name="navigationStart")
     public native double getNavigationStart();
     

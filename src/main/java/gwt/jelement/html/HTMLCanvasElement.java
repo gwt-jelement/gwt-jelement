@@ -32,7 +32,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="HTMLCanvasElement", isNative = true)
-public class HTMLCanvasElement extends HTMLElement{
+public class HTMLCanvasElement extends HTMLElement {
     @JsType(isNative = true, name = "?", namespace = JsPackage.GLOBAL)
     public interface RenderingContext {
         @JsOverlay

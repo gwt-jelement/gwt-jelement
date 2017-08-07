@@ -25,7 +25,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="TextTrack", isNative = true)
-public class TextTrack extends EventTarget{
+public class TextTrack extends EventTarget {
     @JsProperty(name="oncuechange")
     private EventHandlerNonNull oncuechange;
     

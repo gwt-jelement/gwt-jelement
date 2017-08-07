@@ -17,13 +17,14 @@
 package gwt.jelement.dom;
 
 import gwt.jelement.core.ArrayLike;
+import gwt.jelement.core.IsObject;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="DOMStringList", isNative = true)
-public class DOMStringList extends ArrayLike{
+public class DOMStringList implements IsObject, ArrayLike<String> {
     @JsMethod(name = "contains")
     public native boolean contains(String string);
     

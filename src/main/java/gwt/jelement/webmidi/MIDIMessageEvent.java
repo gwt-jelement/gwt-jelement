@@ -25,7 +25,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="MIDIMessageEvent", isNative = true)
-public class MIDIMessageEvent extends Event{
+public class MIDIMessageEvent extends Event {
     @JsConstructor
     public MIDIMessageEvent(String type){
         super((String) null);

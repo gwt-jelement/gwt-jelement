@@ -23,7 +23,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="AnimationEffectTiming", isNative = true)
-public class AnimationEffectTiming extends AnimationEffectTimingReadOnly{
+public class AnimationEffectTiming extends AnimationEffectTimingReadOnly {
     @JsProperty(name="duration")
     private AnimationEffectTimingReadOnly.DurationUnion duration;
     

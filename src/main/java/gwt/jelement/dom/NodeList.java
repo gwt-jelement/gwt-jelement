@@ -17,13 +17,14 @@
 package gwt.jelement.dom;
 
 import gwt.jelement.core.ArrayLike;
+import gwt.jelement.core.IsObject;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="NodeList", isNative = true)
-public class NodeList extends ArrayLike{
+public class NodeList implements IsObject, ArrayLike<Node> {
     @JsMethod(name = "item")
     public native Node item(double index);
     

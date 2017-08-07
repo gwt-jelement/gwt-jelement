@@ -25,10 +25,9 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="VRFrameData", isNative = true)
-public class VRFrameData extends IsObject{
+public class VRFrameData implements IsObject {
     @JsConstructor
     public VRFrameData(){
-        super();
     }
     
     @JsProperty(name="leftProjectionMatrix")

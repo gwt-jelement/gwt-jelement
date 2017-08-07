@@ -29,7 +29,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="BluetoothRemoteGATTCharacteristic", isNative = true)
-public class BluetoothRemoteGATTCharacteristic extends EventTarget{
+public class BluetoothRemoteGATTCharacteristic extends EventTarget {
     @JsProperty(name="oncharacteristicvaluechanged")
     private EventHandlerNonNull oncharacteristicvaluechanged;
     

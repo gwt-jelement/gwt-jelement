@@ -24,7 +24,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="USBEndpoint", isNative = true)
-public class USBEndpoint extends IsObject{
+public class USBEndpoint implements IsObject {
     @JsProperty(name="direction")
     private String direction;
     
@@ -33,7 +33,6 @@ public class USBEndpoint extends IsObject{
     
     @JsConstructor
     public USBEndpoint(USBAlternateInterface alternate, byte endpointNumber, USBDirection direction){
-        super();
     }
     
     @JsProperty(name="endpointNumber")

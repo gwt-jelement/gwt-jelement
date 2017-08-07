@@ -23,15 +23,13 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="PeriodicWave", isNative = true)
-public class PeriodicWave extends IsObject{
+public class PeriodicWave implements IsObject {
     @JsConstructor
     public PeriodicWave(BaseAudioContext context){
-        super();
     }
     
     @JsConstructor
     public PeriodicWave(BaseAudioContext context, PeriodicWaveOptions options){
-        super();
     }
     
 }

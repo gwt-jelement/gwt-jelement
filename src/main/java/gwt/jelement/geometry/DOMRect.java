@@ -25,7 +25,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="DOMRect", isNative = true)
-public class DOMRect extends DOMRectReadOnly{
+public class DOMRect extends DOMRectReadOnly {
     @JsConstructor
     public DOMRect(){
         super();

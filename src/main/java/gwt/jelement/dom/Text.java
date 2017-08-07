@@ -25,7 +25,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="Text", isNative = true)
-public class Text extends CharacterData{
+public class Text extends CharacterData {
     @JsConstructor
     public Text(){
         super();

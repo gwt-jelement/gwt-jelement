@@ -22,5 +22,5 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="WebGLProgram", isNative = true)
-public class WebGLProgram extends IsObject{
+public class WebGLProgram implements IsObject {
 }

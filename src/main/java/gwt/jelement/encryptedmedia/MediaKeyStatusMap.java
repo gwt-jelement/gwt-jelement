@@ -26,7 +26,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="MediaKeyStatusMap", isNative = true)
-public class MediaKeyStatusMap extends IsObject{
+public class MediaKeyStatusMap implements IsObject {
     @JsProperty(name="size")
     public native double getSize();
     

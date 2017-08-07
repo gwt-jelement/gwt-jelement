@@ -23,7 +23,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="FontFaceSource", isNative = true)
-public class FontFaceSource extends IsObject{
+public class FontFaceSource implements IsObject {
     @JsProperty(name="fonts")
     public native FontFaceSet getFonts();
     

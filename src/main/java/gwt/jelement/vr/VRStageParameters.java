@@ -24,7 +24,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="VRStageParameters", isNative = true)
-public class VRStageParameters extends IsObject{
+public class VRStageParameters implements IsObject {
     @JsProperty(name="sittingToStandingTransform")
     public native Float32Array getSittingToStandingTransform();
     

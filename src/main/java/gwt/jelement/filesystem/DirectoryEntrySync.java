@@ -22,7 +22,7 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="DirectoryEntrySync", isNative = true)
-public class DirectoryEntrySync extends EntrySync{
+public class DirectoryEntrySync extends EntrySync {
     @JsMethod(name = "createReader")
     public native DirectoryReaderSync createReader();
     

@@ -25,7 +25,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="MediaKeyMessageEvent", isNative = true)
-public class MediaKeyMessageEvent extends Event{
+public class MediaKeyMessageEvent extends Event {
     @JsProperty(name="messageType")
     private String messageType;
     

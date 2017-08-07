@@ -22,7 +22,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="HTMLSourceElement", isNative = true)
-public class HTMLSourceElement extends HTMLElement{
+public class HTMLSourceElement extends HTMLElement {
     @JsProperty(name="src")
     public native String getSrc();
     

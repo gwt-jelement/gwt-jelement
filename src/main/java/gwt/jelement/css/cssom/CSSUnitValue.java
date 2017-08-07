@@ -23,7 +23,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="CSSUnitValue", isNative = true)
-public class CSSUnitValue extends CSSNumericValue{
+public class CSSUnitValue extends CSSNumericValue {
     @JsConstructor
     public CSSUnitValue(double value, String unit){
         super();

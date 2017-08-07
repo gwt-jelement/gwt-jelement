@@ -22,7 +22,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="HTMLLegendElement", isNative = true)
-public class HTMLLegendElement extends HTMLElement{
+public class HTMLLegendElement extends HTMLElement {
     @JsProperty(name="form")
     public native HTMLFormElement getForm();
     

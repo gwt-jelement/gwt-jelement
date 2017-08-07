@@ -21,5 +21,5 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="SVGSwitchElement", isNative = true)
-public class SVGSwitchElement extends SVGGraphicsElement{
+public class SVGSwitchElement extends SVGGraphicsElement {
 }

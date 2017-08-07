@@ -22,7 +22,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="HTMLMapElement", isNative = true)
-public class HTMLMapElement extends HTMLElement{
+public class HTMLMapElement extends HTMLElement {
     @JsProperty(name="name")
     public native String getName();
     

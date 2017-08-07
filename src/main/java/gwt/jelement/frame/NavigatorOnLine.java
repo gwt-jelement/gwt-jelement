@@ -23,7 +23,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="NavigatorOnLine", isNative = true)
-public class NavigatorOnLine extends IsObject{
+public class NavigatorOnLine implements IsObject {
     @JsProperty(name="onLine")
     public native boolean getOnLine();
     

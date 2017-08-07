@@ -22,7 +22,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="CSSStyleRule", isNative = true)
-public class CSSStyleRule extends CSSRule{
+public class CSSStyleRule extends CSSRule {
     @JsProperty(name="selectorText")
     public native String getSelectorText();
     

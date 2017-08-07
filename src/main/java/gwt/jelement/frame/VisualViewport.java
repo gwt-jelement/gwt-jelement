@@ -23,7 +23,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="VisualViewport", isNative = true)
-public class VisualViewport extends EventTarget{
+public class VisualViewport extends EventTarget {
     @JsProperty(name="offsetLeft")
     public native double getOffsetLeft();
     

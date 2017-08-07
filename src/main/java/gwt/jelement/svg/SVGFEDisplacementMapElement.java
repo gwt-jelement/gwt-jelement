@@ -22,7 +22,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="SVGFEDisplacementMapElement", isNative = true)
-public class SVGFEDisplacementMapElement extends SVGElement{
+public class SVGFEDisplacementMapElement extends SVGElement {
     public static short SVG_CHANNEL_UNKNOWN; /* 0 */
     public static short SVG_CHANNEL_R; /* 1 */
     public static short SVG_CHANNEL_G; /* 2 */

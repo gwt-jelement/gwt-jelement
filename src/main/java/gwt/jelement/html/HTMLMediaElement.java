@@ -35,7 +35,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="HTMLMediaElement", isNative = true)
-public class HTMLMediaElement extends HTMLElement{
+public class HTMLMediaElement extends HTMLElement {
     public static short NETWORK_EMPTY; /* 0 */
     public static short NETWORK_IDLE; /* 1 */
     public static short NETWORK_LOADING; /* 2 */

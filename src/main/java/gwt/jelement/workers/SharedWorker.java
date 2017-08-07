@@ -26,7 +26,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="SharedWorker", isNative = true)
-public class SharedWorker extends EventTarget{
+public class SharedWorker extends EventTarget {
     @JsProperty(name="onerror")
     private EventHandlerNonNull onerror;
     

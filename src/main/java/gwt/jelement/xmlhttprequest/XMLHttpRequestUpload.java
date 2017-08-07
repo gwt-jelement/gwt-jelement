@@ -21,5 +21,5 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="XMLHttpRequestUpload", isNative = true)
-public class XMLHttpRequestUpload extends XMLHttpRequestEventTarget{
+public class XMLHttpRequestUpload extends XMLHttpRequestEventTarget {
 }
