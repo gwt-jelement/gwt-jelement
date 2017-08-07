@@ -17,9 +17,7 @@
 package gwt.jelement.webgl;
 
 import gwt.jelement.core.IsObject;
-import jsinterop.annotations.JsOverlay;
-import jsinterop.annotations.JsPackage;
-import jsinterop.annotations.JsType;
+import jsinterop.annotations.*;
 
 @JsType(namespace = JsPackage.GLOBAL, name="WebGLRenderbuffer", isNative = true)
 public class WebGLRenderbuffer implements IsObject {

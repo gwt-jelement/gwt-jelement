@@ -18,11 +18,7 @@ package gwt.jelement.peerconnection;
 
 import gwt.jelement.core.Date;
 import gwt.jelement.core.IsObject;
-import jsinterop.annotations.JsMethod;
-import jsinterop.annotations.JsOverlay;
-import jsinterop.annotations.JsPackage;
-import jsinterop.annotations.JsProperty;
-import jsinterop.annotations.JsType;
+import jsinterop.annotations.*;
 
 @JsType(namespace = JsPackage.GLOBAL, name="RTCLegacyStatsReport", isNative = true)
 public class RTCLegacyStatsReport implements IsObject {

@@ -16,9 +16,7 @@
  */
 package gwt.jelement.html;
 
-import jsinterop.annotations.JsOverlay;
-import jsinterop.annotations.JsPackage;
-import jsinterop.annotations.JsType;
+import jsinterop.annotations.*;
 
 @JsType(namespace = JsPackage.GLOBAL, name="HTMLPictureElement", isNative = true)
 public class HTMLPictureElement extends HTMLElement {

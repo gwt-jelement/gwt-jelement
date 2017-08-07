@@ -23,11 +23,7 @@ import gwt.jelement.events.EventTarget;
 import gwt.jelement.html.TimeRanges;
 import gwt.jelement.html.track.AudioTrackList;
 import gwt.jelement.html.track.VideoTrackList;
-import jsinterop.annotations.JsMethod;
-import jsinterop.annotations.JsOverlay;
-import jsinterop.annotations.JsPackage;
-import jsinterop.annotations.JsProperty;
-import jsinterop.annotations.JsType;
+import jsinterop.annotations.*;
 
 @JsType(namespace = JsPackage.GLOBAL, name="SourceBuffer", isNative = true)
 public class SourceBuffer extends EventTarget {

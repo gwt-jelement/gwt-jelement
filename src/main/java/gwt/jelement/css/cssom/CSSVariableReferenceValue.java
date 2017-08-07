@@ -17,10 +17,7 @@
 package gwt.jelement.css.cssom;
 
 import gwt.jelement.core.IsObject;
-import jsinterop.annotations.JsOverlay;
-import jsinterop.annotations.JsPackage;
-import jsinterop.annotations.JsProperty;
-import jsinterop.annotations.JsType;
+import jsinterop.annotations.*;
 
 @JsType(namespace = JsPackage.GLOBAL, name="CSSVariableReferenceValue", isNative = true)
 public class CSSVariableReferenceValue implements IsObject {

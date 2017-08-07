@@ -16,9 +16,7 @@
  */
 package gwt.jelement.svg;
 
-import jsinterop.annotations.JsOverlay;
-import jsinterop.annotations.JsPackage;
-import jsinterop.annotations.JsType;
+import jsinterop.annotations.*;
 
 @JsType(namespace = JsPackage.GLOBAL, name="SVGTitleElement", isNative = true)
 public class SVGTitleElement extends SVGElement {

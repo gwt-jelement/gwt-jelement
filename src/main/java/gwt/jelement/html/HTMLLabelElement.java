@@ -16,10 +16,7 @@
  */
 package gwt.jelement.html;
 
-import jsinterop.annotations.JsOverlay;
-import jsinterop.annotations.JsPackage;
-import jsinterop.annotations.JsProperty;
-import jsinterop.annotations.JsType;
+import jsinterop.annotations.*;
 
 @JsType(namespace = JsPackage.GLOBAL, name="HTMLLabelElement", isNative = true)
 public class HTMLLabelElement extends HTMLElement {

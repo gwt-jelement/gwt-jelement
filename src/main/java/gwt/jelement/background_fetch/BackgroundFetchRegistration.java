@@ -18,11 +18,7 @@ package gwt.jelement.background_fetch;
 
 import gwt.jelement.core.IsObject;
 import gwt.jelement.core.Promise;
-import jsinterop.annotations.JsMethod;
-import jsinterop.annotations.JsOverlay;
-import jsinterop.annotations.JsPackage;
-import jsinterop.annotations.JsProperty;
-import jsinterop.annotations.JsType;
+import jsinterop.annotations.*;
 
 @JsType(namespace = JsPackage.GLOBAL, name="BackgroundFetchRegistration", isNative = true)
 public class BackgroundFetchRegistration implements IsObject {

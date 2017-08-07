@@ -17,10 +17,7 @@
 package gwt.jelement.serviceworkers;
 
 import gwt.jelement.fetch.Request;
-import jsinterop.annotations.JsOverlay;
-import jsinterop.annotations.JsPackage;
-import jsinterop.annotations.JsProperty;
-import jsinterop.annotations.JsType;
+import jsinterop.annotations.*;
 
 @JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class FetchEventInit extends ExtendableEventInit{

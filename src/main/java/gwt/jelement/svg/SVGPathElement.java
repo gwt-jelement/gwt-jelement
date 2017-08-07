@@ -16,10 +16,7 @@
  */
 package gwt.jelement.svg;
 
-import jsinterop.annotations.JsMethod;
-import jsinterop.annotations.JsOverlay;
-import jsinterop.annotations.JsPackage;
-import jsinterop.annotations.JsType;
+import jsinterop.annotations.*;
 
 @JsType(namespace = JsPackage.GLOBAL, name="SVGPathElement", isNative = true)
 public class SVGPathElement extends SVGGeometryElement {

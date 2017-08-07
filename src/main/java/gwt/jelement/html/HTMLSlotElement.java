@@ -17,11 +17,7 @@
 package gwt.jelement.html;
 
 import gwt.jelement.dom.Node;
-import jsinterop.annotations.JsMethod;
-import jsinterop.annotations.JsOverlay;
-import jsinterop.annotations.JsPackage;
-import jsinterop.annotations.JsProperty;
-import jsinterop.annotations.JsType;
+import jsinterop.annotations.*;
 
 @JsType(namespace = JsPackage.GLOBAL, name="HTMLSlotElement", isNative = true)
 public class HTMLSlotElement extends HTMLElement {

@@ -18,10 +18,7 @@ package gwt.jelement.workers;
 
 import gwt.jelement.core.JsObject;
 import gwt.jelement.fetch.RequestCredentials;
-import jsinterop.annotations.JsOverlay;
-import jsinterop.annotations.JsPackage;
-import jsinterop.annotations.JsProperty;
-import jsinterop.annotations.JsType;
+import jsinterop.annotations.*;
 
 @JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class WorkletOptions extends JsObject{

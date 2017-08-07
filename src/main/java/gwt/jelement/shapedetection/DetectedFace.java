@@ -18,11 +18,7 @@ package gwt.jelement.shapedetection;
 
 import gwt.jelement.core.IsObject;
 import gwt.jelement.geometry.DOMRect;
-import jsinterop.annotations.JsConstructor;
-import jsinterop.annotations.JsOverlay;
-import jsinterop.annotations.JsPackage;
-import jsinterop.annotations.JsProperty;
-import jsinterop.annotations.JsType;
+import jsinterop.annotations.*;
 
 @JsType(namespace = JsPackage.GLOBAL, name="DetectedFace", isNative = true)
 public class DetectedFace implements IsObject {

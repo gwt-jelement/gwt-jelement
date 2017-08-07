@@ -18,11 +18,7 @@ package gwt.jelement.speech;
 
 import gwt.jelement.dom.Document;
 import gwt.jelement.events.Event;
-import jsinterop.annotations.JsConstructor;
-import jsinterop.annotations.JsOverlay;
-import jsinterop.annotations.JsPackage;
-import jsinterop.annotations.JsProperty;
-import jsinterop.annotations.JsType;
+import jsinterop.annotations.*;
 
 @JsType(namespace = JsPackage.GLOBAL, name="SpeechRecognitionEvent", isNative = true)
 public class SpeechRecognitionEvent extends Event {

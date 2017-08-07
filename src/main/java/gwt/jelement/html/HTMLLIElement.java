@@ -16,10 +16,7 @@
  */
 package gwt.jelement.html;
 
-import jsinterop.annotations.JsOverlay;
-import jsinterop.annotations.JsPackage;
-import jsinterop.annotations.JsProperty;
-import jsinterop.annotations.JsType;
+import jsinterop.annotations.*;
 
 @JsType(namespace = JsPackage.GLOBAL, name="HTMLLIElement", isNative = true)
 public class HTMLLIElement extends HTMLElement {

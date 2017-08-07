@@ -18,10 +18,7 @@ package gwt.jelement.presentation;
 
 import gwt.jelement.core.IsObject;
 import gwt.jelement.core.Promise;
-import jsinterop.annotations.JsOverlay;
-import jsinterop.annotations.JsPackage;
-import jsinterop.annotations.JsProperty;
-import jsinterop.annotations.JsType;
+import jsinterop.annotations.*;
 
 @JsType(namespace = JsPackage.GLOBAL, name="PresentationReceiver", isNative = true)
 public class PresentationReceiver implements IsObject {

@@ -16,10 +16,7 @@
  */
 package gwt.jelement.core;
 
-import jsinterop.annotations.JsMethod;
-import jsinterop.annotations.JsOverlay;
-import jsinterop.annotations.JsPackage;
-import jsinterop.annotations.JsType;
+import jsinterop.annotations.*;
 
 @JsType(namespace = JsPackage.GLOBAL, name="Thenable", isNative = true)
 public class Thenable<T> implements IsObject {

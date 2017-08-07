@@ -16,11 +16,7 @@
  */
 package gwt.jelement.sensor;
 
-import jsinterop.annotations.JsConstructor;
-import jsinterop.annotations.JsOverlay;
-import jsinterop.annotations.JsPackage;
-import jsinterop.annotations.JsProperty;
-import jsinterop.annotations.JsType;
+import jsinterop.annotations.*;
 
 @JsType(namespace = JsPackage.GLOBAL, name="Gyroscope", isNative = true)
 public class Gyroscope extends Sensor {

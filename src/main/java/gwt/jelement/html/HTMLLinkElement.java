@@ -19,10 +19,7 @@ package gwt.jelement.html;
 import gwt.jelement.css.StyleSheet;
 import gwt.jelement.dom.DOMTokenList;
 import gwt.jelement.dom.Document;
-import jsinterop.annotations.JsOverlay;
-import jsinterop.annotations.JsPackage;
-import jsinterop.annotations.JsProperty;
-import jsinterop.annotations.JsType;
+import jsinterop.annotations.*;
 
 @JsType(namespace = JsPackage.GLOBAL, name="HTMLLinkElement", isNative = true)
 public class HTMLLinkElement extends HTMLElement {

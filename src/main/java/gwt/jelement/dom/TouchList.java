@@ -18,10 +18,7 @@ package gwt.jelement.dom;
 
 import gwt.jelement.core.ArrayLike;
 import gwt.jelement.core.IsObject;
-import jsinterop.annotations.JsMethod;
-import jsinterop.annotations.JsOverlay;
-import jsinterop.annotations.JsPackage;
-import jsinterop.annotations.JsType;
+import jsinterop.annotations.*;
 
 @JsType(namespace = JsPackage.GLOBAL, name="TouchList", isNative = true)
 public class TouchList implements IsObject, ArrayLike<Touch> {

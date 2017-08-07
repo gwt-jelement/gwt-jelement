@@ -18,12 +18,7 @@ package gwt.jelement.webaudio;
 
 import gwt.jelement.core.Promise;
 import gwt.jelement.events.EventHandlerNonNull;
-import jsinterop.annotations.JsConstructor;
-import jsinterop.annotations.JsMethod;
-import jsinterop.annotations.JsOverlay;
-import jsinterop.annotations.JsPackage;
-import jsinterop.annotations.JsProperty;
-import jsinterop.annotations.JsType;
+import jsinterop.annotations.*;
 
 @JsType(namespace = JsPackage.GLOBAL, name="OfflineAudioContext", isNative = true)
 public class OfflineAudioContext extends BaseAudioContext {

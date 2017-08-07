@@ -16,15 +16,11 @@
  */
 package gwt.jelement.dom;
 
-import jsinterop.annotations.JsConstructor;
-import jsinterop.annotations.JsOverlay;
-import jsinterop.annotations.JsPackage;
-import jsinterop.annotations.JsType;
+import jsinterop.annotations.*;
 
 @JsType(namespace = JsPackage.GLOBAL, name="XMLDocument", isNative = true)
 public class XMLDocument extends Document {
-    @JsConstructor
-    public XMLDocument(){
+    private XMLDocument(){
         super();
     }
     

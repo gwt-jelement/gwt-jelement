@@ -19,11 +19,7 @@ package gwt.jelement.serviceworkers;
 import gwt.jelement.core.IsObject;
 import gwt.jelement.core.JsObject;
 import gwt.jelement.dom.MessagePort;
-import jsinterop.annotations.JsMethod;
-import jsinterop.annotations.JsOverlay;
-import jsinterop.annotations.JsPackage;
-import jsinterop.annotations.JsProperty;
-import jsinterop.annotations.JsType;
+import jsinterop.annotations.*;
 
 @JsType(namespace = JsPackage.GLOBAL, name="Client", isNative = true)
 public class Client implements IsObject {

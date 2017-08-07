@@ -17,16 +17,11 @@
 package gwt.jelement.speech;
 
 import gwt.jelement.events.Event;
-import jsinterop.annotations.JsConstructor;
-import jsinterop.annotations.JsOverlay;
-import jsinterop.annotations.JsPackage;
-import jsinterop.annotations.JsProperty;
-import jsinterop.annotations.JsType;
+import jsinterop.annotations.*;
 
 @JsType(namespace = JsPackage.GLOBAL, name="SpeechSynthesisEvent", isNative = true)
 public class SpeechSynthesisEvent extends Event {
-    @JsConstructor
-    public SpeechSynthesisEvent(){
+    private SpeechSynthesisEvent(){
         super((String) null);
     }
     

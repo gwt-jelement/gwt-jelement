@@ -16,9 +16,7 @@
  */
 package gwt.jelement.xmlhttprequest;
 
-import jsinterop.annotations.JsOverlay;
-import jsinterop.annotations.JsPackage;
-import jsinterop.annotations.JsType;
+import jsinterop.annotations.*;
 
 @JsType(namespace = JsPackage.GLOBAL, name="XMLHttpRequestUpload", isNative = true)
 public class XMLHttpRequestUpload extends XMLHttpRequestEventTarget {

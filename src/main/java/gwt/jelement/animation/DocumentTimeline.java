@@ -16,10 +16,7 @@
  */
 package gwt.jelement.animation;
 
-import jsinterop.annotations.JsConstructor;
-import jsinterop.annotations.JsOverlay;
-import jsinterop.annotations.JsPackage;
-import jsinterop.annotations.JsType;
+import jsinterop.annotations.*;
 
 @JsType(namespace = JsPackage.GLOBAL, name="DocumentTimeline", isNative = true)
 public class DocumentTimeline extends AnimationTimeline {

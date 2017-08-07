@@ -21,10 +21,7 @@ import gwt.jelement.core.JsObject;
 import gwt.jelement.html.HTMLCanvasElement;
 import gwt.jelement.offscreencanvas.OffscreenCanvas;
 import gwt.jelement.webgl.WebGL2RenderingContext;
-import jsinterop.annotations.JsOverlay;
-import jsinterop.annotations.JsPackage;
-import jsinterop.annotations.JsProperty;
-import jsinterop.annotations.JsType;
+import jsinterop.annotations.*;
 
 @JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class VRLayer extends JsObject{

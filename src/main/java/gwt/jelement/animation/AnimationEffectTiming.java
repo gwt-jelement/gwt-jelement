@@ -17,10 +17,8 @@
 package gwt.jelement.animation;
 
 import gwt.jelement.core.Js;
+import jsinterop.annotations.*;
 import jsinterop.annotations.JsOverlay;
-import jsinterop.annotations.JsPackage;
-import jsinterop.annotations.JsProperty;
-import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="AnimationEffectTiming", isNative = true)
 public class AnimationEffectTiming extends AnimationEffectTimingReadOnly {

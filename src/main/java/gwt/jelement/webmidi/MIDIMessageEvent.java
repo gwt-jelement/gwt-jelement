@@ -18,11 +18,7 @@ package gwt.jelement.webmidi;
 
 import gwt.jelement.core.Uint8Array;
 import gwt.jelement.events.Event;
-import jsinterop.annotations.JsConstructor;
-import jsinterop.annotations.JsOverlay;
-import jsinterop.annotations.JsPackage;
-import jsinterop.annotations.JsProperty;
-import jsinterop.annotations.JsType;
+import jsinterop.annotations.*;
 
 @JsType(namespace = JsPackage.GLOBAL, name="MIDIMessageEvent", isNative = true)
 public class MIDIMessageEvent extends Event {

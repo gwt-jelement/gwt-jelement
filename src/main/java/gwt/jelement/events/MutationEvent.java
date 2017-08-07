@@ -17,12 +17,7 @@
 package gwt.jelement.events;
 
 import gwt.jelement.dom.Node;
-import jsinterop.annotations.JsConstructor;
-import jsinterop.annotations.JsMethod;
-import jsinterop.annotations.JsOverlay;
-import jsinterop.annotations.JsPackage;
-import jsinterop.annotations.JsProperty;
-import jsinterop.annotations.JsType;
+import jsinterop.annotations.*;
 
 @JsType(namespace = JsPackage.GLOBAL, name="MutationEvent", isNative = true)
 public class MutationEvent extends Event {
@@ -30,8 +25,7 @@ public class MutationEvent extends Event {
     public static short ADDITION; /* 2 */
     public static short REMOVAL; /* 3 */
     
-    @JsConstructor
-    public MutationEvent(){
+    private MutationEvent(){
         super((String) null);
     }
     

@@ -18,10 +18,7 @@ package gwt.jelement.mediasource;
 
 import gwt.jelement.core.ArrayLike;
 import gwt.jelement.core.IsObject;
-import jsinterop.annotations.JsConstructor;
-import jsinterop.annotations.JsOverlay;
-import jsinterop.annotations.JsPackage;
-import jsinterop.annotations.JsType;
+import jsinterop.annotations.*;
 
 @JsType(namespace = JsPackage.GLOBAL, name="TrackDefaultList", isNative = true)
 public class TrackDefaultList implements IsObject, ArrayLike<TrackDefault> {

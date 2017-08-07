@@ -20,11 +20,7 @@ import gwt.jelement.core.Js;
 import gwt.jelement.dom.Document;
 import gwt.jelement.dom.Node;
 import gwt.jelement.frame.Window;
-import jsinterop.annotations.JsMethod;
-import jsinterop.annotations.JsOverlay;
-import jsinterop.annotations.JsPackage;
-import jsinterop.annotations.JsProperty;
-import jsinterop.annotations.JsType;
+import jsinterop.annotations.*;
 
 @JsType(namespace = JsPackage.GLOBAL, name="HTMLObjectElement", isNative = true)
 public class HTMLObjectElement extends HTMLElement {

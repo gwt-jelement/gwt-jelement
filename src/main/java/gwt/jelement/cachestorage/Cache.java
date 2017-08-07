@@ -21,10 +21,7 @@ import gwt.jelement.core.IsObject;
 import gwt.jelement.core.Promise;
 import gwt.jelement.fetch.Request;
 import gwt.jelement.fetch.Response;
-import jsinterop.annotations.JsMethod;
-import jsinterop.annotations.JsOverlay;
-import jsinterop.annotations.JsPackage;
-import jsinterop.annotations.JsType;
+import jsinterop.annotations.*;
 
 @JsType(namespace = JsPackage.GLOBAL, name="Cache", isNative = true)
 public class Cache implements IsObject {

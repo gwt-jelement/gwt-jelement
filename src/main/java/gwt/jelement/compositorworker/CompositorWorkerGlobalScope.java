@@ -20,11 +20,7 @@ import gwt.jelement.dom.FrameRequestCallback;
 import gwt.jelement.dom.MessagePort;
 import gwt.jelement.events.EventHandlerNonNull;
 import gwt.jelement.workers.WorkerGlobalScope;
-import jsinterop.annotations.JsMethod;
-import jsinterop.annotations.JsOverlay;
-import jsinterop.annotations.JsPackage;
-import jsinterop.annotations.JsProperty;
-import jsinterop.annotations.JsType;
+import jsinterop.annotations.*;
 
 @JsType(namespace = JsPackage.GLOBAL, name="CompositorWorkerGlobalScope", isNative = true)
 public class CompositorWorkerGlobalScope extends WorkerGlobalScope {

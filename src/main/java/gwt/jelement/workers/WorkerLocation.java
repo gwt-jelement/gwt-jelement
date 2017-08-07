@@ -17,10 +17,7 @@
 package gwt.jelement.workers;
 
 import gwt.jelement.core.IsObject;
-import jsinterop.annotations.JsOverlay;
-import jsinterop.annotations.JsPackage;
-import jsinterop.annotations.JsProperty;
-import jsinterop.annotations.JsType;
+import jsinterop.annotations.*;
 
 @JsType(namespace = JsPackage.GLOBAL, name="WorkerLocation", isNative = true)
 public class WorkerLocation implements IsObject {

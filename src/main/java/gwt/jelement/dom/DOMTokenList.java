@@ -18,11 +18,7 @@ package gwt.jelement.dom;
 
 import gwt.jelement.core.ArrayLike;
 import gwt.jelement.core.IsObject;
-import jsinterop.annotations.JsMethod;
-import jsinterop.annotations.JsOverlay;
-import jsinterop.annotations.JsPackage;
-import jsinterop.annotations.JsProperty;
-import jsinterop.annotations.JsType;
+import jsinterop.annotations.*;
 
 @JsType(namespace = JsPackage.GLOBAL, name="DOMTokenList", isNative = true)
 public class DOMTokenList implements IsObject, ArrayLike<String> {

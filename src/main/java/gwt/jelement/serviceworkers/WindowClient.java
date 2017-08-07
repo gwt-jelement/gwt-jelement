@@ -18,11 +18,7 @@ package gwt.jelement.serviceworkers;
 
 import gwt.jelement.core.Promise;
 import gwt.jelement.dom.VisibilityState;
-import jsinterop.annotations.JsMethod;
-import jsinterop.annotations.JsOverlay;
-import jsinterop.annotations.JsPackage;
-import jsinterop.annotations.JsProperty;
-import jsinterop.annotations.JsType;
+import jsinterop.annotations.*;
 
 @JsType(namespace = JsPackage.GLOBAL, name="WindowClient", isNative = true)
 public class WindowClient extends Client {

@@ -18,10 +18,7 @@ package gwt.jelement.clipboard;
 
 import gwt.jelement.core.Promise;
 import gwt.jelement.events.EventTarget;
-import jsinterop.annotations.JsMethod;
-import jsinterop.annotations.JsOverlay;
-import jsinterop.annotations.JsPackage;
-import jsinterop.annotations.JsType;
+import jsinterop.annotations.*;
 
 @JsType(namespace = JsPackage.GLOBAL, name="Clipboard", isNative = true)
 public class Clipboard extends EventTarget {

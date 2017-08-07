@@ -17,10 +17,7 @@
 package gwt.jelement.webmidi;
 
 import gwt.jelement.events.EventHandlerNonNull;
-import jsinterop.annotations.JsOverlay;
-import jsinterop.annotations.JsPackage;
-import jsinterop.annotations.JsProperty;
-import jsinterop.annotations.JsType;
+import jsinterop.annotations.*;
 
 @JsType(namespace = JsPackage.GLOBAL, name="MIDIInput", isNative = true)
 public class MIDIInput extends MIDIPort {

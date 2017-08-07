@@ -17,11 +17,7 @@
 package gwt.jelement.html;
 
 import gwt.jelement.dom.NodeList;
-import jsinterop.annotations.JsMethod;
-import jsinterop.annotations.JsOverlay;
-import jsinterop.annotations.JsPackage;
-import jsinterop.annotations.JsProperty;
-import jsinterop.annotations.JsType;
+import jsinterop.annotations.*;
 
 @JsType(namespace = JsPackage.GLOBAL, name="HTMLTextAreaElement", isNative = true)
 public class HTMLTextAreaElement extends HTMLElement {

@@ -38,11 +38,7 @@ import gwt.jelement.indexeddb.IDBFactory;
 import gwt.jelement.offscreencanvas.OffscreenCanvas;
 import gwt.jelement.svg.SVGImageElement;
 import gwt.jelement.timing.WorkerPerformance;
-import jsinterop.annotations.JsMethod;
-import jsinterop.annotations.JsOverlay;
-import jsinterop.annotations.JsPackage;
-import jsinterop.annotations.JsProperty;
-import jsinterop.annotations.JsType;
+import jsinterop.annotations.*;
 
 @JsType(namespace = JsPackage.GLOBAL, name="WorkerGlobalScope", isNative = true)
 public class WorkerGlobalScope extends EventTarget {

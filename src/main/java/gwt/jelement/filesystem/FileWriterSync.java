@@ -18,11 +18,7 @@ package gwt.jelement.filesystem;
 
 import gwt.jelement.core.IsObject;
 import gwt.jelement.fileapi.Blob;
-import jsinterop.annotations.JsMethod;
-import jsinterop.annotations.JsOverlay;
-import jsinterop.annotations.JsPackage;
-import jsinterop.annotations.JsProperty;
-import jsinterop.annotations.JsType;
+import jsinterop.annotations.*;
 
 @JsType(namespace = JsPackage.GLOBAL, name="FileWriterSync", isNative = true)
 public class FileWriterSync implements IsObject {

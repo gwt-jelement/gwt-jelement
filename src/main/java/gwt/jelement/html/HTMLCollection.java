@@ -17,9 +17,7 @@
 package gwt.jelement.html;
 
 import gwt.jelement.dom.Element;
-import jsinterop.annotations.JsOverlay;
-import jsinterop.annotations.JsPackage;
-import jsinterop.annotations.JsType;
+import jsinterop.annotations.*;
 
 @JsType(namespace = JsPackage.GLOBAL, name="HTMLCollection", isNative = true)
 public class HTMLCollection extends HTMLBaseCollection<Element, Element> {

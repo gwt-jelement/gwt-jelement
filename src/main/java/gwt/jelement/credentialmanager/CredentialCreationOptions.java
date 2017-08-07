@@ -19,10 +19,7 @@ package gwt.jelement.credentialmanager;
 import gwt.jelement.core.Js;
 import gwt.jelement.core.JsObject;
 import gwt.jelement.html.HTMLFormElement;
-import jsinterop.annotations.JsOverlay;
-import jsinterop.annotations.JsPackage;
-import jsinterop.annotations.JsProperty;
-import jsinterop.annotations.JsType;
+import jsinterop.annotations.*;
 
 @JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class CredentialCreationOptions extends JsObject{

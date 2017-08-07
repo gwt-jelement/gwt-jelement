@@ -17,10 +17,7 @@
 package gwt.jelement.webaudio;
 
 import gwt.jelement.events.EventHandlerNonNull;
-import jsinterop.annotations.JsOverlay;
-import jsinterop.annotations.JsPackage;
-import jsinterop.annotations.JsProperty;
-import jsinterop.annotations.JsType;
+import jsinterop.annotations.*;
 
 @JsType(namespace = JsPackage.GLOBAL, name="ScriptProcessorNode", isNative = true)
 public class ScriptProcessorNode extends AudioNode {

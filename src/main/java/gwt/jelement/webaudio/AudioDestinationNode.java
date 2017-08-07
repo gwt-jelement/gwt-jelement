@@ -16,10 +16,7 @@
  */
 package gwt.jelement.webaudio;
 
-import jsinterop.annotations.JsOverlay;
-import jsinterop.annotations.JsPackage;
-import jsinterop.annotations.JsProperty;
-import jsinterop.annotations.JsType;
+import jsinterop.annotations.*;
 
 @JsType(namespace = JsPackage.GLOBAL, name="AudioDestinationNode", isNative = true)
 public class AudioDestinationNode extends AudioNode {

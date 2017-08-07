@@ -18,10 +18,7 @@ package gwt.jelement.media_capabilities;
 
 import gwt.jelement.core.IsObject;
 import gwt.jelement.core.Promise;
-import jsinterop.annotations.JsMethod;
-import jsinterop.annotations.JsOverlay;
-import jsinterop.annotations.JsPackage;
-import jsinterop.annotations.JsType;
+import jsinterop.annotations.*;
 
 @JsType(namespace = JsPackage.GLOBAL, name="MediaCapabilities", isNative = true)
 public class MediaCapabilities implements IsObject {

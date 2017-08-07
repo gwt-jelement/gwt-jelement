@@ -25,12 +25,7 @@ import gwt.jelement.imagebitmap.ImageBitmap;
 import gwt.jelement.offscreencanvas2d.OffscreenCanvasRenderingContext2D;
 import gwt.jelement.webgl.WebGL2RenderingContext;
 import gwt.jelement.webgl.WebGLRenderingContext;
-import jsinterop.annotations.JsConstructor;
-import jsinterop.annotations.JsMethod;
-import jsinterop.annotations.JsOverlay;
-import jsinterop.annotations.JsPackage;
-import jsinterop.annotations.JsProperty;
-import jsinterop.annotations.JsType;
+import jsinterop.annotations.*;
 
 @JsType(namespace = JsPackage.GLOBAL, name="OffscreenCanvas", isNative = true)
 public class OffscreenCanvas extends EventTarget {

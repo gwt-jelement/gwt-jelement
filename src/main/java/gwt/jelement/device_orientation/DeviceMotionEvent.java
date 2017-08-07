@@ -17,11 +17,7 @@
 package gwt.jelement.device_orientation;
 
 import gwt.jelement.events.Event;
-import jsinterop.annotations.JsConstructor;
-import jsinterop.annotations.JsOverlay;
-import jsinterop.annotations.JsPackage;
-import jsinterop.annotations.JsProperty;
-import jsinterop.annotations.JsType;
+import jsinterop.annotations.*;
 
 @JsType(namespace = JsPackage.GLOBAL, name="DeviceMotionEvent", isNative = true)
 public class DeviceMotionEvent extends Event {

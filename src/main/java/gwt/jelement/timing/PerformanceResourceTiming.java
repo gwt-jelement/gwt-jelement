@@ -16,10 +16,7 @@
  */
 package gwt.jelement.timing;
 
-import jsinterop.annotations.JsOverlay;
-import jsinterop.annotations.JsPackage;
-import jsinterop.annotations.JsProperty;
-import jsinterop.annotations.JsType;
+import jsinterop.annotations.*;
 
 @JsType(namespace = JsPackage.GLOBAL, name="PerformanceResourceTiming", isNative = true)
 public class PerformanceResourceTiming extends PerformanceEntry {

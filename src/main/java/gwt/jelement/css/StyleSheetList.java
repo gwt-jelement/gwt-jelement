@@ -19,10 +19,7 @@ package gwt.jelement.css;
 import gwt.jelement.core.ArrayLike;
 import gwt.jelement.core.IsObject;
 import gwt.jelement.core.Js;
-import jsinterop.annotations.JsMethod;
-import jsinterop.annotations.JsOverlay;
-import jsinterop.annotations.JsPackage;
-import jsinterop.annotations.JsType;
+import jsinterop.annotations.*;
 
 @JsType(namespace = JsPackage.GLOBAL, name="StyleSheetList", isNative = true)
 public class StyleSheetList implements IsObject, ArrayLike<StyleSheet> {

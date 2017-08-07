@@ -20,11 +20,7 @@ import gwt.jelement.css.CSSStyleDeclaration;
 import gwt.jelement.dom.DOMStringMap;
 import gwt.jelement.dom.Element;
 import gwt.jelement.events.EventHandlerNonNull;
-import jsinterop.annotations.JsMethod;
-import jsinterop.annotations.JsOverlay;
-import jsinterop.annotations.JsPackage;
-import jsinterop.annotations.JsProperty;
-import jsinterop.annotations.JsType;
+import jsinterop.annotations.*;
 
 @JsType(namespace = JsPackage.GLOBAL, name="SVGElement", isNative = true)
 public class SVGElement extends Element {

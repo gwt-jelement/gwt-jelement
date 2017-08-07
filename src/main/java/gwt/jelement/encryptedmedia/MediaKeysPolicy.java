@@ -17,11 +17,7 @@
 package gwt.jelement.encryptedmedia;
 
 import gwt.jelement.core.IsObject;
-import jsinterop.annotations.JsConstructor;
-import jsinterop.annotations.JsOverlay;
-import jsinterop.annotations.JsPackage;
-import jsinterop.annotations.JsProperty;
-import jsinterop.annotations.JsType;
+import jsinterop.annotations.*;
 
 @JsType(namespace = JsPackage.GLOBAL, name="MediaKeysPolicy", isNative = true)
 public class MediaKeysPolicy implements IsObject {

@@ -17,10 +17,7 @@
 package gwt.jelement.webaudio;
 
 import gwt.jelement.core.IsObject;
-import jsinterop.annotations.JsConstructor;
-import jsinterop.annotations.JsOverlay;
-import jsinterop.annotations.JsPackage;
-import jsinterop.annotations.JsType;
+import jsinterop.annotations.*;
 
 @JsType(namespace = JsPackage.GLOBAL, name="PeriodicWave", isNative = true)
 public class PeriodicWave implements IsObject {

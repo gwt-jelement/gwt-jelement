@@ -21,12 +21,7 @@ import gwt.jelement.core.Promise;
 import gwt.jelement.fileapi.Blob;
 import gwt.jelement.imagebitmap.ImageBitmap;
 import gwt.jelement.mediastream.MediaStreamTrack;
-import jsinterop.annotations.JsConstructor;
-import jsinterop.annotations.JsMethod;
-import jsinterop.annotations.JsOverlay;
-import jsinterop.annotations.JsPackage;
-import jsinterop.annotations.JsProperty;
-import jsinterop.annotations.JsType;
+import jsinterop.annotations.*;
 
 @JsType(namespace = JsPackage.GLOBAL, name="ImageCapture", isNative = true)
 public class ImageCapture implements IsObject {

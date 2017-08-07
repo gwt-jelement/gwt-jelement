@@ -16,9 +16,7 @@
  */
 package gwt.jelement.svg;
 
-import jsinterop.annotations.JsOverlay;
-import jsinterop.annotations.JsPackage;
-import jsinterop.annotations.JsType;
+import jsinterop.annotations.*;
 
 @JsType(namespace = JsPackage.GLOBAL, name="SVGTSpanElement", isNative = true)
 public class SVGTSpanElement extends SVGTextPositioningElement {

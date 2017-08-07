@@ -16,15 +16,11 @@
  */
 package gwt.jelement.dom;
 
-import jsinterop.annotations.JsConstructor;
-import jsinterop.annotations.JsOverlay;
-import jsinterop.annotations.JsPackage;
-import jsinterop.annotations.JsType;
+import jsinterop.annotations.*;
 
 @JsType(namespace = JsPackage.GLOBAL, name="CDATASection", isNative = true)
 public class CDATASection extends Text {
-    @JsConstructor
-    public CDATASection(){
+    private CDATASection(){
         super();
     }
     

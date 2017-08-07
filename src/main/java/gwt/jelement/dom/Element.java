@@ -26,11 +26,7 @@ import gwt.jelement.frame.ScrollToOptions;
 import gwt.jelement.html.HTMLCollection;
 import gwt.jelement.html.HTMLSlotElement;
 import gwt.jelement.page.scrolling.ScrollStateCallback;
-import jsinterop.annotations.JsMethod;
-import jsinterop.annotations.JsOverlay;
-import jsinterop.annotations.JsPackage;
-import jsinterop.annotations.JsProperty;
-import jsinterop.annotations.JsType;
+import jsinterop.annotations.*;
 
 @JsType(namespace = JsPackage.GLOBAL, name="Element", isNative = true)
 public class Element extends Node {

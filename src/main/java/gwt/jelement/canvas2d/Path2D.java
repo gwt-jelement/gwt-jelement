@@ -18,11 +18,7 @@ package gwt.jelement.canvas2d;
 
 import gwt.jelement.core.IsObject;
 import gwt.jelement.svg.SVGMatrix;
-import jsinterop.annotations.JsConstructor;
-import jsinterop.annotations.JsMethod;
-import jsinterop.annotations.JsOverlay;
-import jsinterop.annotations.JsPackage;
-import jsinterop.annotations.JsType;
+import jsinterop.annotations.*;
 
 @JsType(namespace = JsPackage.GLOBAL, name="Path2D", isNative = true)
 public class Path2D implements IsObject {

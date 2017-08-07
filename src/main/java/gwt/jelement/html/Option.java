@@ -16,10 +16,7 @@
  */
 package gwt.jelement.html;
 
-import jsinterop.annotations.JsConstructor;
-import jsinterop.annotations.JsOverlay;
-import jsinterop.annotations.JsPackage;
-import jsinterop.annotations.JsType;
+import jsinterop.annotations.*;
 
 @JsType(namespace = JsPackage.GLOBAL, name="Option", isNative = true)
 public class Option extends HTMLOptionElement {

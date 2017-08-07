@@ -18,10 +18,7 @@ package gwt.jelement.events;
 
 import gwt.jelement.frame.Window;
 import gwt.jelement.input.InputDeviceCapabilities;
-import jsinterop.annotations.JsOverlay;
-import jsinterop.annotations.JsPackage;
-import jsinterop.annotations.JsProperty;
-import jsinterop.annotations.JsType;
+import jsinterop.annotations.*;
 
 @JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class UIEventInit extends EventInit{

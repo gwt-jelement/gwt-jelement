@@ -18,11 +18,7 @@ package gwt.jelement.mediarecorder;
 
 import gwt.jelement.events.Event;
 import gwt.jelement.fileapi.Blob;
-import jsinterop.annotations.JsConstructor;
-import jsinterop.annotations.JsOverlay;
-import jsinterop.annotations.JsPackage;
-import jsinterop.annotations.JsProperty;
-import jsinterop.annotations.JsType;
+import jsinterop.annotations.*;
 
 @JsType(namespace = JsPackage.GLOBAL, name="BlobEvent", isNative = true)
 public class BlobEvent extends Event {

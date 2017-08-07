@@ -19,12 +19,7 @@ package gwt.jelement.html.track.vtt;
 import gwt.jelement.core.Js;
 import gwt.jelement.dom.DocumentFragment;
 import gwt.jelement.html.track.TextTrackCue;
-import jsinterop.annotations.JsConstructor;
-import jsinterop.annotations.JsMethod;
-import jsinterop.annotations.JsOverlay;
-import jsinterop.annotations.JsPackage;
-import jsinterop.annotations.JsProperty;
-import jsinterop.annotations.JsType;
+import jsinterop.annotations.*;
 
 @JsType(namespace = JsPackage.GLOBAL, name="VTTCue", isNative = true)
 public class VTTCue extends TextTrackCue {

@@ -16,10 +16,7 @@
  */
 package gwt.jelement.css.cssom;
 
-import jsinterop.annotations.JsOverlay;
-import jsinterop.annotations.JsPackage;
-import jsinterop.annotations.JsProperty;
-import jsinterop.annotations.JsType;
+import jsinterop.annotations.*;
 
 @JsType(namespace = JsPackage.GLOBAL, name="CSSResourceValue", isNative = true)
 public class CSSResourceValue extends CSSStyleValue {

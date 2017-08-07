@@ -18,10 +18,7 @@ package gwt.jelement.animation;
 
 import gwt.jelement.core.JsObject;
 import gwt.jelement.dom.Element;
-import jsinterop.annotations.JsConstructor;
-import jsinterop.annotations.JsOverlay;
-import jsinterop.annotations.JsPackage;
-import jsinterop.annotations.JsType;
+import jsinterop.annotations.*;
 
 @JsType(namespace = JsPackage.GLOBAL, name="KeyframeEffectReadOnly", isNative = true)
 public class KeyframeEffectReadOnly extends AnimationEffectReadOnly {

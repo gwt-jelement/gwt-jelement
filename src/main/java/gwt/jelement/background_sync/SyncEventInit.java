@@ -17,10 +17,7 @@
 package gwt.jelement.background_sync;
 
 import gwt.jelement.serviceworkers.ExtendableEventInit;
-import jsinterop.annotations.JsOverlay;
-import jsinterop.annotations.JsPackage;
-import jsinterop.annotations.JsProperty;
-import jsinterop.annotations.JsType;
+import jsinterop.annotations.*;
 
 @JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class SyncEventInit extends ExtendableEventInit{

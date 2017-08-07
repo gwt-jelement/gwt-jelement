@@ -23,12 +23,7 @@ import gwt.jelement.events.EventTarget;
 import gwt.jelement.html.VoidCallback;
 import gwt.jelement.mediastream.MediaStream;
 import gwt.jelement.mediastream.MediaStreamTrack;
-import jsinterop.annotations.JsConstructor;
-import jsinterop.annotations.JsMethod;
-import jsinterop.annotations.JsOverlay;
-import jsinterop.annotations.JsPackage;
-import jsinterop.annotations.JsProperty;
-import jsinterop.annotations.JsType;
+import jsinterop.annotations.*;
 
 @JsType(namespace = JsPackage.GLOBAL, name="RTCPeerConnection", isNative = true)
 public class RTCPeerConnection extends EventTarget {

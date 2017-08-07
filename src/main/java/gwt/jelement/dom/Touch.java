@@ -18,11 +18,7 @@ package gwt.jelement.dom;
 
 import gwt.jelement.core.IsObject;
 import gwt.jelement.events.EventTarget;
-import jsinterop.annotations.JsConstructor;
-import jsinterop.annotations.JsOverlay;
-import jsinterop.annotations.JsPackage;
-import jsinterop.annotations.JsProperty;
-import jsinterop.annotations.JsType;
+import jsinterop.annotations.*;
 
 @JsType(namespace = JsPackage.GLOBAL, name="Touch", isNative = true)
 public class Touch implements IsObject {

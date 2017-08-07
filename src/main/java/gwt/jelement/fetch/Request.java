@@ -22,12 +22,7 @@ import gwt.jelement.core.JsObject;
 import gwt.jelement.core.Promise;
 import gwt.jelement.fileapi.Blob;
 import gwt.jelement.html.FormData;
-import jsinterop.annotations.JsConstructor;
-import jsinterop.annotations.JsMethod;
-import jsinterop.annotations.JsOverlay;
-import jsinterop.annotations.JsPackage;
-import jsinterop.annotations.JsProperty;
-import jsinterop.annotations.JsType;
+import jsinterop.annotations.*;
 
 @JsType(namespace = JsPackage.GLOBAL, name="Request", isNative = true)
 public class Request implements IsObject {

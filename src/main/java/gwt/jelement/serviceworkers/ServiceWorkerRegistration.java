@@ -25,11 +25,7 @@ import gwt.jelement.notifications.GetNotificationOptions;
 import gwt.jelement.notifications.Notification;
 import gwt.jelement.notifications.NotificationOptions;
 import gwt.jelement.push_messaging.PushManager;
-import jsinterop.annotations.JsMethod;
-import jsinterop.annotations.JsOverlay;
-import jsinterop.annotations.JsPackage;
-import jsinterop.annotations.JsProperty;
-import jsinterop.annotations.JsType;
+import jsinterop.annotations.*;
 
 @JsType(namespace = JsPackage.GLOBAL, name="ServiceWorkerRegistration", isNative = true)
 public class ServiceWorkerRegistration extends EventTarget {

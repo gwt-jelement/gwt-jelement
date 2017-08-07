@@ -18,10 +18,7 @@ package gwt.jelement.canvas2d;
 
 import gwt.jelement.core.JsObject;
 import gwt.jelement.dom.Element;
-import jsinterop.annotations.JsOverlay;
-import jsinterop.annotations.JsPackage;
-import jsinterop.annotations.JsProperty;
-import jsinterop.annotations.JsType;
+import jsinterop.annotations.*;
 
 @JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class HitRegionOptions extends JsObject{

@@ -17,11 +17,7 @@
 package gwt.jelement.webaudio;
 
 import gwt.jelement.html.HTMLMediaElement;
-import jsinterop.annotations.JsConstructor;
-import jsinterop.annotations.JsOverlay;
-import jsinterop.annotations.JsPackage;
-import jsinterop.annotations.JsProperty;
-import jsinterop.annotations.JsType;
+import jsinterop.annotations.*;
 
 @JsType(namespace = JsPackage.GLOBAL, name="MediaElementAudioSourceNode", isNative = true)
 public class MediaElementAudioSourceNode extends AudioNode {

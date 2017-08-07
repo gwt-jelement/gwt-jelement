@@ -20,11 +20,7 @@ import gwt.jelement.dom.DOMException;
 import gwt.jelement.dom.DOMStringList;
 import gwt.jelement.events.EventHandlerNonNull;
 import gwt.jelement.events.EventTarget;
-import jsinterop.annotations.JsMethod;
-import jsinterop.annotations.JsOverlay;
-import jsinterop.annotations.JsPackage;
-import jsinterop.annotations.JsProperty;
-import jsinterop.annotations.JsType;
+import jsinterop.annotations.*;
 
 @JsType(namespace = JsPackage.GLOBAL, name="IDBTransaction", isNative = true)
 public class IDBTransaction extends EventTarget {

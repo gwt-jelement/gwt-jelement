@@ -19,11 +19,7 @@ package gwt.jelement.workers;
 import gwt.jelement.dom.MessagePort;
 import gwt.jelement.events.EventHandlerNonNull;
 import gwt.jelement.events.EventTarget;
-import jsinterop.annotations.JsConstructor;
-import jsinterop.annotations.JsOverlay;
-import jsinterop.annotations.JsPackage;
-import jsinterop.annotations.JsProperty;
-import jsinterop.annotations.JsType;
+import jsinterop.annotations.*;
 
 @JsType(namespace = JsPackage.GLOBAL, name="SharedWorker", isNative = true)
 public class SharedWorker extends EventTarget {

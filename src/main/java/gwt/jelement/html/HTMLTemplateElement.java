@@ -17,10 +17,7 @@
 package gwt.jelement.html;
 
 import gwt.jelement.dom.DocumentFragment;
-import jsinterop.annotations.JsOverlay;
-import jsinterop.annotations.JsPackage;
-import jsinterop.annotations.JsProperty;
-import jsinterop.annotations.JsType;
+import jsinterop.annotations.*;
 
 @JsType(namespace = JsPackage.GLOBAL, name="HTMLTemplateElement", isNative = true)
 public class HTMLTemplateElement extends HTMLElement {

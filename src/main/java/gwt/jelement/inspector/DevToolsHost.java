@@ -19,10 +19,7 @@ package gwt.jelement.inspector;
 import gwt.jelement.core.IsObject;
 import gwt.jelement.dom.Document;
 import gwt.jelement.filesystem.DOMFileSystem;
-import jsinterop.annotations.JsMethod;
-import jsinterop.annotations.JsOverlay;
-import jsinterop.annotations.JsPackage;
-import jsinterop.annotations.JsType;
+import jsinterop.annotations.*;
 
 @JsType(namespace = JsPackage.GLOBAL, name="DevToolsHost", isNative = true)
 public class DevToolsHost implements IsObject {

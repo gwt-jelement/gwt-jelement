@@ -21,10 +21,7 @@ import gwt.jelement.core.IsObject;
 import gwt.jelement.netinfo.NetworkInformation;
 import gwt.jelement.permissions.Permissions;
 import gwt.jelement.quota.StorageManager;
-import jsinterop.annotations.JsOverlay;
-import jsinterop.annotations.JsPackage;
-import jsinterop.annotations.JsProperty;
-import jsinterop.annotations.JsType;
+import jsinterop.annotations.*;
 
 @JsType(namespace = JsPackage.GLOBAL, name="WorkerNavigator", isNative = true)
 public class WorkerNavigator implements IsObject {

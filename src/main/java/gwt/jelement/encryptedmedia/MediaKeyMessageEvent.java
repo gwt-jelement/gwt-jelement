@@ -18,11 +18,7 @@ package gwt.jelement.encryptedmedia;
 
 import gwt.jelement.core.ArrayBuffer;
 import gwt.jelement.events.Event;
-import jsinterop.annotations.JsConstructor;
-import jsinterop.annotations.JsOverlay;
-import jsinterop.annotations.JsPackage;
-import jsinterop.annotations.JsProperty;
-import jsinterop.annotations.JsType;
+import jsinterop.annotations.*;
 
 @JsType(namespace = JsPackage.GLOBAL, name="MediaKeyMessageEvent", isNative = true)
 public class MediaKeyMessageEvent extends Event {

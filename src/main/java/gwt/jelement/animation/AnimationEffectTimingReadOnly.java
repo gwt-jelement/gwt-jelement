@@ -18,10 +18,7 @@ package gwt.jelement.animation;
 
 import gwt.jelement.core.IsObject;
 import gwt.jelement.core.Js;
-import jsinterop.annotations.JsOverlay;
-import jsinterop.annotations.JsPackage;
-import jsinterop.annotations.JsProperty;
-import jsinterop.annotations.JsType;
+import jsinterop.annotations.*;
 
 @JsType(namespace = JsPackage.GLOBAL, name="AnimationEffectTimingReadOnly", isNative = true)
 public class AnimationEffectTimingReadOnly implements IsObject {

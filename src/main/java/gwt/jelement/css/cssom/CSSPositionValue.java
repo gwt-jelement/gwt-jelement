@@ -16,11 +16,7 @@
  */
 package gwt.jelement.css.cssom;
 
-import jsinterop.annotations.JsConstructor;
-import jsinterop.annotations.JsOverlay;
-import jsinterop.annotations.JsPackage;
-import jsinterop.annotations.JsProperty;
-import jsinterop.annotations.JsType;
+import jsinterop.annotations.*;
 
 @JsType(namespace = JsPackage.GLOBAL, name="CSSPositionValue", isNative = true)
 public class CSSPositionValue extends CSSStyleValue {

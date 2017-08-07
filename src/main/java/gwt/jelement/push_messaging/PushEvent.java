@@ -17,11 +17,7 @@
 package gwt.jelement.push_messaging;
 
 import gwt.jelement.serviceworkers.ExtendableEvent;
-import jsinterop.annotations.JsConstructor;
-import jsinterop.annotations.JsOverlay;
-import jsinterop.annotations.JsPackage;
-import jsinterop.annotations.JsProperty;
-import jsinterop.annotations.JsType;
+import jsinterop.annotations.*;
 
 @JsType(namespace = JsPackage.GLOBAL, name="PushEvent", isNative = true)
 public class PushEvent extends ExtendableEvent {

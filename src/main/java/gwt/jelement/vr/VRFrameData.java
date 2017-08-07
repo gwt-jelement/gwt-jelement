@@ -18,11 +18,7 @@ package gwt.jelement.vr;
 
 import gwt.jelement.core.Float32Array;
 import gwt.jelement.core.IsObject;
-import jsinterop.annotations.JsConstructor;
-import jsinterop.annotations.JsOverlay;
-import jsinterop.annotations.JsPackage;
-import jsinterop.annotations.JsProperty;
-import jsinterop.annotations.JsType;
+import jsinterop.annotations.*;
 
 @JsType(namespace = JsPackage.GLOBAL, name="VRFrameData", isNative = true)
 public class VRFrameData implements IsObject {

@@ -18,11 +18,7 @@ package gwt.jelement.xml;
 
 import gwt.jelement.core.IsObject;
 import gwt.jelement.dom.Node;
-import jsinterop.annotations.JsConstructor;
-import jsinterop.annotations.JsMethod;
-import jsinterop.annotations.JsOverlay;
-import jsinterop.annotations.JsPackage;
-import jsinterop.annotations.JsType;
+import jsinterop.annotations.*;
 
 @JsType(namespace = JsPackage.GLOBAL, name="XPathEvaluator", isNative = true)
 public class XPathEvaluator implements IsObject {

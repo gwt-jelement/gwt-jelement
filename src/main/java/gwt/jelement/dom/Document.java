@@ -38,12 +38,7 @@ import gwt.jelement.svg.SVGScriptElement;
 import gwt.jelement.xml.XPathExpression;
 import gwt.jelement.xml.XPathNSResolver;
 import gwt.jelement.xml.XPathResult;
-import jsinterop.annotations.JsConstructor;
-import jsinterop.annotations.JsMethod;
-import jsinterop.annotations.JsOverlay;
-import jsinterop.annotations.JsPackage;
-import jsinterop.annotations.JsProperty;
-import jsinterop.annotations.JsType;
+import jsinterop.annotations.*;
 
 @JsType(namespace = JsPackage.GLOBAL, name="Document", isNative = true)
 public class Document extends Node {

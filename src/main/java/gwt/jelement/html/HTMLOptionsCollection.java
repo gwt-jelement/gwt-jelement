@@ -20,11 +20,8 @@ import gwt.jelement.core.Js;
 import gwt.jelement.dom.Element;
 import gwt.jelement.dom.Node;
 import gwt.jelement.dom.NodeList;
-import jsinterop.annotations.JsMethod;
+import jsinterop.annotations.*;
 import jsinterop.annotations.JsOverlay;
-import jsinterop.annotations.JsPackage;
-import jsinterop.annotations.JsProperty;
-import jsinterop.annotations.JsType;
 
 @JsType(namespace = JsPackage.GLOBAL, name="HTMLOptionsCollection", isNative = true)
 public class HTMLOptionsCollection extends HTMLBaseCollection<Node, HTMLAllCollection.HTMLOptionsUnion> {

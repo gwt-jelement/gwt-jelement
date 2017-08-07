@@ -18,11 +18,7 @@ package gwt.jelement.filesystem;
 
 import gwt.jelement.core.IsObject;
 import gwt.jelement.html.VoidCallback;
-import jsinterop.annotations.JsMethod;
-import jsinterop.annotations.JsOverlay;
-import jsinterop.annotations.JsPackage;
-import jsinterop.annotations.JsProperty;
-import jsinterop.annotations.JsType;
+import jsinterop.annotations.*;
 
 @JsType(namespace = JsPackage.GLOBAL, name="Entry", isNative = true)
 public class Entry implements IsObject {

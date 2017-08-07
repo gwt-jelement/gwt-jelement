@@ -16,11 +16,7 @@
  */
 package gwt.jelement.events;
 
-import jsinterop.annotations.JsConstructor;
-import jsinterop.annotations.JsOverlay;
-import jsinterop.annotations.JsPackage;
-import jsinterop.annotations.JsProperty;
-import jsinterop.annotations.JsType;
+import jsinterop.annotations.*;
 
 @JsType(namespace = JsPackage.GLOBAL, name="ApplicationCacheErrorEvent", isNative = true)
 public class ApplicationCacheErrorEvent extends Event {

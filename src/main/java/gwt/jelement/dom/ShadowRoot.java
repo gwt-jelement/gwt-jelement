@@ -18,20 +18,14 @@ package gwt.jelement.dom;
 
 import gwt.jelement.css.StyleSheetList;
 import gwt.jelement.editing.Selection;
-import jsinterop.annotations.JsConstructor;
-import jsinterop.annotations.JsMethod;
-import jsinterop.annotations.JsOverlay;
-import jsinterop.annotations.JsPackage;
-import jsinterop.annotations.JsProperty;
-import jsinterop.annotations.JsType;
+import jsinterop.annotations.*;
 
 @JsType(namespace = JsPackage.GLOBAL, name="ShadowRoot", isNative = true)
 public class ShadowRoot extends DocumentFragment {
     @JsProperty(name="mode")
     private String mode;
     
-    @JsConstructor
-    public ShadowRoot(){
+    private ShadowRoot(){
         super();
     }
     

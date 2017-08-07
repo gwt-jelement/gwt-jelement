@@ -17,10 +17,7 @@
 package gwt.jelement.device_orientation;
 
 import gwt.jelement.core.IsObject;
-import jsinterop.annotations.JsOverlay;
-import jsinterop.annotations.JsPackage;
-import jsinterop.annotations.JsProperty;
-import jsinterop.annotations.JsType;
+import jsinterop.annotations.*;
 
 @JsType(namespace = JsPackage.GLOBAL, name="DeviceRotationRate", isNative = true)
 public class DeviceRotationRate implements IsObject {

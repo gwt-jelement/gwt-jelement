@@ -17,10 +17,7 @@
 package gwt.jelement.frame;
 
 import gwt.jelement.core.IsObject;
-import jsinterop.annotations.JsMethod;
-import jsinterop.annotations.JsOverlay;
-import jsinterop.annotations.JsPackage;
-import jsinterop.annotations.JsType;
+import jsinterop.annotations.*;
 
 @JsType(namespace = JsPackage.GLOBAL, name="WindowBase64", isNative = true)
 public class WindowBase64 implements IsObject {

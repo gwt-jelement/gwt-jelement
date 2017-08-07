@@ -18,10 +18,7 @@ package gwt.jelement.dom;
 
 import gwt.jelement.core.IsObject;
 import gwt.jelement.html.HTMLDocument;
-import jsinterop.annotations.JsMethod;
-import jsinterop.annotations.JsOverlay;
-import jsinterop.annotations.JsPackage;
-import jsinterop.annotations.JsType;
+import jsinterop.annotations.*;
 
 @JsType(namespace = JsPackage.GLOBAL, name="DOMImplementation", isNative = true)
 public class DOMImplementation implements IsObject {

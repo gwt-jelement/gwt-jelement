@@ -18,10 +18,7 @@ package gwt.jelement.compositorworker;
 
 import gwt.jelement.core.Function;
 import gwt.jelement.workers.WorkletGlobalScope;
-import jsinterop.annotations.JsMethod;
-import jsinterop.annotations.JsOverlay;
-import jsinterop.annotations.JsPackage;
-import jsinterop.annotations.JsType;
+import jsinterop.annotations.*;
 
 @JsType(namespace = JsPackage.GLOBAL, name="AnimationWorkletGlobalScope", isNative = true)
 public class AnimationWorkletGlobalScope extends WorkletGlobalScope {

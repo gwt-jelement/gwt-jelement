@@ -18,10 +18,7 @@ package gwt.jelement.webaudio;
 
 import gwt.jelement.core.Function;
 import gwt.jelement.workers.WorkletGlobalScope;
-import jsinterop.annotations.JsMethod;
-import jsinterop.annotations.JsOverlay;
-import jsinterop.annotations.JsPackage;
-import jsinterop.annotations.JsType;
+import jsinterop.annotations.*;
 
 @JsType(namespace = JsPackage.GLOBAL, name="AudioWorkletGlobalScope", isNative = true)
 public class AudioWorkletGlobalScope extends WorkletGlobalScope {

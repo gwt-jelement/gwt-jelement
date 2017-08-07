@@ -16,10 +16,7 @@
  */
 package gwt.jelement.css;
 
-import jsinterop.annotations.JsOverlay;
-import jsinterop.annotations.JsPackage;
-import jsinterop.annotations.JsProperty;
-import jsinterop.annotations.JsType;
+import jsinterop.annotations.*;
 
 @JsType(namespace = JsPackage.GLOBAL, name="CSSNamespaceRule", isNative = true)
 public class CSSNamespaceRule extends CSSRule {

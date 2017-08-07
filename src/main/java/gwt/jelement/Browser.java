@@ -24,11 +24,7 @@ import gwt.jelement.frame.Location;
 import gwt.jelement.frame.Navigator;
 import gwt.jelement.frame.Window;
 import gwt.jelement.html.HTMLDocument;
-import jsinterop.annotations.JsMethod;
-import jsinterop.annotations.JsOverlay;
-import jsinterop.annotations.JsPackage;
-import jsinterop.annotations.JsProperty;
-import jsinterop.annotations.JsType;
+import jsinterop.annotations.*;
 
 @JsType(namespace = JsPackage.GLOBAL, name="window", isNative = true)
 public class Browser implements IsObject {

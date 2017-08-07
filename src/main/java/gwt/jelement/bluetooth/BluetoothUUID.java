@@ -17,10 +17,7 @@
 package gwt.jelement.bluetooth;
 
 import gwt.jelement.core.IsObject;
-import jsinterop.annotations.JsMethod;
-import jsinterop.annotations.JsOverlay;
-import jsinterop.annotations.JsPackage;
-import jsinterop.annotations.JsType;
+import jsinterop.annotations.*;
 
 @JsType(namespace = JsPackage.GLOBAL, name="BluetoothUUID", isNative = true)
 public class BluetoothUUID implements IsObject {

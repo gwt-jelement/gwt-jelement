@@ -18,10 +18,7 @@ package gwt.jelement.background_sync;
 
 import gwt.jelement.core.IsObject;
 import gwt.jelement.core.Promise;
-import jsinterop.annotations.JsMethod;
-import jsinterop.annotations.JsOverlay;
-import jsinterop.annotations.JsPackage;
-import jsinterop.annotations.JsType;
+import jsinterop.annotations.*;
 
 @JsType(namespace = JsPackage.GLOBAL, name="SyncManager", isNative = true)
 public class SyncManager implements IsObject {

@@ -18,10 +18,7 @@ package gwt.jelement.serviceworkers;
 
 import gwt.jelement.core.IsObject;
 import gwt.jelement.core.Promise;
-import jsinterop.annotations.JsMethod;
-import jsinterop.annotations.JsOverlay;
-import jsinterop.annotations.JsPackage;
-import jsinterop.annotations.JsType;
+import jsinterop.annotations.*;
 
 @JsType(namespace = JsPackage.GLOBAL, name="NavigationPreloadManager", isNative = true)
 public class NavigationPreloadManager implements IsObject {

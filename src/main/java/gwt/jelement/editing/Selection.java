@@ -19,11 +19,7 @@ package gwt.jelement.editing;
 import gwt.jelement.core.IsObject;
 import gwt.jelement.dom.Node;
 import gwt.jelement.dom.Range;
-import jsinterop.annotations.JsMethod;
-import jsinterop.annotations.JsOverlay;
-import jsinterop.annotations.JsPackage;
-import jsinterop.annotations.JsProperty;
-import jsinterop.annotations.JsType;
+import jsinterop.annotations.*;
 
 @JsType(namespace = JsPackage.GLOBAL, name="Selection", isNative = true)
 public class Selection implements IsObject {

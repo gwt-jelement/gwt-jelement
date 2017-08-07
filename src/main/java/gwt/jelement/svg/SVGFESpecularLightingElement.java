@@ -16,10 +16,7 @@
  */
 package gwt.jelement.svg;
 
-import jsinterop.annotations.JsOverlay;
-import jsinterop.annotations.JsPackage;
-import jsinterop.annotations.JsProperty;
-import jsinterop.annotations.JsType;
+import jsinterop.annotations.*;
 
 @JsType(namespace = JsPackage.GLOBAL, name="SVGFESpecularLightingElement", isNative = true)
 public class SVGFESpecularLightingElement extends SVGElement {

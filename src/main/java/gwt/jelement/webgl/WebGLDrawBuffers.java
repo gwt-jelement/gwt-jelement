@@ -18,10 +18,7 @@ package gwt.jelement.webgl;
 
 import gwt.jelement.core.Array;
 import gwt.jelement.core.IsObject;
-import jsinterop.annotations.JsMethod;
-import jsinterop.annotations.JsOverlay;
-import jsinterop.annotations.JsPackage;
-import jsinterop.annotations.JsType;
+import jsinterop.annotations.*;
 
 @JsType(namespace = JsPackage.GLOBAL, name="WebGLDrawBuffers", isNative = true)
 public class WebGLDrawBuffers implements IsObject {

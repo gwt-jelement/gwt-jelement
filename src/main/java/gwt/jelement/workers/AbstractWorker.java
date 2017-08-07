@@ -18,10 +18,7 @@ package gwt.jelement.workers;
 
 import gwt.jelement.core.IsObject;
 import gwt.jelement.events.EventHandlerNonNull;
-import jsinterop.annotations.JsOverlay;
-import jsinterop.annotations.JsPackage;
-import jsinterop.annotations.JsProperty;
-import jsinterop.annotations.JsType;
+import jsinterop.annotations.*;
 
 @JsType(namespace = JsPackage.GLOBAL, name="AbstractWorker", isNative = true)
 public class AbstractWorker implements IsObject {

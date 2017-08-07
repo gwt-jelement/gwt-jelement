@@ -18,12 +18,7 @@ package gwt.jelement.encoding;
 
 import gwt.jelement.core.IsObject;
 import gwt.jelement.core.Uint8Array;
-import jsinterop.annotations.JsConstructor;
-import jsinterop.annotations.JsMethod;
-import jsinterop.annotations.JsOverlay;
-import jsinterop.annotations.JsPackage;
-import jsinterop.annotations.JsProperty;
-import jsinterop.annotations.JsType;
+import jsinterop.annotations.*;
 
 @JsType(namespace = JsPackage.GLOBAL, name="TextEncoder", isNative = true)
 public class TextEncoder implements IsObject {

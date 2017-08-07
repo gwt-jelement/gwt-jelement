@@ -17,11 +17,7 @@
 package gwt.jelement.events;
 
 import gwt.jelement.core.Promise;
-import jsinterop.annotations.JsConstructor;
-import jsinterop.annotations.JsOverlay;
-import jsinterop.annotations.JsPackage;
-import jsinterop.annotations.JsProperty;
-import jsinterop.annotations.JsType;
+import jsinterop.annotations.*;
 
 @JsType(namespace = JsPackage.GLOBAL, name="PromiseRejectionEvent", isNative = true)
 public class PromiseRejectionEvent extends Event {

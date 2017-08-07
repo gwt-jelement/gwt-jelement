@@ -19,11 +19,7 @@ package gwt.jelement.indexeddb;
 import gwt.jelement.core.Array;
 import gwt.jelement.core.IsObject;
 import gwt.jelement.dom.DOMStringList;
-import jsinterop.annotations.JsMethod;
-import jsinterop.annotations.JsOverlay;
-import jsinterop.annotations.JsPackage;
-import jsinterop.annotations.JsProperty;
-import jsinterop.annotations.JsType;
+import jsinterop.annotations.*;
 
 @JsType(namespace = JsPackage.GLOBAL, name="IDBObjectStore", isNative = true)
 public class IDBObjectStore implements IsObject {

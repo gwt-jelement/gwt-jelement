@@ -19,11 +19,7 @@ package gwt.jelement.sensor;
 import gwt.jelement.core.Float32Array;
 import gwt.jelement.core.Float64Array;
 import gwt.jelement.geometry.DOMMatrix;
-import jsinterop.annotations.JsMethod;
-import jsinterop.annotations.JsOverlay;
-import jsinterop.annotations.JsPackage;
-import jsinterop.annotations.JsProperty;
-import jsinterop.annotations.JsType;
+import jsinterop.annotations.*;
 
 @JsType(namespace = JsPackage.GLOBAL, name="OrientationSensor", isNative = true)
 public class OrientationSensor extends Sensor {

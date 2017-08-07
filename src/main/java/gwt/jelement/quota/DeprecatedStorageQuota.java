@@ -17,10 +17,7 @@
 package gwt.jelement.quota;
 
 import gwt.jelement.core.IsObject;
-import jsinterop.annotations.JsMethod;
-import jsinterop.annotations.JsOverlay;
-import jsinterop.annotations.JsPackage;
-import jsinterop.annotations.JsType;
+import jsinterop.annotations.*;
 
 @JsType(namespace = JsPackage.GLOBAL, name="DeprecatedStorageQuota", isNative = true)
 public class DeprecatedStorageQuota implements IsObject {

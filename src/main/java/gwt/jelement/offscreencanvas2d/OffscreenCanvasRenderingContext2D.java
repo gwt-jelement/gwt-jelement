@@ -38,11 +38,7 @@ import gwt.jelement.html.ImageDataColorSettings;
 import gwt.jelement.imagebitmap.ImageBitmap;
 import gwt.jelement.offscreencanvas.OffscreenCanvas;
 import gwt.jelement.svg.SVGImageElement;
-import jsinterop.annotations.JsMethod;
-import jsinterop.annotations.JsOverlay;
-import jsinterop.annotations.JsPackage;
-import jsinterop.annotations.JsProperty;
-import jsinterop.annotations.JsType;
+import jsinterop.annotations.*;
 
 @JsType(namespace = JsPackage.GLOBAL, name="OffscreenCanvasRenderingContext2D", isNative = true)
 public class OffscreenCanvasRenderingContext2D implements IsObject {

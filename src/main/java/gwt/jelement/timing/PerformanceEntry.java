@@ -17,10 +17,7 @@
 package gwt.jelement.timing;
 
 import gwt.jelement.core.IsObject;
-import jsinterop.annotations.JsOverlay;
-import jsinterop.annotations.JsPackage;
-import jsinterop.annotations.JsProperty;
-import jsinterop.annotations.JsType;
+import jsinterop.annotations.*;
 
 @JsType(namespace = JsPackage.GLOBAL, name="PerformanceEntry", isNative = true)
 public class PerformanceEntry implements IsObject {

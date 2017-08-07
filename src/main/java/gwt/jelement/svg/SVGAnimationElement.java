@@ -17,11 +17,7 @@
 package gwt.jelement.svg;
 
 import gwt.jelement.events.EventHandlerNonNull;
-import jsinterop.annotations.JsMethod;
-import jsinterop.annotations.JsOverlay;
-import jsinterop.annotations.JsPackage;
-import jsinterop.annotations.JsProperty;
-import jsinterop.annotations.JsType;
+import jsinterop.annotations.*;
 
 @JsType(namespace = JsPackage.GLOBAL, name="SVGAnimationElement", isNative = true)
 public class SVGAnimationElement extends SVGElement {

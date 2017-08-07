@@ -19,10 +19,7 @@ package gwt.jelement.push_messaging;
 import gwt.jelement.core.ArrayBuffer;
 import gwt.jelement.core.IsObject;
 import gwt.jelement.fileapi.Blob;
-import jsinterop.annotations.JsMethod;
-import jsinterop.annotations.JsOverlay;
-import jsinterop.annotations.JsPackage;
-import jsinterop.annotations.JsType;
+import jsinterop.annotations.*;
 
 @JsType(namespace = JsPackage.GLOBAL, name="PushMessageData", isNative = true)
 public class PushMessageData implements IsObject {

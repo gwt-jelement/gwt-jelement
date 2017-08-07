@@ -25,10 +25,7 @@ import gwt.jelement.html.HTMLVideoElement;
 import gwt.jelement.html.ImageData;
 import gwt.jelement.offscreencanvas.OffscreenCanvas;
 import gwt.jelement.svg.SVGImageElement;
-import jsinterop.annotations.JsMethod;
-import jsinterop.annotations.JsOverlay;
-import jsinterop.annotations.JsPackage;
-import jsinterop.annotations.JsType;
+import jsinterop.annotations.*;
 
 @JsType(namespace = JsPackage.GLOBAL, name="ImageBitmapFactories", isNative = true)
 public class ImageBitmapFactories implements IsObject {

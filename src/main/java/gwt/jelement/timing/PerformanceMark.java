@@ -16,9 +16,7 @@
  */
 package gwt.jelement.timing;
 
-import jsinterop.annotations.JsOverlay;
-import jsinterop.annotations.JsPackage;
-import jsinterop.annotations.JsType;
+import jsinterop.annotations.*;
 
 @JsType(namespace = JsPackage.GLOBAL, name="PerformanceMark", isNative = true)
 public class PerformanceMark extends PerformanceEntry {

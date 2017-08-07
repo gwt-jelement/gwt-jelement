@@ -18,11 +18,7 @@ package gwt.jelement.frame;
 
 import gwt.jelement.core.IsObject;
 import gwt.jelement.core.JsObject;
-import jsinterop.annotations.JsMethod;
-import jsinterop.annotations.JsOverlay;
-import jsinterop.annotations.JsPackage;
-import jsinterop.annotations.JsProperty;
-import jsinterop.annotations.JsType;
+import jsinterop.annotations.*;
 
 @JsType(namespace = JsPackage.GLOBAL, name="History", isNative = true)
 public class History implements IsObject {

@@ -18,12 +18,7 @@ package gwt.jelement.webaudio;
 
 import gwt.jelement.core.Float32Array;
 import gwt.jelement.core.Uint8Array;
-import jsinterop.annotations.JsConstructor;
-import jsinterop.annotations.JsMethod;
-import jsinterop.annotations.JsOverlay;
-import jsinterop.annotations.JsPackage;
-import jsinterop.annotations.JsProperty;
-import jsinterop.annotations.JsType;
+import jsinterop.annotations.*;
 
 @JsType(namespace = JsPackage.GLOBAL, name="AnalyserNode", isNative = true)
 public class AnalyserNode extends AudioNode {

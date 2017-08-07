@@ -22,11 +22,7 @@ import gwt.jelement.filesystem.EntryCallback;
 import gwt.jelement.filesystem.EntrySync;
 import gwt.jelement.filesystem.ErrorCallback;
 import gwt.jelement.filesystem.FileSystemCallback;
-import jsinterop.annotations.JsMethod;
-import jsinterop.annotations.JsOverlay;
-import jsinterop.annotations.JsPackage;
-import jsinterop.annotations.JsProperty;
-import jsinterop.annotations.JsType;
+import jsinterop.annotations.*;
 
 @JsType(namespace = JsPackage.GLOBAL, name="SharedWorkerGlobalScope", isNative = true)
 public class SharedWorkerGlobalScope extends WorkerGlobalScope {

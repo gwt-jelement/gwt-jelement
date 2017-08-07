@@ -17,11 +17,7 @@
 package gwt.jelement.dom;
 
 import gwt.jelement.events.EventTarget;
-import jsinterop.annotations.JsMethod;
-import jsinterop.annotations.JsOverlay;
-import jsinterop.annotations.JsPackage;
-import jsinterop.annotations.JsProperty;
-import jsinterop.annotations.JsType;
+import jsinterop.annotations.*;
 
 @JsType(namespace = JsPackage.GLOBAL, name="Node", isNative = true)
 public class Node extends EventTarget {

@@ -20,10 +20,7 @@ import gwt.jelement.core.Function;
 import gwt.jelement.core.IsObject;
 import gwt.jelement.core.Promise;
 import gwt.jelement.dom.ElementDefinitionOptions;
-import jsinterop.annotations.JsMethod;
-import jsinterop.annotations.JsOverlay;
-import jsinterop.annotations.JsPackage;
-import jsinterop.annotations.JsType;
+import jsinterop.annotations.*;
 
 @JsType(namespace = JsPackage.GLOBAL, name="CustomElementRegistry", isNative = true)
 public class CustomElementRegistry implements IsObject {

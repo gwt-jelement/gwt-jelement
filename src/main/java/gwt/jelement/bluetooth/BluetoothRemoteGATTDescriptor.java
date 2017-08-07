@@ -21,11 +21,7 @@ import gwt.jelement.core.ArrayBufferView;
 import gwt.jelement.core.DataView;
 import gwt.jelement.core.IsObject;
 import gwt.jelement.core.Promise;
-import jsinterop.annotations.JsMethod;
-import jsinterop.annotations.JsOverlay;
-import jsinterop.annotations.JsPackage;
-import jsinterop.annotations.JsProperty;
-import jsinterop.annotations.JsType;
+import jsinterop.annotations.*;
 
 @JsType(namespace = JsPackage.GLOBAL, name="BluetoothRemoteGATTDescriptor", isNative = true)
 public class BluetoothRemoteGATTDescriptor implements IsObject {

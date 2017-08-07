@@ -50,11 +50,7 @@ import gwt.jelement.serviceworkers.ServiceWorkerContainer;
 import gwt.jelement.webmidi.MIDIOptions;
 import gwt.jelement.webshare.ShareData;
 import gwt.jelement.webusb.USB;
-import jsinterop.annotations.JsMethod;
-import jsinterop.annotations.JsOverlay;
-import jsinterop.annotations.JsPackage;
-import jsinterop.annotations.JsProperty;
-import jsinterop.annotations.JsType;
+import jsinterop.annotations.*;
 
 @JsType(namespace = JsPackage.GLOBAL, name="Navigator", isNative = true)
 public class Navigator implements IsObject {

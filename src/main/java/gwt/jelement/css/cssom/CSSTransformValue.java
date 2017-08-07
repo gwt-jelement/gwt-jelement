@@ -18,12 +18,7 @@ package gwt.jelement.css.cssom;
 
 import gwt.jelement.core.Js;
 import gwt.jelement.geometry.DOMMatrix;
-import jsinterop.annotations.JsConstructor;
-import jsinterop.annotations.JsMethod;
-import jsinterop.annotations.JsOverlay;
-import jsinterop.annotations.JsPackage;
-import jsinterop.annotations.JsProperty;
-import jsinterop.annotations.JsType;
+import jsinterop.annotations.*;
 
 @JsType(namespace = JsPackage.GLOBAL, name="CSSTransformValue", isNative = true)
 public class CSSTransformValue extends CSSStyleValue {

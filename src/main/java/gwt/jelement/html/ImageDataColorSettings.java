@@ -18,10 +18,7 @@ package gwt.jelement.html;
 
 import gwt.jelement.core.JsObject;
 import gwt.jelement.html.canvas.CanvasColorSpace;
-import jsinterop.annotations.JsOverlay;
-import jsinterop.annotations.JsPackage;
-import jsinterop.annotations.JsProperty;
-import jsinterop.annotations.JsType;
+import jsinterop.annotations.*;
 
 @JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class ImageDataColorSettings extends JsObject{

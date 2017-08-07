@@ -17,10 +17,7 @@
 package gwt.jelement.filesystem;
 
 import gwt.jelement.core.IsObject;
-import jsinterop.annotations.JsMethod;
-import jsinterop.annotations.JsOverlay;
-import jsinterop.annotations.JsPackage;
-import jsinterop.annotations.JsType;
+import jsinterop.annotations.*;
 
 @JsType(namespace = JsPackage.GLOBAL, name="DirectoryReader", isNative = true)
 public class DirectoryReader implements IsObject {

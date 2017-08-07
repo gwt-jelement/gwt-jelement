@@ -18,11 +18,7 @@ package gwt.jelement.sensor;
 
 import gwt.jelement.dom.DOMException;
 import gwt.jelement.events.Event;
-import jsinterop.annotations.JsConstructor;
-import jsinterop.annotations.JsOverlay;
-import jsinterop.annotations.JsPackage;
-import jsinterop.annotations.JsProperty;
-import jsinterop.annotations.JsType;
+import jsinterop.annotations.*;
 
 @JsType(namespace = JsPackage.GLOBAL, name="SensorErrorEvent", isNative = true)
 public class SensorErrorEvent extends Event {

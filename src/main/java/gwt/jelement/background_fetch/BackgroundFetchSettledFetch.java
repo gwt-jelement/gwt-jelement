@@ -18,11 +18,7 @@ package gwt.jelement.background_fetch;
 
 import gwt.jelement.fetch.Request;
 import gwt.jelement.fetch.Response;
-import jsinterop.annotations.JsConstructor;
-import jsinterop.annotations.JsOverlay;
-import jsinterop.annotations.JsPackage;
-import jsinterop.annotations.JsProperty;
-import jsinterop.annotations.JsType;
+import jsinterop.annotations.*;
 
 @JsType(namespace = JsPackage.GLOBAL, name="BackgroundFetchSettledFetch", isNative = true)
 public class BackgroundFetchSettledFetch extends BackgroundFetchFetch {

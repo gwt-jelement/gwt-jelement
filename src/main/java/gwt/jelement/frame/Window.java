@@ -74,11 +74,7 @@ import gwt.jelement.timing.Performance;
 import gwt.jelement.webdatabase.Database;
 import gwt.jelement.webdatabase.DatabaseCallback;
 import gwt.jelement.workers.Worklet;
-import jsinterop.annotations.JsMethod;
-import jsinterop.annotations.JsOverlay;
-import jsinterop.annotations.JsPackage;
-import jsinterop.annotations.JsProperty;
-import jsinterop.annotations.JsType;
+import jsinterop.annotations.*;
 
 @JsType(namespace = JsPackage.GLOBAL, name="Window", isNative = true)
 public class Window extends EventTarget {

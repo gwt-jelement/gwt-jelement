@@ -18,10 +18,7 @@ package gwt.jelement.css;
 
 import gwt.jelement.core.IsObject;
 import gwt.jelement.css.cssom.CSSUnitValue;
-import jsinterop.annotations.JsMethod;
-import jsinterop.annotations.JsOverlay;
-import jsinterop.annotations.JsPackage;
-import jsinterop.annotations.JsType;
+import jsinterop.annotations.*;
 
 @JsType(namespace = JsPackage.GLOBAL, name="CSS", isNative = true)
 public class CSS implements IsObject {

@@ -18,11 +18,7 @@ package gwt.jelement.fileapi;
 
 import gwt.jelement.core.ArrayBuffer;
 import gwt.jelement.core.IsObject;
-import jsinterop.annotations.JsConstructor;
-import jsinterop.annotations.JsMethod;
-import jsinterop.annotations.JsOverlay;
-import jsinterop.annotations.JsPackage;
-import jsinterop.annotations.JsType;
+import jsinterop.annotations.*;
 
 @JsType(namespace = JsPackage.GLOBAL, name="FileReaderSync", isNative = true)
 public class FileReaderSync implements IsObject {

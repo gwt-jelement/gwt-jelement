@@ -17,10 +17,7 @@
 package gwt.jelement.indexeddb;
 
 import gwt.jelement.events.EventInit;
-import jsinterop.annotations.JsOverlay;
-import jsinterop.annotations.JsPackage;
-import jsinterop.annotations.JsProperty;
-import jsinterop.annotations.JsType;
+import jsinterop.annotations.*;
 
 @JsType(name="Object", namespace = JsPackage.GLOBAL, isNative = true)
 public class IDBVersionChangeEventInit extends EventInit{

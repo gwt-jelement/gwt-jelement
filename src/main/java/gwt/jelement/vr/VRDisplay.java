@@ -19,11 +19,7 @@ package gwt.jelement.vr;
 import gwt.jelement.core.Promise;
 import gwt.jelement.dom.FrameRequestCallback;
 import gwt.jelement.events.EventTarget;
-import jsinterop.annotations.JsMethod;
-import jsinterop.annotations.JsOverlay;
-import jsinterop.annotations.JsPackage;
-import jsinterop.annotations.JsProperty;
-import jsinterop.annotations.JsType;
+import jsinterop.annotations.*;
 
 @JsType(namespace = JsPackage.GLOBAL, name="VRDisplay", isNative = true)
 public class VRDisplay extends EventTarget {

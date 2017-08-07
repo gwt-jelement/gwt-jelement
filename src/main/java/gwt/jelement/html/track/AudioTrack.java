@@ -18,10 +18,7 @@ package gwt.jelement.html.track;
 
 import gwt.jelement.core.IsObject;
 import gwt.jelement.mediasource.SourceBuffer;
-import jsinterop.annotations.JsOverlay;
-import jsinterop.annotations.JsPackage;
-import jsinterop.annotations.JsProperty;
-import jsinterop.annotations.JsType;
+import jsinterop.annotations.*;
 
 @JsType(namespace = JsPackage.GLOBAL, name="AudioTrack", isNative = true)
 public class AudioTrack implements IsObject {

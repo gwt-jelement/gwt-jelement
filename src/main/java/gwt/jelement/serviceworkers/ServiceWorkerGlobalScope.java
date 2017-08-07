@@ -19,11 +19,7 @@ package gwt.jelement.serviceworkers;
 import gwt.jelement.core.Promise;
 import gwt.jelement.events.EventHandlerNonNull;
 import gwt.jelement.workers.WorkerGlobalScope;
-import jsinterop.annotations.JsMethod;
-import jsinterop.annotations.JsOverlay;
-import jsinterop.annotations.JsPackage;
-import jsinterop.annotations.JsProperty;
-import jsinterop.annotations.JsType;
+import jsinterop.annotations.*;
 
 @JsType(namespace = JsPackage.GLOBAL, name="ServiceWorkerGlobalScope", isNative = true)
 public class ServiceWorkerGlobalScope extends WorkerGlobalScope {
