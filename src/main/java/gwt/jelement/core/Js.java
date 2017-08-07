@@ -297,5 +297,41 @@ public class Js {
         return Symbol();
     }-*/;
 
+    public static native Any castToAny(Object value) /*-{
+        return value;
+    }-*/;
+
+    public static native Any castToAny(boolean value) /*-{
+        return value;
+    }-*/;
+
+    public static native Any castToAny(char value) /*-{
+        return value;
+    }-*/;
+
+    public static native Any castToAny(byte value) /*-{
+        return value;
+    }-*/;
+
+    public static native Any castToAny(short value) /*-{
+        return value;
+    }-*/;
+
+    public static native Any castToAny(int value) /*-{
+        return value;
+    }-*/;
+
+    public static native Any castToAny(float value) /*-{
+        return value;
+    }-*/;
+
+    public static native Any castToAny(double value) /*-{
+        return value;
+    }-*/;
+
+    public static final Any castToAny(long value) {
+        return castToAny((double) value);
+    }
+
 }
 

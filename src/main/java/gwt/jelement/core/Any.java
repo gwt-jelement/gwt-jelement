@@ -27,47 +27,47 @@ public interface Any {
 
     @JsOverlay
     public static Any of(double value) {
-        return Js.cast(value);
+        return Js.castToAny(value);
     }
 
     @JsOverlay
     public static Any of(float value) {
-        return Js.cast(value);
+        return Js.castToAny(value);
     }
 
     @JsOverlay
     public static Any of(long value) {
-        return Js.cast(value);
+        return Js.castToAny(value);
     }
 
     @JsOverlay
     public static Any of(int value) {
-        return Js.cast(value);
+        return Js.castToAny(value);
     }
 
     @JsOverlay
     public static Any of(short value) {
-        return Js.cast(value);
+        return Js.castToAny(value);
     }
 
     @JsOverlay
     public static Any of(byte value) {
-        return Js.cast(value);
+        return Js.castToAny(value);
     }
 
     @JsOverlay
     public static Any of(char value) {
-        return Js.cast(value);
+        return Js.castToAny(value);
     }
 
     @JsOverlay
     public static Any of(boolean value) {
-        return Js.cast(value);
+        return Js.castToAny(value);
     }
 
     @JsOverlay
     public static Any of(Object value) {
-        return Js.cast(value);
+        return Js.castToAny(value);
     }
 
     @JsOverlay
