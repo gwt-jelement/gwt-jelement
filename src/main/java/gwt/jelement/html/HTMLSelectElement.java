@@ -16,13 +16,14 @@
  */
 package gwt.jelement.html;
 
+import gwt.jelement.core.ArrayLike;
 import gwt.jelement.core.Js;
 import gwt.jelement.dom.Element;
 import gwt.jelement.dom.NodeList;
 import jsinterop.annotations.*;
 
 @JsType(namespace = JsPackage.GLOBAL, name="HTMLSelectElement", isNative = true)
-public class HTMLSelectElement extends HTMLElement {
+public class HTMLSelectElement extends HTMLElement implements ArrayLike<Element> {
     @JsProperty(name="autofocus")
     public native boolean getAutofocus();
     
@@ -67,12 +68,6 @@ public class HTMLSelectElement extends HTMLElement {
     
     @JsProperty(name="options")
     public native HTMLOptionsCollection getOptions();
-    
-    @JsProperty(name="length")
-    public native double getLength();
-    
-    @JsProperty(name="length")
-    public native void setLength(double length);
     
     @JsProperty(name="selectedOptions")
     public native HTMLCollection getSelectedOptions();
@@ -121,11 +116,6 @@ public class HTMLSelectElement extends HTMLElement {
     
     @JsMethod(name = "checkValidity")
     public native boolean checkValidity();
-    
-    @JsOverlay
-    public final Element get(double index){
-        return (Element) Js.get(this.object(), index);
-    }
     
     @JsMethod(name = "item")
     public native Element item(double index);

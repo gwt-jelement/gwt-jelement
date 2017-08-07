@@ -16,13 +16,13 @@
  */
 package gwt.jelement.html.track;
 
-import gwt.jelement.core.Js;
+import gwt.jelement.core.ArrayLike;
 import gwt.jelement.events.EventHandlerNonNull;
 import gwt.jelement.events.EventTarget;
 import jsinterop.annotations.*;
 
 @JsType(namespace = JsPackage.GLOBAL, name="TextTrackList", isNative = true)
-public class TextTrackList extends EventTarget {
+public class TextTrackList extends EventTarget implements ArrayLike<TextTrack> {
     @JsProperty(name="onchange")
     private EventHandlerNonNull onchange;
     
@@ -31,9 +31,6 @@ public class TextTrackList extends EventTarget {
     
     @JsProperty(name="onremovetrack")
     private EventHandlerNonNull onremovetrack;
-    
-    @JsProperty(name="length")
-    public native double getLength();
     
     @JsOverlay
     public final EventHandlerNonNull getOnChange(){
@@ -63,11 +60,6 @@ public class TextTrackList extends EventTarget {
     @JsOverlay
     public final void setOnRemovetrack(EventHandlerNonNull onremovetrack){
         this.onremovetrack = onremovetrack;
-    }
-    
-    @JsOverlay
-    public final TextTrack get(double index){
-        return (TextTrack) Js.get(this.object(), index);
     }
     
     @JsMethod(name = "getTrackById")

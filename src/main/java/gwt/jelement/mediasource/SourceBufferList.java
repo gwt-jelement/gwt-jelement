@@ -16,21 +16,18 @@
  */
 package gwt.jelement.mediasource;
 
-import gwt.jelement.core.Js;
+import gwt.jelement.core.ArrayLike;
 import gwt.jelement.events.EventHandlerNonNull;
 import gwt.jelement.events.EventTarget;
 import jsinterop.annotations.*;
 
 @JsType(namespace = JsPackage.GLOBAL, name="SourceBufferList", isNative = true)
-public class SourceBufferList extends EventTarget {
+public class SourceBufferList extends EventTarget implements ArrayLike<SourceBuffer> {
     @JsProperty(name="onaddsourcebuffer")
     private EventHandlerNonNull onaddsourcebuffer;
     
     @JsProperty(name="onremovesourcebuffer")
     private EventHandlerNonNull onremovesourcebuffer;
-    
-    @JsProperty(name="length")
-    public native double getLength();
     
     @JsOverlay
     public final EventHandlerNonNull getOnAddsourcebuffer(){
@@ -50,11 +47,6 @@ public class SourceBufferList extends EventTarget {
     @JsOverlay
     public final void setOnRemovesourcebuffer(EventHandlerNonNull onremovesourcebuffer){
         this.onremovesourcebuffer = onremovesourcebuffer;
-    }
-    
-    @JsOverlay
-    public final SourceBuffer get(double index){
-        return (SourceBuffer) Js.get(this.object(), index);
     }
     
 }

@@ -16,11 +16,12 @@
  */
 package gwt.jelement.css.cssom;
 
+import gwt.jelement.core.ArrayLike;
 import gwt.jelement.core.Js;
 import jsinterop.annotations.*;
 
 @JsType(namespace = JsPackage.GLOBAL, name="CSSUnparsedValue", isNative = true)
-public class CSSUnparsedValue extends CSSStyleValue {
+public class CSSUnparsedValue extends CSSStyleValue implements ArrayLike<CSSUnparsedValue.GetUnion> {
     @JsType(isNative = true, name = "?", namespace = JsPackage.GLOBAL)
     public interface GetUnion {
         @JsOverlay
@@ -53,14 +54,6 @@ public class CSSUnparsedValue extends CSSStyleValue {
             return (Object) this instanceof CSSVariableReferenceValue;
         }
     
-    }
-    
-    @JsProperty(name="length")
-    public native double getLength();
-    
-    @JsOverlay
-    public final CSSUnparsedValue.GetUnion get(double index){
-        return (CSSUnparsedValue.GetUnion) Js.get(this.object(), index);
     }
     
 }

@@ -16,13 +16,13 @@
  */
 package gwt.jelement.html.track;
 
-import gwt.jelement.core.Js;
+import gwt.jelement.core.ArrayLike;
 import gwt.jelement.events.EventHandlerNonNull;
 import gwt.jelement.events.EventTarget;
 import jsinterop.annotations.*;
 
 @JsType(namespace = JsPackage.GLOBAL, name="AudioTrackList", isNative = true)
-public class AudioTrackList extends EventTarget {
+public class AudioTrackList extends EventTarget implements ArrayLike<AudioTrack> {
     @JsProperty(name="onchange")
     private EventHandlerNonNull onchange;
     
@@ -31,9 +31,6 @@ public class AudioTrackList extends EventTarget {
     
     @JsProperty(name="onremovetrack")
     private EventHandlerNonNull onremovetrack;
-    
-    @JsProperty(name="length")
-    public native double getLength();
     
     @JsOverlay
     public final EventHandlerNonNull getOnChange(){
@@ -63,11 +60,6 @@ public class AudioTrackList extends EventTarget {
     @JsOverlay
     public final void setOnRemovetrack(EventHandlerNonNull onremovetrack){
         this.onremovetrack = onremovetrack;
-    }
-    
-    @JsOverlay
-    public final AudioTrack get(double index){
-        return (AudioTrack) Js.get(this.object(), index);
     }
     
     @JsMethod(name = "getTrackById")

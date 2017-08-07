@@ -16,13 +16,13 @@
  */
 package gwt.jelement.html.track;
 
-import gwt.jelement.core.Js;
+import gwt.jelement.core.ArrayLike;
 import gwt.jelement.events.EventHandlerNonNull;
 import gwt.jelement.events.EventTarget;
 import jsinterop.annotations.*;
 
 @JsType(namespace = JsPackage.GLOBAL, name="VideoTrackList", isNative = true)
-public class VideoTrackList extends EventTarget {
+public class VideoTrackList extends EventTarget implements ArrayLike<VideoTrack> {
     @JsProperty(name="onchange")
     private EventHandlerNonNull onchange;
     
@@ -31,9 +31,6 @@ public class VideoTrackList extends EventTarget {
     
     @JsProperty(name="onremovetrack")
     private EventHandlerNonNull onremovetrack;
-    
-    @JsProperty(name="length")
-    public native double getLength();
     
     @JsProperty(name="selectedIndex")
     public native double getSelectedIndex();
@@ -66,11 +63,6 @@ public class VideoTrackList extends EventTarget {
     @JsOverlay
     public final void setOnRemovetrack(EventHandlerNonNull onremovetrack){
         this.onremovetrack = onremovetrack;
-    }
-    
-    @JsOverlay
-    public final VideoTrack get(double index){
-        return (VideoTrack) Js.get(this.object(), index);
     }
     
     @JsMethod(name = "getTrackById")

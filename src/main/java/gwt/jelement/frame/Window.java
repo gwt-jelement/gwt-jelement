@@ -17,6 +17,7 @@
 package gwt.jelement.frame;
 
 import gwt.jelement.cachestorage.CacheStorage;
+import gwt.jelement.core.ArrayLike;
 import gwt.jelement.core.CallbackFunction;
 import gwt.jelement.core.JSONImpl;
 import gwt.jelement.core.Js;
@@ -77,7 +78,7 @@ import gwt.jelement.workers.Worklet;
 import jsinterop.annotations.*;
 
 @JsType(namespace = JsPackage.GLOBAL, name="Window", isNative = true)
-public class Window extends EventTarget {
+public class Window extends EventTarget implements ArrayLike<Window> {
     public static short TEMPORARY; /* 0 */
     public static short PERSISTENT; /* 1 */
     
@@ -443,9 +444,6 @@ public class Window extends EventTarget {
     
     @JsProperty(name="frames")
     public native Window getFrames();
-    
-    @JsProperty(name="length")
-    public native double getLength();
     
     @JsProperty(name="top")
     public native Window getTop();
@@ -1872,11 +1870,6 @@ public class Window extends EventTarget {
     
     @JsMethod(name = "focus")
     public native void focus();
-    
-    @JsOverlay
-    public final Window get(double index){
-        return (Window) Js.get(this.object(), index);
-    }
     
     @JsOverlay
     public final Object get(String name){

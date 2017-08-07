@@ -19,7 +19,7 @@ package gwt.jelement.core;
 import jsinterop.annotations.*;
 
 @JsType(namespace = JsPackage.GLOBAL, name="Uint32Array", isNative = true)
-public class Uint32Array extends ArrayBufferView {
+public class Uint32Array extends ArrayBufferView implements ArrayLike<Double> {
     public static double BYTES_PER_ELEMENT; /* 4 */
     
     @JsConstructor
@@ -55,14 +55,6 @@ public class Uint32Array extends ArrayBufferView {
     @JsConstructor
     public Uint32Array(Array array){
         super();
-    }
-    
-    @JsProperty(name="length")
-    public native double getLength();
-    
-    @JsOverlay
-    public final double get(double index){
-        return Js.getDouble(this.object(), index);
     }
     
     @JsMethod(name = "set")

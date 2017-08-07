@@ -16,12 +16,12 @@
  */
 package gwt.jelement.css.cssom;
 
-import gwt.jelement.core.Js;
+import gwt.jelement.core.ArrayLike;
 import gwt.jelement.geometry.DOMMatrix;
 import jsinterop.annotations.*;
 
 @JsType(namespace = JsPackage.GLOBAL, name="CSSTransformValue", isNative = true)
-public class CSSTransformValue extends CSSStyleValue {
+public class CSSTransformValue extends CSSStyleValue implements ArrayLike<CSSTransformComponent> {
     @JsConstructor
     public CSSTransformValue(){
         super();
@@ -32,16 +32,8 @@ public class CSSTransformValue extends CSSStyleValue {
         super();
     }
     
-    @JsProperty(name="length")
-    public native double getLength();
-    
     @JsProperty(name="is2D")
     public native boolean getIs2D();
-    
-    @JsOverlay
-    public final CSSTransformComponent get(double index){
-        return (CSSTransformComponent) Js.get(this.object(), index);
-    }
     
     @JsMethod(name = "toMatrix")
     public native DOMMatrix toMatrix();

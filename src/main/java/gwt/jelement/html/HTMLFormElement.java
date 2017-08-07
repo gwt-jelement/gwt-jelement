@@ -16,12 +16,13 @@
  */
 package gwt.jelement.html;
 
+import gwt.jelement.core.ArrayLike;
 import gwt.jelement.core.Js;
 import gwt.jelement.dom.Element;
 import jsinterop.annotations.*;
 
 @JsType(namespace = JsPackage.GLOBAL, name="HTMLFormElement", isNative = true)
-public class HTMLFormElement extends HTMLElement {
+public class HTMLFormElement extends HTMLElement implements ArrayLike<Element> {
     @JsType(isNative = true, name = "?", namespace = JsPackage.GLOBAL)
     public interface FormControlsUnion {
         @JsOverlay
@@ -113,16 +114,8 @@ public class HTMLFormElement extends HTMLElement {
     @JsProperty(name="elements")
     public native HTMLFormControlsCollection getElements();
     
-    @JsProperty(name="length")
-    public native double getLength();
-    
     @JsMethod(name = "checkValidity")
     public native boolean checkValidity();
-    
-    @JsOverlay
-    public final Element get(double index){
-        return (Element) Js.get(this.object(), index);
-    }
     
     @JsOverlay
     public final HTMLFormElement.FormControlsUnion get(String name){
