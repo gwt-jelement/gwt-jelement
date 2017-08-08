@@ -19,7 +19,7 @@ package gwt.jelement.webgl;
 import gwt.jelement.core.IsObject;
 import jsinterop.annotations.*;
 
-@JsType(namespace = JsPackage.GLOBAL, name="OESTextureHalfFloat", isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="Object", isNative = true)
 public class OESTextureHalfFloat implements IsObject {
     public static double HALF_FLOAT_OES; /* 0x8D61 */
     

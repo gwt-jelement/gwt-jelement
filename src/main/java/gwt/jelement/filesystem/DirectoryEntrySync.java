@@ -18,7 +18,7 @@ package gwt.jelement.filesystem;
 
 import jsinterop.annotations.*;
 
-@JsType(namespace = JsPackage.GLOBAL, name="DirectoryEntrySync", isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="Object", isNative = true)
 public class DirectoryEntrySync extends EntrySync {
     @JsMethod(name = "createReader")
     public native DirectoryReaderSync createReader();

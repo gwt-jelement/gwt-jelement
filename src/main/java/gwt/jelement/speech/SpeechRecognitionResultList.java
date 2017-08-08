@@ -20,7 +20,7 @@ import gwt.jelement.core.ArrayLike;
 import gwt.jelement.core.IsObject;
 import jsinterop.annotations.*;
 
-@JsType(namespace = JsPackage.GLOBAL, name="SpeechRecognitionResultList", isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="Object", isNative = true)
 public class SpeechRecognitionResultList implements IsObject, ArrayLike<SpeechRecognitionResult> {
     @JsMethod(name = "item")
     public native SpeechRecognitionResult item(double index);

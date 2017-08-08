@@ -19,7 +19,7 @@ package gwt.jelement.geolocation;
 import gwt.jelement.core.IsObject;
 import jsinterop.annotations.*;
 
-@JsType(namespace = JsPackage.GLOBAL, name="PositionError", isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="Object", isNative = true)
 public class PositionError implements IsObject {
     public static short PERMISSION_DENIED; /* 1 */
     public static short POSITION_UNAVAILABLE; /* 2 */

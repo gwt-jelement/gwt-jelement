@@ -19,7 +19,7 @@ package gwt.jelement.filesystem;
 import gwt.jelement.fileapi.BlobCallback;
 import jsinterop.annotations.*;
 
-@JsType(namespace = JsPackage.GLOBAL, name="FileEntry", isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="Object", isNative = true)
 public class FileEntry extends Entry {
     @JsMethod(name = "createWriter")
     public native void createWriter(FileWriterCallback successCallback);

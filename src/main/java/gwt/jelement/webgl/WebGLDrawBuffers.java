@@ -20,7 +20,7 @@ import gwt.jelement.core.Array;
 import gwt.jelement.core.IsObject;
 import jsinterop.annotations.*;
 
-@JsType(namespace = JsPackage.GLOBAL, name="WebGLDrawBuffers", isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="Object", isNative = true)
 public class WebGLDrawBuffers implements IsObject {
     public static double COLOR_ATTACHMENT0_WEBGL; /* 0x8CE0 */
     public static double COLOR_ATTACHMENT1_WEBGL; /* 0x8CE1 */

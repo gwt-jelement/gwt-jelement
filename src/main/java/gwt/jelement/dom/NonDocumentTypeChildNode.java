@@ -19,7 +19,7 @@ package gwt.jelement.dom;
 import gwt.jelement.core.IsObject;
 import jsinterop.annotations.*;
 
-@JsType(namespace = JsPackage.GLOBAL, name="NonDocumentTypeChildNode", isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="Object", isNative = true)
 public class NonDocumentTypeChildNode implements IsObject {
     @JsProperty(name="previousElementSibling")
     public native Element getPreviousElementSibling();

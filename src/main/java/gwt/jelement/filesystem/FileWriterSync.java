@@ -20,7 +20,7 @@ import gwt.jelement.core.IsObject;
 import gwt.jelement.fileapi.Blob;
 import jsinterop.annotations.*;
 
-@JsType(namespace = JsPackage.GLOBAL, name="FileWriterSync", isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="Object", isNative = true)
 public class FileWriterSync implements IsObject {
     @JsProperty(name="position")
     public native double getPosition();

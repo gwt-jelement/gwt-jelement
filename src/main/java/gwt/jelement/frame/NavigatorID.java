@@ -19,7 +19,7 @@ package gwt.jelement.frame;
 import gwt.jelement.core.IsObject;
 import jsinterop.annotations.*;
 
-@JsType(namespace = JsPackage.GLOBAL, name="NavigatorID", isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="Object", isNative = true)
 public class NavigatorID implements IsObject {
     @JsProperty(name="appCodeName")
     public native String getAppCodeName();

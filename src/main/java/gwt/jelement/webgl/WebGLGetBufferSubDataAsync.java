@@ -21,7 +21,7 @@ import gwt.jelement.core.IsObject;
 import gwt.jelement.core.Promise;
 import jsinterop.annotations.*;
 
-@JsType(namespace = JsPackage.GLOBAL, name="WebGLGetBufferSubDataAsync", isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="Object", isNative = true)
 public class WebGLGetBufferSubDataAsync implements IsObject {
     @JsMethod(name = "getBufferSubDataAsync")
     public native Promise<ArrayBufferView> getBufferSubDataAsync(double target, double srcByteOffset, ArrayBufferView dstData);

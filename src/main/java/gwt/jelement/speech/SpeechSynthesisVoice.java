@@ -19,7 +19,7 @@ package gwt.jelement.speech;
 import gwt.jelement.core.IsObject;
 import jsinterop.annotations.*;
 
-@JsType(namespace = JsPackage.GLOBAL, name="SpeechSynthesisVoice", isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="Object", isNative = true)
 public class SpeechSynthesisVoice implements IsObject {
     @JsProperty(name="voiceURI")
     public native String getVoiceURI();

@@ -20,7 +20,7 @@ import gwt.jelement.core.IsObject;
 import gwt.jelement.html.HTMLCollection;
 import jsinterop.annotations.*;
 
-@JsType(namespace = JsPackage.GLOBAL, name="ParentNode", isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="Object", isNative = true)
 public class ParentNode implements IsObject {
     @JsProperty(name="children")
     public native HTMLCollection getChildren();

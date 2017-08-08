@@ -19,7 +19,7 @@ package gwt.jelement.filesystem;
 import gwt.jelement.core.IsObject;
 import jsinterop.annotations.*;
 
-@JsType(namespace = JsPackage.GLOBAL, name="DirectoryReader", isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="Object", isNative = true)
 public class DirectoryReader implements IsObject {
     @JsMethod(name = "readEntries")
     public native void readEntries(EntriesCallback successCallback);

@@ -19,7 +19,7 @@ package gwt.jelement.webgl;
 import gwt.jelement.core.IsObject;
 import jsinterop.annotations.*;
 
-@JsType(namespace = JsPackage.GLOBAL, name="EXTsRGB", isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="Object", isNative = true)
 public class EXTsRGB implements IsObject {
     public static double SRGB_EXT; /* 0x8C40 */
     public static double SRGB_ALPHA_EXT; /* 0x8C42 */

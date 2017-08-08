@@ -22,7 +22,7 @@ import gwt.jelement.events.EventTarget;
 import gwt.jelement.fileapi.Blob;
 import jsinterop.annotations.*;
 
-@JsType(namespace = JsPackage.GLOBAL, name="FileWriter", isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="Object", isNative = true)
 public class FileWriter extends EventTarget {
     public static short INIT; /* 0 */
     public static short WRITING; /* 1 */

@@ -21,7 +21,7 @@ import gwt.jelement.dom.Document;
 import gwt.jelement.filesystem.DOMFileSystem;
 import jsinterop.annotations.*;
 
-@JsType(namespace = JsPackage.GLOBAL, name="DevToolsHost", isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="Object", isNative = true)
 public class DevToolsHost implements IsObject {
     @JsMethod(name = "copyText")
     public native void copyText(String text);

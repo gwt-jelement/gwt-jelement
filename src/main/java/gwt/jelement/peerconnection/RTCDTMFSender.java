@@ -21,7 +21,7 @@ import gwt.jelement.events.EventTarget;
 import gwt.jelement.mediastream.MediaStreamTrack;
 import jsinterop.annotations.*;
 
-@JsType(namespace = JsPackage.GLOBAL, name="RTCDTMFSender", isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="Object", isNative = true)
 public class RTCDTMFSender extends EventTarget {
     @JsProperty(name="ontonechange")
     private EventHandlerNonNull ontonechange;

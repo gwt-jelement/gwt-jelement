@@ -19,7 +19,7 @@ package gwt.jelement.speech;
 import gwt.jelement.core.IsObject;
 import jsinterop.annotations.*;
 
-@JsType(namespace = JsPackage.GLOBAL, name="SpeechGrammar", isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="Object", isNative = true)
 public class SpeechGrammar implements IsObject {
     @JsConstructor
     public SpeechGrammar(){

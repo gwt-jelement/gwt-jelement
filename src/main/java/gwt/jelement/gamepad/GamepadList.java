@@ -20,7 +20,7 @@ import gwt.jelement.core.ArrayLike;
 import gwt.jelement.core.IsObject;
 import jsinterop.annotations.*;
 
-@JsType(namespace = JsPackage.GLOBAL, name="GamepadList", isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="Object", isNative = true)
 public class GamepadList implements IsObject, ArrayLike<Gamepad> {
     @JsMethod(name = "get")
     public native Gamepad get();

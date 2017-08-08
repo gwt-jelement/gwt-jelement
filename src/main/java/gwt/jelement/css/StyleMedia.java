@@ -19,7 +19,7 @@ package gwt.jelement.css;
 import gwt.jelement.core.IsObject;
 import jsinterop.annotations.*;
 
-@JsType(namespace = JsPackage.GLOBAL, name="StyleMedia", isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="Object", isNative = true)
 public class StyleMedia implements IsObject {
     @JsProperty(name="type")
     public native String getType();

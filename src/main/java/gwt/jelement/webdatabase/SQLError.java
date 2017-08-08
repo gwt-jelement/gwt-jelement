@@ -19,7 +19,7 @@ package gwt.jelement.webdatabase;
 import gwt.jelement.core.IsObject;
 import jsinterop.annotations.*;
 
-@JsType(namespace = JsPackage.GLOBAL, name="SQLError", isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="Object", isNative = true)
 public class SQLError implements IsObject {
     public static short UNKNOWN_ERR; /* 0 */
     public static short DATABASE_ERR; /* 1 */

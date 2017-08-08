@@ -19,7 +19,7 @@ package gwt.jelement.dom;
 import gwt.jelement.core.IsObject;
 import jsinterop.annotations.*;
 
-@JsType(namespace = JsPackage.GLOBAL, name="SharedArrayBuffer", isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="Object", isNative = true)
 public class SharedArrayBuffer implements IsObject {
     @JsProperty(name="byteLength")
     public native double getByteLength();

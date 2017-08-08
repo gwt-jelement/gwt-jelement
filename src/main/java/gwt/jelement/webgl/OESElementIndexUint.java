@@ -19,6 +19,6 @@ package gwt.jelement.webgl;
 import gwt.jelement.core.IsObject;
 import jsinterop.annotations.*;
 
-@JsType(namespace = JsPackage.GLOBAL, name="OESElementIndexUint", isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="Object", isNative = true)
 public class OESElementIndexUint implements IsObject {
 }

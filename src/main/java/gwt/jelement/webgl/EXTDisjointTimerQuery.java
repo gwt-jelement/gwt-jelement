@@ -19,7 +19,7 @@ package gwt.jelement.webgl;
 import gwt.jelement.core.IsObject;
 import jsinterop.annotations.*;
 
-@JsType(namespace = JsPackage.GLOBAL, name="EXTDisjointTimerQuery", isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="Object", isNative = true)
 public class EXTDisjointTimerQuery implements IsObject {
     public static double QUERY_COUNTER_BITS_EXT; /* 0x8864 */
     public static double CURRENT_QUERY_EXT; /* 0x8865 */

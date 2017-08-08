@@ -20,7 +20,7 @@ import gwt.jelement.core.IsObject;
 import gwt.jelement.core.Promise;
 import jsinterop.annotations.*;
 
-@JsType(namespace = JsPackage.GLOBAL, name="UnderlyingSourceBase", isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="Object", isNative = true)
 public class UnderlyingSourceBase implements IsObject {
     @JsMethod(name = "cancel")
     public native Promise<Void> cancel();

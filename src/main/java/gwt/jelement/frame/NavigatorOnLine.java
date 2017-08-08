@@ -19,7 +19,7 @@ package gwt.jelement.frame;
 import gwt.jelement.core.IsObject;
 import jsinterop.annotations.*;
 
-@JsType(namespace = JsPackage.GLOBAL, name="NavigatorOnLine", isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="Object", isNative = true)
 public class NavigatorOnLine implements IsObject {
     @JsProperty(name="onLine")
     public native boolean getOnLine();

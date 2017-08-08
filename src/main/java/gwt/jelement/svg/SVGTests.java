@@ -19,7 +19,7 @@ package gwt.jelement.svg;
 import gwt.jelement.core.IsObject;
 import jsinterop.annotations.*;
 
-@JsType(namespace = JsPackage.GLOBAL, name="SVGTests", isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="Object", isNative = true)
 public class SVGTests implements IsObject {
     @JsProperty(name="requiredExtensions")
     public native SVGStringList getRequiredExtensions();

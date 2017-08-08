@@ -20,7 +20,7 @@ import gwt.jelement.core.CallbackFunction;
 import gwt.jelement.core.IsObject;
 import jsinterop.annotations.*;
 
-@JsType(namespace = JsPackage.GLOBAL, name="WindowTimers", isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="Object", isNative = true)
 public class WindowTimers implements IsObject {
     @JsMethod(name = "clearInterval")
     public native void clearInterval();

@@ -19,7 +19,7 @@ package gwt.jelement.canvas2d;
 import gwt.jelement.core.IsObject;
 import jsinterop.annotations.*;
 
-@JsType(namespace = JsPackage.GLOBAL, name="CanvasPath", isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="Object", isNative = true)
 public class CanvasPath implements IsObject {
     @JsMethod(name = "arc")
     public native void arc(double x, double y, double radius, double startAngle, double endAngle);

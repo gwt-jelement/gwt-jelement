@@ -33,7 +33,7 @@ import gwt.jelement.imagebitmap.ImageBitmap;
 import gwt.jelement.offscreencanvas.OffscreenCanvas;
 import jsinterop.annotations.*;
 
-@JsType(namespace = JsPackage.GLOBAL, name="WebGL2RenderingContextBase", isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="Object", isNative = true)
 public class WebGL2RenderingContextBase implements IsObject {
     public static double READ_BUFFER; /* 0x0C02 */
     public static double UNPACK_ROW_LENGTH; /* 0x0CF2 */

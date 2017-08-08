@@ -20,7 +20,7 @@ import gwt.jelement.core.IsObject;
 import gwt.jelement.events.EventHandlerNonNull;
 import jsinterop.annotations.*;
 
-@JsType(namespace = JsPackage.GLOBAL, name="WindowEventHandlers", isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="Object", isNative = true)
 public class WindowEventHandlers implements IsObject {
     @JsProperty(name="onbeforeunload")
     private EventHandlerNonNull onbeforeunload;

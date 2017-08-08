@@ -19,7 +19,7 @@ package gwt.jelement.filesystem;
 import gwt.jelement.html.VoidCallback;
 import jsinterop.annotations.*;
 
-@JsType(namespace = JsPackage.GLOBAL, name="DirectoryEntry", isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="Object", isNative = true)
 public class DirectoryEntry extends Entry {
     @JsMethod(name = "createReader")
     public native DirectoryReader createReader();

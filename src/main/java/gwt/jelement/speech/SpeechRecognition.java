@@ -21,7 +21,7 @@ import gwt.jelement.events.EventTarget;
 import gwt.jelement.mediastream.MediaStreamTrack;
 import jsinterop.annotations.*;
 
-@JsType(namespace = JsPackage.GLOBAL, name="SpeechRecognition", isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="Object", isNative = true)
 public class SpeechRecognition extends EventTarget {
     @JsProperty(name="onaudiostart")
     private EventHandlerNonNull onaudiostart;

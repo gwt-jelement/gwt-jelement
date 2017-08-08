@@ -19,7 +19,7 @@ package gwt.jelement.geolocation;
 import gwt.jelement.core.IsObject;
 import jsinterop.annotations.*;
 
-@JsType(namespace = JsPackage.GLOBAL, name="Coordinates", isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="Object", isNative = true)
 public class Coordinates implements IsObject {
     @JsProperty(name="latitude")
     public native double getLatitude();

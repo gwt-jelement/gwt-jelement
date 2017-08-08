@@ -19,7 +19,7 @@ package gwt.jelement.frame;
 import gwt.jelement.core.IsObject;
 import jsinterop.annotations.*;
 
-@JsType(namespace = JsPackage.GLOBAL, name="External", isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="Object", isNative = true)
 public class External implements IsObject {
     @JsMethod(name = "AddSearchProvider")
     public native void AddSearchProvider();

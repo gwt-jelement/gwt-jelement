@@ -19,7 +19,7 @@ package gwt.jelement.installedapp;
 import gwt.jelement.core.IsObject;
 import jsinterop.annotations.*;
 
-@JsType(namespace = JsPackage.GLOBAL, name="RelatedApplication", isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="Object", isNative = true)
 public class RelatedApplication implements IsObject {
     @JsProperty(name="platform")
     public native String getPlatform();

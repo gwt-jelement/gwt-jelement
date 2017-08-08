@@ -19,7 +19,7 @@ package gwt.jelement.filesystem;
 import gwt.jelement.fileapi.File;
 import jsinterop.annotations.*;
 
-@JsType(namespace = JsPackage.GLOBAL, name="FileEntrySync", isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="Object", isNative = true)
 public class FileEntrySync extends EntrySync {
     @JsMethod(name = "createWriter")
     public native FileWriterSync createWriter();

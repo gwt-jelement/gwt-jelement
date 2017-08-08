@@ -19,7 +19,7 @@ package gwt.jelement.webgl;
 import gwt.jelement.core.IsObject;
 import jsinterop.annotations.*;
 
-@JsType(namespace = JsPackage.GLOBAL, name="EXTBlendMinMax", isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="Object", isNative = true)
 public class EXTBlendMinMax implements IsObject {
     public static double MIN_EXT; /* 0x8007 */
     public static double MAX_EXT; /* 0x8008 */

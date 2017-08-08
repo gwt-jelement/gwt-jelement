@@ -19,7 +19,7 @@ package gwt.jelement.device_orientation;
 import gwt.jelement.core.IsObject;
 import jsinterop.annotations.*;
 
-@JsType(namespace = JsPackage.GLOBAL, name="DeviceAcceleration", isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="Object", isNative = true)
 public class DeviceAcceleration implements IsObject {
     @JsProperty(name="x")
     public native double getX();

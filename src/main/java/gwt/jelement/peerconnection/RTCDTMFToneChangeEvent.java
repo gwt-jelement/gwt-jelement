@@ -19,7 +19,7 @@ package gwt.jelement.peerconnection;
 import gwt.jelement.events.Event;
 import jsinterop.annotations.*;
 
-@JsType(namespace = JsPackage.GLOBAL, name="RTCDTMFToneChangeEvent", isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="Object", isNative = true)
 public class RTCDTMFToneChangeEvent extends Event {
     @JsConstructor
     public RTCDTMFToneChangeEvent(String type, RTCDTMFToneChangeEventInit eventInitDict){

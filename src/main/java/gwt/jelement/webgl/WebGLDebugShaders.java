@@ -19,7 +19,7 @@ package gwt.jelement.webgl;
 import gwt.jelement.core.IsObject;
 import jsinterop.annotations.*;
 
-@JsType(namespace = JsPackage.GLOBAL, name="WebGLDebugShaders", isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="Object", isNative = true)
 public class WebGLDebugShaders implements IsObject {
     @JsMethod(name = "getTranslatedShaderSource")
     public native String getTranslatedShaderSource(WebGLShader shader);

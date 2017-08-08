@@ -19,7 +19,7 @@ package gwt.jelement.webgl;
 import gwt.jelement.core.IsObject;
 import jsinterop.annotations.*;
 
-@JsType(namespace = JsPackage.GLOBAL, name="OESVertexArrayObject", isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="Object", isNative = true)
 public class OESVertexArrayObject implements IsObject {
     public static double VERTEX_ARRAY_BINDING_OES; /* 0x85B5 */
     

@@ -19,7 +19,7 @@ package gwt.jelement.frame;
 import gwt.jelement.core.IsObject;
 import jsinterop.annotations.*;
 
-@JsType(namespace = JsPackage.GLOBAL, name="NavigatorCookies", isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="Object", isNative = true)
 public class NavigatorCookies implements IsObject {
     @JsProperty(name="cookieEnabled")
     public native boolean getCookieEnabled();

@@ -19,7 +19,7 @@ package gwt.jelement.dom;
 import gwt.jelement.core.IsObject;
 import jsinterop.annotations.*;
 
-@JsType(namespace = JsPackage.GLOBAL, name="URLUtilsReadOnly", isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="Object", isNative = true)
 public class URLUtilsReadOnly implements IsObject {
     @JsProperty(name="href")
     public native String getHref();

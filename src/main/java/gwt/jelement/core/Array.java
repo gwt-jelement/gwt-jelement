@@ -264,7 +264,6 @@ public class Array<T> implements IsObject, ArrayLike<T> {
         return Js.getLong(this.object(), index);
     }
     
-    
     @JsOverlay
     public final void set(double index, boolean value) {
         Js.set(this.object(), index, value);

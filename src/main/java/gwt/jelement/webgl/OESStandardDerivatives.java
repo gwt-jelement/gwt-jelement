@@ -19,7 +19,7 @@ package gwt.jelement.webgl;
 import gwt.jelement.core.IsObject;
 import jsinterop.annotations.*;
 
-@JsType(namespace = JsPackage.GLOBAL, name="OESStandardDerivatives", isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="Object", isNative = true)
 public class OESStandardDerivatives implements IsObject {
     public static double FRAGMENT_SHADER_DERIVATIVE_HINT_OES; /* 0x8B8B */
     

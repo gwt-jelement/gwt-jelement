@@ -32,7 +32,7 @@ import gwt.jelement.imagebitmap.ImageBitmap;
 import gwt.jelement.offscreencanvas.OffscreenCanvas;
 import jsinterop.annotations.*;
 
-@JsType(namespace = JsPackage.GLOBAL, name="WebGLRenderingContextBase", isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="Object", isNative = true)
 public class WebGLRenderingContextBase implements IsObject {
     public static double DEPTH_BUFFER_BIT; /* 0x00000100 */
     public static double STENCIL_BUFFER_BIT; /* 0x00000400 */

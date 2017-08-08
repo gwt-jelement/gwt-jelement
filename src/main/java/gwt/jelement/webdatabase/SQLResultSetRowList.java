@@ -20,7 +20,7 @@ import gwt.jelement.core.ArrayLike;
 import gwt.jelement.core.IsObject;
 import jsinterop.annotations.*;
 
-@JsType(namespace = JsPackage.GLOBAL, name="SQLResultSetRowList", isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="Object", isNative = true)
 public class SQLResultSetRowList implements IsObject, ArrayLike<Object> {
     @JsMethod(name = "item")
     public native Object item(double index);

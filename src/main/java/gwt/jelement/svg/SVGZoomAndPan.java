@@ -19,7 +19,7 @@ package gwt.jelement.svg;
 import gwt.jelement.core.IsObject;
 import jsinterop.annotations.*;
 
-@JsType(namespace = JsPackage.GLOBAL, name="SVGZoomAndPan", isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="Object", isNative = true)
 public class SVGZoomAndPan implements IsObject {
     public static short SVG_ZOOMANDPAN_UNKNOWN; /* 0 */
     public static short SVG_ZOOMANDPAN_DISABLE; /* 1 */

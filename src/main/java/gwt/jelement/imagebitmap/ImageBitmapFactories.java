@@ -27,7 +27,7 @@ import gwt.jelement.offscreencanvas.OffscreenCanvas;
 import gwt.jelement.svg.SVGImageElement;
 import jsinterop.annotations.*;
 
-@JsType(namespace = JsPackage.GLOBAL, name="ImageBitmapFactories", isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="Object", isNative = true)
 public class ImageBitmapFactories implements IsObject {
     @JsMethod(name = "createImageBitmap")
     public native Promise createImageBitmap(HTMLImageElement imageBitmap);

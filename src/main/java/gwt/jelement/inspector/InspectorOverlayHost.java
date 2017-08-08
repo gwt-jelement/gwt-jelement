@@ -19,7 +19,7 @@ package gwt.jelement.inspector;
 import gwt.jelement.core.IsObject;
 import jsinterop.annotations.*;
 
-@JsType(namespace = JsPackage.GLOBAL, name="InspectorOverlayHost", isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="Object", isNative = true)
 public class InspectorOverlayHost implements IsObject {
     @JsMethod(name = "resume")
     public native void resume();

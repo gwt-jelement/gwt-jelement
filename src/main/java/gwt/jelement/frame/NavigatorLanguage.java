@@ -19,7 +19,7 @@ package gwt.jelement.frame;
 import gwt.jelement.core.IsObject;
 import jsinterop.annotations.*;
 
-@JsType(namespace = JsPackage.GLOBAL, name="NavigatorLanguage", isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="Object", isNative = true)
 public class NavigatorLanguage implements IsObject {
     @JsProperty(name="language")
     public native String getLanguage();

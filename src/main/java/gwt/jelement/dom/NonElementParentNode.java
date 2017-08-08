@@ -19,7 +19,7 @@ package gwt.jelement.dom;
 import gwt.jelement.core.IsObject;
 import jsinterop.annotations.*;
 
-@JsType(namespace = JsPackage.GLOBAL, name="NonElementParentNode", isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="Object", isNative = true)
 public class NonElementParentNode implements IsObject {
     @JsMethod(name = "getElementById")
     public native <T extends Element> T getElementById(String elementId);

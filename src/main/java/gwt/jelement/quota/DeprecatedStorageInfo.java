@@ -19,7 +19,7 @@ package gwt.jelement.quota;
 import gwt.jelement.core.IsObject;
 import jsinterop.annotations.*;
 
-@JsType(namespace = JsPackage.GLOBAL, name="DeprecatedStorageInfo", isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="Object", isNative = true)
 public class DeprecatedStorageInfo implements IsObject {
     public static short TEMPORARY; /* 0 */
     public static short PERSISTENT; /* 1 */

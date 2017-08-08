@@ -20,7 +20,7 @@ import gwt.jelement.core.IsObject;
 import gwt.jelement.html.VoidCallback;
 import jsinterop.annotations.*;
 
-@JsType(namespace = JsPackage.GLOBAL, name="Database", isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="Object", isNative = true)
 public class Database implements IsObject {
     @JsProperty(name="version")
     public native String getVersion();

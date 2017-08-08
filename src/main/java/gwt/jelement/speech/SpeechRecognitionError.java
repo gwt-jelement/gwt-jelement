@@ -19,7 +19,7 @@ package gwt.jelement.speech;
 import gwt.jelement.events.Event;
 import jsinterop.annotations.*;
 
-@JsType(namespace = JsPackage.GLOBAL, name="SpeechRecognitionError", isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="Object", isNative = true)
 public class SpeechRecognitionError extends Event {
     @JsConstructor
     public SpeechRecognitionError(String type){

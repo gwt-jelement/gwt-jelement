@@ -18,7 +18,7 @@ package gwt.jelement.events;
 
 import jsinterop.annotations.*;
 
-@JsType(namespace = JsPackage.GLOBAL, name="ResourceProgressEvent", isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="Object", isNative = true)
 public class ResourceProgressEvent extends ProgressEvent {
     private ResourceProgressEvent(){
         super((String) null);

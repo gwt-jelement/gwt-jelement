@@ -20,7 +20,7 @@ import gwt.jelement.core.Array;
 import gwt.jelement.core.IsObject;
 import jsinterop.annotations.*;
 
-@JsType(namespace = JsPackage.GLOBAL, name="SQLTransaction", isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="Object", isNative = true)
 public class SQLTransaction implements IsObject {
     @JsMethod(name = "executeSql")
     public native void executeSql(String sqlStatement);

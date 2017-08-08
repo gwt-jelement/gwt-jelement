@@ -19,7 +19,7 @@ package gwt.jelement.peerconnection;
 import gwt.jelement.core.IsObject;
 import jsinterop.annotations.*;
 
-@JsType(namespace = JsPackage.GLOBAL, name="RTCStatsResponse", isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="Object", isNative = true)
 public class RTCStatsResponse implements IsObject {
     @JsMethod(name = "get")
     public native RTCLegacyStatsReport get();

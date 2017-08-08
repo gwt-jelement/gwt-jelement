@@ -18,7 +18,7 @@ package gwt.jelement.core;
 
 import jsinterop.annotations.*;
 
-@JsType(namespace = JsPackage.GLOBAL, name="ArrayBufferView", isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="Object", isNative = true)
 public class ArrayBufferView implements IsObject {
     @JsProperty(name="buffer")
     public native ArrayBuffer getBuffer();

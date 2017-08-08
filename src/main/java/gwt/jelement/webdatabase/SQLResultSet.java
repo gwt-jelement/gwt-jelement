@@ -19,7 +19,7 @@ package gwt.jelement.webdatabase;
 import gwt.jelement.core.IsObject;
 import jsinterop.annotations.*;
 
-@JsType(namespace = JsPackage.GLOBAL, name="SQLResultSet", isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="Object", isNative = true)
 public class SQLResultSet implements IsObject {
     @JsProperty(name="rows")
     public native SQLResultSetRowList getRows();

@@ -21,7 +21,7 @@ import gwt.jelement.css.StyleSheetList;
 import gwt.jelement.editing.Selection;
 import jsinterop.annotations.*;
 
-@JsType(namespace = JsPackage.GLOBAL, name="DocumentOrShadowRoot", isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="Object", isNative = true)
 public class DocumentOrShadowRoot implements IsObject {
     @JsProperty(name="activeElement")
     public native Element getActiveElement();

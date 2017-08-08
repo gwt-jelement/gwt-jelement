@@ -19,7 +19,7 @@ package gwt.jelement.css;
 import gwt.jelement.core.IsObject;
 import jsinterop.annotations.*;
 
-@JsType(namespace = JsPackage.GLOBAL, name="FontFaceSource", isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="Object", isNative = true)
 public class FontFaceSource implements IsObject {
     @JsProperty(name="fonts")
     public native FontFaceSet getFonts();

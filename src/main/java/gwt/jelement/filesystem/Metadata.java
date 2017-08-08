@@ -20,7 +20,7 @@ import gwt.jelement.core.Date;
 import gwt.jelement.core.IsObject;
 import jsinterop.annotations.*;
 
-@JsType(namespace = JsPackage.GLOBAL, name="Metadata", isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="Object", isNative = true)
 public class Metadata implements IsObject {
     @JsProperty(name="modificationTime")
     public native Date getModificationTime();

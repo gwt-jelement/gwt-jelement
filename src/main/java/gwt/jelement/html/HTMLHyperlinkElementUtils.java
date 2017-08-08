@@ -19,7 +19,7 @@ package gwt.jelement.html;
 import gwt.jelement.core.IsObject;
 import jsinterop.annotations.*;
 
-@JsType(namespace = JsPackage.GLOBAL, name="HTMLHyperlinkElementUtils", isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="Object", isNative = true)
 public class HTMLHyperlinkElementUtils implements IsObject {
     @JsProperty(name="href")
     public native String getHref();

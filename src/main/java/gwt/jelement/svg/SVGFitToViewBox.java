@@ -19,7 +19,7 @@ package gwt.jelement.svg;
 import gwt.jelement.core.IsObject;
 import jsinterop.annotations.*;
 
-@JsType(namespace = JsPackage.GLOBAL, name="SVGFitToViewBox", isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="Object", isNative = true)
 public class SVGFitToViewBox implements IsObject {
     @JsProperty(name="viewBox")
     public native SVGAnimatedRect getViewBox();

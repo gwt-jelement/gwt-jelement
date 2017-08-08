@@ -19,7 +19,7 @@ package gwt.jelement.dom;
 import gwt.jelement.core.IsObject;
 import jsinterop.annotations.*;
 
-@JsType(namespace = JsPackage.GLOBAL, name="ChildNode", isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="Object", isNative = true)
 public class ChildNode implements IsObject {
     @SafeVarargs
     @JsMethod(name = "after")

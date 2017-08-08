@@ -20,7 +20,7 @@ import gwt.jelement.core.IsObject;
 import gwt.jelement.html.VoidCallback;
 import jsinterop.annotations.*;
 
-@JsType(namespace = JsPackage.GLOBAL, name="Entry", isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="Object", isNative = true)
 public class Entry implements IsObject {
     @JsProperty(name="isFile")
     public native boolean getIsFile();

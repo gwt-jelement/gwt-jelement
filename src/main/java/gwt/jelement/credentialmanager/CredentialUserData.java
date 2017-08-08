@@ -19,7 +19,7 @@ package gwt.jelement.credentialmanager;
 import gwt.jelement.core.IsObject;
 import jsinterop.annotations.*;
 
-@JsType(namespace = JsPackage.GLOBAL, name="CredentialUserData", isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="Object", isNative = true)
 public class CredentialUserData implements IsObject {
     @JsProperty(name="name")
     public native String getName();

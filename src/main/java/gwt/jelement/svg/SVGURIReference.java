@@ -19,7 +19,7 @@ package gwt.jelement.svg;
 import gwt.jelement.core.IsObject;
 import jsinterop.annotations.*;
 
-@JsType(namespace = JsPackage.GLOBAL, name="SVGURIReference", isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="Object", isNative = true)
 public class SVGURIReference implements IsObject {
     @JsProperty(name="href")
     public native SVGAnimatedString getHref();

@@ -19,7 +19,7 @@ package gwt.jelement.xml;
 import gwt.jelement.core.IsObject;
 import jsinterop.annotations.*;
 
-@JsType(namespace = JsPackage.GLOBAL, name="XPathNSResolver", isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="Object", isNative = true)
 public class XPathNSResolver implements IsObject {
     @JsMethod(name = "lookupNamespaceURI")
     public native String lookupNamespaceURI();

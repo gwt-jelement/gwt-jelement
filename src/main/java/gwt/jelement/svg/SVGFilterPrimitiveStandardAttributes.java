@@ -19,7 +19,7 @@ package gwt.jelement.svg;
 import gwt.jelement.core.IsObject;
 import jsinterop.annotations.*;
 
-@JsType(namespace = JsPackage.GLOBAL, name="SVGFilterPrimitiveStandardAttributes", isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="Object", isNative = true)
 public class SVGFilterPrimitiveStandardAttributes implements IsObject {
     @JsProperty(name="x")
     public native SVGAnimatedLength getX();

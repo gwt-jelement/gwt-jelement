@@ -20,7 +20,7 @@ import gwt.jelement.core.IsObject;
 import gwt.jelement.events.EventHandlerNonNull;
 import jsinterop.annotations.*;
 
-@JsType(namespace = JsPackage.GLOBAL, name="AbstractWorker", isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="Object", isNative = true)
 public class AbstractWorker implements IsObject {
     @JsProperty(name="onerror")
     private EventHandlerNonNull onerror;

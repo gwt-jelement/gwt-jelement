@@ -23,7 +23,7 @@ import gwt.jelement.fileapi.Blob;
 import gwt.jelement.html.FormData;
 import jsinterop.annotations.*;
 
-@JsType(namespace = JsPackage.GLOBAL, name="Body", isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="Object", isNative = true)
 public class Body implements IsObject {
     @JsProperty(name="bodyUsed")
     public native boolean getBodyUsed();

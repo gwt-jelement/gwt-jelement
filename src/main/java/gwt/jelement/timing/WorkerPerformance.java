@@ -20,7 +20,7 @@ import gwt.jelement.events.EventHandlerNonNull;
 import gwt.jelement.events.EventTarget;
 import jsinterop.annotations.*;
 
-@JsType(namespace = JsPackage.GLOBAL, name="WorkerPerformance", isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="Object", isNative = true)
 public class WorkerPerformance extends EventTarget {
     @JsProperty(name="onresourcetimingbufferfull")
     private EventHandlerNonNull onresourcetimingbufferfull;

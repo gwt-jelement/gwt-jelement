@@ -19,7 +19,7 @@ package gwt.jelement.filesystem;
 import gwt.jelement.core.IsObject;
 import jsinterop.annotations.*;
 
-@JsType(namespace = JsPackage.GLOBAL, name="EntrySync", isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="Object", isNative = true)
 public class EntrySync implements IsObject {
     @JsProperty(name="isFile")
     public native boolean getIsFile();

@@ -19,7 +19,7 @@ package gwt.jelement.timing;
 import gwt.jelement.core.IsObject;
 import jsinterop.annotations.*;
 
-@JsType(namespace = JsPackage.GLOBAL, name="MemoryInfo", isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="Object", isNative = true)
 public class MemoryInfo implements IsObject {
     @JsProperty(name="totalJSHeapSize")
     public native double getTotalJSHeapSize();

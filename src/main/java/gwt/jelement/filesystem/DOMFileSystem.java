@@ -19,7 +19,7 @@ package gwt.jelement.filesystem;
 import gwt.jelement.core.IsObject;
 import jsinterop.annotations.*;
 
-@JsType(namespace = JsPackage.GLOBAL, name="DOMFileSystem", isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="Object", isNative = true)
 public class DOMFileSystem implements IsObject {
     @JsProperty(name="name")
     public native String getName();

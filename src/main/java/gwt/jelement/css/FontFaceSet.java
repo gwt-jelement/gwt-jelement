@@ -21,7 +21,7 @@ import gwt.jelement.events.EventHandlerNonNull;
 import gwt.jelement.events.EventTarget;
 import jsinterop.annotations.*;
 
-@JsType(namespace = JsPackage.GLOBAL, name="FontFaceSet", isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="Object", isNative = true)
 public class FontFaceSet extends EventTarget {
     @JsProperty(name="onloading")
     private EventHandlerNonNull onloading;

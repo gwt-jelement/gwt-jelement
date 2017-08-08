@@ -19,7 +19,7 @@ package gwt.jelement.webgl;
 import gwt.jelement.core.IsObject;
 import jsinterop.annotations.*;
 
-@JsType(namespace = JsPackage.GLOBAL, name="WebGLCompressedTextureATC", isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="Object", isNative = true)
 public class WebGLCompressedTextureATC implements IsObject {
     public static double COMPRESSED_RGB_ATC_WEBGL; /* 0x8C92 */
     public static double COMPRESSED_RGBA_ATC_EXPLICIT_ALPHA_WEBGL; /* 0x8C93 */

@@ -20,7 +20,7 @@ import gwt.jelement.core.IsObject;
 import gwt.jelement.dom.Document;
 import jsinterop.annotations.*;
 
-@JsType(namespace = JsPackage.GLOBAL, name="PagePopupController", isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="Object", isNative = true)
 public class PagePopupController implements IsObject {
     @JsMethod(name = "closePopup")
     public native void closePopup();

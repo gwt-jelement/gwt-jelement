@@ -19,7 +19,7 @@ package gwt.jelement.webgl;
 import gwt.jelement.core.IsObject;
 import jsinterop.annotations.*;
 
-@JsType(namespace = JsPackage.GLOBAL, name="ANGLEInstancedArrays", isNative = true)
+@JsType(namespace = JsPackage.GLOBAL, name="Object", isNative = true)
 public class ANGLEInstancedArrays implements IsObject {
     public static double VERTEX_ATTRIB_ARRAY_DIVISOR_ANGLE; /* 0x88FE */
     
