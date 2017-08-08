@@ -74,7 +74,7 @@ public class USBDevice implements IsObject {
     public native USBConfiguration[] getConfigurations();
     
     @JsProperty(name="opened")
-    public native boolean getOpened();
+    public native boolean isOpened();
     
     @JsMethod(name = "claimInterface")
     public native Promise<Void> claimInterface(byte interfaceNumber);

@@ -73,7 +73,7 @@ public class Request implements IsObject {
     public native String getIntegrity();
     
     @JsProperty(name="bodyUsed")
-    public native boolean getBodyUsed();
+    public native boolean isBodyUsed();
     
     @JsOverlay
     public final ReferrerPolicy getReferrerPolicy(){

@@ -59,6 +59,6 @@ public class WorkerNavigator implements IsObject {
     public native String getUserAgent();
     
     @JsProperty(name="onLine")
-    public native boolean getOnLine();
+    public native boolean isOnLine();
     
 }

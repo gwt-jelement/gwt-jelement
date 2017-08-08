@@ -46,22 +46,22 @@ public class KeyboardEvent extends UIEvent {
     public native double getLocation();
     
     @JsProperty(name="ctrlKey")
-    public native boolean getCtrlKey();
+    public native boolean isCtrlKey();
     
     @JsProperty(name="shiftKey")
-    public native boolean getShiftKey();
+    public native boolean isShiftKey();
     
     @JsProperty(name="altKey")
-    public native boolean getAltKey();
+    public native boolean isAltKey();
     
     @JsProperty(name="metaKey")
-    public native boolean getMetaKey();
+    public native boolean isMetaKey();
     
     @JsProperty(name="repeat")
-    public native boolean getRepeat();
+    public native boolean isRepeat();
     
     @JsProperty(name="isComposing")
-    public native boolean getIsComposing();
+    public native boolean isIsComposing();
     
     @JsProperty(name="charCode")
     public native double getCharCode();

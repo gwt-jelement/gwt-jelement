@@ -53,7 +53,7 @@ public class MediaStream extends EventTarget {
     public native String getId();
     
     @JsProperty(name="active")
-    public native boolean getActive();
+    public native boolean isActive();
     
     @JsOverlay
     public final EventHandlerNonNull getOnAddtrack(){

@@ -22,13 +22,13 @@ import jsinterop.annotations.*;
 @JsType(namespace = JsPackage.GLOBAL, name="VRDisplayCapabilities", isNative = true)
 public class VRDisplayCapabilities implements IsObject {
     @JsProperty(name="hasPosition")
-    public native boolean getHasPosition();
+    public native boolean isHasPosition();
     
     @JsProperty(name="hasExternalDisplay")
-    public native boolean getHasExternalDisplay();
+    public native boolean isHasExternalDisplay();
     
     @JsProperty(name="canPresent")
-    public native boolean getCanPresent();
+    public native boolean isCanPresent();
     
     @JsProperty(name="maxLayers")
     public native double getMaxLayers();

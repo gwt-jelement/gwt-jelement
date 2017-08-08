@@ -50,7 +50,7 @@ public class Node extends EventTarget {
     public native String getBaseURI();
     
     @JsProperty(name="isConnected")
-    public native boolean getIsConnected();
+    public native boolean isIsConnected();
     
     @JsProperty(name="ownerDocument")
     public native Document getOwnerDocument();

@@ -30,6 +30,6 @@ public class InputDeviceCapabilities implements IsObject {
     }
     
     @JsProperty(name="firesTouchEvents")
-    public native boolean getFiresTouchEvents();
+    public native boolean isFiresTouchEvents();
     
 }

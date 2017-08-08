@@ -256,7 +256,7 @@ public class HTMLElement extends Element {
     public native void setLang(String lang);
     
     @JsProperty(name="translate")
-    public native boolean getTranslate();
+    public native boolean isTranslate();
     
     @JsProperty(name="translate")
     public native void setTranslate(boolean translate);
@@ -271,7 +271,7 @@ public class HTMLElement extends Element {
     public native DOMStringMap getDataset();
     
     @JsProperty(name="hidden")
-    public native boolean getHidden();
+    public native boolean isHidden();
     
     @JsProperty(name="hidden")
     public native void setHidden(boolean hidden);
@@ -283,7 +283,7 @@ public class HTMLElement extends Element {
     public native void setTabIndex(double tabIndex);
     
     @JsProperty(name="inert")
-    public native boolean getInert();
+    public native boolean isInert();
     
     @JsProperty(name="inert")
     public native void setInert(boolean inert);
@@ -295,13 +295,13 @@ public class HTMLElement extends Element {
     public native void setAccessKey(String accessKey);
     
     @JsProperty(name="draggable")
-    public native boolean getDraggable();
+    public native boolean isDraggable();
     
     @JsProperty(name="draggable")
     public native void setDraggable(boolean draggable);
     
     @JsProperty(name="spellcheck")
-    public native boolean getSpellcheck();
+    public native boolean isSpellcheck();
     
     @JsProperty(name="spellcheck")
     public native void setSpellcheck(boolean spellcheck);
@@ -313,7 +313,7 @@ public class HTMLElement extends Element {
     public native void setContentEditable(String contentEditable);
     
     @JsProperty(name="isContentEditable")
-    public native boolean getIsContentEditable();
+    public native boolean isIsContentEditable();
     
     @JsProperty(name="inputMode")
     public native String getInputMode();

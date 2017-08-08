@@ -440,7 +440,7 @@ public class Window extends EventTarget implements ArrayLike<Window> {
     public native void setStatus(String status);
     
     @JsProperty(name="closed")
-    public native boolean getClosed();
+    public native boolean isClosed();
     
     @JsProperty(name="frames")
     public native Window getFrames();
@@ -537,7 +537,7 @@ public class Window extends EventTarget implements ArrayLike<Window> {
     public native void setEvent(Event event);
     
     @JsProperty(name="offscreenBuffering")
-    public native boolean getOffscreenBuffering();
+    public native boolean isOffscreenBuffering();
     
     @JsProperty(name="screenLeft")
     public native double getScreenLeft();
@@ -685,7 +685,7 @@ public class Window extends EventTarget implements ArrayLike<Window> {
     }
     
     @JsProperty(name="isSecureContext")
-    public native boolean getIsSecureContext();
+    public native boolean isIsSecureContext();
     
     @JsProperty(name="WebKitCSSMatrix")
     public native DOMMatrix getWebKitCSSMatrix();

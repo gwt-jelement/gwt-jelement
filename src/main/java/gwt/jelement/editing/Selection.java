@@ -36,7 +36,7 @@ public class Selection implements IsObject {
     public native double getFocusOffset();
     
     @JsProperty(name="isCollapsed")
-    public native boolean getIsCollapsed();
+    public native boolean isIsCollapsed();
     
     @JsProperty(name="rangeCount")
     public native double getRangeCount();

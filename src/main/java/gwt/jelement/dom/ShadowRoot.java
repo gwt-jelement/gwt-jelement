@@ -42,7 +42,7 @@ public class ShadowRoot extends DocumentFragment {
     public native void setInnerHTML(String innerHTML);
     
     @JsProperty(name="delegatesFocus")
-    public native boolean getDelegatesFocus();
+    public native boolean isDelegatesFocus();
     
     @JsProperty(name="activeElement")
     public native Element getActiveElement();

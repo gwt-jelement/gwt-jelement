@@ -35,7 +35,7 @@ public class BatteryManager extends EventTarget {
     private EventHandlerNonNull onlevelchange;
     
     @JsProperty(name="charging")
-    public native boolean getCharging();
+    public native boolean isCharging();
     
     @JsProperty(name="chargingTime")
     public native double getChargingTime();

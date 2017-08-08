@@ -48,22 +48,22 @@ public class ScrollState implements IsObject {
     public native double getVelocityY();
     
     @JsProperty(name="isBeginning")
-    public native boolean getIsBeginning();
+    public native boolean isIsBeginning();
     
     @JsProperty(name="inInertialPhase")
-    public native boolean getInInertialPhase();
+    public native boolean isInInertialPhase();
     
     @JsProperty(name="isEnding")
-    public native boolean getIsEnding();
+    public native boolean isIsEnding();
     
     @JsProperty(name="shouldPropagate")
-    public native boolean getShouldPropagate();
+    public native boolean isShouldPropagate();
     
     @JsProperty(name="fromUserInput")
-    public native boolean getFromUserInput();
+    public native boolean isFromUserInput();
     
     @JsProperty(name="isDirectManipulation")
-    public native boolean getIsDirectManipulation();
+    public native boolean isIsDirectManipulation();
     
     @JsProperty(name="deltaGranularity")
     public native double getDeltaGranularity();

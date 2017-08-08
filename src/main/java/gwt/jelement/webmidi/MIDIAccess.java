@@ -32,7 +32,7 @@ public class MIDIAccess extends EventTarget {
     public native MIDIOutputMap getOutputs();
     
     @JsProperty(name="sysexEnabled")
-    public native boolean getSysexEnabled();
+    public native boolean isSysexEnabled();
     
     @JsOverlay
     public final EventHandlerNonNull getOnStatechange(){

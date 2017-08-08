@@ -22,7 +22,7 @@ import jsinterop.annotations.*;
 @JsType(namespace = JsPackage.GLOBAL, name="CSSTransformComponent", isNative = true)
 public class CSSTransformComponent implements IsObject {
     @JsProperty(name="is2D")
-    public native boolean getIs2D();
+    public native boolean isIs2D();
     
     @JsProperty(name="is2D")
     public native void setIs2D(boolean is2D);

@@ -39,10 +39,10 @@ public class TextDecoder implements IsObject {
     public native String getEncoding();
     
     @JsProperty(name="fatal")
-    public native boolean getFatal();
+    public native boolean isFatal();
     
     @JsProperty(name="ignoreBOM")
-    public native boolean getIgnoreBOM();
+    public native boolean isIgnoreBOM();
     
     @JsMethod(name = "decode")
     public native String decode();

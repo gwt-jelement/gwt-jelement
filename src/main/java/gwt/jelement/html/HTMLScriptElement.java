@@ -33,7 +33,7 @@ public class HTMLScriptElement extends HTMLElement {
     public native void setType(String type);
     
     @JsProperty(name="noModule")
-    public native boolean getNoModule();
+    public native boolean isNoModule();
     
     @JsProperty(name="noModule")
     public native void setNoModule(boolean noModule);
@@ -45,13 +45,13 @@ public class HTMLScriptElement extends HTMLElement {
     public native void setCharset(String charset);
     
     @JsProperty(name="async")
-    public native boolean getAsync();
+    public native boolean isAsync();
     
     @JsProperty(name="async")
     public native void setAsync(boolean async);
     
     @JsProperty(name="defer")
-    public native boolean getDefer();
+    public native boolean isDefer();
     
     @JsProperty(name="defer")
     public native void setDefer(boolean defer);

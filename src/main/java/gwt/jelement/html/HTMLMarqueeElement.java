@@ -69,7 +69,7 @@ public class HTMLMarqueeElement extends HTMLElement {
     public native void setScrollDelay(double scrollDelay);
     
     @JsProperty(name="trueSpeed")
-    public native boolean getTrueSpeed();
+    public native boolean isTrueSpeed();
     
     @JsProperty(name="trueSpeed")
     public native void setTrueSpeed(boolean trueSpeed);

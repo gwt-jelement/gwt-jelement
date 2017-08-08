@@ -35,7 +35,7 @@ public class VideoTrack implements IsObject {
     public native String getLanguage();
     
     @JsProperty(name="selected")
-    public native boolean getSelected();
+    public native boolean isSelected();
     
     @JsProperty(name="selected")
     public native void setSelected(boolean selected);

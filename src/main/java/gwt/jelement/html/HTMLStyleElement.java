@@ -22,7 +22,7 @@ import jsinterop.annotations.*;
 @JsType(namespace = JsPackage.GLOBAL, name="HTMLStyleElement", isNative = true)
 public class HTMLStyleElement extends HTMLElement {
     @JsProperty(name="disabled")
-    public native boolean getDisabled();
+    public native boolean isDisabled();
     
     @JsProperty(name="disabled")
     public native void setDisabled(boolean disabled);

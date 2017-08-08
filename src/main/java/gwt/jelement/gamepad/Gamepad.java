@@ -31,7 +31,7 @@ public class Gamepad implements IsObject {
     public native double getIndex();
     
     @JsProperty(name="connected")
-    public native boolean getConnected();
+    public native boolean isConnected();
     
     @JsProperty(name="timestamp")
     public native double getTimestamp();

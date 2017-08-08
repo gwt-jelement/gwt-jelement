@@ -29,7 +29,7 @@ public class BluetoothRemoteGATTService implements IsObject {
     public native String getUuid();
     
     @JsProperty(name="isPrimary")
-    public native boolean getIsPrimary();
+    public native boolean isIsPrimary();
     
     @JsMethod(name = "getCharacteristic")
     public native Promise<BluetoothRemoteGATTCharacteristic> getCharacteristic(String characteristic);

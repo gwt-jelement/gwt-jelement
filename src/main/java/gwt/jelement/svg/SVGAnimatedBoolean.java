@@ -22,12 +22,12 @@ import jsinterop.annotations.*;
 @JsType(namespace = JsPackage.GLOBAL, name="SVGAnimatedBoolean", isNative = true)
 public class SVGAnimatedBoolean implements IsObject {
     @JsProperty(name="baseVal")
-    public native boolean getBaseVal();
+    public native boolean isBaseVal();
     
     @JsProperty(name="baseVal")
     public native void setBaseVal(boolean baseVal);
     
     @JsProperty(name="animVal")
-    public native boolean getAnimVal();
+    public native boolean isAnimVal();
     
 }

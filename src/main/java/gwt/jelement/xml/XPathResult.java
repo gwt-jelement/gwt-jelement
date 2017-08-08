@@ -43,13 +43,13 @@ public class XPathResult implements IsObject {
     public native String getStringValue();
     
     @JsProperty(name="booleanValue")
-    public native boolean getBooleanValue();
+    public native boolean isBooleanValue();
     
     @JsProperty(name="singleNodeValue")
     public native Node getSingleNodeValue();
     
     @JsProperty(name="invalidIteratorState")
-    public native boolean getInvalidIteratorState();
+    public native boolean isInvalidIteratorState();
     
     @JsProperty(name="snapshotLength")
     public native double getSnapshotLength();

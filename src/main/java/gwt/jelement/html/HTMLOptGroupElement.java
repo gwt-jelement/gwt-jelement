@@ -21,7 +21,7 @@ import jsinterop.annotations.*;
 @JsType(namespace = JsPackage.GLOBAL, name="HTMLOptGroupElement", isNative = true)
 public class HTMLOptGroupElement extends HTMLElement {
     @JsProperty(name="disabled")
-    public native boolean getDisabled();
+    public native boolean isDisabled();
     
     @JsProperty(name="disabled")
     public native void setDisabled(boolean disabled);

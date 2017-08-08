@@ -78,7 +78,7 @@ public class HTMLTableCellElement extends HTMLElement {
     public native void setChOff(String chOff);
     
     @JsProperty(name="noWrap")
-    public native boolean getNoWrap();
+    public native boolean isNoWrap();
     
     @JsProperty(name="noWrap")
     public native void setNoWrap(boolean noWrap);

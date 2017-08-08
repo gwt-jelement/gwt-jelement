@@ -418,7 +418,7 @@ public class Document extends Node {
     public native void setXmlVersion(String xmlVersion);
     
     @JsProperty(name="xmlStandalone")
-    public native boolean getXmlStandalone();
+    public native boolean isXmlStandalone();
     
     @JsProperty(name="xmlStandalone")
     public native void setXmlStandalone(boolean xmlStandalone);
@@ -546,13 +546,13 @@ public class Document extends Node {
     }
     
     @JsProperty(name="hidden")
-    public native boolean getHidden();
+    public native boolean isHidden();
     
     @JsProperty(name="webkitVisibilityState")
     public native String getWebkitVisibilityState();
     
     @JsProperty(name="webkitHidden")
-    public native boolean getWebkitHidden();
+    public native boolean isWebkitHidden();
     
     @JsOverlay
     public final EventHandlerNonNull getOnBeforecopy(){
@@ -668,7 +668,7 @@ public class Document extends Node {
     public native DocumentTimeline getTimeline();
     
     @JsProperty(name="fullscreenEnabled")
-    public native boolean getFullscreenEnabled();
+    public native boolean isFullscreenEnabled();
     
     @JsOverlay
     public final EventHandlerNonNull getOnFullscreenchange(){
@@ -691,13 +691,13 @@ public class Document extends Node {
     }
     
     @JsProperty(name="webkitIsFullScreen")
-    public native boolean getWebkitIsFullScreen();
+    public native boolean isWebkitIsFullScreen();
     
     @JsProperty(name="webkitCurrentFullScreenElement")
     public native Element getWebkitCurrentFullScreenElement();
     
     @JsProperty(name="webkitFullscreenEnabled")
-    public native boolean getWebkitFullscreenEnabled();
+    public native boolean isWebkitFullscreenEnabled();
     
     @JsProperty(name="webkitFullscreenElement")
     public native Element getWebkitFullscreenElement();

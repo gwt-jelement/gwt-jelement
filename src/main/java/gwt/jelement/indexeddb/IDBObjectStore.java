@@ -39,7 +39,7 @@ public class IDBObjectStore implements IsObject {
     public native IDBTransaction getTransaction();
     
     @JsProperty(name="autoIncrement")
-    public native boolean getAutoIncrement();
+    public native boolean isAutoIncrement();
     
     @JsMethod(name = "add")
     public native IDBRequest add(Object value);

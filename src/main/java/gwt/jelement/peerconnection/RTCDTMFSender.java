@@ -27,7 +27,7 @@ public class RTCDTMFSender extends EventTarget {
     private EventHandlerNonNull ontonechange;
     
     @JsProperty(name="canInsertDTMF")
-    public native boolean getCanInsertDTMF();
+    public native boolean isCanInsertDTMF();
     
     @JsProperty(name="track")
     public native MediaStreamTrack getTrack();

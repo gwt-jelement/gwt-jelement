@@ -107,10 +107,10 @@ public class DOMMatrixReadOnly implements IsObject {
     public native double getM44();
     
     @JsProperty(name="is2D")
-    public native boolean getIs2D();
+    public native boolean isIs2D();
     
     @JsProperty(name="isIdentity")
-    public native boolean getIsIdentity();
+    public native boolean isIsIdentity();
     
     @JsMethod(name = "flipX")
     public native DOMMatrix flipX();

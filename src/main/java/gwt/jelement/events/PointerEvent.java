@@ -58,7 +58,7 @@ public class PointerEvent extends MouseEvent {
     public native String getPointerType();
     
     @JsProperty(name="isPrimary")
-    public native boolean getIsPrimary();
+    public native boolean isIsPrimary();
     
     @JsMethod(name = "getCoalescedEvents")
     public native PointerEvent[] getCoalescedEvents();

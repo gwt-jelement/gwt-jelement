@@ -51,7 +51,7 @@ public class HTMLTrackElement extends HTMLElement {
     public native void setLabel(String label);
     
     @JsProperty(name="default")
-    public native boolean getDefault();
+    public native boolean isDefault();
     
     @JsProperty(name="default")
     public native void setDefault(boolean default_);

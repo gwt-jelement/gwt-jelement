@@ -74,13 +74,13 @@ public class SpeechRecognition extends EventTarget {
     public native void setLang(String lang);
     
     @JsProperty(name="continuous")
-    public native boolean getContinuous();
+    public native boolean isContinuous();
     
     @JsProperty(name="continuous")
     public native void setContinuous(boolean continuous);
     
     @JsProperty(name="interimResults")
-    public native boolean getInterimResults();
+    public native boolean isInterimResults();
     
     @JsProperty(name="interimResults")
     public native void setInterimResults(boolean interimResults);

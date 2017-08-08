@@ -75,7 +75,7 @@ public class Blob implements IsObject {
     public native String getType();
     
     @JsProperty(name="isClosed")
-    public native boolean getIsClosed();
+    public native boolean isIsClosed();
     
     @JsMethod(name = "close")
     public native void close();

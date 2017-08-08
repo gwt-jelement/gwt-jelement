@@ -32,7 +32,7 @@ public class CloseEvent extends Event {
     }
     
     @JsProperty(name="wasClean")
-    public native boolean getWasClean();
+    public native boolean isWasClean();
     
     @JsProperty(name="code")
     public native short getCode();

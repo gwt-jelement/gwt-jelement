@@ -33,7 +33,7 @@ public class HTMLHRElement extends HTMLElement {
     public native void setColor(String color);
     
     @JsProperty(name="noShade")
-    public native boolean getNoShade();
+    public native boolean isNoShade();
     
     @JsProperty(name="noShade")
     public native void setNoShade(boolean noShade);

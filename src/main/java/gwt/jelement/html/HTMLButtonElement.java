@@ -22,13 +22,13 @@ import jsinterop.annotations.*;
 @JsType(namespace = JsPackage.GLOBAL, name="HTMLButtonElement", isNative = true)
 public class HTMLButtonElement extends HTMLElement {
     @JsProperty(name="autofocus")
-    public native boolean getAutofocus();
+    public native boolean isAutofocus();
     
     @JsProperty(name="autofocus")
     public native void setAutofocus(boolean autofocus);
     
     @JsProperty(name="disabled")
-    public native boolean getDisabled();
+    public native boolean isDisabled();
     
     @JsProperty(name="disabled")
     public native void setDisabled(boolean disabled);
@@ -55,7 +55,7 @@ public class HTMLButtonElement extends HTMLElement {
     public native void setFormMethod(String formMethod);
     
     @JsProperty(name="formNoValidate")
-    public native boolean getFormNoValidate();
+    public native boolean isFormNoValidate();
     
     @JsProperty(name="formNoValidate")
     public native void setFormNoValidate(boolean formNoValidate);
@@ -85,7 +85,7 @@ public class HTMLButtonElement extends HTMLElement {
     public native void setValue(String value);
     
     @JsProperty(name="willValidate")
-    public native boolean getWillValidate();
+    public native boolean isWillValidate();
     
     @JsProperty(name="validity")
     public native ValidityState getValidity();

@@ -45,13 +45,13 @@ public class MediaStreamTrack extends EventTarget {
     public native String getLabel();
     
     @JsProperty(name="enabled")
-    public native boolean getEnabled();
+    public native boolean isEnabled();
     
     @JsProperty(name="enabled")
     public native void setEnabled(boolean enabled);
     
     @JsProperty(name="muted")
-    public native boolean getMuted();
+    public native boolean isMuted();
     
     @JsOverlay
     public final EventHandlerNonNull getOnMute(){

@@ -43,7 +43,7 @@ public class SVGStyleElement extends SVGElement {
     public native StyleSheet getSheet();
     
     @JsProperty(name="disabled")
-    public native boolean getDisabled();
+    public native boolean isDisabled();
     
     @JsProperty(name="disabled")
     public native void setDisabled(boolean disabled);

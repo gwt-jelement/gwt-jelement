@@ -46,7 +46,7 @@ public class SourceBuffer extends EventTarget {
     private String mode;
     
     @JsProperty(name="updating")
-    public native boolean getUpdating();
+    public native boolean isUpdating();
     
     @JsProperty(name="buffered")
     public native TimeRanges getBuffered();

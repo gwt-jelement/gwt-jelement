@@ -30,6 +30,6 @@ public class SyncEvent extends ExtendableEvent {
     public native String getTag();
     
     @JsProperty(name="lastChance")
-    public native boolean getLastChance();
+    public native boolean isLastChance();
     
 }

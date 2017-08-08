@@ -26,7 +26,7 @@ public class BluetoothRemoteGATTServer implements IsObject {
     public native BluetoothDevice getDevice();
     
     @JsProperty(name="connected")
-    public native boolean getConnected();
+    public native boolean isConnected();
     
     @JsMethod(name = "connect")
     public native Promise<BluetoothRemoteGATTServer> connect();

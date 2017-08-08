@@ -21,7 +21,7 @@ import jsinterop.annotations.*;
 @JsType(namespace = JsPackage.GLOBAL, name="HTMLOListElement", isNative = true)
 public class HTMLOListElement extends HTMLElement {
     @JsProperty(name="reversed")
-    public native boolean getReversed();
+    public native boolean isReversed();
     
     @JsProperty(name="reversed")
     public native void setReversed(boolean reversed);
@@ -39,7 +39,7 @@ public class HTMLOListElement extends HTMLElement {
     public native void setType(String type);
     
     @JsProperty(name="compact")
-    public native boolean getCompact();
+    public native boolean isCompact();
     
     @JsProperty(name="compact")
     public native void setCompact(boolean compact);

@@ -45,16 +45,16 @@ public class MouseEvent extends UIEvent {
     public native double getClientY();
     
     @JsProperty(name="ctrlKey")
-    public native boolean getCtrlKey();
+    public native boolean isCtrlKey();
     
     @JsProperty(name="shiftKey")
-    public native boolean getShiftKey();
+    public native boolean isShiftKey();
     
     @JsProperty(name="altKey")
-    public native boolean getAltKey();
+    public native boolean isAltKey();
     
     @JsProperty(name="metaKey")
-    public native boolean getMetaKey();
+    public native boolean isMetaKey();
     
     @JsProperty(name="button")
     public native short getButton();

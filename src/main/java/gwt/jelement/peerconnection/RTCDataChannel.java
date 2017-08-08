@@ -47,7 +47,7 @@ public class RTCDataChannel extends EventTarget {
     public native String getLabel();
     
     @JsProperty(name="ordered")
-    public native boolean getOrdered();
+    public native boolean isOrdered();
     
     @JsProperty(name="maxRetransmitTime")
     public native short getMaxRetransmitTime();
@@ -59,7 +59,7 @@ public class RTCDataChannel extends EventTarget {
     public native String getProtocol();
     
     @JsProperty(name="negotiated")
-    public native boolean getNegotiated();
+    public native boolean isNegotiated();
     
     @JsProperty(name="id")
     public native short getId();
@@ -130,7 +130,7 @@ public class RTCDataChannel extends EventTarget {
     public native void setBinaryType(String binaryType);
     
     @JsProperty(name="reliable")
-    public native boolean getReliable();
+    public native boolean isReliable();
     
     @JsOverlay
     public final RTCDataChannelState getReadyState(){

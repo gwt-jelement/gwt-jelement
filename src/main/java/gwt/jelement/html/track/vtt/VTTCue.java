@@ -81,7 +81,7 @@ public class VTTCue extends TextTrackCue {
     public native void setRegion(VTTRegion region);
     
     @JsProperty(name="snapToLines")
-    public native boolean getSnapToLines();
+    public native boolean isSnapToLines();
     
     @JsProperty(name="snapToLines")
     public native void setSnapToLines(boolean snapToLines);

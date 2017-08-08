@@ -46,10 +46,10 @@ public class HTMLVideoElement extends HTMLMediaElement {
     public native void setPoster(String poster);
     
     @JsProperty(name="webkitSupportsFullscreen")
-    public native boolean getWebkitSupportsFullscreen();
+    public native boolean isWebkitSupportsFullscreen();
     
     @JsProperty(name="webkitDisplayingFullscreen")
-    public native boolean getWebkitDisplayingFullscreen();
+    public native boolean isWebkitDisplayingFullscreen();
     
     @JsProperty(name="webkitDecodedFrameCount")
     public native double getWebkitDecodedFrameCount();

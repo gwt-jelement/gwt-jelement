@@ -43,19 +43,19 @@ public class HTMLInputElement extends HTMLElement {
     public native void setAutocomplete(String autocomplete);
     
     @JsProperty(name="autofocus")
-    public native boolean getAutofocus();
+    public native boolean isAutofocus();
     
     @JsProperty(name="autofocus")
     public native void setAutofocus(boolean autofocus);
     
     @JsProperty(name="defaultChecked")
-    public native boolean getDefaultChecked();
+    public native boolean isDefaultChecked();
     
     @JsProperty(name="defaultChecked")
     public native void setDefaultChecked(boolean defaultChecked);
     
     @JsProperty(name="checked")
-    public native boolean getChecked();
+    public native boolean isChecked();
     
     @JsProperty(name="checked")
     public native void setChecked(boolean checked);
@@ -67,7 +67,7 @@ public class HTMLInputElement extends HTMLElement {
     public native void setDirName(String dirName);
     
     @JsProperty(name="disabled")
-    public native boolean getDisabled();
+    public native boolean isDisabled();
     
     @JsProperty(name="disabled")
     public native void setDisabled(boolean disabled);
@@ -100,7 +100,7 @@ public class HTMLInputElement extends HTMLElement {
     public native void setFormMethod(String formMethod);
     
     @JsProperty(name="formNoValidate")
-    public native boolean getFormNoValidate();
+    public native boolean isFormNoValidate();
     
     @JsProperty(name="formNoValidate")
     public native void setFormNoValidate(boolean formNoValidate);
@@ -118,7 +118,7 @@ public class HTMLInputElement extends HTMLElement {
     public native void setHeight(double height);
     
     @JsProperty(name="indeterminate")
-    public native boolean getIndeterminate();
+    public native boolean isIndeterminate();
     
     @JsProperty(name="indeterminate")
     public native void setIndeterminate(boolean indeterminate);
@@ -151,7 +151,7 @@ public class HTMLInputElement extends HTMLElement {
     public native void setMinLength(double minLength);
     
     @JsProperty(name="multiple")
-    public native boolean getMultiple();
+    public native boolean isMultiple();
     
     @JsProperty(name="multiple")
     public native void setMultiple(boolean multiple);
@@ -175,13 +175,13 @@ public class HTMLInputElement extends HTMLElement {
     public native void setPlaceholder(String placeholder);
     
     @JsProperty(name="readOnly")
-    public native boolean getReadOnly();
+    public native boolean isReadOnly();
     
     @JsProperty(name="readOnly")
     public native void setReadOnly(boolean readOnly);
     
     @JsProperty(name="required")
-    public native boolean getRequired();
+    public native boolean isRequired();
     
     @JsProperty(name="required")
     public native void setRequired(boolean required);
@@ -241,7 +241,7 @@ public class HTMLInputElement extends HTMLElement {
     public native void setWidth(double width);
     
     @JsProperty(name="willValidate")
-    public native boolean getWillValidate();
+    public native boolean isWillValidate();
     
     @JsProperty(name="validity")
     public native ValidityState getValidity();
@@ -295,13 +295,13 @@ public class HTMLInputElement extends HTMLElement {
     public native void setCapture(String capture);
     
     @JsProperty(name="webkitdirectory")
-    public native boolean getWebkitdirectory();
+    public native boolean isWebkitdirectory();
     
     @JsProperty(name="webkitdirectory")
     public native void setWebkitdirectory(boolean webkitdirectory);
     
     @JsProperty(name="incremental")
-    public native boolean getIncremental();
+    public native boolean isIncremental();
     
     @JsProperty(name="incremental")
     public native void setIncremental(boolean incremental);

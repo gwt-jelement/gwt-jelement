@@ -43,7 +43,7 @@ public class AudioBufferSourceNode extends AudioScheduledSourceNode {
     public native AudioParam getDetune();
     
     @JsProperty(name="loop")
-    public native boolean getLoop();
+    public native boolean isLoop();
     
     @JsProperty(name="loop")
     public native void setLoop(boolean loop);

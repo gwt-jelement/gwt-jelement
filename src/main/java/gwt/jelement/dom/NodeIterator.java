@@ -28,7 +28,7 @@ public class NodeIterator implements IsObject {
     public native Node getReferenceNode();
     
     @JsProperty(name="pointerBeforeReferenceNode")
-    public native boolean getPointerBeforeReferenceNode();
+    public native boolean isPointerBeforeReferenceNode();
     
     @JsProperty(name="whatToShow")
     public native double getWhatToShow();

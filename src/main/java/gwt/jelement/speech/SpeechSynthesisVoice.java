@@ -31,9 +31,9 @@ public class SpeechSynthesisVoice implements IsObject {
     public native String getLang();
     
     @JsProperty(name="localService")
-    public native boolean getLocalService();
+    public native boolean isLocalService();
     
     @JsProperty(name="default")
-    public native boolean getDefault();
+    public native boolean isDefault();
     
 }

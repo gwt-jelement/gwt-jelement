@@ -30,7 +30,7 @@ public class VRDisplay extends EventTarget {
     public native String getDisplayName();
     
     @JsProperty(name="isPresenting")
-    public native boolean getIsPresenting();
+    public native boolean isIsPresenting();
     
     @JsProperty(name="capabilities")
     public native VRDisplayCapabilities getCapabilities();

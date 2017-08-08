@@ -47,19 +47,19 @@ public class Event implements IsObject {
     public native short getEventPhase();
     
     @JsProperty(name="bubbles")
-    public native boolean getBubbles();
+    public native boolean isBubbles();
     
     @JsProperty(name="cancelable")
-    public native boolean getCancelable();
+    public native boolean isCancelable();
     
     @JsProperty(name="defaultPrevented")
-    public native boolean getDefaultPrevented();
+    public native boolean isDefaultPrevented();
     
     @JsProperty(name="composed")
-    public native boolean getComposed();
+    public native boolean isComposed();
     
     @JsProperty(name="isTrusted")
-    public native boolean getIsTrusted();
+    public native boolean isIsTrusted();
     
     @JsProperty(name="timeStamp")
     public native double getTimeStamp();
@@ -68,13 +68,13 @@ public class Event implements IsObject {
     public native EventTarget getSrcElement();
     
     @JsProperty(name="returnValue")
-    public native boolean getReturnValue();
+    public native boolean isReturnValue();
     
     @JsProperty(name="returnValue")
     public native void setReturnValue(boolean returnValue);
     
     @JsProperty(name="cancelBubble")
-    public native boolean getCancelBubble();
+    public native boolean isCancelBubble();
     
     @JsProperty(name="cancelBubble")
     public native void setCancelBubble(boolean cancelBubble);

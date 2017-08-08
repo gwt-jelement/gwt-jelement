@@ -26,7 +26,7 @@ public class WindowClient extends Client {
     private String visibilityState;
     
     @JsProperty(name="focused")
-    public native boolean getFocused();
+    public native boolean isFocused();
     
     @JsOverlay
     public final VisibilityState getVisibilityState(){

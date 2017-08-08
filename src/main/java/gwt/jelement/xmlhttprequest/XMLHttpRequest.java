@@ -64,7 +64,7 @@ public class XMLHttpRequest extends XMLHttpRequestEventTarget {
     public native void setTimeout(double timeout);
     
     @JsProperty(name="withCredentials")
-    public native boolean getWithCredentials();
+    public native boolean isWithCredentials();
     
     @JsProperty(name="withCredentials")
     public native void setWithCredentials(boolean withCredentials);

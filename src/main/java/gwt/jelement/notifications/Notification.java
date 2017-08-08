@@ -122,13 +122,13 @@ public class Notification extends EventTarget {
     public native double getTimestamp();
     
     @JsProperty(name="renotify")
-    public native boolean getRenotify();
+    public native boolean isRenotify();
     
     @JsProperty(name="silent")
-    public native boolean getSilent();
+    public native boolean isSilent();
     
     @JsProperty(name="requireInteraction")
-    public native boolean getRequireInteraction();
+    public native boolean isRequireInteraction();
     
     @JsProperty(name="data")
     public native Object getData();

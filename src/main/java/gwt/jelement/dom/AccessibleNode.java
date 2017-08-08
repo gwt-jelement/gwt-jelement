@@ -28,7 +28,7 @@ public class AccessibleNode implements IsObject {
     public native void setActiveDescendant(AccessibleNode activeDescendant);
     
     @JsProperty(name="atomic")
-    public native boolean getAtomic();
+    public native boolean isAtomic();
     
     @JsProperty(name="atomic")
     public native void setAtomic(boolean atomic);
@@ -40,7 +40,7 @@ public class AccessibleNode implements IsObject {
     public native void setAutocomplete(String autocomplete);
     
     @JsProperty(name="busy")
-    public native boolean getBusy();
+    public native boolean isBusy();
     
     @JsProperty(name="busy")
     public native void setBusy(boolean busy);
@@ -94,7 +94,7 @@ public class AccessibleNode implements IsObject {
     public native void setDetails(AccessibleNode details);
     
     @JsProperty(name="disabled")
-    public native boolean getDisabled();
+    public native boolean isDisabled();
     
     @JsProperty(name="disabled")
     public native void setDisabled(boolean disabled);
@@ -106,7 +106,7 @@ public class AccessibleNode implements IsObject {
     public native void setErrorMessage(AccessibleNode errorMessage);
     
     @JsProperty(name="expanded")
-    public native boolean getExpanded();
+    public native boolean isExpanded();
     
     @JsProperty(name="expanded")
     public native void setExpanded(boolean expanded);
@@ -118,7 +118,7 @@ public class AccessibleNode implements IsObject {
     public native void setFlowTo(AccessibleNodeList flowTo);
     
     @JsProperty(name="hidden")
-    public native boolean getHidden();
+    public native boolean isHidden();
     
     @JsProperty(name="hidden")
     public native void setHidden(boolean hidden);
@@ -160,19 +160,19 @@ public class AccessibleNode implements IsObject {
     public native void setLive(String live);
     
     @JsProperty(name="modal")
-    public native boolean getModal();
+    public native boolean isModal();
     
     @JsProperty(name="modal")
     public native void setModal(boolean modal);
     
     @JsProperty(name="multiline")
-    public native boolean getMultiline();
+    public native boolean isMultiline();
     
     @JsProperty(name="multiline")
     public native void setMultiline(boolean multiline);
     
     @JsProperty(name="multiselectable")
-    public native boolean getMultiselectable();
+    public native boolean isMultiselectable();
     
     @JsProperty(name="multiselectable")
     public native void setMultiselectable(boolean multiselectable);
@@ -208,7 +208,7 @@ public class AccessibleNode implements IsObject {
     public native void setPressed(String pressed);
     
     @JsProperty(name="readOnly")
-    public native boolean getReadOnly();
+    public native boolean isReadOnly();
     
     @JsProperty(name="readOnly")
     public native void setReadOnly(boolean readOnly);
@@ -220,7 +220,7 @@ public class AccessibleNode implements IsObject {
     public native void setRelevant(String relevant);
     
     @JsProperty(name="required")
-    public native boolean getRequired();
+    public native boolean isRequired();
     
     @JsProperty(name="required")
     public native void setRequired(boolean required);
@@ -256,7 +256,7 @@ public class AccessibleNode implements IsObject {
     public native void setRowSpan(double rowSpan);
     
     @JsProperty(name="selected")
-    public native boolean getSelected();
+    public native boolean isSelected();
     
     @JsProperty(name="selected")
     public native void setSelected(boolean selected);

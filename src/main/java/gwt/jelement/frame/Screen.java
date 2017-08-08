@@ -50,7 +50,7 @@ public class Screen implements IsObject {
     public native ScreenOrientation getOrientation();
     
     @JsProperty(name="keepAwake")
-    public native boolean getKeepAwake();
+    public native boolean isKeepAwake();
     
     @JsProperty(name="keepAwake")
     public native void setKeepAwake(boolean keepAwake);

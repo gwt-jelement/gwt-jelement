@@ -130,7 +130,7 @@ public class Navigator implements IsObject {
     public native double getHardwareConcurrency();
     
     @JsProperty(name="cookieEnabled")
-    public native boolean getCookieEnabled();
+    public native boolean isCookieEnabled();
     
     @JsProperty(name="appCodeName")
     public native String getAppCodeName();
@@ -157,7 +157,7 @@ public class Navigator implements IsObject {
     public native String[] getLanguages();
     
     @JsProperty(name="onLine")
-    public native boolean getOnLine();
+    public native boolean isOnLine();
     
     @JsMethod(name = "cancelKeyboardLock")
     public native void cancelKeyboardLock();

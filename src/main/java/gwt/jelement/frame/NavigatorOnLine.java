@@ -22,6 +22,6 @@ import jsinterop.annotations.*;
 @JsType(namespace = JsPackage.GLOBAL, name="Object", isNative = true)
 public class NavigatorOnLine implements IsObject {
     @JsProperty(name="onLine")
-    public native boolean getOnLine();
+    public native boolean isOnLine();
     
 }

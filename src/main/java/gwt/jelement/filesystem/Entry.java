@@ -23,10 +23,10 @@ import jsinterop.annotations.*;
 @JsType(namespace = JsPackage.GLOBAL, name="Object", isNative = true)
 public class Entry implements IsObject {
     @JsProperty(name="isFile")
-    public native boolean getIsFile();
+    public native boolean isIsFile();
     
     @JsProperty(name="isDirectory")
-    public native boolean getIsDirectory();
+    public native boolean isIsDirectory();
     
     @JsProperty(name="name")
     public native String getName();

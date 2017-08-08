@@ -22,12 +22,12 @@ import jsinterop.annotations.*;
 @JsType(namespace = JsPackage.GLOBAL, name="MediaCapabilitiesInfo", isNative = true)
 public class MediaCapabilitiesInfo implements IsObject {
     @JsProperty(name="supported")
-    public native boolean getSupported();
+    public native boolean isSupported();
     
     @JsProperty(name="smooth")
-    public native boolean getSmooth();
+    public native boolean isSmooth();
     
     @JsProperty(name="powerEfficient")
-    public native boolean getPowerEfficient();
+    public native boolean isPowerEfficient();
     
 }

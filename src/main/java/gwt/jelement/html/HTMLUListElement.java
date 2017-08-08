@@ -21,7 +21,7 @@ import jsinterop.annotations.*;
 @JsType(namespace = JsPackage.GLOBAL, name="HTMLUListElement", isNative = true)
 public class HTMLUListElement extends HTMLElement {
     @JsProperty(name="compact")
-    public native boolean getCompact();
+    public native boolean isCompact();
     
     @JsProperty(name="compact")
     public native void setCompact(boolean compact);

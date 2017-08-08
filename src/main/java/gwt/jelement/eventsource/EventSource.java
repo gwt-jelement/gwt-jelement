@@ -49,7 +49,7 @@ public class EventSource extends EventTarget {
     public native String getUrl();
     
     @JsProperty(name="withCredentials")
-    public native boolean getWithCredentials();
+    public native boolean isWithCredentials();
     
     @JsProperty(name="readyState")
     public native short getReadyState();

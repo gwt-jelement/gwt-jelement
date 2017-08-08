@@ -34,10 +34,10 @@ public class IDBIndex implements IsObject {
     public native Object getKeyPath();
     
     @JsProperty(name="multiEntry")
-    public native boolean getMultiEntry();
+    public native boolean isMultiEntry();
     
     @JsProperty(name="unique")
-    public native boolean getUnique();
+    public native boolean isUnique();
     
     @JsMethod(name = "count")
     public native IDBRequest count();

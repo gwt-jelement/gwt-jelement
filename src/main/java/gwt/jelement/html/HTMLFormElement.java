@@ -100,7 +100,7 @@ public class HTMLFormElement extends HTMLElement implements ArrayLike<Element> {
     public native void setName(String name);
     
     @JsProperty(name="noValidate")
-    public native boolean getNoValidate();
+    public native boolean isNoValidate();
     
     @JsProperty(name="noValidate")
     public native void setNoValidate(boolean noValidate);

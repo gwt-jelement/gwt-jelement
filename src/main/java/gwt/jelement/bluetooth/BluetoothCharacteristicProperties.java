@@ -22,30 +22,30 @@ import jsinterop.annotations.*;
 @JsType(namespace = JsPackage.GLOBAL, name="BluetoothCharacteristicProperties", isNative = true)
 public class BluetoothCharacteristicProperties implements IsObject {
     @JsProperty(name="broadcast")
-    public native boolean getBroadcast();
+    public native boolean isBroadcast();
     
     @JsProperty(name="read")
-    public native boolean getRead();
+    public native boolean isRead();
     
     @JsProperty(name="writeWithoutResponse")
-    public native boolean getWriteWithoutResponse();
+    public native boolean isWriteWithoutResponse();
     
     @JsProperty(name="write")
-    public native boolean getWrite();
+    public native boolean isWrite();
     
     @JsProperty(name="notify")
-    public native boolean getNotify();
+    public native boolean isNotify();
     
     @JsProperty(name="indicate")
-    public native boolean getIndicate();
+    public native boolean isIndicate();
     
     @JsProperty(name="authenticatedSignedWrites")
-    public native boolean getAuthenticatedSignedWrites();
+    public native boolean isAuthenticatedSignedWrites();
     
     @JsProperty(name="reliableWrite")
-    public native boolean getReliableWrite();
+    public native boolean isReliableWrite();
     
     @JsProperty(name="writableAuxiliaries")
-    public native boolean getWritableAuxiliaries();
+    public native boolean isWritableAuxiliaries();
     
 }

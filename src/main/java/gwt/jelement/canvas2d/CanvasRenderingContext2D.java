@@ -124,7 +124,7 @@ public class CanvasRenderingContext2D implements IsObject {
     public native void setFilter(String filter);
     
     @JsProperty(name="imageSmoothingEnabled")
-    public native boolean getImageSmoothingEnabled();
+    public native boolean isImageSmoothingEnabled();
     
     @JsProperty(name="imageSmoothingEnabled")
     public native void setImageSmoothingEnabled(boolean imageSmoothingEnabled);

@@ -50,7 +50,7 @@ public class TextTrackCue extends EventTarget {
     public native void setEndTime(double endTime);
     
     @JsProperty(name="pauseOnExit")
-    public native boolean getPauseOnExit();
+    public native boolean isPauseOnExit();
     
     @JsProperty(name="pauseOnExit")
     public native void setPauseOnExit(boolean pauseOnExit);

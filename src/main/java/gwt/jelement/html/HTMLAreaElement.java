@@ -69,7 +69,7 @@ public class HTMLAreaElement extends HTMLElement {
     public native void setReferrerPolicy(String referrerPolicy);
     
     @JsProperty(name="noHref")
-    public native boolean getNoHref();
+    public native boolean isNoHref();
     
     @JsProperty(name="noHref")
     public native void setNoHref(boolean noHref);

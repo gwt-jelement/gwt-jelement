@@ -36,7 +36,7 @@ public class InputEvent extends UIEvent {
     public native String getData();
     
     @JsProperty(name="isComposing")
-    public native boolean getIsComposing();
+    public native boolean isIsComposing();
     
     @JsProperty(name="inputType")
     public native String getInputType();

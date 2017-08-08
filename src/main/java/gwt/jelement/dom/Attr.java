@@ -42,6 +42,6 @@ public class Attr extends Node {
     public native Element getOwnerElement();
     
     @JsProperty(name="specified")
-    public native boolean getSpecified();
+    public native boolean isSpecified();
     
 }

@@ -44,13 +44,13 @@ public class Response implements IsObject {
     public native String getUrl();
     
     @JsProperty(name="redirected")
-    public native boolean getRedirected();
+    public native boolean isRedirected();
     
     @JsProperty(name="status")
     public native short getStatus();
     
     @JsProperty(name="ok")
-    public native boolean getOk();
+    public native boolean isOk();
     
     @JsProperty(name="statusText")
     public native String getStatusText();
@@ -62,7 +62,7 @@ public class Response implements IsObject {
     public native Object getBody();
     
     @JsProperty(name="bodyUsed")
-    public native boolean getBodyUsed();
+    public native boolean isBodyUsed();
     
     @JsOverlay
     public final ResponseType getType(){

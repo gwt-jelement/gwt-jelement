@@ -22,7 +22,7 @@ import jsinterop.annotations.*;
 @JsType(namespace = JsPackage.GLOBAL, name="HTMLTextAreaElement", isNative = true)
 public class HTMLTextAreaElement extends HTMLElement {
     @JsProperty(name="autofocus")
-    public native boolean getAutofocus();
+    public native boolean isAutofocus();
     
     @JsProperty(name="autofocus")
     public native void setAutofocus(boolean autofocus);
@@ -40,7 +40,7 @@ public class HTMLTextAreaElement extends HTMLElement {
     public native void setDirName(String dirName);
     
     @JsProperty(name="disabled")
-    public native boolean getDisabled();
+    public native boolean isDisabled();
     
     @JsProperty(name="disabled")
     public native void setDisabled(boolean disabled);
@@ -73,13 +73,13 @@ public class HTMLTextAreaElement extends HTMLElement {
     public native void setPlaceholder(String placeholder);
     
     @JsProperty(name="readOnly")
-    public native boolean getReadOnly();
+    public native boolean isReadOnly();
     
     @JsProperty(name="readOnly")
     public native void setReadOnly(boolean readOnly);
     
     @JsProperty(name="required")
-    public native boolean getRequired();
+    public native boolean isRequired();
     
     @JsProperty(name="required")
     public native void setRequired(boolean required);
@@ -115,7 +115,7 @@ public class HTMLTextAreaElement extends HTMLElement {
     public native double getTextLength();
     
     @JsProperty(name="willValidate")
-    public native boolean getWillValidate();
+    public native boolean isWillValidate();
     
     @JsProperty(name="validity")
     public native ValidityState getValidity();

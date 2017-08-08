@@ -21,7 +21,7 @@ import jsinterop.annotations.*;
 @JsType(namespace = JsPackage.GLOBAL, name="HTMLFieldSetElement", isNative = true)
 public class HTMLFieldSetElement extends HTMLElement {
     @JsProperty(name="disabled")
-    public native boolean getDisabled();
+    public native boolean isDisabled();
     
     @JsProperty(name="disabled")
     public native void setDisabled(boolean disabled);
@@ -42,7 +42,7 @@ public class HTMLFieldSetElement extends HTMLElement {
     public native HTMLCollection getElements();
     
     @JsProperty(name="willValidate")
-    public native boolean getWillValidate();
+    public native boolean isWillValidate();
     
     @JsProperty(name="validity")
     public native ValidityState getValidity();

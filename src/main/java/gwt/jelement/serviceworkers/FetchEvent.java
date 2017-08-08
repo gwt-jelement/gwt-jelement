@@ -35,7 +35,7 @@ public class FetchEvent extends ExtendableEvent {
     public native String getClientId();
     
     @JsProperty(name="isReload")
-    public native boolean getIsReload();
+    public native boolean isIsReload();
     
     @JsProperty(name="preloadResponse")
     public native Promise<Object> getPreloadResponse();

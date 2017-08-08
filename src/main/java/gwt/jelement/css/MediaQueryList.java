@@ -30,7 +30,7 @@ public class MediaQueryList extends EventTarget {
     public native String getMedia();
     
     @JsProperty(name="matches")
-    public native boolean getMatches();
+    public native boolean isMatches();
     
     @JsOverlay
     public final EventHandlerNonNull getOnChange(){

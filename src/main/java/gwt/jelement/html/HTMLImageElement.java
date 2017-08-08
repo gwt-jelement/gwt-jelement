@@ -58,7 +58,7 @@ public class HTMLImageElement extends HTMLElement {
     public native void setUseMap(String useMap);
     
     @JsProperty(name="isMap")
-    public native boolean getIsMap();
+    public native boolean isIsMap();
     
     @JsProperty(name="isMap")
     public native void setIsMap(boolean isMap);
@@ -82,7 +82,7 @@ public class HTMLImageElement extends HTMLElement {
     public native double getNaturalHeight();
     
     @JsProperty(name="complete")
-    public native boolean getComplete();
+    public native boolean isComplete();
     
     @JsProperty(name="currentSrc")
     public native String getCurrentSrc();

@@ -26,7 +26,7 @@ import jsinterop.annotations.*;
 @JsType(namespace = JsPackage.GLOBAL, name="Object", isNative = true)
 public class Body implements IsObject {
     @JsProperty(name="bodyUsed")
-    public native boolean getBodyUsed();
+    public native boolean isBodyUsed();
     
     @JsMethod(name = "arrayBuffer")
     public native Promise<ArrayBuffer> arrayBuffer();

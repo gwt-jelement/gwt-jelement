@@ -43,7 +43,7 @@ public class Range implements IsObject {
     public native double getEndOffset();
     
     @JsProperty(name="collapsed")
-    public native boolean getCollapsed();
+    public native boolean isCollapsed();
     
     @JsProperty(name="commonAncestorContainer")
     public native Node getCommonAncestorContainer();

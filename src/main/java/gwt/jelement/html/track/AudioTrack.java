@@ -35,7 +35,7 @@ public class AudioTrack implements IsObject {
     public native String getLanguage();
     
     @JsProperty(name="enabled")
-    public native boolean getEnabled();
+    public native boolean isEnabled();
     
     @JsProperty(name="enabled")
     public native void setEnabled(boolean enabled);

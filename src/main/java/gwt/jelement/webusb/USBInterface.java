@@ -35,6 +35,6 @@ public class USBInterface implements IsObject {
     public native USBAlternateInterface[] getAlternates();
     
     @JsProperty(name="claimed")
-    public native boolean getClaimed();
+    public native boolean isClaimed();
     
 }

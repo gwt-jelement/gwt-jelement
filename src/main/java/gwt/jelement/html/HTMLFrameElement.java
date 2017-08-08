@@ -53,7 +53,7 @@ public class HTMLFrameElement extends HTMLElement {
     public native void setLongDesc(String longDesc);
     
     @JsProperty(name="noResize")
-    public native boolean getNoResize();
+    public native boolean isNoResize();
     
     @JsProperty(name="noResize")
     public native void setNoResize(boolean noResize);

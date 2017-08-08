@@ -34,7 +34,7 @@ public class IntersectionObserverEntry implements IsObject {
     public native ClientRect getIntersectionRect();
     
     @JsProperty(name="isIntersecting")
-    public native boolean getIsIntersecting();
+    public native boolean isIsIntersecting();
     
     @JsProperty(name="intersectionRatio")
     public native double getIntersectionRatio();

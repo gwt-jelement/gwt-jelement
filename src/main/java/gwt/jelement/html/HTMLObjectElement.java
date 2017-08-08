@@ -70,7 +70,7 @@ public class HTMLObjectElement extends HTMLElement {
     public native Window getContentWindow();
     
     @JsProperty(name="willValidate")
-    public native boolean getWillValidate();
+    public native boolean isWillValidate();
     
     @JsProperty(name="validity")
     public native ValidityState getValidity();
@@ -97,7 +97,7 @@ public class HTMLObjectElement extends HTMLElement {
     public native void setCode(String code);
     
     @JsProperty(name="declare")
-    public native boolean getDeclare();
+    public native boolean isDeclare();
     
     @JsProperty(name="declare")
     public native void setDeclare(boolean declare);

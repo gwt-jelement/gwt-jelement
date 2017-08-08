@@ -37,7 +37,7 @@ public class ConvolverNode extends AudioNode {
     public native void setBuffer(AudioBuffer buffer);
     
     @JsProperty(name="normalize")
-    public native boolean getNormalize();
+    public native boolean isNormalize();
     
     @JsProperty(name="normalize")
     public native void setNormalize(boolean normalize);

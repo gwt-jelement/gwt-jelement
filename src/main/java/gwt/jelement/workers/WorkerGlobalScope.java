@@ -97,7 +97,7 @@ public class WorkerGlobalScope extends EventTarget {
     }
     
     @JsProperty(name="isSecureContext")
-    public native boolean getIsSecureContext();
+    public native boolean isIsSecureContext();
     
     @JsProperty(name="origin")
     public native String getOrigin();

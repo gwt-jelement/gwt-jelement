@@ -23,7 +23,7 @@ import jsinterop.annotations.*;
 @JsType(namespace = JsPackage.GLOBAL, name="PushSubscriptionOptions", isNative = true)
 public class PushSubscriptionOptions implements IsObject {
     @JsProperty(name="userVisibleOnly")
-    public native boolean getUserVisibleOnly();
+    public native boolean isUserVisibleOnly();
     
     @JsProperty(name="applicationServerKey")
     public native ArrayBuffer getApplicationServerKey();

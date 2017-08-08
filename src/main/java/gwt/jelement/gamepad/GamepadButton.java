@@ -22,10 +22,10 @@ import jsinterop.annotations.*;
 @JsType(namespace = JsPackage.GLOBAL, name="GamepadButton", isNative = true)
 public class GamepadButton implements IsObject {
     @JsProperty(name="pressed")
-    public native boolean getPressed();
+    public native boolean isPressed();
     
     @JsProperty(name="touched")
-    public native boolean getTouched();
+    public native boolean isTouched();
     
     @JsProperty(name="value")
     public native double getValue();

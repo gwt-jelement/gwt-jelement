@@ -50,7 +50,7 @@ public class HTMLOutputElement extends HTMLElement {
     public native void setValue(String value);
     
     @JsProperty(name="willValidate")
-    public native boolean getWillValidate();
+    public native boolean isWillValidate();
     
     @JsProperty(name="validity")
     public native ValidityState getValidity();

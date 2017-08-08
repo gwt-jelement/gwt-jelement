@@ -25,13 +25,13 @@ import jsinterop.annotations.*;
 @JsType(namespace = JsPackage.GLOBAL, name="HTMLSelectElement", isNative = true)
 public class HTMLSelectElement extends HTMLElement implements ArrayLike<Element> {
     @JsProperty(name="autofocus")
-    public native boolean getAutofocus();
+    public native boolean isAutofocus();
     
     @JsProperty(name="autofocus")
     public native void setAutofocus(boolean autofocus);
     
     @JsProperty(name="disabled")
-    public native boolean getDisabled();
+    public native boolean isDisabled();
     
     @JsProperty(name="disabled")
     public native void setDisabled(boolean disabled);
@@ -40,7 +40,7 @@ public class HTMLSelectElement extends HTMLElement implements ArrayLike<Element>
     public native HTMLFormElement getForm();
     
     @JsProperty(name="multiple")
-    public native boolean getMultiple();
+    public native boolean isMultiple();
     
     @JsProperty(name="multiple")
     public native void setMultiple(boolean multiple);
@@ -52,7 +52,7 @@ public class HTMLSelectElement extends HTMLElement implements ArrayLike<Element>
     public native void setName(String name);
     
     @JsProperty(name="required")
-    public native boolean getRequired();
+    public native boolean isRequired();
     
     @JsProperty(name="required")
     public native void setRequired(boolean required);
@@ -85,7 +85,7 @@ public class HTMLSelectElement extends HTMLElement implements ArrayLike<Element>
     public native void setValue(String value);
     
     @JsProperty(name="willValidate")
-    public native boolean getWillValidate();
+    public native boolean isWillValidate();
     
     @JsProperty(name="validity")
     public native ValidityState getValidity();

@@ -45,7 +45,7 @@ public class HTMLIFrameElement extends HTMLElement {
     public native DOMTokenList getSandbox();
     
     @JsProperty(name="allowFullscreen")
-    public native boolean getAllowFullscreen();
+    public native boolean isAllowFullscreen();
     
     @JsProperty(name="allowFullscreen")
     public native void setAllowFullscreen(boolean allowFullscreen);

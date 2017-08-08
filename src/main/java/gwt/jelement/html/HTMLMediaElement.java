@@ -82,7 +82,7 @@ public class HTMLMediaElement extends HTMLElement {
     public native short getReadyState();
     
     @JsProperty(name="seeking")
-    public native boolean getSeeking();
+    public native boolean isSeeking();
     
     @JsProperty(name="currentTime")
     public native double getCurrentTime();
@@ -94,7 +94,7 @@ public class HTMLMediaElement extends HTMLElement {
     public native double getDuration();
     
     @JsProperty(name="paused")
-    public native boolean getPaused();
+    public native boolean isPaused();
     
     @JsProperty(name="defaultPlaybackRate")
     public native double getDefaultPlaybackRate();
@@ -115,22 +115,22 @@ public class HTMLMediaElement extends HTMLElement {
     public native TimeRanges getSeekable();
     
     @JsProperty(name="ended")
-    public native boolean getEnded();
+    public native boolean isEnded();
     
     @JsProperty(name="autoplay")
-    public native boolean getAutoplay();
+    public native boolean isAutoplay();
     
     @JsProperty(name="autoplay")
     public native void setAutoplay(boolean autoplay);
     
     @JsProperty(name="loop")
-    public native boolean getLoop();
+    public native boolean isLoop();
     
     @JsProperty(name="loop")
     public native void setLoop(boolean loop);
     
     @JsProperty(name="controls")
-    public native boolean getControls();
+    public native boolean isControls();
     
     @JsProperty(name="controls")
     public native void setControls(boolean controls);
@@ -145,13 +145,13 @@ public class HTMLMediaElement extends HTMLElement {
     public native void setVolume(double volume);
     
     @JsProperty(name="muted")
-    public native boolean getMuted();
+    public native boolean isMuted();
     
     @JsProperty(name="muted")
     public native void setMuted(boolean muted);
     
     @JsProperty(name="defaultMuted")
-    public native boolean getDefaultMuted();
+    public native boolean isDefaultMuted();
     
     @JsProperty(name="defaultMuted")
     public native void setDefaultMuted(boolean defaultMuted);
@@ -201,7 +201,7 @@ public class HTMLMediaElement extends HTMLElement {
     public native RemotePlayback getRemote();
     
     @JsProperty(name="disableRemotePlayback")
-    public native boolean getDisableRemotePlayback();
+    public native boolean isDisableRemotePlayback();
     
     @JsProperty(name="disableRemotePlayback")
     public native void setDisableRemotePlayback(boolean disableRemotePlayback);

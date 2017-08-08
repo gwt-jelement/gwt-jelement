@@ -34,6 +34,6 @@ public class StaticRange implements IsObject {
     public native double getEndOffset();
     
     @JsProperty(name="collapsed")
-    public native boolean getCollapsed();
+    public native boolean isCollapsed();
     
 }

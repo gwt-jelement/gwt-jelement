@@ -33,7 +33,7 @@ public class CSSTransformValue extends CSSStyleValue implements ArrayLike<CSSTra
     }
     
     @JsProperty(name="is2D")
-    public native boolean getIs2D();
+    public native boolean isIs2D();
     
     @JsMethod(name = "toMatrix")
     public native DOMMatrix toMatrix();

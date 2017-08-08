@@ -28,10 +28,10 @@ public class IDBKeyRange implements IsObject {
     public native Object getUpper();
     
     @JsProperty(name="lowerOpen")
-    public native boolean getLowerOpen();
+    public native boolean isLowerOpen();
     
     @JsProperty(name="upperOpen")
-    public native boolean getUpperOpen();
+    public native boolean isUpperOpen();
     
     @JsMethod(name = "bound")
     public static native IDBKeyRange bound(Object lower, Object upper);

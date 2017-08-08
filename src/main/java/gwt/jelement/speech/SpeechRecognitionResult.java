@@ -23,7 +23,7 @@ import jsinterop.annotations.*;
 @JsType(namespace = JsPackage.GLOBAL, name="Object", isNative = true)
 public class SpeechRecognitionResult implements IsObject, ArrayLike<SpeechRecognitionAlternative> {
     @JsProperty(name="isFinal")
-    public native boolean getIsFinal();
+    public native boolean isIsFinal();
     
     @JsMethod(name = "item")
     public native SpeechRecognitionAlternative item(double index);

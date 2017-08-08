@@ -23,10 +23,10 @@ import jsinterop.annotations.*;
 @JsType(namespace = JsPackage.GLOBAL, name="GamepadPose", isNative = true)
 public class GamepadPose implements IsObject {
     @JsProperty(name="hasOrientation")
-    public native boolean getHasOrientation();
+    public native boolean isHasOrientation();
     
     @JsProperty(name="hasPosition")
-    public native boolean getHasPosition();
+    public native boolean isHasPosition();
     
     @JsProperty(name="position")
     public native Float32Array getPosition();

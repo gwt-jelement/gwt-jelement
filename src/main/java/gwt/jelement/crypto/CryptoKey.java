@@ -25,7 +25,7 @@ public class CryptoKey implements IsObject {
     public native String getType();
     
     @JsProperty(name="extractable")
-    public native boolean getExtractable();
+    public native boolean isExtractable();
     
     @JsProperty(name="algorithm")
     public native Object getAlgorithm();

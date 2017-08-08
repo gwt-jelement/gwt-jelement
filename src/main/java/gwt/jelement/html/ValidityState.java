@@ -22,36 +22,36 @@ import jsinterop.annotations.*;
 @JsType(namespace = JsPackage.GLOBAL, name="ValidityState", isNative = true)
 public class ValidityState implements IsObject {
     @JsProperty(name="valueMissing")
-    public native boolean getValueMissing();
+    public native boolean isValueMissing();
     
     @JsProperty(name="typeMismatch")
-    public native boolean getTypeMismatch();
+    public native boolean isTypeMismatch();
     
     @JsProperty(name="patternMismatch")
-    public native boolean getPatternMismatch();
+    public native boolean isPatternMismatch();
     
     @JsProperty(name="tooLong")
-    public native boolean getTooLong();
+    public native boolean isTooLong();
     
     @JsProperty(name="tooShort")
-    public native boolean getTooShort();
+    public native boolean isTooShort();
     
     @JsProperty(name="rangeUnderflow")
-    public native boolean getRangeUnderflow();
+    public native boolean isRangeUnderflow();
     
     @JsProperty(name="rangeOverflow")
-    public native boolean getRangeOverflow();
+    public native boolean isRangeOverflow();
     
     @JsProperty(name="stepMismatch")
-    public native boolean getStepMismatch();
+    public native boolean isStepMismatch();
     
     @JsProperty(name="badInput")
-    public native boolean getBadInput();
+    public native boolean isBadInput();
     
     @JsProperty(name="customError")
-    public native boolean getCustomError();
+    public native boolean isCustomError();
     
     @JsProperty(name="valid")
-    public native boolean getValid();
+    public native boolean isValid();
     
 }

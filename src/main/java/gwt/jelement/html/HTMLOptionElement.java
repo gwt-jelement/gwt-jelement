@@ -21,7 +21,7 @@ import jsinterop.annotations.*;
 @JsType(namespace = JsPackage.GLOBAL, name="HTMLOptionElement", isNative = true)
 public class HTMLOptionElement extends HTMLElement {
     @JsProperty(name="disabled")
-    public native boolean getDisabled();
+    public native boolean isDisabled();
     
     @JsProperty(name="disabled")
     public native void setDisabled(boolean disabled);
@@ -36,13 +36,13 @@ public class HTMLOptionElement extends HTMLElement {
     public native void setLabel(String label);
     
     @JsProperty(name="defaultSelected")
-    public native boolean getDefaultSelected();
+    public native boolean isDefaultSelected();
     
     @JsProperty(name="defaultSelected")
     public native void setDefaultSelected(boolean defaultSelected);
     
     @JsProperty(name="selected")
-    public native boolean getSelected();
+    public native boolean isSelected();
     
     @JsProperty(name="selected")
     public native void setSelected(boolean selected);

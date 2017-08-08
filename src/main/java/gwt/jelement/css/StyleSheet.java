@@ -41,7 +41,7 @@ public class StyleSheet implements IsObject {
     public native MediaList getMedia();
     
     @JsProperty(name="disabled")
-    public native boolean getDisabled();
+    public native boolean isDisabled();
     
     @JsProperty(name="disabled")
     public native void setDisabled(boolean disabled);

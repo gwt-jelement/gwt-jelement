@@ -41,6 +41,6 @@ public class DeviceOrientationEvent extends Event {
     public native double getGamma();
     
     @JsProperty(name="absolute")
-    public native boolean getAbsolute();
+    public native boolean isAbsolute();
     
 }

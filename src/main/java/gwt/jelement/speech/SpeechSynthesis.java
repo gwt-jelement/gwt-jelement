@@ -26,13 +26,13 @@ public class SpeechSynthesis extends EventTarget {
     private EventHandlerNonNull onvoiceschanged;
     
     @JsProperty(name="pending")
-    public native boolean getPending();
+    public native boolean isPending();
     
     @JsProperty(name="speaking")
-    public native boolean getSpeaking();
+    public native boolean isSpeaking();
     
     @JsProperty(name="paused")
-    public native boolean getPaused();
+    public native boolean isPaused();
     
     @JsOverlay
     public final EventHandlerNonNull getOnVoiceschanged(){

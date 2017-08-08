@@ -35,6 +35,6 @@ public class MediaQueryListEvent extends Event {
     public native String getMedia();
     
     @JsProperty(name="matches")
-    public native boolean getMatches();
+    public native boolean isMatches();
     
 }

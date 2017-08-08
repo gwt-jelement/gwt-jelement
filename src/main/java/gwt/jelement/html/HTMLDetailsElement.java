@@ -21,7 +21,7 @@ import jsinterop.annotations.*;
 @JsType(namespace = JsPackage.GLOBAL, name="HTMLDetailsElement", isNative = true)
 public class HTMLDetailsElement extends HTMLElement {
     @JsProperty(name="open")
-    public native boolean getOpen();
+    public native boolean isOpen();
     
     @JsProperty(name="open")
     public native void setOpen(boolean open);

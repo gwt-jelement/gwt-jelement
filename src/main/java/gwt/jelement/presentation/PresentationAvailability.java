@@ -26,7 +26,7 @@ public class PresentationAvailability extends EventTarget {
     private EventHandlerNonNull onchange;
     
     @JsProperty(name="value")
-    public native boolean getValue();
+    public native boolean isValue();
     
     @JsOverlay
     public final EventHandlerNonNull getOnChange(){
